@@ -5,8 +5,8 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: 'Scribbble - Mac app',
-  description: 'The best screen annotation app for creators, teachers and presenters.',
-  generator: 'v0.app',
+  description: 'The beautiful screen annotation app for creators, teachers and presenters.',
+  authors: [{ name: 'Kushagra Gour', url: 'https://kushagra.dev' }],
 }
 
 export default function RootLayout({
