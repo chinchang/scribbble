@@ -34,7 +34,7 @@ export default function Home() {
           </div>
           <nav className="hidden md:flex items-center space-x-8">
             <a
-              href="https://kushagragour.lemonsqueezy.com/buy/5bcb4e79-35d3-43d4-8172-fc981cdbe9cc"
+              href="https://kushagragour.lemonsqueezy.com/buy/7a5d045f-63fa-409e-b0ff-5c90b9020575"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110 font-medium"
@@ -117,7 +117,7 @@ export default function Home() {
               asChild
               className="px-12 py-6 text-xl font-bold border-2 border-primary text-primary hover:bg-primary hover:text-white transform hover:scale-105 transition-all duration-300 bg-transparent"
             >
-              <a href="https://kushagragour.lemonsqueezy.com/buy/5bcb4e79-35d3-43d4-8172-fc981cdbe9cc" target="_blank" rel="noopener noreferrer">
+              <a href="https://kushagragour.lemonsqueezy.com/buy/7a5d045f-63fa-409e-b0ff-5c90b9020575" target="_blank" rel="noopener noreferrer">
                 <Star className="w-6 h-6 mr-3" />
                 Buy License
                 <ArrowRight className="w-5 h-5 ml-3" />
