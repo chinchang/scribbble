@@ -33,6 +33,14 @@ export default function Home() {
             <span className="text-2xl font-bold gradient-text">Scribbble</span>
           </div>
           <nav className="hidden md:flex items-center space-x-8">
+            <a
+              href="https://kushagragour.lemonsqueezy.com/buy/5bcb4e79-35d3-43d4-8172-fc981cdbe9cc"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110 font-medium"
+            >
+              Buy License
+            </a>
             {/* <a
               href="#features"
               className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110 font-medium"
@@ -52,9 +60,11 @@ export default function Home() {
               Reviews
             </a> */}
           </nav>
-          <Button className="bg-gradient-to-r from-primary to-accent hover:from-accent hover:to-primary text-white shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
-            <Download className="w-4 h-4 mr-2" />
-            Get Scribbble
+          <Button asChild className="bg-gradient-to-r from-primary to-accent hover:from-accent hover:to-primary text-white shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+            <a href="https://github.com/chinchang/scribbble/releases/latest/download/Scribbble.dmg" target="_blank" rel="noopener noreferrer">
+              <Download className="w-4 h-4 mr-2" />
+              Get Scribbble
+            </a>
           </Button>
         </div>
       </header>
@@ -93,10 +103,13 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
             <Button
               size="lg"
+              asChild
               className="bg-gradient-to-r from-primary to-accent hover:from-accent hover:to-primary text-white px-12 py-6 text-xl font-bold shadow-2xl hover:shadow-3xl transform hover:scale-110 transition-all duration-300"
             >
-              <Download className="w-6 h-6 mr-3" />
-              Download Free
+              <a href="https://github.com/chinchang/scribbble/releases/latest/download/Scribbble.dmg" target="_blank" rel="noopener noreferrer">
+                <Download className="w-6 h-6 mr-3" />
+                Download Free
+              </a>
             </Button>
             <Button
               variant="outline"
@@ -104,9 +117,9 @@ export default function Home() {
               asChild
               className="px-12 py-6 text-xl font-bold border-2 border-primary text-primary hover:bg-primary hover:text-white transform hover:scale-105 transition-all duration-300 bg-transparent"
             >
-              <a href="#demo">
-                <Eye className="w-6 h-6 mr-3" />
-                Watch Demo
+              <a href="https://kushagragour.lemonsqueezy.com/buy/5bcb4e79-35d3-43d4-8172-fc981cdbe9cc" target="_blank" rel="noopener noreferrer">
+                <Star className="w-6 h-6 mr-3" />
+                Buy License
                 <ArrowRight className="w-5 h-5 ml-3" />
               </a>
             </Button>
@@ -119,7 +132,7 @@ export default function Home() {
             </div>
             <div className="flex items-center justify-center space-x-3 bg-card/50 backdrop-blur rounded-2xl p-6 border border-primary/20">
               <DollarSign className="w-8 h-8 text-primary" />
-              <span className="text-lg font-semibold">One-time cost</span>
+              <span className="text-lg font-semibold">Pay One-time </span>
             </div>
             <div className="flex items-center justify-center space-x-3 bg-card/50 backdrop-blur rounded-2xl p-6 border border-primary/20">
               <Palette className="w-8 h-8 text-accent" />
@@ -271,10 +284,13 @@ export default function Home() {
           </p>
           <Button
             size="lg"
+            asChild
             className="bg-gradient-to-r from-primary to-accent hover:from-accent hover:to-primary text-white px-16 py-8 text-2xl font-bold shadow-2xl hover:shadow-3xl transform hover:scale-110 transition-all duration-300 mb-8"
           >
-            <Download className="w-8 h-8 mr-4" />
-            Download Scribbble Free
+            <a href="https://github.com/chinchang/scribbble/releases/latest/download/Scribbble.dmg" target="_blank" rel="noopener noreferrer">
+              <Download className="w-8 h-8 mr-4" />
+              Download Scribbble Free
+            </a>
           </Button>
           <div className="flex items-center justify-center space-x-8 text-muted-foreground">
             <div className="flex items-center space-x-2">
