@@ -280,7 +280,7 @@ export default function Home() {
             Ready to <span className="gradient-text">scribble</span>?
           </h2>
           <p className="text-2xl text-muted-foreground mb-12 leading-relaxed">
-            Join thousands of users who are already transforming their screen shares with Scribbble ✨.
+            Join billions of users who are already transforming their screen shares with Scribbble!
           </p>
           <Button
             size="lg"
