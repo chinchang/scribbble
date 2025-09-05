@@ -7,6 +7,24 @@ export const metadata: Metadata = {
   title: 'Scribbble - Mac app',
   description: 'The beautiful screen annotation app for creators, teachers and presenters.',
   authors: [{ name: 'Kushagra Gour', url: 'https://kushagra.dev' }],
+  openGraph: {
+    title: 'Scribbble - Mac app',
+    description: 'The beautiful screen annotation app for creators, teachers and presenters.',
+    images: [
+      {
+        url: 'https://scribbble.app/social.png',
+        width: 1200,
+        height: 630,
+        alt: 'Scribbble - Screen annotation app',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Scribbble - Mac app',
+    description: 'The beautiful screen annotation app for creators, teachers and presenters.',
+    images: ['https://scribbble.app/social.png'],
+  },
 }
 
 export default function RootLayout({
