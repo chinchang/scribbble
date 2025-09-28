@@ -408,10 +408,7 @@ export default function ScreenshotAnnotate() {
     <div className="min-h-screen bg-background p-4">
       <div className="container mx-auto max-w-7xl">
         <div className="mb-8 text-center">
-          <h1 className="text-4xl font-bold mb-4">Screenshot Annotator</h1>
-          <p className="text-muted-foreground text-lg">
-            Upload an image or paste from clipboard to start annotating
-          </p>
+          <h1 className="text-4xl font-bold mb-4">Scribbble Screenshot Annotator</h1>
         </div>
 
         {!uploadedImage ? (
