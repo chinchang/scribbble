@@ -16,6 +16,7 @@ import {
   FileText,
   Settings
 } from "lucide-react"
+import { toast } from '@/hooks/use-toast'
 
 type Tool = 'pen' | 'rectangle' | 'arrow'
 
@@ -41,6 +42,7 @@ export default function ScreenshotAnnotate() {
   const [toolbarPosition, setToolbarPosition] = useState({ x: 0, y: 24 }) // Start centered top
   const [isDragging, setIsDragging] = useState(false)
   const [dragOffset, setDragOffset] = useState({ x: 0, y: 0 })
+  const [hasDragged, setHasDragged] = useState(false)
   
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const imageRef = useRef<HTMLImageElement>(null)
@@ -90,15 +92,23 @@ export default function ScreenshotAnnotate() {
 
   // Drag functionality
   const handleMouseDown = (e: React.MouseEvent) => {
-    setIsDragging(true)
     const container = containerRef.current
-    if (container) {
-      const containerRect = container.getBoundingClientRect()
-      setDragOffset({
-        x: e.clientX - (containerRect.left + toolbarPosition.x),
-        y: e.clientY - (containerRect.top + toolbarPosition.y)
-      })
-    }
+    const toolbar = toolbarRef.current
+    if (!container || !toolbar) return
+
+    const containerRect = container.getBoundingClientRect()
+    const toolbarRect = toolbar.getBoundingClientRect()
+
+    setHasDragged(true)
+    setDragOffset({
+      x: e.clientX - toolbarRect.left,
+      y: e.clientY - toolbarRect.top
+    })
+    setToolbarPosition({
+      x: toolbarRect.left - containerRect.left,
+      y: toolbarRect.top - containerRect.top
+    })
+    setIsDragging(true)
     e.preventDefault()
   }
 
@@ -245,18 +255,39 @@ export default function ScreenshotAnnotate() {
 
   const copyToClipboard = async () => {
     const canvas = canvasRef.current
-    if (!canvas) return
-    
+    if (!canvas) {
+      toast({
+        title: 'Nothing to copy',
+        description: 'Upload and annotate an image before copying.',
+        variant: 'destructive'
+      })
+      return
+    }
+
     try {
-      canvas.toBlob(async (blob) => {
-        if (blob) {
-          await navigator.clipboard.write([
-            new ClipboardItem({ 'image/png': blob })
-          ])
-        }
+      const blob = await new Promise<Blob | null>((resolve) =>
+        canvas.toBlob((result) => resolve(result), 'image/png')
+      )
+
+      if (!blob) {
+        throw new Error('Canvas blob generation failed')
+      }
+
+      await navigator.clipboard.write([
+        new ClipboardItem({ 'image/png': blob })
+      ])
+
+      toast({
+        title: 'Copied to clipboard',
+        description: 'Annotated screenshot is ready to paste.'
       })
     } catch (err) {
       console.error('Failed to copy to clipboard:', err)
+      toast({
+        title: 'Copy failed',
+        description: 'Allow clipboard permissions and try again.',
+        variant: 'destructive'
+      })
     }
   }
 
@@ -438,13 +469,15 @@ export default function ScreenshotAnnotate() {
                 {/* Floating Toolbar - Redesigned & Draggable */}
                 <div 
                   ref={toolbarRef}
-                  className={`absolute transition-all duration-300 ${
-                    isDrawing ? 'opacity-40 pointer-events-none' : 'opacity-100'
+                  className={`absolute ${
+                    isDragging ? '' : 'transition-all duration-300'
+                  } ${
+                    isDrawing ? 'opacity-80 pointer-events-none' : 'opacity-100'
                   } ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
                   style={{
-                    left: toolbarPosition.x === 0 ? '50%' : `${toolbarPosition.x}px`,
+                    left: !hasDragged && toolbarPosition.x === 0 ? '50%' : `${toolbarPosition.x}px`,
                     top: `${toolbarPosition.y}px`,
-                    transform: toolbarPosition.x === 0 ? 'translateX(-50%)' : 'none'
+                    transform: !hasDragged && toolbarPosition.x === 0 ? 'translateX(-50%)' : 'none'
                   }}
                 >
                   <div className="bg-slate-900/90 backdrop-blur-xl rounded-2xl px-4 py-3 shadow-2xl border border-white/10">
@@ -456,12 +489,12 @@ export default function ScreenshotAnnotate() {
                     />
                     <div className="flex items-center space-x-4">
                       {/* Text Tool */}
-                      <button
+                      {/* <button
                         className="w-12 h-12 rounded-xl bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-all duration-200 hover:scale-105"
                         title="Text tool"
                       >
                         <Type className="w-6 h-6" />
-                      </button>
+                      </button> */}
                       
                       {/* Pen Tool */}
                       <button
@@ -553,25 +586,6 @@ export default function ScreenshotAnnotate() {
               </div>
             </Card>
 
-            {/* Instructions */}
-            <Card className="p-4 bg-muted/30">
-              <h4 className="font-semibold mb-2">Features:</h4>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-                <div>
-                  <p className="mb-2"><strong>Draggable Toolbar:</strong> Click and drag toolbar to move it around</p>
-                  <p className="mb-2"><strong>Manual Copy:</strong> Use Ctrl+C (Cmd+C) to copy annotated image</p>
-                </div>
-                <div>
-                  <p className="mb-2"><strong>Keyboard Shortcuts:</strong></p>
-                  <div className="space-y-1">
-                    <div><kbd className="px-2 py-1 bg-background rounded border text-xs">P</kbd> - Pen tool</div>
-                    <div><kbd className="px-2 py-1 bg-background rounded border text-xs">R</kbd> - Rectangle tool</div>
-                    <div><kbd className="px-2 py-1 bg-background rounded border text-xs">A</kbd> - Arrow tool</div>
-                    <div><kbd className="px-2 py-1 bg-background rounded border text-xs">Ctrl+C</kbd> - Copy to clipboard</div>
-                  </div>
-                </div>
-              </div>
-            </Card>
           </div>
         )}
       </div>

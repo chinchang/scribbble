@@ -15,3 +15,6 @@ This is the website for an app called Scribbble - a mac app to annotate/draw any
 - [x] Once a tool used, copy the current annotated screenshot to the clipboard
 - [x] Redesign the toolbar as per design-toolbar.png
 - [x] Make the toolbar draggable across the screen
+- [ ] Add a toast when "copy" keyboard shortcut is pressed
+- [ ] Add "Text" tool to add text anywhere over the drawing
+- [ ]
