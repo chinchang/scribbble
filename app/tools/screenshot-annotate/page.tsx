@@ -3,18 +3,17 @@
 import { useState, useRef, useCallback, useEffect } from 'react'
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
-import { 
-  Upload, 
-  Pen, 
-  Square, 
+import {
+  Upload,
+  Pen,
+  Square,
   ArrowRight,
   Download,
   RotateCcw,
   Trash2,
   Type,
   Image as ImageIcon,
-  FileText,
-  Settings
+  FileText
 } from "lucide-react"
 import { toast } from '@/hooks/use-toast'
 
@@ -38,7 +37,6 @@ export default function ScreenshotAnnotate() {
   const [isDrawing, setIsDrawing] = useState(false)
   const [drawings, setDrawings] = useState<DrawingElement[]>([])
   const [currentPath, setCurrentPath] = useState<Point[]>([])
-  const [showSettings, setShowSettings] = useState(false)
   const [toolbarPosition, setToolbarPosition] = useState({ x: 0, y: 24 }) // Start centered top
   const [isDragging, setIsDragging] = useState(false)
   const [dragOffset, setDragOffset] = useState({ x: 0, y: 0 })
@@ -478,13 +476,23 @@ export default function ScreenshotAnnotate() {
                   }}
                 >
                   <div className="bg-slate-900/80 backdrop-blur-lg rounded-2xl px-4 py-3 shadow-2xl border border-white/10">
-                    {/* Drag handle */}
-                    <div 
-                      className="absolute inset-0 rounded-2xl"
-                      onMouseDown={handleMouseDown}
-                      style={{ zIndex: -1 }}
-                    />
                     <div className="flex items-center space-x-4">
+                      {/* Visual Drag Handle */}
+                      <div
+                        className="flex flex-col space-y-1 cursor-grab active:cursor-grabbing p-2 rounded-lg hover:bg-white/10 transition-colors"
+                        onMouseDown={handleMouseDown}
+                        title="Drag to move toolbar"
+                      >
+                        <div className="w-1 h-1 bg-white/40 rounded-full"></div>
+                        <div className="w-1 h-1 bg-white/40 rounded-full"></div>
+                        <div className="w-1 h-1 bg-white/40 rounded-full"></div>
+                        <div className="w-1 h-1 bg-white/40 rounded-full"></div>
+                        <div className="w-1 h-1 bg-white/40 rounded-full"></div>
+                        <div className="w-1 h-1 bg-white/40 rounded-full"></div>
+                      </div>
+
+                      {/* Separator */}
+                      <div className="w-px h-8 bg-white/20"></div>
                       {/* Text Tool */}
                       {/* <button
                         className="w-12 h-12 rounded-xl bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-all duration-200 hover:scale-105"
@@ -525,58 +533,36 @@ export default function ScreenshotAnnotate() {
                       >
                         <ArrowRight className="w-6 h-6" />
                       </button>
-                      
+
                       {/* Separator */}
-                      <div className="w-px h-8 bg-white/20 pointer-events-none"></div>
-                      
-                      {/* Settings Menu */}
-                      <div className="relative">
-                        <button
-                          onClick={() => setShowSettings(!showSettings)}
-                          className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-105 ${
-                            showSettings ? 'bg-blue-500/80' : 'bg-white/10 hover:bg-white/20'
-                          }`}
-                          title="Settings"
-                        >
-                          <Settings className="w-6 h-6" />
-                        </button>
-                        
-                        {/* Settings dropdown */}
-                        <div className={`absolute top-14 right-0 bg-slate-900/95 backdrop-blur-xl rounded-xl p-2 shadow-2xl border border-white/10 space-y-1 transition-all duration-200 ${
-                          showSettings ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
-                        }`}>
-                          <button
-                            onClick={() => {
-                              clearDrawings()
-                              setShowSettings(false)
-                            }}
-                            className="w-10 h-10 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-all duration-200"
-                            title="Clear all"
-                          >
-                            <RotateCcw className="w-4 h-4" />
-                          </button>
-                          <button
-                            onClick={() => {
-                              downloadAnnotatedImage()
-                              setShowSettings(false)
-                            }}
-                            className="w-10 h-10 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-all duration-200"
-                            title="Download"
-                          >
-                            <Download className="w-4 h-4" />
-                          </button>
-                          <button
-                            onClick={() => {
-                              setUploadedImage(null)
-                              setShowSettings(false)
-                            }}
-                            className="w-10 h-10 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-all duration-200"
-                            title="New image"
-                          >
-                            <Trash2 className="w-4 h-4" />
-                          </button>
-                        </div>
-                      </div>
+                      <div className="w-px h-8 bg-white/20"></div>
+
+                      {/* Clear All Button */}
+                      <button
+                        onClick={() => clearDrawings()}
+                        className="w-12 h-12 rounded-xl bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-all duration-200 hover:scale-105"
+                        title="Clear all"
+                      >
+                        <RotateCcw className="w-6 h-6" />
+                      </button>
+
+                      {/* Download Button */}
+                      <button
+                        onClick={() => downloadAnnotatedImage()}
+                        className="w-12 h-12 rounded-xl bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-all duration-200 hover:scale-105"
+                        title="Download"
+                      >
+                        <Download className="w-6 h-6" />
+                      </button>
+
+                      {/* New Image Button */}
+                      <button
+                        onClick={() => setUploadedImage(null)}
+                        className="w-12 h-12 rounded-xl bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-all duration-200 hover:scale-105"
+                        title="New image"
+                      >
+                        <Trash2 className="w-6 h-6" />
+                      </button>
                     </div>
                   </div>
                 </div>
