@@ -477,7 +477,7 @@ export default function ScreenshotAnnotate() {
                     transform: !hasDragged && toolbarPosition.x === 0 ? 'translateX(-50%)' : 'none'
                   }}
                 >
-                  <div className="bg-slate-900/90 backdrop-blur-xl rounded-2xl px-4 py-3 shadow-2xl border border-white/10">
+                  <div className="bg-slate-900/80 backdrop-blur-lg rounded-2xl px-4 py-3 shadow-2xl border border-white/10">
                     {/* Drag handle */}
                     <div 
                       className="absolute inset-0 rounded-2xl"
@@ -527,7 +527,7 @@ export default function ScreenshotAnnotate() {
                       </button>
                       
                       {/* Separator */}
-                      <div className="w-px h-8 bg-white/20"></div>
+                      <div className="w-px h-8 bg-white/20 pointer-events-none"></div>
                       
                       {/* Settings Menu */}
                       <div className="relative">
