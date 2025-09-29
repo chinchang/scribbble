@@ -1,8 +1,8 @@
-'use client'
+"use client";
 
-import { useState, useRef, useCallback, useEffect } from 'react'
-import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
+import { useState, useRef, useCallback, useEffect } from "react";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 import {
   Upload,
   Pen,
@@ -13,411 +13,559 @@ import {
   Trash2,
   Type,
   Image as ImageIcon,
-  FileText
-} from "lucide-react"
-import { toast } from '@/hooks/use-toast'
+  FileText,
+} from "lucide-react";
+import { toast } from "@/hooks/use-toast";
 
-type Tool = 'pen' | 'rectangle' | 'arrow'
+type Tool = "pen" | "rectangle" | "arrow" | "text";
 
 interface Point {
-  x: number
-  y: number
+  x: number;
+  y: number;
 }
 
 interface DrawingElement {
-  type: Tool
-  points: Point[]
-  color: string
-  strokeWidth: number
+  type: Tool;
+  points: Point[];
+  color: string;
+  strokeWidth: number;
+  text?: string;
+  fontSize?: number;
 }
 
 export default function ScreenshotAnnotate() {
-  const [uploadedImage, setUploadedImage] = useState<string | null>(null)
-  const [currentTool, setCurrentTool] = useState<Tool>('pen')
-  const [isDrawing, setIsDrawing] = useState(false)
-  const [drawings, setDrawings] = useState<DrawingElement[]>([])
-  const [currentPath, setCurrentPath] = useState<Point[]>([])
-  const [toolbarPosition, setToolbarPosition] = useState({ x: 0, y: 24 }) // Start centered top
-  const [isDragging, setIsDragging] = useState(false)
-  const [dragOffset, setDragOffset] = useState({ x: 0, y: 0 })
-  const [hasDragged, setHasDragged] = useState(false)
-  
-  const canvasRef = useRef<HTMLCanvasElement>(null)
-  const imageRef = useRef<HTMLImageElement>(null)
-  const containerRef = useRef<HTMLDivElement>(null)
-  const fileInputRef = useRef<HTMLInputElement>(null)
-  const toolbarRef = useRef<HTMLDivElement>(null)
+  const [uploadedImage, setUploadedImage] = useState<string | null>(null);
+  const [currentTool, setCurrentTool] = useState<Tool>("pen");
+  const [isDrawing, setIsDrawing] = useState(false);
+  const [drawings, setDrawings] = useState<DrawingElement[]>([]);
+  const [currentPath, setCurrentPath] = useState<Point[]>([]);
+  const [toolbarPosition, setToolbarPosition] = useState({ x: 0, y: 24 }); // Start centered top
+  const [isDragging, setIsDragging] = useState(false);
+  const [dragOffset, setDragOffset] = useState({ x: 0, y: 0 });
+  const [hasDragged, setHasDragged] = useState(false);
+  const [textInput, setTextInput] = useState("");
+  const [textPosition, setTextPosition] = useState<Point | null>(null);
+  const [isTextInputActive, setIsTextInputActive] = useState(false);
+
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const imageRef = useRef<HTMLImageElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+  const toolbarRef = useRef<HTMLDivElement>(null);
+  const textInputRef = useRef<HTMLInputElement>(null);
 
   const handleImageUpload = (file: File) => {
-    if (file && file.type.startsWith('image/')) {
-      const reader = new FileReader()
+    if (file && file.type.startsWith("image/")) {
+      const reader = new FileReader();
       reader.onload = (e) => {
-        setUploadedImage(e.target?.result as string)
-        setDrawings([])
-      }
-      reader.readAsDataURL(file)
+        setUploadedImage(e.target?.result as string);
+        setDrawings([]);
+      };
+      reader.readAsDataURL(file);
     }
-  }
+  };
 
   const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0]
+    const file = e.target.files?.[0];
     if (file) {
-      handleImageUpload(file)
+      handleImageUpload(file);
     }
-  }
+  };
 
   const handlePaste = useCallback((e: ClipboardEvent) => {
-    const items = e.clipboardData?.items
+    const items = e.clipboardData?.items;
     if (items) {
       for (let i = 0; i < items.length; i++) {
-        if (items[i].type.startsWith('image/')) {
-          const file = items[i].getAsFile()
+        if (items[i].type.startsWith("image/")) {
+          const file = items[i].getAsFile();
           if (file) {
-            handleImageUpload(file)
+            handleImageUpload(file);
           }
-          break
+          break;
         }
       }
     }
-  }, [])
+  }, []);
 
   useEffect(() => {
-    document.addEventListener('paste', handlePaste)
+    document.addEventListener("paste", handlePaste);
     return () => {
-      document.removeEventListener('paste', handlePaste)
-    }
-  }, [handlePaste])
+      document.removeEventListener("paste", handlePaste);
+    };
+  }, [handlePaste]);
 
   // Drag functionality
   const handleMouseDown = (e: React.MouseEvent) => {
-    const container = containerRef.current
-    const toolbar = toolbarRef.current
-    if (!container || !toolbar) return
+    const container = containerRef.current;
+    const toolbar = toolbarRef.current;
+    if (!container || !toolbar) return;
 
-    const containerRect = container.getBoundingClientRect()
-    const toolbarRect = toolbar.getBoundingClientRect()
+    const containerRect = container.getBoundingClientRect();
+    const toolbarRect = toolbar.getBoundingClientRect();
 
-    setHasDragged(true)
+    setHasDragged(true);
     setDragOffset({
       x: e.clientX - toolbarRect.left,
-      y: e.clientY - toolbarRect.top
-    })
+      y: e.clientY - toolbarRect.top,
+    });
     setToolbarPosition({
       x: toolbarRect.left - containerRect.left,
-      y: toolbarRect.top - containerRect.top
-    })
-    setIsDragging(true)
-    e.preventDefault()
-  }
+      y: toolbarRect.top - containerRect.top,
+    });
+    setIsDragging(true);
+    e.preventDefault();
+  };
 
-  const handleMouseMove = useCallback((e: MouseEvent) => {
-    if (isDragging) {
-      const container = containerRef.current
-      if (container) {
-        const containerRect = container.getBoundingClientRect()
-        const newX = e.clientX - containerRect.left - dragOffset.x
-        const newY = e.clientY - containerRect.top - dragOffset.y
-        
-        // Keep toolbar within container bounds
-        const maxX = container.clientWidth - 300 // toolbar width
-        const maxY = container.clientHeight - 60 // toolbar height
-        
-        setToolbarPosition({
-          x: Math.max(0, Math.min(newX, maxX)),
-          y: Math.max(0, Math.min(newY, maxY))
-        })
+  const handleMouseMove = useCallback(
+    (e: MouseEvent) => {
+      if (isDragging) {
+        const container = containerRef.current;
+        if (container) {
+          const containerRect = container.getBoundingClientRect();
+          const newX = e.clientX - containerRect.left - dragOffset.x;
+          const newY = e.clientY - containerRect.top - dragOffset.y;
+
+          // Keep toolbar within container bounds
+          const maxX = container.clientWidth - 300; // toolbar width
+          const maxY = container.clientHeight - 60; // toolbar height
+
+          setToolbarPosition({
+            x: Math.max(0, Math.min(newX, maxX)),
+            y: Math.max(0, Math.min(newY, maxY)),
+          });
+        }
       }
-    }
-  }, [isDragging, dragOffset])
+    },
+    [isDragging, dragOffset]
+  );
 
   const handleMouseUp = useCallback(() => {
-    setIsDragging(false)
-  }, [])
+    setIsDragging(false);
+  }, []);
 
   useEffect(() => {
     if (isDragging) {
-      document.addEventListener('mousemove', handleMouseMove)
-      document.addEventListener('mouseup', handleMouseUp)
+      document.addEventListener("mousemove", handleMouseMove);
+      document.addEventListener("mouseup", handleMouseUp);
       return () => {
-        document.removeEventListener('mousemove', handleMouseMove)
-        document.removeEventListener('mouseup', handleMouseUp)
-      }
+        document.removeEventListener("mousemove", handleMouseMove);
+        document.removeEventListener("mouseup", handleMouseUp);
+      };
     }
-  }, [isDragging, handleMouseMove, handleMouseUp])
+  }, [isDragging, handleMouseMove, handleMouseUp]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
+      // Don't handle shortcuts if text input is active
+      if (isTextInputActive) return;
+
       // Check for Ctrl+C or Cmd+C
-      if ((e.ctrlKey || e.metaKey) && e.key === 'c') {
-        e.preventDefault()
-        copyToClipboard()
-        return
+      if ((e.ctrlKey || e.metaKey) && e.key === "c" && !e.shiftKey) {
+        e.preventDefault();
+        copyToClipboard();
+        return;
       }
 
       switch (e.key) {
-        case 'p':
-        case 'P':
-          setCurrentTool('pen')
-          break
-        case 'r':
-        case 'R':
-          setCurrentTool('rectangle')
-          break
-        case 'a':
-        case 'A':
-          setCurrentTool('arrow')
-          break
+        case "p":
+        case "P":
+          setCurrentTool("pen");
+          break;
+        case "r":
+        case "R":
+          setCurrentTool("rectangle");
+          break;
+        case "a":
+        case "A":
+          setCurrentTool("arrow");
+          break;
+        case "t":
+        case "T":
+          setCurrentTool("text");
+          break;
       }
-    }
+    };
 
-    document.addEventListener('keydown', handleKeyDown)
+    document.addEventListener("keydown", handleKeyDown);
     return () => {
-      document.removeEventListener('keydown', handleKeyDown)
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isTextInputActive]);
+
+  // Focus text input when it becomes active
+  useEffect(() => {
+    if (isTextInputActive && textInputRef.current) {
+      setTimeout(() => {
+        textInputRef.current?.focus();
+      }, 50); // Small delay to ensure input is rendered
     }
-  }, [])
+  }, [isTextInputActive]);
 
-  const getMousePos = (e: React.MouseEvent<HTMLCanvasElement>) => {
-    const canvas = canvasRef.current
-    if (!canvas) return { x: 0, y: 0 }
-    
-    const rect = canvas.getBoundingClientRect()
-    return {
-      x: e.clientX - rect.left,
-      y: e.clientY - rect.top
-    }
-  }
+  // Redraw canvas when drawings change
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    const ctx = canvas?.getContext("2d");
+    const image = imageRef.current;
 
-  const startDrawing = (e: React.MouseEvent<HTMLCanvasElement>) => {
-    setIsDrawing(true)
-    const point = getMousePos(e)
-    setCurrentPath([point])
-  }
+    if (!ctx || !canvas || !image) return;
 
-  const draw = (e: React.MouseEvent<HTMLCanvasElement>) => {
-    if (!isDrawing) return
-    
-    const point = getMousePos(e)
-    setCurrentPath(prev => [...prev, point])
-    
-    const canvas = canvasRef.current
-    const ctx = canvas?.getContext('2d')
-    if (!ctx) return
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
 
-    redrawCanvas()
-    
-    // Draw current path
-    ctx.strokeStyle = '#ef4444'
-    ctx.lineWidth = 2
-    ctx.lineCap = 'round'
-    ctx.lineJoin = 'round'
+    console.log("Redrawing canvas with drawings:", drawings);
 
-    if (currentTool === 'pen') {
-      ctx.beginPath()
-      currentPath.concat([point]).forEach((p, i) => {
-        if (i === 0) {
-          ctx.moveTo(p.x, p.y)
-        } else {
-          ctx.lineTo(p.x, p.y)
-        }
-      })
-      ctx.stroke()
-    } else if (currentTool === 'rectangle') {
-      const startPoint = currentPath[0]
-      ctx.strokeRect(
-        startPoint.x,
-        startPoint.y,
-        point.x - startPoint.x,
-        point.y - startPoint.y
-      )
-    } else if (currentTool === 'arrow') {
-      const startPoint = currentPath[0]
-      drawArrow(ctx, startPoint.x, startPoint.y, point.x, point.y)
-    }
-  }
-
-  const stopDrawing = () => {
-    if (!isDrawing || currentPath.length === 0) return
-    
-    setIsDrawing(false)
-    
-    const newDrawing: DrawingElement = {
-      type: currentTool,
-      points: [...currentPath],
-      color: '#ef4444',
-      strokeWidth: 2
-    }
-    
-    setDrawings(prev => [...prev, newDrawing])
-    setCurrentPath([])
-  }
-
-  const copyToClipboard = async () => {
-    const canvas = canvasRef.current
-    if (!canvas) {
-      toast({
-        title: 'Nothing to copy',
-        description: 'Upload and annotate an image before copying.',
-        variant: 'destructive'
-      })
-      return
-    }
-
-    try {
-      const blob = await new Promise<Blob | null>((resolve) =>
-        canvas.toBlob((result) => resolve(result), 'image/png')
-      )
-
-      if (!blob) {
-        throw new Error('Canvas blob generation failed')
-      }
-
-      await navigator.clipboard.write([
-        new ClipboardItem({ 'image/png': blob })
-      ])
-
-      toast({
-        title: 'Copied to clipboard',
-        description: 'Annotated screenshot is ready to paste.'
-      })
-    } catch (err) {
-      console.error('Failed to copy to clipboard:', err)
-      toast({
-        title: 'Copy failed',
-        description: 'Allow clipboard permissions and try again.',
-        variant: 'destructive'
-      })
-    }
-  }
-
-  const drawArrow = (ctx: CanvasRenderingContext2D, fromX: number, fromY: number, toX: number, toY: number) => {
-    const headLength = 15
-    const angle = Math.atan2(toY - fromY, toX - fromX)
-    
-    // Draw line
-    ctx.beginPath()
-    ctx.moveTo(fromX, fromY)
-    ctx.lineTo(toX, toY)
-    ctx.stroke()
-    
-    // Draw arrowhead
-    ctx.beginPath()
-    ctx.moveTo(toX, toY)
-    ctx.lineTo(
-      toX - headLength * Math.cos(angle - Math.PI / 6),
-      toY - headLength * Math.sin(angle - Math.PI / 6)
-    )
-    ctx.moveTo(toX, toY)
-    ctx.lineTo(
-      toX - headLength * Math.cos(angle + Math.PI / 6),
-      toY - headLength * Math.sin(angle + Math.PI / 6)
-    )
-    ctx.stroke()
-  }
-
-  const redrawCanvas = () => {
-    const canvas = canvasRef.current
-    const ctx = canvas?.getContext('2d')
-    const image = imageRef.current
-    
-    if (!ctx || !canvas || !image) return
-
-    ctx.clearRect(0, 0, canvas.width, canvas.height)
-    ctx.drawImage(image, 0, 0, canvas.width, canvas.height)
-    
     // Redraw all drawings
-    drawings.forEach(drawing => {
-      ctx.strokeStyle = drawing.color
-      ctx.lineWidth = drawing.strokeWidth
-      ctx.lineCap = 'round'
-      ctx.lineJoin = 'round'
+    drawings.forEach((drawing) => {
+      ctx.strokeStyle = drawing.color;
+      ctx.lineWidth = drawing.strokeWidth;
+      ctx.lineCap = "round";
+      ctx.lineJoin = "round";
 
-      if (drawing.type === 'pen') {
-        ctx.beginPath()
+      if (drawing.type === "pen") {
+        ctx.beginPath();
         drawing.points.forEach((point, i) => {
           if (i === 0) {
-            ctx.moveTo(point.x, point.y)
+            ctx.moveTo(point.x, point.y);
           } else {
-            ctx.lineTo(point.x, point.y)
+            ctx.lineTo(point.x, point.y);
           }
-        })
-        ctx.stroke()
-      } else if (drawing.type === 'rectangle') {
-        const startPoint = drawing.points[0]
-        const endPoint = drawing.points[drawing.points.length - 1]
+        });
+        ctx.stroke();
+      } else if (drawing.type === "rectangle") {
+        const startPoint = drawing.points[0];
+        const endPoint = drawing.points[drawing.points.length - 1];
         ctx.strokeRect(
           startPoint.x,
           startPoint.y,
           endPoint.x - startPoint.x,
           endPoint.y - startPoint.y
-        )
-      } else if (drawing.type === 'arrow') {
-        const startPoint = drawing.points[0]
-        const endPoint = drawing.points[drawing.points.length - 1]
-        drawArrow(ctx, startPoint.x, startPoint.y, endPoint.x, endPoint.y)
+        );
+      } else if (drawing.type === "arrow") {
+        const startPoint = drawing.points[0];
+        const endPoint = drawing.points[drawing.points.length - 1];
+        drawArrow(ctx, startPoint.x, startPoint.y, endPoint.x, endPoint.y);
+      } else if (drawing.type === "text" && drawing.text) {
+        const point = drawing.points[0];
+        console.log("Rendering text:", drawing.text, "at position:", point);
+
+        ctx.fillStyle = drawing.color;
+        ctx.font = `bold ${drawing.fontSize || 20}px Arial`;
+        ctx.textBaseline = "top";
+
+        // Add text outline for better visibility
+        ctx.strokeStyle = "#000000";
+        ctx.lineWidth = 3;
+        ctx.strokeText(drawing.text, point.x, point.y);
+
+        // Fill the text
+        ctx.fillStyle = drawing.color;
+        ctx.fillText(drawing.text, point.x, point.y);
       }
-    })
-  }
+    });
+  }, [drawings]);
+
+  const getMousePos = (e: React.MouseEvent<HTMLCanvasElement>) => {
+    const canvas = canvasRef.current;
+    if (!canvas) return { x: 0, y: 0 };
+
+    const rect = canvas.getBoundingClientRect();
+    return {
+      x: e.clientX - rect.left,
+      y: e.clientY - rect.top,
+    };
+  };
+
+  const startDrawing = (e: React.MouseEvent<HTMLCanvasElement>) => {
+    if (currentTool === "text") {
+      const point = getMousePos(e);
+      setTextPosition(point);
+      setIsTextInputActive(true);
+      return;
+    }
+
+    setIsDrawing(true);
+    const point = getMousePos(e);
+    setCurrentPath([point]);
+  };
+
+  const draw = (e: React.MouseEvent<HTMLCanvasElement>) => {
+    if (!isDrawing) return;
+
+    const point = getMousePos(e);
+    setCurrentPath((prev) => [...prev, point]);
+
+    const canvas = canvasRef.current;
+    const ctx = canvas?.getContext("2d");
+    if (!ctx) return;
+
+    redrawCanvas();
+
+    // Draw current path
+    ctx.strokeStyle = "#ef4444";
+    ctx.lineWidth = 2;
+    ctx.lineCap = "round";
+    ctx.lineJoin = "round";
+
+    if (currentTool === "pen") {
+      ctx.beginPath();
+      currentPath.concat([point]).forEach((p, i) => {
+        if (i === 0) {
+          ctx.moveTo(p.x, p.y);
+        } else {
+          ctx.lineTo(p.x, p.y);
+        }
+      });
+      ctx.stroke();
+    } else if (currentTool === "rectangle") {
+      const startPoint = currentPath[0];
+      ctx.strokeRect(
+        startPoint.x,
+        startPoint.y,
+        point.x - startPoint.x,
+        point.y - startPoint.y
+      );
+    } else if (currentTool === "arrow") {
+      const startPoint = currentPath[0];
+      drawArrow(ctx, startPoint.x, startPoint.y, point.x, point.y);
+    }
+  };
+
+  const stopDrawing = () => {
+    if (!isDrawing || currentPath.length === 0) return;
+
+    setIsDrawing(false);
+
+    const newDrawing: DrawingElement = {
+      type: currentTool,
+      points: [...currentPath],
+      color: "#ef4444",
+      strokeWidth: 2,
+    };
+
+    setDrawings((prev) => [...prev, newDrawing]);
+    setCurrentPath([]);
+  };
+
+  const handleTextSubmit = (text: string) => {
+    if (!textPosition || !text.trim()) {
+      setIsTextInputActive(false);
+      setTextInput("");
+      setTextPosition(null);
+      return;
+    }
+
+    const newDrawing: DrawingElement = {
+      type: "text",
+      points: [textPosition],
+      color: "#ef4444",
+      strokeWidth: 4,
+      text: text.trim(),
+      fontSize: 20,
+    };
+
+    console.log("Adding text drawing:", newDrawing);
+    setDrawings((prev) => {
+      const updated = [...prev, newDrawing];
+      console.log("Updated drawings array:", updated);
+      return updated;
+    });
+    setIsTextInputActive(false);
+    setTextInput("");
+    setTextPosition(null);
+  };
+
+  const copyToClipboard = async () => {
+    const canvas = canvasRef.current;
+    if (!canvas) {
+      toast({
+        title: "Nothing to copy",
+        description: "Upload and annotate an image before copying.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    try {
+      const blob = await new Promise<Blob | null>((resolve) =>
+        canvas.toBlob((result) => resolve(result), "image/png")
+      );
+
+      if (!blob) {
+        throw new Error("Canvas blob generation failed");
+      }
+
+      await navigator.clipboard.write([
+        new ClipboardItem({ "image/png": blob }),
+      ]);
+
+      toast({
+        title: "Copied to clipboard",
+        description: "Annotated screenshot is ready to paste.",
+      });
+    } catch (err) {
+      console.error("Failed to copy to clipboard:", err);
+      toast({
+        title: "Copy failed",
+        description: "Allow clipboard permissions and try again.",
+        variant: "destructive",
+      });
+    }
+  };
+
+  const drawArrow = (
+    ctx: CanvasRenderingContext2D,
+    fromX: number,
+    fromY: number,
+    toX: number,
+    toY: number
+  ) => {
+    const headLength = 15;
+    const angle = Math.atan2(toY - fromY, toX - fromX);
+
+    // Draw line
+    ctx.beginPath();
+    ctx.moveTo(fromX, fromY);
+    ctx.lineTo(toX, toY);
+    ctx.stroke();
+
+    // Draw arrowhead
+    ctx.beginPath();
+    ctx.moveTo(toX, toY);
+    ctx.lineTo(
+      toX - headLength * Math.cos(angle - Math.PI / 6),
+      toY - headLength * Math.sin(angle - Math.PI / 6)
+    );
+    ctx.moveTo(toX, toY);
+    ctx.lineTo(
+      toX - headLength * Math.cos(angle + Math.PI / 6),
+      toY - headLength * Math.sin(angle + Math.PI / 6)
+    );
+    ctx.stroke();
+  };
+
+  const redrawCanvas = () => {
+    const canvas = canvasRef.current;
+    const ctx = canvas?.getContext("2d");
+    const image = imageRef.current;
+
+    if (!ctx || !canvas || !image) return;
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+
+    console.log("Redrawing canvas with drawings:", drawings);
+
+    // Redraw all drawings
+    drawings.forEach((drawing) => {
+      ctx.strokeStyle = drawing.color;
+      ctx.lineWidth = drawing.strokeWidth;
+      ctx.lineCap = "round";
+      ctx.lineJoin = "round";
+
+      if (drawing.type === "pen") {
+        ctx.beginPath();
+        drawing.points.forEach((point, i) => {
+          if (i === 0) {
+            ctx.moveTo(point.x, point.y);
+          } else {
+            ctx.lineTo(point.x, point.y);
+          }
+        });
+        ctx.stroke();
+      } else if (drawing.type === "rectangle") {
+        const startPoint = drawing.points[0];
+        const endPoint = drawing.points[drawing.points.length - 1];
+        ctx.strokeRect(
+          startPoint.x,
+          startPoint.y,
+          endPoint.x - startPoint.x,
+          endPoint.y - startPoint.y
+        );
+      } else if (drawing.type === "arrow") {
+        const startPoint = drawing.points[0];
+        const endPoint = drawing.points[drawing.points.length - 1];
+        drawArrow(ctx, startPoint.x, startPoint.y, endPoint.x, endPoint.y);
+      } else if (drawing.type === "text" && drawing.text) {
+        const point = drawing.points[0];
+        console.log("Rendering text:", drawing.text, "at position:", point);
+
+        ctx.fillStyle = drawing.color;
+        ctx.font = `bold ${drawing.fontSize || 20}px Arial`;
+        ctx.textBaseline = "top";
+
+        // Add text outline for better visibility
+        ctx.strokeStyle = "#000000";
+        ctx.lineWidth = 3;
+        ctx.strokeText(drawing.text, point.x, point.y);
+
+        // Fill the text
+        ctx.fillStyle = drawing.color;
+        ctx.fillText(drawing.text, point.x, point.y);
+      }
+    });
+  };
 
   const handleImageLoad = () => {
-    const canvas = canvasRef.current
-    const image = imageRef.current
-    const container = containerRef.current
-    
-    if (!canvas || !image || !container) return
+    const canvas = canvasRef.current;
+    const image = imageRef.current;
+    const container = containerRef.current;
 
-    const containerWidth = container.clientWidth
-    const containerHeight = container.clientHeight
-    
-    const imageAspectRatio = image.naturalWidth / image.naturalHeight
-    const containerAspectRatio = containerWidth / containerHeight
-    
-    let canvasWidth, canvasHeight
-    
+    if (!canvas || !image || !container) return;
+
+    const containerWidth = container.clientWidth;
+    const containerHeight = container.clientHeight;
+
+    const imageAspectRatio = image.naturalWidth / image.naturalHeight;
+    const containerAspectRatio = containerWidth / containerHeight;
+
+    let canvasWidth, canvasHeight;
+
     if (imageAspectRatio > containerAspectRatio) {
-      canvasWidth = containerWidth
-      canvasHeight = containerWidth / imageAspectRatio
+      canvasWidth = containerWidth;
+      canvasHeight = containerWidth / imageAspectRatio;
     } else {
-      canvasHeight = containerHeight
-      canvasWidth = containerHeight * imageAspectRatio
+      canvasHeight = containerHeight;
+      canvasWidth = containerHeight * imageAspectRatio;
     }
-    
-    canvas.width = canvasWidth
-    canvas.height = canvasHeight
-    
-    redrawCanvas()
-  }
+
+    canvas.width = canvasWidth;
+    canvas.height = canvasHeight;
+
+    redrawCanvas();
+  };
 
   const clearDrawings = () => {
-    setDrawings([])
-    redrawCanvas()
-  }
+    setDrawings([]);
+    redrawCanvas();
+  };
 
   const downloadAnnotatedImage = () => {
-    const canvas = canvasRef.current
-    if (!canvas) return
-    
-    const link = document.createElement('a')
-    link.download = 'annotated-screenshot.png'
-    link.href = canvas.toDataURL()
-    link.click()
-  }
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    const link = document.createElement("a");
+    link.download = "annotated-screenshot.png";
+    link.href = canvas.toDataURL();
+    link.click();
+  };
 
   return (
     <div className="min-h-screen bg-background p-4">
       <div className="container mx-auto max-w-7xl">
         <div className="mb-8 text-center">
-          <h1 className="text-4xl font-bold mb-4">Scribbble Screenshot Annotator</h1>
+          <h1 className="text-4xl font-bold mb-4">
+            Scribbble Screenshot Annotator
+          </h1>
         </div>
 
         {!uploadedImage ? (
           <Card className="border-2 border-dashed border-border hover:border-primary/50 transition-colors">
             <div className="p-12 text-center">
               <Upload className="w-16 h-16 mx-auto mb-6 text-muted-foreground" />
-              <h3 className="text-xl font-semibold mb-4">Upload Screenshot</h3>
               <p className="text-muted-foreground mb-6">
                 Select an image file or paste from clipboard (Ctrl+V / Cmd+V)
               </p>
-              <Button 
+              <Button
                 onClick={() => fileInputRef.current?.click()}
                 className="mb-4"
               >
@@ -440,10 +588,17 @@ export default function ScreenshotAnnotate() {
           <div className="relative">
             {/* Canvas Area */}
             <Card className="p-4">
-              <div 
+              <div
                 ref={containerRef}
                 className="relative w-full h-[80vh] flex items-center justify-center bg-muted/20 rounded-lg overflow-hidden"
-                style={{ cursor: currentTool === 'pen' ? 'crosshair' : 'default' }}
+                style={{
+                  cursor:
+                    currentTool === "pen"
+                      ? "crosshair"
+                      : currentTool === "text"
+                      ? "text"
+                      : "default",
+                }}
               >
                 <img
                   ref={imageRef}
@@ -452,27 +607,70 @@ export default function ScreenshotAnnotate() {
                   className="hidden"
                   onLoad={handleImageLoad}
                 />
-                <canvas
-                  ref={canvasRef}
-                  onMouseDown={startDrawing}
-                  onMouseMove={draw}
-                  onMouseUp={stopDrawing}
-                  onMouseLeave={stopDrawing}
-                  className="max-w-full max-h-full border border-border rounded-lg"
-                />
-                
+                <div className="relative  ">
+                  <canvas
+                    ref={canvasRef}
+                    onMouseDown={startDrawing}
+                    onMouseMove={draw}
+                    onMouseUp={stopDrawing}
+                    onMouseLeave={stopDrawing}
+                    className="max-w-full max-h-full border border-border rounded-lg"
+                  />
+
+                  {/* Text Input Overlay */}
+                  {isTextInputActive && textPosition && (
+                    <input
+                      ref={textInputRef}
+                      type="text"
+                      value={textInput}
+                      onChange={(e) => setTextInput(e.target.value)}
+                      onKeyDown={(e) => {
+                        if (e.key === "Enter") {
+                          handleTextSubmit(textInput);
+                        } else if (e.key === "Escape") {
+                          setIsTextInputActive(false);
+                          setTextInput("");
+                          setTextPosition(null);
+                        }
+                      }}
+                      onBlur={() => {
+                        if (textInput.trim()) {
+                          handleTextSubmit(textInput);
+                        } else {
+                          setIsTextInputActive(false);
+                          setTextInput("");
+                          setTextPosition(null);
+                        }
+                      }}
+                      className="absolute bg-transparent border-2 border-red-400 rounded px-2 py-1 text-red-400 font-bold text-lg outline-none"
+                      style={{
+                        left: textPosition.x,
+                        top: textPosition.y,
+                        minWidth: "100px",
+                        zIndex: 9999,
+                      }}
+                      placeholder="Enter text..."
+                    />
+                  )}
+                </div>
                 {/* Floating Toolbar - Redesigned & Draggable */}
-                <div 
+                <div
                   ref={toolbarRef}
                   className={`absolute ${
-                    isDragging ? '' : 'transition-all duration-300'
+                    isDragging ? "" : "transition-all duration-300"
                   } ${
-                    isDrawing ? 'opacity-80 pointer-events-none' : 'opacity-100'
-                  } ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
+                    isDrawing ? "opacity-95 pointer-events-none" : "opacity-100"
+                  } ${isDragging ? "cursor-grabbing" : "cursor-grab"}`}
                   style={{
-                    left: !hasDragged && toolbarPosition.x === 0 ? '50%' : `${toolbarPosition.x}px`,
+                    left:
+                      !hasDragged && toolbarPosition.x === 0
+                        ? "50%"
+                        : `${toolbarPosition.x}px`,
                     top: `${toolbarPosition.y}px`,
-                    transform: !hasDragged && toolbarPosition.x === 0 ? 'translateX(-50%)' : 'none'
+                    transform:
+                      !hasDragged && toolbarPosition.x === 0
+                        ? "translateX(-50%)"
+                        : "none",
                   }}
                 >
                   <div className="bg-slate-900/80 backdrop-blur-lg rounded-2xl px-4 py-3 shadow-2xl border border-white/10">
@@ -483,51 +681,60 @@ export default function ScreenshotAnnotate() {
                         onMouseDown={handleMouseDown}
                         title="Drag to move toolbar"
                       >
-                        <div className="w-1 h-1 bg-white/40 rounded-full"></div>
-                        <div className="w-1 h-1 bg-white/40 rounded-full"></div>
-                        <div className="w-1 h-1 bg-white/40 rounded-full"></div>
-                        <div className="w-1 h-1 bg-white/40 rounded-full"></div>
-                        <div className="w-1 h-1 bg-white/40 rounded-full"></div>
-                        <div className="w-1 h-1 bg-white/40 rounded-full"></div>
+                        <div className="w-2 h-2 bg-white/20 rounded-full"></div>
+                        <div className="w-2 h-2 bg-white/20 rounded-full"></div>
+                        <div className="w-2 h-2 bg-white/20 rounded-full"></div>
                       </div>
 
                       {/* Separator */}
                       <div className="w-px h-8 bg-white/20"></div>
+
                       {/* Text Tool */}
-                      {/* <button
-                        className="w-12 h-12 rounded-xl bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-all duration-200 hover:scale-105"
-                        title="Text tool"
+                      <button
+                        onClick={() => setCurrentTool("text")}
+                        className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-105 ${
+                          currentTool === "text"
+                            ? "bg-blue-500/80"
+                            : "bg-white/10 hover:bg-white/20"
+                        }`}
+                        title="Text tool (T)"
                       >
                         <Type className="w-6 h-6" />
-                      </button> */}
-                      
+                      </button>
+
                       {/* Pen Tool */}
                       <button
-                        onClick={() => setCurrentTool('pen')}
+                        onClick={() => setCurrentTool("pen")}
                         className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-105 ${
-                          currentTool === 'pen' ? 'bg-blue-500/80' : 'bg-white/10 hover:bg-white/20'
+                          currentTool === "pen"
+                            ? "bg-blue-500/80"
+                            : "bg-white/10 hover:bg-white/20"
                         }`}
                         title="Pen tool (P)"
                       >
                         <Pen className="w-6 h-6" />
                       </button>
-                      
+
                       {/* Rectangle Tool */}
                       <button
-                        onClick={() => setCurrentTool('rectangle')}
+                        onClick={() => setCurrentTool("rectangle")}
                         className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-105 ${
-                          currentTool === 'rectangle' ? 'bg-blue-500/80' : 'bg-white/10 hover:bg-white/20'
+                          currentTool === "rectangle"
+                            ? "bg-blue-500/80"
+                            : "bg-white/10 hover:bg-white/20"
                         }`}
                         title="Rectangle tool (R)"
                       >
                         <Square className="w-6 h-6" />
                       </button>
-                      
+
                       {/* Arrow Tool */}
                       <button
-                        onClick={() => setCurrentTool('arrow')}
+                        onClick={() => setCurrentTool("arrow")}
                         className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-105 ${
-                          currentTool === 'arrow' ? 'bg-blue-500/80' : 'bg-white/10 hover:bg-white/20'
+                          currentTool === "arrow"
+                            ? "bg-blue-500/80"
+                            : "bg-white/10 hover:bg-white/20"
                         }`}
                         title="Arrow tool (A)"
                       >
@@ -568,10 +775,9 @@ export default function ScreenshotAnnotate() {
                 </div>
               </div>
             </Card>
-
           </div>
         )}
       </div>
     </div>
-  )
+  );
 }
