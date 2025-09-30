@@ -426,7 +426,11 @@ export default function ScreenshotAnnotate() {
 
     redrawCanvas();
 
-    // Draw current path
+    // Get image offset for preview drawing
+    const offsetX = parseFloat(canvas.dataset.imageOffsetX || '0');
+    const offsetY = parseFloat(canvas.dataset.imageOffsetY || '0');
+
+    // Draw current path with correct offset
     ctx.strokeStyle = "#ef4444";
     ctx.lineWidth = 2;
     ctx.lineCap = "round";
@@ -436,23 +440,23 @@ export default function ScreenshotAnnotate() {
       ctx.beginPath();
       currentPath.concat([point]).forEach((p, i) => {
         if (i === 0) {
-          ctx.moveTo(p.x, p.y);
+          ctx.moveTo(p.x + offsetX, p.y + offsetY);
         } else {
-          ctx.lineTo(p.x, p.y);
+          ctx.lineTo(p.x + offsetX, p.y + offsetY);
         }
       });
       ctx.stroke();
     } else if (currentTool === "rectangle") {
       const startPoint = currentPath[0];
       ctx.strokeRect(
-        startPoint.x,
-        startPoint.y,
+        startPoint.x + offsetX,
+        startPoint.y + offsetY,
         point.x - startPoint.x,
         point.y - startPoint.y
       );
     } else if (currentTool === "arrow") {
       const startPoint = currentPath[0];
-      drawArrow(ctx, startPoint.x, startPoint.y, point.x, point.y);
+      drawArrow(ctx, startPoint.x + offsetX, startPoint.y + offsetY, point.x + offsetX, point.y + offsetY);
     }
   };
 
