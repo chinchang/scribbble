@@ -272,7 +272,14 @@ export default function ScreenshotAnnotate() {
       ctx.fillRect(0, 0, canvas.width, canvas.height);
     }
 
-    // Draw image at fixed size and position
+    // Draw image at fixed size and position with rounded corners
+    const borderRadius = 12; // 12px rounded corners
+
+    ctx.save();
+    ctx.beginPath();
+    ctx.roundRect(offsetX, offsetY, imageDisplayWidth, imageDisplayHeight, borderRadius);
+    ctx.clip();
+
     ctx.drawImage(
       image,
       offsetX,
@@ -280,6 +287,8 @@ export default function ScreenshotAnnotate() {
       imageDisplayWidth,
       imageDisplayHeight
     );
+
+    ctx.restore();
 
     console.log("Redrawing canvas with drawings:", drawings);
 
@@ -601,7 +610,14 @@ export default function ScreenshotAnnotate() {
       ctx.fillRect(0, 0, canvas.width, canvas.height);
     }
 
-    // Draw image at fixed size and position
+    // Draw image at fixed size and position with rounded corners
+    const borderRadius = 12; // 12px rounded corners
+
+    ctx.save();
+    ctx.beginPath();
+    ctx.roundRect(offsetX, offsetY, imageDisplayWidth, imageDisplayHeight, borderRadius);
+    ctx.clip();
+
     ctx.drawImage(
       image,
       offsetX,
@@ -609,6 +625,8 @@ export default function ScreenshotAnnotate() {
       imageDisplayWidth,
       imageDisplayHeight
     );
+
+    ctx.restore();
 
     console.log("Redrawing canvas with drawings:", drawings);
 
