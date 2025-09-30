@@ -14,10 +14,11 @@ import {
   Type,
   Image as ImageIcon,
   FileText,
+  Palette,
 } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 
-type Tool = "pen" | "rectangle" | "arrow" | "text";
+type Tool = "pen" | "rectangle" | "arrow" | "text" | "background";
 
 interface Point {
   x: number;
@@ -33,6 +34,23 @@ interface DrawingElement {
   fontSize?: number;
 }
 
+interface BackgroundState {
+  color: string | null;
+}
+
+interface TooltipState {
+  show: boolean;
+  content: string;
+  x: number;
+  y: number;
+}
+
+interface TooltipProps {
+  content: string;
+  children: React.ReactNode;
+  className?: string;
+}
+
 export default function ScreenshotAnnotate() {
   const [uploadedImage, setUploadedImage] = useState<string | null>(null);
   const [currentTool, setCurrentTool] = useState<Tool>("pen");
@@ -46,6 +64,29 @@ export default function ScreenshotAnnotate() {
   const [textInput, setTextInput] = useState("");
   const [textPosition, setTextPosition] = useState<Point | null>(null);
   const [isTextInputActive, setIsTextInputActive] = useState(false);
+  const [backgroundState, setBackgroundState] = useState<BackgroundState>({
+    color: null,
+  });
+  const [showColorPalette, setShowColorPalette] = useState(false);
+  const [tooltip, setTooltip] = useState<TooltipState>({
+    show: false,
+    content: "",
+    x: 0,
+    y: 0,
+  });
+
+  const backgroundColors = [
+    "#ef4444", // red
+    "#f97316", // orange
+    "#eab308", // yellow
+    "#22c55e", // green
+    "#3b82f6", // blue
+    "#8b5cf6", // purple
+    "#ec4899", // pink
+    "#64748b", // slate
+    "#000000", // black
+    "#ffffff", // white
+  ];
 
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const imageRef = useRef<HTMLImageElement>(null);
@@ -183,6 +224,10 @@ export default function ScreenshotAnnotate() {
         case "T":
           setCurrentTool("text");
           break;
+        case "b":
+        case "B":
+          setCurrentTool("background");
+          break;
       }
     };
 
@@ -210,11 +255,37 @@ export default function ScreenshotAnnotate() {
     if (!ctx || !canvas || !image) return;
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+
+    // Get stored image dimensions and position
+    const imageDisplayWidth = parseFloat(
+      canvas.dataset.imageDisplayWidth || "0"
+    );
+    const imageDisplayHeight = parseFloat(
+      canvas.dataset.imageDisplayHeight || "0"
+    );
+    const offsetX = parseFloat(canvas.dataset.imageOffsetX || "0");
+    const offsetY = parseFloat(canvas.dataset.imageOffsetY || "0");
+
+    // Apply background color if set
+    if (backgroundState.color) {
+      ctx.fillStyle = backgroundState.color;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+    }
+
+    // Draw image at fixed size and position
+    ctx.drawImage(
+      image,
+      offsetX,
+      offsetY,
+      imageDisplayWidth,
+      imageDisplayHeight
+    );
 
     console.log("Redrawing canvas with drawings:", drawings);
 
-    // Redraw all drawings
+    // Redraw all drawings with image offset
+    // const offsetX = parseFloat(canvas.dataset.imageOffsetX || '0');
+    // const offsetY = parseFloat(canvas.dataset.imageOffsetY || '0');
     drawings.forEach((drawing) => {
       ctx.strokeStyle = drawing.color;
       ctx.lineWidth = drawing.strokeWidth;
@@ -225,9 +296,9 @@ export default function ScreenshotAnnotate() {
         ctx.beginPath();
         drawing.points.forEach((point, i) => {
           if (i === 0) {
-            ctx.moveTo(point.x, point.y);
+            ctx.moveTo(point.x + offsetX, point.y + offsetY);
           } else {
-            ctx.lineTo(point.x, point.y);
+            ctx.lineTo(point.x + offsetX, point.y + offsetY);
           }
         });
         ctx.stroke();
@@ -235,15 +306,21 @@ export default function ScreenshotAnnotate() {
         const startPoint = drawing.points[0];
         const endPoint = drawing.points[drawing.points.length - 1];
         ctx.strokeRect(
-          startPoint.x,
-          startPoint.y,
+          startPoint.x + offsetX,
+          startPoint.y + offsetY,
           endPoint.x - startPoint.x,
           endPoint.y - startPoint.y
         );
       } else if (drawing.type === "arrow") {
         const startPoint = drawing.points[0];
         const endPoint = drawing.points[drawing.points.length - 1];
-        drawArrow(ctx, startPoint.x, startPoint.y, endPoint.x, endPoint.y);
+        drawArrow(
+          ctx,
+          startPoint.x + offsetX,
+          startPoint.y + offsetY,
+          endPoint.x + offsetX,
+          endPoint.y + offsetY
+        );
       } else if (drawing.type === "text" && drawing.text) {
         const point = drawing.points[0];
         console.log("Rendering text:", drawing.text, "at position:", point);
@@ -255,23 +332,34 @@ export default function ScreenshotAnnotate() {
         // Add text outline for better visibility
         ctx.strokeStyle = "#000000";
         ctx.lineWidth = 3;
-        ctx.strokeText(drawing.text, point.x, point.y);
+        ctx.strokeText(drawing.text, point.x + offsetX, point.y + offsetY);
 
         // Fill the text
         ctx.fillStyle = drawing.color;
-        ctx.fillText(drawing.text, point.x, point.y);
+        ctx.fillText(drawing.text, point.x + offsetX, point.y + offsetY);
       }
     });
-  }, [drawings]);
+  }, [drawings, backgroundState.color]);
+
+  // Effect to handle canvas resizing when background state changes
+  useEffect(() => {
+    if (uploadedImage) {
+      handleImageLoad();
+    }
+  }, [backgroundState.color]);
 
   const getMousePos = (e: React.MouseEvent<HTMLCanvasElement>) => {
     const canvas = canvasRef.current;
     if (!canvas) return { x: 0, y: 0 };
 
     const rect = canvas.getBoundingClientRect();
+    const offsetX = parseFloat(canvas.dataset.imageOffsetX || "0");
+    const offsetY = parseFloat(canvas.dataset.imageOffsetY || "0");
+
+    // Convert canvas coordinates to image coordinates
     return {
-      x: e.clientX - rect.left,
-      y: e.clientY - rect.top,
+      x: e.clientX - rect.left - offsetX,
+      y: e.clientY - rect.top - offsetY,
     };
   };
 
@@ -280,6 +368,11 @@ export default function ScreenshotAnnotate() {
       const point = getMousePos(e);
       setTextPosition(point);
       setIsTextInputActive(true);
+      return;
+    }
+
+    if (currentTool === "background") {
+      setShowColorPalette(true);
       return;
     }
 
@@ -374,6 +467,46 @@ export default function ScreenshotAnnotate() {
     setTextPosition(null);
   };
 
+  const handleBackgroundColorSelect = (color: string) => {
+    setBackgroundState({ color });
+    setShowColorPalette(false);
+  };
+
+  const clearBackground = () => {
+    setBackgroundState({ color: null });
+    setShowColorPalette(false);
+  };
+
+  const showTooltip = (content: string, event: React.MouseEvent) => {
+    const rect = event.currentTarget.getBoundingClientRect();
+    setTooltip({
+      show: true,
+      content,
+      x: rect.left + rect.width / 2,
+      y: rect.top - 8,
+    });
+  };
+
+  const hideTooltip = () => {
+    setTooltip((prev) => ({ ...prev, show: false }));
+  };
+
+  const Tooltip: React.FC<TooltipProps> = ({
+    content,
+    children,
+    className = "",
+  }) => {
+    return (
+      <div
+        className={`relative ${className}`}
+        onMouseEnter={(e) => showTooltip(content, e)}
+        onMouseLeave={hideTooltip}
+      >
+        {children}
+      </div>
+    );
+  };
+
   const copyToClipboard = async () => {
     const canvas = canvasRef.current;
     if (!canvas) {
@@ -451,11 +584,35 @@ export default function ScreenshotAnnotate() {
     if (!ctx || !canvas || !image) return;
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+
+    // Get stored image dimensions and position
+    const imageDisplayWidth = parseFloat(
+      canvas.dataset.imageDisplayWidth || "0"
+    );
+    const imageDisplayHeight = parseFloat(
+      canvas.dataset.imageDisplayHeight || "0"
+    );
+    const offsetX = parseFloat(canvas.dataset.imageOffsetX || "0");
+    const offsetY = parseFloat(canvas.dataset.imageOffsetY || "0");
+
+    // Apply background color if set
+    if (backgroundState.color) {
+      ctx.fillStyle = backgroundState.color;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+    }
+
+    // Draw image at fixed size and position
+    ctx.drawImage(
+      image,
+      offsetX,
+      offsetY,
+      imageDisplayWidth,
+      imageDisplayHeight
+    );
 
     console.log("Redrawing canvas with drawings:", drawings);
 
-    // Redraw all drawings
+    // Redraw all drawings with image offset
     drawings.forEach((drawing) => {
       ctx.strokeStyle = drawing.color;
       ctx.lineWidth = drawing.strokeWidth;
@@ -466,9 +623,9 @@ export default function ScreenshotAnnotate() {
         ctx.beginPath();
         drawing.points.forEach((point, i) => {
           if (i === 0) {
-            ctx.moveTo(point.x, point.y);
+            ctx.moveTo(point.x + offsetX, point.y + offsetY);
           } else {
-            ctx.lineTo(point.x, point.y);
+            ctx.lineTo(point.x + offsetX, point.y + offsetY);
           }
         });
         ctx.stroke();
@@ -476,15 +633,21 @@ export default function ScreenshotAnnotate() {
         const startPoint = drawing.points[0];
         const endPoint = drawing.points[drawing.points.length - 1];
         ctx.strokeRect(
-          startPoint.x,
-          startPoint.y,
+          startPoint.x + offsetX,
+          startPoint.y + offsetY,
           endPoint.x - startPoint.x,
           endPoint.y - startPoint.y
         );
       } else if (drawing.type === "arrow") {
         const startPoint = drawing.points[0];
         const endPoint = drawing.points[drawing.points.length - 1];
-        drawArrow(ctx, startPoint.x, startPoint.y, endPoint.x, endPoint.y);
+        drawArrow(
+          ctx,
+          startPoint.x + offsetX,
+          startPoint.y + offsetY,
+          endPoint.x + offsetX,
+          endPoint.y + offsetY
+        );
       } else if (drawing.type === "text" && drawing.text) {
         const point = drawing.points[0];
         console.log("Rendering text:", drawing.text, "at position:", point);
@@ -496,11 +659,11 @@ export default function ScreenshotAnnotate() {
         // Add text outline for better visibility
         ctx.strokeStyle = "#000000";
         ctx.lineWidth = 3;
-        ctx.strokeText(drawing.text, point.x, point.y);
+        ctx.strokeText(drawing.text, point.x + offsetX, point.y + offsetY);
 
         // Fill the text
         ctx.fillStyle = drawing.color;
-        ctx.fillText(drawing.text, point.x, point.y);
+        ctx.fillText(drawing.text, point.x + offsetX, point.y + offsetY);
       }
     });
   };
@@ -514,22 +677,36 @@ export default function ScreenshotAnnotate() {
 
     const containerWidth = container.clientWidth;
     const containerHeight = container.clientHeight;
+    const padding = backgroundState.color ? 40 : 0;
 
     const imageAspectRatio = image.naturalWidth / image.naturalHeight;
-    const containerAspectRatio = containerWidth / containerHeight;
 
-    let canvasWidth, canvasHeight;
+    // Calculate optimal image size that fits in container (ignoring padding for now)
+    const maxWidth = containerWidth - padding * 2;
+    const maxHeight = containerHeight - padding * 2;
 
-    if (imageAspectRatio > containerAspectRatio) {
-      canvasWidth = containerWidth;
-      canvasHeight = containerWidth / imageAspectRatio;
+    let imageDisplayWidth, imageDisplayHeight;
+
+    if (imageAspectRatio > maxWidth / maxHeight) {
+      imageDisplayWidth = maxWidth;
+      imageDisplayHeight = maxWidth / imageAspectRatio;
     } else {
-      canvasHeight = containerHeight;
-      canvasWidth = containerHeight * imageAspectRatio;
+      imageDisplayHeight = maxHeight;
+      imageDisplayWidth = maxHeight * imageAspectRatio;
     }
+
+    // Canvas size includes padding
+    const canvasWidth = imageDisplayWidth + padding * 2;
+    const canvasHeight = imageDisplayHeight + padding * 2;
 
     canvas.width = canvasWidth;
     canvas.height = canvasHeight;
+
+    // Store image rendering info for coordinate calculations
+    canvas.dataset.imageDisplayWidth = imageDisplayWidth.toString();
+    canvas.dataset.imageDisplayHeight = imageDisplayHeight.toString();
+    canvas.dataset.imageOffsetX = padding.toString();
+    canvas.dataset.imageOffsetY = padding.toString();
 
     redrawCanvas();
   };
@@ -597,6 +774,8 @@ export default function ScreenshotAnnotate() {
                       ? "crosshair"
                       : currentTool === "text"
                       ? "text"
+                      : currentTool === "background"
+                      ? "pointer"
                       : "default",
                 }}
               >
@@ -652,6 +831,42 @@ export default function ScreenshotAnnotate() {
                       placeholder="Enter text..."
                     />
                   )}
+
+                  {/* Background Color Palette */}
+                  {showColorPalette && (
+                    <div className="absolute top-4 right-4 bg-slate-900/90 backdrop-blur-lg rounded-2xl p-4 shadow-2xl border border-white/10 z-50">
+                      <div className="mb-3">
+                        <h3 className="text-white text-sm font-medium mb-2">
+                          Background Colors
+                        </h3>
+                        <div className="grid grid-cols-5 gap-2">
+                          {backgroundColors.map((color) => (
+                            <button
+                              key={color}
+                              onClick={() => handleBackgroundColorSelect(color)}
+                              className="w-8 h-8 rounded-lg border-2 border-white/20 hover:border-white/50 transition-colors hover:scale-110 transform"
+                              style={{ backgroundColor: color }}
+                              title={`Background: ${color}`}
+                            />
+                          ))}
+                        </div>
+                      </div>
+                      <div className="flex gap-2">
+                        <button
+                          onClick={clearBackground}
+                          className="px-3 py-1.5 bg-white/10 hover:bg-white/20 text-white text-sm rounded-lg transition-colors"
+                        >
+                          Clear
+                        </button>
+                        <button
+                          onClick={() => setShowColorPalette(false)}
+                          className="px-3 py-1.5 bg-white/10 hover:bg-white/20 text-white text-sm rounded-lg transition-colors"
+                        >
+                          Cancel
+                        </button>
+                      </div>
+                    </div>
+                  )}
                 </div>
                 {/* Floating Toolbar - Redesigned & Draggable */}
                 <div
@@ -676,105 +891,142 @@ export default function ScreenshotAnnotate() {
                   <div className="bg-slate-900/80 backdrop-blur-lg rounded-2xl px-4 py-3 shadow-2xl border border-white/10">
                     <div className="flex items-center space-x-4">
                       {/* Visual Drag Handle */}
-                      <div
-                        className="flex flex-col space-y-1 cursor-grab active:cursor-grabbing p-2 rounded-lg hover:bg-white/10 transition-colors"
-                        onMouseDown={handleMouseDown}
-                        title="Drag to move toolbar"
-                      >
-                        <div className="w-2 h-2 bg-white/20 rounded-full"></div>
-                        <div className="w-2 h-2 bg-white/20 rounded-full"></div>
-                        <div className="w-2 h-2 bg-white/20 rounded-full"></div>
-                      </div>
+                      <Tooltip content="Drag to move toolbar">
+                        <div
+                          className="flex flex-col space-y-1 cursor-grab active:cursor-grabbing p-2 rounded-lg hover:bg-white/10 transition-colors"
+                          onMouseDown={handleMouseDown}
+                        >
+                          <div className="w-2 h-2 bg-white/20 rounded-full"></div>
+                          <div className="w-2 h-2 bg-white/20 rounded-full"></div>
+                          <div className="w-2 h-2 bg-white/20 rounded-full"></div>
+                        </div>
+                      </Tooltip>
 
                       {/* Separator */}
                       <div className="w-px h-8 bg-white/20"></div>
 
                       {/* Text Tool */}
-                      <button
-                        onClick={() => setCurrentTool("text")}
-                        className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-105 ${
-                          currentTool === "text"
-                            ? "bg-blue-500/80"
-                            : "bg-white/10 hover:bg-white/20"
-                        }`}
-                        title="Text tool (T)"
-                      >
-                        <Type className="w-6 h-6" />
-                      </button>
+                      <Tooltip content="Text tool - Add text to your image (Press T)">
+                        <button
+                          onClick={() => setCurrentTool("text")}
+                          className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-105 ${
+                            currentTool === "text"
+                              ? "bg-blue-500/80"
+                              : "bg-white/10 hover:bg-white/20"
+                          }`}
+                        >
+                          <Type className="w-6 h-6" />
+                        </button>
+                      </Tooltip>
 
                       {/* Pen Tool */}
-                      <button
-                        onClick={() => setCurrentTool("pen")}
-                        className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-105 ${
-                          currentTool === "pen"
-                            ? "bg-blue-500/80"
-                            : "bg-white/10 hover:bg-white/20"
-                        }`}
-                        title="Pen tool (P)"
-                      >
-                        <Pen className="w-6 h-6" />
-                      </button>
+                      <Tooltip content="Pen tool - Draw freehand lines (Press P)">
+                        <button
+                          onClick={() => setCurrentTool("pen")}
+                          className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-105 ${
+                            currentTool === "pen"
+                              ? "bg-blue-500/80"
+                              : "bg-white/10 hover:bg-white/20"
+                          }`}
+                        >
+                          <Pen className="w-6 h-6" />
+                        </button>
+                      </Tooltip>
 
                       {/* Rectangle Tool */}
-                      <button
-                        onClick={() => setCurrentTool("rectangle")}
-                        className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-105 ${
-                          currentTool === "rectangle"
-                            ? "bg-blue-500/80"
-                            : "bg-white/10 hover:bg-white/20"
-                        }`}
-                        title="Rectangle tool (R)"
-                      >
-                        <Square className="w-6 h-6" />
-                      </button>
+                      <Tooltip content="Rectangle tool - Draw rectangles (Press R)">
+                        <button
+                          onClick={() => setCurrentTool("rectangle")}
+                          className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-105 ${
+                            currentTool === "rectangle"
+                              ? "bg-blue-500/80"
+                              : "bg-white/10 hover:bg-white/20"
+                          }`}
+                        >
+                          <Square className="w-6 h-6" />
+                        </button>
+                      </Tooltip>
 
                       {/* Arrow Tool */}
-                      <button
-                        onClick={() => setCurrentTool("arrow")}
-                        className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-105 ${
-                          currentTool === "arrow"
-                            ? "bg-blue-500/80"
-                            : "bg-white/10 hover:bg-white/20"
-                        }`}
-                        title="Arrow tool (A)"
-                      >
-                        <ArrowRight className="w-6 h-6" />
-                      </button>
+                      <Tooltip content="Arrow tool - Draw arrows (Press A)">
+                        <button
+                          onClick={() => setCurrentTool("arrow")}
+                          className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-105 ${
+                            currentTool === "arrow"
+                              ? "bg-blue-500/80"
+                              : "bg-white/10 hover:bg-white/20"
+                          }`}
+                        >
+                          <ArrowRight className="w-6 h-6" />
+                        </button>
+                      </Tooltip>
+
+                      {/* Background Tool */}
+                      <Tooltip content="Background tool - Add colored backgrounds (Press B)">
+                        <button
+                          onClick={() => setCurrentTool("background")}
+                          className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-105 ${
+                            currentTool === "background"
+                              ? "bg-blue-500/80"
+                              : "bg-white/10 hover:bg-white/20"
+                          }`}
+                        >
+                          <Palette className="w-6 h-6" />
+                        </button>
+                      </Tooltip>
 
                       {/* Separator */}
                       <div className="w-px h-8 bg-white/20"></div>
 
                       {/* Clear All Button */}
-                      <button
-                        onClick={() => clearDrawings()}
-                        className="w-12 h-12 rounded-xl bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-all duration-200 hover:scale-105"
-                        title="Clear all"
-                      >
-                        <RotateCcw className="w-6 h-6" />
-                      </button>
+                      <Tooltip content="Clear all drawings - Remove all annotations">
+                        <button
+                          onClick={() => clearDrawings()}
+                          className="w-12 h-12 rounded-xl bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-all duration-200 hover:scale-105"
+                        >
+                          <RotateCcw className="w-6 h-6" />
+                        </button>
+                      </Tooltip>
 
                       {/* Download Button */}
-                      <button
-                        onClick={() => downloadAnnotatedImage()}
-                        className="w-12 h-12 rounded-xl bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-all duration-200 hover:scale-105"
-                        title="Download"
-                      >
-                        <Download className="w-6 h-6" />
-                      </button>
+                      <Tooltip content="Download image - Save annotated screenshot">
+                        <button
+                          onClick={() => downloadAnnotatedImage()}
+                          className="w-12 h-12 rounded-xl bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-all duration-200 hover:scale-105"
+                        >
+                          <Download className="w-6 h-6" />
+                        </button>
+                      </Tooltip>
 
                       {/* New Image Button */}
-                      <button
-                        onClick={() => setUploadedImage(null)}
-                        className="w-12 h-12 rounded-xl bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-all duration-200 hover:scale-105"
-                        title="New image"
-                      >
-                        <Trash2 className="w-6 h-6" />
-                      </button>
+                      <Tooltip content="New image - Upload a different screenshot">
+                        <button
+                          onClick={() => setUploadedImage(null)}
+                          className="w-12 h-12 rounded-xl bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-all duration-200 hover:scale-105"
+                        >
+                          <Trash2 className="w-6 h-6" />
+                        </button>
+                      </Tooltip>
                     </div>
                   </div>
                 </div>
               </div>
             </Card>
+          </div>
+        )}
+
+        {/* Global Tooltip */}
+        {tooltip.show && (
+          <div
+            className="fixed z-[9999] px-3 py-2 text-sm text-white bg-slate-900/95 backdrop-blur-lg rounded-lg shadow-xl border border-white/10 pointer-events-none transform -translate-x-1/2 -translate-y-full"
+            style={{
+              left: tooltip.x,
+              top: tooltip.y,
+            }}
+          >
+            {tooltip.content}
+            {/* Tooltip Arrow */}
+            <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-slate-900/95"></div>
           </div>
         )}
       </div>

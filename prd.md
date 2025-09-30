@@ -1,5 +1,10 @@
 This is the website for an app called Scribbble - a mac app to annotate/draw anywhere on the screen.
 
+## Points to note
+
+- All the features should be accessible easily with keyboard
+- Never try to run the dev server to test. I do it manually
+
 ## Tasks
 
 ### Screenshot annotation - free tool
@@ -17,3 +22,4 @@ This is the website for an app called Scribbble - a mac app to annotate/draw any
 - [x] Make the toolbar draggable across the screen
 - [x] Add a toast when "copy" keyboard shortcut is pressed
 - [x] Add "Text" tool to add text anywhere over the drawing
+- [x] Add a "background" tool that lets you add various backgrounds around the screenshot. Let's start with just a fixed palette of solid backgrounds.
