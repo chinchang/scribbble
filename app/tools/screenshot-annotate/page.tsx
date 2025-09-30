@@ -15,6 +15,8 @@ import {
   Image as ImageIcon,
   FileText,
   Palette,
+  Undo,
+  Redo,
 } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 
@@ -51,6 +53,11 @@ interface TooltipProps {
   className?: string;
 }
 
+interface HistoryState {
+  drawings: DrawingElement[];
+  backgroundState: BackgroundState;
+}
+
 export default function ScreenshotAnnotate() {
   const [uploadedImage, setUploadedImage] = useState<string | null>(null);
   const [currentTool, setCurrentTool] = useState<Tool>("pen");
@@ -74,6 +81,8 @@ export default function ScreenshotAnnotate() {
     x: 0,
     y: 0,
   });
+  const [history, setHistory] = useState<HistoryState[]>([]);
+  const [historyIndex, setHistoryIndex] = useState(-1);
 
   const backgroundColors = [
     "#ef4444", // red
@@ -204,6 +213,20 @@ export default function ScreenshotAnnotate() {
       if ((e.ctrlKey || e.metaKey) && e.key === "c" && !e.shiftKey) {
         e.preventDefault();
         copyToClipboard();
+        return;
+      }
+
+      // Check for Ctrl+Z or Cmd+Z (Undo)
+      if ((e.ctrlKey || e.metaKey) && e.key === "z" && !e.shiftKey) {
+        e.preventDefault();
+        undo();
+        return;
+      }
+
+      // Check for Ctrl+Y or Cmd+Y (Redo)
+      if ((e.ctrlKey || e.metaKey) && e.key === "y" && !e.shiftKey) {
+        e.preventDefault();
+        redo();
         return;
       }
 
@@ -357,6 +380,7 @@ export default function ScreenshotAnnotate() {
     }
   }, [backgroundState.color]);
 
+
   const getMousePos = (e: React.MouseEvent<HTMLCanvasElement>) => {
     const canvas = canvasRef.current;
     if (!canvas) return { x: 0, y: 0 };
@@ -444,6 +468,8 @@ export default function ScreenshotAnnotate() {
       strokeWidth: 2,
     };
 
+    // Save current state before adding new drawing
+    saveToHistory();
     setDrawings((prev) => [...prev, newDrawing]);
     setCurrentPath([]);
   };
@@ -466,6 +492,8 @@ export default function ScreenshotAnnotate() {
     };
 
     console.log("Adding text drawing:", newDrawing);
+    // Save current state before adding new text
+    saveToHistory();
     setDrawings((prev) => {
       const updated = [...prev, newDrawing];
       console.log("Updated drawings array:", updated);
@@ -477,14 +505,65 @@ export default function ScreenshotAnnotate() {
   };
 
   const handleBackgroundColorSelect = (color: string) => {
+    saveToHistory();
     setBackgroundState({ color });
     setShowColorPalette(false);
   };
 
   const clearBackground = () => {
+    saveToHistory();
     setBackgroundState({ color: null });
     setShowColorPalette(false);
   };
+
+  // Save current state to history
+  const saveToHistory = useCallback(() => {
+    const currentState: HistoryState = {
+      drawings: [...drawings],
+      backgroundState: { ...backgroundState },
+    };
+
+    // Remove any future history if we're not at the end
+    const newHistory = history.slice(0, historyIndex + 1);
+    newHistory.push(currentState);
+
+    // Limit history to 50 states to prevent memory issues
+    const limitedHistory = newHistory.slice(-50);
+
+    setHistory(limitedHistory);
+    setHistoryIndex(limitedHistory.length - 1);
+  }, [drawings, backgroundState, history, historyIndex]);
+
+  // Effect to save initial state to history when image is uploaded
+  useEffect(() => {
+    if (uploadedImage && history.length === 0) {
+      saveToHistory();
+    }
+  }, [uploadedImage, history.length, saveToHistory]);
+
+  // Undo function
+  const undo = () => {
+    if (historyIndex > 0) {
+      const previousState = history[historyIndex - 1];
+      setDrawings(previousState.drawings);
+      setBackgroundState(previousState.backgroundState);
+      setHistoryIndex(historyIndex - 1);
+    }
+  };
+
+  // Redo function
+  const redo = () => {
+    if (historyIndex < history.length - 1) {
+      const nextState = history[historyIndex + 1];
+      setDrawings(nextState.drawings);
+      setBackgroundState(nextState.backgroundState);
+      setHistoryIndex(historyIndex + 1);
+    }
+  };
+
+  // Check if undo/redo is available
+  const canUndo = historyIndex > 0;
+  const canRedo = historyIndex < history.length - 1;
 
   const showTooltip = (content: string, event: React.MouseEvent) => {
     const rect = event.currentTarget.getBoundingClientRect();
@@ -730,6 +809,7 @@ export default function ScreenshotAnnotate() {
   };
 
   const clearDrawings = () => {
+    saveToHistory();
     setDrawings([]);
     redrawCanvas();
   };
@@ -990,6 +1070,39 @@ export default function ScreenshotAnnotate() {
                           }`}
                         >
                           <Palette className="w-6 h-6" />
+                        </button>
+                      </Tooltip>
+
+                      {/* Separator */}
+                      <div className="w-px h-8 bg-white/20"></div>
+
+                      {/* Undo Button */}
+                      <Tooltip content="Undo - Undo last action (Ctrl+Z / Cmd+Z)">
+                        <button
+                          onClick={undo}
+                          disabled={!canUndo}
+                          className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-105 ${
+                            canUndo
+                              ? "bg-white/10 hover:bg-white/20"
+                              : "bg-white/5 text-white/30 cursor-not-allowed"
+                          }`}
+                        >
+                          <Undo className="w-6 h-6" />
+                        </button>
+                      </Tooltip>
+
+                      {/* Redo Button */}
+                      <Tooltip content="Redo - Redo last undone action (Ctrl+Y / Cmd+Y)">
+                        <button
+                          onClick={redo}
+                          disabled={!canRedo}
+                          className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-105 ${
+                            canRedo
+                              ? "bg-white/10 hover:bg-white/20"
+                              : "bg-white/5 text-white/30 cursor-not-allowed"
+                          }`}
+                        >
+                          <Redo className="w-6 h-6" />
                         </button>
                       </Tooltip>
 
