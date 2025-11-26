@@ -1,6 +1,5 @@
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import {
   Pen,
   Users,
@@ -14,11 +13,10 @@ import {
   Zap,
   Target,
   Palette,
-
   Eye,
   Layers,
-} from "lucide-react"
-import Img from "next/image"
+} from "lucide-react";
+import Img from "next/image";
 
 export default function Home() {
   return (
@@ -28,7 +26,13 @@ export default function Home() {
         <div className="container mx-auto px-4 py-6 flex items-center justify-between relative">
           <div className="flex items-center space-x-3">
             <div className=" puls-glow transform rotate-12">
-              <Img src="/icon.png" alt="Scribbble Logo" className="" width={40} height={40} />
+              <Img
+                src="/icon.png"
+                alt="Scribbble Logo"
+                className=""
+                width={40}
+                height={40}
+              />
             </div>
             <span className="text-2xl font-bold gradient-text">Scribbble</span>
           </div>
@@ -60,8 +64,15 @@ export default function Home() {
               Reviews
             </a> */}
           </nav>
-          <Button asChild className="bg-gradient-to-r from-primary to-accent hover:from-accent hover:to-primary text-white shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
-            <a href="https://github.com/chinchang/scribbble/releases/latest/download/Scribbble.dmg" target="_blank" rel="noopener noreferrer">
+          <Button
+            asChild
+            className="bg-gradient-to-r from-primary to-accent hover:from-accent hover:to-primary text-white shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+          >
+            <a
+              href="https://github.com/chinchang/scribbble/releases/latest/download/Scribbble.dmg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Download className="w-4 h-4 mr-2" />
               Get Scribbble
             </a>
@@ -77,27 +88,42 @@ export default function Home() {
         ></div>
 
         <div className="container mx-auto text-center max-w-6xl relative">
-          <Badge
-            variant="secondary"
-            className="mb-8 bg-gradient-to-r from-red-100/10 to-accent/10 text-primary border-primary/30 px-6 py-2 text-lg font-semibold"
-          >
-            <Sparkles className="w-4 h-4 mr-2" />
-            The "Just works" Screen Annotation
-          </Badge>
+          <div className="flex items-center justify-center gap-3 mb-8 flex-wrap">
+            <Badge
+              variant="secondary"
+              className="bg-gradient-to-r from-red-100/10 to-accent/10 text-primary border-primary/30 px-6 py-2 text-lg font-semibold"
+            >
+              <Sparkles className="w-4 h-4 mr-2" />
+              The "Just works" Screen Annotation
+            </Badge>
+            <Badge className="bg-gradient-to-r from-red-600 to-orange-600 text-white border-0 px-4 py-2 text-lg font-bold animate-pulse shadow-lg">
+              ON BFCM SALE
+            </Badge>
+          </div>
 
           <h1 className="text-6xl md:text-8xl font-black mb-8 leading-tight">
             <span className="gradient-text">Draw</span> over{" "}
             <span className="relative">
               anything
-              <svg className="absolute -bottom-4 left-0 w-full h-6 text-accent draw-animation" viewBox="0 0 300 20">
-                <path d="M5 15 Q150 5 295 15" stroke="currentColor" strokeWidth="4" fill="none" strokeLinecap="round" />
+              <svg
+                className="absolute -bottom-4 left-0 w-full h-6 text-accent draw-animation"
+                viewBox="0 0 300 20"
+              >
+                <path
+                  d="M5 15 Q150 5 295 15"
+                  stroke="currentColor"
+                  strokeWidth="4"
+                  fill="none"
+                  strokeLinecap="round"
+                />
               </svg>
             </span>
           </h1>
 
           <p className="text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed font-medium">
-            The most <span className="text-primary font-bold">intuitive</span> screen annotation tool for educators,
-            presenters, and creators who want to make an impact on the screen.
+            The most <span className="text-primary font-bold">intuitive</span>{" "}
+            screen annotation tool for educators, presenters, and creators who
+            want to make an impact on the screen.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
@@ -106,7 +132,11 @@ export default function Home() {
               asChild
               className="bg-gradient-to-r from-primary to-accent hover:from-accent hover:to-primary text-white px-12 py-6 text-xl font-bold shadow-2xl hover:shadow-3xl transform hover:scale-110 transition-all duration-300"
             >
-              <a href="https://github.com/chinchang/scribbble/releases/latest/download/Scribbble.dmg" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://github.com/chinchang/scribbble/releases/latest/download/Scribbble.dmg"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Download className="w-6 h-6 mr-3" />
                 Download Free
               </a>
@@ -117,7 +147,11 @@ export default function Home() {
               asChild
               className="px-12 py-6 text-xl font-bold border-2 border-primary text-primary hover:bg-primary hover:text-white transform hover:scale-105 transition-all duration-300 bg-transparent"
             >
-              <a href="https://kushagragour.lemonsqueezy.com/buy/7a5d045f-63fa-409e-b0ff-5c90b9020575" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://kushagragour.lemonsqueezy.com/buy/7a5d045f-63fa-409e-b0ff-5c90b9020575"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Star className="w-6 h-6 mr-3" />
                 Buy License
                 <ArrowRight className="w-5 h-5 ml-3" />
@@ -142,21 +176,32 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="demo" className="py-32 px-4 bg-gradient-to-br from-card to-background">
+      <section
+        id="demo"
+        className="py-32 px-4 bg-gradient-to-br from-card to-background"
+      >
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-20">
             <h2 className="text-5xl md:text-6xl font-black mb-6">
               See it in <span className="gradient-text">action</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Watch how Scribbble transforms ordinary presentations into extraordinary experiences
+              Watch how Scribbble transforms ordinary presentations into
+              extraordinary experiences
             </p>
           </div>
 
           <div className="relative bg-gradient-to-br from-primary/5 to-accent/5 rounded-3xl p-12 border-2 border-primary/20">
             <div className="aspect-video bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl flex items-center justify-center relative overflow-hidden">
-
-            <iframe style={{aspectRatio: '560 / 315', width: '100%'}} src="https://www.youtube.com/embed/Ghcb4ElDlF4?si=H30vDZti0-W2OmJ2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <iframe
+                style={{ aspectRatio: "560 / 315", width: "100%" }}
+                src="https://www.youtube.com/embed/Ghcb4ElDlF4?si=H30vDZti0-W2OmJ2"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
             </div>
           </div>
         </div>
@@ -214,7 +259,7 @@ export default function Home() {
           </div>
         </div>
       </section> */}
-{/* 
+      {/* 
       <section id="testimonials" className="py-32 px-4 bg-gradient-to-br from-primary/5 to-accent/5">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-20">
@@ -274,20 +319,28 @@ export default function Home() {
         </div>
       </section> */}
 
-      <section id="download" className="py-32 px-4 bg-gradient-to-br from-background to-card">
+      <section
+        id="download"
+        className="py-32 px-4 bg-gradient-to-br from-background to-card"
+      >
         <div className="container mx-auto text-center max-w-4xl">
           <h2 className="text-5xl md:text-7xl font-black mb-8">
             Ready to <span className="gradient-text">scribble</span>?
           </h2>
           <p className="text-2xl text-muted-foreground mb-12 leading-relaxed">
-            Join billions of users who are already transforming their screen shares with Scribbble!
+            Join billions of users who are already transforming their screen
+            shares with Scribbble!
           </p>
           <Button
             size="lg"
             asChild
             className="bg-gradient-to-r from-primary to-accent hover:from-accent hover:to-primary text-white px-16 py-8 text-2xl font-bold shadow-2xl hover:shadow-3xl transform hover:scale-110 transition-all duration-300 mb-8"
           >
-            <a href="https://github.com/chinchang/scribbble/releases/latest/download/Scribbble.dmg" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://github.com/chinchang/scribbble/releases/latest/download/Scribbble.dmg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Download className="w-8 h-8 mr-4" />
               Download Scribbble Free
             </a>
@@ -314,10 +367,17 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-between items-center mb-12">
             <div className="flex items-center space-x-4 mb-8 md:mb-0">
               <div className="w-12 h-12 rounded-2xl flex items-center justify-center">
-              <Img src="/icon.png" alt="Scribbble Logo" className="" width={40} height={40} />
-
+                <Img
+                  src="/icon.png"
+                  alt="Scribbble Logo"
+                  className=""
+                  width={40}
+                  height={40}
+                />
               </div>
-              <span className="text-3xl font-bold gradient-text">Scribbble</span>
+              <span className="text-3xl font-bold gradient-text">
+                Scribbble
+              </span>
             </div>
             <div className="flex items-center space-x-8">
               <a
@@ -326,7 +386,7 @@ export default function Home() {
               >
                 Privacy
               </a>
-             
+
               <a
                 href="mailto:chinchang457@gmail.com"
                 className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110 font-medium"
@@ -336,10 +396,12 @@ export default function Home() {
             </div>
           </div>
           <div className="pt-8 border-t border-border text-center">
-            <p className="text-muted-foreground text-lg">© 2025 Kushagra Gour. Scribbbling worldwide since 2025.</p>
+            <p className="text-muted-foreground text-lg">
+              © 2025 Kushagra Gour. Scribbbling worldwide since 2025.
+            </p>
           </div>
         </div>
       </footer>
     </div>
-  )
+  );
 }
