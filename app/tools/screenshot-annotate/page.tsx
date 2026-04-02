@@ -19,10 +19,18 @@ import {
   Redo,
   EyeOff,
   Hash,
+  Rotate3d,
 } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 
-type Tool = "pen" | "rectangle" | "arrow" | "text" | "background" | "blur" | "step";
+type Tool =
+  | "pen"
+  | "rectangle"
+  | "arrow"
+  | "text"
+  | "background"
+  | "blur"
+  | "step";
 
 interface Point {
   x: number;
@@ -95,6 +103,9 @@ export default function ScreenshotAnnotate() {
   const [historyIndex, setHistoryIndex] = useState(-1);
   const [brushSize, setBrushSize] = useState(4);
   const [bgPadding, setBgPadding] = useState(40);
+  const [tiltEnabled, setTiltEnabled] = useState(false);
+  const [tiltX, setTiltX] = useState(0);
+  const [tiltY, setTiltY] = useState(0);
 
   const backgroundColors = [
     "#ef4444", // red
@@ -122,7 +133,10 @@ export default function ScreenshotAnnotate() {
     { from: "#0c0c0c", to: "#434343", angle: 135 },
   ];
 
-  const backgroundImages = Array.from({ length: 13 }, (_, i) => `/bgs/wp-${i + 1}.avif`);
+  const backgroundImages = Array.from(
+    { length: 13 },
+    (_, i) => `/bgs/wp-${i + 1}.avif`,
+  );
 
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const imageRef = useRef<HTMLImageElement>(null);
@@ -140,6 +154,9 @@ export default function ScreenshotAnnotate() {
         setUploadedImage(e.target?.result as string);
         setDrawings([]);
         stepCounterRef.current = 1;
+        setTiltEnabled(false);
+        setTiltX(0);
+        setTiltY(0);
       };
       reader.readAsDataURL(file);
     }
@@ -216,7 +233,7 @@ export default function ScreenshotAnnotate() {
         }
       }
     },
-    [isDragging, dragOffset]
+    [isDragging, dragOffset],
   );
 
   const handleMouseUp = useCallback(() => {
@@ -258,6 +275,28 @@ export default function ScreenshotAnnotate() {
         e.preventDefault();
         redo();
         return;
+      }
+
+      // Arrow keys for 3D tilt
+      if (tiltEnabled && !e.ctrlKey && !e.metaKey) {
+        switch (e.key) {
+          case "ArrowUp":
+            e.preventDefault();
+            setTiltX((prev) => Math.min(prev + 5, 30));
+            return;
+          case "ArrowDown":
+            e.preventDefault();
+            setTiltX((prev) => Math.max(prev - 5, -30));
+            return;
+          case "ArrowLeft":
+            e.preventDefault();
+            setTiltY((prev) => Math.max(prev - 5, -30));
+            return;
+          case "ArrowRight":
+            e.preventDefault();
+            setTiltY((prev) => Math.min(prev + 5, 30));
+            return;
+        }
       }
 
       if (e.key === "=" || e.key === "+") {
@@ -315,7 +354,7 @@ export default function ScreenshotAnnotate() {
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
     };
-  }, [isTextInputActive, currentTool]);
+  }, [isTextInputActive, currentTool, tiltEnabled]);
 
   // Show/hide background palette when switching to/from background tool
   useEffect(() => {
@@ -335,123 +374,17 @@ export default function ScreenshotAnnotate() {
     }
   }, [isTextInputActive]);
 
-  // Redraw canvas when drawings change
+  // Redraw canvas when drawings or tilt change
   useEffect(() => {
-    const canvas = canvasRef.current;
-    const ctx = canvas?.getContext("2d");
-    const image = imageRef.current;
-
-    if (!ctx || !canvas || !image) return;
-
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    // Get stored image dimensions and position
-    const imageDisplayWidth = parseFloat(
-      canvas.dataset.imageDisplayWidth || "0"
-    );
-    const imageDisplayHeight = parseFloat(
-      canvas.dataset.imageDisplayHeight || "0"
-    );
-    const offsetX = parseFloat(canvas.dataset.imageOffsetX || "0");
-    const offsetY = parseFloat(canvas.dataset.imageOffsetY || "0");
-
-    // Apply background
-    drawBackground(ctx, canvas.width, canvas.height);
-
-    // Draw image at fixed size and position with rounded corners
-    const borderRadius = 12; // 12px rounded corners
-
-    ctx.save();
-    ctx.beginPath();
-    ctx.roundRect(offsetX, offsetY, imageDisplayWidth, imageDisplayHeight, borderRadius);
-    ctx.clip();
-
-    ctx.drawImage(
-      image,
-      offsetX,
-      offsetY,
-      imageDisplayWidth,
-      imageDisplayHeight
-    );
-
-    ctx.restore();
-
-    // Redraw all drawings with image offset
-    drawings.forEach((drawing) => {
-      ctx.strokeStyle = drawing.color;
-      ctx.lineWidth = drawing.strokeWidth;
-      ctx.lineCap = "round";
-      ctx.lineJoin = "round";
-
-      if (drawing.type === "pen") {
-        ctx.beginPath();
-        drawing.points.forEach((point, i) => {
-          if (i === 0) {
-            ctx.moveTo(point.x + offsetX, point.y + offsetY);
-          } else {
-            ctx.lineTo(point.x + offsetX, point.y + offsetY);
-          }
-        });
-        ctx.stroke();
-      } else if (drawing.type === "rectangle") {
-        const startPoint = drawing.points[0];
-        const endPoint = drawing.points[drawing.points.length - 1];
-        ctx.strokeRect(
-          startPoint.x + offsetX,
-          startPoint.y + offsetY,
-          endPoint.x - startPoint.x,
-          endPoint.y - startPoint.y
-        );
-      } else if (drawing.type === "arrow") {
-        const startPoint = drawing.points[0];
-        const endPoint = drawing.points[drawing.points.length - 1];
-        drawArrow(
-          ctx,
-          startPoint.x + offsetX,
-          startPoint.y + offsetY,
-          endPoint.x + offsetX,
-          endPoint.y + offsetY
-        );
-      } else if (drawing.type === "text" && drawing.text) {
-        const point = drawing.points[0];
-        console.log("Rendering text:", drawing.text, "at position:", point);
-
-        ctx.fillStyle = drawing.color;
-        ctx.font = `bold ${drawing.fontSize || 20}px Arial`;
-        ctx.textBaseline = "top";
-
-        // Add text outline for better visibility
-        ctx.strokeStyle = "#000000";
-        ctx.lineWidth = 3;
-        ctx.strokeText(drawing.text, point.x + offsetX, point.y + offsetY);
-
-        // Fill the text
-        ctx.fillStyle = drawing.color;
-        ctx.fillText(drawing.text, point.x + offsetX, point.y + offsetY);
-      } else if (drawing.type === "blur") {
-        const startPoint = drawing.points[0];
-        const endPoint = drawing.points[drawing.points.length - 1];
-        drawPixelatedRegion(
-          ctx,
-          startPoint.x + offsetX,
-          startPoint.y + offsetY,
-          endPoint.x - startPoint.x,
-          endPoint.y - startPoint.y
-        );
-      } else if (drawing.type === "step" && drawing.stepNumber) {
-        const point = drawing.points[0];
-        drawStepMarker(ctx, point.x + offsetX, point.y + offsetY, drawing.stepNumber, drawing.color);
-      }
-    });
-  }, [drawings, backgroundState]);
+    redrawCanvas();
+  }, [drawings, backgroundState, tiltEnabled, tiltX, tiltY]);
 
   // Effect to handle canvas resizing when background state or padding changes
   useEffect(() => {
     if (uploadedImage) {
       handleImageLoad();
     }
-  }, [backgroundState, bgPadding]);
-
+  }, [backgroundState, bgPadding, tiltEnabled, tiltX, tiltY]);
 
   const getMousePos = (e: React.MouseEvent<HTMLCanvasElement>) => {
     const canvas = canvasRef.current;
@@ -512,8 +445,8 @@ export default function ScreenshotAnnotate() {
     redrawCanvas();
 
     // Get image offset for preview drawing
-    const offsetX = parseFloat(canvas.dataset.imageOffsetX || '0');
-    const offsetY = parseFloat(canvas.dataset.imageOffsetY || '0');
+    const offsetX = parseFloat(canvas.dataset.imageOffsetX || "0");
+    const offsetY = parseFloat(canvas.dataset.imageOffsetY || "0");
 
     // Draw current path with correct offset
     ctx.strokeStyle = "#ef4444";
@@ -537,11 +470,17 @@ export default function ScreenshotAnnotate() {
         startPoint.x + offsetX,
         startPoint.y + offsetY,
         point.x - startPoint.x,
-        point.y - startPoint.y
+        point.y - startPoint.y,
       );
     } else if (currentTool === "arrow") {
       const startPoint = currentPath[0];
-      drawArrow(ctx, startPoint.x + offsetX, startPoint.y + offsetY, point.x + offsetX, point.y + offsetY);
+      drawArrow(
+        ctx,
+        startPoint.x + offsetX,
+        startPoint.y + offsetY,
+        point.x + offsetX,
+        point.y + offsetY,
+      );
     } else if (currentTool === "blur") {
       const startPoint = currentPath[0];
       // Draw dashed rectangle preview
@@ -552,7 +491,7 @@ export default function ScreenshotAnnotate() {
         startPoint.x + offsetX,
         startPoint.y + offsetY,
         point.x - startPoint.x,
-        point.y - startPoint.y
+        point.y - startPoint.y,
       );
       ctx.setLineDash([]);
     }
@@ -611,7 +550,11 @@ export default function ScreenshotAnnotate() {
     setBackgroundState({ type: "solid", color });
   };
 
-  const handleBackgroundGradientSelect = (gradient: { from: string; to: string; angle: number }) => {
+  const handleBackgroundGradientSelect = (gradient: {
+    from: string;
+    to: string;
+    angle: number;
+  }) => {
     saveToHistory();
     setBackgroundState({ type: "gradient", color: null, gradient });
   };
@@ -672,7 +615,9 @@ export default function ScreenshotAnnotate() {
 
   const recalcStepCounter = (drawingsList: DrawingElement[]) => {
     const maxStep = drawingsList.reduce((max, d) => {
-      return d.type === "step" && d.stepNumber ? Math.max(max, d.stepNumber) : max;
+      return d.type === "step" && d.stepNumber
+        ? Math.max(max, d.stepNumber)
+        : max;
     }, 0);
     stepCounterRef.current = maxStep + 1;
   };
@@ -748,7 +693,7 @@ export default function ScreenshotAnnotate() {
 
     try {
       const blob = await new Promise<Blob | null>((resolve) =>
-        canvas.toBlob((result) => resolve(result), "image/png")
+        canvas.toBlob((result) => resolve(result), "image/png"),
       );
 
       if (!blob) {
@@ -773,18 +718,26 @@ export default function ScreenshotAnnotate() {
     }
   };
 
-  const drawBackground = (ctx: CanvasRenderingContext2D, canvasWidth: number, canvasHeight: number) => {
+  const drawBackground = (
+    ctx: CanvasRenderingContext2D,
+    canvasWidth: number,
+    canvasHeight: number,
+  ) => {
     if (!backgroundState.type) return;
 
     if (backgroundState.type === "solid" && backgroundState.color) {
       ctx.fillStyle = backgroundState.color;
       ctx.fillRect(0, 0, canvasWidth, canvasHeight);
-    } else if (backgroundState.type === "gradient" && backgroundState.gradient) {
+    } else if (
+      backgroundState.type === "gradient" &&
+      backgroundState.gradient
+    ) {
       const { from, to, angle } = backgroundState.gradient;
       const rad = (angle * Math.PI) / 180;
       const cx = canvasWidth / 2;
       const cy = canvasHeight / 2;
-      const len = Math.sqrt(canvasWidth * canvasWidth + canvasHeight * canvasHeight) / 2;
+      const len =
+        Math.sqrt(canvasWidth * canvasWidth + canvasHeight * canvasHeight) / 2;
       const x0 = cx - Math.cos(rad) * len;
       const y0 = cy - Math.sin(rad) * len;
       const x1 = cx + Math.cos(rad) * len;
@@ -798,7 +751,10 @@ export default function ScreenshotAnnotate() {
       const bgImg = bgImageRef.current;
       const bgAspect = bgImg.naturalWidth / bgImg.naturalHeight;
       const canvasAspect = canvasWidth / canvasHeight;
-      let sx = 0, sy = 0, sw = bgImg.naturalWidth, sh = bgImg.naturalHeight;
+      let sx = 0,
+        sy = 0,
+        sw = bgImg.naturalWidth,
+        sh = bgImg.naturalHeight;
       if (bgAspect > canvasAspect) {
         sw = bgImg.naturalHeight * canvasAspect;
         sx = (bgImg.naturalWidth - sw) / 2;
@@ -815,7 +771,7 @@ export default function ScreenshotAnnotate() {
     x: number,
     y: number,
     width: number,
-    height: number
+    height: number,
   ) => {
     // Normalize negative dimensions
     const rx = width < 0 ? x + width : x;
@@ -844,7 +800,7 @@ export default function ScreenshotAnnotate() {
           rx + px,
           ry + py,
           Math.min(pixelSize, rw - px),
-          Math.min(pixelSize, rh - py)
+          Math.min(pixelSize, rh - py),
         );
       }
     }
@@ -855,7 +811,7 @@ export default function ScreenshotAnnotate() {
     x: number,
     y: number,
     stepNumber: number,
-    color: string
+    color: string,
   ) => {
     const radius = 16;
 
@@ -883,12 +839,149 @@ export default function ScreenshotAnnotate() {
     ctx.textBaseline = "alphabetic";
   };
 
+  const FOCAL_LENGTH = 1400;
+
+  const getProjectedSize = (
+    srcW: number,
+    srcH: number,
+    tiltXDeg: number,
+    tiltYDeg: number,
+  ): { width: number; height: number } => {
+    let w = srcW;
+    let h = srcH;
+
+    if (tiltYDeg !== 0) {
+      const angle = (tiltYDeg * Math.PI) / 180;
+      const centerX = srcW / 2;
+      let totalW = 0;
+      let maxScale = 0;
+      for (let x = 0; x < srcW; x++) {
+        const depth = FOCAL_LENGTH + (x - centerX) * Math.sin(angle);
+        const scale = FOCAL_LENGTH / depth;
+        totalW += scale;
+        maxScale = Math.max(maxScale, scale);
+      }
+      w = totalW;
+      h = srcH * maxScale;
+    }
+
+    if (tiltXDeg !== 0) {
+      const angle = (tiltXDeg * Math.PI) / 180;
+      const centerY = h / 2;
+      let totalH = 0;
+      let maxScale = 0;
+      for (let y = 0; y < Math.ceil(h); y++) {
+        const depth = FOCAL_LENGTH + (y - centerY) * Math.sin(angle);
+        const scale = FOCAL_LENGTH / depth;
+        totalH += scale;
+        maxScale = Math.max(maxScale, scale);
+      }
+      h = totalH;
+      w = w * maxScale;
+    }
+
+    return { width: Math.ceil(w), height: Math.ceil(h) };
+  };
+
+  const drawTiltedImage = (
+    ctx: CanvasRenderingContext2D,
+    sourceCanvas: HTMLCanvasElement,
+    canvasW: number,
+    canvasH: number,
+    tiltXDeg: number,
+    tiltYDeg: number,
+  ) => {
+    const srcW = sourceCanvas.width;
+    const srcH = sourceCanvas.height;
+
+    let currentSource: HTMLCanvasElement = sourceCanvas;
+
+    // Apply Y-tilt (vertical strips)
+    if (tiltYDeg !== 0) {
+      const angle = (tiltYDeg * Math.PI) / 180;
+      const projected = getProjectedSize(srcW, srcH, 0, tiltYDeg);
+      const intermediate = document.createElement("canvas");
+      intermediate.width = projected.width;
+      intermediate.height = projected.height;
+      const intCtx = intermediate.getContext("2d")!;
+
+      const centerX = srcW / 2;
+      let drawX = 0;
+
+      for (let x = 0; x < srcW; x++) {
+        const depth = FOCAL_LENGTH + (x - centerX) * Math.sin(angle);
+        const scale = FOCAL_LENGTH / depth;
+        const stripH = srcH * scale;
+        const stripW = scale;
+        const yOffset = (projected.height - stripH) / 2;
+
+        intCtx.drawImage(
+          currentSource,
+          x,
+          0,
+          1,
+          srcH,
+          drawX,
+          yOffset,
+          stripW + 0.5,
+          stripH + 0.5,
+        );
+        drawX += stripW;
+      }
+      currentSource = intermediate;
+    }
+
+    // Apply X-tilt (horizontal strips)
+    if (tiltXDeg !== 0) {
+      const angle = (tiltXDeg * Math.PI) / 180;
+      const prevW = currentSource.width;
+      const prevH = currentSource.height;
+      const projected = getProjectedSize(prevW, prevH, tiltXDeg, 0);
+      const final = document.createElement("canvas");
+      final.width = projected.width;
+      final.height = projected.height;
+      const finCtx = final.getContext("2d")!;
+
+      const centerY = prevH / 2;
+      let drawY = 0;
+
+      for (let y = 0; y < prevH; y++) {
+        const depth = FOCAL_LENGTH + (y - centerY) * Math.sin(angle);
+        const scale = FOCAL_LENGTH / depth;
+        const stripW = prevW * scale;
+        const stripH = scale;
+        const xOffset = (projected.width - stripW) / 2;
+
+        finCtx.drawImage(
+          currentSource,
+          0,
+          y,
+          prevW,
+          1,
+          xOffset,
+          drawY,
+          stripW + 0.5,
+          stripH + 0.5,
+        );
+        drawY += stripH;
+      }
+      currentSource = final;
+    }
+
+    // Draw centered on main canvas
+    ctx.drawImage(
+      currentSource,
+      (canvasW - currentSource.width) / 2,
+      (canvasH - currentSource.height) / 2,
+    );
+  };
+
   const drawArrow = (
     ctx: CanvasRenderingContext2D,
     fromX: number,
     fromY: number,
     toX: number,
-    toY: number
+    toY: number,
   ) => {
     const headLength = 15;
     const angle = Math.atan2(toY - fromY, toX - fromX);
@@ -904,59 +997,46 @@ export default function ScreenshotAnnotate() {
     ctx.moveTo(toX, toY);
     ctx.lineTo(
       toX - headLength * Math.cos(angle - Math.PI / 6),
-      toY - headLength * Math.sin(angle - Math.PI / 6)
+      toY - headLength * Math.sin(angle - Math.PI / 6),
     );
     ctx.moveTo(toX, toY);
     ctx.lineTo(
       toX - headLength * Math.cos(angle + Math.PI / 6),
-      toY - headLength * Math.sin(angle + Math.PI / 6)
+      toY - headLength * Math.sin(angle + Math.PI / 6),
     );
     ctx.stroke();
   };
 
-  const redrawCanvas = () => {
-    const canvas = canvasRef.current;
-    const ctx = canvas?.getContext("2d");
-    const image = imageRef.current;
-
-    if (!ctx || !canvas || !image) return;
-
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    // Get stored image dimensions and position
-    const imageDisplayWidth = parseFloat(
-      canvas.dataset.imageDisplayWidth || "0"
-    );
-    const imageDisplayHeight = parseFloat(
-      canvas.dataset.imageDisplayHeight || "0"
-    );
-    const offsetX = parseFloat(canvas.dataset.imageOffsetX || "0");
-    const offsetY = parseFloat(canvas.dataset.imageOffsetY || "0");
-
-    // Apply background
-    drawBackground(ctx, canvas.width, canvas.height);
-
-    // Draw image at fixed size and position with rounded corners
-    const borderRadius = 12; // 12px rounded corners
+  // Shared function: render image + annotations onto a given context
+  const renderFlatContent = (
+    ctx: CanvasRenderingContext2D,
+    image: HTMLImageElement,
+    imageDisplayWidth: number,
+    imageDisplayHeight: number,
+    offsetX: number,
+    offsetY: number,
+  ) => {
+    const borderRadius = 12;
 
     ctx.save();
     ctx.beginPath();
-    ctx.roundRect(offsetX, offsetY, imageDisplayWidth, imageDisplayHeight, borderRadius);
+    ctx.roundRect(
+      offsetX,
+      offsetY,
+      imageDisplayWidth,
+      imageDisplayHeight,
+      borderRadius,
+    );
     ctx.clip();
-
     ctx.drawImage(
       image,
       offsetX,
       offsetY,
       imageDisplayWidth,
-      imageDisplayHeight
+      imageDisplayHeight,
     );
-
     ctx.restore();
 
-    console.log("Redrawing canvas with drawings:", drawings);
-
-    // Redraw all drawings with image offset
     drawings.forEach((drawing) => {
       ctx.strokeStyle = drawing.color;
       ctx.lineWidth = drawing.strokeWidth;
@@ -980,7 +1060,7 @@ export default function ScreenshotAnnotate() {
           startPoint.x + offsetX,
           startPoint.y + offsetY,
           endPoint.x - startPoint.x,
-          endPoint.y - startPoint.y
+          endPoint.y - startPoint.y,
         );
       } else if (drawing.type === "arrow") {
         const startPoint = drawing.points[0];
@@ -990,22 +1070,16 @@ export default function ScreenshotAnnotate() {
           startPoint.x + offsetX,
           startPoint.y + offsetY,
           endPoint.x + offsetX,
-          endPoint.y + offsetY
+          endPoint.y + offsetY,
         );
       } else if (drawing.type === "text" && drawing.text) {
         const point = drawing.points[0];
-        console.log("Rendering text:", drawing.text, "at position:", point);
-
         ctx.fillStyle = drawing.color;
         ctx.font = `bold ${drawing.fontSize || 20}px Arial`;
         ctx.textBaseline = "top";
-
-        // Add text outline for better visibility
         ctx.strokeStyle = "#000000";
         ctx.lineWidth = 3;
         ctx.strokeText(drawing.text, point.x + offsetX, point.y + offsetY);
-
-        // Fill the text
         ctx.fillStyle = drawing.color;
         ctx.fillText(drawing.text, point.x + offsetX, point.y + offsetY);
       } else if (drawing.type === "blur") {
@@ -1016,13 +1090,72 @@ export default function ScreenshotAnnotate() {
           startPoint.x + offsetX,
           startPoint.y + offsetY,
           endPoint.x - startPoint.x,
-          endPoint.y - startPoint.y
+          endPoint.y - startPoint.y,
         );
       } else if (drawing.type === "step" && drawing.stepNumber) {
         const point = drawing.points[0];
-        drawStepMarker(ctx, point.x + offsetX, point.y + offsetY, drawing.stepNumber, drawing.color);
+        drawStepMarker(
+          ctx,
+          point.x + offsetX,
+          point.y + offsetY,
+          drawing.stepNumber,
+          drawing.color,
+        );
       }
     });
+  };
+
+  const redrawCanvas = () => {
+    const canvas = canvasRef.current;
+    const ctx = canvas?.getContext("2d");
+    const image = imageRef.current;
+
+    if (!ctx || !canvas || !image) return;
+
+    const imageDisplayWidth = parseFloat(
+      canvas.dataset.imageDisplayWidth || "0",
+    );
+    const imageDisplayHeight = parseFloat(
+      canvas.dataset.imageDisplayHeight || "0",
+    );
+    const offsetX = parseFloat(canvas.dataset.imageOffsetX || "0");
+    const offsetY = parseFloat(canvas.dataset.imageOffsetY || "0");
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    drawBackground(ctx, canvas.width, canvas.height);
+
+    if (tiltEnabled && (tiltX !== 0 || tiltY !== 0)) {
+      // Render flat content to offscreen canvas, then project with tilt
+      const offscreen = document.createElement("canvas");
+      offscreen.width = imageDisplayWidth;
+      offscreen.height = imageDisplayHeight;
+      const offCtx = offscreen.getContext("2d")!;
+      renderFlatContent(
+        offCtx,
+        image,
+        imageDisplayWidth,
+        imageDisplayHeight,
+        0,
+        0,
+      );
+      drawTiltedImage(
+        ctx,
+        offscreen,
+        canvas.width,
+        canvas.height,
+        tiltX,
+        tiltY,
+      );
+    } else {
+      renderFlatContent(
+        ctx,
+        image,
+        imageDisplayWidth,
+        imageDisplayHeight,
+        offsetX,
+        offsetY,
+      );
+    }
   };
 
   const handleImageLoad = () => {
@@ -1052,9 +1185,21 @@ export default function ScreenshotAnnotate() {
       imageDisplayWidth = maxHeight * imageAspectRatio;
     }
 
-    // Canvas size includes padding
-    const canvasWidth = imageDisplayWidth + padding * 2;
-    const canvasHeight = imageDisplayHeight + padding * 2;
+    // Canvas size includes padding and tilt projection
+    let canvasWidth, canvasHeight;
+    if (tiltEnabled && (tiltX !== 0 || tiltY !== 0)) {
+      const proj = getProjectedSize(
+        imageDisplayWidth,
+        imageDisplayHeight,
+        tiltX,
+        tiltY,
+      );
+      canvasWidth = proj.width + padding * 2;
+      canvasHeight = proj.height + padding * 2;
+    } else {
+      canvasWidth = imageDisplayWidth + padding * 2;
+      canvasHeight = imageDisplayHeight + padding * 2;
+    }
 
     canvas.width = canvasWidth;
     canvas.height = canvasHeight;
@@ -1128,13 +1273,15 @@ export default function ScreenshotAnnotate() {
                 className="relative w-full h-[80vh] flex items-center justify-center bg-muted/20 rounded-lg overflow-hidden"
                 style={{
                   cursor:
-                    currentTool === "pen" || currentTool === "blur" || currentTool === "step"
+                    currentTool === "pen" ||
+                    currentTool === "blur" ||
+                    currentTool === "step"
                       ? "crosshair"
                       : currentTool === "text"
-                      ? "text"
-                      : currentTool === "background"
-                      ? "pointer"
-                      : "default",
+                        ? "text"
+                        : currentTool === "background"
+                          ? "pointer"
+                          : "default",
                 }}
               >
                 <img
@@ -1195,7 +1342,9 @@ export default function ScreenshotAnnotate() {
                     <div className="absolute top-4 right-4 bg-slate-900/90 backdrop-blur-lg rounded-2xl p-4 shadow-2xl border border-white/10 z-50 w-72">
                       {/* Tabs */}
                       <div className="flex gap-1 mb-3 bg-white/5 rounded-lg p-1">
-                        {(["solid", "gradient", "image"] as BackgroundType[]).map((tab) => (
+                        {(
+                          ["solid", "gradient", "image"] as BackgroundType[]
+                        ).map((tab) => (
                           <button
                             key={tab}
                             onClick={() => setBgTab(tab)}
@@ -1218,7 +1367,8 @@ export default function ScreenshotAnnotate() {
                               key={color}
                               onClick={() => handleBackgroundColorSelect(color)}
                               className={`w-10 h-10 rounded-lg border-2 transition-colors hover:scale-110 transform ${
-                                backgroundState.type === "solid" && backgroundState.color === color
+                                backgroundState.type === "solid" &&
+                                backgroundState.color === color
                                   ? "border-blue-400"
                                   : "border-white/20 hover:border-white/50"
                               }`}
@@ -1258,12 +1408,17 @@ export default function ScreenshotAnnotate() {
                               key={src}
                               onClick={() => handleBackgroundImageSelect(src)}
                               className={`w-14 h-14 rounded-lg border-2 transition-colors hover:scale-105 transform overflow-hidden ${
-                                backgroundState.type === "image" && backgroundState.imageSrc === src
+                                backgroundState.type === "image" &&
+                                backgroundState.imageSrc === src
                                   ? "border-blue-400"
                                   : "border-white/20 hover:border-white/50"
                               }`}
                             >
-                              <img src={src} alt="" className="w-full h-full object-cover" />
+                              <img
+                                src={src}
+                                alt=""
+                                className="w-full h-full object-cover"
+                              />
                             </button>
                           ))}
                         </div>
@@ -1415,6 +1570,34 @@ export default function ScreenshotAnnotate() {
                           <EyeOff className="w-6 h-6" />
                         </button>
                       </Tooltip>
+
+                      {/* Tilt Toggle */}
+                      <Tooltip content="3D Tilt - Rotate screenshot with arrow keys">
+                        <button
+                          onClick={() => {
+                            if (tiltEnabled) {
+                              setTiltEnabled(false);
+                              setTiltX(0);
+                              setTiltY(0);
+                            } else {
+                              setTiltEnabled(true);
+                            }
+                          }}
+                          className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-105 ${
+                            tiltEnabled
+                              ? "bg-blue-500/80"
+                              : "bg-white/10 hover:bg-white/20"
+                          }`}
+                        >
+                          <Rotate3d className="w-6 h-6" />
+                        </button>
+                      </Tooltip>
+
+                      {tiltEnabled && (tiltX !== 0 || tiltY !== 0) && (
+                        <span className="text-xs text-white/60 font-mono">
+                          {tiltX}°/{tiltY}°
+                        </span>
+                      )}
 
                       {/* Separator */}
                       <div className="w-px h-8 bg-white/20"></div>
