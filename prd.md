@@ -23,3 +23,5 @@ This is the website for an app called Scribbble - a mac app to annotate/draw any
 - [x] Add a toast when "copy" keyboard shortcut is pressed
 - [x] Add "Text" tool to add text anywhere over the drawing
 - [x] Add a "background" tool that lets you add various backgrounds around the screenshot. Let's start with just a fixed palette of solid backgrounds.
+- [x] Add "Blur/Pixelate" tool to redact sensitive areas by dragging a rectangle region
+- [x] Add "Numbered Step Markers" tool to place numbered circles (1, 2, 3...) on click

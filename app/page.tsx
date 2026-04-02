@@ -381,6 +381,12 @@ export default function Home() {
             </div>
             <div className="flex items-center space-x-8">
               <a
+                href="/tools/screenshot-annotate"
+                className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110 font-medium"
+              >
+                Screenshot Annotate
+              </a>
+              <a
                 href="#"
                 className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110 font-medium"
               >

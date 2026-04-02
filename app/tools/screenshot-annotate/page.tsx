@@ -17,10 +17,12 @@ import {
   Palette,
   Undo,
   Redo,
+  EyeOff,
+  Hash,
 } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 
-type Tool = "pen" | "rectangle" | "arrow" | "text" | "background";
+type Tool = "pen" | "rectangle" | "arrow" | "text" | "background" | "blur" | "step";
 
 interface Point {
   x: number;
@@ -34,10 +36,16 @@ interface DrawingElement {
   strokeWidth: number;
   text?: string;
   fontSize?: number;
+  stepNumber?: number;
 }
 
+type BackgroundType = "solid" | "gradient" | "image";
+
 interface BackgroundState {
+  type: BackgroundType | null;
   color: string | null;
+  gradient?: { from: string; to: string; angle: number };
+  imageSrc?: string;
 }
 
 interface TooltipState {
@@ -72,9 +80,11 @@ export default function ScreenshotAnnotate() {
   const [textPosition, setTextPosition] = useState<Point | null>(null);
   const [isTextInputActive, setIsTextInputActive] = useState(false);
   const [backgroundState, setBackgroundState] = useState<BackgroundState>({
+    type: null,
     color: null,
   });
   const [showColorPalette, setShowColorPalette] = useState(false);
+  const [bgTab, setBgTab] = useState<BackgroundType>("solid");
   const [tooltip, setTooltip] = useState<TooltipState>({
     show: false,
     content: "",
@@ -97,12 +107,29 @@ export default function ScreenshotAnnotate() {
     "#ffffff", // white
   ];
 
+  const backgroundGradients = [
+    { from: "#667eea", to: "#764ba2", angle: 135 },
+    { from: "#f093fb", to: "#f5576c", angle: 135 },
+    { from: "#4facfe", to: "#00f2fe", angle: 135 },
+    { from: "#43e97b", to: "#38f9d7", angle: 135 },
+    { from: "#fa709a", to: "#fee140", angle: 135 },
+    { from: "#a18cd1", to: "#fbc2eb", angle: 135 },
+    { from: "#fccb90", to: "#d57eeb", angle: 135 },
+    { from: "#e0c3fc", to: "#8ec5fc", angle: 135 },
+    { from: "#f5f7fa", to: "#c3cfe2", angle: 135 },
+    { from: "#0c0c0c", to: "#434343", angle: 135 },
+  ];
+
+  const backgroundImages = Array.from({ length: 13 }, (_, i) => `/bgs/wp-${i + 1}.avif`);
+
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const imageRef = useRef<HTMLImageElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const toolbarRef = useRef<HTMLDivElement>(null);
   const textInputRef = useRef<HTMLInputElement>(null);
+  const stepCounterRef = useRef<number>(1);
+  const bgImageRef = useRef<HTMLImageElement | null>(null);
 
   const handleImageUpload = (file: File) => {
     if (file && file.type.startsWith("image/")) {
@@ -110,6 +137,7 @@ export default function ScreenshotAnnotate() {
       reader.onload = (e) => {
         setUploadedImage(e.target?.result as string);
         setDrawings([]);
+        stepCounterRef.current = 1;
       };
       reader.readAsDataURL(file);
     }
@@ -251,6 +279,14 @@ export default function ScreenshotAnnotate() {
         case "B":
           setCurrentTool("background");
           break;
+        case "x":
+        case "X":
+          setCurrentTool("blur");
+          break;
+        case "s":
+        case "S":
+          setCurrentTool("step");
+          break;
       }
     };
 
@@ -259,6 +295,15 @@ export default function ScreenshotAnnotate() {
       document.removeEventListener("keydown", handleKeyDown);
     };
   }, [isTextInputActive]);
+
+  // Show/hide background palette when switching to/from background tool
+  useEffect(() => {
+    if (currentTool === "background") {
+      setShowColorPalette(true);
+    } else {
+      setShowColorPalette(false);
+    }
+  }, [currentTool]);
 
   // Focus text input when it becomes active
   useEffect(() => {
@@ -289,11 +334,8 @@ export default function ScreenshotAnnotate() {
     const offsetX = parseFloat(canvas.dataset.imageOffsetX || "0");
     const offsetY = parseFloat(canvas.dataset.imageOffsetY || "0");
 
-    // Apply background color if set
-    if (backgroundState.color) {
-      ctx.fillStyle = backgroundState.color;
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-    }
+    // Apply background
+    drawBackground(ctx, canvas.width, canvas.height);
 
     // Draw image at fixed size and position with rounded corners
     const borderRadius = 12; // 12px rounded corners
@@ -313,11 +355,7 @@ export default function ScreenshotAnnotate() {
 
     ctx.restore();
 
-    console.log("Redrawing canvas with drawings:", drawings);
-
     // Redraw all drawings with image offset
-    // const offsetX = parseFloat(canvas.dataset.imageOffsetX || '0');
-    // const offsetY = parseFloat(canvas.dataset.imageOffsetY || '0');
     drawings.forEach((drawing) => {
       ctx.strokeStyle = drawing.color;
       ctx.lineWidth = drawing.strokeWidth;
@@ -369,16 +407,29 @@ export default function ScreenshotAnnotate() {
         // Fill the text
         ctx.fillStyle = drawing.color;
         ctx.fillText(drawing.text, point.x + offsetX, point.y + offsetY);
+      } else if (drawing.type === "blur") {
+        const startPoint = drawing.points[0];
+        const endPoint = drawing.points[drawing.points.length - 1];
+        drawPixelatedRegion(
+          ctx,
+          startPoint.x + offsetX,
+          startPoint.y + offsetY,
+          endPoint.x - startPoint.x,
+          endPoint.y - startPoint.y
+        );
+      } else if (drawing.type === "step" && drawing.stepNumber) {
+        const point = drawing.points[0];
+        drawStepMarker(ctx, point.x + offsetX, point.y + offsetY, drawing.stepNumber, drawing.color);
       }
     });
-  }, [drawings, backgroundState.color]);
+  }, [drawings, backgroundState]);
 
   // Effect to handle canvas resizing when background state changes
   useEffect(() => {
     if (uploadedImage) {
       handleImageLoad();
     }
-  }, [backgroundState.color]);
+  }, [backgroundState]);
 
 
   const getMousePos = (e: React.MouseEvent<HTMLCanvasElement>) => {
@@ -405,7 +456,20 @@ export default function ScreenshotAnnotate() {
     }
 
     if (currentTool === "background") {
-      setShowColorPalette(true);
+      return;
+    }
+
+    if (currentTool === "step") {
+      const point = getMousePos(e);
+      saveToHistory();
+      const newDrawing: DrawingElement = {
+        type: "step",
+        points: [point],
+        color: "#ef4444",
+        strokeWidth: 4,
+        stepNumber: stepCounterRef.current++,
+      };
+      setDrawings((prev) => [...prev, newDrawing]);
       return;
     }
 
@@ -432,7 +496,7 @@ export default function ScreenshotAnnotate() {
 
     // Draw current path with correct offset
     ctx.strokeStyle = "#ef4444";
-    ctx.lineWidth = 2;
+    ctx.lineWidth = 4;
     ctx.lineCap = "round";
     ctx.lineJoin = "round";
 
@@ -457,6 +521,19 @@ export default function ScreenshotAnnotate() {
     } else if (currentTool === "arrow") {
       const startPoint = currentPath[0];
       drawArrow(ctx, startPoint.x + offsetX, startPoint.y + offsetY, point.x + offsetX, point.y + offsetY);
+    } else if (currentTool === "blur") {
+      const startPoint = currentPath[0];
+      // Draw dashed rectangle preview
+      ctx.setLineDash([6, 4]);
+      ctx.strokeStyle = "#94a3b8";
+      ctx.lineWidth = 2;
+      ctx.strokeRect(
+        startPoint.x + offsetX,
+        startPoint.y + offsetY,
+        point.x - startPoint.x,
+        point.y - startPoint.y
+      );
+      ctx.setLineDash([]);
     }
   };
 
@@ -469,7 +546,7 @@ export default function ScreenshotAnnotate() {
       type: currentTool,
       points: [...currentPath],
       color: "#ef4444",
-      strokeWidth: 2,
+      strokeWidth: 4,
     };
 
     // Save current state before adding new drawing
@@ -490,7 +567,7 @@ export default function ScreenshotAnnotate() {
       type: "text",
       points: [textPosition],
       color: "#ef4444",
-      strokeWidth: 4,
+      strokeWidth: 6,
       text: text.trim(),
       fontSize: 20,
     };
@@ -510,14 +587,28 @@ export default function ScreenshotAnnotate() {
 
   const handleBackgroundColorSelect = (color: string) => {
     saveToHistory();
-    setBackgroundState({ color });
-    setShowColorPalette(false);
+    setBackgroundState({ type: "solid", color });
+  };
+
+  const handleBackgroundGradientSelect = (gradient: { from: string; to: string; angle: number }) => {
+    saveToHistory();
+    setBackgroundState({ type: "gradient", color: null, gradient });
+  };
+
+  const handleBackgroundImageSelect = (src: string) => {
+    saveToHistory();
+    const img = new Image();
+    img.src = src;
+    img.onload = () => {
+      bgImageRef.current = img;
+      setBackgroundState({ type: "image", color: null, imageSrc: src });
+    };
   };
 
   const clearBackground = () => {
     saveToHistory();
-    setBackgroundState({ color: null });
-    setShowColorPalette(false);
+    bgImageRef.current = null;
+    setBackgroundState({ type: null, color: null });
   };
 
   // Save current state to history
@@ -545,6 +636,26 @@ export default function ScreenshotAnnotate() {
     }
   }, [uploadedImage, history.length, saveToHistory]);
 
+  const restoreBgImage = (state: BackgroundState) => {
+    if (state.type === "image" && state.imageSrc) {
+      const img = new Image();
+      img.src = state.imageSrc;
+      img.onload = () => {
+        bgImageRef.current = img;
+        redrawCanvas();
+      };
+    } else {
+      bgImageRef.current = null;
+    }
+  };
+
+  const recalcStepCounter = (drawingsList: DrawingElement[]) => {
+    const maxStep = drawingsList.reduce((max, d) => {
+      return d.type === "step" && d.stepNumber ? Math.max(max, d.stepNumber) : max;
+    }, 0);
+    stepCounterRef.current = maxStep + 1;
+  };
+
   // Undo function
   const undo = () => {
     if (historyIndex > 0) {
@@ -552,6 +663,8 @@ export default function ScreenshotAnnotate() {
       setDrawings(previousState.drawings);
       setBackgroundState(previousState.backgroundState);
       setHistoryIndex(historyIndex - 1);
+      recalcStepCounter(previousState.drawings);
+      restoreBgImage(previousState.backgroundState);
     }
   };
 
@@ -562,6 +675,8 @@ export default function ScreenshotAnnotate() {
       setDrawings(nextState.drawings);
       setBackgroundState(nextState.backgroundState);
       setHistoryIndex(historyIndex + 1);
+      recalcStepCounter(nextState.drawings);
+      restoreBgImage(nextState.backgroundState);
     }
   };
 
@@ -637,6 +752,116 @@ export default function ScreenshotAnnotate() {
     }
   };
 
+  const drawBackground = (ctx: CanvasRenderingContext2D, canvasWidth: number, canvasHeight: number) => {
+    if (!backgroundState.type) return;
+
+    if (backgroundState.type === "solid" && backgroundState.color) {
+      ctx.fillStyle = backgroundState.color;
+      ctx.fillRect(0, 0, canvasWidth, canvasHeight);
+    } else if (backgroundState.type === "gradient" && backgroundState.gradient) {
+      const { from, to, angle } = backgroundState.gradient;
+      const rad = (angle * Math.PI) / 180;
+      const cx = canvasWidth / 2;
+      const cy = canvasHeight / 2;
+      const len = Math.sqrt(canvasWidth * canvasWidth + canvasHeight * canvasHeight) / 2;
+      const x0 = cx - Math.cos(rad) * len;
+      const y0 = cy - Math.sin(rad) * len;
+      const x1 = cx + Math.cos(rad) * len;
+      const y1 = cy + Math.sin(rad) * len;
+      const gradient = ctx.createLinearGradient(x0, y0, x1, y1);
+      gradient.addColorStop(0, from);
+      gradient.addColorStop(1, to);
+      ctx.fillStyle = gradient;
+      ctx.fillRect(0, 0, canvasWidth, canvasHeight);
+    } else if (backgroundState.type === "image" && bgImageRef.current) {
+      const bgImg = bgImageRef.current;
+      const bgAspect = bgImg.naturalWidth / bgImg.naturalHeight;
+      const canvasAspect = canvasWidth / canvasHeight;
+      let sx = 0, sy = 0, sw = bgImg.naturalWidth, sh = bgImg.naturalHeight;
+      if (bgAspect > canvasAspect) {
+        sw = bgImg.naturalHeight * canvasAspect;
+        sx = (bgImg.naturalWidth - sw) / 2;
+      } else {
+        sh = bgImg.naturalWidth / canvasAspect;
+        sy = (bgImg.naturalHeight - sh) / 2;
+      }
+      ctx.drawImage(bgImg, sx, sy, sw, sh, 0, 0, canvasWidth, canvasHeight);
+    }
+  };
+
+  const drawPixelatedRegion = (
+    ctx: CanvasRenderingContext2D,
+    x: number,
+    y: number,
+    width: number,
+    height: number
+  ) => {
+    // Normalize negative dimensions
+    const rx = width < 0 ? x + width : x;
+    const ry = height < 0 ? y + height : y;
+    const rw = Math.abs(width);
+    const rh = Math.abs(height);
+
+    if (rw < 1 || rh < 1) return;
+
+    const pixelSize = 10;
+    const imageData = ctx.getImageData(rx, ry, rw, rh);
+    const data = imageData.data;
+
+    for (let py = 0; py < rh; py += pixelSize) {
+      for (let px = 0; px < rw; px += pixelSize) {
+        // Sample center pixel of block
+        const sampleX = Math.min(px + Math.floor(pixelSize / 2), rw - 1);
+        const sampleY = Math.min(py + Math.floor(pixelSize / 2), rh - 1);
+        const idx = (sampleY * rw + sampleX) * 4;
+        const r = data[idx];
+        const g = data[idx + 1];
+        const b = data[idx + 2];
+
+        ctx.fillStyle = `rgb(${r},${g},${b})`;
+        ctx.fillRect(
+          rx + px,
+          ry + py,
+          Math.min(pixelSize, rw - px),
+          Math.min(pixelSize, rh - py)
+        );
+      }
+    }
+  };
+
+  const drawStepMarker = (
+    ctx: CanvasRenderingContext2D,
+    x: number,
+    y: number,
+    stepNumber: number,
+    color: string
+  ) => {
+    const radius = 16;
+
+    // Dark border
+    ctx.beginPath();
+    ctx.arc(x, y, radius + 2, 0, Math.PI * 2);
+    ctx.fillStyle = "#000000";
+    ctx.fill();
+
+    // Colored circle
+    ctx.beginPath();
+    ctx.arc(x, y, radius, 0, Math.PI * 2);
+    ctx.fillStyle = color;
+    ctx.fill();
+
+    // Number text
+    ctx.fillStyle = "#ffffff";
+    ctx.font = "bold 16px Arial";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    ctx.fillText(String(stepNumber), x, y);
+
+    // Reset text alignment
+    ctx.textAlign = "start";
+    ctx.textBaseline = "alphabetic";
+  };
+
   const drawArrow = (
     ctx: CanvasRenderingContext2D,
     fromX: number,
@@ -687,11 +912,8 @@ export default function ScreenshotAnnotate() {
     const offsetX = parseFloat(canvas.dataset.imageOffsetX || "0");
     const offsetY = parseFloat(canvas.dataset.imageOffsetY || "0");
 
-    // Apply background color if set
-    if (backgroundState.color) {
-      ctx.fillStyle = backgroundState.color;
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-    }
+    // Apply background
+    drawBackground(ctx, canvas.width, canvas.height);
 
     // Draw image at fixed size and position with rounded corners
     const borderRadius = 12; // 12px rounded corners
@@ -765,6 +987,19 @@ export default function ScreenshotAnnotate() {
         // Fill the text
         ctx.fillStyle = drawing.color;
         ctx.fillText(drawing.text, point.x + offsetX, point.y + offsetY);
+      } else if (drawing.type === "blur") {
+        const startPoint = drawing.points[0];
+        const endPoint = drawing.points[drawing.points.length - 1];
+        drawPixelatedRegion(
+          ctx,
+          startPoint.x + offsetX,
+          startPoint.y + offsetY,
+          endPoint.x - startPoint.x,
+          endPoint.y - startPoint.y
+        );
+      } else if (drawing.type === "step" && drawing.stepNumber) {
+        const point = drawing.points[0];
+        drawStepMarker(ctx, point.x + offsetX, point.y + offsetY, drawing.stepNumber, drawing.color);
       }
     });
   };
@@ -778,7 +1013,7 @@ export default function ScreenshotAnnotate() {
 
     const containerWidth = container.clientWidth;
     const containerHeight = container.clientHeight;
-    const padding = backgroundState.color ? 40 : 0;
+    const padding = backgroundState.type ? 40 : 0;
 
     const imageAspectRatio = image.naturalWidth / image.naturalHeight;
 
@@ -872,7 +1107,7 @@ export default function ScreenshotAnnotate() {
                 className="relative w-full h-[80vh] flex items-center justify-center bg-muted/20 rounded-lg overflow-hidden"
                 style={{
                   cursor:
-                    currentTool === "pen"
+                    currentTool === "pen" || currentTool === "blur" || currentTool === "step"
                       ? "crosshair"
                       : currentTool === "text"
                       ? "text"
@@ -934,37 +1169,92 @@ export default function ScreenshotAnnotate() {
                     />
                   )}
 
-                  {/* Background Color Palette */}
+                  {/* Background Palette */}
                   {showColorPalette && (
-                    <div className="absolute top-4 right-4 bg-slate-900/90 backdrop-blur-lg rounded-2xl p-4 shadow-2xl border border-white/10 z-50">
-                      <div className="mb-3">
-                        <h3 className="text-white text-sm font-medium mb-2">
-                          Background Colors
-                        </h3>
+                    <div className="absolute top-4 right-4 bg-slate-900/90 backdrop-blur-lg rounded-2xl p-4 shadow-2xl border border-white/10 z-50 w-72">
+                      {/* Tabs */}
+                      <div className="flex gap-1 mb-3 bg-white/5 rounded-lg p-1">
+                        {(["solid", "gradient", "image"] as BackgroundType[]).map((tab) => (
+                          <button
+                            key={tab}
+                            onClick={() => setBgTab(tab)}
+                            className={`flex-1 px-2 py-1.5 text-xs font-medium rounded-md transition-colors capitalize ${
+                              bgTab === tab
+                                ? "bg-white/20 text-white"
+                                : "text-white/50 hover:text-white/80"
+                            }`}
+                          >
+                            {tab}
+                          </button>
+                        ))}
+                      </div>
+
+                      {/* Solid Colors */}
+                      {bgTab === "solid" && (
                         <div className="grid grid-cols-5 gap-2">
                           {backgroundColors.map((color) => (
                             <button
                               key={color}
                               onClick={() => handleBackgroundColorSelect(color)}
-                              className="w-8 h-8 rounded-lg border-2 border-white/20 hover:border-white/50 transition-colors hover:scale-110 transform"
+                              className={`w-10 h-10 rounded-lg border-2 transition-colors hover:scale-110 transform ${
+                                backgroundState.type === "solid" && backgroundState.color === color
+                                  ? "border-blue-400"
+                                  : "border-white/20 hover:border-white/50"
+                              }`}
                               style={{ backgroundColor: color }}
-                              title={`Background: ${color}`}
                             />
                           ))}
                         </div>
-                      </div>
-                      <div className="flex gap-2">
+                      )}
+
+                      {/* Gradients */}
+                      {bgTab === "gradient" && (
+                        <div className="grid grid-cols-5 gap-2">
+                          {backgroundGradients.map((g, i) => (
+                            <button
+                              key={i}
+                              onClick={() => handleBackgroundGradientSelect(g)}
+                              className={`w-10 h-10 rounded-lg border-2 transition-colors hover:scale-110 transform ${
+                                backgroundState.type === "gradient" &&
+                                backgroundState.gradient?.from === g.from &&
+                                backgroundState.gradient?.to === g.to
+                                  ? "border-blue-400"
+                                  : "border-white/20 hover:border-white/50"
+                              }`}
+                              style={{
+                                background: `linear-gradient(${g.angle}deg, ${g.from}, ${g.to})`,
+                              }}
+                            />
+                          ))}
+                        </div>
+                      )}
+
+                      {/* Images */}
+                      {bgTab === "image" && (
+                        <div className="grid grid-cols-4 gap-2 max-h-48 overflow-y-auto">
+                          {backgroundImages.map((src) => (
+                            <button
+                              key={src}
+                              onClick={() => handleBackgroundImageSelect(src)}
+                              className={`w-14 h-14 rounded-lg border-2 transition-colors hover:scale-105 transform overflow-hidden ${
+                                backgroundState.type === "image" && backgroundState.imageSrc === src
+                                  ? "border-blue-400"
+                                  : "border-white/20 hover:border-white/50"
+                              }`}
+                            >
+                              <img src={src} alt="" className="w-full h-full object-cover" />
+                            </button>
+                          ))}
+                        </div>
+                      )}
+
+                      {/* Clear button */}
+                      <div className="mt-3">
                         <button
                           onClick={clearBackground}
-                          className="px-3 py-1.5 bg-white/10 hover:bg-white/20 text-white text-sm rounded-lg transition-colors"
+                          className="w-full px-3 py-1.5 bg-white/10 hover:bg-white/20 text-white text-sm rounded-lg transition-colors"
                         >
-                          Clear
-                        </button>
-                        <button
-                          onClick={() => setShowColorPalette(false)}
-                          className="px-3 py-1.5 bg-white/10 hover:bg-white/20 text-white text-sm rounded-lg transition-colors"
-                        >
-                          Cancel
+                          Clear Background
                         </button>
                       </div>
                     </div>
@@ -1021,6 +1311,20 @@ export default function ScreenshotAnnotate() {
                         </button>
                       </Tooltip>
 
+                      {/* Step Marker Tool */}
+                      <Tooltip content="Step marker - Add numbered annotations (Press S)">
+                        <button
+                          onClick={() => setCurrentTool("step")}
+                          className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-105 ${
+                            currentTool === "step"
+                              ? "bg-blue-500/80"
+                              : "bg-white/10 hover:bg-white/20"
+                          }`}
+                        >
+                          <Hash className="w-6 h-6" />
+                        </button>
+                      </Tooltip>
+
                       {/* Pen Tool */}
                       <Tooltip content="Pen tool - Draw freehand lines (Press P)">
                         <button
@@ -1074,6 +1378,20 @@ export default function ScreenshotAnnotate() {
                           }`}
                         >
                           <Palette className="w-6 h-6" />
+                        </button>
+                      </Tooltip>
+
+                      {/* Blur Tool */}
+                      <Tooltip content="Blur tool - Pixelate areas to redact (Press X)">
+                        <button
+                          onClick={() => setCurrentTool("blur")}
+                          className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-105 ${
+                            currentTool === "blur"
+                              ? "bg-blue-500/80"
+                              : "bg-white/10 hover:bg-white/20"
+                          }`}
+                        >
+                          <EyeOff className="w-6 h-6" />
                         </button>
                       </Tooltip>
 
