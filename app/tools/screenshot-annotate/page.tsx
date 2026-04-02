@@ -93,6 +93,8 @@ export default function ScreenshotAnnotate() {
   });
   const [history, setHistory] = useState<HistoryState[]>([]);
   const [historyIndex, setHistoryIndex] = useState(-1);
+  const [brushSize, setBrushSize] = useState(4);
+  const [bgPadding, setBgPadding] = useState(40);
 
   const backgroundColors = [
     "#ef4444", // red
@@ -258,6 +260,25 @@ export default function ScreenshotAnnotate() {
         return;
       }
 
+      if (e.key === "=" || e.key === "+") {
+        e.preventDefault();
+        if (currentTool === "background") {
+          setBgPadding((prev) => Math.min(prev + 10, 200));
+        } else {
+          setBrushSize((prev) => Math.min(prev + 2, 20));
+        }
+        return;
+      }
+      if (e.key === "-" || e.key === "_") {
+        e.preventDefault();
+        if (currentTool === "background") {
+          setBgPadding((prev) => Math.max(prev - 10, 10));
+        } else {
+          setBrushSize((prev) => Math.max(prev - 2, 2));
+        }
+        return;
+      }
+
       switch (e.key) {
         case "p":
         case "P":
@@ -294,7 +315,7 @@ export default function ScreenshotAnnotate() {
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
     };
-  }, [isTextInputActive]);
+  }, [isTextInputActive, currentTool]);
 
   // Show/hide background palette when switching to/from background tool
   useEffect(() => {
@@ -424,12 +445,12 @@ export default function ScreenshotAnnotate() {
     });
   }, [drawings, backgroundState]);
 
-  // Effect to handle canvas resizing when background state changes
+  // Effect to handle canvas resizing when background state or padding changes
   useEffect(() => {
     if (uploadedImage) {
       handleImageLoad();
     }
-  }, [backgroundState]);
+  }, [backgroundState, bgPadding]);
 
 
   const getMousePos = (e: React.MouseEvent<HTMLCanvasElement>) => {
@@ -466,7 +487,7 @@ export default function ScreenshotAnnotate() {
         type: "step",
         points: [point],
         color: "#ef4444",
-        strokeWidth: 4,
+        strokeWidth: brushSize,
         stepNumber: stepCounterRef.current++,
       };
       setDrawings((prev) => [...prev, newDrawing]);
@@ -496,7 +517,7 @@ export default function ScreenshotAnnotate() {
 
     // Draw current path with correct offset
     ctx.strokeStyle = "#ef4444";
-    ctx.lineWidth = 4;
+    ctx.lineWidth = brushSize;
     ctx.lineCap = "round";
     ctx.lineJoin = "round";
 
@@ -546,7 +567,7 @@ export default function ScreenshotAnnotate() {
       type: currentTool,
       points: [...currentPath],
       color: "#ef4444",
-      strokeWidth: 4,
+      strokeWidth: brushSize,
     };
 
     // Save current state before adding new drawing
@@ -567,9 +588,9 @@ export default function ScreenshotAnnotate() {
       type: "text",
       points: [textPosition],
       color: "#ef4444",
-      strokeWidth: 6,
+      strokeWidth: brushSize + 2,
       text: text.trim(),
-      fontSize: 20,
+      fontSize: Math.max(16, brushSize * 5),
     };
 
     console.log("Adding text drawing:", newDrawing);
@@ -1013,7 +1034,7 @@ export default function ScreenshotAnnotate() {
 
     const containerWidth = container.clientWidth;
     const containerHeight = container.clientHeight;
-    const padding = backgroundState.type ? 40 : 0;
+    const padding = backgroundState.type ? bgPadding : 0;
 
     const imageAspectRatio = image.naturalWidth / image.naturalHeight;
 
