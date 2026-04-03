@@ -20,6 +20,7 @@ import {
   EyeOff,
   Hash,
   Rotate3d,
+  Stamp,
 } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 
@@ -106,6 +107,8 @@ export default function ScreenshotAnnotate() {
   const [tiltEnabled, setTiltEnabled] = useState(false);
   const [tiltX, setTiltX] = useState(0);
   const [tiltY, setTiltY] = useState(0);
+  const [watermarkText, setWatermarkText] = useState("");
+  const [showWatermarkInput, setShowWatermarkInput] = useState(false);
 
   const backgroundColors = [
     "#ef4444", // red
@@ -370,6 +373,7 @@ export default function ScreenshotAnnotate() {
     } else {
       setShowColorPalette(false);
     }
+    setShowWatermarkInput(false);
   }, [currentTool]);
 
   // Focus background palette when it opens
@@ -391,7 +395,7 @@ export default function ScreenshotAnnotate() {
   // Redraw canvas when drawings or tilt change
   useEffect(() => {
     redrawCanvas();
-  }, [drawings, backgroundState, tiltEnabled, tiltX, tiltY]);
+  }, [drawings, backgroundState, tiltEnabled, tiltX, tiltY, watermarkText]);
 
   // Effect to handle canvas resizing when background state or padding changes
   useEffect(() => {
@@ -1177,6 +1181,25 @@ export default function ScreenshotAnnotate() {
 
       renderFlatContent(ctx, image, imageDisplayWidth, imageDisplayHeight, offsetX, offsetY);
     }
+
+    // Watermarks
+    ctx.save();
+    ctx.globalAlpha = 0.4;
+    ctx.fillStyle = "#ffffff";
+    ctx.font = "800 13px sans-serif";
+    ctx.textBaseline = "bottom";
+
+    // "Made with Scribbble" - always shown, bottom-left
+    ctx.textAlign = "left";
+    ctx.fillText("MADE WITH SCRIBBBLE", 20, canvas.height - 16);
+
+    // Custom watermark - bottom-right
+    if (watermarkText) {
+      ctx.textAlign = "right";
+      ctx.fillText(watermarkText.toUpperCase(), canvas.width - 20, canvas.height - 16);
+    }
+
+    ctx.restore();
   };
 
   const handleImageLoad = () => {
@@ -1253,6 +1276,9 @@ export default function ScreenshotAnnotate() {
     link.href = canvas.toDataURL();
     link.click();
   };
+
+  const isToolActive = (tool: Tool) =>
+    currentTool === tool && !showWatermarkInput;
 
   return (
     <div className="min-h-screen bg-background p-4">
@@ -1405,7 +1431,7 @@ export default function ScreenshotAnnotate() {
                         <button
                           onClick={() => setCurrentTool("text")}
                           className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-105 ${
-                            currentTool === "text"
+                            isToolActive("text")
                               ? "bg-blue-500/80"
                               : "bg-white/10 hover:bg-white/20"
                           }`}
@@ -1419,7 +1445,7 @@ export default function ScreenshotAnnotate() {
                         <button
                           onClick={() => setCurrentTool("step")}
                           className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-105 ${
-                            currentTool === "step"
+                            isToolActive("step")
                               ? "bg-blue-500/80"
                               : "bg-white/10 hover:bg-white/20"
                           }`}
@@ -1433,7 +1459,7 @@ export default function ScreenshotAnnotate() {
                         <button
                           onClick={() => setCurrentTool("pen")}
                           className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-105 ${
-                            currentTool === "pen"
+                            isToolActive("pen")
                               ? "bg-blue-500/80"
                               : "bg-white/10 hover:bg-white/20"
                           }`}
@@ -1447,7 +1473,7 @@ export default function ScreenshotAnnotate() {
                         <button
                           onClick={() => setCurrentTool("rectangle")}
                           className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-105 ${
-                            currentTool === "rectangle"
+                            isToolActive("rectangle")
                               ? "bg-blue-500/80"
                               : "bg-white/10 hover:bg-white/20"
                           }`}
@@ -1461,7 +1487,7 @@ export default function ScreenshotAnnotate() {
                         <button
                           onClick={() => setCurrentTool("arrow")}
                           className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-105 ${
-                            currentTool === "arrow"
+                            isToolActive("arrow")
                               ? "bg-blue-500/80"
                               : "bg-white/10 hover:bg-white/20"
                           }`}
@@ -1475,7 +1501,7 @@ export default function ScreenshotAnnotate() {
                         <button
                           onClick={() => setCurrentTool("background")}
                           className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-105 ${
-                            currentTool === "background"
+                            isToolActive("background")
                               ? "bg-blue-500/80"
                               : "bg-white/10 hover:bg-white/20"
                           }`}
@@ -1489,7 +1515,7 @@ export default function ScreenshotAnnotate() {
                         <button
                           onClick={() => setCurrentTool("blur")}
                           className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-105 ${
-                            currentTool === "blur"
+                            isToolActive("blur")
                               ? "bg-blue-500/80"
                               : "bg-white/10 hover:bg-white/20"
                           }`}
@@ -1520,6 +1546,19 @@ export default function ScreenshotAnnotate() {
                         </button>
                       </Tooltip>
 
+                      {/* Watermark */}
+                      <Tooltip content="Watermark - Add custom text">
+                        <button
+                          onClick={() => setShowWatermarkInput((prev) => !prev)}
+                          className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-105 ${
+                            showWatermarkInput || watermarkText
+                              ? "bg-blue-500/80"
+                              : "bg-white/10 hover:bg-white/20"
+                          }`}
+                        >
+                          <Stamp className="w-6 h-6" />
+                        </button>
+                      </Tooltip>
 
                       {/* Separator */}
                       <div className="w-px h-8 bg-white/20"></div>
@@ -1588,6 +1627,25 @@ export default function ScreenshotAnnotate() {
                       </Tooltip>
                     </div>
                   </div>
+                  {/* Watermark Input Dropdown */}
+                  {showWatermarkInput && (
+                    <div className="mt-2 bg-slate-900/90 backdrop-blur-lg rounded-xl p-3 shadow-2xl border border-white/10 w-56 ml-auto">
+                      <input
+                        type="text"
+                        value={watermarkText}
+                        onChange={(e) => setWatermarkText(e.target.value)}
+                        onKeyDown={(e) => {
+                          if (e.key === "Enter" || e.key === "Escape") {
+                            setShowWatermarkInput(false);
+                          }
+                          e.stopPropagation();
+                        }}
+                        placeholder="e.g. @username"
+                        autoFocus
+                        className="w-full bg-white/10 border border-white/20 rounded-lg px-3 py-1.5 text-sm text-white placeholder-white/40 outline-none focus:border-blue-400"
+                      />
+                    </div>
+                  )}
                 </div>
               </div>
             </Card>
