@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useRef, useCallback, useEffect } from "react";
-import { Button } from "@/components/ui/button";
 import {
   Upload,
   Pen,
@@ -11,8 +10,6 @@ import {
   RotateCcw,
   Trash2,
   Type,
-  Image as ImageIcon,
-  FileText,
   Palette,
   Undo,
   Redo,
@@ -1523,473 +1520,387 @@ export default function ScreenshotAnnotate() {
     sfx.click();
   };
 
+  const toolBtnClass = (active: boolean, disabled?: boolean) =>
+    `w-9 h-9 rounded-lg flex items-center justify-center transition-all duration-150 ${
+      disabled
+        ? "text-white/20 cursor-not-allowed"
+        : active
+          ? "bg-white/20 text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.1)]"
+          : "text-white/60 hover:text-white hover:bg-white/10"
+    }`;
+
   return (
-    <div className="min-h-screen bg-background p-4">
-      <div className="container mx-auto max-w-7xl">
-        <div className="mb-8 text-center">
-          <h1 className="text-4xl font-bold mb-4">
-            <span className="gradient-text">Scribbble&apos;s</span> Screenshot Annotator
+    <div className="min-h-screen bg-[#f8f8f8]">
+      {!uploadedImage ? (
+        /* ── Upload Screen ── */
+        <div className="flex flex-col items-center justify-center min-h-screen px-4">
+          <h1 className="text-2xl font-semibold tracking-tight text-neutral-800 mb-1">
+            Screenshot Annotator
           </h1>
+          <p className="text-sm text-neutral-400 mb-10">
+            by <a href="/" className="gradient-text hover:underline">Scribbble</a>
+          </p>
+
+          <button
+            onClick={() => fileInputRef.current?.click()}
+            className="group relative w-full max-w-md aspect-[4/3] rounded-2xl border border-dashed border-neutral-300 hover:border-neutral-400 bg-white hover:bg-neutral-50 transition-all duration-300 flex flex-col items-center justify-center gap-4 cursor-pointer shadow-sm"
+          >
+            <div className="w-12 h-12 rounded-full bg-neutral-100 group-hover:bg-neutral-200 flex items-center justify-center transition-colors">
+              <Upload className="w-5 h-5 text-neutral-400 group-hover:text-neutral-500 transition-colors" />
+            </div>
+            <div className="text-center">
+              <p className="text-sm text-neutral-500 group-hover:text-neutral-600 transition-colors">
+                Drop an image or click to upload
+              </p>
+              <p className="text-xs text-neutral-400 mt-1.5">
+                or paste from clipboard
+              </p>
+            </div>
+          </button>
+          <input
+            ref={fileInputRef}
+            type="file"
+            accept="image/*"
+            onChange={handleFileSelect}
+            className="hidden"
+          />
+
+          <div className="flex items-center gap-4 mt-8 text-[11px] text-neutral-300 uppercase tracking-widest">
+            <span>JPG</span>
+            <span className="w-px h-3 bg-neutral-200" />
+            <span>PNG</span>
+            <span className="w-px h-3 bg-neutral-200" />
+            <span>GIF</span>
+            <span className="w-px h-3 bg-neutral-200" />
+            <span>WebP</span>
+          </div>
         </div>
-
-        {!uploadedImage ? (
-          <div className="flex items-center justify-center" style={{ minHeight: "70vh" }}>
-            <div className="p-12 text-center">
-              <Upload className="w-16 h-16 mx-auto mb-6 text-muted-foreground" />
-              <p className="text-muted-foreground mb-6">
-                Select an image file or paste from clipboard (Ctrl+V / Cmd+V)
-              </p>
-              <Button
-                onClick={() => fileInputRef.current?.click()}
-                className="mb-4"
-              >
-                <Upload className="w-4 h-4 mr-2" />
-                Choose File
-              </Button>
-              <input
-                ref={fileInputRef}
-                type="file"
-                accept="image/*"
-                onChange={handleFileSelect}
-                className="hidden"
-              />
-              <p className="text-sm text-muted-foreground">
-                Supports: JPG, PNG, GIF, WebP
-              </p>
-            </div>
-          </div>
-        ) : (
-          <div className="flex flex-col gap-4">
-            {/* Toolbar */}
-            <div className="flex justify-center">
-              <div
-                ref={toolbarRef}
-                className={`relative ${
-                  isDrawing ? "opacity-95 pointer-events-none" : "opacity-100"
-                }`}
-              >
-                <div className="bg-slate-900/80 backdrop-blur-lg rounded-2xl px-4 py-3 shadow-2xl border border-white/10">
-                  <div className="flex items-center space-x-4">
-
-                    {/* Text Tool */}
-                    <Tooltip content="Text tool - Add text to your image (Press T)">
-                      <button
-                        onClick={() => selectTool("text")}
-                        className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-105 ${
-                          isToolActive("text")
-                            ? "bg-blue-500/80"
-                            : "bg-white/10 hover:bg-white/20"
-                        }`}
-                      >
-                        <Type className="w-6 h-6" />
-                      </button>
-                    </Tooltip>
-
-                    {/* Step Marker Tool */}
-                    <Tooltip content="Step marker - Add numbered annotations (Press S)">
-                      <button
-                        onClick={() => selectTool("step")}
-                        className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-105 ${
-                          isToolActive("step")
-                            ? "bg-blue-500/80"
-                            : "bg-white/10 hover:bg-white/20"
-                        }`}
-                      >
-                        <Hash className="w-6 h-6" />
-                      </button>
-                    </Tooltip>
-
-                    {/* Pen Tool */}
-                    <Tooltip content="Pen tool - Draw freehand lines (Press P)">
-                      <button
-                        onClick={() => selectTool("pen")}
-                        className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-105 ${
-                          isToolActive("pen")
-                            ? "bg-blue-500/80"
-                            : "bg-white/10 hover:bg-white/20"
-                        }`}
-                      >
-                        <Pen className="w-6 h-6" />
-                      </button>
-                    </Tooltip>
-
-                    {/* Rectangle Tool */}
-                    <Tooltip content="Rectangle tool - Draw rectangles (Press R)">
-                      <button
-                        onClick={() => selectTool("rectangle")}
-                        className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-105 ${
-                          isToolActive("rectangle")
-                            ? "bg-blue-500/80"
-                            : "bg-white/10 hover:bg-white/20"
-                        }`}
-                      >
-                        <Square className="w-6 h-6" />
-                      </button>
-                    </Tooltip>
-
-                    {/* Arrow Tool */}
-                    <Tooltip content="Arrow tool - Draw arrows (Press A)">
-                      <button
-                        onClick={() => selectTool("arrow")}
-                        className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-105 ${
-                          isToolActive("arrow")
-                            ? "bg-blue-500/80"
-                            : "bg-white/10 hover:bg-white/20"
-                        }`}
-                      >
-                        <ArrowRight className="w-6 h-6" />
-                      </button>
-                    </Tooltip>
-
-                    {/* Background Tool */}
-                    <Tooltip content="Background tool - Add colored backgrounds (Press B)">
-                      <button
-                        onClick={() => selectTool("background")}
-                        className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-105 ${
-                          isToolActive("background")
-                            ? "bg-blue-500/80"
-                            : "bg-white/10 hover:bg-white/20"
-                        }`}
-                      >
-                        <Palette className="w-6 h-6" />
-                      </button>
-                    </Tooltip>
-
-                    {/* Blur Tool */}
-                    <Tooltip content="Blur tool - Pixelate areas to redact (Press X)">
-                      <button
-                        onClick={() => selectTool("blur")}
-                        className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-105 ${
-                          isToolActive("blur")
-                            ? "bg-blue-500/80"
-                            : "bg-white/10 hover:bg-white/20"
-                        }`}
-                      >
-                        <EyeOff className="w-6 h-6" />
-                      </button>
-                    </Tooltip>
-
-                    {/* Tilt Toggle */}
-                    <Tooltip content="3D Tilt - Rotate screenshot with arrow keys (Press G)">
-                      <button
-                        onClick={() => {
-                          if (tiltEnabled) {
-                            setTiltEnabled(false);
-                            setTiltX(0);
-                            setTiltY(0);
-                            sfx.toggleOff();
-                          } else {
-                            setTiltEnabled(true);
-                            sfx.toggleOn();
-                          }
-                        }}
-                        className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-105 ${
-                          tiltEnabled
-                            ? "bg-blue-500/80"
-                            : "bg-white/10 hover:bg-white/20"
-                        }`}
-                      >
-                        <Rotate3d className="w-6 h-6" />
-                      </button>
-                    </Tooltip>
-
-                    {/* Watermark */}
-                    <Tooltip content="Watermark - Add custom text (Press W)">
-                      <button
-                        onClick={() => { setShowWatermarkInput((prev) => !prev); sfx.click(); }}
-                        className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-105 ${
-                          showWatermarkInput || watermarkText
-                            ? "bg-blue-500/80"
-                            : "bg-white/10 hover:bg-white/20"
-                        }`}
-                      >
-                        <Stamp className="w-6 h-6" />
-                      </button>
-                    </Tooltip>
-
-                    {/* Separator */}
-                    <div className="w-px h-8 bg-white/20"></div>
-
-                    {/* Undo Button */}
-                    <Tooltip content="Undo - Undo last action (Ctrl+Z / Cmd+Z)">
-                      <button
-                        onClick={undo}
-                        disabled={!canUndo}
-                        className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-105 ${
-                          canUndo
-                            ? "bg-white/10 hover:bg-white/20"
-                            : "bg-white/5 text-white/30 cursor-not-allowed"
-                        }`}
-                      >
-                        <Undo className="w-6 h-6" />
-                      </button>
-                    </Tooltip>
-
-                    {/* Redo Button */}
-                    <Tooltip content="Redo - Redo last undone action (Ctrl+Y / Cmd+Y)">
-                      <button
-                        onClick={redo}
-                        disabled={!canRedo}
-                        className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-105 ${
-                          canRedo
-                            ? "bg-white/10 hover:bg-white/20"
-                            : "bg-white/5 text-white/30 cursor-not-allowed"
-                        }`}
-                      >
-                        <Redo className="w-6 h-6" />
-                      </button>
-                    </Tooltip>
-
-                    {/* Separator */}
-                    <div className="w-px h-8 bg-white/20"></div>
-
-                    {/* Clear All Button */}
-                    <Tooltip content="Clear all drawings - Remove all annotations">
-                      <button
-                        onClick={() => clearDrawings()}
-                        className="w-12 h-12 rounded-xl bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-all duration-200 hover:scale-105"
-                      >
-                        <RotateCcw className="w-6 h-6" />
-                      </button>
-                    </Tooltip>
-
-                    {/* Download Button */}
-                    <Tooltip content="Download image - Save annotated screenshot (Ctrl+S / Cmd+S)">
-                      <button
-                        onClick={() => downloadAnnotatedImage()}
-                        className="w-12 h-12 rounded-xl bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-all duration-200 hover:scale-105"
-                      >
-                        <Download className="w-6 h-6" />
-                      </button>
-                    </Tooltip>
-
-                    {/* New Image Button */}
-                    <Tooltip content="New image - Upload a different screenshot">
-                      <button
-                        onClick={() => setUploadedImage(null)}
-                        className="w-12 h-12 rounded-xl bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-all duration-200 hover:scale-105"
-                      >
-                        <Trash2 className="w-6 h-6" />
-                      </button>
-                    </Tooltip>
-                  </div>
-                </div>
-                {/* Watermark Input Dropdown */}
-                {showWatermarkInput && (
-                  <div className="absolute top-full right-0 mt-2 bg-slate-900/90 backdrop-blur-lg rounded-xl p-3 shadow-2xl border border-white/10 w-56 z-50">
-                    <input
-                      type="text"
-                      value={watermarkText}
-                      onChange={(e) => setWatermarkText(e.target.value)}
-                      onKeyDown={(e) => {
-                        if (e.key === "Enter" || e.key === "Escape") {
-                          setShowWatermarkInput(false);
-                        }
-                        e.stopPropagation();
-                      }}
-                      placeholder="e.g. @username"
-                      autoFocus
-                      className="w-full bg-white/10 border border-white/20 rounded-lg px-3 py-1.5 text-sm text-white placeholder-white/40 outline-none focus:border-blue-400"
-                    />
-                  </div>
-                )}
-              </div>
-            </div>
-
-            {/* Canvas Area */}
+      ) : (
+        /* ── Editor Screen ── */
+        <div className="flex flex-col h-screen">
+          {/* Toolbar */}
+          <div className="flex justify-center pt-3 pb-2 px-4">
             <div
-              ref={containerRef}
-              className="relative w-full flex-1 flex items-center justify-center overflow-hidden"
-              style={{
-                minHeight: "70vh",
-                cursor:
-                  currentTool === "pen" ||
-                  currentTool === "blur" ||
-                  currentTool === "step"
-                    ? "crosshair"
-                    : currentTool === "text"
-                      ? "text"
-                      : currentTool === "background"
-                        ? "pointer"
-                        : "default",
-              }}
+              ref={toolbarRef}
+              className={`relative transition-opacity duration-150 ${
+                isDrawing ? "opacity-80 pointer-events-none" : "opacity-100"
+              }`}
             >
-              <img
-                ref={imageRef}
-                src={uploadedImage}
-                alt="Uploaded screenshot"
-                className="hidden"
-                onLoad={handleImageLoad}
-              />
-              <div className="relative">
-                <canvas
-                  ref={canvasRef}
-                  onMouseDown={startDrawing}
-                  onMouseMove={draw}
-                  onMouseUp={stopDrawing}
-                  onMouseLeave={stopDrawing}
-                  className="max-w-full max-h-full rounded-lg"
-                />
-
-                {/* Text Input Overlay */}
-                {isTextInputActive && textPosition && (
-                  <input
-                    ref={textInputRef}
-                    type="text"
-                    value={textInput}
-                    onChange={(e) => setTextInput(e.target.value)}
-                    onKeyDown={(e) => {
-                      if (e.key === "Enter") {
-                        handleTextSubmit(textInput);
-                      } else if (e.key === "Escape") {
-                        setIsTextInputActive(false);
-                        setTextInput("");
-                        setTextPosition(null);
-                      }
-                    }}
-                    onBlur={() => {
-                      if (textInput.trim()) {
-                        handleTextSubmit(textInput);
-                      } else {
-                        setIsTextInputActive(false);
-                        setTextInput("");
-                        setTextPosition(null);
-                      }
-                    }}
-                    className="absolute bg-transparent border-2 border-red-400 rounded px-2 py-1 text-red-400 font-bold text-lg outline-none"
-                    style={{
-                      left: textPosition.x,
-                      top: textPosition.y,
-                      minWidth: "100px",
-                      zIndex: 9999,
-                    }}
-                    placeholder="Enter text..."
-                  />
-                )}
-              </div>
-            </div>
-          </div>
-        )}
-
-        {/* Background Palette - Fixed on right side */}
-        {showColorPalette && (
-          <div ref={bgPaletteRef} tabIndex={-1} className="fixed top-1/2 right-4 -translate-y-1/2 bg-slate-900/90 backdrop-blur-lg rounded-2xl p-4 shadow-2xl border border-white/10 z-50 w-72 outline-none">
-            {/* Tabs */}
-            <div className="flex gap-1 mb-3 bg-white/5 rounded-lg p-1">
-              {(["solid", "gradient", "image"] as BackgroundType[]).map(
-                (tab) => (
-                  <button
-                    key={tab}
-                    onClick={() => setBgTab(tab)}
-                    className={`flex-1 px-2 py-1.5 text-xs font-medium rounded-md transition-colors capitalize ${
-                      bgTab === tab
-                        ? "bg-white/20 text-white"
-                        : "text-white/50 hover:text-white/80"
-                    }`}
-                  >
-                    {tab}
+              <div className="bg-[#1a1a1f]/90 backdrop-blur-xl rounded-xl px-2.5 py-1.5 shadow-lg shadow-black/30 border border-white/[0.06] flex items-center gap-0.5">
+                {/* Annotation Tools */}
+                <Tooltip content="Text (T)">
+                  <button onClick={() => selectTool("text")} className={toolBtnClass(isToolActive("text"))}>
+                    <Type className="w-4 h-4" />
                   </button>
-                ),
+                </Tooltip>
+                <Tooltip content="Steps (S)">
+                  <button onClick={() => selectTool("step")} className={toolBtnClass(isToolActive("step"))}>
+                    <Hash className="w-4 h-4" />
+                  </button>
+                </Tooltip>
+                <Tooltip content="Pen (P)">
+                  <button onClick={() => selectTool("pen")} className={toolBtnClass(isToolActive("pen"))}>
+                    <Pen className="w-4 h-4" />
+                  </button>
+                </Tooltip>
+                <Tooltip content="Rectangle (R)">
+                  <button onClick={() => selectTool("rectangle")} className={toolBtnClass(isToolActive("rectangle"))}>
+                    <Square className="w-4 h-4" />
+                  </button>
+                </Tooltip>
+                <Tooltip content="Arrow (A)">
+                  <button onClick={() => selectTool("arrow")} className={toolBtnClass(isToolActive("arrow"))}>
+                    <ArrowRight className="w-4 h-4" />
+                  </button>
+                </Tooltip>
+                <Tooltip content="Redact (X)">
+                  <button onClick={() => selectTool("blur")} className={toolBtnClass(isToolActive("blur"))}>
+                    <EyeOff className="w-4 h-4" />
+                  </button>
+                </Tooltip>
+
+                <div className="w-px h-5 bg-white/[0.08] mx-1" />
+
+                {/* Style Tools */}
+                <Tooltip content="Background (B)">
+                  <button onClick={() => selectTool("background")} className={toolBtnClass(isToolActive("background"))}>
+                    <Palette className="w-4 h-4" />
+                  </button>
+                </Tooltip>
+                <Tooltip content="3D Tilt (G)">
+                  <button
+                    onClick={() => {
+                      if (tiltEnabled) {
+                        setTiltEnabled(false);
+                        setTiltX(0);
+                        setTiltY(0);
+                        sfx.toggleOff();
+                      } else {
+                        setTiltEnabled(true);
+                        sfx.toggleOn();
+                      }
+                    }}
+                    className={toolBtnClass(tiltEnabled)}
+                  >
+                    <Rotate3d className="w-4 h-4" />
+                  </button>
+                </Tooltip>
+                <Tooltip content="Watermark (W)">
+                  <button
+                    onClick={() => { setShowWatermarkInput((prev) => !prev); sfx.click(); }}
+                    className={toolBtnClass(showWatermarkInput || !!watermarkText)}
+                  >
+                    <Stamp className="w-4 h-4" />
+                  </button>
+                </Tooltip>
+
+                <div className="w-px h-5 bg-white/[0.08] mx-1" />
+
+                {/* History */}
+                <Tooltip content="Undo (Cmd+Z)">
+                  <button onClick={undo} disabled={!canUndo} className={toolBtnClass(false, !canUndo)}>
+                    <Undo className="w-4 h-4" />
+                  </button>
+                </Tooltip>
+                <Tooltip content="Redo (Cmd+Y)">
+                  <button onClick={redo} disabled={!canRedo} className={toolBtnClass(false, !canRedo)}>
+                    <Redo className="w-4 h-4" />
+                  </button>
+                </Tooltip>
+
+                <div className="w-px h-5 bg-white/[0.08] mx-1" />
+
+                {/* Actions */}
+                <Tooltip content="Clear All">
+                  <button onClick={() => clearDrawings()} className={toolBtnClass(false)}>
+                    <RotateCcw className="w-4 h-4" />
+                  </button>
+                </Tooltip>
+                <Tooltip content="Download (Cmd+S)">
+                  <button onClick={() => downloadAnnotatedImage()} className={toolBtnClass(false)}>
+                    <Download className="w-4 h-4" />
+                  </button>
+                </Tooltip>
+                <Tooltip content="New Image">
+                  <button onClick={() => setUploadedImage(null)} className={toolBtnClass(false)}>
+                    <Trash2 className="w-4 h-4" />
+                  </button>
+                </Tooltip>
+              </div>
+
+              {/* Watermark Input Dropdown */}
+              {showWatermarkInput && (
+                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 bg-[#1a1a1f]/95 backdrop-blur-xl rounded-lg p-2.5 shadow-lg shadow-black/30 border border-white/[0.06] w-52 z-50">
+                  <input
+                    type="text"
+                    value={watermarkText}
+                    onChange={(e) => setWatermarkText(e.target.value)}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter" || e.key === "Escape") {
+                        setShowWatermarkInput(false);
+                      }
+                      e.stopPropagation();
+                    }}
+                    placeholder="e.g. @username"
+                    autoFocus
+                    className="w-full bg-white/[0.06] border border-white/[0.08] rounded-md px-2.5 py-1.5 text-sm text-white placeholder-white/30 outline-none focus:border-white/20 transition-colors"
+                  />
+                </div>
               )}
             </div>
-
-            {/* Solid Colors */}
-            {bgTab === "solid" && (
-              <div className="grid grid-cols-5 gap-2">
-                {backgroundColors.map((color) => (
-                  <button
-                    key={color}
-                    onClick={() => handleBackgroundColorSelect(color)}
-                    className={`w-10 h-10 rounded-lg border-2 transition-colors hover:scale-110 transform ${
-                      backgroundState.type === "solid" &&
-                      backgroundState.color === color
-                        ? "border-blue-400"
-                        : "border-white/20 hover:border-white/50"
-                    }`}
-                    style={{ backgroundColor: color }}
-                  />
-                ))}
-              </div>
-            )}
-
-            {/* Gradients */}
-            {bgTab === "gradient" && (
-              <div className="grid grid-cols-5 gap-2">
-                {backgroundGradients.map((g, i) => (
-                  <button
-                    key={i}
-                    onClick={() => handleBackgroundGradientSelect(g)}
-                    className={`w-10 h-10 rounded-lg border-2 transition-colors hover:scale-110 transform ${
-                      backgroundState.type === "gradient" &&
-                      backgroundState.gradient?.from === g.from &&
-                      backgroundState.gradient?.to === g.to
-                        ? "border-blue-400"
-                        : "border-white/20 hover:border-white/50"
-                    }`}
-                    style={{
-                      background: `linear-gradient(${g.angle}deg, ${g.from}, ${g.to})`,
-                    }}
-                  />
-                ))}
-              </div>
-            )}
-
-            {/* Images */}
-            {bgTab === "image" && (
-              <div className="grid grid-cols-4 gap-2 max-h-48 overflow-y-auto">
-                {backgroundImages.map((src) => (
-                  <button
-                    key={src}
-                    onClick={() => handleBackgroundImageSelect(src)}
-                    className={`w-14 h-14 rounded-lg border-2 transition-colors hover:scale-105 transform overflow-hidden ${
-                      backgroundState.type === "image" &&
-                      backgroundState.imageSrc === src
-                        ? "border-blue-400"
-                        : "border-white/20 hover:border-white/50"
-                    }`}
-                  >
-                    <img
-                      src={src}
-                      alt=""
-                      className="w-full h-full object-cover"
-                    />
-                  </button>
-                ))}
-              </div>
-            )}
-
-            {/* Clear button */}
-            <div className="mt-3">
-              <button
-                onClick={clearBackground}
-                className="w-full px-3 py-1.5 bg-white/10 hover:bg-white/20 text-white text-sm rounded-lg transition-colors"
-              >
-                Clear Background
-              </button>
-            </div>
           </div>
-        )}
 
-        {/* Footer */}
-        <p className="text-center text-sm text-muted-foreground/60 py-6">
-          Brought to you by <a href="/" className="gradient-text font-semibold hover:underline">Scribbble</a> — the beautiful screen annotator for MacOS
-        </p>
-
-        {/* Global Tooltip */}
-        {tooltip.show && (
+          {/* Canvas Area */}
           <div
-            className="fixed z-[9999] px-3 py-2 text-sm text-white bg-slate-900/95 backdrop-blur-lg rounded-lg shadow-xl border border-white/10 pointer-events-none transform -translate-x-1/2 -translate-y-full"
+            ref={containerRef}
+            className="relative flex-1 flex items-center justify-center overflow-hidden"
             style={{
-              left: tooltip.x,
-              top: tooltip.y,
+              cursor:
+                currentTool === "pen" ||
+                currentTool === "blur" ||
+                currentTool === "step"
+                  ? "crosshair"
+                  : currentTool === "text"
+                    ? "text"
+                    : currentTool === "background"
+                      ? "pointer"
+                      : "default",
             }}
           >
-            {tooltip.content}
-            {/* Tooltip Arrow */}
-            <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-slate-900/95"></div>
+            <img
+              ref={imageRef}
+              src={uploadedImage}
+              alt="Uploaded screenshot"
+              className="hidden"
+              onLoad={handleImageLoad}
+            />
+            <div className="relative">
+              <canvas
+                ref={canvasRef}
+                onMouseDown={startDrawing}
+                onMouseMove={draw}
+                onMouseUp={stopDrawing}
+                onMouseLeave={stopDrawing}
+                className="max-w-full max-h-full"
+              />
+
+              {/* Text Input Overlay */}
+              {isTextInputActive && textPosition && (
+                <input
+                  ref={textInputRef}
+                  type="text"
+                  value={textInput}
+                  onChange={(e) => setTextInput(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") {
+                      handleTextSubmit(textInput);
+                    } else if (e.key === "Escape") {
+                      setIsTextInputActive(false);
+                      setTextInput("");
+                      setTextPosition(null);
+                    }
+                  }}
+                  onBlur={() => {
+                    if (textInput.trim()) {
+                      handleTextSubmit(textInput);
+                    } else {
+                      setIsTextInputActive(false);
+                      setTextInput("");
+                      setTextPosition(null);
+                    }
+                  }}
+                  className="absolute bg-transparent border-2 border-red-400 rounded px-2 py-1 text-red-400 font-bold text-lg outline-none"
+                  style={{
+                    left: textPosition.x,
+                    top: textPosition.y,
+                    minWidth: "100px",
+                    zIndex: 9999,
+                  }}
+                  placeholder="Type here..."
+                />
+              )}
+            </div>
           </div>
-        )}
-      </div>
+
+          {/* Footer */}
+          <p className="text-center text-sm text-neutral-400 py-3">
+            Brought to you by <a href="/" className="gradient-text font-semibold hover:underline">Scribbble</a> — the beautiful screen annotator for MacOS
+          </p>
+        </div>
+      )}
+
+      {/* Background Palette — right edge panel */}
+      {showColorPalette && (
+        <div ref={bgPaletteRef} tabIndex={-1} className="fixed top-1/2 right-3 -translate-y-1/2 bg-[#1a1a1f]/95 backdrop-blur-xl rounded-xl p-3 shadow-lg shadow-black/30 border border-white/[0.06] z-50 w-64 outline-none">
+          {/* Tabs */}
+          <div className="flex gap-0.5 mb-3 bg-white/[0.04] rounded-lg p-0.5">
+            {(["solid", "gradient", "image"] as BackgroundType[]).map(
+              (tab) => (
+                <button
+                  key={tab}
+                  onClick={() => setBgTab(tab)}
+                  className={`flex-1 px-2 py-1 text-[11px] font-medium rounded-md transition-colors capitalize ${
+                    bgTab === tab
+                      ? "bg-white/15 text-white"
+                      : "text-white/35 hover:text-white/60"
+                  }`}
+                >
+                  {tab}
+                </button>
+              ),
+            )}
+          </div>
+
+          {/* Solid Colors */}
+          {bgTab === "solid" && (
+            <div className="grid grid-cols-5 gap-1.5">
+              {backgroundColors.map((color) => (
+                <button
+                  key={color}
+                  onClick={() => handleBackgroundColorSelect(color)}
+                  className={`w-9 h-9 rounded-lg border-2 transition-all duration-150 hover:scale-110 ${
+                    backgroundState.type === "solid" &&
+                    backgroundState.color === color
+                      ? "border-white/60 scale-110"
+                      : "border-transparent hover:border-white/30"
+                  }`}
+                  style={{ backgroundColor: color }}
+                />
+              ))}
+            </div>
+          )}
+
+          {/* Gradients */}
+          {bgTab === "gradient" && (
+            <div className="grid grid-cols-5 gap-1.5">
+              {backgroundGradients.map((g, i) => (
+                <button
+                  key={i}
+                  onClick={() => handleBackgroundGradientSelect(g)}
+                  className={`w-9 h-9 rounded-lg border-2 transition-all duration-150 hover:scale-110 ${
+                    backgroundState.type === "gradient" &&
+                    backgroundState.gradient?.from === g.from &&
+                    backgroundState.gradient?.to === g.to
+                      ? "border-white/60 scale-110"
+                      : "border-transparent hover:border-white/30"
+                  }`}
+                  style={{
+                    background: `linear-gradient(${g.angle}deg, ${g.from}, ${g.to})`,
+                  }}
+                />
+              ))}
+            </div>
+          )}
+
+          {/* Images */}
+          {bgTab === "image" && (
+            <div className="grid grid-cols-4 gap-1.5 max-h-44 overflow-y-auto">
+              {backgroundImages.map((src) => (
+                <button
+                  key={src}
+                  onClick={() => handleBackgroundImageSelect(src)}
+                  className={`w-12 h-12 rounded-lg border-2 transition-all duration-150 hover:scale-105 overflow-hidden ${
+                    backgroundState.type === "image" &&
+                    backgroundState.imageSrc === src
+                      ? "border-white/60 scale-105"
+                      : "border-transparent hover:border-white/30"
+                  }`}
+                >
+                  <img
+                    src={src}
+                    alt=""
+                    className="w-full h-full object-cover"
+                  />
+                </button>
+              ))}
+            </div>
+          )}
+
+          {/* Clear button */}
+          {backgroundState.type && (
+            <button
+              onClick={clearBackground}
+              className="w-full mt-2.5 px-3 py-1.5 text-xs text-white/50 hover:text-white/80 hover:bg-white/[0.06] rounded-md transition-colors"
+            >
+              Remove Background
+            </button>
+          )}
+        </div>
+      )}
+
+      {/* Global Tooltip */}
+      {tooltip.show && (
+        <div
+          className="fixed z-[9999] px-2.5 py-1.5 text-xs text-white/80 bg-[#1a1a1f]/95 backdrop-blur-xl rounded-md shadow-lg border border-white/[0.06] pointer-events-none -translate-x-1/2 -translate-y-full"
+          style={{
+            left: tooltip.x,
+            top: tooltip.y,
+          }}
+        >
+          {tooltip.content}
+          <div className="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-l-[4px] border-r-[4px] border-t-[4px] border-l-transparent border-r-transparent border-t-[#1a1a1f]"></div>
+        </div>
+      )}
     </div>
   );
 }
