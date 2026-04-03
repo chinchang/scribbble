@@ -566,6 +566,7 @@ export default function ScreenshotAnnotate() {
           } else {
             setTiltEnabled(true);
             setShowWatermarkInput(false);
+            setShowColorPalette(false);
             sfx.toggleOn();
           }
           break;
@@ -1410,12 +1411,7 @@ export default function ScreenshotAnnotate() {
       renderFlatContent(ctx, image, imageDisplayWidth, imageDisplayHeight, offsetX, offsetY);
     }
 
-    // Watermarks — positioned relative to the base (non-tilt) area
-    const baseW = imageDisplayWidth + parseFloat(canvas.dataset.imageOffsetX || "0") * 2;
-    const baseH = imageDisplayHeight + parseFloat(canvas.dataset.imageOffsetY || "0") * 2;
-    const wmLeft = (canvas.width - baseW) / 2;
-    const wmTop = (canvas.height - baseH) / 2;
-
+    // Watermarks — always at the bottom corners of the full canvas
     ctx.save();
     ctx.globalAlpha = 0.4;
     ctx.fillStyle = "#ffffff";
@@ -1424,12 +1420,12 @@ export default function ScreenshotAnnotate() {
 
     // "Made with Scribbble" - always shown, bottom-left
     ctx.textAlign = "left";
-    ctx.fillText("MADE WITH SCRIBBBLE", wmLeft + 20, wmTop + baseH - 16);
+    ctx.fillText("MADE WITH SCRIBBBLE", 20, canvas.height - 16);
 
     // Custom watermark - bottom-right
     if (watermarkText) {
       ctx.textAlign = "right";
-      ctx.fillText(watermarkText.toUpperCase(), wmLeft + baseW - 20, wmTop + baseH - 16);
+      ctx.fillText(watermarkText.toUpperCase(), canvas.width - 20, canvas.height - 16);
     }
 
     ctx.restore();
@@ -1445,42 +1441,58 @@ export default function ScreenshotAnnotate() {
     const containerWidth = container.clientWidth;
     const containerHeight = container.clientHeight;
     const padding = backgroundState.type ? bgPadding : 0;
+    const hasTilt = tiltX !== 0 || tiltY !== 0;
+    const shadowMargin = hasTilt ? 60 : 0;
 
     const imageAspectRatio = image.naturalWidth / image.naturalHeight;
 
-    // Calculate optimal image size that fits in container (ignoring padding for now)
-    const maxWidth = containerWidth - padding * 2;
-    const maxHeight = containerHeight - padding * 2;
+    // Available space for the image, reserving room for padding + shadow
+    let maxWidth = containerWidth - padding * 2 - shadowMargin;
+    let maxHeight = containerHeight - padding * 2 - shadowMargin;
 
     let imageDisplayWidth, imageDisplayHeight;
 
-    if (imageAspectRatio > maxWidth / maxHeight) {
-      imageDisplayWidth = maxWidth;
-      imageDisplayHeight = maxWidth / imageAspectRatio;
-    } else {
-      imageDisplayHeight = maxHeight;
-      imageDisplayWidth = maxHeight * imageAspectRatio;
-    }
+    if (hasTilt) {
+      // With tilt, the projected size is larger than the source image.
+      // We need to find an image size such that after projection the canvas fits the container.
+      // Start with a generous estimate, then scale down to fit.
+      if (imageAspectRatio > maxWidth / maxHeight) {
+        imageDisplayWidth = maxWidth;
+        imageDisplayHeight = maxWidth / imageAspectRatio;
+      } else {
+        imageDisplayHeight = maxHeight;
+        imageDisplayWidth = maxHeight * imageAspectRatio;
+      }
 
-    // Canvas size includes padding and tilt projection
-    let canvasWidth, canvasHeight;
-    if (tiltX !== 0 || tiltY !== 0) {
-      const proj = getProjectedSize(
-        imageDisplayWidth,
-        imageDisplayHeight,
-        tiltX,
-        tiltY,
-      );
-      // Extra space for shadow bleed
-      canvasWidth = proj.width + padding * 2 + 60;
-      canvasHeight = proj.height + padding * 2 + 60;
-    } else {
-      canvasWidth = imageDisplayWidth + padding * 2;
-      canvasHeight = imageDisplayHeight + padding * 2;
-    }
+      const proj = getProjectedSize(imageDisplayWidth, imageDisplayHeight, tiltX, tiltY);
+      const canvasW = proj.width + padding * 2 + shadowMargin;
+      const canvasH = proj.height + padding * 2 + shadowMargin;
 
-    canvas.width = canvasWidth;
-    canvas.height = canvasHeight;
+      // If projected canvas exceeds container, scale down proportionally
+      const scaleX = canvasW > containerWidth ? containerWidth / canvasW : 1;
+      const scaleY = canvasH > containerHeight ? containerHeight / canvasH : 1;
+      const scale = Math.min(scaleX, scaleY);
+
+      if (scale < 1) {
+        imageDisplayWidth *= scale;
+        imageDisplayHeight *= scale;
+      }
+
+      const finalProj = getProjectedSize(imageDisplayWidth, imageDisplayHeight, tiltX, tiltY);
+      canvas.width = finalProj.width + padding * 2 + shadowMargin;
+      canvas.height = finalProj.height + padding * 2 + shadowMargin;
+    } else {
+      if (imageAspectRatio > maxWidth / maxHeight) {
+        imageDisplayWidth = maxWidth;
+        imageDisplayHeight = maxWidth / imageAspectRatio;
+      } else {
+        imageDisplayHeight = maxHeight;
+        imageDisplayWidth = maxHeight * imageAspectRatio;
+      }
+
+      canvas.width = imageDisplayWidth + padding * 2;
+      canvas.height = imageDisplayHeight + padding * 2;
+    }
 
     // Store image rendering info for coordinate calculations
     canvas.dataset.imageDisplayWidth = imageDisplayWidth.toString();
@@ -1744,7 +1756,6 @@ export default function ScreenshotAnnotate() {
                 onMouseMove={draw}
                 onMouseUp={stopDrawing}
                 onMouseLeave={stopDrawing}
-                className="max-w-full max-h-full"
               />
 
               {/* Text Input Overlay */}
