@@ -286,8 +286,8 @@ export default function ScreenshotAnnotate() {
   });
   const [history, setHistory] = useState<HistoryState[]>([]);
   const [historyIndex, setHistoryIndex] = useState(-1);
-  const [brushSize, setBrushSize] = useState(4);
-  const [bgPadding, setBgPadding] = useState(40);
+  const [brushSize, setBrushSize] = useState(8);
+  const [bgPadding, setBgPadding] = useState(80);
   const [tiltEnabled, setTiltEnabled] = useState(false);
   const [tiltX, setTiltX] = useState(0);
   const [tiltY, setTiltY] = useState(0);
@@ -530,38 +530,31 @@ export default function ScreenshotAnnotate() {
       switch (e.key) {
         case "p":
         case "P":
-          setCurrentTool("pen");
-          sfx.click();
+          selectTool("pen");
           break;
         case "r":
         case "R":
-          setCurrentTool("rectangle");
-          sfx.click();
+          selectTool("rectangle");
           break;
         case "a":
         case "A":
-          setCurrentTool("arrow");
-          sfx.click();
+          selectTool("arrow");
           break;
         case "t":
         case "T":
-          setCurrentTool("text");
-          sfx.click();
+          selectTool("text");
           break;
         case "b":
         case "B":
-          setCurrentTool("background");
-          sfx.click();
+          selectTool("background");
           break;
         case "x":
         case "X":
-          setCurrentTool("blur");
-          sfx.click();
+          selectTool("blur");
           break;
         case "s":
         case "S":
-          setCurrentTool("step");
-          sfx.click();
+          selectTool("step");
           break;
         case "g":
         case "G":
@@ -572,11 +565,13 @@ export default function ScreenshotAnnotate() {
             sfx.toggleOff();
           } else {
             setTiltEnabled(true);
+            setShowWatermarkInput(false);
             sfx.toggleOn();
           }
           break;
         case "w":
         case "W":
+          e.preventDefault();
           setShowWatermarkInput((prev) => !prev);
           sfx.click();
           break;
@@ -906,7 +901,7 @@ export default function ScreenshotAnnotate() {
       show: true,
       content,
       x: rect.left + rect.width / 2,
-      y: rect.top - 8,
+      y: rect.bottom + 8,
     });
   };
 
@@ -1381,7 +1376,7 @@ export default function ScreenshotAnnotate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawBackground(ctx, canvas.width, canvas.height);
 
-    if (tiltEnabled && (tiltX !== 0 || tiltY !== 0)) {
+    if (tiltX !== 0 || tiltY !== 0) {
       // Render flat content at 2x for sharper tilt output
       const scale = 2;
       const offscreen = document.createElement("canvas");
@@ -1415,7 +1410,12 @@ export default function ScreenshotAnnotate() {
       renderFlatContent(ctx, image, imageDisplayWidth, imageDisplayHeight, offsetX, offsetY);
     }
 
-    // Watermarks
+    // Watermarks — positioned relative to the base (non-tilt) area
+    const baseW = imageDisplayWidth + parseFloat(canvas.dataset.imageOffsetX || "0") * 2;
+    const baseH = imageDisplayHeight + parseFloat(canvas.dataset.imageOffsetY || "0") * 2;
+    const wmLeft = (canvas.width - baseW) / 2;
+    const wmTop = (canvas.height - baseH) / 2;
+
     ctx.save();
     ctx.globalAlpha = 0.4;
     ctx.fillStyle = "#ffffff";
@@ -1424,12 +1424,12 @@ export default function ScreenshotAnnotate() {
 
     // "Made with Scribbble" - always shown, bottom-left
     ctx.textAlign = "left";
-    ctx.fillText("MADE WITH SCRIBBBLE", 20, canvas.height - 16);
+    ctx.fillText("MADE WITH SCRIBBBLE", wmLeft + 20, wmTop + baseH - 16);
 
     // Custom watermark - bottom-right
     if (watermarkText) {
       ctx.textAlign = "right";
-      ctx.fillText(watermarkText.toUpperCase(), canvas.width - 20, canvas.height - 16);
+      ctx.fillText(watermarkText.toUpperCase(), wmLeft + baseW - 20, wmTop + baseH - 16);
     }
 
     ctx.restore();
@@ -1464,7 +1464,7 @@ export default function ScreenshotAnnotate() {
 
     // Canvas size includes padding and tilt projection
     let canvasWidth, canvasHeight;
-    if (tiltEnabled && (tiltX !== 0 || tiltY !== 0)) {
+    if (tiltX !== 0 || tiltY !== 0) {
       const proj = getProjectedSize(
         imageDisplayWidth,
         imageDisplayHeight,
@@ -1513,9 +1513,11 @@ export default function ScreenshotAnnotate() {
   };
 
   const isToolActive = (tool: Tool) =>
-    currentTool === tool && !showWatermarkInput;
+    currentTool === tool && !showWatermarkInput && !tiltEnabled;
 
   const selectTool = (tool: Tool) => {
+    setTiltEnabled(false);
+    setShowWatermarkInput(false);
     setCurrentTool(tool);
     sfx.click();
   };
@@ -1637,10 +1639,11 @@ export default function ScreenshotAnnotate() {
                         sfx.toggleOff();
                       } else {
                         setTiltEnabled(true);
+                        setShowWatermarkInput(false);
                         sfx.toggleOn();
                       }
                     }}
-                    className={toolBtnClass(tiltEnabled)}
+                    className={toolBtnClass(tiltEnabled && !showWatermarkInput)}
                   >
                     <Rotate3d className="w-4 h-4" />
                   </button>
@@ -1648,7 +1651,7 @@ export default function ScreenshotAnnotate() {
                 <Tooltip content="Watermark (W)">
                   <button
                     onClick={() => { setShowWatermarkInput((prev) => !prev); sfx.click(); }}
-                    className={toolBtnClass(showWatermarkInput || !!watermarkText)}
+                    className={toolBtnClass(showWatermarkInput)}
                   >
                     <Stamp className="w-4 h-4" />
                   </button>
@@ -1790,7 +1793,7 @@ export default function ScreenshotAnnotate() {
       )}
 
       {/* Background Palette — right edge panel */}
-      {showColorPalette && (
+      {showColorPalette && !showWatermarkInput && (
         <div ref={bgPaletteRef} tabIndex={-1} className="fixed top-1/2 right-3 -translate-y-1/2 bg-[#1a1a1f]/95 backdrop-blur-xl rounded-xl p-3 shadow-lg shadow-black/30 border border-white/[0.06] z-50 w-64 outline-none">
           {/* Tabs */}
           <div className="flex gap-0.5 mb-3 bg-white/[0.04] rounded-lg p-0.5">
@@ -1891,14 +1894,14 @@ export default function ScreenshotAnnotate() {
       {/* Global Tooltip */}
       {tooltip.show && (
         <div
-          className="fixed z-[9999] px-2.5 py-1.5 text-xs text-white/80 bg-[#1a1a1f]/95 backdrop-blur-xl rounded-md shadow-lg border border-white/[0.06] pointer-events-none -translate-x-1/2 -translate-y-full"
+          className="fixed z-[9999] px-2.5 py-1.5 text-xs text-white/80 bg-[#1a1a1f]/95 backdrop-blur-xl rounded-md shadow-lg border border-white/[0.06] pointer-events-none -translate-x-1/2"
           style={{
             left: tooltip.x,
             top: tooltip.y,
           }}
         >
           {tooltip.content}
-          <div className="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-l-[4px] border-r-[4px] border-t-[4px] border-l-transparent border-r-transparent border-t-[#1a1a1f]"></div>
+          <div className="absolute bottom-full left-1/2 -translate-x-1/2 w-0 h-0 border-l-[4px] border-r-[4px] border-b-[4px] border-l-transparent border-r-transparent border-b-[#1a1a1f]"></div>
         </div>
       )}
     </div>
