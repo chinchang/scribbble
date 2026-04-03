@@ -1530,6 +1530,7 @@ export default function ScreenshotAnnotate() {
   const selectTool = (tool: Tool) => {
     setTiltEnabled(false);
     setShowWatermarkInput(false);
+    setShowColorPalette(tool === "background");
     setCurrentTool(tool);
     sfx.click();
   };
@@ -1652,6 +1653,7 @@ export default function ScreenshotAnnotate() {
                       } else {
                         setTiltEnabled(true);
                         setShowWatermarkInput(false);
+                        setShowColorPalette(false);
                         sfx.toggleOn();
                       }
                     }}
