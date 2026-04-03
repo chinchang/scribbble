@@ -1671,7 +1671,7 @@ export default function ScreenshotAnnotate() {
             className="group relative w-full max-w-md aspect-[4/3] rounded-2xl border border-dashed border-neutral-300 hover:border-neutral-400 bg-white hover:bg-neutral-50 transition-all duration-300 flex flex-col items-center justify-center gap-4 cursor-pointer shadow-sm"
           >
             <div className="w-12 h-12 rounded-full bg-neutral-100 group-hover:bg-neutral-200 flex items-center justify-center transition-colors">
-              <Upload className="w-5 h-5 text-neutral-400 group-hover:text-neutral-500 transition-colors" />
+              <Upload className="w-5 h-5 text-neutral-400 group-hover:text-neutral-500 transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:-translate-y-1 group-hover:scale-110" />
             </div>
             <div className="text-center">
               <p className="text-sm text-neutral-500 group-hover:text-neutral-600 transition-colors">
