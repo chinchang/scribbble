@@ -2,7 +2,6 @@
 
 import { useState, useRef, useCallback, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 import {
   Upload,
   Pen,
@@ -74,6 +73,194 @@ interface HistoryState {
   drawings: DrawingElement[];
   backgroundState: BackgroundState;
 }
+
+// --- Programmatic sound effects via Web Audio API ---
+let audioCtx: AudioContext | null = null;
+const getAudioCtx = () => {
+  if (!audioCtx) audioCtx = new AudioContext();
+  return audioCtx;
+};
+
+const sfx = {
+  // Short click for tool selection
+  click: () => {
+    const ctx = getAudioCtx();
+    const o = ctx.createOscillator();
+    const g = ctx.createGain();
+    o.connect(g);
+    g.connect(ctx.destination);
+    o.frequency.setValueAtTime(800, ctx.currentTime);
+    o.frequency.exponentialRampToValueAtTime(600, ctx.currentTime + 0.05);
+    g.gain.setValueAtTime(0.15, ctx.currentTime);
+    g.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.05);
+    o.start(ctx.currentTime);
+    o.stop(ctx.currentTime + 0.05);
+  },
+
+  // Pop for placing annotations (step marker, text)
+  pop: () => {
+    const ctx = getAudioCtx();
+    const o = ctx.createOscillator();
+    const g = ctx.createGain();
+    o.connect(g);
+    g.connect(ctx.destination);
+    o.frequency.setValueAtTime(400, ctx.currentTime);
+    o.frequency.exponentialRampToValueAtTime(800, ctx.currentTime + 0.08);
+    g.gain.setValueAtTime(0.2, ctx.currentTime);
+    g.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.1);
+    o.start(ctx.currentTime);
+    o.stop(ctx.currentTime + 0.1);
+  },
+
+  // Drawing complete - soft rising tone
+  done: () => {
+    const ctx = getAudioCtx();
+    const o = ctx.createOscillator();
+    const g = ctx.createGain();
+    o.type = "triangle";
+    o.connect(g);
+    g.connect(ctx.destination);
+    o.frequency.setValueAtTime(500, ctx.currentTime);
+    o.frequency.exponentialRampToValueAtTime(700, ctx.currentTime + 0.1);
+    g.gain.setValueAtTime(0.12, ctx.currentTime);
+    g.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.12);
+    o.start(ctx.currentTime);
+    o.stop(ctx.currentTime + 0.12);
+  },
+
+  // Undo - descending swoosh
+  undo: () => {
+    const ctx = getAudioCtx();
+    const o = ctx.createOscillator();
+    const g = ctx.createGain();
+    o.type = "sine";
+    o.connect(g);
+    g.connect(ctx.destination);
+    o.frequency.setValueAtTime(600, ctx.currentTime);
+    o.frequency.exponentialRampToValueAtTime(300, ctx.currentTime + 0.12);
+    g.gain.setValueAtTime(0.12, ctx.currentTime);
+    g.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.12);
+    o.start(ctx.currentTime);
+    o.stop(ctx.currentTime + 0.12);
+  },
+
+  // Redo - ascending swoosh
+  redo: () => {
+    const ctx = getAudioCtx();
+    const o = ctx.createOscillator();
+    const g = ctx.createGain();
+    o.type = "sine";
+    o.connect(g);
+    g.connect(ctx.destination);
+    o.frequency.setValueAtTime(300, ctx.currentTime);
+    o.frequency.exponentialRampToValueAtTime(600, ctx.currentTime + 0.12);
+    g.gain.setValueAtTime(0.12, ctx.currentTime);
+    g.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.12);
+    o.start(ctx.currentTime);
+    o.stop(ctx.currentTime + 0.12);
+  },
+
+  // Copy/download - camera shutter two-tone
+  shutter: () => {
+    const ctx = getAudioCtx();
+    [0, 0.06].forEach((delay, i) => {
+      const o = ctx.createOscillator();
+      const g = ctx.createGain();
+      o.type = "square";
+      o.connect(g);
+      g.connect(ctx.destination);
+      o.frequency.setValueAtTime(i === 0 ? 1200 : 900, ctx.currentTime + delay);
+      g.gain.setValueAtTime(0.08, ctx.currentTime + delay);
+      g.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + delay + 0.04);
+      o.start(ctx.currentTime + delay);
+      o.stop(ctx.currentTime + delay + 0.04);
+    });
+  },
+
+  // Clear/delete - noise burst
+  clear: () => {
+    const ctx = getAudioCtx();
+    const bufferSize = ctx.sampleRate * 0.08;
+    const buffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
+    const data = buffer.getChannelData(0);
+    for (let i = 0; i < bufferSize; i++) {
+      data[i] = (Math.random() * 2 - 1) * (1 - i / bufferSize);
+    }
+    const src = ctx.createBufferSource();
+    const g = ctx.createGain();
+    src.buffer = buffer;
+    src.connect(g);
+    g.connect(ctx.destination);
+    g.gain.setValueAtTime(0.1, ctx.currentTime);
+    g.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.08);
+    src.start(ctx.currentTime);
+  },
+
+  // Toggle on - two ascending notes
+  toggleOn: () => {
+    const ctx = getAudioCtx();
+    [0, 0.07].forEach((delay, i) => {
+      const o = ctx.createOscillator();
+      const g = ctx.createGain();
+      o.type = "triangle";
+      o.connect(g);
+      g.connect(ctx.destination);
+      o.frequency.setValueAtTime(i === 0 ? 500 : 700, ctx.currentTime + delay);
+      g.gain.setValueAtTime(0.15, ctx.currentTime + delay);
+      g.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + delay + 0.06);
+      o.start(ctx.currentTime + delay);
+      o.stop(ctx.currentTime + delay + 0.06);
+    });
+  },
+
+  // Toggle off - two descending notes
+  toggleOff: () => {
+    const ctx = getAudioCtx();
+    [0, 0.07].forEach((delay, i) => {
+      const o = ctx.createOscillator();
+      const g = ctx.createGain();
+      o.type = "triangle";
+      o.connect(g);
+      g.connect(ctx.destination);
+      o.frequency.setValueAtTime(i === 0 ? 700 : 500, ctx.currentTime + delay);
+      g.gain.setValueAtTime(0.15, ctx.currentTime + delay);
+      g.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + delay + 0.06);
+      o.start(ctx.currentTime + delay);
+      o.stop(ctx.currentTime + delay + 0.06);
+    });
+  },
+
+  // Tick for +/- adjustments
+  tick: (up: boolean) => {
+    const ctx = getAudioCtx();
+    const o = ctx.createOscillator();
+    const g = ctx.createGain();
+    o.connect(g);
+    g.connect(ctx.destination);
+    o.frequency.setValueAtTime(up ? 1000 : 800, ctx.currentTime);
+    g.gain.setValueAtTime(0.08, ctx.currentTime);
+    g.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.03);
+    o.start(ctx.currentTime);
+    o.stop(ctx.currentTime + 0.03);
+  },
+
+  // Welcome chime for image upload
+  chime: () => {
+    const ctx = getAudioCtx();
+    [0, 0.1, 0.2].forEach((delay, i) => {
+      const o = ctx.createOscillator();
+      const g = ctx.createGain();
+      o.type = "triangle";
+      o.connect(g);
+      g.connect(ctx.destination);
+      o.frequency.setValueAtTime([523, 659, 784][i], ctx.currentTime + delay);
+      g.gain.setValueAtTime(0.12, ctx.currentTime + delay);
+      g.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + delay + 0.15);
+      o.start(ctx.currentTime + delay);
+      o.stop(ctx.currentTime + delay + 0.15);
+    });
+  },
+};
 
 export default function ScreenshotAnnotate() {
   const [uploadedImage, setUploadedImage] = useState<string | null>(null);
@@ -161,6 +348,7 @@ export default function ScreenshotAnnotate() {
         setTiltEnabled(false);
         setTiltX(0);
         setTiltY(0);
+        sfx.chime();
       };
       reader.readAsDataURL(file);
     }
@@ -258,12 +446,19 @@ export default function ScreenshotAnnotate() {
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       // Don't handle shortcuts if text input is active
-      if (isTextInputActive) return;
+      if (isTextInputActive || showWatermarkInput) return;
 
       // Check for Ctrl+C or Cmd+C
       if ((e.ctrlKey || e.metaKey) && e.key === "c" && !e.shiftKey) {
         e.preventDefault();
         copyToClipboard();
+        return;
+      }
+
+      // Check for Ctrl+S or Cmd+S (Download)
+      if ((e.ctrlKey || e.metaKey) && e.key === "s" && !e.shiftKey) {
+        e.preventDefault();
+        downloadAnnotatedImage();
         return;
       }
 
@@ -287,24 +482,29 @@ export default function ScreenshotAnnotate() {
           case "ArrowUp":
             e.preventDefault();
             setTiltX((prev) => Math.min(prev + 5, 30));
+            sfx.tick(true);
             return;
           case "ArrowDown":
             e.preventDefault();
             setTiltX((prev) => Math.max(prev - 5, -30));
+            sfx.tick(false);
             return;
           case "ArrowLeft":
             e.preventDefault();
             setTiltY((prev) => Math.max(prev - 5, -30));
+            sfx.tick(false);
             return;
           case "ArrowRight":
             e.preventDefault();
             setTiltY((prev) => Math.min(prev + 5, 30));
+            sfx.tick(true);
             return;
           case "Delete":
           case "Backspace":
             e.preventDefault();
             setTiltX(0);
             setTiltY(0);
+            sfx.clear();
             return;
         }
       }
@@ -316,6 +516,7 @@ export default function ScreenshotAnnotate() {
         } else {
           setBrushSize((prev) => Math.min(prev + 2, 20));
         }
+        sfx.tick(true);
         return;
       }
       if (e.key === "-" || e.key === "_") {
@@ -325,6 +526,7 @@ export default function ScreenshotAnnotate() {
         } else {
           setBrushSize((prev) => Math.max(prev - 2, 2));
         }
+        sfx.tick(false);
         return;
       }
 
@@ -332,30 +534,54 @@ export default function ScreenshotAnnotate() {
         case "p":
         case "P":
           setCurrentTool("pen");
+          sfx.click();
           break;
         case "r":
         case "R":
           setCurrentTool("rectangle");
+          sfx.click();
           break;
         case "a":
         case "A":
           setCurrentTool("arrow");
+          sfx.click();
           break;
         case "t":
         case "T":
           setCurrentTool("text");
+          sfx.click();
           break;
         case "b":
         case "B":
           setCurrentTool("background");
+          sfx.click();
           break;
         case "x":
         case "X":
           setCurrentTool("blur");
+          sfx.click();
           break;
         case "s":
         case "S":
           setCurrentTool("step");
+          sfx.click();
+          break;
+        case "g":
+        case "G":
+          if (tiltEnabled) {
+            setTiltEnabled(false);
+            setTiltX(0);
+            setTiltY(0);
+            sfx.toggleOff();
+          } else {
+            setTiltEnabled(true);
+            sfx.toggleOn();
+          }
+          break;
+        case "w":
+        case "W":
+          setShowWatermarkInput((prev) => !prev);
+          sfx.click();
           break;
       }
     };
@@ -364,7 +590,7 @@ export default function ScreenshotAnnotate() {
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
     };
-  }, [isTextInputActive, currentTool, tiltEnabled]);
+  }, [isTextInputActive, currentTool, tiltEnabled, showWatermarkInput]);
 
   // Show/hide background palette when switching to/from background tool
   useEffect(() => {
@@ -442,6 +668,7 @@ export default function ScreenshotAnnotate() {
         stepNumber: stepCounterRef.current++,
       };
       setDrawings((prev) => [...prev, newDrawing]);
+      sfx.pop();
       return;
     }
 
@@ -531,6 +758,7 @@ export default function ScreenshotAnnotate() {
     saveToHistory();
     setDrawings((prev) => [...prev, newDrawing]);
     setCurrentPath([]);
+    sfx.done();
   };
 
   const handleTextSubmit = (text: string) => {
@@ -560,12 +788,14 @@ export default function ScreenshotAnnotate() {
     });
     setIsTextInputActive(false);
     setTextInput("");
+    sfx.pop();
     setTextPosition(null);
   };
 
   const handleBackgroundColorSelect = (color: string) => {
     saveToHistory();
     setBackgroundState({ type: "solid", color });
+    sfx.pop();
   };
 
   const handleBackgroundGradientSelect = (gradient: {
@@ -575,6 +805,7 @@ export default function ScreenshotAnnotate() {
   }) => {
     saveToHistory();
     setBackgroundState({ type: "gradient", color: null, gradient });
+    sfx.pop();
   };
 
   const handleBackgroundImageSelect = (src: string) => {
@@ -584,6 +815,7 @@ export default function ScreenshotAnnotate() {
     img.onload = () => {
       bgImageRef.current = img;
       setBackgroundState({ type: "image", color: null, imageSrc: src });
+      sfx.pop();
     };
   };
 
@@ -591,6 +823,7 @@ export default function ScreenshotAnnotate() {
     saveToHistory();
     bgImageRef.current = null;
     setBackgroundState({ type: null, color: null });
+    sfx.clear();
   };
 
   // Save current state to history
@@ -649,6 +882,7 @@ export default function ScreenshotAnnotate() {
       setHistoryIndex(historyIndex - 1);
       recalcStepCounter(previousState.drawings);
       restoreBgImage(previousState.backgroundState);
+      sfx.undo();
     }
   };
 
@@ -661,6 +895,7 @@ export default function ScreenshotAnnotate() {
       setHistoryIndex(historyIndex + 1);
       recalcStepCounter(nextState.drawings);
       restoreBgImage(nextState.backgroundState);
+      sfx.redo();
     }
   };
 
@@ -722,6 +957,7 @@ export default function ScreenshotAnnotate() {
         new ClipboardItem({ "image/png": blob }),
       ]);
 
+      sfx.shutter();
       toast({
         title: "Copied to clipboard",
         description: "Annotated screenshot is ready to paste.",
@@ -1262,11 +1498,13 @@ export default function ScreenshotAnnotate() {
     saveToHistory();
     setDrawings([]);
     redrawCanvas();
+    sfx.clear();
   };
 
   const downloadAnnotatedImage = () => {
     const canvas = canvasRef.current;
     if (!canvas) return;
+    sfx.shutter();
 
     const link = document.createElement("a");
     const now = new Date();
@@ -1280,17 +1518,22 @@ export default function ScreenshotAnnotate() {
   const isToolActive = (tool: Tool) =>
     currentTool === tool && !showWatermarkInput;
 
+  const selectTool = (tool: Tool) => {
+    setCurrentTool(tool);
+    sfx.click();
+  };
+
   return (
     <div className="min-h-screen bg-background p-4">
       <div className="container mx-auto max-w-7xl">
         <div className="mb-8 text-center">
           <h1 className="text-4xl font-bold mb-4">
-            Scribbble Screenshot Annotator
+            <span className="gradient-text">Scribbble&apos;s</span> Screenshot Annotator
           </h1>
         </div>
 
         {!uploadedImage ? (
-          <Card className="border-2 border-dashed border-border hover:border-primary/50 transition-colors">
+          <div className="flex items-center justify-center" style={{ minHeight: "70vh" }}>
             <div className="p-12 text-center">
               <Upload className="w-16 h-16 mx-auto mb-6 text-muted-foreground" />
               <p className="text-muted-foreground mb-6">
@@ -1314,341 +1557,317 @@ export default function ScreenshotAnnotate() {
                 Supports: JPG, PNG, GIF, WebP
               </p>
             </div>
-          </Card>
+          </div>
         ) : (
-          <div className="relative">
-            {/* Canvas Area */}
-            <Card className="p-4">
+          <div className="flex flex-col gap-4">
+            {/* Toolbar */}
+            <div className="flex justify-center">
               <div
-                ref={containerRef}
-                className="relative w-full h-[80vh] flex items-center justify-center bg-muted/20 rounded-lg overflow-hidden"
-                style={{
-                  cursor:
-                    currentTool === "pen" ||
-                    currentTool === "blur" ||
-                    currentTool === "step"
-                      ? "crosshair"
-                      : currentTool === "text"
-                        ? "text"
-                        : currentTool === "background"
-                          ? "pointer"
-                          : "default",
-                }}
+                ref={toolbarRef}
+                className={`relative ${
+                  isDrawing ? "opacity-95 pointer-events-none" : "opacity-100"
+                }`}
               >
-                <img
-                  ref={imageRef}
-                  src={uploadedImage}
-                  alt="Uploaded screenshot"
-                  className="hidden"
-                  onLoad={handleImageLoad}
-                />
-                <div className="relative  ">
-                  <canvas
-                    ref={canvasRef}
-                    onMouseDown={startDrawing}
-                    onMouseMove={draw}
-                    onMouseUp={stopDrawing}
-                    onMouseLeave={stopDrawing}
-                    className="max-w-full max-h-full border border-border rounded-lg"
-                  />
+                <div className="bg-slate-900/80 backdrop-blur-lg rounded-2xl px-4 py-3 shadow-2xl border border-white/10">
+                  <div className="flex items-center space-x-4">
 
-                  {/* Text Input Overlay */}
-                  {isTextInputActive && textPosition && (
-                    <input
-                      ref={textInputRef}
-                      type="text"
-                      value={textInput}
-                      onChange={(e) => setTextInput(e.target.value)}
-                      onKeyDown={(e) => {
-                        if (e.key === "Enter") {
-                          handleTextSubmit(textInput);
-                        } else if (e.key === "Escape") {
-                          setIsTextInputActive(false);
-                          setTextInput("");
-                          setTextPosition(null);
-                        }
-                      }}
-                      onBlur={() => {
-                        if (textInput.trim()) {
-                          handleTextSubmit(textInput);
-                        } else {
-                          setIsTextInputActive(false);
-                          setTextInput("");
-                          setTextPosition(null);
-                        }
-                      }}
-                      className="absolute bg-transparent border-2 border-red-400 rounded px-2 py-1 text-red-400 font-bold text-lg outline-none"
-                      style={{
-                        left: textPosition.x,
-                        top: textPosition.y,
-                        minWidth: "100px",
-                        zIndex: 9999,
-                      }}
-                      placeholder="Enter text..."
-                    />
-                  )}
+                    {/* Text Tool */}
+                    <Tooltip content="Text tool - Add text to your image (Press T)">
+                      <button
+                        onClick={() => selectTool("text")}
+                        className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-105 ${
+                          isToolActive("text")
+                            ? "bg-blue-500/80"
+                            : "bg-white/10 hover:bg-white/20"
+                        }`}
+                      >
+                        <Type className="w-6 h-6" />
+                      </button>
+                    </Tooltip>
 
-                </div>
-                {/* Floating Toolbar - Redesigned & Draggable */}
-                <div
-                  ref={toolbarRef}
-                  className={`absolute ${
-                    isDragging ? "" : "transition-all duration-300"
-                  } ${
-                    isDrawing ? "opacity-95 pointer-events-none" : "opacity-100"
-                  } ${isDragging ? "cursor-grabbing" : "cursor-grab"}`}
-                  style={{
-                    left:
-                      !hasDragged && toolbarPosition.x === 0
-                        ? "50%"
-                        : `${toolbarPosition.x}px`,
-                    top: `${toolbarPosition.y}px`,
-                    transform:
-                      !hasDragged && toolbarPosition.x === 0
-                        ? "translateX(-50%)"
-                        : "none",
-                  }}
-                >
-                  <div className="bg-slate-900/80 backdrop-blur-lg rounded-2xl px-4 py-3 shadow-2xl border border-white/10">
-                    <div className="flex items-center space-x-4">
-                      {/* Visual Drag Handle */}
-                      <Tooltip content="Drag to move toolbar">
-                        <div
-                          className="flex flex-col space-y-1 cursor-grab active:cursor-grabbing p-2 rounded-lg hover:bg-white/10 transition-colors"
-                          onMouseDown={handleMouseDown}
-                        >
-                          <div className="w-2 h-2 bg-white/20 rounded-full"></div>
-                          <div className="w-2 h-2 bg-white/20 rounded-full"></div>
-                          <div className="w-2 h-2 bg-white/20 rounded-full"></div>
-                        </div>
-                      </Tooltip>
+                    {/* Step Marker Tool */}
+                    <Tooltip content="Step marker - Add numbered annotations (Press S)">
+                      <button
+                        onClick={() => selectTool("step")}
+                        className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-105 ${
+                          isToolActive("step")
+                            ? "bg-blue-500/80"
+                            : "bg-white/10 hover:bg-white/20"
+                        }`}
+                      >
+                        <Hash className="w-6 h-6" />
+                      </button>
+                    </Tooltip>
 
-                      {/* Separator */}
-                      <div className="w-px h-8 bg-white/20"></div>
+                    {/* Pen Tool */}
+                    <Tooltip content="Pen tool - Draw freehand lines (Press P)">
+                      <button
+                        onClick={() => selectTool("pen")}
+                        className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-105 ${
+                          isToolActive("pen")
+                            ? "bg-blue-500/80"
+                            : "bg-white/10 hover:bg-white/20"
+                        }`}
+                      >
+                        <Pen className="w-6 h-6" />
+                      </button>
+                    </Tooltip>
 
-                      {/* Text Tool */}
-                      <Tooltip content="Text tool - Add text to your image (Press T)">
-                        <button
-                          onClick={() => setCurrentTool("text")}
-                          className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-105 ${
-                            isToolActive("text")
-                              ? "bg-blue-500/80"
-                              : "bg-white/10 hover:bg-white/20"
-                          }`}
-                        >
-                          <Type className="w-6 h-6" />
-                        </button>
-                      </Tooltip>
+                    {/* Rectangle Tool */}
+                    <Tooltip content="Rectangle tool - Draw rectangles (Press R)">
+                      <button
+                        onClick={() => selectTool("rectangle")}
+                        className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-105 ${
+                          isToolActive("rectangle")
+                            ? "bg-blue-500/80"
+                            : "bg-white/10 hover:bg-white/20"
+                        }`}
+                      >
+                        <Square className="w-6 h-6" />
+                      </button>
+                    </Tooltip>
 
-                      {/* Step Marker Tool */}
-                      <Tooltip content="Step marker - Add numbered annotations (Press S)">
-                        <button
-                          onClick={() => setCurrentTool("step")}
-                          className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-105 ${
-                            isToolActive("step")
-                              ? "bg-blue-500/80"
-                              : "bg-white/10 hover:bg-white/20"
-                          }`}
-                        >
-                          <Hash className="w-6 h-6" />
-                        </button>
-                      </Tooltip>
+                    {/* Arrow Tool */}
+                    <Tooltip content="Arrow tool - Draw arrows (Press A)">
+                      <button
+                        onClick={() => selectTool("arrow")}
+                        className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-105 ${
+                          isToolActive("arrow")
+                            ? "bg-blue-500/80"
+                            : "bg-white/10 hover:bg-white/20"
+                        }`}
+                      >
+                        <ArrowRight className="w-6 h-6" />
+                      </button>
+                    </Tooltip>
 
-                      {/* Pen Tool */}
-                      <Tooltip content="Pen tool - Draw freehand lines (Press P)">
-                        <button
-                          onClick={() => setCurrentTool("pen")}
-                          className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-105 ${
-                            isToolActive("pen")
-                              ? "bg-blue-500/80"
-                              : "bg-white/10 hover:bg-white/20"
-                          }`}
-                        >
-                          <Pen className="w-6 h-6" />
-                        </button>
-                      </Tooltip>
+                    {/* Background Tool */}
+                    <Tooltip content="Background tool - Add colored backgrounds (Press B)">
+                      <button
+                        onClick={() => selectTool("background")}
+                        className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-105 ${
+                          isToolActive("background")
+                            ? "bg-blue-500/80"
+                            : "bg-white/10 hover:bg-white/20"
+                        }`}
+                      >
+                        <Palette className="w-6 h-6" />
+                      </button>
+                    </Tooltip>
 
-                      {/* Rectangle Tool */}
-                      <Tooltip content="Rectangle tool - Draw rectangles (Press R)">
-                        <button
-                          onClick={() => setCurrentTool("rectangle")}
-                          className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-105 ${
-                            isToolActive("rectangle")
-                              ? "bg-blue-500/80"
-                              : "bg-white/10 hover:bg-white/20"
-                          }`}
-                        >
-                          <Square className="w-6 h-6" />
-                        </button>
-                      </Tooltip>
+                    {/* Blur Tool */}
+                    <Tooltip content="Blur tool - Pixelate areas to redact (Press X)">
+                      <button
+                        onClick={() => selectTool("blur")}
+                        className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-105 ${
+                          isToolActive("blur")
+                            ? "bg-blue-500/80"
+                            : "bg-white/10 hover:bg-white/20"
+                        }`}
+                      >
+                        <EyeOff className="w-6 h-6" />
+                      </button>
+                    </Tooltip>
 
-                      {/* Arrow Tool */}
-                      <Tooltip content="Arrow tool - Draw arrows (Press A)">
-                        <button
-                          onClick={() => setCurrentTool("arrow")}
-                          className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-105 ${
-                            isToolActive("arrow")
-                              ? "bg-blue-500/80"
-                              : "bg-white/10 hover:bg-white/20"
-                          }`}
-                        >
-                          <ArrowRight className="w-6 h-6" />
-                        </button>
-                      </Tooltip>
-
-                      {/* Background Tool */}
-                      <Tooltip content="Background tool - Add colored backgrounds (Press B)">
-                        <button
-                          onClick={() => setCurrentTool("background")}
-                          className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-105 ${
-                            isToolActive("background")
-                              ? "bg-blue-500/80"
-                              : "bg-white/10 hover:bg-white/20"
-                          }`}
-                        >
-                          <Palette className="w-6 h-6" />
-                        </button>
-                      </Tooltip>
-
-                      {/* Blur Tool */}
-                      <Tooltip content="Blur tool - Pixelate areas to redact (Press X)">
-                        <button
-                          onClick={() => setCurrentTool("blur")}
-                          className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-105 ${
-                            isToolActive("blur")
-                              ? "bg-blue-500/80"
-                              : "bg-white/10 hover:bg-white/20"
-                          }`}
-                        >
-                          <EyeOff className="w-6 h-6" />
-                        </button>
-                      </Tooltip>
-
-                      {/* Tilt Toggle */}
-                      <Tooltip content="3D Tilt - Rotate screenshot with arrow keys">
-                        <button
-                          onClick={() => {
-                            if (tiltEnabled) {
-                              setTiltEnabled(false);
-                              setTiltX(0);
-                              setTiltY(0);
-                            } else {
-                              setTiltEnabled(true);
-                            }
-                          }}
-                          className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-105 ${
-                            tiltEnabled
-                              ? "bg-blue-500/80"
-                              : "bg-white/10 hover:bg-white/20"
-                          }`}
-                        >
-                          <Rotate3d className="w-6 h-6" />
-                        </button>
-                      </Tooltip>
-
-                      {/* Watermark */}
-                      <Tooltip content="Watermark - Add custom text">
-                        <button
-                          onClick={() => setShowWatermarkInput((prev) => !prev)}
-                          className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-105 ${
-                            showWatermarkInput || watermarkText
-                              ? "bg-blue-500/80"
-                              : "bg-white/10 hover:bg-white/20"
-                          }`}
-                        >
-                          <Stamp className="w-6 h-6" />
-                        </button>
-                      </Tooltip>
-
-                      {/* Separator */}
-                      <div className="w-px h-8 bg-white/20"></div>
-
-                      {/* Undo Button */}
-                      <Tooltip content="Undo - Undo last action (Ctrl+Z / Cmd+Z)">
-                        <button
-                          onClick={undo}
-                          disabled={!canUndo}
-                          className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-105 ${
-                            canUndo
-                              ? "bg-white/10 hover:bg-white/20"
-                              : "bg-white/5 text-white/30 cursor-not-allowed"
-                          }`}
-                        >
-                          <Undo className="w-6 h-6" />
-                        </button>
-                      </Tooltip>
-
-                      {/* Redo Button */}
-                      <Tooltip content="Redo - Redo last undone action (Ctrl+Y / Cmd+Y)">
-                        <button
-                          onClick={redo}
-                          disabled={!canRedo}
-                          className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-105 ${
-                            canRedo
-                              ? "bg-white/10 hover:bg-white/20"
-                              : "bg-white/5 text-white/30 cursor-not-allowed"
-                          }`}
-                        >
-                          <Redo className="w-6 h-6" />
-                        </button>
-                      </Tooltip>
-
-                      {/* Separator */}
-                      <div className="w-px h-8 bg-white/20"></div>
-
-                      {/* Clear All Button */}
-                      <Tooltip content="Clear all drawings - Remove all annotations">
-                        <button
-                          onClick={() => clearDrawings()}
-                          className="w-12 h-12 rounded-xl bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-all duration-200 hover:scale-105"
-                        >
-                          <RotateCcw className="w-6 h-6" />
-                        </button>
-                      </Tooltip>
-
-                      {/* Download Button */}
-                      <Tooltip content="Download image - Save annotated screenshot">
-                        <button
-                          onClick={() => downloadAnnotatedImage()}
-                          className="w-12 h-12 rounded-xl bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-all duration-200 hover:scale-105"
-                        >
-                          <Download className="w-6 h-6" />
-                        </button>
-                      </Tooltip>
-
-                      {/* New Image Button */}
-                      <Tooltip content="New image - Upload a different screenshot">
-                        <button
-                          onClick={() => setUploadedImage(null)}
-                          className="w-12 h-12 rounded-xl bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-all duration-200 hover:scale-105"
-                        >
-                          <Trash2 className="w-6 h-6" />
-                        </button>
-                      </Tooltip>
-                    </div>
-                  </div>
-                  {/* Watermark Input Dropdown */}
-                  {showWatermarkInput && (
-                    <div className="mt-2 bg-slate-900/90 backdrop-blur-lg rounded-xl p-3 shadow-2xl border border-white/10 w-56 ml-auto">
-                      <input
-                        type="text"
-                        value={watermarkText}
-                        onChange={(e) => setWatermarkText(e.target.value)}
-                        onKeyDown={(e) => {
-                          if (e.key === "Enter" || e.key === "Escape") {
-                            setShowWatermarkInput(false);
+                    {/* Tilt Toggle */}
+                    <Tooltip content="3D Tilt - Rotate screenshot with arrow keys (Press G)">
+                      <button
+                        onClick={() => {
+                          if (tiltEnabled) {
+                            setTiltEnabled(false);
+                            setTiltX(0);
+                            setTiltY(0);
+                            sfx.toggleOff();
+                          } else {
+                            setTiltEnabled(true);
+                            sfx.toggleOn();
                           }
-                          e.stopPropagation();
                         }}
-                        placeholder="e.g. @username"
-                        autoFocus
-                        className="w-full bg-white/10 border border-white/20 rounded-lg px-3 py-1.5 text-sm text-white placeholder-white/40 outline-none focus:border-blue-400"
-                      />
-                    </div>
-                  )}
+                        className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-105 ${
+                          tiltEnabled
+                            ? "bg-blue-500/80"
+                            : "bg-white/10 hover:bg-white/20"
+                        }`}
+                      >
+                        <Rotate3d className="w-6 h-6" />
+                      </button>
+                    </Tooltip>
+
+                    {/* Watermark */}
+                    <Tooltip content="Watermark - Add custom text (Press W)">
+                      <button
+                        onClick={() => { setShowWatermarkInput((prev) => !prev); sfx.click(); }}
+                        className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-105 ${
+                          showWatermarkInput || watermarkText
+                            ? "bg-blue-500/80"
+                            : "bg-white/10 hover:bg-white/20"
+                        }`}
+                      >
+                        <Stamp className="w-6 h-6" />
+                      </button>
+                    </Tooltip>
+
+                    {/* Separator */}
+                    <div className="w-px h-8 bg-white/20"></div>
+
+                    {/* Undo Button */}
+                    <Tooltip content="Undo - Undo last action (Ctrl+Z / Cmd+Z)">
+                      <button
+                        onClick={undo}
+                        disabled={!canUndo}
+                        className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-105 ${
+                          canUndo
+                            ? "bg-white/10 hover:bg-white/20"
+                            : "bg-white/5 text-white/30 cursor-not-allowed"
+                        }`}
+                      >
+                        <Undo className="w-6 h-6" />
+                      </button>
+                    </Tooltip>
+
+                    {/* Redo Button */}
+                    <Tooltip content="Redo - Redo last undone action (Ctrl+Y / Cmd+Y)">
+                      <button
+                        onClick={redo}
+                        disabled={!canRedo}
+                        className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-105 ${
+                          canRedo
+                            ? "bg-white/10 hover:bg-white/20"
+                            : "bg-white/5 text-white/30 cursor-not-allowed"
+                        }`}
+                      >
+                        <Redo className="w-6 h-6" />
+                      </button>
+                    </Tooltip>
+
+                    {/* Separator */}
+                    <div className="w-px h-8 bg-white/20"></div>
+
+                    {/* Clear All Button */}
+                    <Tooltip content="Clear all drawings - Remove all annotations">
+                      <button
+                        onClick={() => clearDrawings()}
+                        className="w-12 h-12 rounded-xl bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-all duration-200 hover:scale-105"
+                      >
+                        <RotateCcw className="w-6 h-6" />
+                      </button>
+                    </Tooltip>
+
+                    {/* Download Button */}
+                    <Tooltip content="Download image - Save annotated screenshot (Ctrl+S / Cmd+S)">
+                      <button
+                        onClick={() => downloadAnnotatedImage()}
+                        className="w-12 h-12 rounded-xl bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-all duration-200 hover:scale-105"
+                      >
+                        <Download className="w-6 h-6" />
+                      </button>
+                    </Tooltip>
+
+                    {/* New Image Button */}
+                    <Tooltip content="New image - Upload a different screenshot">
+                      <button
+                        onClick={() => setUploadedImage(null)}
+                        className="w-12 h-12 rounded-xl bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-all duration-200 hover:scale-105"
+                      >
+                        <Trash2 className="w-6 h-6" />
+                      </button>
+                    </Tooltip>
+                  </div>
                 </div>
+                {/* Watermark Input Dropdown */}
+                {showWatermarkInput && (
+                  <div className="absolute top-full right-0 mt-2 bg-slate-900/90 backdrop-blur-lg rounded-xl p-3 shadow-2xl border border-white/10 w-56 z-50">
+                    <input
+                      type="text"
+                      value={watermarkText}
+                      onChange={(e) => setWatermarkText(e.target.value)}
+                      onKeyDown={(e) => {
+                        if (e.key === "Enter" || e.key === "Escape") {
+                          setShowWatermarkInput(false);
+                        }
+                        e.stopPropagation();
+                      }}
+                      placeholder="e.g. @username"
+                      autoFocus
+                      className="w-full bg-white/10 border border-white/20 rounded-lg px-3 py-1.5 text-sm text-white placeholder-white/40 outline-none focus:border-blue-400"
+                    />
+                  </div>
+                )}
               </div>
-            </Card>
+            </div>
+
+            {/* Canvas Area */}
+            <div
+              ref={containerRef}
+              className="relative w-full flex-1 flex items-center justify-center overflow-hidden"
+              style={{
+                minHeight: "70vh",
+                cursor:
+                  currentTool === "pen" ||
+                  currentTool === "blur" ||
+                  currentTool === "step"
+                    ? "crosshair"
+                    : currentTool === "text"
+                      ? "text"
+                      : currentTool === "background"
+                        ? "pointer"
+                        : "default",
+              }}
+            >
+              <img
+                ref={imageRef}
+                src={uploadedImage}
+                alt="Uploaded screenshot"
+                className="hidden"
+                onLoad={handleImageLoad}
+              />
+              <div className="relative">
+                <canvas
+                  ref={canvasRef}
+                  onMouseDown={startDrawing}
+                  onMouseMove={draw}
+                  onMouseUp={stopDrawing}
+                  onMouseLeave={stopDrawing}
+                  className="max-w-full max-h-full rounded-lg"
+                />
+
+                {/* Text Input Overlay */}
+                {isTextInputActive && textPosition && (
+                  <input
+                    ref={textInputRef}
+                    type="text"
+                    value={textInput}
+                    onChange={(e) => setTextInput(e.target.value)}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter") {
+                        handleTextSubmit(textInput);
+                      } else if (e.key === "Escape") {
+                        setIsTextInputActive(false);
+                        setTextInput("");
+                        setTextPosition(null);
+                      }
+                    }}
+                    onBlur={() => {
+                      if (textInput.trim()) {
+                        handleTextSubmit(textInput);
+                      } else {
+                        setIsTextInputActive(false);
+                        setTextInput("");
+                        setTextPosition(null);
+                      }
+                    }}
+                    className="absolute bg-transparent border-2 border-red-400 rounded px-2 py-1 text-red-400 font-bold text-lg outline-none"
+                    style={{
+                      left: textPosition.x,
+                      top: textPosition.y,
+                      minWidth: "100px",
+                      zIndex: 9999,
+                    }}
+                    placeholder="Enter text..."
+                  />
+                )}
+              </div>
+            </div>
           </div>
         )}
 
@@ -1750,6 +1969,11 @@ export default function ScreenshotAnnotate() {
             </div>
           </div>
         )}
+
+        {/* Footer */}
+        <p className="text-center text-sm text-muted-foreground/60 py-6">
+          Brought to you by <a href="/" className="gradient-text font-semibold hover:underline">Scribbble</a> — the beautiful screen annotator for MacOS
+        </p>
 
         {/* Global Tooltip */}
         {tooltip.show && (
