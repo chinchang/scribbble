@@ -26,3 +26,4 @@ This is the website for an app called Scribbble - a mac app to annotate/draw any
 - [x] Add "Blur/Pixelate" tool to redact sensitive areas by dragging a rectangle region
 - [x] Add "Numbered Step Markers" tool to place numbered circles (1, 2, 3...) on click
 - [x] Improve background tool: auto-show options on tool switch, add gradient and image background options
+- [x] Add "Depth of Field" tool with adjustable blur intensity and focus x-offset

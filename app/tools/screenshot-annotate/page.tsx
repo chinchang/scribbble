@@ -17,8 +17,10 @@ import {
   Hash,
   Rotate3d,
   Stamp,
+  Focus,
 } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
+import { blurCanvas as webglBlur } from "./webgl-blur";
 
 type Tool =
   | "pen"
@@ -27,7 +29,8 @@ type Tool =
   | "text"
   | "background"
   | "blur"
-  | "step";
+  | "step"
+  | "depthOfField";
 
 interface Point {
   x: number;
@@ -69,6 +72,9 @@ interface TooltipProps {
 interface HistoryState {
   drawings: DrawingElement[];
   backgroundState: BackgroundState;
+  dofIntensity: number;
+  dofXOffset: number;
+  dofBandWidth: number;
 }
 
 // --- Programmatic sound effects via Web Audio API ---
@@ -293,6 +299,10 @@ export default function ScreenshotAnnotate() {
   const [tiltY, setTiltY] = useState(0);
   const [watermarkText, setWatermarkText] = useState("");
   const [showWatermarkInput, setShowWatermarkInput] = useState(false);
+  const [dofIntensity, setDofIntensity] = useState(0);
+  const [dofXOffset, setDofXOffset] = useState(50);
+  const [dofBandWidth, setDofBandWidth] = useState(10);
+  const [showDofPanel, setShowDofPanel] = useState(false);
 
   const backgroundColors = [
     "#ef4444", // red
@@ -334,6 +344,7 @@ export default function ScreenshotAnnotate() {
   const stepCounterRef = useRef<number>(1);
   const bgImageRef = useRef<HTMLImageElement | null>(null);
   const bgPaletteRef = useRef<HTMLDivElement>(null);
+  const dofRafRef = useRef<number>(0);
 
   const handleImageUpload = (file: File) => {
     if (file && file.type.startsWith("image/")) {
@@ -510,6 +521,8 @@ export default function ScreenshotAnnotate() {
         e.preventDefault();
         if (currentTool === "background") {
           setBgPadding((prev) => Math.min(prev + 10, 200));
+        } else if (currentTool === "depthOfField") {
+          setDofIntensity((prev) => Math.min(prev + 2, 50));
         } else {
           setBrushSize((prev) => Math.min(prev + 2, 20));
         }
@@ -520,6 +533,8 @@ export default function ScreenshotAnnotate() {
         e.preventDefault();
         if (currentTool === "background") {
           setBgPadding((prev) => Math.max(prev - 10, 10));
+        } else if (currentTool === "depthOfField") {
+          setDofIntensity((prev) => Math.max(prev - 2, 0));
         } else {
           setBrushSize((prev) => Math.max(prev - 2, 2));
         }
@@ -556,6 +571,10 @@ export default function ScreenshotAnnotate() {
         case "S":
           selectTool("step");
           break;
+        case "d":
+        case "D":
+          selectTool("depthOfField");
+          break;
         case "g":
         case "G":
           if (tiltEnabled) {
@@ -585,12 +604,18 @@ export default function ScreenshotAnnotate() {
     };
   }, [isTextInputActive, currentTool, tiltEnabled, showWatermarkInput]);
 
-  // Show/hide background palette when switching to/from background tool
+  // Show/hide background palette / DoF panel when switching tools
   useEffect(() => {
     if (currentTool === "background") {
       setShowColorPalette(true);
     } else {
       setShowColorPalette(false);
+    }
+    if (currentTool === "depthOfField") {
+      setShowDofPanel(true);
+      if (dofIntensity === 0) setDofIntensity(25);
+    } else {
+      setShowDofPanel(false);
     }
     setShowWatermarkInput(false);
   }, [currentTool]);
@@ -614,7 +639,7 @@ export default function ScreenshotAnnotate() {
   // Redraw canvas when drawings or tilt change
   useEffect(() => {
     redrawCanvas();
-  }, [drawings, backgroundState, tiltEnabled, tiltX, tiltY, watermarkText]);
+  }, [drawings, backgroundState, tiltEnabled, tiltX, tiltY, watermarkText, dofIntensity, dofXOffset, dofBandWidth]);
 
   // Effect to handle canvas resizing when background state or padding changes
   useEffect(() => {
@@ -646,7 +671,7 @@ export default function ScreenshotAnnotate() {
       return;
     }
 
-    if (currentTool === "background") {
+    if (currentTool === "background" || currentTool === "depthOfField") {
       return;
     }
 
@@ -824,6 +849,9 @@ export default function ScreenshotAnnotate() {
     const currentState: HistoryState = {
       drawings: [...drawings],
       backgroundState: { ...backgroundState },
+      dofIntensity,
+      dofXOffset,
+      dofBandWidth,
     };
 
     // Remove any future history if we're not at the end
@@ -835,7 +863,7 @@ export default function ScreenshotAnnotate() {
 
     setHistory(limitedHistory);
     setHistoryIndex(limitedHistory.length - 1);
-  }, [drawings, backgroundState, history, historyIndex]);
+  }, [drawings, backgroundState, dofIntensity, dofXOffset, dofBandWidth, history, historyIndex]);
 
   // Effect to save initial state to history when image is uploaded
   useEffect(() => {
@@ -872,6 +900,9 @@ export default function ScreenshotAnnotate() {
       const previousState = history[historyIndex - 1];
       setDrawings(previousState.drawings);
       setBackgroundState(previousState.backgroundState);
+      setDofIntensity(previousState.dofIntensity);
+      setDofXOffset(previousState.dofXOffset);
+      setDofBandWidth(previousState.dofBandWidth);
       setHistoryIndex(historyIndex - 1);
       recalcStepCounter(previousState.drawings);
       restoreBgImage(previousState.backgroundState);
@@ -885,6 +916,9 @@ export default function ScreenshotAnnotate() {
       const nextState = history[historyIndex + 1];
       setDrawings(nextState.drawings);
       setBackgroundState(nextState.backgroundState);
+      setDofIntensity(nextState.dofIntensity);
+      setDofXOffset(nextState.dofXOffset);
+      setDofBandWidth(nextState.dofBandWidth);
       setHistoryIndex(historyIndex + 1);
       recalcStepCounter(nextState.drawings);
       restoreBgImage(nextState.backgroundState);
@@ -1051,6 +1085,77 @@ export default function ScreenshotAnnotate() {
         );
       }
     }
+  };
+
+  const applyDepthOfField = (
+    canvas: HTMLCanvasElement,
+    ctx: CanvasRenderingContext2D,
+  ) => {
+    const w = canvas.width;
+    const h = canvas.height;
+    if (dofIntensity <= 0 || w <= 0 || h <= 0) return;
+
+    const focusCenter = (dofXOffset / 100) * w;
+    const bandHalf = (dofBandWidth / 100) * w * 0.5;
+
+    // Snapshot the current sharp canvas content
+    const sharpCanvas = document.createElement("canvas");
+    sharpCanvas.width = w;
+    sharpCanvas.height = h;
+    const sharpCtx = sharpCanvas.getContext("2d")!;
+    sharpCtx.drawImage(canvas, 0, 0);
+
+    // GPU-accelerated blur via WebGL (may return a smaller canvas for large radii)
+    const blurred = webglBlur(sharpCanvas, dofIntensity);
+
+    // Draw blurred version over the entire canvas (stretch if downscaled)
+    ctx.clearRect(0, 0, w, h);
+    ctx.drawImage(blurred, 0, 0, w, h);
+
+    // Re-snapshot the sharp original for masking
+    const maskCanvas = document.createElement("canvas");
+    maskCanvas.width = w;
+    maskCanvas.height = h;
+    const maskCtx = maskCanvas.getContext("2d")!;
+    maskCtx.drawImage(sharpCanvas, 0, 0);
+
+    // Build per-pixel alpha strip: 1 inside focus band, quadratic falloff outside
+    const alphaCanvas = document.createElement("canvas");
+    alphaCanvas.width = w;
+    alphaCanvas.height = 1;
+    const alphaCtx = alphaCanvas.getContext("2d")!;
+    const alphaData = alphaCtx.createImageData(w, 1);
+
+    // Transition zone: blur ramps to full over a distance equal to the band width
+    const transitionDist = Math.max(bandHalf * 2, 1);
+
+    for (let px = 0; px < w; px++) {
+      let dist = 0;
+      if (px < focusCenter - bandHalf) {
+        dist = focusCenter - bandHalf - px;
+      } else if (px > focusCenter + bandHalf) {
+        dist = px - (focusCenter + bandHalf);
+      }
+
+      // Smoothstep-like falloff: sharp inside band, quickly fades to 0
+      const t = Math.min(dist / transitionDist, 1);
+      const smooth = t * t * (3 - 2 * t); // smoothstep
+      const alpha = Math.round((1 - smooth) * 255);
+
+      const i = px * 4;
+      alphaData.data[i] = 255;
+      alphaData.data[i + 1] = 255;
+      alphaData.data[i + 2] = 255;
+      alphaData.data[i + 3] = alpha;
+    }
+    alphaCtx.putImageData(alphaData, 0, 0);
+
+    // Mask sharp content to only the focus band
+    maskCtx.globalCompositeOperation = "destination-in";
+    maskCtx.drawImage(alphaCanvas, 0, 0, w, 1, 0, 0, w, h);
+
+    // Draw masked sharp content over the blurred base
+    ctx.drawImage(maskCanvas, 0, 0);
   };
 
   const drawStepMarker = (
@@ -1411,6 +1516,11 @@ export default function ScreenshotAnnotate() {
       renderFlatContent(ctx, image, imageDisplayWidth, imageDisplayHeight, offsetX, offsetY);
     }
 
+    // Apply depth of field to canvas (bg + image + annotations) before watermarks
+    if (dofIntensity > 0) {
+      applyDepthOfField(canvas, ctx);
+    }
+
     // Watermarks — always at the bottom corners of the full canvas
     ctx.save();
     ctx.globalAlpha = 0.4;
@@ -1642,6 +1752,11 @@ export default function ScreenshotAnnotate() {
                     <Palette className="w-4 h-4" />
                   </button>
                 </Tooltip>
+                <Tooltip content="Depth of Field (D)">
+                  <button onClick={() => selectTool("depthOfField")} className={toolBtnClass(isToolActive("depthOfField"))}>
+                    <Focus className="w-4 h-4" />
+                  </button>
+                </Tooltip>
                 <Tooltip content="3D Tilt (G)">
                   <button
                     onClick={() => {
@@ -1739,7 +1854,7 @@ export default function ScreenshotAnnotate() {
                   ? "crosshair"
                   : currentTool === "text"
                     ? "text"
-                    : currentTool === "background"
+                    : currentTool === "background" || currentTool === "depthOfField"
                       ? "pointer"
                       : "default",
             }}
@@ -1899,6 +2014,64 @@ export default function ScreenshotAnnotate() {
               className="w-full mt-2.5 px-3 py-1.5 text-xs text-white/50 hover:text-white/80 hover:bg-white/[0.06] rounded-md transition-colors"
             >
               Remove Background
+            </button>
+          )}
+        </div>
+      )}
+
+      {/* Depth of Field Panel — right edge panel */}
+      {showDofPanel && !showWatermarkInput && (
+        <div className="fixed top-1/2 right-3 -translate-y-1/2 bg-[#1a1a1f]/95 backdrop-blur-xl rounded-xl p-3 shadow-lg shadow-black/30 border border-white/[0.06] z-50 w-56">
+          <div className="text-[11px] font-medium text-white/50 uppercase tracking-wider mb-3">Depth of Field</div>
+
+          <label className="flex items-center justify-between text-xs text-white/70 mb-1.5">
+            <span>Intensity</span>
+            <span className="text-white/40 tabular-nums">{dofIntensity}</span>
+          </label>
+          <input
+            type="range"
+            min={0}
+            max={50}
+            value={dofIntensity}
+            onChange={(e) => { cancelAnimationFrame(dofRafRef.current); const v = Number(e.target.value); dofRafRef.current = requestAnimationFrame(() => setDofIntensity(v)); }}
+            onPointerUp={() => saveToHistory()}
+            className="w-full h-1 bg-white/10 rounded-full appearance-none cursor-pointer accent-white/80 mb-4"
+          />
+
+          <label className="flex items-center justify-between text-xs text-white/70 mb-1.5">
+            <span>Focus X-Offset</span>
+            <span className="text-white/40 tabular-nums">{dofXOffset}%</span>
+          </label>
+          <input
+            type="range"
+            min={0}
+            max={100}
+            value={dofXOffset}
+            onChange={(e) => { cancelAnimationFrame(dofRafRef.current); const v = Number(e.target.value); dofRafRef.current = requestAnimationFrame(() => setDofXOffset(v)); }}
+            onPointerUp={() => saveToHistory()}
+            className="w-full h-1 bg-white/10 rounded-full appearance-none cursor-pointer accent-white/80 mb-4"
+          />
+
+          <label className="flex items-center justify-between text-xs text-white/70 mb-1.5">
+            <span>Band Width</span>
+            <span className="text-white/40 tabular-nums">{dofBandWidth}%</span>
+          </label>
+          <input
+            type="range"
+            min={5}
+            max={50}
+            value={dofBandWidth}
+            onChange={(e) => { cancelAnimationFrame(dofRafRef.current); const v = Number(e.target.value); dofRafRef.current = requestAnimationFrame(() => setDofBandWidth(v)); }}
+            onPointerUp={() => saveToHistory()}
+            className="w-full h-1 bg-white/10 rounded-full appearance-none cursor-pointer accent-white/80 mb-2"
+          />
+
+          {dofIntensity > 0 && (
+            <button
+              onClick={() => { saveToHistory(); setDofIntensity(0); setDofXOffset(50); setDofBandWidth(10); }}
+              className="w-full mt-2.5 px-3 py-1.5 text-xs text-white/50 hover:text-white/80 hover:bg-white/[0.06] rounded-md transition-colors"
+            >
+              Remove Effect
             </button>
           )}
         </div>
