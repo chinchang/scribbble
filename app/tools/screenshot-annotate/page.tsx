@@ -146,6 +146,7 @@ export default function ScreenshotAnnotate() {
   const textInputRef = useRef<HTMLInputElement>(null);
   const stepCounterRef = useRef<number>(1);
   const bgImageRef = useRef<HTMLImageElement | null>(null);
+  const bgPaletteRef = useRef<HTMLDivElement>(null);
 
   const handleImageUpload = (file: File) => {
     if (file && file.type.startsWith("image/")) {
@@ -296,6 +297,12 @@ export default function ScreenshotAnnotate() {
             e.preventDefault();
             setTiltY((prev) => Math.min(prev + 5, 30));
             return;
+          case "Delete":
+          case "Backspace":
+            e.preventDefault();
+            setTiltX(0);
+            setTiltY(0);
+            return;
         }
       }
 
@@ -364,6 +371,13 @@ export default function ScreenshotAnnotate() {
       setShowColorPalette(false);
     }
   }, [currentTool]);
+
+  // Focus background palette when it opens
+  useEffect(() => {
+    if (showColorPalette && bgPaletteRef.current) {
+      bgPaletteRef.current.focus();
+    }
+  }, [showColorPalette]);
 
   // Focus text input when it becomes active
   useEffect(() => {
@@ -839,7 +853,7 @@ export default function ScreenshotAnnotate() {
     ctx.textBaseline = "alphabetic";
   };
 
-  const FOCAL_LENGTH = 1400;
+  const FOCAL_LENGTH = 1500;
 
   const getProjectedSize = (
     srcW: number,
@@ -890,6 +904,7 @@ export default function ScreenshotAnnotate() {
     canvasH: number,
     tiltXDeg: number,
     tiltYDeg: number,
+    outputScale: number = 1,
   ) => {
     const srcW = sourceCanvas.width;
     const srcH = sourceCanvas.height;
@@ -968,11 +983,15 @@ export default function ScreenshotAnnotate() {
       currentSource = final;
     }
 
-    // Draw centered on main canvas
+    // Draw centered on main canvas, scaling down if rendered at higher res
+    const destW = currentSource.width / outputScale;
+    const destH = currentSource.height / outputScale;
     ctx.drawImage(
       currentSource,
-      (canvasW - currentSource.width) / 2,
-      (canvasH - currentSource.height) / 2,
+      (canvasW - destW) / 2,
+      (canvasH - destH) / 2,
+      destW,
+      destH,
     );
   };
 
@@ -1018,6 +1037,7 @@ export default function ScreenshotAnnotate() {
   ) => {
     const borderRadius = 12;
 
+    // Image with rounded corners
     ctx.save();
     ctx.beginPath();
     ctx.roundRect(
@@ -1125,36 +1145,37 @@ export default function ScreenshotAnnotate() {
     drawBackground(ctx, canvas.width, canvas.height);
 
     if (tiltEnabled && (tiltX !== 0 || tiltY !== 0)) {
-      // Render flat content to offscreen canvas, then project with tilt
+      // Render flat content at 2x for sharper tilt output
+      const scale = 2;
       const offscreen = document.createElement("canvas");
-      offscreen.width = imageDisplayWidth;
-      offscreen.height = imageDisplayHeight;
+      offscreen.width = imageDisplayWidth * scale;
+      offscreen.height = imageDisplayHeight * scale;
       const offCtx = offscreen.getContext("2d")!;
-      renderFlatContent(
-        offCtx,
-        image,
-        imageDisplayWidth,
-        imageDisplayHeight,
-        0,
-        0,
-      );
-      drawTiltedImage(
-        ctx,
-        offscreen,
-        canvas.width,
-        canvas.height,
-        tiltX,
-        tiltY,
-      );
+      offCtx.scale(scale, scale);
+      renderFlatContent(offCtx, image, imageDisplayWidth, imageDisplayHeight, 0, 0);
+
+      // Draw shadow: apply shadow to the tilted image drawImage call
+      ctx.save();
+      ctx.shadowColor = "rgba(0, 0, 0, 0.55)";
+      ctx.shadowBlur = 40;
+      ctx.shadowOffsetX = 0;
+      ctx.shadowOffsetY = 12;
+      drawTiltedImage(ctx, offscreen, canvas.width, canvas.height, tiltX, tiltY, scale);
+      ctx.restore();
     } else {
-      renderFlatContent(
-        ctx,
-        image,
-        imageDisplayWidth,
-        imageDisplayHeight,
-        offsetX,
-        offsetY,
-      );
+      // Draw shadow behind flat image
+      ctx.save();
+      ctx.shadowColor = "rgba(0, 0, 0, 0.55)";
+      ctx.shadowBlur = 40;
+      ctx.shadowOffsetX = 0;
+      ctx.shadowOffsetY = 12;
+      ctx.beginPath();
+      ctx.roundRect(offsetX, offsetY, imageDisplayWidth, imageDisplayHeight, 12);
+      ctx.fillStyle = "rgba(0, 0, 0, 1)";
+      ctx.fill();
+      ctx.restore();
+
+      renderFlatContent(ctx, image, imageDisplayWidth, imageDisplayHeight, offsetX, offsetY);
     }
   };
 
@@ -1194,8 +1215,9 @@ export default function ScreenshotAnnotate() {
         tiltX,
         tiltY,
       );
-      canvasWidth = proj.width + padding * 2;
-      canvasHeight = proj.height + padding * 2;
+      // Extra space for shadow bleed
+      canvasWidth = proj.width + padding * 2 + 60;
+      canvasHeight = proj.height + padding * 2 + 60;
     } else {
       canvasWidth = imageDisplayWidth + padding * 2;
       canvasHeight = imageDisplayHeight + padding * 2;
@@ -1224,7 +1246,10 @@ export default function ScreenshotAnnotate() {
     if (!canvas) return;
 
     const link = document.createElement("a");
-    link.download = "annotated-screenshot.png";
+    const now = new Date();
+    const date = now.toISOString().slice(0, 10).replace(/-/g, "_");
+    const time = now.toTimeString().slice(0, 8).replace(/:/g, "_");
+    link.download = `scribbble-screenshot-${date}-${time}.png`;
     link.href = canvas.toDataURL();
     link.click();
   };
@@ -1337,104 +1362,6 @@ export default function ScreenshotAnnotate() {
                     />
                   )}
 
-                  {/* Background Palette */}
-                  {showColorPalette && (
-                    <div className="absolute top-4 right-4 bg-slate-900/90 backdrop-blur-lg rounded-2xl p-4 shadow-2xl border border-white/10 z-50 w-72">
-                      {/* Tabs */}
-                      <div className="flex gap-1 mb-3 bg-white/5 rounded-lg p-1">
-                        {(
-                          ["solid", "gradient", "image"] as BackgroundType[]
-                        ).map((tab) => (
-                          <button
-                            key={tab}
-                            onClick={() => setBgTab(tab)}
-                            className={`flex-1 px-2 py-1.5 text-xs font-medium rounded-md transition-colors capitalize ${
-                              bgTab === tab
-                                ? "bg-white/20 text-white"
-                                : "text-white/50 hover:text-white/80"
-                            }`}
-                          >
-                            {tab}
-                          </button>
-                        ))}
-                      </div>
-
-                      {/* Solid Colors */}
-                      {bgTab === "solid" && (
-                        <div className="grid grid-cols-5 gap-2">
-                          {backgroundColors.map((color) => (
-                            <button
-                              key={color}
-                              onClick={() => handleBackgroundColorSelect(color)}
-                              className={`w-10 h-10 rounded-lg border-2 transition-colors hover:scale-110 transform ${
-                                backgroundState.type === "solid" &&
-                                backgroundState.color === color
-                                  ? "border-blue-400"
-                                  : "border-white/20 hover:border-white/50"
-                              }`}
-                              style={{ backgroundColor: color }}
-                            />
-                          ))}
-                        </div>
-                      )}
-
-                      {/* Gradients */}
-                      {bgTab === "gradient" && (
-                        <div className="grid grid-cols-5 gap-2">
-                          {backgroundGradients.map((g, i) => (
-                            <button
-                              key={i}
-                              onClick={() => handleBackgroundGradientSelect(g)}
-                              className={`w-10 h-10 rounded-lg border-2 transition-colors hover:scale-110 transform ${
-                                backgroundState.type === "gradient" &&
-                                backgroundState.gradient?.from === g.from &&
-                                backgroundState.gradient?.to === g.to
-                                  ? "border-blue-400"
-                                  : "border-white/20 hover:border-white/50"
-                              }`}
-                              style={{
-                                background: `linear-gradient(${g.angle}deg, ${g.from}, ${g.to})`,
-                              }}
-                            />
-                          ))}
-                        </div>
-                      )}
-
-                      {/* Images */}
-                      {bgTab === "image" && (
-                        <div className="grid grid-cols-4 gap-2 max-h-48 overflow-y-auto">
-                          {backgroundImages.map((src) => (
-                            <button
-                              key={src}
-                              onClick={() => handleBackgroundImageSelect(src)}
-                              className={`w-14 h-14 rounded-lg border-2 transition-colors hover:scale-105 transform overflow-hidden ${
-                                backgroundState.type === "image" &&
-                                backgroundState.imageSrc === src
-                                  ? "border-blue-400"
-                                  : "border-white/20 hover:border-white/50"
-                              }`}
-                            >
-                              <img
-                                src={src}
-                                alt=""
-                                className="w-full h-full object-cover"
-                              />
-                            </button>
-                          ))}
-                        </div>
-                      )}
-
-                      {/* Clear button */}
-                      <div className="mt-3">
-                        <button
-                          onClick={clearBackground}
-                          className="w-full px-3 py-1.5 bg-white/10 hover:bg-white/20 text-white text-sm rounded-lg transition-colors"
-                        >
-                          Clear Background
-                        </button>
-                      </div>
-                    </div>
-                  )}
                 </div>
                 {/* Floating Toolbar - Redesigned & Draggable */}
                 <div
@@ -1593,11 +1520,6 @@ export default function ScreenshotAnnotate() {
                         </button>
                       </Tooltip>
 
-                      {tiltEnabled && (tiltX !== 0 || tiltY !== 0) && (
-                        <span className="text-xs text-white/60 font-mono">
-                          {tiltX}°/{tiltY}°
-                        </span>
-                      )}
 
                       {/* Separator */}
                       <div className="w-px h-8 bg-white/20"></div>
@@ -1669,6 +1591,105 @@ export default function ScreenshotAnnotate() {
                 </div>
               </div>
             </Card>
+          </div>
+        )}
+
+        {/* Background Palette - Fixed on right side */}
+        {showColorPalette && (
+          <div ref={bgPaletteRef} tabIndex={-1} className="fixed top-1/2 right-4 -translate-y-1/2 bg-slate-900/90 backdrop-blur-lg rounded-2xl p-4 shadow-2xl border border-white/10 z-50 w-72 outline-none">
+            {/* Tabs */}
+            <div className="flex gap-1 mb-3 bg-white/5 rounded-lg p-1">
+              {(["solid", "gradient", "image"] as BackgroundType[]).map(
+                (tab) => (
+                  <button
+                    key={tab}
+                    onClick={() => setBgTab(tab)}
+                    className={`flex-1 px-2 py-1.5 text-xs font-medium rounded-md transition-colors capitalize ${
+                      bgTab === tab
+                        ? "bg-white/20 text-white"
+                        : "text-white/50 hover:text-white/80"
+                    }`}
+                  >
+                    {tab}
+                  </button>
+                ),
+              )}
+            </div>
+
+            {/* Solid Colors */}
+            {bgTab === "solid" && (
+              <div className="grid grid-cols-5 gap-2">
+                {backgroundColors.map((color) => (
+                  <button
+                    key={color}
+                    onClick={() => handleBackgroundColorSelect(color)}
+                    className={`w-10 h-10 rounded-lg border-2 transition-colors hover:scale-110 transform ${
+                      backgroundState.type === "solid" &&
+                      backgroundState.color === color
+                        ? "border-blue-400"
+                        : "border-white/20 hover:border-white/50"
+                    }`}
+                    style={{ backgroundColor: color }}
+                  />
+                ))}
+              </div>
+            )}
+
+            {/* Gradients */}
+            {bgTab === "gradient" && (
+              <div className="grid grid-cols-5 gap-2">
+                {backgroundGradients.map((g, i) => (
+                  <button
+                    key={i}
+                    onClick={() => handleBackgroundGradientSelect(g)}
+                    className={`w-10 h-10 rounded-lg border-2 transition-colors hover:scale-110 transform ${
+                      backgroundState.type === "gradient" &&
+                      backgroundState.gradient?.from === g.from &&
+                      backgroundState.gradient?.to === g.to
+                        ? "border-blue-400"
+                        : "border-white/20 hover:border-white/50"
+                    }`}
+                    style={{
+                      background: `linear-gradient(${g.angle}deg, ${g.from}, ${g.to})`,
+                    }}
+                  />
+                ))}
+              </div>
+            )}
+
+            {/* Images */}
+            {bgTab === "image" && (
+              <div className="grid grid-cols-4 gap-2 max-h-48 overflow-y-auto">
+                {backgroundImages.map((src) => (
+                  <button
+                    key={src}
+                    onClick={() => handleBackgroundImageSelect(src)}
+                    className={`w-14 h-14 rounded-lg border-2 transition-colors hover:scale-105 transform overflow-hidden ${
+                      backgroundState.type === "image" &&
+                      backgroundState.imageSrc === src
+                        ? "border-blue-400"
+                        : "border-white/20 hover:border-white/50"
+                    }`}
+                  >
+                    <img
+                      src={src}
+                      alt=""
+                      className="w-full h-full object-cover"
+                    />
+                  </button>
+                ))}
+              </div>
+            )}
+
+            {/* Clear button */}
+            <div className="mt-3">
+              <button
+                onClick={clearBackground}
+                className="w-full px-3 py-1.5 bg-white/10 hover:bg-white/20 text-white text-sm rounded-lg transition-colors"
+              >
+                Clear Background
+              </button>
+            </div>
           </div>
         )}
 
