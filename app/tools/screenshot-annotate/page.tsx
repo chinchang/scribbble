@@ -385,7 +385,7 @@ export default function ScreenshotAnnotate() {
   ];
 
   const backgroundImages = Array.from(
-    { length: 13 },
+    { length: 18 },
     (_, i) => `/bgs/wp-${i + 1}.avif`,
   );
 
