@@ -75,6 +75,8 @@ interface HistoryState {
   dofIntensity: number;
   dofXOffset: number;
   dofBandWidth: number;
+  tiltX: number;
+  tiltY: number;
 }
 
 // --- Programmatic sound effects via Web Audio API ---
@@ -398,6 +400,7 @@ export default function ScreenshotAnnotate() {
   const bgPaletteRef = useRef<HTMLDivElement>(null);
   const dofPanelRef = useRef<HTMLDivElement>(null);
   const dofRafRef = useRef<number>(0);
+  const tiltSaveTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const handleImageUpload = (file: File) => {
     if (file && file.type.startsWith("image/")) {
@@ -541,9 +544,9 @@ export default function ScreenshotAnnotate() {
       if ((e.key === "Delete" || e.key === "Backspace") && !e.ctrlKey && !e.metaKey) {
         if (tiltEnabled && (tiltX !== 0 || tiltY !== 0)) {
           e.preventDefault();
-          saveToHistory();
           setTiltX(0);
           setTiltY(0);
+          saveToHistory({ tiltX: 0, tiltY: 0 });
           sfx.clear();
           return;
         }
@@ -554,10 +557,10 @@ export default function ScreenshotAnnotate() {
         }
         if (showDofPanel && dofIntensity > 0) {
           e.preventDefault();
-          saveToHistory();
           setDofIntensity(0);
           setDofXOffset(50);
           setDofBandWidth(10);
+          saveToHistory({ dofIntensity: 0, dofXOffset: 50, dofBandWidth: 10 });
           sfx.clear();
           return;
         }
@@ -565,27 +568,45 @@ export default function ScreenshotAnnotate() {
 
       // Arrow keys for 3D tilt
       if (tiltEnabled && !e.ctrlKey && !e.metaKey) {
+        const scheduleTiltSave = (nextX: number, nextY: number) => {
+          if (tiltSaveTimerRef.current) clearTimeout(tiltSaveTimerRef.current);
+          tiltSaveTimerRef.current = setTimeout(() => {
+            saveToHistory({ tiltX: nextX, tiltY: nextY });
+          }, 400);
+        };
         switch (e.key) {
-          case "ArrowUp":
+          case "ArrowUp": {
             e.preventDefault();
-            setTiltX((prev) => Math.min(prev + 5, 30));
+            const next = Math.min(tiltX + 5, 30);
+            setTiltX(next);
+            scheduleTiltSave(next, tiltY);
             sfx.tick(true);
             return;
-          case "ArrowDown":
+          }
+          case "ArrowDown": {
             e.preventDefault();
-            setTiltX((prev) => Math.max(prev - 5, -30));
+            const next = Math.max(tiltX - 5, -30);
+            setTiltX(next);
+            scheduleTiltSave(next, tiltY);
             sfx.tick(false);
             return;
-          case "ArrowLeft":
+          }
+          case "ArrowLeft": {
             e.preventDefault();
-            setTiltY((prev) => Math.max(prev - 5, -30));
+            const next = Math.max(tiltY - 5, -30);
+            setTiltY(next);
+            scheduleTiltSave(tiltX, next);
             sfx.tick(false);
             return;
-          case "ArrowRight":
+          }
+          case "ArrowRight": {
             e.preventDefault();
-            setTiltY((prev) => Math.min(prev + 5, 30));
+            const next = Math.min(tiltY + 5, 30);
+            setTiltY(next);
+            scheduleTiltSave(tiltX, next);
             sfx.tick(true);
             return;
+          }
         }
       }
 
@@ -759,7 +780,6 @@ export default function ScreenshotAnnotate() {
 
     if (currentTool === "step") {
       const point = getMousePos(e);
-      saveToHistory();
       const newDrawing: DrawingElement = {
         type: "step",
         points: [point],
@@ -767,7 +787,9 @@ export default function ScreenshotAnnotate() {
         strokeWidth: brushSize,
         stepNumber: stepCounterRef.current++,
       };
-      setDrawings((prev) => [...prev, newDrawing]);
+      const newDrawings = [...drawings, newDrawing];
+      setDrawings(newDrawings);
+      saveToHistory({ drawings: newDrawings });
       sfx.pop();
       return;
     }
@@ -854,9 +876,9 @@ export default function ScreenshotAnnotate() {
       strokeWidth: brushSize,
     };
 
-    // Save current state before adding new drawing
-    saveToHistory();
-    setDrawings((prev) => [...prev, newDrawing]);
+    const newDrawings = [...drawings, newDrawing];
+    setDrawings(newDrawings);
+    saveToHistory({ drawings: newDrawings });
     setCurrentPath([]);
     sfx.done();
   };
@@ -878,14 +900,9 @@ export default function ScreenshotAnnotate() {
       fontSize: Math.max(16, brushSize * 5),
     };
 
-    console.log("Adding text drawing:", newDrawing);
-    // Save current state before adding new text
-    saveToHistory();
-    setDrawings((prev) => {
-      const updated = [...prev, newDrawing];
-      console.log("Updated drawings array:", updated);
-      return updated;
-    });
+    const newDrawings = [...drawings, newDrawing];
+    setDrawings(newDrawings);
+    saveToHistory({ drawings: newDrawings });
     setIsTextInputActive(false);
     setTextInput("");
     sfx.pop();
@@ -893,8 +910,9 @@ export default function ScreenshotAnnotate() {
   };
 
   const handleBackgroundColorSelect = (color: string) => {
-    saveToHistory();
-    setBackgroundState({ type: "solid", color });
+    const newBg: BackgroundState = { type: "solid", color };
+    setBackgroundState(newBg);
+    saveToHistory({ backgroundState: newBg });
     sfx.pop();
   };
 
@@ -903,37 +921,44 @@ export default function ScreenshotAnnotate() {
     to: string;
     angle: number;
   }) => {
-    saveToHistory();
-    setBackgroundState({ type: "gradient", color: null, gradient });
+    const newBg: BackgroundState = { type: "gradient", color: null, gradient };
+    setBackgroundState(newBg);
+    saveToHistory({ backgroundState: newBg });
     sfx.pop();
   };
 
   const handleBackgroundImageSelect = (src: string) => {
-    saveToHistory();
     const img = new Image();
     img.src = src;
     img.onload = () => {
       bgImageRef.current = img;
-      setBackgroundState({ type: "image", color: null, imageSrc: src });
+      const newBg: BackgroundState = { type: "image", color: null, imageSrc: src };
+      setBackgroundState(newBg);
+      saveToHistory({ backgroundState: newBg });
       sfx.pop();
     };
   };
 
   const clearBackground = () => {
-    saveToHistory();
     bgImageRef.current = null;
-    setBackgroundState({ type: null, color: null });
+    const newBg: BackgroundState = { type: null, color: null };
+    setBackgroundState(newBg);
+    saveToHistory({ backgroundState: newBg });
     sfx.clear();
   };
 
-  // Save current state to history
-  const saveToHistory = useCallback(() => {
+  // Save a state snapshot to history. Callers should pass the NEW state
+  // (i.e. what's about to be rendered). Omitted fields fall back to the
+  // current React state (appropriate when a field is unchanged).
+  const saveToHistory = useCallback((override?: Partial<HistoryState>) => {
     const currentState: HistoryState = {
-      drawings: [...drawings],
-      backgroundState: { ...backgroundState },
-      dofIntensity,
-      dofXOffset,
-      dofBandWidth,
+      drawings: override?.drawings ?? [...drawings],
+      backgroundState: override?.backgroundState ?? { ...backgroundState },
+      dofIntensity: override?.dofIntensity ?? dofIntensity,
+      dofXOffset: override?.dofXOffset ?? dofXOffset,
+      dofBandWidth: override?.dofBandWidth ?? dofBandWidth,
+      tiltX: override?.tiltX ?? tiltX,
+      tiltY: override?.tiltY ?? tiltY,
     };
 
     // Remove any future history if we're not at the end
@@ -945,7 +970,7 @@ export default function ScreenshotAnnotate() {
 
     setHistory(limitedHistory);
     setHistoryIndex(limitedHistory.length - 1);
-  }, [drawings, backgroundState, dofIntensity, dofXOffset, dofBandWidth, history, historyIndex]);
+  }, [drawings, backgroundState, dofIntensity, dofXOffset, dofBandWidth, tiltX, tiltY, history, historyIndex]);
 
   // Effect to save initial state to history when image is uploaded
   useEffect(() => {
@@ -953,19 +978,6 @@ export default function ScreenshotAnnotate() {
       saveToHistory();
     }
   }, [uploadedImage, history.length, saveToHistory]);
-
-  const restoreBgImage = (state: BackgroundState) => {
-    if (state.type === "image" && state.imageSrc) {
-      const img = new Image();
-      img.src = state.imageSrc;
-      img.onload = () => {
-        bgImageRef.current = img;
-        redrawCanvas();
-      };
-    } else {
-      bgImageRef.current = null;
-    }
-  };
 
   const recalcStepCounter = (drawingsList: DrawingElement[]) => {
     const maxStep = drawingsList.reduce((max, d) => {
@@ -976,18 +988,44 @@ export default function ScreenshotAnnotate() {
     stepCounterRef.current = maxStep + 1;
   };
 
+  // Apply a history snapshot. If it contains an image background,
+  // preload the image and set the ref BEFORE updating state, so the
+  // subsequent redraw has the image available.
+  const applyHistoryState = (state: HistoryState, newIndex: number) => {
+    const doApply = () => {
+      setDrawings(state.drawings);
+      setBackgroundState(state.backgroundState);
+      setDofIntensity(state.dofIntensity);
+      setDofXOffset(state.dofXOffset);
+      setDofBandWidth(state.dofBandWidth);
+      setTiltX(state.tiltX);
+      setTiltY(state.tiltY);
+      setHistoryIndex(newIndex);
+      recalcStepCounter(state.drawings);
+    };
+
+    if (state.backgroundState.type === "image" && state.backgroundState.imageSrc) {
+      const img = new Image();
+      img.src = state.backgroundState.imageSrc;
+      const done = () => {
+        bgImageRef.current = img;
+        doApply();
+      };
+      if (img.complete && img.naturalWidth > 0) {
+        done();
+      } else {
+        img.onload = done;
+      }
+    } else {
+      bgImageRef.current = null;
+      doApply();
+    }
+  };
+
   // Undo function
   const undo = () => {
     if (historyIndex > 0) {
-      const previousState = history[historyIndex - 1];
-      setDrawings(previousState.drawings);
-      setBackgroundState(previousState.backgroundState);
-      setDofIntensity(previousState.dofIntensity);
-      setDofXOffset(previousState.dofXOffset);
-      setDofBandWidth(previousState.dofBandWidth);
-      setHistoryIndex(historyIndex - 1);
-      recalcStepCounter(previousState.drawings);
-      restoreBgImage(previousState.backgroundState);
+      applyHistoryState(history[historyIndex - 1], historyIndex - 1);
       sfx.undo();
     }
   };
@@ -995,15 +1033,7 @@ export default function ScreenshotAnnotate() {
   // Redo function
   const redo = () => {
     if (historyIndex < history.length - 1) {
-      const nextState = history[historyIndex + 1];
-      setDrawings(nextState.drawings);
-      setBackgroundState(nextState.backgroundState);
-      setDofIntensity(nextState.dofIntensity);
-      setDofXOffset(nextState.dofXOffset);
-      setDofBandWidth(nextState.dofBandWidth);
-      setHistoryIndex(historyIndex + 1);
-      recalcStepCounter(nextState.drawings);
-      restoreBgImage(nextState.backgroundState);
+      applyHistoryState(history[historyIndex + 1], historyIndex + 1);
       sfx.redo();
     }
   };
@@ -1696,8 +1726,8 @@ export default function ScreenshotAnnotate() {
   };
 
   const clearDrawings = () => {
-    saveToHistory();
     setDrawings([]);
+    saveToHistory({ drawings: [] });
     redrawCanvas();
     sfx.clear();
   };
@@ -2239,7 +2269,12 @@ export default function ScreenshotAnnotate() {
 
           {dofIntensity > 0 && (
             <button
-              onClick={() => { saveToHistory(); setDofIntensity(0); setDofXOffset(50); setDofBandWidth(10); }}
+              onClick={() => {
+                setDofIntensity(0);
+                setDofXOffset(50);
+                setDofBandWidth(10);
+                saveToHistory({ dofIntensity: 0, dofXOffset: 50, dofBandWidth: 10 });
+              }}
               className="w-full mt-2.5 px-3 py-1.5 text-sm text-white/50 hover:text-white/80 hover:bg-white/[0.06] rounded-md transition-colors flex items-center justify-center gap-2"
             >
               Remove Effect
@@ -2267,7 +2302,7 @@ export default function ScreenshotAnnotate() {
 
         {(tiltX !== 0 || tiltY !== 0) && (
           <button
-            onClick={() => { saveToHistory(); setTiltX(0); setTiltY(0); sfx.clear(); }}
+            onClick={() => { setTiltX(0); setTiltY(0); saveToHistory({ tiltX: 0, tiltY: 0 }); sfx.clear(); }}
             className="w-full mt-3 px-3 py-1.5 text-sm text-white/50 hover:text-white/80 hover:bg-white/[0.06] rounded-md transition-colors flex items-center justify-center gap-2"
           >
             Reset Tilt
