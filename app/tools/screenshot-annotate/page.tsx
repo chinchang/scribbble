@@ -344,6 +344,7 @@ export default function ScreenshotAnnotate() {
   const stepCounterRef = useRef<number>(1);
   const bgImageRef = useRef<HTMLImageElement | null>(null);
   const bgPaletteRef = useRef<HTMLDivElement>(null);
+  const dofPanelRef = useRef<HTMLDivElement>(null);
   const dofRafRef = useRef<number>(0);
 
   const handleImageUpload = (file: File) => {
@@ -626,6 +627,13 @@ export default function ScreenshotAnnotate() {
       bgPaletteRef.current.focus();
     }
   }, [showColorPalette]);
+
+  // Focus DoF panel when it opens
+  useEffect(() => {
+    if (showDofPanel && dofPanelRef.current) {
+      dofPanelRef.current.focus();
+    }
+  }, [showDofPanel]);
 
   // Focus text input when it becomes active
   useEffect(() => {
@@ -1525,7 +1533,7 @@ export default function ScreenshotAnnotate() {
     ctx.save();
     ctx.globalAlpha = 0.4;
     ctx.fillStyle = "#ffffff";
-    ctx.font = "800 13px sans-serif";
+    ctx.font = "800 14px sans-serif";
     ctx.textBaseline = "bottom";
 
     // "Made with Scribbble" - always shown, bottom-left
@@ -1637,6 +1645,77 @@ export default function ScreenshotAnnotate() {
   const isToolActive = (tool: Tool) =>
     currentTool === tool && !showWatermarkInput && !tiltEnabled;
 
+  // Spatial arrow-key navigation inside a panel — focuses the nearest
+  // focusable element in the pressed direction.
+  const handleSpatialNav = (
+    e: React.KeyboardEvent<HTMLDivElement>,
+    rootRef: React.RefObject<HTMLDivElement>,
+  ) => {
+    if (!["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].includes(e.key)) return;
+    e.preventDefault();
+    e.stopPropagation();
+    const root = rootRef.current;
+    if (!root) return;
+    const focusables = Array.from(
+      root.querySelectorAll<HTMLElement>("button, input, [tabindex]:not([tabindex='-1'])"),
+    ).filter((el) => {
+      if (el === root) return false;
+      if ((el as HTMLButtonElement | HTMLInputElement).disabled) return false;
+      return el.offsetParent !== null;
+    });
+    if (focusables.length === 0) return;
+
+    const current = (document.activeElement as HTMLElement) ?? null;
+    const currentRect =
+      current && root.contains(current)
+        ? current.getBoundingClientRect()
+        : focusables[0].getBoundingClientRect();
+    const cx = currentRect.left + currentRect.width / 2;
+    const cy = currentRect.top + currentRect.height / 2;
+
+    let best: HTMLElement | null = null;
+    let bestScore = Infinity;
+
+    for (const el of focusables) {
+      if (el === current) continue;
+      const r = el.getBoundingClientRect();
+      const bx = r.left + r.width / 2;
+      const by = r.top + r.height / 2;
+      const dx = bx - cx;
+      const dy = by - cy;
+
+      let inDir = false;
+      let primary = 0;
+      let secondary = 0;
+      if (e.key === "ArrowRight") {
+        inDir = dx > 1;
+        primary = dx;
+        secondary = Math.abs(dy);
+      } else if (e.key === "ArrowLeft") {
+        inDir = dx < -1;
+        primary = -dx;
+        secondary = Math.abs(dy);
+      } else if (e.key === "ArrowDown") {
+        inDir = dy > 1;
+        primary = dy;
+        secondary = Math.abs(dx);
+      } else if (e.key === "ArrowUp") {
+        inDir = dy < -1;
+        primary = -dy;
+        secondary = Math.abs(dx);
+      }
+      if (!inDir) continue;
+      // Weight perpendicular distance heavier to prefer straight-line neighbors
+      const score = primary + secondary * 2;
+      if (score < bestScore) {
+        bestScore = score;
+        best = el;
+      }
+    }
+
+    if (best) best.focus();
+  };
+
   const selectTool = (tool: Tool) => {
     setTiltEnabled(false);
     setShowWatermarkInput(false);
@@ -1677,7 +1756,7 @@ export default function ScreenshotAnnotate() {
               <p className="text-sm text-neutral-500 group-hover:text-neutral-600 transition-colors">
                 Drop an image or click to upload
               </p>
-              <p className="text-xs text-neutral-400 mt-1.5">
+              <p className="text-sm text-neutral-400 mt-1.5">
                 or paste from clipboard
               </p>
             </div>
@@ -1690,7 +1769,7 @@ export default function ScreenshotAnnotate() {
             className="hidden"
           />
 
-          <div className="flex items-center gap-4 mt-8 text-[11px] text-neutral-300 uppercase tracking-widest">
+          <div className="flex items-center gap-4 mt-8 text-sm text-neutral-300 uppercase tracking-widest">
             <span>JPG</span>
             <span className="w-px h-3 bg-neutral-200" />
             <span>PNG</span>
@@ -1922,7 +2001,12 @@ export default function ScreenshotAnnotate() {
 
       {/* Background Palette — right edge panel */}
       {showColorPalette && !showWatermarkInput && (
-        <div ref={bgPaletteRef} tabIndex={-1} className="fixed top-1/2 right-3 -translate-y-1/2 bg-[#1a1a1f]/95 backdrop-blur-xl rounded-xl p-3 shadow-lg shadow-black/30 border border-white/[0.06] z-50 w-64 outline-none">
+        <div
+          ref={bgPaletteRef}
+          tabIndex={-1}
+          onKeyDown={(e) => handleSpatialNav(e, bgPaletteRef)}
+          className="fixed top-1/2 right-3 -translate-y-1/2 bg-[#1a1a1f]/95 backdrop-blur-xl rounded-xl p-3 shadow-lg shadow-black/30 border border-white/[0.06] z-50 w-64 outline-none"
+        >
           {/* Tabs */}
           <div className="flex gap-0.5 mb-3 bg-white/[0.04] rounded-lg p-0.5">
             {(["solid", "gradient", "image"] as BackgroundType[]).map(
@@ -1930,7 +2014,7 @@ export default function ScreenshotAnnotate() {
                 <button
                   key={tab}
                   onClick={() => setBgTab(tab)}
-                  className={`flex-1 px-2 py-1 text-[11px] font-medium rounded-md transition-colors capitalize ${
+                  className={`flex-1 px-2 py-1 text-sm font-medium rounded-md transition-colors capitalize ${
                     bgTab === tab
                       ? "bg-white/15 text-white"
                       : "text-white/35 hover:text-white/60"
@@ -2011,7 +2095,7 @@ export default function ScreenshotAnnotate() {
           {backgroundState.type && (
             <button
               onClick={clearBackground}
-              className="w-full mt-2.5 px-3 py-1.5 text-xs text-white/50 hover:text-white/80 hover:bg-white/[0.06] rounded-md transition-colors"
+              className="w-full mt-2.5 px-3 py-1.5 text-sm text-white/50 hover:text-white/80 hover:bg-white/[0.06] rounded-md transition-colors"
             >
               Remove Background
             </button>
@@ -2021,10 +2105,15 @@ export default function ScreenshotAnnotate() {
 
       {/* Depth of Field Panel — right edge panel */}
       {showDofPanel && !showWatermarkInput && (
-        <div className="fixed top-1/2 right-3 -translate-y-1/2 bg-[#1a1a1f]/95 backdrop-blur-xl rounded-xl p-3 shadow-lg shadow-black/30 border border-white/[0.06] z-50 w-56">
-          <div className="text-[11px] font-medium text-white/50 uppercase tracking-wider mb-3">Depth of Field</div>
+        <div
+          ref={dofPanelRef}
+          tabIndex={-1}
+          onKeyDown={(e) => handleSpatialNav(e, dofPanelRef)}
+          className="fixed top-1/2 right-3 -translate-y-1/2 bg-[#1a1a1f]/95 backdrop-blur-xl rounded-xl p-3 shadow-lg shadow-black/30 border border-white/[0.06] z-50 w-56 outline-none"
+        >
+          <div className="text-sm font-medium text-white/50 uppercase tracking-wider mb-3">Depth of Field</div>
 
-          <label className="flex items-center justify-between text-xs text-white/70 mb-1.5">
+          <label className="flex items-center justify-between text-sm text-white/70 mb-1.5">
             <span>Intensity</span>
             <span className="text-white/40 tabular-nums">{dofIntensity}</span>
           </label>
@@ -2038,7 +2127,7 @@ export default function ScreenshotAnnotate() {
             className="w-full h-1 bg-white/10 rounded-full appearance-none cursor-pointer accent-white/80 mb-4"
           />
 
-          <label className="flex items-center justify-between text-xs text-white/70 mb-1.5">
+          <label className="flex items-center justify-between text-sm text-white/70 mb-1.5">
             <span>Focus X-Offset</span>
             <span className="text-white/40 tabular-nums">{dofXOffset}%</span>
           </label>
@@ -2052,7 +2141,7 @@ export default function ScreenshotAnnotate() {
             className="w-full h-1 bg-white/10 rounded-full appearance-none cursor-pointer accent-white/80 mb-4"
           />
 
-          <label className="flex items-center justify-between text-xs text-white/70 mb-1.5">
+          <label className="flex items-center justify-between text-sm text-white/70 mb-1.5">
             <span>Band Width</span>
             <span className="text-white/40 tabular-nums">{dofBandWidth}%</span>
           </label>
@@ -2069,7 +2158,7 @@ export default function ScreenshotAnnotate() {
           {dofIntensity > 0 && (
             <button
               onClick={() => { saveToHistory(); setDofIntensity(0); setDofXOffset(50); setDofBandWidth(10); }}
-              className="w-full mt-2.5 px-3 py-1.5 text-xs text-white/50 hover:text-white/80 hover:bg-white/[0.06] rounded-md transition-colors"
+              className="w-full mt-2.5 px-3 py-1.5 text-sm text-white/50 hover:text-white/80 hover:bg-white/[0.06] rounded-md transition-colors"
             >
               Remove Effect
             </button>
@@ -2080,7 +2169,7 @@ export default function ScreenshotAnnotate() {
       {/* Global Tooltip */}
       {tooltip.show && (
         <div
-          className="fixed z-[9999] px-2.5 py-1.5 text-xs text-white/80 bg-[#1a1a1f]/95 backdrop-blur-xl rounded-md shadow-lg border border-white/[0.06] pointer-events-none -translate-x-1/2"
+          className="fixed z-[9999] px-2.5 py-1.5 text-sm text-white/80 bg-[#1a1a1f]/95 backdrop-blur-xl rounded-md shadow-lg border border-white/[0.06] pointer-events-none -translate-x-1/2"
           style={{
             left: tooltip.x,
             top: tooltip.y,
