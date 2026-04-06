@@ -265,6 +265,58 @@ const sfx = {
   },
 };
 
+// Animated side panel wrapper — handles mount/unmount animation
+interface SidePanelProps {
+  isOpen: boolean;
+  children: React.ReactNode;
+  width?: string;
+  innerRef?: React.RefObject<HTMLDivElement | null>;
+  tabIndex?: number;
+  onKeyDown?: (e: React.KeyboardEvent<HTMLDivElement>) => void;
+}
+
+const SidePanel = ({
+  isOpen,
+  children,
+  width = "w-56",
+  innerRef,
+  tabIndex,
+  onKeyDown,
+}: SidePanelProps) => {
+  // Keep rendering during the close animation
+  const [closing, setClosing] = useState(false);
+  const prevIsOpen = useRef(isOpen);
+
+  useEffect(() => {
+    if (prevIsOpen.current && !isOpen) {
+      setClosing(true);
+      const t = setTimeout(() => setClosing(false), 200);
+      prevIsOpen.current = isOpen;
+      return () => clearTimeout(t);
+    }
+    prevIsOpen.current = isOpen;
+  }, [isOpen]);
+
+  if (!isOpen && !closing) return null;
+
+  return (
+    <div
+      ref={innerRef}
+      tabIndex={tabIndex}
+      onKeyDown={onKeyDown}
+      className={`fixed top-1/2 right-3 bg-[#1a1a1f]/95 backdrop-blur-xl rounded-xl p-3 shadow-lg shadow-black/30 border border-white/[0.06] z-50 ${width} outline-none transition-[opacity,transform] duration-200 ease-out`}
+      style={{
+        transform: isOpen
+          ? "translateY(-50%) translateX(0)"
+          : "translateY(-50%) translateX(1rem)",
+        opacity: isOpen ? 1 : 0,
+      }}
+    >
+      {children}
+    </div>
+  );
+};
+
 export default function ScreenshotAnnotate() {
   const [uploadedImage, setUploadedImage] = useState<string | null>(null);
   const [currentTool, setCurrentTool] = useState<Tool>("pen");
@@ -1652,7 +1704,7 @@ export default function ScreenshotAnnotate() {
   // focusable element in the pressed direction.
   const handleSpatialNav = (
     e: React.KeyboardEvent<HTMLDivElement>,
-    rootRef: React.RefObject<HTMLDivElement>,
+    rootRef: React.RefObject<HTMLDivElement | null>,
   ) => {
     if (!["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].includes(e.key)) return;
     // Let range inputs handle Left/Right natively (value adjustment)
@@ -2013,33 +2065,32 @@ export default function ScreenshotAnnotate() {
       )}
 
       {/* Background Palette — right edge panel */}
-      {showColorPalette && !showWatermarkInput && (
-        <div
-          ref={bgPaletteRef}
-          tabIndex={-1}
-          onKeyDown={(e) => handleSpatialNav(e, bgPaletteRef)}
-          className="fixed top-1/2 right-3 -translate-y-1/2 bg-[#1a1a1f]/95 backdrop-blur-xl rounded-xl p-3 shadow-lg shadow-black/30 border border-white/[0.06] z-50 w-64 outline-none"
-        >
-          {/* Tabs */}
-          <div className="flex gap-0.5 mb-3 bg-white/[0.04] rounded-lg p-0.5">
-            {(["solid", "gradient", "image"] as BackgroundType[]).map(
-              (tab) => (
-                <button
-                  key={tab}
-                  onClick={() => setBgTab(tab)}
-                  className={`flex-1 px-2 py-1 text-sm font-medium rounded-md transition-colors capitalize ${
-                    bgTab === tab
-                      ? "bg-white/15 text-white"
-                      : "text-white/35 hover:text-white/60"
-                  }`}
-                >
-                  {tab}
-                </button>
-              ),
-            )}
-          </div>
+      <SidePanel
+        isOpen={showColorPalette && !showWatermarkInput}
+        width="w-64"
+        innerRef={bgPaletteRef}
+        tabIndex={-1}
+        onKeyDown={(e) => handleSpatialNav(e, bgPaletteRef)}
+      >
+        {/* Tabs */}
+        <div className="flex gap-0.5 mb-3 bg-white/[0.04] rounded-lg p-0.5">
+          {(["solid", "gradient", "image"] as BackgroundType[]).map((tab) => (
+            <button
+              key={tab}
+              onClick={() => setBgTab(tab)}
+              className={`flex-1 px-2 py-1 text-sm font-medium rounded-md transition-colors capitalize ${
+                bgTab === tab
+                  ? "bg-white/15 text-white"
+                  : "text-white/35 hover:text-white/60"
+              }`}
+            >
+              {tab}
+            </button>
+          ))}
+        </div>
 
-          {/* Solid Colors */}
+        {/* Tab content — re-keyed per tab for crossfade on switch */}
+        <div key={bgTab} className="animate-in fade-in duration-150">
           {bgTab === "solid" && (
             <div className="grid grid-cols-5 gap-1.5">
               {backgroundColors.map((color) => (
@@ -2058,7 +2109,6 @@ export default function ScreenshotAnnotate() {
             </div>
           )}
 
-          {/* Gradients */}
           {bgTab === "gradient" && (
             <div className="grid grid-cols-5 gap-1.5">
               {backgroundGradients.map((g, i) => (
@@ -2080,7 +2130,6 @@ export default function ScreenshotAnnotate() {
             </div>
           )}
 
-          {/* Images */}
           {bgTab === "image" && (
             <div className="grid grid-cols-4 gap-1.5 max-h-44 overflow-y-auto">
               {backgroundImages.map((src) => (
@@ -2094,41 +2143,36 @@ export default function ScreenshotAnnotate() {
                       : "border-transparent hover:border-white/30"
                   }`}
                 >
-                  <img
-                    src={src}
-                    alt=""
-                    className="w-full h-full object-cover"
-                  />
+                  <img src={src} alt="" className="w-full h-full object-cover" />
                 </button>
               ))}
             </div>
           )}
-
-          {/* Padding hint */}
-          <p className="mt-3 text-sm text-white/40 text-center">
-            Press <kbd className="px-1.5 py-0.5 bg-white/10 rounded text-white/70">+</kbd> / <kbd className="px-1.5 py-0.5 bg-white/10 rounded text-white/70">−</kbd> to adjust padding
-          </p>
-
-          {/* Clear button */}
-          {backgroundState.type && (
-            <button
-              onClick={clearBackground}
-              className="w-full mt-2.5 px-3 py-1.5 text-sm text-white/50 hover:text-white/80 hover:bg-white/[0.06] rounded-md transition-colors"
-            >
-              Remove Background
-            </button>
-          )}
         </div>
-      )}
+
+        {/* Padding hint */}
+        <p className="mt-3 text-sm text-white/40 text-center">
+          Press <kbd className="px-1.5 py-0.5 bg-white/10 rounded text-white/70">+</kbd> / <kbd className="px-1.5 py-0.5 bg-white/10 rounded text-white/70">−</kbd> to adjust padding
+        </p>
+
+        {/* Clear button */}
+        {backgroundState.type && (
+          <button
+            onClick={clearBackground}
+            className="w-full mt-2.5 px-3 py-1.5 text-sm text-white/50 hover:text-white/80 hover:bg-white/[0.06] rounded-md transition-colors"
+          >
+            Remove Background
+          </button>
+        )}
+      </SidePanel>
 
       {/* Depth of Field Panel — right edge panel */}
-      {showDofPanel && !showWatermarkInput && (
-        <div
-          ref={dofPanelRef}
-          tabIndex={-1}
-          onKeyDown={(e) => handleSpatialNav(e, dofPanelRef)}
-          className="fixed top-1/2 right-3 -translate-y-1/2 bg-[#1a1a1f]/95 backdrop-blur-xl rounded-xl p-3 shadow-lg shadow-black/30 border border-white/[0.06] z-50 w-56 outline-none"
-        >
+      <SidePanel
+        isOpen={showDofPanel && !showWatermarkInput}
+        innerRef={dofPanelRef}
+        tabIndex={-1}
+        onKeyDown={(e) => handleSpatialNav(e, dofPanelRef)}
+      >
           <div className="text-sm font-medium text-white/50 uppercase tracking-wider mb-3">Depth of Field</div>
 
           <label className="flex items-center justify-between text-sm text-white/70 mb-1.5">
@@ -2181,37 +2225,34 @@ export default function ScreenshotAnnotate() {
               Remove Effect
             </button>
           )}
-        </div>
-      )}
+      </SidePanel>
 
       {/* 3D Tilt Panel — right edge panel */}
-      {tiltEnabled && !showWatermarkInput && (
-        <div className="fixed top-1/2 right-3 -translate-y-1/2 bg-[#1a1a1f]/95 backdrop-blur-xl rounded-xl p-3 shadow-lg shadow-black/30 border border-white/[0.06] z-50 w-56">
-          <div className="text-sm font-medium text-white/50 uppercase tracking-wider mb-3">3D Tilt</div>
+      <SidePanel isOpen={tiltEnabled && !showWatermarkInput}>
+        <div className="text-sm font-medium text-white/50 uppercase tracking-wider mb-3">3D Tilt</div>
 
-          <div className="flex items-center justify-between text-sm text-white/70 mb-2">
-            <span>Tilt X</span>
-            <span className="text-white/40 tabular-nums">{tiltX}°</span>
-          </div>
-          <div className="flex items-center justify-between text-sm text-white/70 mb-3">
-            <span>Tilt Y</span>
-            <span className="text-white/40 tabular-nums">{tiltY}°</span>
-          </div>
-
-          <p className="text-sm text-white/40 text-center">
-            Use <kbd className="px-1.5 py-0.5 bg-white/10 rounded text-white/70">↑</kbd> <kbd className="px-1.5 py-0.5 bg-white/10 rounded text-white/70">↓</kbd> <kbd className="px-1.5 py-0.5 bg-white/10 rounded text-white/70">←</kbd> <kbd className="px-1.5 py-0.5 bg-white/10 rounded text-white/70">→</kbd> to tilt
-          </p>
-
-          {(tiltX !== 0 || tiltY !== 0) && (
-            <button
-              onClick={() => { saveToHistory(); setTiltX(0); setTiltY(0); sfx.clear(); }}
-              className="w-full mt-3 px-3 py-1.5 text-sm text-white/50 hover:text-white/80 hover:bg-white/[0.06] rounded-md transition-colors"
-            >
-              Reset Tilt
-            </button>
-          )}
+        <div className="flex items-center justify-between text-sm text-white/70 mb-2">
+          <span>Tilt X</span>
+          <span className="text-white/40 tabular-nums">{tiltX}°</span>
         </div>
-      )}
+        <div className="flex items-center justify-between text-sm text-white/70 mb-3">
+          <span>Tilt Y</span>
+          <span className="text-white/40 tabular-nums">{tiltY}°</span>
+        </div>
+
+        <p className="text-sm text-white/40 text-center">
+          Use <kbd className="px-1.5 py-0.5 bg-white/10 rounded text-white/70">↑</kbd> <kbd className="px-1.5 py-0.5 bg-white/10 rounded text-white/70">↓</kbd> <kbd className="px-1.5 py-0.5 bg-white/10 rounded text-white/70">←</kbd> <kbd className="px-1.5 py-0.5 bg-white/10 rounded text-white/70">→</kbd> to tilt
+        </p>
+
+        {(tiltX !== 0 || tiltY !== 0) && (
+          <button
+            onClick={() => { saveToHistory(); setTiltX(0); setTiltY(0); sfx.clear(); }}
+            className="w-full mt-3 px-3 py-1.5 text-sm text-white/50 hover:text-white/80 hover:bg-white/[0.06] rounded-md transition-colors"
+          >
+            Reset Tilt
+          </button>
+        )}
+      </SidePanel>
 
       {/* Global Tooltip */}
       {tooltip.show && (
