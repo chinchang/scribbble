@@ -537,6 +537,32 @@ export default function ScreenshotAnnotate() {
         return;
       }
 
+      // Delete/Backspace — reset the currently open panel
+      if ((e.key === "Delete" || e.key === "Backspace") && !e.ctrlKey && !e.metaKey) {
+        if (tiltEnabled && (tiltX !== 0 || tiltY !== 0)) {
+          e.preventDefault();
+          saveToHistory();
+          setTiltX(0);
+          setTiltY(0);
+          sfx.clear();
+          return;
+        }
+        if (showColorPalette && backgroundState.type) {
+          e.preventDefault();
+          clearBackground();
+          return;
+        }
+        if (showDofPanel && dofIntensity > 0) {
+          e.preventDefault();
+          saveToHistory();
+          setDofIntensity(0);
+          setDofXOffset(50);
+          setDofBandWidth(10);
+          sfx.clear();
+          return;
+        }
+      }
+
       // Arrow keys for 3D tilt
       if (tiltEnabled && !e.ctrlKey && !e.metaKey) {
         switch (e.key) {
@@ -559,13 +585,6 @@ export default function ScreenshotAnnotate() {
             e.preventDefault();
             setTiltY((prev) => Math.min(prev + 5, 30));
             sfx.tick(true);
-            return;
-          case "Delete":
-          case "Backspace":
-            e.preventDefault();
-            setTiltX(0);
-            setTiltY(0);
-            sfx.clear();
             return;
         }
       }
@@ -655,7 +674,7 @@ export default function ScreenshotAnnotate() {
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
     };
-  }, [isTextInputActive, currentTool, tiltEnabled, showWatermarkInput]);
+  }, [isTextInputActive, currentTool, tiltEnabled, tiltX, tiltY, showWatermarkInput, showColorPalette, showDofPanel, backgroundState.type, dofIntensity]);
 
   // Show/hide background palette / DoF panel when switching tools
   useEffect(() => {
@@ -2159,9 +2178,10 @@ export default function ScreenshotAnnotate() {
         {backgroundState.type && (
           <button
             onClick={clearBackground}
-            className="w-full mt-2.5 px-3 py-1.5 text-sm text-white/50 hover:text-white/80 hover:bg-white/[0.06] rounded-md transition-colors"
+            className="w-full mt-2.5 px-3 py-1.5 text-sm text-white/50 hover:text-white/80 hover:bg-white/[0.06] rounded-md transition-colors flex items-center justify-center gap-2"
           >
             Remove Background
+            <kbd className="px-1.5 py-0.5 bg-white/10 rounded text-white/60 text-sm">del</kbd>
           </button>
         )}
       </SidePanel>
@@ -2220,9 +2240,10 @@ export default function ScreenshotAnnotate() {
           {dofIntensity > 0 && (
             <button
               onClick={() => { saveToHistory(); setDofIntensity(0); setDofXOffset(50); setDofBandWidth(10); }}
-              className="w-full mt-2.5 px-3 py-1.5 text-sm text-white/50 hover:text-white/80 hover:bg-white/[0.06] rounded-md transition-colors"
+              className="w-full mt-2.5 px-3 py-1.5 text-sm text-white/50 hover:text-white/80 hover:bg-white/[0.06] rounded-md transition-colors flex items-center justify-center gap-2"
             >
               Remove Effect
+              <kbd className="px-1.5 py-0.5 bg-white/10 rounded text-white/60 text-sm">del</kbd>
             </button>
           )}
       </SidePanel>
@@ -2247,9 +2268,10 @@ export default function ScreenshotAnnotate() {
         {(tiltX !== 0 || tiltY !== 0) && (
           <button
             onClick={() => { saveToHistory(); setTiltX(0); setTiltY(0); sfx.clear(); }}
-            className="w-full mt-3 px-3 py-1.5 text-sm text-white/50 hover:text-white/80 hover:bg-white/[0.06] rounded-md transition-colors"
+            className="w-full mt-3 px-3 py-1.5 text-sm text-white/50 hover:text-white/80 hover:bg-white/[0.06] rounded-md transition-colors flex items-center justify-center gap-2"
           >
             Reset Tilt
+            <kbd className="px-1.5 py-0.5 bg-white/10 rounded text-white/60 text-sm">del</kbd>
           </button>
         )}
       </SidePanel>
