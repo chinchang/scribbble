@@ -621,18 +621,21 @@ export default function ScreenshotAnnotate() {
     setShowWatermarkInput(false);
   }, [currentTool]);
 
-  // Focus background palette when it opens
+  // Focus first focusable element inside a panel when it opens
+  const focusFirst = (root: HTMLDivElement | null) => {
+    if (!root) return;
+    const first = root.querySelector<HTMLElement>(
+      "button, input, [tabindex]:not([tabindex='-1'])",
+    );
+    (first ?? root).focus();
+  };
+
   useEffect(() => {
-    if (showColorPalette && bgPaletteRef.current) {
-      bgPaletteRef.current.focus();
-    }
+    if (showColorPalette) focusFirst(bgPaletteRef.current);
   }, [showColorPalette]);
 
-  // Focus DoF panel when it opens
   useEffect(() => {
-    if (showDofPanel && dofPanelRef.current) {
-      dofPanelRef.current.focus();
-    }
+    if (showDofPanel) focusFirst(dofPanelRef.current);
   }, [showDofPanel]);
 
   // Focus text input when it becomes active
@@ -1652,6 +1655,16 @@ export default function ScreenshotAnnotate() {
     rootRef: React.RefObject<HTMLDivElement>,
   ) => {
     if (!["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].includes(e.key)) return;
+    // Let range inputs handle Left/Right natively (value adjustment)
+    const target = e.target as HTMLElement;
+    if (
+      target instanceof HTMLInputElement &&
+      target.type === "range" &&
+      (e.key === "ArrowLeft" || e.key === "ArrowRight")
+    ) {
+      e.stopPropagation();
+      return;
+    }
     e.preventDefault();
     e.stopPropagation();
     const root = rootRef.current;
@@ -2091,6 +2104,11 @@ export default function ScreenshotAnnotate() {
             </div>
           )}
 
+          {/* Padding hint */}
+          <p className="mt-3 text-sm text-white/40 text-center">
+            Press <kbd className="px-1.5 py-0.5 bg-white/10 rounded text-white/70">+</kbd> / <kbd className="px-1.5 py-0.5 bg-white/10 rounded text-white/70">−</kbd> to adjust padding
+          </p>
+
           {/* Clear button */}
           {backgroundState.type && (
             <button
@@ -2161,6 +2179,35 @@ export default function ScreenshotAnnotate() {
               className="w-full mt-2.5 px-3 py-1.5 text-sm text-white/50 hover:text-white/80 hover:bg-white/[0.06] rounded-md transition-colors"
             >
               Remove Effect
+            </button>
+          )}
+        </div>
+      )}
+
+      {/* 3D Tilt Panel — right edge panel */}
+      {tiltEnabled && !showWatermarkInput && (
+        <div className="fixed top-1/2 right-3 -translate-y-1/2 bg-[#1a1a1f]/95 backdrop-blur-xl rounded-xl p-3 shadow-lg shadow-black/30 border border-white/[0.06] z-50 w-56">
+          <div className="text-sm font-medium text-white/50 uppercase tracking-wider mb-3">3D Tilt</div>
+
+          <div className="flex items-center justify-between text-sm text-white/70 mb-2">
+            <span>Tilt X</span>
+            <span className="text-white/40 tabular-nums">{tiltX}°</span>
+          </div>
+          <div className="flex items-center justify-between text-sm text-white/70 mb-3">
+            <span>Tilt Y</span>
+            <span className="text-white/40 tabular-nums">{tiltY}°</span>
+          </div>
+
+          <p className="text-sm text-white/40 text-center">
+            Use <kbd className="px-1.5 py-0.5 bg-white/10 rounded text-white/70">↑</kbd> <kbd className="px-1.5 py-0.5 bg-white/10 rounded text-white/70">↓</kbd> <kbd className="px-1.5 py-0.5 bg-white/10 rounded text-white/70">←</kbd> <kbd className="px-1.5 py-0.5 bg-white/10 rounded text-white/70">→</kbd> to tilt
+          </p>
+
+          {(tiltX !== 0 || tiltY !== 0) && (
+            <button
+              onClick={() => { saveToHistory(); setTiltX(0); setTiltY(0); sfx.clear(); }}
+              className="w-full mt-3 px-3 py-1.5 text-sm text-white/50 hover:text-white/80 hover:bg-white/[0.06] rounded-md transition-colors"
+            >
+              Reset Tilt
             </button>
           )}
         </div>
