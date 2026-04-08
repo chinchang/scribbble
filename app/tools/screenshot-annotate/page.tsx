@@ -689,7 +689,7 @@ export default function ScreenshotAnnotate() {
         switch (e.key) {
           case "ArrowUp": {
             e.preventDefault();
-            const next = Math.min(tiltX + 5, 30);
+            const next = Math.min(tiltX + 5, 60);
             setTiltX(next);
             scheduleTiltSave(next, tiltY);
             sfx.tick(true);
@@ -697,7 +697,7 @@ export default function ScreenshotAnnotate() {
           }
           case "ArrowDown": {
             e.preventDefault();
-            const next = Math.max(tiltX - 5, -30);
+            const next = Math.max(tiltX - 5, -60);
             setTiltX(next);
             scheduleTiltSave(next, tiltY);
             sfx.tick(false);
@@ -705,7 +705,7 @@ export default function ScreenshotAnnotate() {
           }
           case "ArrowLeft": {
             e.preventDefault();
-            const next = Math.max(tiltY - 5, -30);
+            const next = Math.max(tiltY - 5, -60);
             setTiltY(next);
             scheduleTiltSave(tiltX, next);
             sfx.tick(false);
@@ -713,7 +713,7 @@ export default function ScreenshotAnnotate() {
           }
           case "ArrowRight": {
             e.preventDefault();
-            const next = Math.min(tiltY + 5, 30);
+            const next = Math.min(tiltY + 5, 60);
             setTiltY(next);
             scheduleTiltSave(tiltX, next);
             sfx.tick(true);
@@ -725,7 +725,7 @@ export default function ScreenshotAnnotate() {
       if (e.key === "=" || e.key === "+") {
         e.preventDefault();
         if (currentTool === "background") {
-          setBgPadding((prev) => Math.min(prev + 10, 200));
+          setBgPadding((prev) => Math.min(prev + 10, 400));
         } else if (currentTool === "depthOfField") {
           setDofIntensity((prev) => Math.min(prev + 2, 50));
         } else {
@@ -737,7 +737,7 @@ export default function ScreenshotAnnotate() {
       if (e.key === "-" || e.key === "_") {
         e.preventDefault();
         if (currentTool === "background") {
-          setBgPadding((prev) => Math.max(prev - 10, 10));
+          setBgPadding((prev) => Math.max(prev - 10, 0));
         } else if (currentTool === "depthOfField") {
           setDofIntensity((prev) => Math.max(prev - 2, 0));
         } else {
