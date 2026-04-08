@@ -1775,8 +1775,6 @@ export default function ScreenshotAnnotate() {
     const hasTilt = tiltX !== 0 || tiltY !== 0;
     const shadowMargin = hasTilt ? 60 : 0;
 
-    const imageAspectRatio = image.naturalWidth / image.naturalHeight;
-
     // Available space for the image, reserving room for padding + shadow
     let maxWidth = containerWidth - padding * 2 - shadowMargin;
     let maxHeight = containerHeight - padding * 2 - shadowMargin;
@@ -1785,15 +1783,15 @@ export default function ScreenshotAnnotate() {
 
     if (hasTilt) {
       // With tilt, the projected size is larger than the source image.
-      // We need to find an image size such that after projection the canvas fits the container.
-      // Start with a generous estimate, then scale down to fit.
-      if (imageAspectRatio > maxWidth / maxHeight) {
-        imageDisplayWidth = maxWidth;
-        imageDisplayHeight = maxWidth / imageAspectRatio;
-      } else {
-        imageDisplayHeight = maxHeight;
-        imageDisplayWidth = maxHeight * imageAspectRatio;
-      }
+      // Start at natural size (clamped to available space), then let the
+      // post-projection clamp below shrink further if needed.
+      const initialScale = Math.min(
+        1,
+        maxWidth / image.naturalWidth,
+        maxHeight / image.naturalHeight,
+      );
+      imageDisplayWidth = image.naturalWidth * initialScale;
+      imageDisplayHeight = image.naturalHeight * initialScale;
 
       const proj = getProjectedSize(imageDisplayWidth, imageDisplayHeight, tiltX, tiltY);
       const canvasW = proj.width + padding * 2 + shadowMargin;
@@ -1813,13 +1811,14 @@ export default function ScreenshotAnnotate() {
       canvas.width = finalProj.width + padding * 2 + shadowMargin;
       canvas.height = finalProj.height + padding * 2 + shadowMargin;
     } else {
-      if (imageAspectRatio > maxWidth / maxHeight) {
-        imageDisplayWidth = maxWidth;
-        imageDisplayHeight = maxWidth / imageAspectRatio;
-      } else {
-        imageDisplayHeight = maxHeight;
-        imageDisplayWidth = maxHeight * imageAspectRatio;
-      }
+      // Use natural size, scaled down only if it exceeds the available area.
+      const scale = Math.min(
+        1,
+        maxWidth / image.naturalWidth,
+        maxHeight / image.naturalHeight,
+      );
+      imageDisplayWidth = image.naturalWidth * scale;
+      imageDisplayHeight = image.naturalHeight * scale;
 
       canvas.width = imageDisplayWidth + padding * 2;
       canvas.height = imageDisplayHeight + padding * 2;
