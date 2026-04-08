@@ -49,10 +49,22 @@ interface DrawingElement {
 
 type BackgroundType = "solid" | "gradient" | "image";
 
+interface MeshBlob {
+  x: number; // 0-100 (% of width)
+  y: number; // 0-100 (% of height)
+  r: number; // 0-100 (% radius for transparency falloff)
+  color: string;
+}
+
+interface MeshGradient {
+  base: string;
+  blobs: MeshBlob[];
+}
+
 interface BackgroundState {
   type: BackgroundType | null;
   color: string | null;
-  gradient?: { from: string; to: string; angle: number };
+  gradient?: MeshGradient;
   imageSrc?: string;
 }
 
@@ -371,18 +383,118 @@ export default function ScreenshotAnnotate() {
     "#ffffff", // white
   ];
 
-  const backgroundGradients = [
-    { from: "#667eea", to: "#764ba2", angle: 135 },
-    { from: "#f093fb", to: "#f5576c", angle: 135 },
-    { from: "#4facfe", to: "#00f2fe", angle: 135 },
-    { from: "#43e97b", to: "#38f9d7", angle: 135 },
-    { from: "#fa709a", to: "#fee140", angle: 135 },
-    { from: "#a18cd1", to: "#fbc2eb", angle: 135 },
-    { from: "#fccb90", to: "#d57eeb", angle: 135 },
-    { from: "#e0c3fc", to: "#8ec5fc", angle: 135 },
-    { from: "#f5f7fa", to: "#c3cfe2", angle: 135 },
-    { from: "#0c0c0c", to: "#434343", angle: 135 },
+  const backgroundGradients: MeshGradient[] = [
+    // 1. Pink / purple / blue
+    {
+      base: "#7c5cff",
+      blobs: [
+        { x: 15, y: 20, r: 70, color: "#ff7ab6" },
+        { x: 80, y: 30, r: 70, color: "#6a8bff" },
+        { x: 50, y: 90, r: 80, color: "#b06bff" },
+      ],
+    },
+    // 3. Deep navy
+    {
+      base: "#0a1238",
+      blobs: [
+        { x: 25, y: 30, r: 65, color: "#3a3f9e" },
+        { x: 75, y: 70, r: 65, color: "#1f2a78" },
+        { x: 90, y: 15, r: 50, color: "#5b6cff" },
+      ],
+    },
+    // 5. Coral / orange
+    {
+      base: "#ff7a5c",
+      blobs: [
+        { x: 20, y: 30, r: 70, color: "#ffb27a" },
+        { x: 80, y: 80, r: 70, color: "#ff5577" },
+        { x: 60, y: 20, r: 55, color: "#ffd28a" },
+      ],
+    },
+    // 7. Magenta / purple / orange
+    {
+      base: "#7a3cff",
+      blobs: [
+        { x: 20, y: 75, r: 70, color: "#ff4fa3" },
+        { x: 80, y: 25, r: 70, color: "#ff9a3c" },
+        { x: 50, y: 50, r: 55, color: "#b04dff" },
+      ],
+    },
+    // 8. Soft yellow / peach / pink
+    {
+      base: "#ffd6a5",
+      blobs: [
+        { x: 20, y: 30, r: 70, color: "#fff1b8" },
+        { x: 80, y: 70, r: 70, color: "#ffadc7" },
+        { x: 60, y: 20, r: 55, color: "#ffc18a" },
+      ],
+    },
+    // 11. Sky → meadow → blossom (the reference image)
+    {
+      base: "#3aa0ff",
+      blobs: [
+        { x: 50, y: 10, r: 60, color: "#5ec8ff" },
+        { x: 92, y: 50, r: 55, color: "#7be0c0" },
+        { x: 80, y: 92, r: 55, color: "#ffb37a" },
+        { x: 18, y: 88, r: 55, color: "#ff7ab0" },
+        { x: 8, y: 45, r: 50, color: "#c89aff" },
+      ],
+    },
+    // 12. Twilight — indigo / violet / rose
+    {
+      base: "#1b1448",
+      blobs: [
+        { x: 20, y: 20, r: 60, color: "#5b3fd1" },
+        { x: 85, y: 30, r: 60, color: "#c060d6" },
+        { x: 75, y: 90, r: 60, color: "#ff7ab0" },
+        { x: 15, y: 85, r: 55, color: "#3a2a8a" },
+      ],
+    },
+    // 13. Sunset glow — coral / amber / plum
+    {
+      base: "#f4a261",
+      blobs: [
+        { x: 18, y: 22, r: 60, color: "#ffd6a5" },
+        { x: 85, y: 30, r: 60, color: "#ff8c6b" },
+        { x: 80, y: 88, r: 60, color: "#e76f51" },
+        { x: 20, y: 85, r: 55, color: "#9a4e8a" },
+      ],
+    },
+    // 14. Forest dawn — sage / teal / sand
+    {
+      base: "#2a5d6b",
+      blobs: [
+        { x: 20, y: 22, r: 60, color: "#9cd1c8" },
+        { x: 85, y: 28, r: 60, color: "#7fb89e" },
+        { x: 80, y: 90, r: 60, color: "#e9d8a6" },
+        { x: 18, y: 88, r: 55, color: "#3d7c7a" },
+      ],
+    },
   ];
+
+  const meshGradientToCss = (m: MeshGradient) =>
+    [
+      ...m.blobs.map(
+        (b) =>
+          `radial-gradient(circle at ${b.x}% ${b.y}%, ${b.color} 0%, transparent ${b.r}%)`,
+      ),
+      `linear-gradient(${m.base}, ${m.base})`,
+    ].join(", ");
+
+  const hexToRgba = (hex: string, alpha: number) => {
+    const h = hex.replace("#", "");
+    const v =
+      h.length === 3
+        ? h
+            .split("")
+            .map((c) => c + c)
+            .join("")
+        : h;
+    const r = parseInt(v.substring(0, 2), 16);
+    const g = parseInt(v.substring(2, 4), 16);
+    const b = parseInt(v.substring(4, 6), 16);
+    return `rgba(${r},${g},${b},${alpha})`;
+  };
 
   const backgroundImages = Array.from(
     { length: 18 },
@@ -916,11 +1028,7 @@ export default function ScreenshotAnnotate() {
     sfx.pop();
   };
 
-  const handleBackgroundGradientSelect = (gradient: {
-    from: string;
-    to: string;
-    angle: number;
-  }) => {
+  const handleBackgroundGradientSelect = (gradient: MeshGradient) => {
     const newBg: BackgroundState = { type: "gradient", color: null, gradient };
     setBackgroundState(newBg);
     saveToHistory({ backgroundState: newBg });
@@ -1125,21 +1233,22 @@ export default function ScreenshotAnnotate() {
       backgroundState.type === "gradient" &&
       backgroundState.gradient
     ) {
-      const { from, to, angle } = backgroundState.gradient;
-      const rad = (angle * Math.PI) / 180;
-      const cx = canvasWidth / 2;
-      const cy = canvasHeight / 2;
-      const len =
-        Math.sqrt(canvasWidth * canvasWidth + canvasHeight * canvasHeight) / 2;
-      const x0 = cx - Math.cos(rad) * len;
-      const y0 = cy - Math.sin(rad) * len;
-      const x1 = cx + Math.cos(rad) * len;
-      const y1 = cy + Math.sin(rad) * len;
-      const gradient = ctx.createLinearGradient(x0, y0, x1, y1);
-      gradient.addColorStop(0, from);
-      gradient.addColorStop(1, to);
-      ctx.fillStyle = gradient;
+      const mesh = backgroundState.gradient;
+      ctx.fillStyle = mesh.base;
       ctx.fillRect(0, 0, canvasWidth, canvasHeight);
+      const diag = Math.sqrt(
+        canvasWidth * canvasWidth + canvasHeight * canvasHeight,
+      );
+      for (const blob of mesh.blobs) {
+        const cx = (blob.x / 100) * canvasWidth;
+        const cy = (blob.y / 100) * canvasHeight;
+        const radius = (blob.r / 100) * diag;
+        const grad = ctx.createRadialGradient(cx, cy, 0, cx, cy, radius);
+        grad.addColorStop(0, hexToRgba(blob.color, 1));
+        grad.addColorStop(1, hexToRgba(blob.color, 0));
+        ctx.fillStyle = grad;
+        ctx.fillRect(0, 0, canvasWidth, canvasHeight);
+      }
     } else if (backgroundState.type === "image" && bgImageRef.current) {
       const bgImg = bgImageRef.current;
       const bgAspect = bgImg.naturalWidth / bgImg.naturalHeight;
@@ -2141,12 +2250,12 @@ export default function ScreenshotAnnotate() {
         {/* Tab content — re-keyed per tab for crossfade on switch */}
         <div key={bgTab} className="animate-in fade-in duration-150">
           {bgTab === "solid" && (
-            <div className="grid grid-cols-5 gap-1.5">
+            <div className="grid grid-cols-4 gap-1.5">
               {backgroundColors.map((color) => (
                 <button
                   key={color}
                   onClick={() => handleBackgroundColorSelect(color)}
-                  className={`w-9 h-9 rounded-lg border-2 transition-all duration-150 hover:scale-110 ${
+                  className={`w-12 h-12 rounded-lg border-2 transition-all duration-150 hover:scale-105 ${
                     backgroundState.type === "solid" &&
                     backgroundState.color === color
                       ? "border-white/60 scale-110"
@@ -2159,21 +2268,18 @@ export default function ScreenshotAnnotate() {
           )}
 
           {bgTab === "gradient" && (
-            <div className="grid grid-cols-5 gap-1.5">
+            <div className="grid grid-cols-4 gap-1.5">
               {backgroundGradients.map((g, i) => (
                 <button
                   key={i}
                   onClick={() => handleBackgroundGradientSelect(g)}
-                  className={`w-9 h-9 rounded-lg border-2 transition-all duration-150 hover:scale-110 ${
+                  className={`w-12 h-12 rounded-lg border-2 transition-all duration-150 hover:scale-105 ${
                     backgroundState.type === "gradient" &&
-                    backgroundState.gradient?.from === g.from &&
-                    backgroundState.gradient?.to === g.to
+                    backgroundState.gradient?.base === g.base
                       ? "border-white/60 scale-110"
                       : "border-transparent hover:border-white/30"
                   }`}
-                  style={{
-                    background: `linear-gradient(${g.angle}deg, ${g.from}, ${g.to})`,
-                  }}
+                  style={{ background: meshGradientToCss(g) }}
                 />
               ))}
             </div>
