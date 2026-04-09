@@ -17,10 +17,40 @@ import {
   Layers,
 } from "lucide-react";
 import Img from "next/image";
+import { personas } from "@/lib/personas";
+import { comparisons } from "@/lib/comparisons";
+import { listicles } from "@/lib/listicles";
+
+const softwareJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "Scribbble",
+  operatingSystem: "macOS 11.0+",
+  applicationCategory: "DesignApplication",
+  description:
+    "Scribbble is a Mac app that lets you draw, highlight and annotate directly on your screen — for teachers, streamers, YouTubers, designers and sales demos.",
+  url: "https://scribbble.app",
+  image: "https://scribbble.app/social.png",
+  offers: {
+    "@type": "Offer",
+    price: "0",
+    priceCurrency: "USD",
+    description: "Free to download. One-time license for full features.",
+  },
+  author: {
+    "@type": "Person",
+    name: "Kushagra Gour",
+    url: "https://kushagra.dev",
+  },
+};
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareJsonLd) }}
+      />
       <header className="relative border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
         <div className="absolute inset-0 blob-bg"></div>
         <div className="container mx-auto px-4 py-6 flex items-center justify-between relative">
@@ -95,9 +125,6 @@ export default function Home() {
             >
               <Sparkles className="w-4 h-4 mr-2" />
               The "Just works" Screen Annotation
-            </Badge>
-            <Badge className="bg-gradient-to-r from-red-600 to-orange-600 text-white border-0 px-4 py-2 text-lg font-bold animate-pulse shadow-lg">
-              ON BFCM SALE
             </Badge>
           </div>
 
@@ -364,43 +391,106 @@ export default function Home() {
 
       <footer className="border-t-2 border-primary/20 py-16 px-4 bg-gradient-to-br from-card to-background">
         <div className="container mx-auto max-w-6xl">
-          <div className="flex flex-col md:flex-row justify-between items-center mb-12">
-            <div className="flex items-center space-x-4 mb-8 md:mb-0">
-              <div className="w-12 h-12 rounded-2xl flex items-center justify-center">
-                <Img
-                  src="/icon.png"
-                  alt="Scribbble Logo"
-                  className=""
-                  width={40}
-                  height={40}
-                />
-              </div>
-              <span className="text-3xl font-bold gradient-text">
-                Scribbble
-              </span>
+          <div className="flex items-center space-x-4 mb-12">
+            <div className="w-12 h-12 rounded-2xl flex items-center justify-center">
+              <Img
+                src="/icon.png"
+                alt="Scribbble Logo"
+                width={40}
+                height={40}
+              />
             </div>
-            <div className="flex items-center space-x-8">
-              <a
-                href="/tools/screenshot-annotate"
-                className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110 font-medium"
-              >
-                Screenshot Annotate
-              </a>
-              <a
-                href="#"
-                className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110 font-medium"
-              >
-                Privacy
-              </a>
+            <span className="text-3xl font-bold gradient-text">Scribbble</span>
+          </div>
 
-              <a
-                href="mailto:chinchang457@gmail.com"
-                className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110 font-medium"
-              >
-                Support
-              </a>
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-10 mb-12">
+            <div>
+              <h3 className="font-bold text-foreground mb-4">Tools</h3>
+              <ul className="space-y-3">
+                <li>
+                  <a
+                    href="/tools/screenshot-annotate"
+                    className="text-muted-foreground hover:text-primary transition font-medium"
+                  >
+                    Screenshot Annotate
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="font-bold text-foreground mb-4">For</h3>
+              <ul className="space-y-3">
+                {personas.map((p) => (
+                  <li key={p.slug}>
+                    <a
+                      href={`/for/${p.slug}`}
+                      className="text-muted-foreground hover:text-primary transition font-medium"
+                    >
+                      {p.audience}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="font-bold text-foreground mb-4">Guides</h3>
+              <ul className="space-y-3">
+                {listicles.map((l) => (
+                  <li key={l.slug}>
+                    <a
+                      href={`/best/${l.slug}`}
+                      className="text-muted-foreground hover:text-primary transition font-medium"
+                    >
+                      {l.h1}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="font-bold text-foreground mb-4">Compare</h3>
+              <ul className="space-y-3">
+                {comparisons.map((c) => (
+                  <li key={c.slug}>
+                    <a
+                      href={`/vs/${c.slug}`}
+                      className="text-muted-foreground hover:text-primary transition font-medium"
+                    >
+                      Scribbble vs {c.competitor}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="font-bold text-foreground mb-4">Company</h3>
+              <ul className="space-y-3">
+                <li>
+                  <a
+                    href="https://kushagragour.lemonsqueezy.com/buy/7a5d045f-63fa-409e-b0ff-5c90b9020575"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-primary transition font-medium"
+                  >
+                    Buy License
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="mailto:chinchang457@gmail.com"
+                    className="text-muted-foreground hover:text-primary transition font-medium"
+                  >
+                    Support
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
+
           <div className="pt-8 border-t border-border text-center">
             <p className="text-muted-foreground text-lg">
               © 2025 Kushagra Gour. Scribbbling worldwide since 2025.

@@ -28,3 +28,11 @@ This is the website for an app called Scribbble - a mac app to annotate/draw any
 - [x] Improve background tool: auto-show options on tool switch, add gradient and image background options
 - [x] Add "Depth of Field" tool with adjustable blur intensity and focus x-offset
 - [x] Don't upscale small pasted images — render at natural size, clamp to viewport
+
+### SEO
+
+- [x] Improve homepage SEO metadata (title, description, OpenGraph, JSON-LD SoftwareApplication schema)
+- [x] Add programmatic SEO persona pages at `/for/[slug]` (teachers, streamers, youtubers, designers, sales-teams)
+- [x] Add programmatic SEO comparison pages at `/vs/[slug]` (zoomit, presentify, cleanshot-x, epic-pen, annotate)
+- [x] Add `sitemap.xml` and `robots.txt` covering all routes
+- [x] Add programmatic SEO "best of" listicle pages at `/best/[slug]` (best-screen-annotation-apps-mac, best-zoomit-alternatives-mac, best-screen-annotation-tools-for-teachers)

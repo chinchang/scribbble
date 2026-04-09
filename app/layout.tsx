@@ -1,39 +1,72 @@
-import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
-import './globals.css'
-import { Toaster } from '@/components/ui/toaster'
+import type { Metadata } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
+import "./globals.css";
+import { Toaster } from "@/components/ui/toaster";
 
-const geistSans = Geist({ subsets: ['latin'], variable: '--font-geist-sans' })
-const geistMono = Geist_Mono({ subsets: ['latin'], variable: '--font-geist-mono' })
+const geistSans = Geist({ subsets: ["latin"], variable: "--font-geist-sans" });
+const geistMono = Geist_Mono({
+  subsets: ["latin"],
+  variable: "--font-geist-mono",
+});
+
+const SITE_URL = "https://scribbble.app";
+const DEFAULT_DESCRIPTION =
+  "Scribbble is a beautiful Mac app that lets you draw, highlight and annotate directly on your screen. Perfect for teachers, streamers, YouTubers, designers and sales demos. One-time price.";
 
 export const metadata: Metadata = {
-  title: 'Scribbble - Mac app',
-  description: 'The beautiful screen annotation app for creators, teachers and presenters.',
-  authors: [{ name: 'Kushagra Gour', url: 'https://kushagra.dev' }],
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "Scribbble — Screen Annotation App for Mac · Draw on Screen",
+    template: "%s | Scribbble",
+  },
+  description: DEFAULT_DESCRIPTION,
+  applicationName: "Scribbble",
+  keywords: [
+    "screen annotation",
+    "draw on screen",
+    "mac annotation app",
+    "screen drawing tool",
+    "presentation annotation",
+    "zoomit for mac",
+    "screen marker",
+    "live screen draw",
+  ],
+  authors: [{ name: "Kushagra Gour", url: "https://kushagra.dev" }],
+  creator: "Kushagra Gour",
+  alternates: { canonical: "/" },
   openGraph: {
-    title: 'Scribbble - Mac app',
-    description: 'The beautiful screen annotation app for creators, teachers and presenters.',
+    type: "website",
+    siteName: "Scribbble",
+    url: SITE_URL,
+    title: "Scribbble — Screen Annotation App for Mac",
+    description: DEFAULT_DESCRIPTION,
     images: [
       {
-        url: 'https://scribbble.app/social.png',
+        url: "/social.png",
         width: 1200,
         height: 630,
-        alt: 'Scribbble - Screen annotation app',
+        alt: "Scribbble — Screen annotation app for Mac",
       },
     ],
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'Scribbble - Mac app',
-    description: 'The beautiful screen annotation app for creators, teachers and presenters.',
-    images: ['https://scribbble.app/social.png'],
+    card: "summary_large_image",
+    title: "Scribbble — Screen Annotation App for Mac",
+    description: DEFAULT_DESCRIPTION,
+    images: ["/social.png"],
+    creator: "@cssMonk",
   },
-}
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large" },
+  },
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="en">
@@ -42,5 +75,5 @@ export default function RootLayout({
         <Toaster />
       </body>
     </html>
-  )
+  );
 }
