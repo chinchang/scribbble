@@ -144,7 +144,8 @@ export default function Home() {
                   strokeLinecap="round"
                 />
               </svg>
-            </span>
+            </span>{" "}
+            on your Mac screen
           </h1>
 
           <p className="text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed font-medium">
@@ -224,10 +225,11 @@ export default function Home() {
                 style={{ aspectRatio: "560 / 315", width: "100%" }}
                 src="https://www.youtube.com/embed/Ghcb4ElDlF4?si=H30vDZti0-W2OmJ2"
                 title="YouTube video player"
-                frameborder="0"
+                frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
+                referrerPolicy="strict-origin-when-cross-origin"
+                loading="lazy"
+                allowFullScreen
               ></iframe>
             </div>
           </div>

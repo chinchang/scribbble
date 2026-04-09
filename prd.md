@@ -36,3 +36,5 @@ This is the website for an app called Scribbble - a mac app to annotate/draw any
 - [x] Add programmatic SEO comparison pages at `/vs/[slug]` (zoomit, presentify, cleanshot-x, epic-pen, annotate)
 - [x] Add `sitemap.xml` and `robots.txt` covering all routes
 - [x] Add programmatic SEO "best of" listicle pages at `/best/[slug]` (best-screen-annotation-apps-mac, best-zoomit-alternatives-mac, best-screen-annotation-tools-for-teachers)
+- [x] Convert `/tools/screenshot-annotate` to a server component with metadata, JSON-LD (WebApplication + FAQ), and server-rendered SEO content
+- [x] Improve homepage hero H1 with target keywords ("Draw Over Anything on Your Mac Screen")
