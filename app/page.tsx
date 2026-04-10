@@ -124,7 +124,7 @@ export default function Home() {
               className="bg-gradient-to-r from-red-100/10 to-accent/10 text-primary border-primary/30 px-6 py-2 text-lg font-semibold"
             >
               <Sparkles className="w-4 h-4 mr-2" />
-              The "Just works" Screen Annotation
+              Built for Mac · One-time payment
             </Badge>
           </div>
 
@@ -149,9 +149,10 @@ export default function Home() {
           </h1>
 
           <p className="text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed font-medium">
-            The most <span className="text-primary font-bold">intuitive</span>{" "}
-            screen annotation tool for educators, presenters, and creators who
-            want to make an impact on the screen.
+            Press a hotkey, draw on top of any app, press it again to clear.
+            That's it.{" "}
+            <span className="text-primary font-bold">No windows</span>, no
+            setup, no monthly fee.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
@@ -166,7 +167,7 @@ export default function Home() {
                 rel="noopener noreferrer"
               >
                 <Download className="w-6 h-6 mr-3" />
-                Download Free
+                Try Scribbble Free
               </a>
             </Button>
             <Button
@@ -190,15 +191,15 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="flex items-center justify-center space-x-3 bg-card/50 backdrop-blur rounded-2xl p-6 border border-primary/20">
               <Zap className="w-8 h-8 text-accent" />
-              <span className="text-lg font-semibold">Zero Setup</span>
+              <span className="text-lg font-semibold">Zero setup</span>
             </div>
             <div className="flex items-center justify-center space-x-3 bg-card/50 backdrop-blur rounded-2xl p-6 border border-primary/20">
               <DollarSign className="w-8 h-8 text-primary" />
-              <span className="text-lg font-semibold">Pay One-time </span>
+              <span className="text-lg font-semibold">Pay once, own forever</span>
             </div>
             <div className="flex items-center justify-center space-x-3 bg-card/50 backdrop-blur rounded-2xl p-6 border border-primary/20">
               <Palette className="w-8 h-8 text-accent" />
-              <span className="text-lg font-semibold">Multiple tools</span>
+              <span className="text-lg font-semibold">Works in any app</span>
             </div>
           </div>
         </div>
@@ -211,11 +212,10 @@ export default function Home() {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-20">
             <h2 className="text-5xl md:text-6xl font-black mb-6">
-              See it in <span className="gradient-text">action</span>
+              Watch a <span className="gradient-text">60-second</span> tour
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Watch how Scribbble transforms ordinary presentations into
-              extraordinary experiences
+              Every tool, every shortcut, in one minute.
             </p>
           </div>
 
@@ -357,8 +357,8 @@ export default function Home() {
             Ready to <span className="gradient-text">scribble</span>?
           </h2>
           <p className="text-2xl text-muted-foreground mb-12 leading-relaxed">
-            Join billions of users who are already transforming their screen
-            shares with Scribbble!
+            One-time price. Works on every Mac running macOS 11 or later. Free
+            updates for life.
           </p>
           <Button
             size="lg"
@@ -371,7 +371,7 @@ export default function Home() {
               rel="noopener noreferrer"
             >
               <Download className="w-8 h-8 mr-4" />
-              Download Scribbble Free
+              Try Scribbble Free
             </a>
           </Button>
           <div className="flex items-center justify-center space-x-8 text-muted-foreground">
@@ -386,6 +386,10 @@ export default function Home() {
             <div className="flex items-center space-x-2">
               <Target className="w-5 h-5 text-primary" />
               <span>No Signup Required</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <Zap className="w-5 h-5 text-accent" />
+              <span>14-day refund</span>
             </div>
           </div>
         </div>
