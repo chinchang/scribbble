@@ -8,6 +8,7 @@ import { Download, ArrowRight, Check, X, Trophy, Sparkles } from "lucide-react";
 import { listicles, listicleSlugs, getListicle } from "@/lib/listicles";
 import { personas } from "@/lib/personas";
 import { comparisons } from "@/lib/comparisons";
+import SiteFooter from "@/components/site-footer";
 
 export const dynamicParams = false;
 
@@ -376,16 +377,7 @@ export default async function ListiclePage({
         </div>
       </section>
 
-      <footer className="border-t-2 border-primary/20 py-10 px-4 bg-gradient-to-br from-card to-background text-center text-muted-foreground">
-        © 2025 Kushagra Gour ·{" "}
-        <Link href="/" className="hover:text-primary">
-          Home
-        </Link>{" "}
-        ·{" "}
-        <a href="mailto:chinchang457@gmail.com" className="hover:text-primary">
-          Support
-        </a>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }
