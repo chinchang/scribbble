@@ -36,7 +36,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "WebApplication",
   name: "Scribbble Screenshot Annotator",
-  url: "https://scribbble.app/tools/screenshot-annotate",
+  url: "https://www.scribbble.app/tools/screenshot-annotate",
   applicationCategory: "DesignApplication",
   operatingSystem: "Any (browser-based)",
   offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },

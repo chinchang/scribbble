@@ -3,7 +3,7 @@ import { personaSlugs } from "@/lib/personas";
 import { comparisonSlugs } from "@/lib/comparisons";
 import { listicleSlugs } from "@/lib/listicles";
 
-const SITE_URL = "https://scribbble.app";
+const SITE_URL = "https://www.scribbble.app";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();

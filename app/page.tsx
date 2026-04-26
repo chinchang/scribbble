@@ -27,8 +27,8 @@ const softwareJsonLd = {
   applicationCategory: "DesignApplication",
   description:
     "Scribbble is a Mac app that lets you draw, highlight and annotate directly on your screen — for teachers, streamers, YouTubers, designers and sales demos.",
-  url: "https://scribbble.app",
-  image: "https://scribbble.app/social.png",
+  url: "https://www.scribbble.app",
+  image: "https://www.scribbble.app/social.png",
   offers: {
     "@type": "Offer",
     price: "0",

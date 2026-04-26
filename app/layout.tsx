@@ -9,7 +9,7 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
 });
 
-const SITE_URL = "https://scribbble.app";
+const SITE_URL = "https://www.scribbble.app";
 const DEFAULT_DESCRIPTION =
   "Scribbble is a beautiful Mac app that lets you draw, highlight and annotate directly on your screen. Perfect for teachers, streamers, YouTubers, designers and sales demos. One-time price.";
 
