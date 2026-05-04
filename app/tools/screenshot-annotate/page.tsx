@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import ScreenshotAnnotateEditor from "./editor";
 
 const TITLE =
-  "Free Online Screenshot Annotator for Mac — Markup & Blur Images";
+  "Free Screenshot Annotator for Mac — 3D Tilt, Depth of Field, Blur";
 const DESCRIPTION =
-  "Free Mac screenshot annotation tool — paste or upload an image, draw arrows, add text, rectangles, numbered steps, blur sensitive info, and copy to clipboard. No signup, no upload, runs in your browser.";
+  "Free Mac screenshot annotation tool with 3D tilt and depth-of-field effects you won't find anywhere else. Add arrows, text, numbered steps, blur sensitive info, then copy to clipboard. No signup, no upload, runs in your browser.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -60,7 +60,15 @@ const faqJsonLd = {
       name: "What's the best Mac image annotation tool?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "For free, in-browser annotation with no install: this Scribbble Screenshot Annotator covers pen, arrow, text, rectangle, blur, numbered markers, backgrounds and depth-of-field. For drawing on the live Mac screen during presentations or recordings, install the Scribbble Mac app.",
+        text: "For free, in-browser annotation with no install: this Scribbble Screenshot Annotator covers pen, arrow, text, rectangle, blur, numbered markers and backgrounds — plus two effects most other tools don't have: 3D tilt (rotate the screenshot in space with arrow keys) and depth-of-field (cinematic focus blur on part of the image). For drawing on the live Mac screen during presentations or recordings, install the Scribbble Mac app.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can I add 3D tilt or depth of field to a Mac screenshot?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes — both. Switch on the Tilt tool and use the arrow keys to rotate the screenshot in 3D space, perfect for hero images and Twitter / X posts. The Depth of Field tool blurs everything except a focused band of the image with adjustable intensity and focus position — a cinematic effect for highlighting one UI element. Most free screenshot tools don't include either of these.",
       },
     },
     {
@@ -121,16 +129,44 @@ export default function Page() {
       {/* SEO content — visually hidden but server-rendered for crawlers */}
       <section className="sr-only">
         <h1>
-          Free Online Screenshot Annotator for Mac — Image Markup Tool
+          Free Online Screenshot Annotator for Mac — with 3D Tilt and Depth of
+          Field
         </h1>
         <p>
           Scribbble&apos;s free Mac screenshot annotation tool lets you mark
           up images directly in your browser — no install, no signup, no
-          upload to a server. It&apos;s a complete Mac image annotation tool
-          for adding arrows, text, rectangles, numbered steps, blur regions
-          and stylish backgrounds to any screenshot you take with Cmd+Shift+3
-          or Cmd+Shift+4.
+          upload to a server. Beyond the standard pen, arrow, text, rectangle,
+          blur and numbered-step tools, it includes two effects almost no
+          other free screenshot annotator offers: 3D tilt (rotate the
+          screenshot in 3D space with arrow keys, perfect for hero images and
+          social posts) and depth of field (a cinematic focus-blur effect that
+          highlights one part of the image while softly blurring the rest).
         </p>
+
+        <h2>What makes this Mac screenshot annotator different</h2>
+        <ul>
+          <li>
+            <strong>3D tilt:</strong> rotate the screenshot in 3D space using
+            the arrow keys. Lock in any angle for hero images, marketing
+            shots, and social-media posts that look designed rather than
+            captured.
+          </li>
+          <li>
+            <strong>Depth of field:</strong> apply a cinematic focus-blur with
+            adjustable blur intensity and focus position. Draws the eye to one
+            UI element while softening everything around it — like a fast lens
+            on a real camera.
+          </li>
+          <li>
+            <strong>Backgrounds:</strong> place your screenshot on solid
+            colors, gradients, or image backgrounds for a polished, framed
+            look.
+          </li>
+          <li>
+            All of the standard markup tools too: pen, arrow, rectangle, text,
+            blur, numbered step markers.
+          </li>
+        </ul>
 
         <h2>How to annotate a Mac screenshot online</h2>
         <ol>
@@ -145,7 +181,8 @@ export default function Page() {
           <li>
             Use the floating toolbar to draw with the pen, add arrows, draw
             rectangles, place numbered step markers, write text, blur
-            sensitive regions, or add a background.
+            sensitive regions, add a background, apply depth of field, or
+            tilt the image in 3D.
           </li>
           <li>
             Press Cmd+C to copy the annotated result back to your clipboard,
@@ -165,20 +202,28 @@ export default function Page() {
           </li>
           <li>Numbered step markers (1, 2, 3…) for tutorials and bug reports</li>
           <li>Backgrounds — solid colors, gradients and image backgrounds</li>
-          <li>Depth of field for cinematic focus on part of an image</li>
+          <li>
+            Depth of field — cinematic focus blur with adjustable intensity
+            and focus position
+          </li>
+          <li>
+            3D tilt — rotate the screenshot in 3D space using arrow keys, for
+            hero images and social posts
+          </li>
         </ul>
 
         <h2>
           Why use a dedicated Mac screenshot annotation tool over Preview?
         </h2>
         <p>
-          macOS Preview includes basic Markup, but it&apos;s missing the
-          things you actually want when sharing a screenshot at work:
-          numbered step markers for walkthroughs, a real blur tool for
-          redacting credentials, depth-of-field for focusing on one UI
-          element, and aesthetic backgrounds for blog posts or social. This
-          free Mac image annotation tool covers all of those, in your
-          browser, with nothing to install.
+          macOS Preview includes basic Markup, but it&apos;s missing
+          everything that actually makes a screenshot look great when you
+          share it: numbered step markers for walkthroughs, a real blur tool
+          for redacting credentials, gradient and image backgrounds, depth of
+          field for focusing on one UI element, and 3D tilt for hero shots.
+          Most free screenshot annotators online don&apos;t have tilt or
+          depth-of-field either — this one does, in your browser, with
+          nothing to install.
         </p>
 
         <h2>Mac screenshot annotation FAQ</h2>
@@ -194,9 +239,21 @@ export default function Page() {
         <p>
           For free, in-browser annotation with no install, this Scribbble
           Screenshot Annotator covers pen, arrow, text, rectangle, blur,
-          numbered markers, backgrounds and depth-of-field. For drawing on
-          the live Mac screen during presentations or recordings, install
-          the Scribbble Mac app.
+          numbered markers and backgrounds — plus 3D tilt and depth of
+          field, two effects most other free screenshot tools don&apos;t
+          have. For drawing on the live Mac screen during presentations or
+          recordings, install the Scribbble Mac app.
+        </p>
+
+        <h3>Can I add 3D tilt or depth of field to a Mac screenshot?</h3>
+        <p>
+          Yes — both. Switch on the Tilt tool and use the arrow keys to
+          rotate the screenshot in 3D space, perfect for hero images and
+          social-media posts. The Depth of Field tool blurs everything
+          except a focused band of the image with adjustable intensity and
+          focus position — a cinematic effect for highlighting one UI
+          element. Most free screenshot annotators don&apos;t include either
+          of these.
         </p>
 
         <h3>Is my screenshot uploaded to a server?</h3>
