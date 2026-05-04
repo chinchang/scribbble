@@ -345,6 +345,12 @@ export default async function ComparisonPage({
                 Scribbble vs {o.competitor}
               </Link>
             ))}
+            <Link
+              href="/vs/zoomit-vs-epic-pen"
+              className="px-4 py-2 rounded-full border border-primary/30 hover:bg-primary/10 hover:text-primary transition"
+            >
+              ZoomIt vs Epic Pen
+            </Link>
           </div>
           <h2 className="text-2xl font-bold mb-6">Scribbble for your role</h2>
           <div className="flex flex-wrap gap-3 mb-10">

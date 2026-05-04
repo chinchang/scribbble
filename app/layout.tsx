@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 const SITE_URL = "https://www.scribbble.app";
 const DEFAULT_DESCRIPTION =
-  "Scribbble is a beautiful Mac app that lets you draw, highlight and annotate directly on your screen. Perfect for teachers, streamers, YouTubers, designers and sales demos. One-time price.";
+  "Scribbble is a beautiful Mac app to scribble, draw, highlight and annotate directly on your screen. Perfect for teachers, streamers, YouTubers, designers and sales demos. Free download, one-time license.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -29,8 +29,15 @@ export const metadata: Metadata = {
     "draw on screen",
     "mac annotation app",
     "screen drawing tool",
+    "screen annotation tool mac",
+    "mac screen annotation",
+    "annotation app for mac",
+    "scribble app",
+    "scribble app mac",
     "presentation annotation",
     "zoomit for mac",
+    "epic pen for mac",
+    "presentify alternative",
     "screen marker",
     "live screen draw",
   ],

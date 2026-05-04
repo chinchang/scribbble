@@ -15,9 +15,9 @@ export const personas: Persona[] = [
   {
     slug: "teachers",
     audience: "Teachers",
-    title: "Screen Annotation App for Teachers — Draw on Screen",
+    title: "Screen Annotation App for Teachers on Mac (Free Trial)",
     description:
-      "Scribbble lets teachers draw, highlight and annotate directly on their Mac screen during live or recorded lessons. One-time price, zero setup.",
+      "Highlight slides, sketch over PDFs and annotate Zoom shares live. Scribbble is the Mac screen annotation app made for teachers. Free download, one-time license.",
     h1: "The screen annotation app built for teachers",
     subheadline:
       "Mark up slides, websites, PDFs and Zoom shares in real time. Keep students focused on exactly what matters — without alt-tabbing into a separate whiteboard.",
@@ -76,9 +76,9 @@ export const personas: Persona[] = [
   {
     slug: "streamers",
     audience: "Streamers",
-    title: "Screen Annotation for Streamers — Draw on Stream",
+    title: "Draw on Your Stream Live — Mac Annotation for OBS / Streamlabs",
     description:
-      "Scribbble lets Twitch and YouTube streamers draw, circle and highlight on their Mac screen live. Works with OBS, Streamlabs and any capture software.",
+      "Circle the loot, sketch the strat, highlight chat. Scribbble lets Mac streamers draw on screen live in OBS, Streamlabs or any capture. Free to try.",
     h1: "Draw on your stream in real time",
     subheadline:
       "Circle the loot, sketch the strat, react to chat with arrows and doodles. Scribbble overlays directly on your screen so OBS captures every stroke.",
@@ -128,9 +128,9 @@ export const personas: Persona[] = [
   {
     slug: "youtubers",
     audience: "YouTubers",
-    title: "Screen Annotation for YouTubers — Tutorial Tool",
+    title: "Screen Annotation App for YouTubers (Mac) — Skip Post-Editing",
     description:
-      "Add professional on-screen annotations to your YouTube tutorials and explainer videos. Scribbble draws on top of any Mac app — no editing needed.",
+      "Stop adding circles in post. Draw arrows, boxes and callouts while you record on Mac — Scribbble bakes them right into the screen capture. Free to try.",
     h1: "The annotation tool for YouTube creators",
     subheadline:
       "Stop adding circles in post. Draw arrows, boxes and call-outs while you record — Scribbble bakes them right into the screen capture.",
@@ -181,9 +181,9 @@ export const personas: Persona[] = [
   {
     slug: "designers",
     audience: "Designers",
-    title: "Screen Annotation for Designers — Mark Up Anywhere",
+    title: "Redline on Figma & Browsers — Mac Annotation App for Designers",
     description:
-      "Scribbble lets designers sketch, redline and annotate directly on top of Figma, browsers and design files on macOS. Perfect for crits and feedback.",
+      "Sketch and redline directly on Figma, browsers and prototypes during live design crits on Mac. No exports, no plugins — Scribbble draws on top of anything. Free.",
     h1: "Sketch and redline directly on your designs",
     subheadline:
       "Run design crits without exporting screenshots. Scribbble draws on top of Figma, the browser, your prototype — whatever you're reviewing — and lets you save the marked-up frame to clipboard.",
@@ -238,9 +238,9 @@ export const personas: Persona[] = [
   {
     slug: "sales-teams",
     audience: "Sales teams",
-    title: "Screen Annotation for Sales Demos — Mac App",
+    title: "Screen Annotation for Sales Demos on Mac — Direct the Eye",
     description:
-      "Make every product demo memorable. Scribbble lets sales teams draw, highlight and circle on their Mac screen during live demos and recorded walkthroughs.",
+      "Highlight pricing tiers, circle the ROI number, draw the workflow live. Scribbble is the Mac annotation app for sales teams running demos on Zoom, Gong and Loom.",
     h1: "The screen annotation tool for sales demos",
     subheadline:
       "Direct your prospect's attention with a single keystroke. Highlight pricing tiers, circle the ROI number, draw the workflow — your demo lands harder when you guide the eye.",

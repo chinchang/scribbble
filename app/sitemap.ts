@@ -7,7 +7,11 @@ const SITE_URL = "https://www.scribbble.app";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
-  const staticRoutes = ["", "/tools/screenshot-annotate"].map((path) => ({
+  const staticRoutes = [
+    "",
+    "/tools/screenshot-annotate",
+    "/vs/zoomit-vs-epic-pen",
+  ].map((path) => ({
     url: `${SITE_URL}${path}`,
     lastModified: now,
     changeFrequency: "monthly" as const,

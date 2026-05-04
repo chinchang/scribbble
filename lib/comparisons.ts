@@ -19,9 +19,9 @@ export const comparisons: Comparison[] = [
   {
     slug: "zoomit",
     competitor: "ZoomIt",
-    title: "Scribbble vs ZoomIt — Mac Screen Annotation Compared",
+    title: "ZoomIt for Mac vs Scribbble — Which Should You Pick in 2026?",
     description:
-      "ZoomIt is Microsoft Sysinternals' classic screen annotation and zoom utility. Scribbble is a modern Mac-first alternative focused purely on drawing.",
+      "Microsoft ZoomIt now runs on macOS, but the UI is still a Windows port. Here's an honest side-by-side with Scribbble — features, pricing and when to pick each.",
     h1: "Scribbble vs ZoomIt",
     subheadline:
       "ZoomIt is a beloved Sysinternals utility from the Windows world (with a recent macOS release). Scribbble is a Mac-first app focused purely on drawing on the screen, with a modern UI.",
@@ -78,9 +78,9 @@ export const comparisons: Comparison[] = [
   {
     slug: "presentify",
     competitor: "Presentify",
-    title: "Scribbble vs Presentify — Mac Screen Annotation Compared",
+    title: "Scribbble vs Presentify — Mac Annotation Apps Compared (2026)",
     description:
-      "Presentify and Scribbble both let you annotate your Mac screen during presentations. Here's an honest, side-by-side comparison.",
+      "Looking for a Presentify alternative on Mac? Scribbble offers free download, a Measure tool and a companion screenshot annotator. Honest side-by-side comparison.",
     h1: "Scribbble vs Presentify",
     subheadline:
       "Both are Mac-native screen annotation apps with one-time pricing, floating toolbars, highlighter and spotlight. Here's how they actually differ.",
@@ -140,9 +140,9 @@ export const comparisons: Comparison[] = [
   {
     slug: "cleanshot-x",
     competitor: "CleanShot X",
-    title: "Scribbble vs CleanShot X — Annotation Compared",
+    title: "Scribbble vs CleanShot X — Live Drawing vs Screenshot Markup",
     description:
-      "CleanShot X is a powerful Mac screenshot suite. Scribbble focuses on live screen annotation. Here's when to use which — or both.",
+      "CleanShot X is best for capture → annotate → share. Scribbble draws on the live screen during Zoom, OBS and recordings. Here's when to use which (or both).",
     h1: "Scribbble vs CleanShot X",
     subheadline:
       "CleanShot X is a screenshot powerhouse. Scribbble focuses on drawing on the live screen. They're complementary, but here's how to choose.",
@@ -196,9 +196,9 @@ export const comparisons: Comparison[] = [
   {
     slug: "epic-pen",
     competitor: "Epic Pen",
-    title: "Scribbble vs Epic Pen — Mac Alternative",
+    title: "Epic Pen for Mac? Scribbble Is the Best Mac Alternative (2026)",
     description:
-      "Epic Pen is a popular screen marker for Windows. Scribbble brings the same on-screen drawing experience to Mac, with extra tools.",
+      "Epic Pen is Windows-only. Scribbble is the closest Mac-native alternative — pen, highlighter, spotlight and measure tools. Free download. Side-by-side comparison.",
     h1: "Scribbble vs Epic Pen: a Mac-native option",
     subheadline:
       "Epic Pen is a well-known screen marker — but it's Windows-first. Scribbble is built specifically for macOS.",
@@ -247,9 +247,9 @@ export const comparisons: Comparison[] = [
   {
     slug: "annotate",
     competitor: "Annotate",
-    title: "Scribbble vs Annotate — Mac Screen Markup Compared",
+    title: "Scribbble vs Annotate for Mac — Live Screen Drawing Compared",
     description:
-      "Annotate is a Mac screenshot and recording markup tool. Scribbble focuses on live on-screen annotation. Here's how they compare.",
+      "Annotate is built for screenshot markup. Scribbble draws on the live Mac screen during Zoom, OBS and recordings. Honest comparison + when to pick each.",
     h1: "Scribbble vs Annotate",
     subheadline:
       "Annotate is a capable Mac markup tool focused on screenshots and recordings. Scribbble is focused on drawing on the live screen.",

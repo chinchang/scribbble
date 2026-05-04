@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import ScreenshotAnnotateEditor from "./editor";
 
 const TITLE =
-  "Free Screenshot Annotator — Draw, Blur & Markup Online";
+  "Free Online Screenshot Annotator for Mac — Markup & Blur Images";
 const DESCRIPTION =
-  "Annotate screenshots right in your browser. Add arrows, text, rectangles, numbered steps, blur sensitive info, and copy to clipboard. No signup, no upload — 100% free.";
+  "Free Mac screenshot annotation tool — paste or upload an image, draw arrows, add text, rectangles, numbered steps, blur sensitive info, and copy to clipboard. No signup, no upload, runs in your browser.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -49,10 +49,26 @@ const faqJsonLd = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "How do I annotate a screenshot online for free?",
+      name: "How do I annotate a screenshot on a Mac for free?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Paste a screenshot from your clipboard or upload an image, then use the floating toolbar to draw with the pen, add arrows, rectangles, text, numbered steps, or blur sensitive areas. Press the copy shortcut to copy the result back to your clipboard.",
+        text: "Take a screenshot on Mac with Cmd+Shift+4, then paste it into this tool with Cmd+V (or upload it). Use the floating toolbar to draw with the pen, add arrows, rectangles, text, numbered steps, or blur sensitive areas. Press Cmd+C to copy the annotated result back to your clipboard.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What's the best Mac image annotation tool?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "For free, in-browser annotation with no install: this Scribbble Screenshot Annotator covers pen, arrow, text, rectangle, blur, numbered markers, backgrounds and depth-of-field. For drawing on the live Mac screen during presentations or recordings, install the Scribbble Mac app.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is there a free Mac screenshot annotation tool?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes — this one. It's a free in-browser image annotation tool that works on any Mac with a modern browser. No signup, no upload to a server, no watermark, no time limit.",
       },
     },
     {
@@ -68,7 +84,15 @@ const faqJsonLd = {
       name: "Can I blur or pixelate sensitive information in a screenshot?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Pick the Blur tool and drag a rectangle over any region you want to redact — useful for hiding emails, tokens, names, or other private data before sharing.",
+        text: "Yes. Pick the Blur tool and drag a rectangle over any region you want to redact — useful for hiding emails, tokens, names, or other private data before sharing a Mac screenshot.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can I add a background to a Mac screenshot?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. The Background tool lets you place your screenshot on a solid color, gradient or image background — useful for blog headers, social posts and product shots.",
       },
     },
     {
@@ -96,36 +120,83 @@ export default function Page() {
 
       {/* SEO content — visually hidden but server-rendered for crawlers */}
       <section className="sr-only">
-        <h1>Free Online Screenshot Annotator</h1>
+        <h1>
+          Free Online Screenshot Annotator for Mac — Image Markup Tool
+        </h1>
         <p>
-          Scribbble&apos;s free screenshot annotator lets you mark up images
-          directly in your browser. Paste from your clipboard or upload a
-          screenshot, then draw with the freehand pen, add arrows, rectangles,
-          text labels, numbered step markers, or blur out sensitive
-          information. When you&apos;re done, copy the annotated screenshot
-          back to your clipboard with a single keyboard shortcut. No signup,
-          no upload to a server, no watermark.
+          Scribbble&apos;s free Mac screenshot annotation tool lets you mark
+          up images directly in your browser — no install, no signup, no
+          upload to a server. It&apos;s a complete Mac image annotation tool
+          for adding arrows, text, rectangles, numbered steps, blur regions
+          and stylish backgrounds to any screenshot you take with Cmd+Shift+3
+          or Cmd+Shift+4.
         </p>
 
-        <h2>Tools included</h2>
+        <h2>How to annotate a Mac screenshot online</h2>
+        <ol>
+          <li>
+            Take a screenshot on your Mac (Cmd+Shift+4 for a region or
+            Cmd+Shift+3 for the full screen).
+          </li>
+          <li>
+            Paste it into this tool with Cmd+V — or click the upload area to
+            choose an image file.
+          </li>
+          <li>
+            Use the floating toolbar to draw with the pen, add arrows, draw
+            rectangles, place numbered step markers, write text, blur
+            sensitive regions, or add a background.
+          </li>
+          <li>
+            Press Cmd+C to copy the annotated result back to your clipboard,
+            ready to paste into Slack, Linear, an email, or a doc.
+          </li>
+        </ol>
+
+        <h2>Tools included in this Mac screenshot markup tool</h2>
         <ul>
           <li>Freehand pen for drawing and highlighting</li>
-          <li>Arrow tool to point at things</li>
+          <li>Arrow tool to point at things on a Mac screenshot</li>
           <li>Rectangle tool for outlining UI elements</li>
           <li>Text tool to add labels and captions</li>
-          <li>Blur / pixelate tool to redact sensitive areas</li>
-          <li>Numbered step markers (1, 2, 3…) for tutorials</li>
-          <li>Backgrounds — solid, gradient, and image</li>
-          <li>Depth of field for cinematic focus</li>
+          <li>
+            Blur / pixelate tool to redact sensitive areas of a Mac
+            screenshot
+          </li>
+          <li>Numbered step markers (1, 2, 3…) for tutorials and bug reports</li>
+          <li>Backgrounds — solid colors, gradients and image backgrounds</li>
+          <li>Depth of field for cinematic focus on part of an image</li>
         </ul>
 
-        <h2>Frequently asked questions</h2>
-        <h3>How do I annotate a screenshot online for free?</h3>
+        <h2>
+          Why use a dedicated Mac screenshot annotation tool over Preview?
+        </h2>
         <p>
-          Paste a screenshot from your clipboard or upload an image, then use
-          the floating toolbar to draw, add arrows, rectangles, text, numbered
-          steps, or blur sensitive areas. Press the copy shortcut to copy the
-          result back to your clipboard.
+          macOS Preview includes basic Markup, but it&apos;s missing the
+          things you actually want when sharing a screenshot at work:
+          numbered step markers for walkthroughs, a real blur tool for
+          redacting credentials, depth-of-field for focusing on one UI
+          element, and aesthetic backgrounds for blog posts or social. This
+          free Mac image annotation tool covers all of those, in your
+          browser, with nothing to install.
+        </p>
+
+        <h2>Mac screenshot annotation FAQ</h2>
+        <h3>How do I annotate a screenshot on a Mac for free?</h3>
+        <p>
+          Take a screenshot on Mac with Cmd+Shift+4, paste it into this tool
+          with Cmd+V, then use the floating toolbar to draw, add arrows,
+          rectangles, text, numbered steps, or blur sensitive areas. Press
+          Cmd+C to copy the result back to your clipboard.
+        </p>
+
+        <h3>What&apos;s the best Mac image annotation tool?</h3>
+        <p>
+          For free, in-browser annotation with no install, this Scribbble
+          Screenshot Annotator covers pen, arrow, text, rectangle, blur,
+          numbered markers, backgrounds and depth-of-field. For drawing on
+          the live Mac screen during presentations or recordings, install
+          the Scribbble Mac app.
         </p>
 
         <h3>Is my screenshot uploaded to a server?</h3>
@@ -134,19 +205,51 @@ export default function Page() {
           leaves your device.
         </p>
 
-        <h3>Can I blur or pixelate sensitive information?</h3>
+        <h3>Can I blur or pixelate sensitive information in a screenshot?</h3>
         <p>
           Yes. Pick the Blur tool and drag a rectangle over any region you
           want to redact — useful for hiding emails, tokens, names, or other
-          private data before sharing.
+          private data before sharing a Mac screenshot.
+        </p>
+
+        <h3>Can I add a background to a Mac screenshot?</h3>
+        <p>
+          Yes. The Background tool lets you place your screenshot on a solid
+          color, gradient or image background — useful for blog headers,
+          social posts and product shots.
         </p>
 
         <h3>Want to annotate live on your Mac screen instead?</h3>
         <p>
-          Try the{" "}
-          <a href="/">Scribbble Mac app</a> — draw and annotate over anything
-          on your screen in real time.
+          Try the <a href="/">Scribbble Mac app</a> — a Mac-native screen
+          annotation app that draws on top of any application on your screen
+          in real time. Perfect for live Zoom presentations, OBS streams and
+          recorded tutorials.
         </p>
+
+        <h3>Related guides</h3>
+        <ul>
+          <li>
+            <a href="/best/best-screen-annotation-apps-mac">
+              The best screen annotation apps for Mac
+            </a>
+          </li>
+          <li>
+            <a href="/best/best-epic-pen-alternatives-mac">
+              The best Epic Pen alternatives for Mac
+            </a>
+          </li>
+          <li>
+            <a href="/best/best-zoomit-alternatives-mac">
+              The best ZoomIt alternatives for Mac
+            </a>
+          </li>
+          <li>
+            <a href="/best/best-presentify-alternatives-mac">
+              The best Presentify alternatives for Mac
+            </a>
+          </li>
+        </ul>
       </section>
 
       <ScreenshotAnnotateEditor />

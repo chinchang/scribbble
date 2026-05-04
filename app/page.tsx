@@ -17,7 +17,11 @@ import {
   Layers,
 } from "lucide-react";
 import Img from "next/image";
+import Link from "next/link";
 import SiteFooter from "@/components/site-footer";
+import { personas } from "@/lib/personas";
+import { listicles } from "@/lib/listicles";
+import { comparisons } from "@/lib/comparisons";
 
 const softwareJsonLd = {
   "@context": "https://schema.org",
@@ -345,6 +349,122 @@ export default function Home() {
           </div>
         </div>
       </section> */}
+
+      {/* SEO content section: cluster targeting "screen annotation tool mac", "mac screen annotation", "annotation app for mac" */}
+      <section className="py-24 px-4">
+        <div className="container mx-auto max-w-5xl">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-black mb-6">
+              The Mac <span className="gradient-text">screen annotation</span>{" "}
+              app for live presentations
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Scribbble is a Mac screen annotation tool that draws on top of
+              any app — slides, browsers, Figma, Zoom shares, code editors —
+              with a focused, hotkey-driven workflow built for macOS.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 mb-16">
+            <div className="rounded-2xl border-2 border-primary/20 bg-card/60 p-8">
+              <h3 className="text-2xl font-bold mb-3">
+                A real Mac screen annotation tool
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Most annotation apps were ported from Windows. Scribbble was
+                designed Mac-first: native Apple Silicon performance, a modern
+                draggable floating toolbar, and macOS-style keyboard shortcuts.
+                It feels like a Mac app because it is one.
+              </p>
+            </div>
+            <div className="rounded-2xl border-2 border-accent/20 bg-card/60 p-8">
+              <h3 className="text-2xl font-bold mb-3">
+                Works in any app you already use
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Because Scribbble draws at the OS level, anything Zoom, Google
+                Meet, OBS, Loom or QuickTime captures will include your
+                annotations. No plugin, no browser source, no extra scene to
+                set up.
+              </p>
+            </div>
+            <div className="rounded-2xl border-2 border-primary/20 bg-card/60 p-8">
+              <h3 className="text-2xl font-bold mb-3">
+                More than just a pen
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Pen, highlighter, arrow, rectangle and text — plus Spotlight
+                (focus dim) and Measure tools you won&rsquo;t find in most
+                annotation apps for Mac.
+              </p>
+            </div>
+            <div className="rounded-2xl border-2 border-accent/20 bg-card/60 p-8">
+              <h3 className="text-2xl font-bold mb-3">
+                Free to try, one-time license
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Download and use Scribbble for free. When you&rsquo;re ready,
+                a one-time license unlocks everything — no subscription, no
+                login, no upsell pop-ups.
+              </p>
+            </div>
+          </div>
+
+          {/* Internal links — use cluster keywords as anchor text */}
+          <div className="rounded-2xl border-2 border-primary/20 bg-card/40 p-8">
+            <h3 className="text-2xl font-bold mb-6">
+              Built for every Mac workflow
+            </h3>
+            <div className="flex flex-wrap gap-3 mb-8">
+              {personas.map((p) => (
+                <Link
+                  key={p.slug}
+                  href={`/for/${p.slug}`}
+                  className="px-4 py-2 rounded-full border border-primary/30 hover:bg-primary/10 hover:text-primary transition"
+                >
+                  Mac annotation app for {p.audience.toLowerCase()}
+                </Link>
+              ))}
+            </div>
+
+            <h3 className="text-2xl font-bold mb-6">
+              Compare Scribbble with other Mac annotation tools
+            </h3>
+            <div className="flex flex-wrap gap-3 mb-8">
+              {comparisons.map((c) => (
+                <Link
+                  key={c.slug}
+                  href={`/vs/${c.slug}`}
+                  className="px-4 py-2 rounded-full border border-accent/30 hover:bg-accent/10 hover:text-accent transition"
+                >
+                  Scribbble vs {c.competitor}
+                </Link>
+              ))}
+              <Link
+                href="/vs/zoomit-vs-epic-pen"
+                className="px-4 py-2 rounded-full border border-accent/30 hover:bg-accent/10 hover:text-accent transition"
+              >
+                ZoomIt vs Epic Pen
+              </Link>
+            </div>
+
+            <h3 className="text-2xl font-bold mb-6">
+              Mac screen annotation guides
+            </h3>
+            <div className="flex flex-wrap gap-3">
+              {listicles.map((l) => (
+                <Link
+                  key={l.slug}
+                  href={`/best/${l.slug}`}
+                  className="px-4 py-2 rounded-full border border-primary/30 hover:bg-primary/10 hover:text-primary transition"
+                >
+                  {l.h1}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section
         id="download"
