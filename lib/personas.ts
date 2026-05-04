@@ -15,7 +15,7 @@ export const personas: Persona[] = [
   {
     slug: "teachers",
     audience: "Teachers",
-    title: "Screen Annotation App for Teachers — Draw on Screen | Scribbble",
+    title: "Screen Annotation App for Teachers — Draw on Screen",
     description:
       "Scribbble lets teachers draw, highlight and annotate directly on their Mac screen during live or recorded lessons. One-time price, zero setup.",
     h1: "The screen annotation app built for teachers",
@@ -76,7 +76,7 @@ export const personas: Persona[] = [
   {
     slug: "streamers",
     audience: "Streamers",
-    title: "Screen Annotation for Streamers — Draw on Stream | Scribbble",
+    title: "Screen Annotation for Streamers — Draw on Stream",
     description:
       "Scribbble lets Twitch and YouTube streamers draw, circle and highlight on their Mac screen live. Works with OBS, Streamlabs and any capture software.",
     h1: "Draw on your stream in real time",
@@ -128,7 +128,7 @@ export const personas: Persona[] = [
   {
     slug: "youtubers",
     audience: "YouTubers",
-    title: "Screen Annotation for YouTubers — Tutorial Tool | Scribbble",
+    title: "Screen Annotation for YouTubers — Tutorial Tool",
     description:
       "Add professional on-screen annotations to your YouTube tutorials and explainer videos. Scribbble draws on top of any Mac app — no editing needed.",
     h1: "The annotation tool for YouTube creators",
@@ -181,7 +181,7 @@ export const personas: Persona[] = [
   {
     slug: "designers",
     audience: "Designers",
-    title: "Screen Annotation for Designers — Mark Up Anywhere | Scribbble",
+    title: "Screen Annotation for Designers — Mark Up Anywhere",
     description:
       "Scribbble lets designers sketch, redline and annotate directly on top of Figma, browsers and design files on macOS. Perfect for crits and feedback.",
     h1: "Sketch and redline directly on your designs",
@@ -238,7 +238,7 @@ export const personas: Persona[] = [
   {
     slug: "sales-teams",
     audience: "Sales teams",
-    title: "Screen Annotation for Sales Demos — Scribbble for Mac",
+    title: "Screen Annotation for Sales Demos — Mac App",
     description:
       "Make every product demo memorable. Scribbble lets sales teams draw, highlight and circle on their Mac screen during live demos and recorded walkthroughs.",
     h1: "The screen annotation tool for sales demos",
