@@ -81,6 +81,20 @@ export default async function ListiclePage({
     })),
   };
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://www.scribbble.app/",
+      },
+      { "@type": "ListItem", position: 2, name: l.h1 },
+    ],
+  };
+
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
       <script
@@ -90,6 +104,10 @@ export default async function ListiclePage({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
 
       <header className="relative border-b border-border bg-background/95 backdrop-blur sticky top-0 z-50">

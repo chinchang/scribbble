@@ -78,11 +78,33 @@ export default async function ComparisonPage({
     })),
   };
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://www.scribbble.app/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: `Scribbble vs ${c.competitor}`,
+      },
+    ],
+  };
+
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
 
       <header className="relative border-b border-border bg-background/95 backdrop-blur sticky top-0 z-50">

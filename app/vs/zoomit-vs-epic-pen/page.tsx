@@ -116,9 +116,13 @@ const breadcrumbJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.scribbble.app/" },
-    { "@type": "ListItem", position: 2, name: "Comparisons", item: "https://www.scribbble.app/vs/zoomit" },
-    { "@type": "ListItem", position: 3, name: "ZoomIt vs Epic Pen" },
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://www.scribbble.app/",
+    },
+    { "@type": "ListItem", position: 2, name: "ZoomIt vs Epic Pen" },
   ],
 };
 
