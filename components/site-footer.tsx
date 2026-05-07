@@ -19,7 +19,7 @@ export default function SiteFooter() {
           <span className="text-3xl font-bold gradient-text">Scribbble</span>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-10 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-6 gap-10 mb-12">
           <div>
             <h3 className="font-bold text-foreground mb-4">Tools</h3>
             <ul className="space-y-3">
@@ -29,6 +29,28 @@ export default function SiteFooter() {
                   className="text-muted-foreground hover:text-primary transition font-medium"
                 >
                   Screenshot Annotate
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="font-bold text-foreground mb-4">Learn</h3>
+            <ul className="space-y-3">
+              <li>
+                <a
+                  href="/blog"
+                  className="text-muted-foreground hover:text-primary transition font-medium"
+                >
+                  Blog
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/blog/screen-annotation-guide"
+                  className="text-muted-foreground hover:text-primary transition font-medium"
+                >
+                  Screen annotation guide
                 </a>
               </li>
             </ul>

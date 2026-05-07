@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { personaSlugs } from "@/lib/personas";
 import { comparisonSlugs } from "@/lib/comparisons";
 import { listicleSlugs } from "@/lib/listicles";
+import { getAllPostSlugs } from "@/lib/blog";
 
 const SITE_URL = "https://www.scribbble.app";
 
@@ -11,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "",
     "/tools/screenshot-annotate",
     "/vs/zoomit-vs-epic-pen",
+    "/blog",
   ].map((path) => ({
     url: `${SITE_URL}${path}`,
     lastModified: now,
@@ -39,10 +41,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
+  const blogRoutes = getAllPostSlugs().map((slug) => ({
+    url: `${SITE_URL}/blog/${slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  }));
+
   return [
     ...staticRoutes,
     ...personaRoutes,
     ...comparisonRoutes,
     ...listicleRoutes,
+    ...blogRoutes,
   ];
 }

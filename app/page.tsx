@@ -451,7 +451,7 @@ export default function Home() {
             <h3 className="text-2xl font-bold mb-6">
               Mac screen annotation guides
             </h3>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-3 mb-8">
               {listicles.map((l) => (
                 <Link
                   key={l.slug}
@@ -461,6 +461,12 @@ export default function Home() {
                   {l.h1}
                 </Link>
               ))}
+              <Link
+                href="/blog/screen-annotation-guide"
+                className="px-4 py-2 rounded-full border border-primary/30 hover:bg-primary/10 hover:text-primary transition"
+              >
+                The complete guide to screen annotation
+              </Link>
             </div>
           </div>
         </div>

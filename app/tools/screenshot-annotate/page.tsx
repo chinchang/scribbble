@@ -287,6 +287,11 @@ export default function Page() {
         <h3>Related guides</h3>
         <ul>
           <li>
+            <a href="/blog/screen-annotation-guide">
+              The complete guide to screen annotation
+            </a>
+          </li>
+          <li>
             <a href="/best/best-screen-annotation-apps-mac">
               The best screen annotation apps for Mac
             </a>
