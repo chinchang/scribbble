@@ -19,6 +19,7 @@ import {
 import Img from "next/image";
 import Link from "next/link";
 import SiteFooter from "@/components/site-footer";
+import BuyLink from "@/components/buy-link";
 import { personas } from "@/lib/personas";
 import { listicles } from "@/lib/listicles";
 import { comparisons } from "@/lib/comparisons";
@@ -69,14 +70,15 @@ export default function Home() {
             <span className="text-2xl font-bold gradient-text">Scribbble</span>
           </div>
           <nav className="hidden md:flex items-center space-x-8">
-            <a
+            <BuyLink
               href="https://kushagragour.lemonsqueezy.com/buy/7a5d045f-63fa-409e-b0ff-5c90b9020575"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110 font-medium"
+              location="home_nav"
             >
               Buy License
-            </a>
+            </BuyLink>
             {/* <a
               href="#features"
               className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110 font-medium"
@@ -178,15 +180,16 @@ export default function Home() {
               asChild
               className="px-12 py-6 text-xl font-bold border-2 border-primary text-primary hover:bg-primary hover:text-white transform hover:scale-105 transition-all duration-300 bg-transparent"
             >
-              <a
+              <BuyLink
                 href="https://kushagragour.lemonsqueezy.com/buy/7a5d045f-63fa-409e-b0ff-5c90b9020575"
                 target="_blank"
                 rel="noopener noreferrer"
+                location="home_hero"
               >
                 <Star className="w-6 h-6 mr-3" />
                 Buy License
                 <ArrowRight className="w-5 h-5 ml-3" />
-              </a>
+              </BuyLink>
             </Button>
           </div>
 

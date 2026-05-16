@@ -4,6 +4,7 @@ import Link from "next/link";
 import Img from "next/image";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import BuyLink from "@/components/buy-link";
 import { Download, ArrowRight, Check, X, Sparkles } from "lucide-react";
 import {
   comparisons,
@@ -183,14 +184,15 @@ export default async function ComparisonPage({
               asChild
               className="px-10 py-6 text-lg font-bold border-2 border-primary text-primary"
             >
-              <a
+              <BuyLink
                 href="https://kushagragour.lemonsqueezy.com/buy/7a5d045f-63fa-409e-b0ff-5c90b9020575"
                 target="_blank"
                 rel="noopener noreferrer"
+                location="vs_hero"
               >
                 Buy License
                 <ArrowRight className="w-4 h-4 ml-2" />
-              </a>
+              </BuyLink>
             </Button>
           </div>
         </div>
