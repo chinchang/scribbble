@@ -64,3 +64,8 @@ P3 — Lift the core "screen annotation" cluster (currently pos 5–9)
 P4 — Internal linking + structured data
 - [ ] Add a "Related pages" footer block cross-linking `/for/*`, `/vs/*`, and `/best/*` pages
 - [ ] Add breadcrumbs with `BreadcrumbList` JSON-LD on `/for/*`, `/vs/*`, `/best/*`
+
+### Long-form content / blog
+
+- [x] Set up MDX blog at `/blog` and `/blog/[slug]` (file-based posts in `content/blog/*.mdx`, frontmatter, JSON-LD, sitemap, footer link)
+- [x] Write pillar post: "The Complete Guide to Screen Annotation" at `/blog/screen-annotation-guide` — ~3500 words covering definition, cognitive science, four modes, toolkit, best practices, audience use cases, tools comparison, hardware, common mistakes, FAQ. Internally links to all `/for/*`, `/vs/*`, `/best/*` pages.
