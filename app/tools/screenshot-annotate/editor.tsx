@@ -66,8 +66,9 @@ interface BackgroundState {
   color: string | null;
   gradient?: MeshGradient;
   imageSrc?: string;
-  blur?: number; // 0-50, gaussian blur applied to the background
+  blur?: number; // 0-20, gaussian blur applied to the background
   noise?: number; // 0-100, grain overlay intensity on the background
+  saturation?: number; // 0-200 (%), color saturation of the background; 100 = unchanged
 }
 
 interface TooltipState {
@@ -1026,16 +1027,16 @@ export default function ScreenshotAnnotateEditor() {
   };
 
   const handleBackgroundColorSelect = (color: string) => {
-    const { blur, noise } = backgroundState;
-    const newBg: BackgroundState = { type: "solid", color, blur, noise };
+    const { blur, noise, saturation } = backgroundState;
+    const newBg: BackgroundState = { type: "solid", color, blur, noise, saturation };
     setBackgroundState(newBg);
     saveToHistory({ backgroundState: newBg });
     sfx.pop();
   };
 
   const handleBackgroundGradientSelect = (gradient: MeshGradient) => {
-    const { blur, noise } = backgroundState;
-    const newBg: BackgroundState = { type: "gradient", color: null, gradient, blur, noise };
+    const { blur, noise, saturation } = backgroundState;
+    const newBg: BackgroundState = { type: "gradient", color: null, gradient, blur, noise, saturation };
     setBackgroundState(newBg);
     saveToHistory({ backgroundState: newBg });
     sfx.pop();
@@ -1046,8 +1047,8 @@ export default function ScreenshotAnnotateEditor() {
     img.src = src;
     img.onload = () => {
       bgImageRef.current = img;
-      const { blur, noise } = backgroundState;
-      const newBg: BackgroundState = { type: "image", color: null, imageSrc: src, blur, noise };
+      const { blur, noise, saturation } = backgroundState;
+      const newBg: BackgroundState = { type: "image", color: null, imageSrc: src, blur, noise, saturation };
       setBackgroundState(newBg);
       saveToHistory({ backgroundState: newBg });
       sfx.pop();
@@ -1060,6 +1061,10 @@ export default function ScreenshotAnnotateEditor() {
 
   const setBackgroundNoise = (noise: number) => {
     setBackgroundState((prev) => ({ ...prev, noise }));
+  };
+
+  const setBackgroundSaturation = (saturation: number) => {
+    setBackgroundState((prev) => ({ ...prev, saturation }));
   };
 
   const clearBackground = () => {
@@ -1264,12 +1269,14 @@ export default function ScreenshotAnnotateEditor() {
 
     const blur = backgroundState.blur ?? 0;
     const noise = backgroundState.noise ?? 0;
+    const saturation = backgroundState.saturation ?? 100;
 
-    // When blurring, paint the background onto an offscreen canvas first, then
-    // composite it back through a blur filter. Drawing it slightly oversized
-    // pushes the blurred transparent edges outside the visible canvas so the
-    // corners don't fade.
-    const offscreen = blur > 0 ? document.createElement("canvas") : null;
+    // When a CSS filter applies (blur and/or non-default saturation), paint the
+    // background onto an offscreen canvas first, then composite it back through
+    // the filter. Drawing it slightly oversized pushes the blurred transparent
+    // edges outside the visible canvas so the corners don't fade.
+    const needsFilter = blur > 0 || saturation !== 100;
+    const offscreen = needsFilter ? document.createElement("canvas") : null;
     let target = ctx;
     if (offscreen) {
       offscreen.width = canvasWidth;
@@ -1321,7 +1328,7 @@ export default function ScreenshotAnnotateEditor() {
     // Composite the (optionally blurred) background back onto the real canvas.
     if (offscreen) {
       ctx.save();
-      ctx.filter = `blur(${blur}px)`;
+      ctx.filter = `blur(${blur}px) saturate(${saturation}%)`;
       ctx.drawImage(
         offscreen,
         -blur,
@@ -2411,6 +2418,20 @@ export default function ScreenshotAnnotateEditor() {
               max={100}
               value={backgroundState.noise ?? 0}
               onChange={(e) => { cancelAnimationFrame(bgFxRafRef.current); const v = Number(e.target.value); bgFxRafRef.current = requestAnimationFrame(() => setBackgroundNoise(v)); }}
+              onPointerUp={() => saveToHistory()}
+              className="w-full h-1 bg-white/10 rounded-full appearance-none cursor-pointer accent-white/80 mb-4"
+            />
+
+            <label className="flex items-center justify-between text-sm text-white/70 mb-1.5">
+              <span>Background Saturation</span>
+              <span className="text-white/40 tabular-nums">{backgroundState.saturation ?? 100}%</span>
+            </label>
+            <input
+              type="range"
+              min={0}
+              max={200}
+              value={backgroundState.saturation ?? 100}
+              onChange={(e) => { cancelAnimationFrame(bgFxRafRef.current); const v = Number(e.target.value); bgFxRafRef.current = requestAnimationFrame(() => setBackgroundSaturation(v)); }}
               onPointerUp={() => saveToHistory()}
               className="w-full h-1 bg-white/10 rounded-full appearance-none cursor-pointer accent-white/80"
             />
