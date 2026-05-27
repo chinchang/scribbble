@@ -28,6 +28,7 @@ This is the website for an app called Scribbble - a mac app to annotate/draw any
 - [x] Improve background tool: auto-show options on tool switch, add gradient and image background options
 - [x] Add "Depth of Field" tool with adjustable blur intensity and focus x-offset
 - [x] Don't upscale small pasted images — render at natural size, clamp to viewport
+- [x] Add "Background Blur" and "Background Noise" sliders to the background tool popup
 
 ### SEO
 

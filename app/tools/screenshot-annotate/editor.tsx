@@ -66,6 +66,8 @@ interface BackgroundState {
   color: string | null;
   gradient?: MeshGradient;
   imageSrc?: string;
+  blur?: number; // 0-50, gaussian blur applied to the background
+  noise?: number; // 0-100, grain overlay intensity on the background
 }
 
 interface TooltipState {
@@ -512,6 +514,8 @@ export default function ScreenshotAnnotateEditor() {
   const bgPaletteRef = useRef<HTMLDivElement>(null);
   const dofPanelRef = useRef<HTMLDivElement>(null);
   const dofRafRef = useRef<number>(0);
+  const bgFxRafRef = useRef<number>(0);
+  const noiseTileRef = useRef<HTMLCanvasElement | null>(null);
   const tiltSaveTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const handleImageUpload = (file: File) => {
@@ -1022,14 +1026,16 @@ export default function ScreenshotAnnotateEditor() {
   };
 
   const handleBackgroundColorSelect = (color: string) => {
-    const newBg: BackgroundState = { type: "solid", color };
+    const { blur, noise } = backgroundState;
+    const newBg: BackgroundState = { type: "solid", color, blur, noise };
     setBackgroundState(newBg);
     saveToHistory({ backgroundState: newBg });
     sfx.pop();
   };
 
   const handleBackgroundGradientSelect = (gradient: MeshGradient) => {
-    const newBg: BackgroundState = { type: "gradient", color: null, gradient };
+    const { blur, noise } = backgroundState;
+    const newBg: BackgroundState = { type: "gradient", color: null, gradient, blur, noise };
     setBackgroundState(newBg);
     saveToHistory({ backgroundState: newBg });
     sfx.pop();
@@ -1040,11 +1046,20 @@ export default function ScreenshotAnnotateEditor() {
     img.src = src;
     img.onload = () => {
       bgImageRef.current = img;
-      const newBg: BackgroundState = { type: "image", color: null, imageSrc: src };
+      const { blur, noise } = backgroundState;
+      const newBg: BackgroundState = { type: "image", color: null, imageSrc: src, blur, noise };
       setBackgroundState(newBg);
       saveToHistory({ backgroundState: newBg });
       sfx.pop();
     };
+  };
+
+  const setBackgroundBlur = (blur: number) => {
+    setBackgroundState((prev) => ({ ...prev, blur }));
+  };
+
+  const setBackgroundNoise = (noise: number) => {
+    setBackgroundState((prev) => ({ ...prev, noise }));
   };
 
   const clearBackground = () => {
@@ -1219,6 +1234,27 @@ export default function ScreenshotAnnotateEditor() {
     }
   };
 
+  // Cached 128px tile of monochrome random grain, reused as a repeating pattern.
+  const getNoiseTile = () => {
+    if (noiseTileRef.current) return noiseTileRef.current;
+    const size = 128;
+    const tile = document.createElement("canvas");
+    tile.width = size;
+    tile.height = size;
+    const tctx = tile.getContext("2d")!;
+    const imgData = tctx.createImageData(size, size);
+    for (let i = 0; i < imgData.data.length; i += 4) {
+      const v = Math.random() * 255;
+      imgData.data[i] = v;
+      imgData.data[i + 1] = v;
+      imgData.data[i + 2] = v;
+      imgData.data[i + 3] = 255;
+    }
+    tctx.putImageData(imgData, 0, 0);
+    noiseTileRef.current = tile;
+    return tile;
+  };
+
   const drawBackground = (
     ctx: CanvasRenderingContext2D,
     canvasWidth: number,
@@ -1226,16 +1262,31 @@ export default function ScreenshotAnnotateEditor() {
   ) => {
     if (!backgroundState.type) return;
 
+    const blur = backgroundState.blur ?? 0;
+    const noise = backgroundState.noise ?? 0;
+
+    // When blurring, paint the background onto an offscreen canvas first, then
+    // composite it back through a blur filter. Drawing it slightly oversized
+    // pushes the blurred transparent edges outside the visible canvas so the
+    // corners don't fade.
+    const offscreen = blur > 0 ? document.createElement("canvas") : null;
+    let target = ctx;
+    if (offscreen) {
+      offscreen.width = canvasWidth;
+      offscreen.height = canvasHeight;
+      target = offscreen.getContext("2d")!;
+    }
+
     if (backgroundState.type === "solid" && backgroundState.color) {
-      ctx.fillStyle = backgroundState.color;
-      ctx.fillRect(0, 0, canvasWidth, canvasHeight);
+      target.fillStyle = backgroundState.color;
+      target.fillRect(0, 0, canvasWidth, canvasHeight);
     } else if (
       backgroundState.type === "gradient" &&
       backgroundState.gradient
     ) {
       const mesh = backgroundState.gradient;
-      ctx.fillStyle = mesh.base;
-      ctx.fillRect(0, 0, canvasWidth, canvasHeight);
+      target.fillStyle = mesh.base;
+      target.fillRect(0, 0, canvasWidth, canvasHeight);
       const diag = Math.sqrt(
         canvasWidth * canvasWidth + canvasHeight * canvasHeight,
       );
@@ -1243,11 +1294,11 @@ export default function ScreenshotAnnotateEditor() {
         const cx = (blob.x / 100) * canvasWidth;
         const cy = (blob.y / 100) * canvasHeight;
         const radius = (blob.r / 100) * diag;
-        const grad = ctx.createRadialGradient(cx, cy, 0, cx, cy, radius);
+        const grad = target.createRadialGradient(cx, cy, 0, cx, cy, radius);
         grad.addColorStop(0, hexToRgba(blob.color, 1));
         grad.addColorStop(1, hexToRgba(blob.color, 0));
-        ctx.fillStyle = grad;
-        ctx.fillRect(0, 0, canvasWidth, canvasHeight);
+        target.fillStyle = grad;
+        target.fillRect(0, 0, canvasWidth, canvasHeight);
       }
     } else if (backgroundState.type === "image" && bgImageRef.current) {
       const bgImg = bgImageRef.current;
@@ -1264,7 +1315,34 @@ export default function ScreenshotAnnotateEditor() {
         sh = bgImg.naturalWidth / canvasAspect;
         sy = (bgImg.naturalHeight - sh) / 2;
       }
-      ctx.drawImage(bgImg, sx, sy, sw, sh, 0, 0, canvasWidth, canvasHeight);
+      target.drawImage(bgImg, sx, sy, sw, sh, 0, 0, canvasWidth, canvasHeight);
+    }
+
+    // Grain overlay, blended into the background only (drawn before the
+    // screenshot is composited on top).
+    if (noise > 0) {
+      const pattern = target.createPattern(getNoiseTile(), "repeat");
+      if (pattern) {
+        target.save();
+        target.globalAlpha = (noise / 100) * 0.35;
+        target.globalCompositeOperation = "overlay";
+        target.fillStyle = pattern;
+        target.fillRect(0, 0, canvasWidth, canvasHeight);
+        target.restore();
+      }
+    }
+
+    if (offscreen) {
+      ctx.save();
+      ctx.filter = `blur(${blur}px)`;
+      ctx.drawImage(
+        offscreen,
+        -blur,
+        -blur,
+        canvasWidth + blur * 2,
+        canvasHeight + blur * 2,
+      );
+      ctx.restore();
     }
   };
 
@@ -2303,6 +2381,39 @@ export default function ScreenshotAnnotateEditor() {
             </div>
           )}
         </div>
+
+        {/* Effects — blur & noise on the background */}
+        {backgroundState.type && (
+          <div className="mt-4 pt-3 border-t border-white/[0.06]">
+            <label className="flex items-center justify-between text-sm text-white/70 mb-1.5">
+              <span>Background Blur</span>
+              <span className="text-white/40 tabular-nums">{backgroundState.blur ?? 0}</span>
+            </label>
+            <input
+              type="range"
+              min={0}
+              max={50}
+              value={backgroundState.blur ?? 0}
+              onChange={(e) => { cancelAnimationFrame(bgFxRafRef.current); const v = Number(e.target.value); bgFxRafRef.current = requestAnimationFrame(() => setBackgroundBlur(v)); }}
+              onPointerUp={() => saveToHistory()}
+              className="w-full h-1 bg-white/10 rounded-full appearance-none cursor-pointer accent-white/80 mb-4"
+            />
+
+            <label className="flex items-center justify-between text-sm text-white/70 mb-1.5">
+              <span>Background Noise</span>
+              <span className="text-white/40 tabular-nums">{backgroundState.noise ?? 0}</span>
+            </label>
+            <input
+              type="range"
+              min={0}
+              max={100}
+              value={backgroundState.noise ?? 0}
+              onChange={(e) => { cancelAnimationFrame(bgFxRafRef.current); const v = Number(e.target.value); bgFxRafRef.current = requestAnimationFrame(() => setBackgroundNoise(v)); }}
+              onPointerUp={() => saveToHistory()}
+              className="w-full h-1 bg-white/10 rounded-full appearance-none cursor-pointer accent-white/80"
+            />
+          </div>
+        )}
 
         {/* Padding hint */}
         <p className="mt-3 text-sm text-white/40 text-center">
