@@ -1318,20 +1318,7 @@ export default function ScreenshotAnnotateEditor() {
       target.drawImage(bgImg, sx, sy, sw, sh, 0, 0, canvasWidth, canvasHeight);
     }
 
-    // Grain overlay, blended into the background only (drawn before the
-    // screenshot is composited on top).
-    if (noise > 0) {
-      const pattern = target.createPattern(getNoiseTile(), "repeat");
-      if (pattern) {
-        target.save();
-        target.globalAlpha = (noise / 100) * 0.7;
-        target.globalCompositeOperation = "overlay";
-        target.fillStyle = pattern;
-        target.fillRect(0, 0, canvasWidth, canvasHeight);
-        target.restore();
-      }
-    }
-
+    // Composite the (optionally blurred) background back onto the real canvas.
     if (offscreen) {
       ctx.save();
       ctx.filter = `blur(${blur}px)`;
@@ -1343,6 +1330,21 @@ export default function ScreenshotAnnotateEditor() {
         canvasHeight + blur * 2,
       );
       ctx.restore();
+    }
+
+    // Grain overlay, blended into the background only (drawn before the
+    // screenshot is composited on top). Applied after the blur composite so
+    // the grain stays crisp instead of getting blurred out.
+    if (noise > 0) {
+      const pattern = ctx.createPattern(getNoiseTile(), "repeat");
+      if (pattern) {
+        ctx.save();
+        ctx.globalAlpha = (noise / 100) * 0.7;
+        ctx.globalCompositeOperation = "overlay";
+        ctx.fillStyle = pattern;
+        ctx.fillRect(0, 0, canvasWidth, canvasHeight);
+        ctx.restore();
+      }
     }
   };
 
