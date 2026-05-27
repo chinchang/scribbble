@@ -2416,6 +2416,7 @@ export default function ScreenshotAnnotateEditor() {
               type="range"
               min={0}
               max={100}
+              step={5}
               value={backgroundState.noise ?? 0}
               onChange={(e) => { cancelAnimationFrame(bgFxRafRef.current); const v = Number(e.target.value); bgFxRafRef.current = requestAnimationFrame(() => setBackgroundNoise(v)); }}
               onPointerUp={() => saveToHistory()}
@@ -2430,6 +2431,7 @@ export default function ScreenshotAnnotateEditor() {
               type="range"
               min={0}
               max={200}
+              step={5}
               value={backgroundState.saturation ?? 100}
               onChange={(e) => { cancelAnimationFrame(bgFxRafRef.current); const v = Number(e.target.value); bgFxRafRef.current = requestAnimationFrame(() => setBackgroundSaturation(v)); }}
               onPointerUp={() => saveToHistory()}
