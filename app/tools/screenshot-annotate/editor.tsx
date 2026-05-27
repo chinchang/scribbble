@@ -1324,7 +1324,7 @@ export default function ScreenshotAnnotateEditor() {
       const pattern = target.createPattern(getNoiseTile(), "repeat");
       if (pattern) {
         target.save();
-        target.globalAlpha = (noise / 100) * 0.35;
+        target.globalAlpha = (noise / 100) * 0.7;
         target.globalCompositeOperation = "overlay";
         target.fillStyle = pattern;
         target.fillRect(0, 0, canvasWidth, canvasHeight);
@@ -2392,7 +2392,7 @@ export default function ScreenshotAnnotateEditor() {
             <input
               type="range"
               min={0}
-              max={50}
+              max={20}
               value={backgroundState.blur ?? 0}
               onChange={(e) => { cancelAnimationFrame(bgFxRafRef.current); const v = Number(e.target.value); bgFxRafRef.current = requestAnimationFrame(() => setBackgroundBlur(v)); }}
               onPointerUp={() => saveToHistory()}
