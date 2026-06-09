@@ -20,13 +20,13 @@ export const metadata: Metadata = {
     url: "/blog",
     title: TITLE,
     description: DESCRIPTION,
-    images: ["/social.png"],
+    images: ["/social-2.png"],
   },
   twitter: {
     card: "summary_large_image",
     title: TITLE,
     description: DESCRIPTION,
-    images: ["/social.png"],
+    images: ["/social-2.png"],
   },
 };
 

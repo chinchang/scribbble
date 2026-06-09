@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     description: DEFAULT_DESCRIPTION,
     images: [
       {
-        url: "/social.png",
+        url: "/social-2.png",
         width: 1200,
         height: 630,
         alt: "Scribbble — Screen annotation app for Mac",
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Scribbble — Screen Annotation App for Mac",
     description: DEFAULT_DESCRIPTION,
-    images: ["/social.png"],
+    images: ["/social-2.png"],
     creator: "@cssMonk",
   },
   robots: {

@@ -23,13 +23,13 @@ export const metadata: Metadata = {
     url: URL,
     title: TITLE,
     description: DESCRIPTION,
-    images: ["/social.png"],
+    images: ["/social-2.png"],
   },
   twitter: {
     card: "summary_large_image",
     title: TITLE,
     description: DESCRIPTION,
-    images: ["/social.png"],
+    images: ["/social-2.png"],
   },
 };
 
@@ -98,7 +98,7 @@ const articleJsonLd = {
   headline: TITLE,
   description: DESCRIPTION,
   url: `https://www.scribbble.app${URL}`,
-  image: "https://www.scribbble.app/social.png",
+  image: "https://www.scribbble.app/social-2.png",
   author: { "@type": "Person", name: "Kushagra Gour", url: "https://kushagra.dev" },
 };
 

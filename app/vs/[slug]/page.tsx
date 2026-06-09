@@ -39,13 +39,13 @@ export async function generateMetadata({
       description: c.description,
       url,
       type: "website",
-      images: ["/social.png"],
+      images: ["/social-2.png"],
     },
     twitter: {
       card: "summary_large_image",
       title: c.title,
       description: c.description,
-      images: ["/social.png"],
+      images: ["/social-2.png"],
     },
   };
 }
