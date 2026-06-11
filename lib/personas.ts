@@ -54,8 +54,9 @@ export const personas: Persona[] = [
       "Highlighter to mark key passages in a reading or slide",
       "Spotlight to dim everything except the part you're explaining",
       "Arrow tool to direct attention",
-      "Rectangle tool to box key concepts",
+      "Rectangle and ellipse shapes to box or circle key concepts",
       "Text tool for vocabulary call-outs",
+      "Snapshot the whole screen or a region to save student work or lesson stills",
       "Quick-erase to keep slides clean",
     ],
     faq: [
@@ -111,7 +112,8 @@ export const personas: Persona[] = [
       "Highlighter for emphasizing text on screen",
       "Spotlight to focus chat's eyes on one part of the gameplay",
       "Arrow tool for quick callouts",
-      "Rectangle and text tools for overlays",
+      "Rectangle, ellipse and text tools for overlays",
+      "Snapshot the screen or a region for clip thumbnails and post-stream highlights",
       "Quick-clear hotkey to wipe the screen between bits",
     ],
     faq: [
@@ -163,7 +165,8 @@ export const personas: Persona[] = [
       "Highlighter for marking up code or text on screen",
       "Spotlight to dim everything except the part you're demonstrating",
       "Arrow tool for guided tours",
-      "Rectangle and text for feature callouts",
+      "Rectangle, ellipse and text for feature callouts",
+      "Snapshot the screen or a region for video thumbnails and B-roll stills",
       "Multiple colors to differentiate concepts",
       "Undo / redo so you can keep recording through small mistakes",
     ],
@@ -218,11 +221,13 @@ export const personas: Persona[] = [
     featuredTools: [
       "Pen tool for redlines",
       "Measure tool to check spacing, padding and dimensions on screen",
-      "Rectangle tool for spacing issues",
+      "Rectangle and ellipse shapes for spacing and component call-outs",
       "Highlighter for marking copy and content blocks",
       "Spotlight to focus a crit on one frame at a time",
       "Arrow tool for flow critique",
       "Text tool for inline notes",
+      "Snapshot a frame or region to drop straight into a Linear ticket or design doc",
+      "Dock the toolbar to the left or right edge to keep the canvas clear",
     ],
     faq: [
       {
@@ -272,8 +277,9 @@ export const personas: Persona[] = [
       "Highlighter for ROI numbers and pricing rows",
       "Spotlight to dim everything except the dashboard widget you're showing",
       "Arrow tool for guided tours",
-      "Rectangle tool for pricing call-outs",
+      "Rectangle and ellipse shapes for pricing and feature call-outs",
       "Text tool for inline labels",
+      "Snapshot the screen or a region for follow-up emails and recap decks",
       "One-key clear between sections of the demo",
     ],
     faq: [
