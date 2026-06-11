@@ -34,6 +34,20 @@ const softwareJsonLd = {
     "Scribbble is a Mac app that lets you draw, highlight and annotate directly on your screen — for teachers, streamers, YouTubers, designers and sales demos.",
   url: "https://www.scribbble.app",
   image: "https://www.scribbble.app/social-2.png",
+  featureList: [
+    "Freehand pen tool",
+    "Highlighter",
+    "Arrow tool",
+    "Rectangle shape",
+    "Ellipse shape",
+    "Text annotations",
+    "Spotlight (focus dim)",
+    "Measure tool",
+    "Snapshot capture — whole screen or selected region",
+    "Toolbar docks to the left or right edge",
+    "Apple Silicon native",
+    "Companion free Screenshot Annotate web tool",
+  ],
   offers: {
     "@type": "Offer",
     price: "0",
@@ -376,8 +390,9 @@ export default function Home() {
               <p className="text-muted-foreground leading-relaxed">
                 Most annotation apps were ported from Windows. Scribbble was
                 designed Mac-first: native Apple Silicon performance, a modern
-                draggable floating toolbar, and macOS-style keyboard shortcuts.
-                It feels like a Mac app because it is one.
+                toolbar that floats or docks to the left or right edge, and
+                macOS-style keyboard shortcuts. It feels like a Mac app because
+                it is one.
               </p>
             </div>
             <div className="rounded-2xl border-2 border-accent/20 bg-card/60 p-8">
@@ -396,9 +411,10 @@ export default function Home() {
                 More than just a pen
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-                Pen, highlighter, arrow, rectangle and text — plus Spotlight
-                (focus dim) and Measure tools you won&rsquo;t find in most
-                annotation apps for Mac.
+                Pen, highlighter, arrow, rectangle, ellipse and text — plus
+                Spotlight (focus dim), a Measure tool, and a built-in Snapshot
+                tool that captures the whole screen or a region without
+                leaving the app.
               </p>
             </div>
             <div className="rounded-2xl border-2 border-accent/20 bg-card/60 p-8">
