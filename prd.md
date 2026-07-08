@@ -70,3 +70,12 @@ P4 — Internal linking + structured data
 
 - [x] Set up MDX blog at `/blog` and `/blog/[slug]` (file-based posts in `content/blog/*.mdx`, frontmatter, JSON-LD, sitemap, footer link)
 - [x] Write pillar post: "The Complete Guide to Screen Annotation" at `/blog/screen-annotation-guide` — ~3500 words covering definition, cognitive science, four modes, toolkit, best practices, audience use cases, tools comparison, hardware, common mistakes, FAQ. Internally links to all `/for/*`, `/vs/*`, `/best/*` pages.
+
+### Localization (i18n)
+
+- [x] Localize marketing pages (homepage, `/for/*`, `/vs/*`, `/best/*`, header/footer) into 6 languages — es, zh, ja, de, hi, nl — via next-intl; English stays at root URLs, other locales at `/es/...` etc. Blog and `/tools/screenshot-annotate` stay English-only
+- [x] Restructure routes into `app/[locale]/` (marketing) and `app/(en)/` (blog, tools) with per-locale `<html lang>`, all 119 marketing pages statically generated
+- [x] SEO: self-referencing canonicals, hreflang alternates (7 locales + x-default) on every marketing page, per-locale sitemap entries with alternates, `inLanguage` in JSON-LD, no Accept-Language redirects
+- [x] `scripts/translate.ts` (`pnpm translate`) — GPT-powered, lockfile-diffed (only new/changed strings hit the API), validates placeholders/tags, writes checked-in `messages/{locale}.json` + `lib/i18n/data/{locale}/*.json` overlays
+- [x] Footer language switcher on localized pages
+- [ ] Run `OPENAI_API_KEY=... pnpm translate` to generate the actual translations and commit the output (script is tested end-to-end against a stub; real run needs the API key)
