@@ -5,11 +5,14 @@ import { Download } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { DOWNLOAD_URL } from "@/lib/site-config";
 import { localeUrl } from "@/lib/i18n/seo";
+import LocaleDropdown from "@/components/locale-dropdown";
 
 export default async function SiteHeader({
   locale = "en",
+  showLocaleSwitcher = false,
 }: {
   locale?: string;
+  showLocaleSwitcher?: boolean;
 }) {
   const t = await getTranslations({ locale, namespace: "header" });
 
@@ -23,15 +26,18 @@ export default async function SiteHeader({
           <Img src="/icon.png" alt="Scribbble" width={40} height={40} />
           <span className="text-2xl font-bold gradient-text">Scribbble</span>
         </Link>
-        <Button
-          asChild
-          className="bg-gradient-to-r from-primary to-accent text-white"
-        >
-          <a href={DOWNLOAD_URL} target="_blank" rel="noopener noreferrer">
-            <Download className="w-4 h-4 mr-2" />
-            {t("cta")}
-          </a>
-        </Button>
+        <div className="flex items-center gap-2">
+          {showLocaleSwitcher && <LocaleDropdown />}
+          <Button
+            asChild
+            className="bg-gradient-to-r from-primary to-accent text-white"
+          >
+            <a href={DOWNLOAD_URL} target="_blank" rel="noopener noreferrer">
+              <Download className="w-4 h-4 mr-2" />
+              {t("cta")}
+            </a>
+          </Button>
+        </div>
       </div>
     </header>
   );

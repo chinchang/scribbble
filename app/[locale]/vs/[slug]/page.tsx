@@ -123,7 +123,7 @@ export default async function ComparisonPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
 
-      <SiteHeader locale={locale} />
+      <SiteHeader locale={locale} showLocaleSwitcher />
 
       <nav
         aria-label="Breadcrumb"

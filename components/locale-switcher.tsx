@@ -3,16 +3,7 @@
 import { useLocale } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
-
-const LOCALE_NAMES: Record<string, string> = {
-  en: "English",
-  es: "Español",
-  zh: "中文",
-  ja: "日本語",
-  de: "Deutsch",
-  hi: "हिन्दी",
-  nl: "Nederlands",
-};
+import { LOCALE_NAMES } from "@/lib/i18n/locale-names";
 
 export default function LocaleSwitcher() {
   const locale = useLocale();

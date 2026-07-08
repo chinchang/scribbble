@@ -112,7 +112,7 @@ export default async function PersonaPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
 
-      <SiteHeader locale={locale} />
+      <SiteHeader locale={locale} showLocaleSwitcher />
 
       {/* Breadcrumb */}
       <nav

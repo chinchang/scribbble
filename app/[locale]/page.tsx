@@ -14,6 +14,7 @@ import {
 import Img from "next/image";
 import { Link } from "@/i18n/navigation";
 import SiteFooter from "@/components/site-footer";
+import LocaleDropdown from "@/components/locale-dropdown";
 import BuyLink from "@/components/buy-link";
 import { personas } from "@/lib/personas";
 import { listicles } from "@/lib/listicles";
@@ -89,15 +90,18 @@ export default async function Home({
               {tHeader("buyLicense")}
             </BuyLink>
           </nav>
-          <Button
-            asChild
-            className="bg-gradient-to-r from-primary to-accent hover:from-accent hover:to-primary text-white shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
-          >
-            <a href={DOWNLOAD_URL} target="_blank" rel="noopener noreferrer">
-              <Download className="w-4 h-4 mr-2" />
-              {tHeader("cta")}
-            </a>
-          </Button>
+          <div className="flex items-center gap-2">
+            <LocaleDropdown />
+            <Button
+              asChild
+              className="bg-gradient-to-r from-primary to-accent hover:from-accent hover:to-primary text-white shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+            >
+              <a href={DOWNLOAD_URL} target="_blank" rel="noopener noreferrer">
+                <Download className="w-4 h-4 mr-2" />
+                {tHeader("cta")}
+              </a>
+            </Button>
+          </div>
         </div>
       </header>
 
