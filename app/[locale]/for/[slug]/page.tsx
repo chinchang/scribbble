@@ -11,19 +11,23 @@ import { comparisons } from "@/lib/comparisons";
 import { listicles } from "@/lib/listicles";
 import SiteFooter from "@/components/site-footer";
 import SiteHeader from "@/components/site-header";
+import { setRequestLocale } from "next-intl/server";
+import { routing } from "@/i18n/routing";
 
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return personaSlugs.map((slug) => ({ slug }));
+  return routing.locales.flatMap((locale) =>
+    personaSlugs.map((slug) => ({ locale, slug })),
+  );
 }
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
-  const { slug } = await params;
+  const { locale, slug } = await params;
   const p = getPersona(slug);
   if (!p) return {};
   const url = `/for/${p.slug}`;
@@ -50,9 +54,10 @@ export async function generateMetadata({
 export default async function PersonaPage({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 }) {
-  const { slug } = await params;
+  const { locale, slug } = await params;
+  setRequestLocale(locale);
   const persona = getPersona(slug);
   if (!persona) notFound();
 

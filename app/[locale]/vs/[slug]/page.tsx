@@ -15,19 +15,23 @@ import { personas } from "@/lib/personas";
 import { listicles } from "@/lib/listicles";
 import SiteFooter from "@/components/site-footer";
 import SiteHeader from "@/components/site-header";
+import { setRequestLocale } from "next-intl/server";
+import { routing } from "@/i18n/routing";
 
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return comparisonSlugs.map((slug) => ({ slug }));
+  return routing.locales.flatMap((locale) =>
+    comparisonSlugs.map((slug) => ({ locale, slug })),
+  );
 }
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
-  const { slug } = await params;
+  const { locale, slug } = await params;
   const c = getComparison(slug);
   if (!c) return {};
   const url = `/vs/${c.slug}`;
@@ -62,9 +66,10 @@ const renderCell = (val: string) => {
 export default async function ComparisonPage({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 }) {
-  const { slug } = await params;
+  const { locale, slug } = await params;
+  setRequestLocale(locale);
   const c = getComparison(slug);
   if (!c) notFound();
 

@@ -10,19 +10,23 @@ import { personas } from "@/lib/personas";
 import { comparisons } from "@/lib/comparisons";
 import SiteFooter from "@/components/site-footer";
 import SiteHeader from "@/components/site-header";
+import { setRequestLocale } from "next-intl/server";
+import { routing } from "@/i18n/routing";
 
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return listicleSlugs.map((slug) => ({ slug }));
+  return routing.locales.flatMap((locale) =>
+    listicleSlugs.map((slug) => ({ locale, slug })),
+  );
 }
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
-  const { slug } = await params;
+  const { locale, slug } = await params;
   const l = getListicle(slug);
   if (!l) return {};
   const url = `/best/${l.slug}`;
@@ -49,9 +53,10 @@ export async function generateMetadata({
 export default async function ListiclePage({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 }) {
-  const { slug } = await params;
+  const { locale, slug } = await params;
+  setRequestLocale(locale);
   const l = getListicle(slug);
   if (!l) notFound();
 

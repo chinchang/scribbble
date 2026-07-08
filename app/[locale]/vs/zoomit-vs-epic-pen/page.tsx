@@ -9,6 +9,8 @@ import { personas } from "@/lib/personas";
 import { listicles } from "@/lib/listicles";
 import SiteFooter from "@/components/site-footer";
 import SiteHeader from "@/components/site-header";
+import { setRequestLocale } from "next-intl/server";
+import { routing } from "@/i18n/routing";
 
 const TITLE = "ZoomIt vs Epic Pen — Which Is Better in 2026?";
 const DESCRIPTION =
@@ -127,7 +129,14 @@ const breadcrumbJsonLd = {
   ],
 };
 
-export default function Page() {
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
       <script
