@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Download, Sparkles } from "lucide-react";
 import SiteFooter from "@/components/site-footer";
+import SiteHeader from "@/components/site-header";
 import TableOfContents from "@/components/blog/toc";
 import { mdxComponents } from "@/components/mdx-components";
 import {
@@ -167,27 +168,7 @@ export default async function BlogPostPage({
         />
       )}
 
-      <header className="relative border-b border-border bg-background/95 backdrop-blur sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-6 flex items-center justify-between">
-          <Link href="/" className="flex items-center space-x-3">
-            <Img src="/icon.png" alt="Scribbble" width={40} height={40} />
-            <span className="text-2xl font-bold gradient-text">Scribbble</span>
-          </Link>
-          <Button
-            asChild
-            className="bg-gradient-to-r from-primary to-accent text-white"
-          >
-            <a
-              href="https://github.com/chinchang/scribbble/releases/latest/download/Scribbble.dmg"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Download className="w-4 h-4 mr-2" />
-              Get Scribbble
-            </a>
-          </Button>
-        </div>
-      </header>
+      <SiteHeader />
 
       <nav
         aria-label="Breadcrumb"
