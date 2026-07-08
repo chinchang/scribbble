@@ -25,6 +25,16 @@ import { listicles } from "../lib/listicles";
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const LOCK_PATH = resolve(ROOT, "scripts/i18n-lock.json");
 
+// Pick up OPENAI_API_KEY (and optional OPENAI_MODEL) from .env.local / .env
+// so the key doesn't have to be passed inline. Inline env vars still win.
+for (const envFile of [".env.local", ".env"]) {
+  try {
+    process.loadEnvFile(resolve(ROOT, envFile));
+  } catch {
+    // file doesn't exist — fine
+  }
+}
+
 const TARGET_LOCALES = ["es", "zh", "ja", "de", "hi", "nl"] as const;
 const LANGUAGE_NAMES: Record<string, string> = {
   es: "Spanish",
