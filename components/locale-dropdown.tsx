@@ -22,7 +22,7 @@ export default function LocaleDropdown() {
       <DropdownMenuTrigger asChild>
         <Button
           variant="ghost"
-          className="text-muted-foreground hover:text-primary font-medium"
+          className="text-muted-foreground font-medium"
           aria-label={`Language: ${LOCALE_NAMES[locale]}`}
         >
           <Globe className="w-4 h-4 mr-1" />
