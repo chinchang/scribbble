@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "titleDefault": "Scribbble — Screen Annotation App for Mac · Draw on Screen",
+    "titleTemplate": "%s | Scribbble",
+    "description": "Scribbble is a beautiful Mac app to scribble, draw, highlight and annotate directly on your screen. Perfect for teachers, streamers, YouTubers, designers and sales demos. Free download, one-time license.",
+    "ogTitle": "Scribbble — Screen Annotation App for Mac",
+    "ogImageAlt": "Scribbble — Screen annotation app for Mac"
+  },
+  "header": {
+    "cta": "Get Scribbble",
+    "buyLicense": "Buy License"
+  },
+  "footer": {
+    "tools": "Tools",
+    "screenshotAnnotate": "Screenshot Annotate",
+    "learn": "Learn",
+    "blog": "Blog",
+    "screenAnnotationGuide": "Screen annotation guide",
+    "for": "For",
+    "guides": "Guides",
+    "compare": "Compare",
+    "scribbbleVs": "Scribbble vs {competitor}",
+    "company": "Company",
+    "buyLicense": "Buy License",
+    "support": "Support",
+    "language": "Language",
+    "copyright": "© 2025 Kushagra Gour. Scribbbling worldwide since 2025."
+  },
+  "common": {
+    "home": "Home",
+    "faq": "Frequently asked questions",
+    "downloadFree": "Download Free",
+    "buyLicense": "Buy License",
+    "downloadScribbble": "Download Scribbble"
+  }
+}
