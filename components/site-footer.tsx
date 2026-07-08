@@ -1,9 +1,21 @@
 import Img from "next/image";
+import { getTranslations } from "next-intl/server";
 import { personas } from "@/lib/personas";
 import { comparisons } from "@/lib/comparisons";
 import { listicles } from "@/lib/listicles";
+import { BUY_URL } from "@/lib/site-config";
+import { localeUrl } from "@/lib/i18n/seo";
+import LocaleSwitcher from "@/components/locale-switcher";
 
-export default function SiteFooter() {
+export default async function SiteFooter({
+  locale = "en",
+  showLocaleSwitcher = false,
+}: {
+  locale?: string;
+  showLocaleSwitcher?: boolean;
+}) {
+  const t = await getTranslations({ locale, namespace: "footer" });
+
   return (
     <footer className="border-t-2 border-primary/20 py-16 px-4 bg-gradient-to-br from-card to-background">
       <div className="container mx-auto max-w-6xl">
@@ -21,28 +33,28 @@ export default function SiteFooter() {
 
         <div className="grid grid-cols-2 md:grid-cols-6 gap-10 mb-12">
           <div>
-            <h3 className="font-bold text-foreground mb-4">Tools</h3>
+            <h3 className="font-bold text-foreground mb-4">{t("tools")}</h3>
             <ul className="space-y-3">
               <li>
                 <a
                   href="/tools/screenshot-annotate"
                   className="text-muted-foreground hover:text-primary transition font-medium"
                 >
-                  Screenshot Annotate
+                  {t("screenshotAnnotate")}
                 </a>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-bold text-foreground mb-4">Learn</h3>
+            <h3 className="font-bold text-foreground mb-4">{t("learn")}</h3>
             <ul className="space-y-3">
               <li>
                 <a
                   href="/blog"
                   className="text-muted-foreground hover:text-primary transition font-medium"
                 >
-                  Blog
+                  {t("blog")}
                 </a>
               </li>
               <li>
@@ -50,19 +62,19 @@ export default function SiteFooter() {
                   href="/blog/screen-annotation-guide"
                   className="text-muted-foreground hover:text-primary transition font-medium"
                 >
-                  Screen annotation guide
+                  {t("screenAnnotationGuide")}
                 </a>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-bold text-foreground mb-4">For</h3>
+            <h3 className="font-bold text-foreground mb-4">{t("for")}</h3>
             <ul className="space-y-3">
               {personas.map((p) => (
                 <li key={p.slug}>
                   <a
-                    href={`/for/${p.slug}`}
+                    href={localeUrl(locale, `/for/${p.slug}`)}
                     className="text-muted-foreground hover:text-primary transition font-medium"
                   >
                     {p.audience}
@@ -73,12 +85,12 @@ export default function SiteFooter() {
           </div>
 
           <div>
-            <h3 className="font-bold text-foreground mb-4">Guides</h3>
+            <h3 className="font-bold text-foreground mb-4">{t("guides")}</h3>
             <ul className="space-y-3">
               {listicles.map((l) => (
                 <li key={l.slug}>
                   <a
-                    href={`/best/${l.slug}`}
+                    href={localeUrl(locale, `/best/${l.slug}`)}
                     className="text-muted-foreground hover:text-primary transition font-medium"
                   >
                     {l.h1}
@@ -89,15 +101,15 @@ export default function SiteFooter() {
           </div>
 
           <div>
-            <h3 className="font-bold text-foreground mb-4">Compare</h3>
+            <h3 className="font-bold text-foreground mb-4">{t("compare")}</h3>
             <ul className="space-y-3">
               {comparisons.map((c) => (
                 <li key={c.slug}>
                   <a
-                    href={`/vs/${c.slug}`}
+                    href={localeUrl(locale, `/vs/${c.slug}`)}
                     className="text-muted-foreground hover:text-primary transition font-medium"
                   >
-                    Scribbble vs {c.competitor}
+                    {t("scribbbleVs", { competitor: c.competitor })}
                   </a>
                 </li>
               ))}
@@ -105,16 +117,16 @@ export default function SiteFooter() {
           </div>
 
           <div>
-            <h3 className="font-bold text-foreground mb-4">Company</h3>
+            <h3 className="font-bold text-foreground mb-4">{t("company")}</h3>
             <ul className="space-y-3">
               <li>
                 <a
-                  href="https://kushagragour.lemonsqueezy.com/buy/7a5d045f-63fa-409e-b0ff-5c90b9020575"
+                  href={BUY_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition font-medium"
                 >
-                  Buy License
+                  {t("buyLicense")}
                 </a>
               </li>
               <li>
@@ -122,17 +134,22 @@ export default function SiteFooter() {
                   href="mailto:chinchang457@gmail.com"
                   className="text-muted-foreground hover:text-primary transition font-medium"
                 >
-                  Support
+                  {t("support")}
                 </a>
               </li>
             </ul>
           </div>
         </div>
 
+        {showLocaleSwitcher && (
+          <div className="mb-12">
+            <h3 className="font-bold text-foreground mb-4">{t("language")}</h3>
+            <LocaleSwitcher />
+          </div>
+        )}
+
         <div className="pt-8 border-t border-border text-center">
-          <p className="text-muted-foreground text-lg">
-            © 2025 Kushagra Gour. Scribbbling worldwide since 2025.
-          </p>
+          <p className="text-muted-foreground text-lg">{t("copyright")}</p>
         </div>
       </div>
     </footer>

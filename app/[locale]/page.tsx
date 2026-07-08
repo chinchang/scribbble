@@ -1,10 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
-  Pen,
-  Users,
-  Presentation,
-  Video,
   Star,
   DollarSign,
   Download,
@@ -13,55 +9,17 @@ import {
   Zap,
   Target,
   Palette,
-  Eye,
   Layers,
 } from "lucide-react";
 import Img from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import SiteFooter from "@/components/site-footer";
 import BuyLink from "@/components/buy-link";
 import { personas } from "@/lib/personas";
 import { listicles } from "@/lib/listicles";
 import { comparisons } from "@/lib/comparisons";
-import { setRequestLocale } from "next-intl/server";
-import { routing } from "@/i18n/routing";
-
-const softwareJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  name: "Scribbble",
-  operatingSystem: "macOS 11.0+",
-  applicationCategory: "DesignApplication",
-  description:
-    "Scribbble is a Mac app that lets you draw, highlight and annotate directly on your screen — for teachers, streamers, YouTubers, designers and sales demos.",
-  url: "https://www.scribbble.app",
-  image: "https://www.scribbble.app/social-2.png",
-  featureList: [
-    "Freehand pen tool",
-    "Highlighter",
-    "Arrow tool",
-    "Rectangle shape",
-    "Ellipse shape",
-    "Text annotations",
-    "Spotlight (focus dim)",
-    "Measure tool",
-    "Snapshot capture — whole screen or selected region",
-    "Toolbar docks to the left or right edge",
-    "Apple Silicon native",
-    "Companion free Screenshot Annotate web tool",
-  ],
-  offers: {
-    "@type": "Offer",
-    price: "0",
-    priceCurrency: "USD",
-    description: "Free to download. One-time license for full features.",
-  },
-  author: {
-    "@type": "Person",
-    name: "Kushagra Gour",
-    url: "https://kushagra.dev",
-  },
-};
+import { setRequestLocale, getTranslations } from "next-intl/server";
+import { SITE_URL, DOWNLOAD_URL, BUY_URL } from "@/lib/site-config";
 
 export default async function Home({
   params,
@@ -70,6 +28,34 @@ export default async function Home({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "home" });
+  const tHeader = await getTranslations({ locale, namespace: "header" });
+
+  const softwareJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "Scribbble",
+    operatingSystem: "macOS 11.0+",
+    applicationCategory: "DesignApplication",
+    description: t("jsonLd.description"),
+    inLanguage: locale,
+    url: SITE_URL,
+    image: `${SITE_URL}/social-2.png`,
+    featureList: t.raw("jsonLd.featureList"),
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "USD",
+      description: t("jsonLd.offerDescription"),
+    },
+    author: {
+      "@type": "Person",
+      name: "Kushagra Gour",
+      url: "https://kushagra.dev",
+    },
+  };
+
+  const cards = t.raw("cards") as { title: string; body: string }[];
 
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
@@ -94,44 +80,22 @@ export default async function Home({
           </div>
           <nav className="hidden md:flex items-center space-x-8">
             <BuyLink
-              href="https://kushagragour.lemonsqueezy.com/buy/7a5d045f-63fa-409e-b0ff-5c90b9020575"
+              href={BUY_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110 font-medium"
               location="home_nav"
             >
-              Buy License
+              {tHeader("buyLicense")}
             </BuyLink>
-            {/* <a
-              href="#features"
-              className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110 font-medium"
-            >
-              Features
-            </a>
-            <a
-              href="#demo"
-              className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110 font-medium"
-            >
-              Demo
-            </a> */}
-            {/* <a
-              href="#testimonials"
-              className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110 font-medium"
-            >
-              Reviews
-            </a> */}
           </nav>
           <Button
             asChild
             className="bg-gradient-to-r from-primary to-accent hover:from-accent hover:to-primary text-white shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
           >
-            <a
-              href="https://github.com/chinchang/scribbble/releases/latest/download/Scribbble.dmg"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href={DOWNLOAD_URL} target="_blank" rel="noopener noreferrer">
               <Download className="w-4 h-4 mr-2" />
-              Get Scribbble
+              {tHeader("cta")}
             </a>
           </Button>
         </div>
@@ -151,35 +115,41 @@ export default async function Home({
               className="bg-gradient-to-r from-red-100/10 to-accent/10 text-primary border-primary/30 px-6 py-2 text-lg font-semibold"
             >
               <Sparkles className="w-4 h-4 mr-2" />
-              Built for Mac · One-time payment
+              {t("badge")}
             </Badge>
           </div>
 
           <h1 className="text-6xl md:text-8xl font-black mb-8 leading-tight">
-            <span className="gradient-text">Draw</span> over{" "}
-            <span className="relative">
-              anything
-              <svg
-                className="absolute -bottom-4 left-0 w-full h-6 text-accent draw-animation"
-                viewBox="0 0 300 20"
-              >
-                <path
-                  d="M5 15 Q150 5 295 15"
-                  stroke="currentColor"
-                  strokeWidth="4"
-                  fill="none"
-                  strokeLinecap="round"
-                />
-              </svg>
-            </span>{" "}
-            on your Mac screen
+            {t.rich("heroTitle", {
+              gradient: (chunks) => (
+                <span className="gradient-text">{chunks}</span>
+              ),
+              underline: (chunks) => (
+                <span className="relative">
+                  {chunks}
+                  <svg
+                    className="absolute -bottom-4 left-0 w-full h-6 text-accent draw-animation"
+                    viewBox="0 0 300 20"
+                  >
+                    <path
+                      d="M5 15 Q150 5 295 15"
+                      stroke="currentColor"
+                      strokeWidth="4"
+                      fill="none"
+                      strokeLinecap="round"
+                    />
+                  </svg>
+                </span>
+              ),
+            })}
           </h1>
 
           <p className="text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed font-medium">
-            Press a hotkey, draw on top of any app, press it again to clear.
-            That's it.{" "}
-            <span className="text-primary font-bold">No windows</span>, no
-            setup, no monthly fee.
+            {t.rich("heroSubtitle", {
+              strong: (chunks) => (
+                <span className="text-primary font-bold">{chunks}</span>
+              ),
+            })}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
@@ -188,13 +158,9 @@ export default async function Home({
               asChild
               className="bg-gradient-to-r from-primary to-accent hover:from-accent hover:to-primary text-white px-12 py-6 text-xl font-bold shadow-2xl hover:shadow-3xl transform hover:scale-110 transition-all duration-300"
             >
-              <a
-                href="https://github.com/chinchang/scribbble/releases/latest/download/Scribbble.dmg"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href={DOWNLOAD_URL} target="_blank" rel="noopener noreferrer">
                 <Download className="w-6 h-6 mr-3" />
-                Try Scribbble Free
+                {t("tryFree")}
               </a>
             </Button>
             <Button
@@ -204,13 +170,13 @@ export default async function Home({
               className="px-12 py-6 text-xl font-bold border-2 border-primary text-primary hover:bg-primary hover:text-white transform hover:scale-105 transition-all duration-300 bg-transparent"
             >
               <BuyLink
-                href="https://kushagragour.lemonsqueezy.com/buy/7a5d045f-63fa-409e-b0ff-5c90b9020575"
+                href={BUY_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 location="home_hero"
               >
                 <Star className="w-6 h-6 mr-3" />
-                Buy License
+                {t("buyLicense")}
                 <ArrowRight className="w-5 h-5 ml-3" />
               </BuyLink>
             </Button>
@@ -219,15 +185,15 @@ export default async function Home({
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="flex items-center justify-center space-x-3 bg-card/50 backdrop-blur rounded-2xl p-6 border border-primary/20">
               <Zap className="w-8 h-8 text-accent" />
-              <span className="text-lg font-semibold">Zero setup</span>
+              <span className="text-lg font-semibold">{t("chipZeroSetup")}</span>
             </div>
             <div className="flex items-center justify-center space-x-3 bg-card/50 backdrop-blur rounded-2xl p-6 border border-primary/20">
               <DollarSign className="w-8 h-8 text-primary" />
-              <span className="text-lg font-semibold">Pay once, own forever</span>
+              <span className="text-lg font-semibold">{t("chipPayOnce")}</span>
             </div>
             <div className="flex items-center justify-center space-x-3 bg-card/50 backdrop-blur rounded-2xl p-6 border border-primary/20">
               <Palette className="w-8 h-8 text-accent" />
-              <span className="text-lg font-semibold">Works in any app</span>
+              <span className="text-lg font-semibold">{t("chipAnyApp")}</span>
             </div>
           </div>
         </div>
@@ -240,10 +206,14 @@ export default async function Home({
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-20">
             <h2 className="text-5xl md:text-6xl font-black mb-6">
-              Watch a <span className="gradient-text">60-second</span> tour
+              {t.rich("demoTitle", {
+                gradient: (chunks) => (
+                  <span className="gradient-text">{chunks}</span>
+                ),
+              })}
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Every tool, every shortcut, in one minute.
+              {t("demoSubtitle")}
             </p>
           </div>
 
@@ -264,184 +234,42 @@ export default async function Home({
         </div>
       </section>
 
-      {/* <section id="features" className="py-32 px-4">
-        <div className="container mx-auto max-w-7xl">
-          <div className="text-center mb-20">
-            <h2 className="text-5xl md:text-6xl font-black mb-6">
-              Built for <span className="gradient-text">creators</span>
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Every feature designed to amplify your creativity and engage your audience
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="border-2 border-primary/20 bg-gradient-to-br from-card to-primary/5 hover:border-primary/40 hover:shadow-2xl transform hover:scale-105 transition-all duration-500 group">
-              <CardHeader className="text-center pb-8">
-                <div className="w-20 h-20 bg-gradient-to-br from-primary to-accent rounded-3xl flex items-center justify-center mb-6 mx-auto group-hover:rotate-12 transition-transform duration-500">
-                  <Users className="w-10 h-10 text-white" />
-                </div>
-                <CardTitle className="text-2xl font-bold text-foreground mb-4">Educators Love It</CardTitle>
-                <CardDescription className="text-lg text-muted-foreground leading-relaxed">
-                  Transform boring lectures into interactive experiences. Highlight, circle, and draw to keep students
-                  engaged.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-
-            <Card className="border-2 border-accent/20 bg-gradient-to-br from-card to-accent/5 hover:border-accent/40 hover:shadow-2xl transform hover:scale-105 transition-all duration-500 group">
-              <CardHeader className="text-center pb-8">
-                <div className="w-20 h-20 bg-gradient-to-br from-accent to-primary rounded-3xl flex items-center justify-center mb-6 mx-auto group-hover:rotate-12 transition-transform duration-500">
-                  <Presentation className="w-10 h-10 text-white" />
-                </div>
-                <CardTitle className="text-2xl font-bold text-foreground mb-4">Presenters Thrive</CardTitle>
-                <CardDescription className="text-lg text-muted-foreground leading-relaxed">
-                  Make every presentation memorable. Emphasize key points and guide your audience's attention
-                  effortlessly.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-
-            <Card className="border-2 border-primary/20 bg-gradient-to-br from-card to-primary/5 hover:border-primary/40 hover:shadow-2xl transform hover:scale-105 transition-all duration-500 group">
-              <CardHeader className="text-center pb-8">
-                <div className="w-20 h-20 bg-gradient-to-br from-primary to-accent rounded-3xl flex items-center justify-center mb-6 mx-auto group-hover:rotate-12 transition-transform duration-500">
-                  <Video className="w-10 h-10 text-white" />
-                </div>
-                <CardTitle className="text-2xl font-bold text-foreground mb-4">Creators Shine</CardTitle>
-                <CardDescription className="text-lg text-muted-foreground leading-relaxed">
-                  Elevate your content creation. Add visual flair to tutorials and make complex concepts crystal clear.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-          </div>
-        </div>
-      </section> */}
-      {/* 
-      <section id="testimonials" className="py-32 px-4 bg-gradient-to-br from-primary/5 to-accent/5">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-20">
-            <h2 className="text-5xl md:text-6xl font-black mb-6">
-              <span className="gradient-text">Thousands</span> love it
-            </h2>
-            <p className="text-xl text-muted-foreground">Real stories from real creators making real impact</p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-12">
-            <Card className="border-2 border-primary/20 bg-card/80 backdrop-blur hover:shadow-2xl transform hover:scale-105 transition-all duration-500">
-              <CardContent className="pt-8">
-                <div className="flex items-center mb-6">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-6 h-6 fill-accent text-accent mr-1" />
-                  ))}
-                </div>
-                <p className="text-xl text-foreground mb-8 leading-relaxed font-medium">
-                  "Scribbble completely transformed my online teaching. My students are 10x more engaged when I can draw
-                  and highlight directly on screen!"
-                </p>
-                <div className="flex items-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center mr-4">
-                    <span className="text-white font-bold text-xl">SM</span>
-                  </div>
-                  <div>
-                    <p className="font-bold text-foreground text-lg">Sarah Martinez</p>
-                    <p className="text-muted-foreground">High School Math Teacher</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="border-2 border-accent/20 bg-card/80 backdrop-blur hover:shadow-2xl transform hover:scale-105 transition-all duration-500">
-              <CardContent className="pt-8">
-                <div className="flex items-center mb-6">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-6 h-6 fill-accent text-accent mr-1" />
-                  ))}
-                </div>
-                <p className="text-xl text-foreground mb-8 leading-relaxed font-medium">
-                  "As a content creator, Scribbble is absolutely essential. It's intuitive, powerful, and makes my
-                  tutorials incredibly engaging!"
-                </p>
-                <div className="flex items-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-accent to-primary rounded-2xl flex items-center justify-center mr-4">
-                    <span className="text-white font-bold text-xl">DJ</span>
-                  </div>
-                  <div>
-                    <p className="font-bold text-foreground text-lg">David Johnson</p>
-                    <p className="text-muted-foreground">YouTube Creator (2M+ subs)</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section> */}
-
       {/* SEO content section: cluster targeting "screen annotation tool mac", "mac screen annotation", "annotation app for mac" */}
       <section className="py-24 px-4">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-black mb-6">
-              The Mac <span className="gradient-text">screen annotation</span>{" "}
-              app for live presentations
+              {t.rich("seoTitle", {
+                gradient: (chunks) => (
+                  <span className="gradient-text">{chunks}</span>
+                ),
+              })}
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Scribbble is a Mac screen annotation tool that draws on top of
-              any app — slides, browsers, Figma, Zoom shares, code editors —
-              with a focused, hotkey-driven workflow built for macOS.
+              {t("seoSubtitle")}
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6 mb-16">
-            <div className="rounded-2xl border-2 border-primary/20 bg-card/60 p-8">
-              <h3 className="text-2xl font-bold mb-3">
-                A real Mac screen annotation tool
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Most annotation apps were ported from Windows. Scribbble was
-                designed Mac-first: native Apple Silicon performance, a modern
-                toolbar that floats or docks to the left or right edge, and
-                macOS-style keyboard shortcuts. It feels like a Mac app because
-                it is one.
-              </p>
-            </div>
-            <div className="rounded-2xl border-2 border-accent/20 bg-card/60 p-8">
-              <h3 className="text-2xl font-bold mb-3">
-                Works in any app you already use
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Because Scribbble draws at the OS level, anything Zoom, Google
-                Meet, OBS, Loom or QuickTime captures will include your
-                annotations. No plugin, no browser source, no extra scene to
-                set up.
-              </p>
-            </div>
-            <div className="rounded-2xl border-2 border-primary/20 bg-card/60 p-8">
-              <h3 className="text-2xl font-bold mb-3">
-                More than just a pen
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Pen, highlighter, arrow, rectangle, ellipse and text — plus
-                Spotlight (focus dim), a Measure tool, and a built-in Snapshot
-                tool that captures the whole screen or a region without
-                leaving the app.
-              </p>
-            </div>
-            <div className="rounded-2xl border-2 border-accent/20 bg-card/60 p-8">
-              <h3 className="text-2xl font-bold mb-3">
-                Free to try, one-time license
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Download and use Scribbble for free. When you&rsquo;re ready,
-                a one-time license unlocks everything — no subscription, no
-                login, no upsell pop-ups.
-              </p>
-            </div>
+            {cards.map((card, i) => (
+              <div
+                key={card.title}
+                className={`rounded-2xl border-2 ${
+                  i % 2 === 0 ? "border-primary/20" : "border-accent/20"
+                } bg-card/60 p-8`}
+              >
+                <h3 className="text-2xl font-bold mb-3">{card.title}</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {card.body}
+                </p>
+              </div>
+            ))}
           </div>
 
           {/* Internal links — use cluster keywords as anchor text */}
           <div className="rounded-2xl border-2 border-primary/20 bg-card/40 p-8">
             <h3 className="text-2xl font-bold mb-6">
-              Built for every Mac workflow
+              {t("linksWorkflowsTitle")}
             </h3>
             <div className="flex flex-wrap gap-3 mb-8">
               {personas.map((p) => (
@@ -450,13 +278,16 @@ export default async function Home({
                   href={`/for/${p.slug}`}
                   className="px-4 py-2 rounded-full border border-primary/30 hover:bg-primary/10 hover:text-primary transition"
                 >
-                  Mac annotation app for {p.audience.toLowerCase()}
+                  {t("linkPersona", {
+                    audience:
+                      locale === "en" ? p.audience.toLowerCase() : p.audience,
+                  })}
                 </Link>
               ))}
             </div>
 
             <h3 className="text-2xl font-bold mb-6">
-              Compare Scribbble with other Mac annotation tools
+              {t("linksCompareTitle")}
             </h3>
             <div className="flex flex-wrap gap-3 mb-8">
               {comparisons.map((c) => (
@@ -465,20 +296,18 @@ export default async function Home({
                   href={`/vs/${c.slug}`}
                   className="px-4 py-2 rounded-full border border-accent/30 hover:bg-accent/10 hover:text-accent transition"
                 >
-                  Scribbble vs {c.competitor}
+                  {t("linkVs", { competitor: c.competitor })}
                 </Link>
               ))}
               <Link
                 href="/vs/zoomit-vs-epic-pen"
                 className="px-4 py-2 rounded-full border border-accent/30 hover:bg-accent/10 hover:text-accent transition"
               >
-                ZoomIt vs Epic Pen
+                {t("linkZoomitVsEpicPen")}
               </Link>
             </div>
 
-            <h3 className="text-2xl font-bold mb-6">
-              Mac screen annotation guides
-            </h3>
+            <h3 className="text-2xl font-bold mb-6">{t("linksGuidesTitle")}</h3>
             <div className="flex flex-wrap gap-3 mb-8">
               {listicles.map((l) => (
                 <Link
@@ -489,12 +318,12 @@ export default async function Home({
                   {l.h1}
                 </Link>
               ))}
-              <Link
+              <a
                 href="/blog/screen-annotation-guide"
                 className="px-4 py-2 rounded-full border border-primary/30 hover:bg-primary/10 hover:text-primary transition"
               >
-                The complete guide to screen annotation
-              </Link>
+                {t("linkGuide")}
+              </a>
             </div>
           </div>
         </div>
@@ -506,48 +335,43 @@ export default async function Home({
       >
         <div className="container mx-auto text-center max-w-4xl">
           <h2 className="text-5xl md:text-7xl font-black mb-8">
-            Ready to <span className="gradient-text">scribble</span>?
+            {t.rich("downloadTitle", {
+              gradient: (chunks) => (
+                <span className="gradient-text">{chunks}</span>
+              ),
+            })}
           </h2>
           <p className="text-2xl text-muted-foreground mb-12 leading-relaxed">
-            One-time price. Works on every Mac running macOS 11 or later. Free
-            updates for life.
+            {t("downloadSubtitle")}
           </p>
           <Button
             size="lg"
             asChild
             className="bg-gradient-to-r from-primary to-accent hover:from-accent hover:to-primary text-white px-16 py-8 text-2xl font-bold shadow-2xl hover:shadow-3xl transform hover:scale-110 transition-all duration-300 mb-8"
           >
-            <a
-              href="https://github.com/chinchang/scribbble/releases/latest/download/Scribbble.dmg"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href={DOWNLOAD_URL} target="_blank" rel="noopener noreferrer">
               <Download className="w-8 h-8 mr-4" />
-              Try Scribbble Free
+              {t("tryFree")}
             </a>
           </Button>
           <div className="flex items-center justify-center space-x-8 text-muted-foreground">
             <div className="flex items-center space-x-2">
               <Layers className="w-5 h-5 text-primary" />
-              <span>macOS 11.0+ (Intel/Silicon)</span>
+              <span>{t("chipMacos")}</span>
             </div>
-            {/* <div className="flex items-center space-x-2">
-              <Zap className="w-5 h-5 text-accent" />
-              <span>Free Forever</span>
-            </div> */}
             <div className="flex items-center space-x-2">
               <Target className="w-5 h-5 text-primary" />
-              <span>No Signup Required</span>
+              <span>{t("chipNoSignup")}</span>
             </div>
             <div className="flex items-center space-x-2">
               <Zap className="w-5 h-5 text-accent" />
-              <span>14-day refund</span>
+              <span>{t("chipRefund")}</span>
             </div>
           </div>
         </div>
       </section>
 
-      <SiteFooter />
+      <SiteFooter locale={locale} showLocaleSwitcher />
     </div>
   );
 }

@@ -1,18 +1,18 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Link from "next/link";
-import Img from "next/image";
+import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import BuyLink from "@/components/buy-link";
 import { Download, ArrowRight, Check, Sparkles } from "lucide-react";
-import { personas, personaSlugs, getPersona } from "@/lib/personas";
-import { comparisons } from "@/lib/comparisons";
-import { listicles } from "@/lib/listicles";
+import { personaSlugs } from "@/lib/personas";
 import SiteFooter from "@/components/site-footer";
 import SiteHeader from "@/components/site-header";
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
+import { getPersona, getPersonas, getComparisons, getListicles } from "@/lib/i18n/data";
+import { localeUrl, languageAlternates } from "@/lib/i18n/seo";
+import { SITE_URL, DOWNLOAD_URL, BUY_URL } from "@/lib/site-config";
 
 export const dynamicParams = false;
 
@@ -28,18 +28,20 @@ export async function generateMetadata({
   params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
   const { locale, slug } = await params;
-  const p = getPersona(slug);
+  const p = getPersona(slug, locale);
   if (!p) return {};
-  const url = `/for/${p.slug}`;
+  const path = `/for/${p.slug}`;
+  const url = localeUrl(locale, path);
   return {
     title: p.title,
     description: p.description,
-    alternates: { canonical: url },
+    alternates: { canonical: url, languages: languageAlternates(path) },
     openGraph: {
       title: p.title,
       description: p.description,
       url,
       type: "website",
+      locale,
       images: ["/social-2.png"],
     },
     twitter: {
@@ -58,14 +60,22 @@ export default async function PersonaPage({
 }) {
   const { locale, slug } = await params;
   setRequestLocale(locale);
-  const persona = getPersona(slug);
+  const persona = getPersona(slug, locale);
   if (!persona) notFound();
 
-  const others = personas.filter((p) => p.slug !== persona.slug);
+  const t = await getTranslations({ locale, namespace: "personaPage" });
+  const tc = await getTranslations({ locale, namespace: "common" });
+  const audience =
+    locale === "en" ? persona.audience.toLowerCase() : persona.audience;
+
+  const others = getPersonas(locale).filter((p) => p.slug !== persona.slug);
+  const comparisons = getComparisons(locale);
+  const listicles = getListicles(locale);
 
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+    inLanguage: locale,
     mainEntity: persona.faq.map((f) => ({
       "@type": "Question",
       name: f.q,
@@ -80,13 +90,13 @@ export default async function PersonaPage({
       {
         "@type": "ListItem",
         position: 1,
-        name: "Home",
-        item: "https://www.scribbble.app/",
+        name: tc("home"),
+        item: `${SITE_URL}${localeUrl(locale, "/")}`,
       },
       {
         "@type": "ListItem",
         position: 2,
-        name: `Scribbble for ${persona.audience}`,
+        name: t("scribbbleFor", { audience: persona.audience }),
       },
     ],
   };
@@ -102,7 +112,7 @@ export default async function PersonaPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
 
-      <SiteHeader />
+      <SiteHeader locale={locale} />
 
       {/* Breadcrumb */}
       <nav
@@ -112,11 +122,11 @@ export default async function PersonaPage({
         <ol className="flex gap-2">
           <li>
             <Link href="/" className="hover:text-primary">
-              Home
+              {tc("home")}
             </Link>
           </li>
           <li>/</li>
-          <li>For</li>
+          <li>{t("breadcrumbFor")}</li>
           <li>/</li>
           <li className="text-foreground">{persona.audience}</li>
         </ol>
@@ -130,7 +140,7 @@ export default async function PersonaPage({
             className="bg-primary/10 text-primary border-primary/30 px-4 py-2 mb-6"
           >
             <Sparkles className="w-4 h-4 mr-2" />
-            Scribbble for {persona.audience}
+            {t("badge", { audience: persona.audience })}
           </Badge>
           <h1 className="text-5xl md:text-6xl font-black mb-6 leading-tight">
             {persona.h1}
@@ -144,13 +154,9 @@ export default async function PersonaPage({
               asChild
               className="bg-gradient-to-r from-primary to-accent text-white px-10 py-6 text-lg font-bold"
             >
-              <a
-                href="https://github.com/chinchang/scribbble/releases/latest/download/Scribbble.dmg"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href={DOWNLOAD_URL} target="_blank" rel="noopener noreferrer">
                 <Download className="w-5 h-5 mr-2" />
-                Download Free
+                {tc("downloadFree")}
               </a>
             </Button>
             <Button
@@ -160,12 +166,12 @@ export default async function PersonaPage({
               className="px-10 py-6 text-lg font-bold border-2 border-primary text-primary"
             >
               <BuyLink
-                href="https://kushagragour.lemonsqueezy.com/buy/7a5d045f-63fa-409e-b0ff-5c90b9020575"
+                href={BUY_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 location="for_hero"
               >
-                Buy License
+                {tc("buyLicense")}
                 <ArrowRight className="w-4 h-4 ml-2" />
               </BuyLink>
             </Button>
@@ -177,8 +183,12 @@ export default async function PersonaPage({
       <section className="py-20 px-4 bg-gradient-to-br from-card to-background">
         <div className="container mx-auto max-w-5xl">
           <h2 className="text-4xl md:text-5xl font-black mb-12 text-center">
-            Why {persona.audience.toLowerCase()} use{" "}
-            <span className="gradient-text">Scribbble</span>
+            {t.rich("whyTitle", {
+              audience,
+              gradient: (chunks) => (
+                <span className="gradient-text">{chunks}</span>
+              ),
+            })}
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
             {persona.painPoints.map((pp) => (
@@ -200,7 +210,7 @@ export default async function PersonaPage({
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-5xl">
           <h2 className="text-4xl md:text-5xl font-black mb-12 text-center">
-            How {persona.audience.toLowerCase()} use it
+            {t("howTitle", { audience })}
           </h2>
           <div className="space-y-6">
             {persona.workflows.map((w, i) => (
@@ -227,16 +237,16 @@ export default async function PersonaPage({
       <section className="py-20 px-4 bg-gradient-to-br from-primary/5 to-accent/5">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-4xl md:text-5xl font-black mb-12 text-center">
-            The tools that matter most
+            {t("toolsTitle")}
           </h2>
           <ul className="space-y-4">
-            {persona.featuredTools.map((t) => (
+            {persona.featuredTools.map((tool) => (
               <li
-                key={t}
+                key={tool}
                 className="flex items-start gap-4 p-4 rounded-xl bg-card/60 border border-primary/20"
               >
                 <Check className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                <span className="text-lg">{t}</span>
+                <span className="text-lg">{tool}</span>
               </li>
             ))}
           </ul>
@@ -247,7 +257,7 @@ export default async function PersonaPage({
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-3xl">
           <h2 className="text-4xl md:text-5xl font-black mb-12 text-center">
-            FAQ
+            {tc("faq")}
           </h2>
           <div className="space-y-6">
             {persona.faq.map((f) => (
@@ -267,23 +277,23 @@ export default async function PersonaPage({
       <section className="py-24 px-4 bg-gradient-to-br from-background to-card">
         <div className="container mx-auto max-w-3xl text-center">
           <h2 className="text-4xl md:text-6xl font-black mb-6">
-            Try Scribbble <span className="gradient-text">free</span>
+            {t.rich("ctaTitle", {
+              gradient: (chunks) => (
+                <span className="gradient-text">{chunks}</span>
+              ),
+            })}
           </h2>
           <p className="text-xl text-muted-foreground mb-10">
-            Built for {persona.audience.toLowerCase()}. Works on macOS 11+.
+            {t("ctaSubtitle", { audience })}
           </p>
           <Button
             size="lg"
             asChild
             className="bg-gradient-to-r from-primary to-accent text-white px-12 py-7 text-xl font-bold"
           >
-            <a
-              href="https://github.com/chinchang/scribbble/releases/latest/download/Scribbble.dmg"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href={DOWNLOAD_URL} target="_blank" rel="noopener noreferrer">
               <Download className="w-6 h-6 mr-3" />
-              Download Scribbble
+              {tc("downloadScribbble")}
             </a>
           </Button>
         </div>
@@ -292,7 +302,7 @@ export default async function PersonaPage({
       {/* Internal links */}
       <section className="py-16 px-4 border-t border-border">
         <div className="container mx-auto max-w-5xl">
-          <h2 className="text-2xl font-bold mb-6">Scribbble for other roles</h2>
+          <h2 className="text-2xl font-bold mb-6">{t("otherRolesTitle")}</h2>
           <div className="flex flex-wrap gap-3 mb-10">
             {others.map((o) => (
               <Link
@@ -300,11 +310,11 @@ export default async function PersonaPage({
                 href={`/for/${o.slug}`}
                 className="px-4 py-2 rounded-full border border-primary/30 hover:bg-primary/10 hover:text-primary transition"
               >
-                Scribbble for {o.audience}
+                {t("scribbbleFor", { audience: o.audience })}
               </Link>
             ))}
           </div>
-          <h2 className="text-2xl font-bold mb-6">Compare Scribbble</h2>
+          <h2 className="text-2xl font-bold mb-6">{t("compareTitle")}</h2>
           <div className="flex flex-wrap gap-3 mb-10">
             {comparisons.map((c) => (
               <Link
@@ -312,11 +322,11 @@ export default async function PersonaPage({
                 href={`/vs/${c.slug}`}
                 className="px-4 py-2 rounded-full border border-accent/30 hover:bg-accent/10 hover:text-accent transition"
               >
-                Scribbble vs {c.competitor}
+                {t("scribbbleVs", { competitor: c.competitor })}
               </Link>
             ))}
           </div>
-          <h2 className="text-2xl font-bold mb-6">Guides</h2>
+          <h2 className="text-2xl font-bold mb-6">{t("guidesTitle")}</h2>
           <div className="flex flex-wrap gap-3">
             {listicles.map((l) => (
               <Link
@@ -331,7 +341,7 @@ export default async function PersonaPage({
         </div>
       </section>
 
-      <SiteFooter />
+      <SiteFooter locale={locale} showLocaleSwitcher />
     </div>
   );
 }

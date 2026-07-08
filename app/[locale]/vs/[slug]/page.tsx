@@ -1,22 +1,23 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Link from "next/link";
-import Img from "next/image";
+import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import BuyLink from "@/components/buy-link";
 import { Download, ArrowRight, Check, X, Sparkles } from "lucide-react";
-import {
-  comparisons,
-  comparisonSlugs,
-  getComparison,
-} from "@/lib/comparisons";
-import { personas } from "@/lib/personas";
-import { listicles } from "@/lib/listicles";
+import { comparisonSlugs } from "@/lib/comparisons";
 import SiteFooter from "@/components/site-footer";
 import SiteHeader from "@/components/site-header";
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
+import {
+  getComparison,
+  getComparisons,
+  getPersonas,
+  getListicles,
+} from "@/lib/i18n/data";
+import { localeUrl, languageAlternates } from "@/lib/i18n/seo";
+import { SITE_URL, DOWNLOAD_URL, BUY_URL } from "@/lib/site-config";
 
 export const dynamicParams = false;
 
@@ -32,18 +33,20 @@ export async function generateMetadata({
   params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
   const { locale, slug } = await params;
-  const c = getComparison(slug);
+  const c = getComparison(slug, locale);
   if (!c) return {};
-  const url = `/vs/${c.slug}`;
+  const path = `/vs/${c.slug}`;
+  const url = localeUrl(locale, path);
   return {
     title: c.title,
     description: c.description,
-    alternates: { canonical: url },
+    alternates: { canonical: url, languages: languageAlternates(path) },
     openGraph: {
       title: c.title,
       description: c.description,
       url,
       type: "website",
+      locale,
       images: ["/social-2.png"],
     },
     twitter: {
@@ -70,14 +73,20 @@ export default async function ComparisonPage({
 }) {
   const { locale, slug } = await params;
   setRequestLocale(locale);
-  const c = getComparison(slug);
+  const c = getComparison(slug, locale);
   if (!c) notFound();
 
-  const others = comparisons.filter((x) => x.slug !== c.slug);
+  const t = await getTranslations({ locale, namespace: "vsPage" });
+  const tc = await getTranslations({ locale, namespace: "common" });
+
+  const others = getComparisons(locale).filter((x) => x.slug !== c.slug);
+  const personas = getPersonas(locale);
+  const listicles = getListicles(locale);
 
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+    inLanguage: locale,
     mainEntity: c.faq.map((f) => ({
       "@type": "Question",
       name: f.q,
@@ -92,13 +101,13 @@ export default async function ComparisonPage({
       {
         "@type": "ListItem",
         position: 1,
-        name: "Home",
-        item: "https://www.scribbble.app/",
+        name: tc("home"),
+        item: `${SITE_URL}${localeUrl(locale, "/")}`,
       },
       {
         "@type": "ListItem",
         position: 2,
-        name: `Scribbble vs ${c.competitor}`,
+        name: t("scribbbleVs", { competitor: c.competitor }),
       },
     ],
   };
@@ -114,7 +123,7 @@ export default async function ComparisonPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
 
-      <SiteHeader />
+      <SiteHeader locale={locale} />
 
       <nav
         aria-label="Breadcrumb"
@@ -123,11 +132,11 @@ export default async function ComparisonPage({
         <ol className="flex gap-2">
           <li>
             <Link href="/" className="hover:text-primary">
-              Home
+              {tc("home")}
             </Link>
           </li>
           <li>/</li>
-          <li>vs</li>
+          <li>{t("breadcrumbVs")}</li>
           <li>/</li>
           <li className="text-foreground">{c.competitor}</li>
         </ol>
@@ -141,7 +150,7 @@ export default async function ComparisonPage({
             className="bg-primary/10 text-primary border-primary/30 px-4 py-2 mb-6"
           >
             <Sparkles className="w-4 h-4 mr-2" />
-            Honest comparison
+            {t("badge")}
           </Badge>
           <h1 className="text-5xl md:text-6xl font-black mb-6 leading-tight">
             {c.h1}
@@ -155,13 +164,9 @@ export default async function ComparisonPage({
               asChild
               className="bg-gradient-to-r from-primary to-accent text-white px-10 py-6 text-lg font-bold"
             >
-              <a
-                href="https://github.com/chinchang/scribbble/releases/latest/download/Scribbble.dmg"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href={DOWNLOAD_URL} target="_blank" rel="noopener noreferrer">
                 <Download className="w-5 h-5 mr-2" />
-                Try Scribbble Free
+                {t("tryFree")}
               </a>
             </Button>
             <Button
@@ -171,12 +176,12 @@ export default async function ComparisonPage({
               className="px-10 py-6 text-lg font-bold border-2 border-primary text-primary"
             >
               <BuyLink
-                href="https://kushagragour.lemonsqueezy.com/buy/7a5d045f-63fa-409e-b0ff-5c90b9020575"
+                href={BUY_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 location="vs_hero"
               >
-                Buy License
+                {tc("buyLicense")}
                 <ArrowRight className="w-4 h-4 ml-2" />
               </BuyLink>
             </Button>
@@ -188,7 +193,7 @@ export default async function ComparisonPage({
       <section className="py-16 px-4 bg-gradient-to-br from-card to-background">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-black mb-6">
-            What is {c.competitor}?
+            {t("whatIs", { competitor: c.competitor })}
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
             {c.competitorSummary}
@@ -200,13 +205,13 @@ export default async function ComparisonPage({
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-4xl md:text-5xl font-black mb-12 text-center">
-            Side-by-side comparison
+            {t("tableTitle")}
           </h2>
           <div className="overflow-x-auto rounded-2xl border-2 border-primary/20">
             <table className="w-full">
               <thead className="bg-primary/10">
                 <tr>
-                  <th className="text-left p-4 font-bold">Feature</th>
+                  <th className="text-left p-4 font-bold">{t("feature")}</th>
                   <th className="text-left p-4 font-bold gradient-text">
                     Scribbble
                   </th>
@@ -225,7 +230,7 @@ export default async function ComparisonPage({
                   </tr>
                 ))}
                 <tr className="border-t-2 border-primary/20">
-                  <td className="p-4 font-bold">Pricing</td>
+                  <td className="p-4 font-bold">{t("pricing")}</td>
                   <td className="p-4">{c.pricing.scribbble}</td>
                   <td className="p-4">{c.pricing.competitor}</td>
                 </tr>
@@ -240,7 +245,7 @@ export default async function ComparisonPage({
         <div className="container mx-auto max-w-5xl grid md:grid-cols-2 gap-8">
           <div className="rounded-2xl border-2 border-primary/30 bg-card/60 p-8">
             <h3 className="text-2xl font-bold mb-4 gradient-text">
-              Where Scribbble wins
+              {t("whereScribbbleWins")}
             </h3>
             <ul className="space-y-3">
               {c.scribbbleStrengths.map((s) => (
@@ -253,7 +258,7 @@ export default async function ComparisonPage({
           </div>
           <div className="rounded-2xl border-2 border-accent/30 bg-card/60 p-8">
             <h3 className="text-2xl font-bold mb-4">
-              Where {c.competitor} wins
+              {t("whereCompetitorWins", { competitor: c.competitor })}
             </h3>
             <ul className="space-y-3">
               {c.competitorStrengths.map((s) => (
@@ -271,7 +276,7 @@ export default async function ComparisonPage({
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-5xl grid md:grid-cols-2 gap-8">
           <div>
-            <h3 className="text-2xl font-bold mb-4">Choose Scribbble if…</h3>
+            <h3 className="text-2xl font-bold mb-4">{t("chooseScribbble")}</h3>
             <ul className="space-y-3">
               {c.whenToChooseScribbble.map((s) => (
                 <li key={s} className="flex gap-3">
@@ -283,7 +288,7 @@ export default async function ComparisonPage({
           </div>
           <div>
             <h3 className="text-2xl font-bold mb-4">
-              Choose {c.competitor} if…
+              {t("chooseCompetitor", { competitor: c.competitor })}
             </h3>
             <ul className="space-y-3">
               {c.whenToChooseCompetitor.map((s) => (
@@ -300,7 +305,7 @@ export default async function ComparisonPage({
       {/* FAQ */}
       <section className="py-20 px-4 bg-gradient-to-br from-card to-background">
         <div className="container mx-auto max-w-3xl">
-          <h2 className="text-4xl font-black mb-10 text-center">FAQ</h2>
+          <h2 className="text-4xl font-black mb-10 text-center">{tc("faq")}</h2>
           <div className="space-y-6">
             {c.faq.map((f) => (
               <div
@@ -319,23 +324,23 @@ export default async function ComparisonPage({
       <section className="py-24 px-4">
         <div className="container mx-auto max-w-3xl text-center">
           <h2 className="text-4xl md:text-6xl font-black mb-6">
-            Try <span className="gradient-text">Scribbble</span> free
+            {t.rich("ctaTitle", {
+              gradient: (chunks) => (
+                <span className="gradient-text">{chunks}</span>
+              ),
+            })}
           </h2>
           <p className="text-xl text-muted-foreground mb-10">
-            Native macOS. One-time license. No subscription.
+            {t("ctaSubtitle")}
           </p>
           <Button
             size="lg"
             asChild
             className="bg-gradient-to-r from-primary to-accent text-white px-12 py-7 text-xl font-bold"
           >
-            <a
-              href="https://github.com/chinchang/scribbble/releases/latest/download/Scribbble.dmg"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href={DOWNLOAD_URL} target="_blank" rel="noopener noreferrer">
               <Download className="w-6 h-6 mr-3" />
-              Download Scribbble
+              {tc("downloadScribbble")}
             </a>
           </Button>
         </div>
@@ -344,7 +349,7 @@ export default async function ComparisonPage({
       {/* Internal linking */}
       <section className="py-16 px-4 border-t border-border">
         <div className="container mx-auto max-w-5xl">
-          <h2 className="text-2xl font-bold mb-6">Other comparisons</h2>
+          <h2 className="text-2xl font-bold mb-6">{t("otherComparisons")}</h2>
           <div className="flex flex-wrap gap-3 mb-10">
             {others.map((o) => (
               <Link
@@ -352,17 +357,17 @@ export default async function ComparisonPage({
                 href={`/vs/${o.slug}`}
                 className="px-4 py-2 rounded-full border border-primary/30 hover:bg-primary/10 hover:text-primary transition"
               >
-                Scribbble vs {o.competitor}
+                {t("scribbbleVs", { competitor: o.competitor })}
               </Link>
             ))}
             <Link
               href="/vs/zoomit-vs-epic-pen"
               className="px-4 py-2 rounded-full border border-primary/30 hover:bg-primary/10 hover:text-primary transition"
             >
-              ZoomIt vs Epic Pen
+              {t("zoomitVsEpicPen")}
             </Link>
           </div>
-          <h2 className="text-2xl font-bold mb-6">Scribbble for your role</h2>
+          <h2 className="text-2xl font-bold mb-6">{t("forYourRole")}</h2>
           <div className="flex flex-wrap gap-3 mb-10">
             {personas.map((p) => (
               <Link
@@ -370,11 +375,11 @@ export default async function ComparisonPage({
                 href={`/for/${p.slug}`}
                 className="px-4 py-2 rounded-full border border-accent/30 hover:bg-accent/10 hover:text-accent transition"
               >
-                Scribbble for {p.audience}
+                {t("scribbbleFor", { audience: p.audience })}
               </Link>
             ))}
           </div>
-          <h2 className="text-2xl font-bold mb-6">Guides</h2>
+          <h2 className="text-2xl font-bold mb-6">{t("guides")}</h2>
           <div className="flex flex-wrap gap-3">
             {listicles.map((l) => (
               <Link
@@ -389,7 +394,7 @@ export default async function ComparisonPage({
         </div>
       </section>
 
-      <SiteFooter />
+      <SiteFooter locale={locale} showLocaleSwitcher />
     </div>
   );
 }
