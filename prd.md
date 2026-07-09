@@ -73,8 +73,8 @@ P4 — Internal linking + structured data
 
 ### Localization (i18n)
 
-- [x] Localize marketing pages (homepage, `/for/*`, `/vs/*`, `/best/*`, header/footer) into 6 languages — es, zh, ja, de, hi, nl — via next-intl; English stays at root URLs, other locales at `/es/...` etc. Blog and `/tools/screenshot-annotate` stay English-only
-- [x] Restructure routes into `app/[locale]/` (marketing) and `app/(en)/` (blog, tools) with per-locale `<html lang>`, all 119 marketing pages statically generated
+- [x] Localize marketing pages (homepage, `/for/*`, `/vs/*`, `/best/*`, header/footer) into 7 languages — es, zh, ja, de, hi, nl, fr — via next-intl; English stays at root URLs, other locales at `/es/...` etc. Blog and `/tools/screenshot-annotate` stay English-only
+- [x] Restructure routes into `app/[locale]/` (marketing) and `app/(en)/` (blog, tools) with per-locale `<html lang>`, all 136 marketing pages statically generated
 - [x] SEO: self-referencing canonicals, hreflang alternates (7 locales + x-default) on every marketing page, per-locale sitemap entries with alternates, `inLanguage` in JSON-LD, no Accept-Language redirects
 - [x] `scripts/translate.ts` (`pnpm translate`) — GPT-powered, lockfile-diffed (only new/changed strings hit the API), validates placeholders/tags, writes checked-in `messages/{locale}.json` + `lib/i18n/data/{locale}/*.json` overlays
 - [x] Footer language switcher on localized pages

@@ -35,7 +35,7 @@ for (const envFile of [".env.local", ".env"]) {
   }
 }
 
-const TARGET_LOCALES = ["es", "zh", "ja", "de", "hi", "nl"] as const;
+const TARGET_LOCALES = ["es", "zh", "ja", "de", "hi", "nl", "fr"] as const;
 const LANGUAGE_NAMES: Record<string, string> = {
   es: "Spanish",
   zh: "Simplified Chinese",
@@ -43,6 +43,7 @@ const LANGUAGE_NAMES: Record<string, string> = {
   de: "German",
   hi: "Hindi",
   nl: "Dutch",
+  fr: "French",
 };
 
 const MODEL = process.env.OPENAI_MODEL ?? "gpt-5-mini";

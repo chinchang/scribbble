@@ -7,4 +7,5 @@ export const LOCALE_NAMES: Record<string, string> = {
   de: "Deutsch",
   hi: "हिन्दी",
   nl: "Nederlands",
+  fr: "Français",
 };

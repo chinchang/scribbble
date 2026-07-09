@@ -20,6 +20,9 @@ import hiListicles from "./data/hi/listicles.json";
 import nlPersonas from "./data/nl/personas.json";
 import nlComparisons from "./data/nl/comparisons.json";
 import nlListicles from "./data/nl/listicles.json";
+import frPersonas from "./data/fr/personas.json";
+import frComparisons from "./data/fr/comparisons.json";
+import frListicles from "./data/fr/listicles.json";
 
 // Translated overlays keyed by slug. Only translatable fields are present;
 // anything missing falls back to the English source object.
@@ -35,6 +38,7 @@ const overlays: Record<
   de: { personas: dePersonas, comparisons: deComparisons, listicles: deListicles },
   hi: { personas: hiPersonas, comparisons: hiComparisons, listicles: hiListicles },
   nl: { personas: nlPersonas, comparisons: nlComparisons, listicles: nlListicles },
+  fr: { personas: frPersonas, comparisons: frComparisons, listicles: frListicles },
 };
 
 function isPlainObject(v: unknown): v is Record<string, unknown> {
