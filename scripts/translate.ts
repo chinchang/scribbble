@@ -46,7 +46,7 @@ const LANGUAGE_NAMES: Record<string, string> = {
   fr: "French",
 };
 
-const MODEL = process.env.OPENAI_MODEL ?? "gpt-5-mini";
+const MODEL = process.env.OPENAI_MODEL ?? "gpt-4o-mini";
 const API_URL =
   process.env.OPENAI_BASE_URL ?? "https://api.openai.com/v1/chat/completions";
 const CHUNK_MAX_ITEMS = 40;
