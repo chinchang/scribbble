@@ -1,1 +1,369 @@
-{}
+{
+  "zoomit": {
+    "title": "ZoomIt for Mac vs Scribbble — 2026年、どちらを選ぶべきか？",
+    "description": "Microsoft の ZoomIt は macOS でも動作しますが、UI は依然として Windows の移植版です。Scribbble との正直な比較 — 機能、価格、選ぶべきケースをまとめました。",
+    "h1": "Scribbble vs ZoomIt",
+    "subheadline": "ZoomIt は Windows 発の Sysinternals ユーティリティとして愛用されてきました（最近 macOS 版も登場）。Scribbble は Mac を第一に設計された、画面への描画に特化したモダンな UI のアプリです。",
+    "competitorSummary": "ZoomIt は Microsoft Sysinternals が提供する、注釈・ズーム・休憩タイマー機能を備えた無料ユーティリティです。Windows で誕生し、現在は macOS ビルドも公開されています。無駄のないホットキーと統合ズーム機能が強みです。",
+    "competitorStrengths": [
+      "Microsoft 製で無料",
+      "内蔵の画面ズームと休憩タイマー",
+      "長年の Sysinternals ユーザーには馴染みがある"
+    ],
+    "scribbbleStrengths": [
+      "Mac を第一に設計、左右どちらにもドックできるモダンなツールバー",
+      "Apple Silicon ネイティブ",
+      "Spotlight（フォーカスディム）、Highlighter、Measure ツールが初めから利用可能",
+      "アプリを離れずに画面全体や領域をキャプチャできる組み込みの Snapshot ツール",
+      "画面共有、ストリーミング、録画ワークフローを前提に設計",
+      "描画に特化した軽量設計で、余計な機能を覚える必要がない"
+    ],
+    "whenToChooseScribbble": [
+      "移植された管理者向けユーティリティではなく、モダンでMacネイティブなUIを求める場合",
+      "ズームやタイマーではなく、画面上の描画が主目的の場合",
+      "デザインが磨かれたワンタイム購入のアプリを好む場合"
+    ],
+    "whenToChooseCompetitor": [
+      "ZoomItのズーム機能や休憩タイマー機能が特に必要な場合",
+      "既にSysinternalsツールで標準化されている場合"
+    ],
+    "table": [
+      {
+        "feature": "macOS対応",
+        "scribbble": "はい（Macを第一に設計）"
+      },
+      {
+        "feature": "Apple Siliconネイティブ"
+      },
+      {
+        "feature": "ペンツール"
+      },
+      {
+        "feature": "ハイライター"
+      },
+      {
+        "feature": "図形（矢印、四角、楕円）＋テキスト"
+      },
+      {
+        "feature": "スポットライト（フォーカスの暗転）"
+      },
+      {
+        "feature": "測定ツール"
+      },
+      {
+        "feature": "スナップショットキャプチャ（画面または領域）"
+      },
+      {
+        "feature": "ツールバーを画面の左または右にドック可能"
+      },
+      {
+        "feature": "内蔵の画面ズーム"
+      },
+      {
+        "feature": "休憩タイマー"
+      },
+      {
+        "feature": "モダンなMacスタイルのUI"
+      }
+    ],
+    "pricing": {
+      "scribbble": "無料でダウンロード可能。オプションの一回限りのライセンス。"
+    },
+    "faq": [
+      {
+        "q": "Mac向けのZoomItはありますか？",
+        "a": "あります — MicrosoftはZoomItのmacOSビルドを公開しています。ScribbbleはMacを第一に作られた代替で、古典的なSysinternalsユーティリティの外観ではなく、画面への描画に特化したモダンなUIを重視しています。"
+      },
+      {
+        "q": "ScribbbleにはZoomItのようなズーム機能はありますか？",
+        "a": "いいえ。Scribbbleは注釈（アノテーション）に専念しています。画面ズームがワークフローで不可欠な場合は、ZoomItかmacOSの組み込みZoomアクセシビリティ機能の方が適しているかもしれません。"
+      }
+    ]
+  },
+  "presentify": {
+    "title": "Scribbble vs Presentify — Macの注釈アプリ比較（2026）",
+    "description": "MacでPresentifyの代替を探していますか？Scribbbleは無料ダウンロード、測定ツール、スクリーンショット注釈の補助ツールを提供します。率直な比較を掲載。",
+    "h1": "Scribbble vs Presentify",
+    "subheadline": "どちらもMacネイティブの画面注釈アプリで、一回払いの価格、浮動するツールバー、ハイライター、スポットライトを備えています。違いを実際に見てみましょう。",
+    "competitorSummary": "Presentifyは人気のあるmacOS向け画面注釈アプリです。ハイライターやスポットライトを含む画面上の描画ツール、移動可能な浮動ツールバー、カーソルハイライト機能を提供します。Mac App Storeと直配布の両方で入手でき、一回払いの購入モデルを採用しています。",
+    "competitorStrengths": [
+      "カーソルハイライト機能",
+      "成熟した確立済みのMacアプリ",
+      "Mac App Storeと直接ダウンロードで入手可能"
+    ],
+    "scribbbleStrengths": [
+      "購入前に無料でフルアプリを試せる",
+      "測定ツールが標準で搭載",
+      "組み込みのSnapshotツール — 別アプリ不要で画面全体または領域をキャプチャ",
+      "ツールバーが画面の左または右端にドックできる（単なる浮動ではない）",
+      "静的なマークアップ用の無償の補助Screenshot Annotateウェブツール",
+      "意匠に対する積極的な磨き上げと頻繁なアップデート"
+    ],
+    "whenToChooseScribbble": [
+      "ライセンス購入前にフルアプリを無料で試したい場合",
+      "測定ツールがワークフローに必要な場合",
+      "補助の無料スクリーンショット注釈ツールも欲しい場合"
+    ],
+    "whenToChooseCompetitor": [
+      "カーソルの強調表示が必須のワークフローである場合",
+      "Mac App Storeで長く確立されたアプリを好む場合"
+    ],
+    "table": [
+      {
+        "feature": "価格モデル",
+        "scribbble": "買い切りライセンス"
+      },
+      {
+        "feature": "ペン / 図形（矢印、矩形、楕円） / テキスト"
+      },
+      {
+        "feature": "蛍光ペン"
+      },
+      {
+        "feature": "スポットライト（フォーカスの暗転）"
+      },
+      {
+        "feature": "フローティング／移動可能なツールバー",
+        "scribbble": "あり（左／右にドッキング可）"
+      },
+      {
+        "feature": "計測ツール"
+      },
+      {
+        "feature": "スナップショット撮影（画面または領域）"
+      },
+      {
+        "feature": "カーソルハイライト"
+      },
+      {
+        "feature": "無料ダウンロードで試用可"
+      },
+      {
+        "feature": "配布方法",
+        "scribbble": "直接ダウンロード"
+      },
+      {
+        "feature": "補助のスクリーンショット注釈ツール",
+        "scribbble": "あり（無料のウェブツール）"
+      }
+    ],
+    "pricing": {
+      "scribbble": "無料でダウンロード可。買い切りライセンスで全機能をアンロック。"
+    },
+    "faq": [
+      {
+        "q": "ScribbbleはPresentifyの代替ですか？",
+        "a": "はい — 両者ともMac用の画面注釈アプリで、買い切り価格、蛍光ペン、スポットライト、フローティングツールバーを備えています。主な違いは、Scribbbleはライセンス前に無料でダウンロードして試用できること、計測ツールを含むこと、そして無料のスクリーンショット注釈ウェブツールが付属することです。Presentifyの目立つ機能はカーソルハイライトです。"
+      },
+      {
+        "q": "両方とも買い切り価格ですか？",
+        "a": "はい — ScribbbleもPresentifyもサブスクリプションではなく、買い切りです。"
+      },
+      {
+        "q": "Presentifyには蛍光ペンとスポットライトがありますか？",
+        "a": "はい。Presentifyは蛍光ペン（カーソルハイライトとは別機能）とスポットライトツール、そしてフローティング／移動可能なツールバーを備えています。Scribbbleも同様の機能に加え、計測ツールを提供します。"
+      }
+    ]
+  },
+  "cleanshot-x": {
+    "title": "Scribbble vs CleanShot X — ライブ描画とスクリーンショット注釈の違い",
+    "description": "CleanShot Xはキャプチャ → 注釈 → 共有に最適です。ScribbbleはZoom、OBS、録画中のライブ画面に直接描画します。どちらを使うべきか（または両方使うべきか）はこう判断します。",
+    "h1": "Scribbble vs CleanShot X",
+    "subheadline": "CleanShot Xはスクリーンショットの王道ツール。Scribbbleはライブ画面への描画に特化しています。補完的な関係ですが、選び方は以下の通りです。",
+    "competitorSummary": "CleanShot XはmacOS向けのスクリーンショット＆録画のオールインワンアプリで、注釈ツールを備えます — ただしスクリーンショットを撮った後でのみ使えます。",
+    "competitorStrengths": [
+      "スクリーンショット撮影の最高峰",
+      "クラウドアップロードと共有リンク",
+      "スクロールキャプチャ",
+      "注釈付きの画面録画"
+    ],
+    "scribbbleStrengths": [
+      "キャプチャ画像ではなく、ライブ画面上に直接注釈できる",
+      "Zoom通話、OBS配信、録画中でも動作する",
+      "ライブプレゼン向けにスポットライト、蛍光ペン、計測ツールを搭載",
+      "スナップショット撮影（全画面または領域）を内蔵し、キャプチャとライブの差を縮めた",
+      "単機能で軽量",
+      "ライブ注釈だけが必要なユーザーにはより手頃な価格",
+      "静的なマークアップ用に、ぼかしや被写界深度、番号付きマーカーを備えた無料のScreenshot Annotateウェブツールが付属"
+    ],
+    "whenToChooseScribbble": [
+      "ライブのプレゼンテーション、通話、配信中に注釈を入れる場合",
+      "描画を保存したスクリーンショット上ではなく、実際のライブ画面に表示させたい場合",
+      "クラウド共有、画面録画、スクロールキャプチャが必要ない場合"
+    ],
+    "whenToChooseCompetitor": [
+      "あなたの主な作業フローが「キャプチャ → 注釈 → 共有」である場合",
+      "クラウドリンク、スクロールキャプチャ、または画面録画が必要な場合"
+    ],
+    "table": [
+      {
+        "feature": "ライブでの画面上注釈"
+      },
+      {
+        "feature": "スポットライト（フォーカス暗転）"
+      },
+      {
+        "feature": "計測ツール"
+      },
+      {
+        "feature": "蛍光ペン"
+      },
+      {
+        "feature": "スナップショット（画面または領域）"
+      },
+      {
+        "feature": "スクリーンショット注釈",
+        "scribbble": "あり（無料の補助ウェブツール）"
+      },
+      {
+        "feature": "画面録画"
+      },
+      {
+        "feature": "クラウドアップロード＆共有リンク"
+      },
+      {
+        "feature": "スクロールキャプチャ"
+      },
+      {
+        "feature": "価格体系",
+        "scribbble": "買い切り"
+      }
+    ],
+    "pricing": {
+      "scribbble": "無料でダウンロード可能。オプションの一度きりのライセンスあり。"
+    },
+    "faq": [
+      {
+        "q": "ScribbbleとCleanShot Xを併用できますか？",
+        "a": "できます — 多くのユーザーがそうしています。CleanShotはキャプチャと非同期共有に、Scribbbleは通話やプレゼン中のライブ描画に使う、といった組み合わせが一般的です。"
+      }
+    ]
+  },
+  "epic-pen": {
+    "title": "Epic Pen for Mac? Scribbble Is the Best Mac Alternative (2026)",
+    "description": "Epic PenはWindows専用です。Scribbbleは最も近いMacネイティブの代替で、ペン・蛍光ペン・スポットライト・計測ツールを備えています。無料ダウンロード。比較表あり。",
+    "h1": "Scribbble vs Epic Pen：Macネイティブの選択肢",
+    "subheadline": "Epic Penはよく知られた画面マーキングツールですが、Windows優先の設計です。ScribbbleはmacOS向けに特化して作られています。",
+    "competitorSummary": "Epic Penは主にWindowsユーザー向けに設計された画面注釈ツールです。プレゼンや授業中にどんなアプリ上でも描画やハイライトができます。",
+    "competitorStrengths": [
+      "確立されたWindowsのユーザーベース",
+      "無料プランあり",
+      "Windowsプレゼンターに馴染みのあるUI"
+    ],
+    "scribbbleStrengths": [
+      "ネイティブなmacOS対応 — Apple Silicon最適化",
+      "モダンなMacのショートカットに合わせて設計され、ツールバーは左右どちらにもドックできます",
+      "スポットライト、蛍光ペン、計測ツールを搭載",
+      "組み込みのスナップショット機能 — 別アプリ不要で画面全体や領域をキャプチャ",
+      "軽量で高速",
+      "静的なマークアップ用の無料のスクリーンショット注釈ウェブツールを提供"
+    ],
+    "whenToChooseScribbble": [
+      "macOSをお使いの場合",
+      "モダンでMacネイティブな体験を求める場合",
+      "フリーミアム方式より買い切りライセンスを好む場合"
+    ],
+    "whenToChooseCompetitor": [
+      "Windowsを使っていて、すでにEpic Penに慣れている場合"
+    ],
+    "table": [
+      {
+        "feature": "macOSネイティブ"
+      },
+      {
+        "feature": "ペン／蛍光ペン"
+      },
+      {
+        "feature": "図形（矢印、四角、円）＆テキスト"
+      },
+      {
+        "feature": "スポットライト（フォーカス暗転）"
+      },
+      {
+        "feature": "計測ツール"
+      },
+      {
+        "feature": "スナップショットキャプチャ（画面全体または領域）"
+      },
+      {
+        "feature": "Apple Silicon"
+      },
+      {
+        "feature": "左または右にドッキングするツールバー"
+      }
+    ],
+    "pricing": {
+      "scribbble": "無料ダウンロード／買い切りライセンス。"
+    },
+    "faq": [
+      {
+        "q": "Epic PenのMac版はありますか？",
+        "a": "Epic PenはWindows向けに作られています。同じ画面上で描くワークフローで真にMacネイティブな代替をお探しなら、Scribbbleが最も近い選択肢です。"
+      }
+    ]
+  },
+  "annotate": {
+    "title": "Scribbble vs Annotate for Mac — ライブ画面描画の比較",
+    "description": "Annotateはスクリーンショットのマークアップに特化したツールです。ScribbbleはZoom、OBS、録画中のライブなMac画面上で描画します。率直な比較と用途別の選び方。",
+    "h1": "Scribbble vs Annotate",
+    "subheadline": "Annotateはスクリーンショットや録画のマークアップに強いMac向けツールです。Scribbbleはライブ画面上での描画に特化しています。",
+    "competitorSummary": "Annotateはスクリーンショットをキャプチャして注釈を付け、共有するためのMacアプリです。キャプチャして編集するワークフローが得意です。",
+    "competitorStrengths": [
+      "洗練されたスクリーンショットのマークアップワークフロー",
+      "共有・チーム向け機能",
+      "実績あるMac App Storeのアプリ"
+    ],
+    "scribbbleStrengths": [
+      "通話やプレゼン中にライブ画面に注釈を付けられる",
+      "Spotlight、ハイライター、計測ツールを搭載",
+      "スナップショットキャプチャ（画面全体または領域）を内蔵 — Annotateの領域もカバー",
+      "サインアップ不要の無料スクリーンショット注釈Webツールの提供",
+      "買い切りライセンス",
+      "最新のApple Siliconネイティブビルド"
+    ],
+    "whenToChooseScribbble": [
+      "ライブ画面共有中（Zoom、Meet、OBS）に注釈を付けたいとき",
+      "サインアップ不要の無料スクリーンショット注釈ツールも欲しいとき",
+      "買い切り価格でシングルタスクに特化したアプリを好むとき"
+    ],
+    "whenToChooseCompetitor": [
+      "チームでの共同マークアップ機能や共有ワークスペースが必要なとき"
+    ],
+    "table": [
+      {
+        "feature": "ライブ画面注釈"
+      },
+      {
+        "feature": "Spotlight（フォーカスで周辺を暗くする）"
+      },
+      {
+        "feature": "ハイライター"
+      },
+      {
+        "feature": "計測ツール"
+      },
+      {
+        "feature": "スナップショットキャプチャ（画面全体または領域）"
+      },
+      {
+        "feature": "スクリーンショットの注釈付け",
+        "scribbble": "はい（無料のWebツール）"
+      },
+      {
+        "feature": "チームでの共同作業"
+      },
+      {
+        "feature": "無料のオンラインスクリーンショットツール"
+      }
+    ],
+    "pricing": {
+      "scribbble": "無料ダウンロード。買い切りライセンス。"
+    },
+    "faq": [
+      {
+        "q": "ライブプレゼンに向いているのはどちら？",
+        "a": "Scribbbleです。実際の画面の上にリアルタイムで描画するため、Zoom、OBS、QuickTimeがキャプチャするものには注釈がすべて含まれます。"
+      }
+    ]
+  }
+}

@@ -1,1 +1,268 @@
-{}
+{
+  "streamers": {
+    "painPoints": [
+      {
+        "body": "Je cursor wordt piepklein op een gestreamde, verlaagde resolutie. Een snelle cirkel helpt kijkers zich te oriënteren tijdens razendsnelle gameplay of react-content.",
+        "title": "Aangeven van dingen tijdens een stream is onhandig"
+      },
+      {
+        "title": "Browser-source overlays voegen latency en complexiteit toe",
+        "body": "Scribbble draait als een native Mac-app — geen browser-source, geen extra OBS-scène, geen vreemde audio-routing."
+      }
+    ],
+    "workflows": [
+      {
+        "title": "Reaction streams en watch-alongs",
+        "body": "Markeer het beste stukje van de meme, teken wenkbrauwen op de YouTuber, schets voorspellingen tijdens een sportclip."
+      },
+      {
+        "title": "Coaching en educatieve gaming",
+        "body": "Pauzeer de gameplay, teken de rotatie, cirkel de positie van de tegenstander. Perfect voor VOD-reviews en coachingstreams."
+      },
+      {
+        "title": "Just-chatting en productreviews",
+        "body": "Annotate websites, blader productgegevens door en cirkel specificaties terwijl je ze voorleest."
+      }
+    ],
+    "featuredTools": [
+      "Penseelgereedschap met felle, streamvriendelijke kleuren",
+      "Markeerstift om tekst op het scherm te benadrukken",
+      "Spotlight om de aandacht van de chat op één deel van de gameplay te richten",
+      "Pijl-gereedschap voor snelle callouts",
+      "Rechthoek-, ellips- en tekstgereedschappen voor overlays",
+      "Maak een snapshot van het scherm of een regio voor clip-thumbnails en post-stream hoogtepunten",
+      "Snelle-clear hotkey om het scherm tussen segments schoon te vegen"
+    ],
+    "faq": [
+      {
+        "q": "Werkt Scribbble met OBS en Streamlabs?",
+        "a": "Ja. Scribbble tekent op OS-niveau, dus elke screen-capture source — OBS, Streamlabs, Restream — pakt je annotaties automatisch op."
+      },
+      {
+        "q": "Zal het mijn game vertragen?",
+        "a": "Scribbble is een lichtgewicht native Mac-app en gebruikt GPU-versnelling voor tekenen. De impact op de prestaties is verwaarloosbaar."
+      }
+    ],
+    "audience": "Streamers",
+    "title": "Teken direct op je stream — Mac-annotatie voor OBS / Streamlabs",
+    "description": "Omcirkel loot, schets strategieën, markeer chat. Scribbble laat Mac-streamers live op het scherm tekenen in OBS, Streamlabs of elke capture. Gratis uitproberen.",
+    "h1": "Teken realtime op je stream",
+    "subheadline": "Omcirkel loot, schets strategieën, reageer op chat met pijlen en krabbels. Scribbble legt direct over je scherm zodat OBS elke streek vastlegt."
+  },
+  "youtubers": {
+    "audience": "YouTubers",
+    "title": "Screen Annotation App voor YouTubers (Mac) — Sla nabewerking over",
+    "description": "Stop met cirkels toevoegen in de nabewerking. Teken pijlen, kaders en callouts terwijl je opneemt op Mac — Scribbble brandt ze direct in de schermopname. Gratis te proberen.",
+    "h1": "De annotatietool voor YouTube-makers",
+    "subheadline": "Stop met cirkels toevoegen in de nabewerking. Teken pijlen, kaders en call-outs terwijl je opneemt — Scribbble brandt ze direct in de schermopname.",
+    "painPoints": [
+      {
+        "title": "Callouts toevoegen in Final Cut of Premiere is traag",
+        "body": "Elke cirkel, pijl en highlight in post-productie kost uren. Live tekenen halveert je edit-tijd drastisch."
+      },
+      {
+        "title": "Opnieuw opnemen omdat je naar het verkeerde wijst",
+        "body": "Met een echte annotatietool kun je wissen en opnieuw tekenen tijdens een opname in plaats van de hele clip te knippen."
+      }
+    ],
+    "workflows": [
+      {
+        "title": "Software-tutorials",
+        "body": "Loop door elke Mac-app — Figma, Photoshop, VS Code, Excel — en cirkel knoppen en teken pijlen terwijl je commentaar geeft. De kijker volgt jouw blik."
+      },
+      {
+        "title": "Code-walkthroughs",
+        "body": "Markeer specifieke regels, teken verbindingen tussen functies, omlijn belangrijke blokken. Vervangt de noodzaak voor een tweede schermopname-laag."
+      },
+      {
+        "title": "Vergelijkings- en reviewvideo's",
+        "body": "Side-by-side productvergelijkingen met live annotaties. Gebruik het rechthoek-gereedschap om functiedifferenties aan te wijzen."
+      }
+    ],
+    "featuredTools": [
+      "Penseelgereedschap voor vrijhandsbenadrukking",
+      "Markeerstift om code of tekst op het scherm te markeren",
+      "Spotlight om alles te dimmen behalve het deel dat je demonstreert",
+      "Pijl-gereedschap voor begeleide rondleidingen",
+      "Rechthoek, ellips en tekst voor feature-callouts",
+      "Maak een snapshot van het scherm of een regio voor videotumbnails en B-roll-stills",
+      "Meerdere kleuren om concepten van elkaar te onderscheiden",
+      "Ongedaan maken / opnieuw doen zodat je kunt blijven opnemen bij kleine fouten"
+    ],
+    "faq": [
+      {
+        "q": "Zullen de annotaties in mijn uiteindelijke video staan?",
+        "a": "Ja. Scribbble tekent op het niveau van het scherm, dus alles wat ScreenFlow, Camtasia, Loom, ScreenStudio of QuickTime vastlegt, bevat de annotaties."
+      },
+      {
+        "q": "Kan ik een streek ongedaan maken zonder de opname te herstarten?",
+        "a": "Ja — Scribbble heeft volledige ongedaan maken / opnieuw doen. Wis een fout tijdens een take en blijf opnemen."
+      }
+    ]
+  },
+  "teachers": {
+    "audience": "Docenten",
+    "title": "Schermannotatie-app voor docenten op Mac (Gratis proef)",
+    "description": "Markeer dia's, schets over PDF's en annoteer gedeelde Zoom-schermen live. Scribbble is de Mac-schermannotatie-app gemaakt voor docenten. Gratis download, eenmalige licentie.",
+    "h1": "De schermannotatie-app ontworpen voor docenten",
+    "subheadline": "Markeer dia's, websites, PDF's en gedeelde Zoom-schermen in realtime. Houd studenten gefocust op wat echt belangrijk is — zonder steeds naar een apart whiteboard te wisselen.",
+    "painPoints": [
+      {
+        "title": "Overschakelen naar een whiteboard onderbreekt de les",
+        "body": "Jamboard of Miro openen middenin de les verliest de aandacht van studenten. Scribbble tekent bovenop wat je al open hebt — dia's, browsers, PDF's, code-editors."
+      },
+      {
+        "title": "Studenten zien niet altijd waar je naar wijst",
+        "body": "Bij het delen van je scherm is de muisaanwijzer voor de helft van de klas vaak onzichtbaar. Omcirkel het, onderstreep het of teken een pijl — je nadruk is onmiskenbaar, ook in de opname."
+      },
+      {
+        "title": "Opnames van lessen betekenen diagrammen opnieuw tekenen",
+        "body": "Schets direct over je bestaande materiaal in plaats van diagrammen in een andere app opnieuw te maken. Gum uit en teken opnieuw zonder je dia te verlaten."
+      }
+    ],
+    "workflows": [
+      {
+        "title": "Live lessen via Zoom / Google Meet",
+        "body": "Deel je scherm en druk op een sneltoets om te beginnen met tekenen. Markeer belangrijke woorden in een tekst, schets een wiskundig bewijs op een dia of annoteer het werk van een student in realtime."
+      },
+      {
+        "title": "Opgenomen lezingen en Loom-video's",
+        "body": "Gebruik de pen- en pijltjestoep terwijl je opneemt met QuickTime, Loom of ScreenStudio. Annotaties worden in de opname verwerkt — geen nabewerking nodig."
+      },
+      {
+        "title": "1-op-1 bijles",
+        "body": "Loop een opgave door op een gedeeld whiteboard, PDF-werkblad of website. Gebruik verschillende kleuren per concept zodat studenten je denkproces kunnen volgen."
+      }
+    ],
+    "featuredTools": [
+      "Vrije-pen voor diagrammen en onderstrepingen",
+      "Marker om belangrijke passages in een tekst of dia aan te geven",
+      "Spotlight om alles te dimmen behalve het deel dat je uitlegt",
+      "Pijltool om de aandacht te richten",
+      "Rechthoek- en ellipsvormen om kernconcepten te omkaderen of te cirkelen",
+      "Teksttool voor woordenschat-aanduidingen",
+      "Maak een snapshot van het hele scherm of een gebied om studentwerk of lesmomenten op te slaan",
+      "Snelgummen om dia's netjes te houden"
+    ],
+    "faq": [
+      {
+        "q": "Werkt Scribbble met Zoom en Google Meet?",
+        "a": "Ja. Scribbble tekent bovenop elke app, inclusief de schermdeel-preview van Zoom, Meet, Webex en Teams. Wat jouw studenten zien, zien zij ook met jouw annotaties."
+      },
+      {
+        "q": "Zien mijn annotaties in QuickTime- of Loom-opnames?",
+        "a": "Ja. Omdat Scribbble op OS-niveau tekent, legt elke schermrecorder de annotaties vast als onderdeel van het scherm."
+      },
+      {
+        "q": "Is er een korting voor onderwijsinstellingen?",
+        "a": "Neem contact op via de supportlink hieronder — we helpen docenten en scholen graag met volumelicenties."
+      }
+    ]
+  },
+  "designers": {
+    "audience": "Designers",
+    "title": "Redline in Figma & Browsers — Mac-annotatie-app voor designers",
+    "description": "Schets en redline direct op Figma, browsers en prototypes tijdens live designcrits op Mac. Geen exports, geen plugins — Scribbble tekent bovenop alles. Gratis.",
+    "h1": "Schets en redline direct op je ontwerpen",
+    "subheadline": "Voer designcrits uit zonder screenshots te exporteren. Scribbble tekent bovenop Figma, de browser, je prototype — wat je ook reviewt — en laat je het gemarkeerde frame opslaan naar het klembord.",
+    "painPoints": [
+      {
+        "title": "Exporteren → markeren → opnieuw importeren is friction",
+        "body": "De meeste feedback verdwijnt tussen Figma en een ander tool. Scribbble laat je de redline maken waar je al naar kijkt."
+      },
+      {
+        "title": "Crits voelen zich losgekoppeld aan op Zoom",
+        "body": "Met je muis naar dingen wijzen verliest het publiek. Een cirkel tekenen terwijl je praat houdt het gesprek gefocust."
+      },
+      {
+        "title": "Schattend pixelmaten bepalen kost tijd",
+        "body": "Scribbbles Measure-tool laat je spacing, padding en componentafmetingen direct op het scherm controleren — geen export naar een aparte liniaal-app."
+      }
+    ],
+    "workflows": [
+      {
+        "title": "Live designcrits",
+        "body": "Deel je scherm in Zoom, loop samen een Figma-frame door en omcirkel problemen terwijl je praat. Het hele team ziet je streken in realtime, geen plugin of exportstap nodig."
+      },
+      {
+        "title": "Async feedback voor engineers",
+        "body": "Wil je statische markup delen? Combineer de Scribbble Mac-app met de gratis Screenshot Annotate webtool om een frame vast te leggen en te redlinen, en plak het direct in een Linear-ticket."
+      },
+      {
+        "title": "User testing aantekeningen",
+        "body": "Annotate schermopnames van usersessies om UX-momenten te markeren die het delen waard zijn met het team."
+      }
+    ],
+    "featuredTools": [
+      "Pen-tool voor redlines",
+      "Measure-tool om spacing, padding en afmetingen op het scherm te controleren",
+      "Rechthoek- en ellipsvormen voor spacing- en componentaanduidingen",
+      "Marker om copy en contentblokken te markeren",
+      "Spotlight om de crit op één frame tegelijk te focussen",
+      "Pijl-tool voor flow-critique",
+      "Teksttool voor inline notities",
+      "Maak een snapshot van een frame of regio om direct in een Linear-ticket of ontwerpdocument te plakken",
+      "Dock de werkbalk links of rechts om het canvas vrij te houden"
+    ],
+    "faq": [
+      {
+        "q": "Integreert Scribbble met Figma?",
+        "a": "Scribbble tekent bovenop Figma (of iets anders) op het OS-niveau — geen plugin nodig. Annotaties leven op het scherm, niet in het Figma-bestand."
+      },
+      {
+        "q": "Kan ik het geannoteerde frame opslaan als afbeelding?",
+        "a": "De Scribbble Mac-app tekent op het live scherm — om een geannoteerde still op te slaan, gebruik de gratis Screenshot Annotate-tool op /tools/screenshot-annotate waarmee je een afbeelding kunt uploaden of plakken, markeren en naar het klembord kopiëren."
+      }
+    ]
+  },
+  "sales-teams": {
+    "audience": "Sales teams",
+    "title": "Schermannotatie voor salesdemos op Mac — Leid de blik",
+    "description": "Accentueer prijstiers, omcirkel het ROI-nummer, teken de workflow live. Scribbble is de Mac-annotatie-app voor salesteams die demos geven op Zoom, Gong en Loom.",
+    "h1": "Het schermannotatie-gereedschap voor salesdemos",
+    "subheadline": "Richt de aandacht van je prospect met één toetsdruk. Markeer prijsklassen, omcirkel het ROI-getal, teken de workflow — je demo komt harder binnen wanneer jij de blik stuurt.",
+    "painPoints": [
+      {
+        "title": "Prospects missen het beslissende moment in een demo",
+        "body": "Tijdens een Zoom-share kijkt de prospect half naar z'n e-mail. Een live cirkel om het belangrijkste cijfer trekt ze meteen terug."
+      },
+      {
+        "title": "Demos opnemen voor async verzenden",
+        "body": "Opgenomen walkthroughs werken veel beter met ingebakken annotaties. Geen editor nodig — Scribbble tekent live."
+      }
+    ],
+    "workflows": [
+      {
+        "title": "Live discovery- en demogesprekken",
+        "body": "Deel je scherm op Zoom of Gong en markeer tijdens het praten precies de prijslaag, dashboard-widget of integratie die je laat zien."
+      },
+      {
+        "title": "Async Loom / Vidyard walkthroughs",
+        "body": "Neem een gepersonaliseerde 3-minuten demo op met on-screen annotaties ingebakken. Hogere respons dan kale schermopnames."
+      },
+      {
+        "title": "Interne enablement en call reviews",
+        "body": "Annotate Gong-opnames of concurrerende collateral bij het trainen van het team."
+      }
+    ],
+    "featuredTools": [
+      "Highlighter voor ROI-cijfers en prijzengroepen",
+      "Spotlight om alles te dimmen behalve de dashboard-widget die je wilt tonen",
+      "Pijltool voor begeleide rondleidingen",
+      "Rechthoek- en ellipsvormen voor prijsaanduidingen en feature call-outs",
+      "Teksttool voor inline labels",
+      "Maak een snapshot van het volledige scherm of een regio voor follow-up e-mails en recap-decks",
+      "Wissen met één toets tussen secties van de demo"
+    ],
+    "faq": [
+      {
+        "q": "Werkt dit met Zoom, Gong, Chorus en Loom?",
+        "a": "Ja. Scribbble tekent op OS-niveau, dus elke schermopname of share — Zoom, Gong, Chorus, Loom, Vidyard — legt de annotaties vast."
+      },
+      {
+        "q": "Is er een teamlicentie?",
+        "a": "Neem contact op via de supportlink hieronder voor team- en volumelicenties."
+      }
+    ]
+  }
+}

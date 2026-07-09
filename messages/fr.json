@@ -1,0 +1,312 @@
+{
+  "meta": {
+    "titleDefault": "Scribbble — Application d'annotation d'écran pour Mac · Dessinez sur l'écran",
+    "titleTemplate": "%s | Scribbble",
+    "description": "Scribbble est une belle application Mac pour griffonner, dessiner, surligner et annoter directement sur votre écran. Parfait pour les enseignants, streamers, YouTubers, designers et démonstrations commerciales. Téléchargement gratuit, licence unique.",
+    "ogTitle": "Scribbble — Application d'annotation d'écran pour Mac",
+    "ogImageAlt": "Scribbble — application d'annotation d'écran pour Mac"
+  },
+  "header": {
+    "cta": "Télécharger Scribbble",
+    "buyLicense": "Acheter la licence"
+  },
+  "footer": {
+    "tools": "Outils",
+    "screenshotAnnotate": "Annotation de captures d'écran",
+    "learn": "Apprendre",
+    "blog": "Blog",
+    "screenAnnotationGuide": "Guide d'annotation d'écran",
+    "for": "Pour",
+    "guides": "Guides",
+    "compare": "Comparer",
+    "scribbbleVs": "Scribbble vs {competitor}",
+    "company": "Entreprise",
+    "buyLicense": "Acheter la licence",
+    "support": "Assistance",
+    "language": "Langue",
+    "copyright": "© 2025 Kushagra Gour. Scribbling dans le monde entier depuis 2025."
+  },
+  "home": {
+    "badge": "Conçu pour Mac · Paiement unique",
+    "heroTitle": "<gradient>Dessinez</gradient> par-dessus <underline>tout</underline> sur l'écran de votre Mac",
+    "heroSubtitle": "Appuyez sur un raccourci, dessinez au‑dessus de n'importe quelle app, appuyez de nouveau pour effacer. C'est tout. <strong>Pas de fenêtres</strong>, pas de configuration, pas d'abonnement mensuel.",
+    "tryFree": "Essayer Scribbble gratuitement",
+    "buyLicense": "Acheter la licence",
+    "chipZeroSetup": "Sans configuration",
+    "chipPayOnce": "Payez une fois, possédez pour toujours",
+    "chipAnyApp": "Fonctionne dans toutes vos apps",
+    "demoTitle": "Regardez une visite de <gradient>60 secondes</gradient>",
+    "demoSubtitle": "Tous les outils, tous les raccourcis, en une minute.",
+    "seoTitle": "L'application Mac d'<gradient>annotation d'écran</gradient> pour présentations en direct",
+    "seoSubtitle": "Scribbble est un outil d'annotation d'écran Mac qui dessine par‑dessus n'importe quelle app — diapositives, navigateurs, Figma, partages Zoom, éditeurs de code — avec un flux de travail concentré et piloté par raccourci, conçu pour macOS.",
+    "cards": [
+      {
+        "title": "Un vrai outil d'annotation d'écran Mac",
+        "body": "La plupart des apps d'annotation sont des ports depuis Windows. Scribbble a été conçu d'abord pour Mac : performances natives Apple Silicon, une barre d'outils moderne qui flotte ou se fixe à gauche ou à droite, et des raccourcis clavier à la manière macOS. Ça ressemble à une app Mac parce que c'en est une."
+      },
+      {
+        "title": "Fonctionne dans toutes les apps que vous utilisez déjà",
+        "body": "Parce que Scribbble dessine au niveau du système, tout ce que Zoom, Google Meet, OBS, Loom ou QuickTime capture inclura vos annotations. Pas de plugin, pas de source de navigateur, pas de scène supplémentaire à configurer."
+      },
+      {
+        "title": "Plus qu'un simple stylet",
+        "body": "Stylo, surligneur, flèche, rectangle, ellipse et texte — plus Spotlight (mise au point par atténuation), un outil Mesure, et un outil Capture intégré qui saisit l'écran entier ou une région sans quitter l'app."
+      },
+      {
+        "title": "Essai gratuit, licence unique",
+        "body": "Téléchargez et utilisez Scribbble gratuitement. Quand vous êtes prêt, une licence unique débloque tout — pas d'abonnement, pas de connexion, pas de fenêtres d'incitation à l'achat."
+      }
+    ],
+    "linksWorkflowsTitle": "Conçu pour tous les workflows sur Mac",
+    "linkPersona": "Application d'annotation Mac pour {audience}",
+    "linksCompareTitle": "Comparer Scribbble avec d'autres outils d'annotation pour Mac",
+    "linkVs": "Scribbble vs {competitor}",
+    "linkZoomitVsEpicPen": "ZoomIt vs Epic Pen",
+    "linksGuidesTitle": "Guides d'annotation d'écran pour Mac",
+    "linkGuide": "Le guide complet de l'annotation d'écran",
+    "downloadTitle": "Prêt à <gradient>scribble</gradient> ?",
+    "downloadSubtitle": "Paiement unique. Fonctionne sur tous les Mac exécutant macOS 11 ou ultérieur. Mises à jour gratuites à vie.",
+    "chipMacos": "macOS 11.0+ (Intel/Silicon)",
+    "chipNoSignup": "Inscription non requise",
+    "chipRefund": "Remboursement sous 14 jours",
+    "jsonLd": {
+      "description": "Scribbble est une application Mac qui vous permet de dessiner, surligner et annoter directement sur votre écran — pour les enseignants, streamers, YouTubers, designers et démonstrations commerciales.",
+      "featureList": [
+        "Outil stylo libre",
+        "Surligneur",
+        "Outil flèche",
+        "Forme rectangle",
+        "Forme ellipse",
+        "Annotations texte",
+        "Spotlight (mise au point avec assombrissement)",
+        "Outil de mesure",
+        "Capture instantanée — écran entier ou zone sélectionnée",
+        "La barre d'outils se fixe sur le bord gauche ou droit",
+        "Natif Apple Silicon",
+        "Outil compagnon gratuit Screenshot Annotate (web)"
+      ],
+      "offerDescription": "Téléchargement gratuit. Licence unique pour toutes les fonctionnalités."
+    }
+  },
+  "common": {
+    "home": "Accueil",
+    "faq": "FAQ",
+    "downloadFree": "Télécharger gratuitement",
+    "buyLicense": "Acheter la licence",
+    "downloadScribbble": "Télécharger Scribbble"
+  },
+  "zoomitVsEpicPen": {
+    "title": "ZoomIt vs Epic Pen — Lequel est le meilleur en 2026 ?",
+    "description": "ZoomIt et Epic Pen sont deux des outils d'annotation d'écran les plus populaires. Comparaison honnête et côte à côte : fonctionnalités, tarifs, plateformes — et la meilleure alternative pour Mac.",
+    "badge": "Comparaison honnête et pratique",
+    "h1": "ZoomIt vs Epic Pen",
+    "subtitle": "Deux des outils d'annotation d'écran les plus populaires, côte à côte. Fonctionnalités, tarifs, plateformes — et quoi choisir si vous êtes sur Mac.",
+    "tldrTitle": "En bref",
+    "tldr": [
+      {
+        "lead": "Choisissez ZoomIt",
+        "body": "si vous voulez un utilitaire gratuit piloté par des raccourcis clavier avec zoom d'écran intégré et minuteur de pause — et si vous êtes sur Mac, puisque Epic Pen n'y fonctionne pas."
+      },
+      {
+        "lead": "Choisissez Epic Pen",
+        "body": "si vous êtes sur Windows, préférez une interface plus conviviale orientée présentation et acceptez de payer pour la version Pro (formes, texte)."
+      },
+      {
+        "lead": "Choisissez Scribbble",
+        "body": "si vous êtes sur Mac et voulez une application moderne et native macOS avec le raffinement d'Epic Pen et un jeu d'outils plus riche (Spotlight, Measure) que les deux autres."
+      }
+    ],
+    "whatIsZoomitTitle": "Qu'est‑ce que ZoomIt ?",
+    "whatIsZoomitBody": "ZoomIt est un utilitaire gratuit d'annotation d'écran, de zoom et de minuterie de pause développé par Microsoft Sysinternals. Il est né sur Windows et Microsoft a depuis publié une version pour macOS. Sa force réside dans des raccourcis clavier sans friction et la fonction de zoom intégrée — apprécié des administrateurs système, présentateurs et formateurs qui doivent montrer des détails fins à l'écran.",
+    "whatIsEpicPenTitle": "Qu'est‑ce qu'Epic Pen ?",
+    "whatIsEpicPenBody": "Epic Pen est un outil d'annotation d'écran pour Windows conçu pour les présentations et les cours. Il permet de dessiner, surligner et (dans la version Pro) d'ajouter des formes et du texte par-dessus n'importe quelle application. Il offre une interface plus conviviale que ZoomIt mais fonctionne uniquement sous Windows — il n'existe pas de version Mac native.",
+    "tableTitle": "Comparaison côte à côte",
+    "feature": "Caractéristique",
+    "table": [
+      {
+        "feature": "Prix",
+        "zoomit": "Gratuit",
+        "epicPen": "Gratuit + version Pro"
+      },
+      {
+        "feature": "Éditeur",
+        "zoomit": "Microsoft Sysinternals",
+        "epicPen": "Epic Pen"
+      },
+      {
+        "feature": "Windows",
+        "zoomit": "Oui (original)",
+        "epicPen": "Oui (original)"
+      },
+      {
+        "feature": "macOS",
+        "zoomit": "Oui (port récent)",
+        "epicPen": "No"
+      },
+      {
+        "feature": "Linux",
+        "zoomit": "No",
+        "epicPen": "No"
+      },
+      {
+        "feature": "Outil stylo",
+        "zoomit": "Yes",
+        "epicPen": "Yes"
+      },
+      {
+        "feature": "Surligneur",
+        "zoomit": "Limité",
+        "epicPen": "Yes"
+      },
+      {
+        "feature": "Formes (flèche / rectangle)",
+        "zoomit": "Yes",
+        "epicPen": "Oui (Pro)"
+      },
+      {
+        "feature": "Outil texte",
+        "zoomit": "Oui (mode saisie)",
+        "epicPen": "Oui (Pro)"
+      },
+      {
+        "feature": "Zoom d'écran",
+        "zoomit": "Yes",
+        "epicPen": "No"
+      },
+      {
+        "feature": "Minuterie de pause",
+        "zoomit": "Yes",
+        "epicPen": "No"
+      },
+      {
+        "feature": "Mode tableau blanc",
+        "zoomit": "Yes",
+        "epicPen": "No"
+      },
+      {
+        "feature": "Interface moderne et native macOS",
+        "zoomit": "Non (port Windows)",
+        "epicPen": "—"
+      }
+    ],
+    "chooseZoomitTitle": "Choisissez ZoomIt si…",
+    "chooseZoomit": [
+      "Vous voulez un outil entièrement gratuit sans version Pro",
+      "Vous avez besoin d'un zoom d'écran intégré pour montrer des détails fins",
+      "Vous êtes sur macOS — Epic Pen ne fonctionne pas dessus",
+      "Vous aimez les outils pilotés par raccourcis avec une interface minimaliste",
+      "Vous voulez aussi une minuterie de pause pour des sessions de formation"
+    ],
+    "chooseEpicPenTitle": "Choisissez Epic Pen si…",
+    "chooseEpicPen": [
+      "Vous êtes sous Windows",
+      "Vous préférez une interface orientée présentation et plus conviviale qu'un utilitaire pour administrateurs",
+      "Vous acceptez de payer le niveau Pro pour débloquer les formes et le texte",
+      "Vous n'avez pas besoin de zoom d'écran ni de minuterie de pause"
+    ],
+    "macTitle": "Sur Mac ? Voici l'option la mieux adaptée.",
+    "macBody": "Epic Pen ne fonctionne pas du tout sur macOS, et le port Mac de ZoomIt ressemble encore à un utilitaire Windows. Si vous êtes sur Mac et voulez quelque chose qui ait vraiment l'air d'une app Mac, Scribbble est conçu spécifiquement pour macOS — avec une barre d'outils moderne et déplaçable, des performances natives Apple Silicon, et un jeu d'outils plus riche (Spotlight, Measure) que ZoomIt ou Epic Pen.",
+    "scribbbleFitsTitle": "Où se situe Scribbble",
+    "scribbbleFits": [
+      "Les mêmes outils de base qu'Epic Pen — stylo, surligneur, flèche, rectangle, texte — sans paywall Pro",
+      "Ajoute Spotlight (mise en valeur par atténuation) et Measure, outils absent chez ZoomIt et Epic Pen",
+      "Interface native Mac avec prise en charge Apple Silicon",
+      "Téléchargement et essai gratuits, licence unique"
+    ],
+    "tryFree": "Essayez Scribbble Gratuitement",
+    "seeAlternatives": "Voir toutes les alternatives à Epic Pen pour Mac",
+    "relatedComparisons": "Comparaisons associées",
+    "guides": "Guides",
+    "forYourRole": "Scribbble selon votre rôle",
+    "scribbbleVs": "Scribbble vs {competitor}",
+    "scribbbleFor": "Scribbble pour {audience}",
+    "faq": [
+      {
+        "q": "Lequel est meilleur, ZoomIt ou Epic Pen ?",
+        "a": "Cela dépend de votre plateforme et de vos besoins. ZoomIt est gratuit, fonctionne sur Windows et macOS, et inclut un zoom d'écran intégré et une minuterie de pause que Epic Pen n'a pas. Epic Pen offre une interface d'annotation plus soignée et propose un niveau Pro qui ajoute formes et texte, mais il ne tourne que sous Windows. Si vous êtes sur Mac, ZoomIt est le seul des deux qui fonctionne du tout."
+      },
+      {
+        "q": "Pourquoi certains choisissent ZoomIt plutôt qu'Epic Pen ?",
+        "a": "Trois raisons principales : (1) ZoomIt est entièrement gratuit sans niveau Pro, alors qu'Epic Pen réserve les formes et le texte derrière une mise à niveau payante. (2) ZoomIt inclut une vraie fonction de zoom d'écran pour montrer les détails fins, ce qu'Epic Pen n'a pas. (3) ZoomIt fonctionne désormais sur macOS — Epic Pen non. Les évaluateurs notent aussi que les raccourcis sans friction de ZoomIt donnent une sensation de rapidité comparée à la barre d'outils d'Epic Pen."
+      },
+      {
+        "q": "En quoi Epic Pen diffère-t-il de ZoomIt ?",
+        "a": "Epic Pen propose une interface d'annotation plus conviviale et moderne, pensée pour la présentation. ZoomIt est un utilitaire Sysinternals — UI minimale, piloté par raccourcis, avec des fonctionnalités supplémentaires (zoom, minuterie de pause, mode tableau blanc). Le niveau gratuit d'Epic Pen est limité au stylo et au surligneur ; l'ensemble des fonctionnalités de ZoomIt est gratuit."
+      },
+      {
+        "q": "Existe-t-il une alternative Mac à la fois à ZoomIt et à Epic Pen ?",
+        "a": "Oui. Scribbble est une application d'annotation d'écran conçue en priorité pour Mac qui combine le meilleur des deux — une interface moderne et soignée comme Epic Pen, et un flux de travail axé sur les raccourcis comme ZoomIt. Elle inclut stylo, surligneur, flèche, rectangle, texte, Spotlight (mise en valeur) et Measure, téléchargeable gratuitement et déverrouillable par une licence unique."
+      },
+      {
+        "q": "Quelles fonctionnalités les alternatives offrent-elles qu'Epic Pen n'a pas ?",
+        "a": "La plupart des alternatives modernes ajoutent au moins une des fonctionnalités suivantes : un outil Spotlight / mise en valeur, un outil Measure pour les distances à l'écran, un zoom d'écran (ZoomIt), ou un enregistreur d'écran intégré (CleanShot X). Scribbble ajoute spécifiquement Spotlight, Measure et un outil compagnon gratuit de capture Annotate. ZoomIt ajoute zoom, minuterie de pause et mode tableau blanc."
+      },
+      {
+        "q": "Quels outils d'annotation d'écran les évaluateurs recommandent-ils plutôt qu'Epic Pen ?",
+        "a": "Sur Windows, ZoomIt est l'alternative gratuite la plus recommandée. Sur Mac (où Epic Pen ne fonctionne pas du tout), les alternatives les plus recommandées sont Scribbble (conçu pour Mac), Presentify (mise en évidence du curseur), ZoomIt (UI de style Windows gratuite) et CleanShot X (capture + annotation)."
+      },
+      {
+        "q": "ZoomIt est-il sûr ?",
+        "a": "Oui — ZoomIt est publié par Microsoft dans la suite Sysinternals, distribué directement depuis le site de Microsoft. Il est largement utilisé en entreprise."
+      },
+      {
+        "q": "Epic Pen fonctionne-t-il sur Mac ?",
+        "a": "Non. Epic Pen est uniquement disponible sous Windows et n'a pas de version native Mac. Si vous êtes sur macOS, regardez Scribbble (conçu pour Mac), ZoomIt (port Microsoft gratuit) ou Presentify."
+      }
+    ]
+  },
+  "bestPage": {
+    "breadcrumbGuides": "Guides",
+    "badge": "Comparatif honnête et pratique",
+    "howWePicked": "Comment nous avons choisi",
+    "ourPick": "Notre choix",
+    "bestFor": "Idéal pour",
+    "pros": "Avantages",
+    "cons": "Inconvénients",
+    "pricing": "Tarifs :",
+    "scribbbleVsItem": "Scribbble vs {name}",
+    "bottomLine": "En bref",
+    "ctaTitle": "Essayez notre choix numéro un : <gradient>Scribbble</gradient>",
+    "ctaSubtitle": "Téléchargement gratuit. Licence unique. Natif macOS.",
+    "otherGuides": "Autres guides",
+    "compareTitle": "Comparez Scribbble",
+    "scribbbleVs": "Scribbble vs {competitor}",
+    "forYourRole": "Scribbble selon votre rôle",
+    "scribbbleFor": "Scribbble pour {audience}"
+  },
+  "vsPage": {
+    "breadcrumbVs": "vs",
+    "badge": "Comparaison honnête",
+    "tryFree": "Essayez Scribbble gratuitement",
+    "whatIs": "Qu'est-ce que {competitor} ?",
+    "tableTitle": "Comparaison côte à côte",
+    "feature": "Fonctionnalité",
+    "pricing": "Tarification",
+    "whereScribbbleWins": "Où Scribbble est meilleur",
+    "whereCompetitorWins": "Où {competitor} est meilleur",
+    "chooseScribbble": "Choisissez Scribbble si…",
+    "chooseCompetitor": "Choisissez {competitor} si…",
+    "ctaTitle": "Essayez <gradient>Scribbble</gradient> gratuitement",
+    "ctaSubtitle": "Natif macOS. Licence unique. Pas d'abonnement.",
+    "otherComparisons": "Autres comparaisons",
+    "scribbbleVs": "Scribbble vs {competitor}",
+    "zoomitVsEpicPen": "ZoomIt vs Epic Pen",
+    "forYourRole": "Scribbble selon votre rôle",
+    "scribbbleFor": "Scribbble pour {audience}",
+    "guides": "Guides"
+  },
+  "personaPage": {
+    "breadcrumbFor": "Pour",
+    "badge": "Scribbble pour {audience}",
+    "whyTitle": "Pourquoi {audience} utilisent <gradient>Scribbble</gradient>",
+    "howTitle": "Comment {audience} l'utilisent",
+    "toolsTitle": "Les outils qui comptent vraiment",
+    "ctaTitle": "Essayez Scribbble <gradient>gratuitement</gradient>",
+    "ctaSubtitle": "Conçu pour {audience}. Fonctionne sur macOS 11+.",
+    "otherRolesTitle": "Scribbble pour d'autres rôles",
+    "scribbbleFor": "Scribbble pour {audience}",
+    "compareTitle": "Comparer Scribbble",
+    "scribbbleVs": "Scribbble vs {competitor}",
+    "guidesTitle": "Guides"
+  }
+}

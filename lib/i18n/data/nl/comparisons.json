@@ -1,1 +1,369 @@
-{}
+{
+  "zoomit": {
+    "title": "ZoomIt for Mac vs Scribbble — Welke kies je in 2026?",
+    "description": "Microsoft ZoomIt draait nu op macOS, maar de UI is nog steeds een Windows-port. Hier een eerlijke vergelijking tussen Scribbble en ZoomIt — features, prijzen en wanneer je welke kiest.",
+    "h1": "Scribbble vs ZoomIt",
+    "subheadline": "ZoomIt is een geliefde Sysinternals-utility uit de Windows-wereld (met een recente macOS-release). Scribbble is een Mac-first app die zich volledig richt op tekenen op het scherm, met een moderne UI.",
+    "competitorSummary": "ZoomIt is een gratis annotatie-, zoom- en break-timer-tool van Microsoft Sysinternals. Het is ontstaan op Windows en Microsoft heeft sindsdien een macOS-build uitgebracht. De kracht ligt in de frictionless hotkeys en de geïntegreerde zoomfunctie.",
+    "competitorStrengths": [
+      "Gratis van Microsoft",
+      "Ingebouwde schermzoom en break-timer",
+      "Bekend bij langjarige Sysinternals-gebruikers"
+    ],
+    "scribbbleStrengths": [
+      "Vanuit Mac gebouwd met een moderne toolbar die je links of rechts kunt docken",
+      "Apple Silicon-native",
+      "Inclusief Spotlight (focus dim), Highlighter en Meet-tools direct uit de doos",
+      "Ingebouwde Snapshot-tool om het hele scherm of een regio vast te leggen zonder de app te verlaten",
+      "Ontworpen rond screen-share-, streaming- en opnameworkflows",
+      "Lichtgewicht, gefocust op tekenen — geen extra utilities om te leren"
+    ],
+    "whenToChooseScribbble": [
+      "Je wilt een moderne, Mac-native UI in plaats van een gepord utility voor sysadmins",
+      "Tekenfunctionaliteit op het scherm is je primaire behoefte — niet zoom of timers",
+      "Je geeft de voorkeur aan een eenmalige licentie met actieve designpolish"
+    ],
+    "whenToChooseCompetitor": [
+      "Je wilt specifiek ZoomIt's zoom- en pauzetimerfuncties",
+      "Je gebruikt al standaard Sysinternals-tools"
+    ],
+    "table": [
+      {
+        "feature": "macOS-ondersteuning",
+        "scribbble": "Ja (Mac-first)"
+      },
+      {
+        "feature": "Apple Silicon-native"
+      },
+      {
+        "feature": "Pennetje (pen tool)"
+      },
+      {
+        "feature": "Markeerstift (highlighter)"
+      },
+      {
+        "feature": "Vormen (pijl, rechthoek, ellips) + Tekst"
+      },
+      {
+        "feature": "Spotlight (focus dim)"
+      },
+      {
+        "feature": "Meettool"
+      },
+      {
+        "feature": "Snapshot-opname (scherm of regio)"
+      },
+      {
+        "feature": "Werkbalk docken links of rechts"
+      },
+      {
+        "feature": "Ingebouwde schermzoom"
+      },
+      {
+        "feature": "Pauzetimer"
+      },
+      {
+        "feature": "Moderne Mac-stijl UI"
+      }
+    ],
+    "pricing": {
+      "scribbble": "Gratis te downloaden. Optionele eenmalige licentie."
+    },
+    "faq": [
+      {
+        "q": "Is er een ZoomIt voor Mac?",
+        "a": "Ja — Microsoft heeft een macOS-build van ZoomIt uitgebracht. Scribbble is een alternatief dat van meet af aan voor de Mac is gebouwd en zich puur richt op tekenen op het scherm met een moderne UI in plaats van de klassieke Sysinternals-uiterlijk."
+      },
+      {
+        "q": "Bevat Scribbble een zoomfunctie zoals ZoomIt?",
+        "a": "Nee. Scribbble richt zich uitsluitend op annotatie. Als schermzoom cruciaal is voor je workflow, zijn ZoomIt of de ingebouwde Zoom-toegankelijkheidsfunctie van macOS waarschijnlijk beter geschikt."
+      }
+    ]
+  },
+  "presentify": {
+    "title": "Scribbble vs Presentify — Mac-annotatieapps vergeleken (2026)",
+    "description": "Op zoek naar een Presentify-alternatief voor Mac? Scribbble biedt gratis download, een Meettool en een begeleidende screenshot-annotator. Eerlijke vergelijking naast elkaar.",
+    "h1": "Scribbble vs Presentify",
+    "subheadline": "Beide zijn native Mac-annotatieapps met eenmalige prijs, zwevende werkbalken, markeerstift en spotlight. Zo verschillen ze echt van elkaar.",
+    "competitorSummary": "Presentify is een populaire macOS-schermannotatie-app. Het biedt on-screen tekentools waaronder een markeerstift en spotlight, een zwevende/verplaatsbare werkbalk en een cursor-highlightingfunctie. Het wordt zowel via de Mac App Store als direct verspreid en gebruikt een eenmalig aankoopmodel.",
+    "competitorStrengths": [
+      "Cursor-highlightingfunctie",
+      "Volwassen, gevestigd Mac‑app",
+      "Beschikbaar in de Mac App Store en als directe download"
+    ],
+    "scribbbleStrengths": [
+      "Gratis te downloaden en uitproberen vóór aankoop",
+      "Heeft standaard een Meettool",
+      "Ingebouwde Snapshot-tool — maak een foto van het hele scherm of een regio zonder aparte app",
+      "Werkbalk dockt aan de linker- of rechterrand van het scherm, niet alleen zwevend",
+      "Begeleidende gratis Screenshot Annotate webtool voor statische markering",
+      "Actieve designpolish en frequente updates"
+    ],
+    "whenToChooseScribbble": [
+      "Je wilt de volledige app gratis proberen voordat je een licentie koopt",
+      "Een meettool maakt deel uit van je workflow",
+      "Je wilt ook een begeleidende gratis tool voor screenshotannotatie"
+    ],
+    "whenToChooseCompetitor": [
+      "Cursorhighlighting is essentieel voor je workflow",
+      "Je geeft de voorkeur aan een lang gevestigde app in de Mac App Store"
+    ],
+    "table": [
+      {
+        "feature": "Prijsmodel",
+        "scribbble": "Eenmalige licentie"
+      },
+      {
+        "feature": "Pen / Vormen (pijl, rechthoek, ovaal) / Tekst"
+      },
+      {
+        "feature": "Marker"
+      },
+      {
+        "feature": "Spotlight (focus dim)"
+      },
+      {
+        "feature": "Vliegende / verplaatsbare werkbalk",
+        "scribbble": "Ja (kan ook links/rechts vastgemaakt worden)"
+      },
+      {
+        "feature": "Meetgereedschap"
+      },
+      {
+        "feature": "Snapshot vastleggen (scherm of regio)"
+      },
+      {
+        "feature": "Cursor-highlighting"
+      },
+      {
+        "feature": "Gratis download om te proberen"
+      },
+      {
+        "feature": "Distributie",
+        "scribbble": "Directe download"
+      },
+      {
+        "feature": "Companion screenshot-annotator",
+        "scribbble": "Ja (gratis webtool)"
+      }
+    ],
+    "pricing": {
+      "scribbble": "Gratis download. Eenmalige licentie ontgrendelt alles."
+    },
+    "faq": [
+      {
+        "q": "Is Scribbble een Presentify-alternatief?",
+        "a": "Ja — beide zijn Mac‑screen-annotatieapps met eenmalige prijs, een marker, spotlight en een zwevende werkbalk. De belangrijkste verschillen: Scribbble is gratis te downloaden en te proberen voordat je licentie koopt, bevat een Meetgereedschap en wordt geleverd met een gratis Screenshot Annotate webtool."
+      },
+      {
+        "q": "Gebruikten beide apps eenmalige prijsstelling?",
+        "a": "Ja — noch Scribbble noch Presentify werkt met een abonnement. Beide zijn eenmalige aankopen."
+      },
+      {
+        "q": "Heeft Presentify een marker en spotlight?",
+        "a": "Ja. Presentify bevat een marker (apart van de cursor‑highlightfunctie) en een spotlight‑tool, naast een zwevende/verplaatsbare werkbalk. Scribbble biedt dezelfde set en bovendien een Meetgereedschap."
+      }
+    ]
+  },
+  "cleanshot-x": {
+    "title": "Scribbble vs CleanShot X — Live tekenen vs screenshot-markering",
+    "description": "CleanShot X is het beste voor capture → annotate → share. Scribbble tekent op het live scherm tijdens Zoom, OBS en opnames. Wanneer je welke (of beide) zou gebruiken.",
+    "h1": "Scribbble vs CleanShot X",
+    "subheadline": "CleanShot X is een screenshot-krachtpatser. Scribbble richt zich op tekenen op het live scherm. Ze vullen elkaar aan, maar zo kies je.",
+    "competitorSummary": "CleanShot X is een all‑in‑one screenshot- en schermopname-app voor macOS. Het bevat annotatietools — maar alleen nadat je een screenshot hebt gemaakt.",
+    "competitorStrengths": [
+      "Best‑in‑class screenshot‑capture",
+      "Cloud‑upload en deelbare links",
+      "Scrollende captures",
+      "Schermopname met annotaties"
+    ],
+    "scribbbleStrengths": [
+      "Annotaties op het LIVE‑scherm — niet alleen op vastgelegde afbeeldingen",
+      "Werkt tijdens Zoom‑gesprekken, OBS‑streams en schermopnames",
+      "Bevat Spotlight, Marker en Meetgereedschap voor live presentaties",
+      "Heeft nu ingebouwde Snapshot‑capture (heel scherm of regio) — overbrugt de kloof tussen capture en live",
+      "Lichter, single‑purpose tool",
+      "Betaalbaarder voor gebruikers die alleen live annotatie nodig hebben",
+      "Inclusief een gratis Screenshot Annotate webtool voor statische markup met blur, scherptediepte en genummerde markers"
+    ],
+    "whenToChooseScribbble": [
+      "Je annotaties tijdens live presentaties, calls of streams maakt",
+      "Je wilt dat tekeningen op het echte live scherm verschijnen, niet alleen op een opgeslagen screenshot",
+      "Je hebt geen cloud‑delen, schermopname of scrollende capture nodig"
+    ],
+    "whenToChooseCompetitor": [
+      "Je belangrijkste workflow is vastleggen → annoteren → delen",
+      "Je hebt cloudlinks, scrollende captures of video-opnames van het scherm nodig"
+    ],
+    "table": [
+      {
+        "feature": "Live annotatie op het scherm"
+      },
+      {
+        "feature": "Spotlight (verduistering rondom focus)"
+      },
+      {
+        "feature": "Meettool"
+      },
+      {
+        "feature": "Marker (highlighter)"
+      },
+      {
+        "feature": "Snapshot vastleggen (scherm of regio)"
+      },
+      {
+        "feature": "Screenshot annotatie",
+        "scribbble": "Ja (gratis aanvullende webtool)"
+      },
+      {
+        "feature": "Schermopname"
+      },
+      {
+        "feature": "Cloud-upload & deelbare links"
+      },
+      {
+        "feature": "Scroll-capture"
+      },
+      {
+        "feature": "Prijsstelling",
+        "scribbble": "Eenmalige aankoop"
+      }
+    ],
+    "pricing": {
+      "scribbble": "Gratis download met optionele eenmalige licentie."
+    },
+    "faq": [
+      {
+        "q": "Kan ik Scribbble en CleanShot X samen gebruiken?",
+        "a": "Ja — veel gebruikers doen dat. Gebruik CleanShot voor vastleggen en asynchroon delen, en Scribbble om live op het scherm te tekenen tijdens calls en presentaties."
+      }
+    ]
+  },
+  "epic-pen": {
+    "table": [
+      {
+        "feature": "Native macOS"
+      },
+      {
+        "feature": "Pen / Marker"
+      },
+      {
+        "feature": "Vormen (pijl, rechthoek, ellips) & Tekst"
+      },
+      {
+        "feature": "Spotlight (verduistering rondom focus)"
+      },
+      {
+        "feature": "Meettool"
+      },
+      {
+        "feature": "Schermafdruk maken (volledig scherm of regio)"
+      },
+      {
+        "feature": "Apple Silicon"
+      },
+      {
+        "feature": "Werkbalk die links of rechts vastklikt"
+      }
+    ],
+    "pricing": {
+      "scribbble": "Gratis download met eenmalige licentie."
+    },
+    "faq": [
+      {
+        "q": "Is er een Epic Pen voor Mac?",
+        "a": "Epic Pen is gericht op Windows. Voor een echte Mac-native tegenhanger met dezelfde werkwijze voor tekenen op het scherm is Scribbble de dichtstbijzijnde match."
+      }
+    ],
+    "title": "Epic Pen voor Mac? Scribbble is het beste Mac-alternatief (2026)",
+    "description": "Epic Pen is alleen voor Windows. Scribbble is het meest vergelijkbare native Mac-alternatief — pen, marker, spotlight en meettools. Gratis download. Side-by-side vergelijking.",
+    "h1": "Scribbble vs Epic Pen: een native Mac-optie",
+    "subheadline": "Epic Pen is een bekende schermmarker — maar primair Windows-gericht. Scribbble is specifiek gebouwd voor macOS.",
+    "competitorSummary": "Epic Pen is een schermannotatietool die voornamelijk voor Windows-gebruikers is ontwikkeld. Je kunt ermee tekenen en markeren over elke applicatie tijdens presentaties en lessen.",
+    "competitorStrengths": [
+      "Groot, gevestigd Windows-gebruikersbestand",
+      "Gratis tier beschikbaar",
+      "Bekende interface voor Windows-presentatoren"
+    ],
+    "scribbbleStrengths": [
+      "Native macOS — geoptimaliseerd voor Apple Silicon",
+      "Ontworpen rond moderne Mac-sneltoetsen, met een werkbalk die links of rechts kan docken",
+      "Bevat Spotlight-, Marker- en Meettools",
+      "Ingebouwde Snapshot-tool — leg het hele scherm of een regio vast zonder aparte app",
+      "Lichtgewicht en snel",
+      "Gratis begeleidende Screenshot Annotate webtool voor statische markup"
+    ],
+    "whenToChooseScribbble": [
+      "Je gebruikt macOS",
+      "Je wilt een moderne native Mac-ervaring",
+      "Je geeft de voorkeur aan een eenmalige licentie boven een freemium-systeem"
+    ],
+    "whenToChooseCompetitor": [
+      "Je gebruikt Windows en bent al gewend aan Epic Pen"
+    ]
+  },
+  "annotate": {
+    "title": "Scribbble vs Annotate for Mac — Live schermtekenen vergeleken",
+    "description": "Annotate is gemaakt voor screenshot-markering. Scribbble tekent op het live Mac-scherm tijdens Zoom, OBS en opnamen. Eerlijke vergelijking + wanneer je welke kiest.",
+    "h1": "Scribbble vs Annotate",
+    "subheadline": "Annotate is een capabel Mac-markeringstool gericht op screenshots en opnames. Scribbble richt zich op tekenen op het live scherm.",
+    "competitorSummary": "Annotate is een Mac-app voor het maken van schermafbeeldingen, ze markeren en delen. Sterk in de capture-en-bewerk workflow.",
+    "competitorStrengths": [
+      "Verfijnde workflow voor screenshot-markering",
+      "Delen en teamfuncties",
+      "Bewezen app in de Mac App Store"
+    ],
+    "scribbbleStrengths": [
+      "Teken op het live scherm tijdens gesprekken en presentaties",
+      "Bevat Spotlight-, highlighter- en meettools",
+      "Ingebouwde Snapshot-functie (heel scherm of regio) — dekt ook Annotate’s terrein",
+      "Companion gratis Screenshot Annotate webtool (geen account vereist)",
+      "Eenmalige licentie",
+      "Moderne Apple Silicon-native build"
+    ],
+    "whenToChooseScribbble": [
+      "Je annoteert tijdens live schermdelen (Zoom, Meet, OBS)",
+      "Je wilt ook een gratis screenshot-annotatietool zonder registratie",
+      "Je geeft de voorkeur aan een eenmalige betaling en een doelgerichte, single-purpose app"
+    ],
+    "whenToChooseCompetitor": [
+      "Je team heeft collaboratieve markering en gedeelde werkruimtes nodig"
+    ],
+    "table": [
+      {
+        "feature": "Live schermannotatie"
+      },
+      {
+        "feature": "Spotlight (focus dim)"
+      },
+      {
+        "feature": "Highlighter"
+      },
+      {
+        "feature": "Meettool"
+      },
+      {
+        "feature": "Schermafdruk maken (volledig scherm of regio)"
+      },
+      {
+        "feature": "Screenshot-annotatie",
+        "scribbble": "Ja (gratis webtool)"
+      },
+      {
+        "feature": "Teamcollaboratie"
+      },
+      {
+        "feature": "Gratis screenshottool online"
+      }
+    ],
+    "pricing": {
+      "scribbble": "Gratis download. Eenmalige licentie."
+    },
+    "faq": [
+      {
+        "q": "Welke is beter voor live presentaties?",
+        "a": "Scribbble. Het tekent bovenop het daadwerkelijke scherm in realtime, dus alles wat Zoom, OBS of QuickTime vastlegt bevat jouw annotaties."
+      }
+    ]
+  }
+}

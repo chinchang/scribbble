@@ -1,1 +1,369 @@
-{}
+{
+  "zoomit": {
+    "title": "ZoomIt pour Mac vs Scribbble — Lequel choisir en 2026 ?",
+    "description": "Microsoft ZoomIt tourne désormais sur macOS, mais l'interface reste un portage Windows. Voici une comparaison honnête avec Scribbble — fonctionnalités, prix et quand choisir l'un ou l'autre.",
+    "h1": "Scribbble vs ZoomIt",
+    "subheadline": "ZoomIt est un utilitaire Sysinternals apprécié venant du monde Windows (avec une sortie macOS récente). Scribbble est une application pensée pour Mac, dédiée au dessin sur écran, avec une interface moderne.",
+    "competitorSummary": "ZoomIt est un utilitaire gratuit d'annotation, de zoom et de minuterie de pause de Microsoft Sysinternals. Il a vu le jour sur Windows et Microsoft en propose désormais une version macOS. Sa force réside dans ses raccourcis sans friction et la fonctionnalité de zoom intégrée.",
+    "competitorStrengths": [
+      "Gratuit, par Microsoft",
+      "Zoom écran intégré et minuterie de pause",
+      "Familier pour les utilisateurs historiques de Sysinternals"
+    ],
+    "scribbbleStrengths": [
+      "Conçu d'abord pour Mac avec une barre d'outils moderne que vous pouvez ancrer à gauche ou à droite",
+      "Natif Apple Silicon",
+      "Comprend Spotlight (assombrissement focal), Surligneur et outils de Mesure prêts à l'emploi",
+      "Outil Snapshot intégré pour capturer l'écran entier ou une région sans quitter l'app",
+      "Conçu pour les workflows de partage d'écran, streaming et enregistrement",
+      "Axé et léger sur le dessin, sans utilitaires supplémentaires à maîtriser"
+    ],
+    "whenToChooseScribbble": [
+      "Vous voulez une interface moderne et native Mac plutôt qu'un utilitaire d'administration porté",
+      "Le dessin à l'écran est votre besoin principal — pas le zoom ou les minuteurs",
+      "Vous préférez une application sous licence permanente avec un soin du design actif"
+    ],
+    "whenToChooseCompetitor": [
+      "Vous souhaitez spécifiquement les fonctions de zoom et de minuterie de pause de ZoomIt",
+      "Vous utilisez déjà les outils Sysinternals de façon standardisée"
+    ],
+    "table": [
+      {
+        "feature": "Compatibilité macOS",
+        "scribbble": "Oui (conçu d'abord pour Mac)"
+      },
+      {
+        "feature": "Natif Apple Silicon"
+      },
+      {
+        "feature": "Outil stylo"
+      },
+      {
+        "feature": "Surligneur"
+      },
+      {
+        "feature": "Formes (flèche, rectangle, ellipse) + Texte"
+      },
+      {
+        "feature": "Spotlight (mise en évidence par atténuation)"
+      },
+      {
+        "feature": "Outil de mesure"
+      },
+      {
+        "feature": "Capture instantanée (écran ou zone)"
+      },
+      {
+        "feature": "Barre d'outils ancrable à gauche ou à droite"
+      },
+      {
+        "feature": "Zoom intégré de l'écran"
+      },
+      {
+        "feature": "Minuterie de pause"
+      },
+      {
+        "feature": "Interface moderne de style Mac"
+      }
+    ],
+    "pricing": {
+      "scribbble": "Téléchargement gratuit. Licence optionnelle en paiement unique."
+    },
+    "faq": [
+      {
+        "q": "Existe-t-il un ZoomIt pour Mac ?",
+        "a": "Oui — Microsoft a publié une version macOS de ZoomIt. Scribbble est une alternative pensée d'abord pour Mac, axée purement sur l'annotation à l'écran avec une interface moderne, plutôt que sur l'aspect utilitaire classique de Sysinternals."
+      },
+      {
+        "q": "Scribbble inclut-il une fonction de zoom comme ZoomIt ?",
+        "a": "Non. Scribbble se concentre exclusivement sur l'annotation. Si le zoom à l'écran est essentiel dans votre flux de travail, ZoomIt ou la fonction Zoom d'accessibilité intégrée à macOS peuvent mieux vous convenir."
+      }
+    ]
+  },
+  "presentify": {
+    "title": "Scribbble vs Presentify — Comparaison d'applications d'annotation pour Mac (2026)",
+    "description": "Vous cherchez une alternative à Presentify sur Mac ? Scribbble propose un téléchargement gratuit, un outil Mesure et un annotateur de captures d'écran compagnon. Comparaison honnête côte à côte.",
+    "h1": "Scribbble vs Presentify",
+    "subheadline": "Les deux sont des applications d'annotation d'écran natives Mac avec tarification en paiement unique, barres d'outils flottantes, surligneur et spotlight. Voici comment elles diffèrent réellement.",
+    "competitorSummary": "Presentify est une application d'annotation d'écran populaire sur macOS. Elle propose des outils de dessin à l'écran, dont un surligneur et un spotlight, une barre d'outils flottante/déplaçable et une fonction de mise en évidence du curseur. Elle est distribuée à la fois via le Mac App Store et en téléchargement direct, et utilise un modèle d'achat en paiement unique.",
+    "competitorStrengths": [
+      "Fonction de mise en évidence du curseur",
+      "Application Mac mature et bien établie",
+      "Disponible sur le Mac App Store et en téléchargement direct"
+    ],
+    "scribbbleStrengths": [
+      "Téléchargement gratuit pour essayer avant d'acheter",
+      "Comprend un outil Mesure dès l'installation",
+      "Outil Snapshot intégré — capture l'écran entier ou une zone sans application séparée",
+      "La barre d'outils s'ancre sur le bord gauche ou droit de l'écran, pas seulement flottante",
+      "Outil compagnon gratuit Screenshot Annotate pour le marquage statique",
+      "Polissage design actif et mises à jour fréquentes"
+    ],
+    "whenToChooseScribbble": [
+      "Vous voulez essayer l'application complète gratuitement avant d'acheter une licence",
+      "Un outil de mesure fait partie de votre flux de travail",
+      "Vous voulez aussi un outil compagnon gratuit pour annoter des captures d'écran"
+    ],
+    "whenToChooseCompetitor": [
+      "La mise en évidence du curseur est indispensable pour votre flux de travail",
+      "Vous préférez une application bien établie sur le Mac App Store"
+    ],
+    "table": [
+      {
+        "feature": "Modèle de tarification",
+        "scribbble": "Licence unique"
+      },
+      {
+        "feature": "Stylet / Formes (flèche, rectangle, ellipse) / Texte"
+      },
+      {
+        "feature": "Surligneur"
+      },
+      {
+        "feature": "Spotlight (mise en évidence avec assombrissement)"
+      },
+      {
+        "feature": "Barre d'outils flottante / déplaçable",
+        "scribbble": "Oui (se fixe aussi à gauche/droite)"
+      },
+      {
+        "feature": "Outil de mesure"
+      },
+      {
+        "feature": "Capture instantanée (écran ou région)"
+      },
+      {
+        "feature": "Mise en valeur du curseur"
+      },
+      {
+        "feature": "Téléchargement gratuit pour essayer"
+      },
+      {
+        "feature": "Distribution",
+        "scribbble": "Téléchargement direct"
+      },
+      {
+        "feature": "Outil compagnon d'annotation de captures",
+        "scribbble": "Oui (outil web gratuit)"
+      }
+    ],
+    "pricing": {
+      "scribbble": "Téléchargement gratuit. Une licence unique débloque tout."
+    },
+    "faq": [
+      {
+        "q": "Scribbble est-il une alternative à Presentify ?",
+        "a": "Oui — ce sont deux applications Mac d'annotation d'écran avec tarification en licence unique, surligneur, spotlight et barre d'outils flottante. Les principales différences : Scribbble peut être téléchargé et essayé gratuitement avant d'acheter, inclut un outil de mesure et est livré avec un outil web gratuit de capture/annotation d'écran. La fonctionnalité notable de Presentify est la mise en valeur du curseur."
+      },
+      {
+        "q": "Les deux apps utilisent-elles une tarification en licence unique ?",
+        "a": "Oui — ni Scribbble ni Presentify n'utilisent d'abonnement. Les deux se paient en achat unique."
+      },
+      {
+        "q": "Presentify propose-t-il un surligneur et un spotlight ?",
+        "a": "Oui. Presentify inclut un surligneur (séparé de sa fonctionnalité de mise en valeur du curseur) et un outil spotlight, ainsi qu'une barre d'outils flottante/déplaçable. Scribbble offre le même ensemble, plus un outil de mesure."
+      }
+    ]
+  },
+  "cleanshot-x": {
+    "whenToChooseCompetitor": [
+      "Votre flux principal est capture → annotation → partage",
+      "Vous avez besoin de liens cloud, de captures défilantes ou d'enregistrement vidéo d'écran"
+    ],
+    "table": [
+      {
+        "feature": "Annotation à l'écran en direct"
+      },
+      {
+        "feature": "Spotlight (mise en valeur par assombrissement)"
+      },
+      {
+        "feature": "Outil de mesure"
+      },
+      {
+        "feature": "Surligneur"
+      },
+      {
+        "feature": "Capture instantanée (écran ou région)"
+      },
+      {
+        "feature": "Annotation de capture d'écran",
+        "scribbble": "Oui (outil web compagnon gratuit)"
+      },
+      {
+        "feature": "Enregistrement d'écran"
+      },
+      {
+        "feature": "Upload cloud et liens partageables"
+      },
+      {
+        "feature": "Capture défilante"
+      },
+      {
+        "feature": "Tarification",
+        "scribbble": "Licence unique"
+      }
+    ],
+    "pricing": {
+      "scribbble": "Téléchargement gratuit avec licence optionnelle en paiement unique."
+    },
+    "faq": [
+      {
+        "q": "Puis-je utiliser Scribbble et CleanShot X ensemble ?",
+        "a": "Oui — beaucoup d'utilisateurs le font. CleanShot pour la capture et le partage asynchrone, Scribbble pour dessiner à l'écran en direct pendant les appels et présentations."
+      }
+    ],
+    "title": "Scribbble vs CleanShot X — dessin en direct vs annotation de captures",
+    "description": "CleanShot X est idéal pour capturer → annoter → partager. Scribbble permet de dessiner sur l'écran en direct pendant les sessions Zoom, les diffusions OBS et les enregistrements. Quand utiliser l'un ou l'autre (ou les deux).",
+    "h1": "Scribbble vs CleanShot X",
+    "subheadline": "CleanShot X est une référence pour les captures d'écran. Scribbble est axé sur le dessin sur écran en direct. Ils se complètent, voici comment choisir.",
+    "competitorSummary": "CleanShot X est une application tout-en-un de capture d'écran et d'enregistrement pour macOS. Elle inclut des outils d'annotation — mais seulement après avoir capturé une image.",
+    "competitorStrengths": [
+      "Capture d'écran de première classe",
+      "Téléversement cloud et liens partageables",
+      "Capture déroulante",
+      "Enregistrement d'écran avec annotations"
+    ],
+    "scribbbleStrengths": [
+      "Annoter l'écran EN DIRECT — pas seulement des images capturées",
+      "Fonctionne pendant les appels Zoom, les streams OBS et les enregistrements d'écran",
+      "Comprend Spotlight, Surligneur et outils de Mesure pour les présentations en direct",
+      "Inclut désormais une capture instantanée intégrée (écran complet ou région) — réduit l'écart entre capture et mode live",
+      "Outil plus léger et mono-usage",
+      "Plus abordable pour les utilisateurs qui ont seulement besoin d'annotations en direct",
+      "Comprend un outil web gratuit Screenshot Annotate pour le marquage statique avec flou, profondeur de champ et repères numérotés"
+    ],
+    "whenToChooseScribbble": [
+      "Vous annotez pendant des présentations, appels ou diffusions en direct",
+      "Vous voulez que les dessins apparaissent sur l'écran réel en direct, pas seulement sur une capture enregistrée",
+      "Vous n'avez pas besoin du partage cloud, de l'enregistrement d'écran ou de la capture déroulante"
+    ]
+  },
+  "epic-pen": {
+    "title": "Epic Pen pour Mac ? Scribbble est la meilleure alternative Mac (2026)",
+    "description": "Epic Pen est uniquement disponible sous Windows. Scribbble est l'alternative native Mac la plus proche — stylet, surligneur, spotlight et outils de mesure. Téléchargement gratuit. Comparatif côte à côte.",
+    "h1": "Scribbble vs Epic Pen : une option native macOS",
+    "subheadline": "Epic Pen est un marqueur d'écran connu — mais il privilégie Windows. Scribbble est conçu spécifiquement pour macOS.",
+    "competitorSummary": "Epic Pen est un outil d'annotation d'écran principalement pensé pour les utilisateurs Windows. Il permet de dessiner et de surligner par‑dessus n'importe quelle application lors de présentations et de cours.",
+    "competitorStrengths": [
+      "Base d'utilisateurs Windows bien établie",
+      "Version gratuite disponible",
+      "Interface familière pour les présentateurs Windows"
+    ],
+    "scribbbleStrengths": [
+      "Native macOS — optimisée Apple Silicon",
+      "Conçue autour des raccourcis Mac modernes, avec une barre d'outils qui se fixe à gauche ou à droite",
+      "Comprend Spotlight, Surligneur et outils de Mesure",
+      "Outil Snapshot intégré — capture l'écran entier ou une région sans application séparée",
+      "Légère et rapide",
+      "Outil web compagnon gratuit Screenshot Annotate pour le balisage statique"
+    ],
+    "whenToChooseScribbble": [
+      "Vous êtes sur macOS",
+      "Vous voulez une expérience Mac moderne et native",
+      "Vous préférez une licence unique plutôt qu'un système freemium"
+    ],
+    "whenToChooseCompetitor": [
+      "Vous êtes sur Windows et déjà à l'aise avec Epic Pen"
+    ],
+    "table": [
+      {
+        "feature": "Native macOS"
+      },
+      {
+        "feature": "Stylet / Surligneur"
+      },
+      {
+        "feature": "Formes (flèche, rectangle, ellipse) & Texte"
+      },
+      {
+        "feature": "Spotlight (mise en valeur par assombrissement)"
+      },
+      {
+        "feature": "Outil de mesure"
+      },
+      {
+        "feature": "Capture instantanée (écran complet ou zone)"
+      },
+      {
+        "feature": "Apple Silicon"
+      },
+      {
+        "feature": "Barre d'outils ancrable à gauche ou à droite"
+      }
+    ],
+    "pricing": {
+      "scribbble": "Téléchargement gratuit avec licence en achat unique."
+    },
+    "faq": [
+      {
+        "q": "Existe-t-il Epic Pen pour Mac ?",
+        "a": "Epic Pen est axé sur Windows. Pour une véritable alternative native Mac avec le même flux de dessin à l'écran, Scribbble est la solution la plus proche."
+      }
+    ]
+  },
+  "annotate": {
+    "title": "Scribbble vs Annotate pour Mac — Annotation d'écran en direct comparée",
+    "description": "Annotate est conçu pour l'annotation de captures d'écran. Scribbble permet de dessiner sur l'écran Mac en direct pendant les sessions Zoom, OBS et les enregistrements. Comparaison honnête + quand choisir chaque outil.",
+    "h1": "Scribbble vs Annotate",
+    "subheadline": "Annotate est un outil Mac performant axé sur les captures d'écran et l'édition. Scribbble privilégie le dessin directement sur l'écran en temps réel.",
+    "competitorSummary": "Annotate est une application Mac pour capturer des captures d'écran, les annoter et les partager. Elle excelle dans le flux capture-et-édition.",
+    "competitorStrengths": [
+      "Workflow d'annotation de captures soigné",
+      "Fonctions de partage et d'équipe",
+      "Application établie sur le Mac App Store"
+    ],
+    "scribbbleStrengths": [
+      "Annotation de l'écran en direct pendant les appels et présentations",
+      "Comprend les outils Spotlight, Surligneur et Mesure",
+      "Capture instantanée intégrée (écran complet ou zone) — couvre aussi le terrain d'Annotate",
+      "Outil compagnon gratuit Screenshot Annotate en ligne (sans inscription)",
+      "Licence en achat unique",
+      "Construction moderne native Apple Silicon"
+    ],
+    "whenToChooseScribbble": [
+      "Vous annotez pendant des partages d'écran en direct (Zoom, Meet, OBS)",
+      "Vous voulez aussi un outil gratuit d'annotation de captures sans inscription",
+      "Vous préférez un prix en achat unique et une application ciblée et simple"
+    ],
+    "whenToChooseCompetitor": [
+      "Votre équipe a besoin de fonctionnalités collaboratives et d'espaces de travail partagés"
+    ],
+    "table": [
+      {
+        "feature": "Annotation d'écran en direct"
+      },
+      {
+        "feature": "Spotlight (assombrissement du périphérique)"
+      },
+      {
+        "feature": "Surligneur"
+      },
+      {
+        "feature": "Outil de mesure"
+      },
+      {
+        "feature": "Capture instantanée (écran complet ou zone)"
+      },
+      {
+        "feature": "Annotation de captures d'écran",
+        "scribbble": "Oui (outil web gratuit)"
+      },
+      {
+        "feature": "Collaboration d'équipe"
+      },
+      {
+        "feature": "Outil de capture gratuit en ligne"
+      }
+    ],
+    "pricing": {
+      "scribbble": "Téléchargement gratuit. Licence en achat unique."
+    },
+    "faq": [
+      {
+        "q": "Lequel est meilleur pour les présentations en direct ?",
+        "a": "Scribbble. Il dessine par-dessus l'écran réel en temps réel, donc tout ce que Zoom, OBS ou QuickTime capture inclura vos annotations."
+      }
+    ]
+  }
+}

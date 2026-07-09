@@ -1,1 +1,512 @@
-{}
+{
+  "best-screen-annotation-apps-mac": {
+    "title": "2026 年 Mac 屏幕标注应用最佳推荐（免费 + 付费）",
+    "description": "我们测试了 5 款 Mac 屏幕标注应用 —— Scribbble、Presentify、ZoomIt、CleanShot X 和 Annotate。诚实列出优缺点、定价以及我们 2026 年的首选。",
+    "h1": "最佳 Mac 屏幕标注应用",
+    "intro": "屏幕标注应用允许你直接在 Mac 屏幕上绘制、高亮和标记 —— 无论是幻灯片、浏览器、Figma、Zoom 共享或其他任何内容。对于教师、演示者、软件演示者、主播和进行实时点评的设计师来说，这类工具是必备的。下面是我们在 2026 年在 macOS 上值得考虑的应用的真实、实测汇总。",
+    "criteria": [
+      "原生 macOS 支持（支持 Apple Silicon 更佳）",
+      "真实的屏幕实时绘制——不仅仅是截图标注",
+      "持续更新与支持",
+      "合理的定价模式",
+      "不仅只有画笔的多样工具"
+    ],
+    "items": [
+      {
+        "tagline": "以现代 Mac 为先的屏幕标注应用",
+        "summary": "Scribbble 以 Mac 为先设计，配有可停靠在左侧或右侧边缘的现代工具栏。除了常见的画笔、箭头、矩形、椭圆和文本工具外，还内置 Spotlight（聚焦暗化）、荧光笔、测量工具和用于捕捉全屏或区域的 Snapshot 截图工具——这是多数竞争对手所不具备的组合。可免费下载试用，购买一次性授权即可解锁全部功能。",
+        "bestFor": "适合想要现代、原生 Mac 标注工具且不想订阅的教师、设计师与创作者",
+        "pros": [
+          "以 Mac 为先的设计，配有可停靠左右的现代工具栏",
+          "开箱即用的 Spotlight、荧光笔和测量工具",
+          "内置 Snapshot 截图工具——无需离开应用即可捕捉全屏或区域",
+          "形状工具包含箭头、矩形与椭圆",
+          "原生 Apple Silicon 支持",
+          "免费下载试用",
+          "一次性授权，无订阅",
+          "配套的免费 Screenshot Annotate 网页工具"
+        ],
+        "cons": [
+          "没有内置屏幕录制",
+          "没有内置屏幕缩放（可使用 macOS 辅助功能的缩放）"
+        ],
+        "pricing": "免费 + 一次性授权"
+      },
+      {
+        "tagline": "Mac App Store 的经典，带有光标高亮",
+        "summary": "Presentify 是一款长期在 Mac App Store 上的 macOS 标注应用。它的亮点是光标高亮，让鼠标指针在演示时绝对不会找不到。采用一次性购买模式。",
+        "bestFor": "需要显著光标高亮并同时进行绘制的演示者",
+        "pros": [
+          "在 Mac App Store 上有成熟的存在感",
+          "光标高亮功能",
+          "一次性购买"
+        ],
+        "cons": [
+          "没有 Spotlight、测量或内置的截图配套工具",
+          "免费试用受限"
+        ],
+        "pricing": "一次性购买（Mac App Store）"
+      },
+      {
+        "tagline": "集截图与标注于一身的强力工具",
+        "summary": "CleanShot X 是一款完整的 Mac 截图与屏幕录制套件。它的标注工具非常优秀——但主要是在捕捉之后使用，而非在实时屏幕上绘制。如果你的工作流程是 捕捉 → 标注 → 分享，那它非常出色。若需要在 Zoom 通话中实时绘制，你会更需要专门的工具。",
+        "bestFor": "以 捕捉 → 标注 → 分享 为主的高级用户",
+        "pros": [
+          "业内领先的截图捕捉能力",
+          "云端上传与可分享链接",
+          "滚屏捕捉与屏幕录制",
+          "强大的截图标注工具"
+        ],
+        "cons": [
+          "实时屏幕标注功能有限",
+          "价格较高——功能远超单纯标注工具"
+        ],
+        "pricing": "一次性或通过 Setapp 订阅"
+      },
+      {
+        "tagline": "Microsoft Sysinternals 的经典工具，现在也有 Mac 版",
+        "summary": "ZoomIt 是来自 Microsoft Sysinternals 的传奇屏幕标注与缩放工具。最初仅限 Windows，后来 Microsoft 发布了 macOS 版本。它免费，并包含其他工具无法比拟的内置屏幕缩放与休息计时器——不过界面明显带有系统管理员工具的风格。",
+        "bestFor": "需要 ZoomIt 的屏幕放大和休息计时器的系统管理员类用户",
+        "pros": [
+          "由 Microsoft 提供且免费",
+          "内置放大和休息计时器",
+          "现已可在 macOS 上使用"
+        ],
+        "cons": [
+          "界面像 Windows 实用程序移植，不够 Mac 风格",
+          "没有 Spotlight、测量或现代工具栏"
+        ],
+        "pricing": "免费"
+      },
+      {
+        "tagline": "面向团队的 Mac 标注应用",
+        "summary": "Annotate 是一款专注于截屏并为团队共享做标注的 Mac 应用。它在异步协作和团队工作流方面更强，而不是在演示或通话时进行实时屏幕绘制。",
+        "bestFor": "需要共享工作区和协作标注的团队",
+        "pros": [
+          "精致的截图标注工作流程",
+          "共享与团队功能"
+        ],
+        "cons": [
+          "并非为实时屏幕标注设计",
+          "价格取决于计划"
+        ],
+        "pricing": "因方案而异 — 请向厂商查询"
+      }
+    ],
+    "conclusion": "如果你想要一款现代、原生 Mac 的屏幕标注应用，具备丰富工具（Spotlight、高亮、测量）且采用一次性付费，Scribbble 是最容易推荐的选择。如果光标高亮是关键，Presentify 是替代方案。如果你的工作流程以截屏为中心，则 CleanShot X 更合适。若你需要其标志性的放大功能，ZoomIt 是免费的 Microsoft 选项。",
+    "faq": [
+      {
+        "q": "Mac 上最佳的免费屏幕标注应用是什么？",
+        "a": "ZoomIt 完全免费且现在可在 macOS 上运行。Scribbble 也可以免费下载试用，提供可选的一次性授权以解锁全部功能。"
+      },
+      {
+        "q": "我可以在 Zoom 通话中在屏幕上绘图吗？",
+        "a": "可以 — 本列表中的应用中，除了 CleanShot X 外，其他都支持在 Zoom 画面共享中进行实时屏幕标注。Scribbble 和 Presentify 是最完善的选项。"
+      },
+      {
+        "q": "我需要购买授权才能试用这些应用吗？",
+        "a": "Scribbble 和 ZoomIt 允许在不购买的情况下使用。Presentify 提供有限试用，CleanShot X 也有试用。"
+      }
+    ]
+  },
+  "best-zoomit-alternatives-mac": {
+    "title": "适用于 Mac 的 5 款最佳 ZoomIt 替代品（免费 + 付费，2026）",
+    "description": "ZoomIt 的 macOS 移植版仍然像个 Windows 实用程序。这 5 款原生 Mac 的 ZoomIt 替代品拥有更现代的界面、更丰富的工具集和真正的 Mac 使用体验。",
+    "h1": "适用于 Mac 的最佳 ZoomIt 替代品",
+    "intro": "Microsoft 的 ZoomIt 是来自 Sysinternals 套件的经典屏幕标注工具。它现在可在 macOS 上运行——但界面忠实地保留了 Windows 实用程序的样式，缺乏可拖动的工具栏、Spotlight 焦点模式或测量工具等现代便利功能。如果你在 Mac 上想要更原生、更现代的替代方案，下面是最好的选择。",
+    "criteria": [
+      "原生 Mac 体验（不是 Windows 实用程序移植）",
+      "持续更新维护",
+      "笔和放大之外的多种工具",
+      "合理定价"
+    ],
+    "items": [
+      {
+        "tagline": "以 Mac 为先的 ZoomIt 替代品",
+        "summary": "Scribbble 以 Mac 为先设计，带有可停靠在左侧或右侧的现代工具栏，且工具比 ZoomIt 更丰富——包括 Spotlight（聚焦变暗）、高亮、测量、完整的形状（箭头、矩形、椭圆）以及内置的快照工具，可截取全屏或区域。可免费下载，并附带一款免费的截图标注网页工具。折衷之处是：没有屏幕放大功能（可使用 macOS 自带的无障碍缩放）。",
+        "bestFor": "想摆脱 ZoomIt、希望获得现代原生 Mac 体验的任何人",
+        "pros": [
+          "以 Mac 为先的界面，工具栏可停靠左右",
+          "Spotlight、高亮和测量工具",
+          "内置快照捕获——全屏或选定区域",
+          "形状包括箭头、矩形和椭圆",
+          "免费下载，一次性授权",
+          "原生 Apple Silicon 支持"
+        ],
+        "cons": [
+          "没有屏幕放大功能"
+        ],
+        "pricing": "免费 + 一次性授权"
+      },
+      {
+        "tagline": "Mac App Store 上的标注经典",
+        "summary": "Presentify 覆盖了 ZoomIt 用户常常缺少的基础功能：画笔、形状、文字，以及强大的光标高亮功能。通过 Mac App Store 一次性购买即可获得。",
+        "bestFor": "在共享屏幕时最看重光标可见性的演示者",
+        "pros": [
+          "光标高亮",
+          "一次性购买",
+          "通过 Mac App Store 分发"
+        ],
+        "cons": [
+          "没有测量工具，也没有聚焦（spotlight）模式"
+        ],
+        "pricing": "一次性购买（Mac App Store）"
+      },
+      {
+        "tagline": "如果你的真实需求是截图 + 标注",
+        "summary": "很多人选择 ZoomIt 实际上是为了截取并分享带注释的截图，而不是在实时屏幕上绘画。CleanShot X 是处理此类工作流的最佳 Mac 应用。",
+        "bestFor": "以捕捉为主而非实时演示的工作流程",
+        "pros": [
+          "出色的截图捕捉能力",
+          "内置云分享",
+          "支持带注释的录制"
+        ],
+        "cons": [
+          "实时屏幕绘制功能有限"
+        ],
+        "pricing": "一次性或通过 Setapp 订阅"
+      },
+      {
+        "tagline": "面向团队协作的标注",
+        "summary": "如果你需要共享工作区和团队标注，Annotate 的工作流就是围绕这些场景设计的，而不是实时绘画。",
+        "bestFor": "团队间来回共享截图的场景",
+        "pros": [
+          "面向团队和共享的功能"
+        ],
+        "cons": [
+          "并非为实时屏幕绘制设计"
+        ],
+        "pricing": "因方案而异"
+      },
+      {
+        "tagline": "免费，系统自带",
+        "summary": "如果你的需求很简单，macOS 本身就包含了辅助功能放大（Cmd+Option+8）和通过预览（Preview）进行截图标注的功能。它们不能算是真正的标注应用，但免费且无需安装。",
+        "bestFor": "极简需求，不想安装任何东西的人",
+        "pros": [
+          "系统已安装",
+          "免费"
+        ],
+        "cons": [
+          "没有实时屏幕绘制功能",
+          "没有完整的工具集"
+        ],
+        "pricing": "免费"
+      }
+    ],
+    "conclusion": "Scribbble 对于 Mac 用户来说，是最接近 ZoomIt 的精神继任者 —— 一个专注、轻量的标注工具，拥有现代的 Mac 原生界面和更丰富的工具集（Spotlight、高亮、测量）。如果你会怀念 ZoomIt 的标志性放大功能，可以将 Scribbble 与 macOS 自带的辅助放大功能搭配使用，这样就能覆盖所有需求。",
+    "faq": [
+      {
+        "q": "有没有真正适配 Mac 的 ZoomIt？",
+        "a": "有 —— Microsoft 已经发布了 ZoomIt 的 macOS 版本。它能用，但界面是从 Windows 实用工具移植过来的。想要更原生的 Mac 体验，Scribbble 是最接近的现代替代方案。"
+      },
+      {
+        "q": "如何在 Mac 上获得 ZoomIt 的放大功能？",
+        "a": "macOS 在“系统设置 → 辅助功能 → 缩放”中提供了内置的屏幕缩放。启用后可用 Cmd+Option+8 切换，或用 Ctrl+滚动 进行缩放。将其与 Scribbble 搭配用于标注，就能完全替代 ZoomIt。"
+      }
+    ]
+  },
+  "best-epic-pen-alternatives-mac": {
+    "title": "适用于 Mac 的 5 款最佳 Epic Pen 替代产品（免费 + 付费，2026）",
+    "description": "Epic Pen 以 Windows 为先。这 5 款 Mac 原生替代品能提供相同的屏幕绘画体验——包括 Scribbble、Presentify、ZoomIt、CleanShot X 等。",
+    "h1": "适用于 Mac 的最佳 Epic Pen 替代品",
+    "intro": "Epic Pen 是一款流行的 Windows 屏幕标注工具，但 Mac 用户被落下了。无论你是在 macOS 上的教师、主播、设计师还是销售代表，都不必将就只能用 Windows 应用。以下是在 2026 年能在 Mac 上本地运行的最佳 Epic Pen 替代品。",
+    "criteria": [
+      "原生 macOS 支持（支持 Apple Silicon 更佳）",
+      "与 Epic Pen 相同的核心工作流 — 画笔、高亮、图形",
+      "价格合理或提供免费层",
+      "持续开发中",
+      "比 Epic Pen 更多的附加工具"
+    ],
+    "items": [
+      {
+        "tagline": "在 macOS 上最接近 Epic Pen 的体验",
+        "summary": "Scribbble 是 Mac 用户替代 Epic Pen 的最直接选择。它可在任意应用上方绘制——幻灯片、浏览器、Zoom 屏幕共享——提供画笔、高亮和完整的图形工具包（箭头、矩形、椭圆）以及文本工具。除了 Epic Pen 的功能外，Scribbble 还新增了 Spotlight（聚焦变暗）、测量工具和内置截图（可捕获全屏或区域），并配备现代化的 Mac 原生工具栏，可停靠在左侧或右侧。",
+        "bestFor": "想从 Epic Pen 转到 Mac、又希望保留熟悉工作流并获得额外工具的任何人",
+        "pros": [
+          "以 Mac 为先，原生支持 Apple Silicon",
+          "画笔、高亮、图形（箭头、矩形、椭圆）和文本——涵盖 Epic Pen 的核心工具集",
+          "新增 Spotlight 和测量工具，是 Epic Pen 所没有的",
+          "内置截图功能（全屏或选区）——无需另装截图应用",
+          "免费下载，可一次性授权购买",
+          "现代工具栏，可停靠在屏幕左侧或右侧边缘"
+        ],
+        "cons": [
+          "不内置屏幕录制"
+        ],
+        "pricing": "免费下载 + 一次性授权"
+      },
+      {
+        "tagline": "Mac App Store 的经典选择，带有光标高亮",
+        "summary": "Presentify 覆盖了 Epic Pen 的基本功能——画笔、图形、文本——并额外提供强大的光标高亮功能。它是 Mac App Store 上的老牌应用，采用一次性购买。",
+        "bestFor": "在屏幕共享时观众常找不到光标的演示者",
+        "pros": [
+          "光标高亮",
+          "通过 Mac App Store 分发",
+          "一次性购买"
+        ],
+        "cons": [
+          "没有聚焦（spotlight）模式或测量工具"
+        ],
+        "pricing": "一次性购买（Mac App Store）"
+      },
+      {
+        "tagline": "微软的免费注释工具，现在也有 Mac 版",
+        "summary": "微软的 Sysinternals ZoomIt 现已推出 macOS 版本。它免费、内置屏幕放大功能（Epic Pen 没有），并具备可靠的画笔和图形工具。缺点是界面是对 Windows 工具的忠实移植，完全不像 Mac 应用。",
+        "bestFor": "不介意用 Windows 风格界面，以换取免费 + 屏幕缩放功能的 Mac 用户",
+        "pros": [
+          "微软提供，免费",
+          "内置屏幕放大",
+          "休息计时器"
+        ],
+        "cons": [
+          "界面像 Windows 工具移植版",
+          "没有聚焦或测量工具"
+        ],
+        "pricing": "免费"
+      },
+      {
+        "tagline": "如果你真正需要的是截图+注释，这是最佳选择",
+        "summary": "很多想用 Epic Pen 的人其实是想截取并分享带注释的截图，而不是在实时屏幕上绘画。如果你的流程是如此，在 Mac 上 CleanShot X 是该类别里最好的——截图、注释、录制并可通过云链接分享。",
+        "bestFor": "工作流为“捕获 → 注释 → 分享”的 Mac 用户",
+        "pros": [
+          "一流的截图捕获功能",
+          "云端上传与分享",
+          "带注释的屏幕录制",
+          "强大的截图注释工具"
+        ],
+        "cons": [
+          "屏幕上实时绘制功能有限",
+          "更贵——功能远超单纯标注"
+        ],
+        "pricing": "一次性购买或通过 Setapp"
+      },
+      {
+        "tagline": "免费且已安装",
+        "summary": "如果你的需求非常基础，macOS 自带的 Preview 标注工具和 系统偏好设置 → 辅助功能 里的屏幕缩放可以满足部分场景。它们并不能真正替代 Epic Pen，但不用额外安装且免费。",
+        "bestFor": "不想安装任何东西的超轻量需求",
+        "pros": [
+          "已预装",
+          "免费"
+        ],
+        "cons": [
+          "没有实时屏幕绘制",
+          "没有完整工具集"
+        ],
+        "pricing": "免费"
+      }
+    ],
+    "conclusion": "如果你正从 Epic Pen 转到 Mac，Scribbble 是最容易推荐的选择——它覆盖了相同的核心工作流（画笔、高亮、形状、文本），同时提供 Mac 原生界面和 Epic Pen 没有的一些附加工具（Spotlight、Measure）。如果你需要免费替代并能接受 Windows 风格界面，ZoomIt 是微软的免费选项。如果你更偏向以截图为主而不是实时绘制，CleanShot X 更合适。",
+    "faq": [
+      {
+        "q": "有 Epic Pen 的 Mac 版本吗？",
+        "a": "没有——Epic Pen 仅支持 Windows。Scribbble 是最接近的 Mac 原生替代：可以在任意应用上绘制笔迹、高亮、箭头、矩形和文本，并且包含 Epic Pen 没有的 Spotlight 和 Measure 工具。"
+      },
+      {
+        "q": "在 Mac 上有哪些最佳的 Epic Pen 替代品？",
+        "a": "在 macOS 上最强的选项包括 Scribbble（以 Mac 为先，包含 Spotlight + Measure）、Presentify（光标高亮）、ZoomIt（微软免费，包含缩放）和 CleanShot X（如果你需要以截图为中心的工作流）。对于大多数从 Epic Pen 迁移到 Mac 的用户，Scribbble 的体验最为接近。"
+      },
+      {
+        "q": "人们为什么会选择替代品而不是 Epic Pen？",
+        "a": "我们听到的最常见原因有：(1) Epic Pen 只支持 Windows，Mac 用户无法使用，(2) 免费版本限制严重，(3) 缺少像聚焦/Spotlight 或 Measure 这样的现代便捷工具，(4) 与更新的 Mac 原生应用相比，其界面显得陈旧。"
+      },
+      {
+        "q": "Epic Pen 的替代品提供了哪些 Epic Pen 所没有的功能？",
+        "a": "大多数现代替代品至少新增了一项功能：聚焦/Spotlight 工具（将解释区域以外的内容变暗）、Measure 测量工具、屏幕缩放功能（ZoomIt），或内建屏幕录制/截图工具（CleanShot X）。Scribbble 专门增加了 Spotlight、Measure 以及一个配套的免费 Screenshot Annotate 网页工具。"
+      },
+      {
+        "q": "有没有免费的 Epic Pen 替代品适用于 Mac？",
+        "a": "有——微软的 ZoomIt 在 Mac 上完全免费。Scribbble 也可以免费下载试用，解锁全部功能为一次性付费许可。"
+      }
+    ]
+  },
+  "best-presentify-alternatives-mac": {
+    "items": [
+      {
+        "pricing": "免费 + 一次性授权",
+        "tagline": "可免费试用，并包含 Presentify 所没有的 Measure 工具",
+        "summary": "Scribbble 覆盖了 Presentify 的核心工具集——画笔、高亮、Spotlight、形状（箭头、矩形、椭圆）——并额外提供 Measure 工具和内建的 Snapshot 截图功能（全屏或区域）。与 Presentify 不同，完整应用可免费下载试用；只有在准备好时才会支付一次性许可。它还附带免费的配套 Screenshot Annotate 网页工具，工具栏可以停靠在左侧或右侧边缘。",
+        "bestFor": "想要免费试用、需要 Measure 工具或配套截图标注器的 Presentify 用户",
+        "pros": [
+          "免费下载——在购买前可完整试用",
+          "包含 Presentify 所没有的 Measure 工具",
+          "内建 Snapshot 截图（全屏或区域）",
+          "免费的配套 Screenshot Annotate 网页工具",
+          "现代化工具栏，可停靠左右侧（而非仅浮动）",
+          "设计细节积极打磨"
+        ],
+        "cons": [
+          "没有光标高亮功能"
+        ]
+      },
+      {
+        "tagline": "免费，内置屏幕缩放",
+        "summary": "Microsoft 的 ZoomIt 在 Mac 上完全免费，并且包含 Presentify 所没有的屏幕缩放功能。代价是界面是 Windows 实用工具的移植——功能齐全但缺乏原生 Mac 的感觉。",
+        "bestFor": "想要免费且带屏幕缩放的 Presentify 用户",
+        "pros": [
+          "来自 Microsoft，免费",
+          "内置屏幕缩放",
+          "休息计时器"
+        ],
+        "cons": [
+          "界面是 Windows 实用工具移植"
+        ],
+        "pricing": "免费"
+      },
+      {
+        "tagline": "如果你也需要截图和录屏",
+        "summary": "CleanShot X 是一套完整的截图和屏幕录制工具。它的强项是捕捉—标注—分享的工作流，而不是实时屏幕绘制——但如果你两者都需要，它涵盖的功能比 Presentify 更全面。",
+        "bestFor": "同时需要专业截图和录屏工作流的 Presentify 用户",
+        "pros": [
+          "一流的截图功能",
+          "云上传与分享",
+          "带注释的屏幕录制"
+        ],
+        "cons": [
+          "实时屏幕绘制有限"
+        ],
+        "pricing": "一次性购买或通过 Setapp"
+      },
+      {
+        "tagline": "团队协作标注",
+        "summary": "如果你和团队成员经常一起标注截图，Annotate 的设计就是围绕这种协作工作流展开的。",
+        "bestFor": "需要共享标注工作区的团队",
+        "pros": [
+          "共享与团队功能"
+        ],
+        "cons": [
+          "不适合实时屏幕绘制"
+        ],
+        "pricing": "价格各异"
+      },
+      {
+        "tagline": "免费，已预装",
+        "summary": "macOS 自带 Preview 的基础标注和无障碍里的屏幕缩放。虽然不能真正替代用于现场演示的 Presentify，但它免费且无需安装任何东西。",
+        "bestFor": "轻量、偶尔使用的需求",
+        "pros": [
+          "已预装",
+          "免费"
+        ],
+        "cons": [
+          "没有实时绘制功能",
+          "缺乏完整工具集"
+        ],
+        "pricing": "免费"
+      }
+    ],
+    "conclusion": "如果你想在 Presentify 之外寻找替代品以获得免费试用、测量工具或免费的截图标注伴侣，Scribbble 是最接近的匹配。若你明确需要带屏幕缩放的免费选项，ZoomIt 是正确选择。如果你同时需要截图和录屏功能，CleanShot X 能覆盖更多场景。",
+    "faq": [
+      {
+        "q": "在 Mac 上哪个是最好的 Presentify 替代品？",
+        "a": "Scribbble 是最接近的 Mac 原生替代品：核心工具集相同（画笔、高亮、聚光、形状）并且额外提供测距工具，可免费下载并一次性授权解锁全部功能。如果你能接受 Windows 风格的界面，ZoomIt 是最佳免费选择。"
+      },
+      {
+        "q": "有没有免费的替代品？",
+        "a": "有。Microsoft 的 ZoomIt 在 Mac 上完全免费。Scribbble 可免费下载试用，提供可选的一次性授权以解锁全部功能——因此在决定之前你可以免费使用完整应用。"
+      },
+      {
+        "q": "Presentify 有测距工具吗？",
+        "a": "没有——Presentify 的工具集侧重于画笔、高亮、形状、聚光和光标高亮。如果你需要在屏幕上测量距离，Scribbble 包含内置的测距工具。"
+      },
+      {
+        "q": "为什么要考虑替代 Presentify？",
+        "a": "常见原因包括：想在购买前免费完整试用、需要测距工具、想要配套的截图标注工具，或只是偏好不同的界面。Presentify 本身是款不错的应用——这些替代品只是更符合不同需求。"
+      }
+    ],
+    "title": "2026 年 Mac 上 5 款最佳 Presentify 替代品",
+    "description": "在寻找 Mac 上的 Presentify 替代品吗？这 5 款屏幕标注应用提供免费试用、更多工具或不同的定价方式。诚实对比。",
+    "h1": "适用于 Mac 的最佳 Presentify 替代品",
+    "intro": "Presentify 是一款长期运行的 Mac 屏幕标注应用，支持光标高亮并采用一次性购买模式。但它并非唯一选择——根据你的需求（是否需要免费试用、Measure 工具、配套截图标注器或不同的价格点），下面的替代品可能更适合你。",
+    "criteria": [
+      "原生支持 macOS",
+      "屏幕上实时绘制——而不仅仅是截图标注",
+      "至少包含 Presentify 的核心工具集（画笔、高亮、Spotlight）",
+      "持续维护与更新"
+    ]
+  },
+  "best-screen-annotation-tools-for-teachers": {
+    "title": "适用于教师的最佳 Mac 屏幕标注工具（2026）",
+    "description": "我们挑选了适合教师使用的 4 款 Mac 屏幕标注工具——适用于实时 Zoom 课堂、Loom 录制和一对一辅导。比较免费与付费选项。",
+    "h1": "适用于教师的最佳 Mac 屏幕标注工具",
+    "intro": "在 Mac 上进行在线教学、录制讲座或辅导时，教师需要能实时在屏幕上标注的工具——圈出词汇、画示意图、突出阅读片段。真正的标注工具能让学生集中注意力，而无需离开现有幻灯片或浏览器。以下是在 macOS 上的最佳选择。",
+    "criteria": [
+      "在 Zoom、Google Meet 及其他屏幕共享中可用",
+      "标注会出现在屏幕录制中（QuickTime、Loom）",
+      "课中易于使用且不打断授课节奏",
+      "对教育工作者而言价格合理"
+    ],
+    "items": [
+      {
+        "tagline": "为直播课堂打造的现代 Mac 标注应用",
+        "summary": "Scribbble 可在任何 Mac 应用之上绘制——幻灯片、PDF、浏览器、Zoom 共享。内置的 Highlighter 非常适合标注阅读材料；Spotlight 会将焦点以外的区域变暗；画笔、箭头、矩形、椭圆和文本工具可满足实时绘图需求。内置 Snapshot 截图工具可捕捉全屏或区域——便于保存学生作业或课堂截图。一次性授权，免费试用。",
+        "bestFor": "希望使用现代、原生 Mac 工具并内置 Highlighter 与 Spotlight 的教师",
+        "pros": [
+          "内置 Highlighter 与 Spotlight（聚焦变暗）",
+          "Snapshot 截图（全屏或区域），便于保存课堂截图和学生作业",
+          "形状工具包括箭头、矩形和椭圆",
+          "在 Zoom、Google Meet 及录制中可用",
+          "免费下载试用",
+          "一次性授权"
+        ],
+        "cons": [
+          "没有协作白板模式"
+        ],
+        "pricing": "免费 + 一次性授权"
+      },
+      {
+        "tagline": "专注于在线课堂的光标高亮功能",
+        "summary": "如果学生在共享屏幕时常找不到你的光标，Presentify 的光标高亮是同类中最强的。配备标准的画笔和形状工具。",
+        "bestFor": "最担心学生找不到鼠标指针的教师",
+        "pros": [
+          "同类最佳的光标高亮",
+          "Mac App Store 提供"
+        ],
+        "cons": [
+          "没有 spotlight 聚焦模式或测量工具"
+        ],
+        "pricing": "一次性"
+      },
+      {
+        "tagline": "免费，内置屏幕缩放功能",
+        "summary": "Microsoft 的 ZoomIt 现已登陆 macOS。其内置的屏幕缩放对向远程大班展示幻灯片或代码细节非常有用——而且是免费的。",
+        "bestFor": "希望通过屏幕缩放展示细节的教师",
+        "pros": [
+          "免费",
+          "内置缩放和休息计时器"
+        ],
+        "cons": [
+          "界面像是从 Windows 实用工具移植的",
+          "没有 spotlight 或测量工具"
+        ],
+        "pricing": "免费"
+      },
+      {
+        "tagline": "专为录制课程的教师设计",
+        "summary": "如果你更多时间是在录制课程而不是现场授课，CleanShot X 表现出色——它能捕捉、标注并在同一应用内录屏。",
+        "bestFor": "构建录制课程库的教师",
+        "pros": [
+          "带标注的屏幕录制",
+          "云端分享"
+        ],
+        "cons": [
+          "实时屏上绘图功能有限"
+        ],
+        "pricing": "一次性购买或通过 Setapp"
+      }
+    ],
+    "conclusion": "对于大多数在 Mac 上进行直播或录制课程的教师来说，Scribbble 在价格、功能与易用性之间取得了最佳平衡——尤其是高亮和 Spotlight 工具，非常适合帮助学生保持注意力。如果你遇到的主要问题是鼠标光标的可见性，Presentify 值得一试。如果你更常录制课程而不是现场授课，CleanShot X 可能更适合你。",
+    "faq": [
+      {
+        "q": "我在用 QuickTime 或 Loom 录制时，标注会被录下来吗？",
+        "a": "会的。这个列表中的所有应用（除了 CleanShot X 的截图模式）都是在操作系统层面绘制标注，因此任何屏幕录制工具都会把这些标注作为屏幕内容一并录制下来。"
+      },
+      {
+        "q": "我可以在 Zoom 和 Google Meet 上使用这些应用进行授课吗？",
+        "a": "可以。因为标注是绘制在真实屏幕上的，任何通过 Zoom、Meet、Webex 或 Teams 共享的内容都会包含这些标注。"
+      },
+      {
+        "q": "有针对教育工作者的折扣吗？",
+        "a": "请直接联系各个开发者——许多独立的 Mac 应用开发者（包括 Scribbble）都愿意为教师和学校在批量授权方面提供帮助。"
+      }
+    ]
+  }
+}

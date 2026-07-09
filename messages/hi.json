@@ -1,0 +1,312 @@
+{
+  "meta": {
+    "titleDefault": "Scribbble — Mac के लिए स्क्रीन एनोटेशन ऐप · स्क्रीन पर ड्रॉ करें",
+    "titleTemplate": "%s | Scribbble",
+    "description": "Scribbble एक सुंदर Mac ऐप है जिससे आप सीधे अपनी स्क्रीन पर स्क्रिबल, ड्रॉ, हाइलाइट और एनोटेट कर सकते हैं। शिक्षकों, स्ट्रीमर, YouTubers, डिज़ाइनरों और सेल्स डेमो के लिए परफेक्ट। फ्री डाउनलोड, एक-बार की लाइसेंस फीस।",
+    "ogTitle": "Scribbble — Mac के लिए स्क्रीन एनोटेशन ऐप",
+    "ogImageAlt": "Scribbble — Mac के लिए स्क्रीन एनोटेशन ऐप"
+  },
+  "header": {
+    "cta": "Scribbble पाएं",
+    "buyLicense": "लाइसेंस खरीदें"
+  },
+  "footer": {
+    "tools": "टूल्स",
+    "screenshotAnnotate": "स्क्रीनशॉट एनोटेट",
+    "learn": "जानें",
+    "blog": "ब्लॉग",
+    "screenAnnotationGuide": "स्क्रीन एनोटेशन गाइड",
+    "for": "के लिए",
+    "guides": "गाइड्स",
+    "compare": "तुलना",
+    "scribbbleVs": "Scribbble बनाम {competitor}",
+    "company": "कंपनी",
+    "buyLicense": "लाइसेंस खरीदें",
+    "support": "सपोर्ट",
+    "language": "भाषा",
+    "copyright": "© 2025 Kushagra Gour. 2025 से Scribbbling दुनिया भर में।"
+  },
+  "home": {
+    "badge": "Mac के लिए बना · एक-बार की भुगतान",
+    "heroTitle": "<gradient>स्क्रीन पर</gradient> <underline>किसी भी चीज़</underline> पर ड्रॉ करें",
+    "heroSubtitle": "एक हॉटकी दबाएँ, किसी भी ऐप के ऊपर ड्रॉ करें, फिर इसे फिर से दबाएँ ताकि साफ़ हो जाए। बस इतना ही। <strong>कोई विंडो नहीं</strong>, कोई सेटअप नहीं, कोई मासिक शुल्क नहीं।",
+    "tryFree": "Scribbble मुफ्त आज़माएँ",
+    "buyLicense": "लाइसेंस खरीदें",
+    "chipZeroSetup": "कोई सेटअप नहीं",
+    "chipPayOnce": "एक बार भुगतान करें, हमेशा के लिए मालिक बनें",
+    "chipAnyApp": "पहले से उपयोग किए जाने वाले किसी भी ऐप में काम करता है",
+    "demoTitle": "एक <gradient>60-सेकंड</gradient> टूर देखें",
+    "demoSubtitle": "हर टूल, हर शॉर्टकट, एक मिनट में।",
+    "seoTitle": "लाइव प्रेजेंटेशन के लिए Mac <gradient>स्क्रीन एनोटेशन</gradient> ऐप",
+    "seoSubtitle": "Scribbble एक Mac स्क्रीन एनोटेशन टूल है जो किसी भी ऐप — स्लाइड्स, ब्राउज़र, Figma, Zoom shares, कोड एडिटर्स — के ऊपर ड्रॉ करता है, एक फोकस्ड, हॉटकी-ड्रिवन वर्कफ़्लो के साथ जो macOS के लिए बनाया गया है।",
+    "cards": [
+      {
+        "title": "एक असली Mac स्क्रीन एनोटेशन टूल",
+        "body": "ज्यादातर एनोटेशन ऐप्स Windows से पोर्ट किए गए हैं। Scribbble Mac-फर्स्ट डिज़ाइन किया गया है: नेटिव Apple Silicon परफॉर्मेंस, एक आधुनिक टूलबार जो फ्लोट या बाएँ/दाएँ किनारे पर डॉक हो सकता है, और macOS-स्टाइल कीबोर्ड शॉर्टकट्स। यह एक Mac ऐप जैसा लगता है क्योंकि यह वास्तव में एक Mac ऐप है।"
+      },
+      {
+        "title": "आप जो ऐप पहले से इस्तेमाल करते हैं उनमें काम करता है",
+        "body": "क्योंकि Scribbble OS लेवल पर ड्रॉ करता है, जो कुछ भी Zoom, Google Meet, OBS, Loom या QuickTime कैप्चर करते हैं उन सब में आपकी एनोटेशन शामिल होंगी। कोई प्लगइन नहीं, कोई ब्राउज़र सोर्स नहीं, कोई अतिरिक्त सीन सेटअप करने की जरूरत नहीं।"
+      },
+      {
+        "title": "सिर्फ पेन से कहीं ज़्यादा",
+        "body": "पेन, हाइलाइटर, ऐरो, रेक्टैंगल, एलीप्स और टेक्स्ट — साथ ही Spotlight (फोकस डिम), एक Measure टूल, और एक बिल्ट-इन Snapshot टूल जो ऐप छोड़े बिना पूरे स्क्रीन या किसी क्षेत्र को कैप्चर करता है।"
+      },
+      {
+        "title": "आज़माने के लिए मुफ़्त, एक-बार की लाइसेंस",
+        "body": "Scribbble डाउनलोड करें और मुफ्त में उपयोग करें। जब आप तैयार हों, एक-बार की लाइसेंस सब कुछ अनलॉक कर देती है — कोई सब्सक्रिप्शन नहीं, कोई लॉगिन नहीं, कोई अपसेल पॉप-अप नहीं।"
+      }
+    ],
+    "linksWorkflowsTitle": "हर Mac वर्कफ़्लो के लिए बनाया गया",
+    "linkPersona": "{audience} के लिए Mac एनो्टेशन ऐप",
+    "linksCompareTitle": "Scribbble की तुलना अन्य Mac एनो्टेशन टूल्स से करें",
+    "linkVs": "Scribbble बनाम {competitor}",
+    "linkZoomitVsEpicPen": "ZoomIt बनाम Epic Pen",
+    "linksGuidesTitle": "Mac स्क्रीन एनो्टेशन गाइड्स",
+    "linkGuide": "स्क्रीन एनो्टेशन पर पूर्ण गाइड",
+    "downloadTitle": "तैयार हैं <gradient>scribble</gradient> करने के लिए?",
+    "downloadSubtitle": "एक बार भुगतान। हर Mac पर चलेगा जिस पर macOS 11 या बाद का सिस्टम है। जीवनभर के लिए फ्री अपडेट।",
+    "chipMacos": "macOS 11.0+ (Intel/Silicon)",
+    "chipNoSignup": "साइनअप की ज़रूरत नहीं",
+    "chipRefund": "14-दिन की रिफंड पॉलिसी",
+    "jsonLd": {
+      "description": "Scribbble एक Mac ऐप है जो आपको सीधे स्क्रीन पर ड्रॉ, हाइलाइट और एनोटेट करने देता है — शिक्षकों, स्ट्रीमर, YouTuber, डिज़ाइनरों और सेल्स डेमो के लिए।",
+      "featureList": [
+        "फ्रीहैंड पेन टूल",
+        "हाइलाइटर",
+        "एरो टूल",
+        "रेक्टैंगल शेप",
+        "एलिप्स शेप",
+        "टेक्स्ट एनोटेशन",
+        "स्पॉटलाइट (फोकस डिम)",
+        "मेज़र टूल",
+        "स्नैपशॉट कैप्चर — पूरे स्क्रीन या चुने हुए क्षेत्र",
+        "टूलबार बाईं या दाईं किनारे पर डॉक्स हो जाता है",
+        "Apple Silicon नेटिव",
+        "साथी फ्री Screenshot Annotate वेब टूल"
+      ],
+      "offerDescription": "डाउनलोड मुफ्त। पूर्ण फीचर्स के लिए एक‑बार लाइसेंस।"
+    }
+  },
+  "common": {
+    "home": "होम",
+    "faq": "FAQ",
+    "downloadFree": "मुफ्त डाउनलोड",
+    "buyLicense": "लाइसेंस खरीदें",
+    "downloadScribbble": "Scribbble डाउनलोड करें"
+  },
+  "zoomitVsEpicPen": {
+    "title": "ZoomIt बनाम Epic Pen — 2026 में कौन बेहतर है?",
+    "description": "ZoomIt और Epic Pen दो सबसे लोकप्रिय स्क्रीन एनो्टेशन टूल्स हैं। ईमानदार साइड‑बाय‑साइड तुलना: फीचर्स, प्राइसिंग, प्लेटफ़ॉर्म — और Mac पर सबसे अच्छा विकल्प।",
+    "badge": "ईमानदार, हैंड्स‑ऑन तुलना",
+    "h1": "ZoomIt बनाम Epic Pen",
+    "subtitle": "दो सबसे लोकप्रिय स्क्रीन एनो्टेशन टूल्स, साइड‑बाय‑साइड। फीचर्स, प्राइसिंग, प्लेटफ़ॉर्म — और Mac पर किसे चुनें।",
+    "tldrTitle": "संक्षिप्त उत्तर",
+    "tldr": [
+      {
+        "lead": "ZoomIt चुनें",
+        "body": "अगर आप एक मुफ्त, हॉटकी‑ड्रिवन यूटिलिटी चाहते हैं जिसमें बिल्ट‑इन स्क्रीन ज़ूम और ब्रेक टाइमर हो — और अगर आप Mac पर हैं, क्योंकि Epic Pen वहां नहीं चलता।"
+      },
+      {
+        "lead": "Epic Pen चुनें",
+        "body": "यदि आप Windows पर हैं, प्रस्तुति-केन्द्रित उपयोगकर्ता इंटरफ़ेस पसंद करते हैं, और Pro टियर (shapes, text) के लिए भुगतान करने में आप चूक नहीं करते तो यह बेहतर है।"
+      },
+      {
+        "lead": "Scribbble चुनें",
+        "body": "यदि आप Mac पर हैं और एक आधुनिक, Mac‑नैटिव ऐप चाहते हैं जो Epic Pen जैसी परिष्कृत भावना दे और Spotlight, Measure जैसी बेहतर टूलकिट किसी भी विकल्प से अधिक दे।"
+      }
+    ],
+    "whatIsZoomitTitle": "ZoomIt क्या है?",
+    "whatIsZoomitBody": "ZoomIt Microsoft Sysinternals का एक मुफ्त स्क्रीन अॅनोटेशन, ज़ूम और ब्रेक‑टाइमर यूटिलिटी है। यह Windows पर बना और लोकप्रिय हुआ और बाद में Microsoft ने इसका macOS बिल्ड जारी किया। इसकी ताकत बिना रुकावट वाले hotkeys और इनबिल्ट ज़ूम फ़ीचर में है — सिस्टम एडमिन, प्रस्तुतकर्ता और ट्रेनर्स के बीच लोकप्रिय जो स्क्रीन पर सूक्ष्म विवरण दिखाना चाहते हैं।",
+    "whatIsEpicPenTitle": "Epic Pen क्या है?",
+    "whatIsEpicPenBody": "Epic Pen एक Windows स्क्रीन अॅनोटेशन टूल है जो प्रस्तुतियों और शिक्षण के इर्द‑गिर्द डिज़ाइन किया गया है। यह आपको किसी भी एप्लिकेशन पर ड्रॉ, हाइलाइट और (Pro टियर में) shapes और text जोड़ने की सुविधा देता है। इसकी UI ZoomIt से ज़्यादा यूज़र‑फ्रेंडली है लेकिन यह केवल Windows के लिए है — इसकी कोई नेटिव Mac बिल्ड नहीं है।",
+    "tableTitle": "साइड‑बाइ‑साइड तुलना",
+    "feature": "फ़ीचर",
+    "table": [
+      {
+        "feature": "Price",
+        "zoomit": "Free",
+        "epicPen": "Free + Pro tier"
+      },
+      {
+        "feature": "Maker",
+        "zoomit": "Microsoft Sysinternals",
+        "epicPen": "Epic Pen"
+      },
+      {
+        "feature": "Windows",
+        "zoomit": "Yes (original)",
+        "epicPen": "Yes (original)"
+      },
+      {
+        "feature": "macOS",
+        "zoomit": "Yes (recent port)",
+        "epicPen": "No"
+      },
+      {
+        "feature": "Linux",
+        "zoomit": "No",
+        "epicPen": "No"
+      },
+      {
+        "feature": "Pen tool",
+        "zoomit": "Yes",
+        "epicPen": "Yes"
+      },
+      {
+        "feature": "Highlighter",
+        "zoomit": "Limited",
+        "epicPen": "Yes"
+      },
+      {
+        "feature": "Shapes (arrow / rectangle)",
+        "zoomit": "Yes",
+        "epicPen": "Yes (Pro)"
+      },
+      {
+        "feature": "Text tool",
+        "zoomit": "Yes (typing mode)",
+        "epicPen": "Yes (Pro)"
+      },
+      {
+        "feature": "Screen zoom",
+        "zoomit": "Yes",
+        "epicPen": "No"
+      },
+      {
+        "feature": "Break timer",
+        "zoomit": "Yes",
+        "epicPen": "No"
+      },
+      {
+        "feature": "Whiteboard mode",
+        "zoomit": "Yes",
+        "epicPen": "No"
+      },
+      {
+        "feature": "Modern Mac-native UI",
+        "zoomit": "No (Windows port)",
+        "epicPen": "—"
+      }
+    ],
+    "chooseZoomitTitle": "ZoomIt चुनें अगर…",
+    "chooseZoomit": [
+      "आप एक पूरी तरह मुफ्त टूल चाहते हैं जिसमें कोई Pro टियर न हो",
+      "आप सूक्ष्म विवरण दिखाने के लिए इनबिल्ट स्क्रीन ज़ूम चाहते हैं",
+      "आप macOS पर हैं — Epic Pen वहाँ नहीं चलता",
+      "आप hotkey‑चालित, न्यूनतम‑UI वाले टूल पसंद करते हैं",
+      "आप प्रशिक्षण सत्रों के लिए ब्रेक टाइमर भी चाहते हैं"
+    ],
+    "chooseEpicPenTitle": "Epic Pen चुनें अगर…",
+    "chooseEpicPen": [
+      "आप Windows पर हैं",
+      "आप प्रस्तुति‑शैली की एक सहज UI को एक सिस्टम एडमिन यूटिलिटी से प्राथमिकता देते हैं",
+      "आप Pro टियर के लिए भुगतान कर के shapes और text अनलॉक करने में सक्षम हैं",
+      "आपको स्क्रीन ज़ूम या ब्रेक टाइमर जैसी सुविधाओं की ज़रूरत नहीं है"
+    ],
+    "macTitle": "Mac पर? यहाँ बेहतर विकल्प है।",
+    "macBody": "Epic Pen macOS पर बिलकुल नहीं चलता, और ZoomIt का Mac पोर्ट अभी भी Windows‑यूटिलिटी जैसा लगता है। अगर आप Mac पर हैं और कुछ ऐसा चाहते हैं जो वाकई में Mac ऐप जैसा महसूस हो, तो Scribbble विशेष रूप से macOS के लिए बनाया गया है — आधुनिक ड्रैगेबल टूलबार, Apple Silicon‑नेटिव प्रदर्शन, और ZoomIt या Epic Pen दोनों से ज़्यादा समृद्ध टूलसेट (Spotlight, Measure) के साथ।",
+    "scribbbleFitsTitle": "Scribbble कहां फिट बैठता है",
+    "scribbbleFits": [
+      "Epic Pen जैसे ही मूल टूल — पेन, हाईलाइटर, एरो, रेक्टैंगल, टेक्स्ट — बिना Pro पेवाल के",
+      "Spotlight (focus dim) और Measure टूल जोड़ता है जो न तो ZoomIt में और न ही Epic Pen में हैं",
+      "Mac‑नेटिव UI with Apple Silicon support",
+      "डाउनलोड करके मुफ्त आज़माएँ, एक‑बार की लाइसेंसिंग"
+    ],
+    "tryFree": "Scribbble Free आज़माएँ",
+    "seeAlternatives": "Mac के लिए सभी Epic Pen विकल्प देखें",
+    "relatedComparisons": "संबंधित तुलना",
+    "guides": "गाइड",
+    "forYourRole": "आपकी भूमिका के लिए Scribbble",
+    "scribbbleVs": "Scribbble बनाम {competitor}",
+    "scribbbleFor": "Scribbble for {audience}",
+    "faq": [
+      {
+        "q": "कौन सा बेहतर है, ZoomIt या Epic Pen?",
+        "a": "यह आपके प्लेटफ़ॉर्म और ज़रूरतों पर निर्भर करता है। ZoomIt मुफ्त है, Windows और macOS दोनों पर चलता है, और इसमें बिल्ट‑इन स्क्रीन ज़ूम और ब्रेक टाइमर हैं जो Epic Pen में नहीं हैं। Epic Pen की एनोटेशन UI ज़्यादा पॉलिश्ड है और उसका Pro टियर shapes और text जोड़ता है, लेकिन वह केवल Windows पर है। अगर आप Mac पर हैं, तो दोनों में से सिर्फ ZoomIt ही वह है जो चल सकता है।"
+      },
+      {
+        "q": "उपयोगकर्ता ZoomIt को Epic Pen पर क्यों चुनते हैं?",
+        "a": "मुख्य तीन कारण: (1) ZoomIt पूरी तरह से मुफ्त है और उसका कोई Pro टियर नहीं है, जबकि Epic Pen shapes और text को भुगतान के पीछे रखता है। (2) ZoomIt में स्क्रीन ज़ूम जैसी सच्ची सुविधा है जिससे बारीक डिटेल दिखाना आसान होता है, जो Epic Pen में नहीं है। (3) ZoomIt अब macOS पर भी चलता — Epic Pen नहीं। समीक्षकों ने यह भी बताया कि ZoomIt की बिना रुकावट वाली हॉटकीज़ Epic Pen की टूलबार की तुलना में तेज़ महसूस होती हैं।"
+      },
+      {
+        "q": "Epic Pen की तुलना ZoomIt से कैसे है?",
+        "a": "Epic Pen की एनोटेशन UI अधिक मित्रवत और आधुनिक है और यह प्रस्तुति‑उपयोग के इर्द‑गिर्द डिज़ाइन की गई है। ZoomIt एक Sysinternals यूटिलिटी है — न्यूनतम UI, हॉटकी‑केंद्रित, और अतिरिक्त सुविधाएँ (ज़ूम, ब्रेक टाइमर, व्हाइटबोर्ड मोड) जोड़ी हुई हैं। Epic Pen का मुफ्त टियर केवल पेन और हाईलाइटर तक सीमित है; ZoomIt का पूरा फीचर सेट मुफ्त है।"
+      },
+      {
+        "q": "क्या ZoomIt और Epic Pen दोनों का Mac विकल्प है?",
+        "a": "हाँ। Scribbble एक Mac‑पहले स्क्रीन एनोटेशन ऐप है जो दोनों के अच्छे हिस्सों को मिलाता है — Epic Pen जैसी आधुनिक, पॉलिश्ड UI और ZoomIt जैसा फोकस्ड, हॉटकी‑ड्रिवन वर्कफ़्लो। इसमें पेन, हाईलाइटर, एरो, रेक्टैंगल, टेक्स्ट, Spotlight (focus dim) और Measure टूल्स हैं; डाउनलोड करने के लिए मुफ्त और सब कुछ अनलॉक करने के लिए एक‑बार की लाइसेंस है।"
+      },
+      {
+        "q": "ऐसी कौन‑सी सुविधाएँ हैं जो विकल्प Epic Pen में नहीं देते?",
+        "a": "ज़्यादातर आधुनिक विकल्प कम से कम इनमें से एक जोड़ते हैं: Spotlight / focus‑dim टूल, ऑन‑स्क्रीन दूरी के लिए Measure टूल, स्क्रीन ज़ूम (ZoomIt) या बिल्ट‑इन स्क्रीन रिकॉर्डर (CleanShot X)। Scribbble विशेष रूप से Spotlight, Measure और एक सहायक मुफ्त Screenshot Annotate वेब टूल जोड़ता है। ZoomIt ज़ूम, ब्रेक टाइमर और व्हाइटबोर्ड मोड जोड़ता है।"
+      },
+      {
+        "q": "समीक्षकों ने Epic Pen के बजाय कौन‑से स्क्रीन एनोटेशन टूल सुझाए हैं?",
+        "a": "Windows पर, ZoomIt सबसे अधिक सुझाया गया मुफ्त विकल्प है। Mac पर (जहाँ Epic Pen बिलकुल नहीं चलता), सबसे सुझाए गए विकल्प Scribbble (आधुनिक Mac‑पहले), Presentify (करसर हाईलाइटिंग), ZoomIt (मुफ्त, Windows‑स्टाइल UI) और CleanShot X (कैप्चर + एनोटेशन) हैं।"
+      },
+      {
+        "q": "क्या ZoomIt उपयोग के लिए सुरक्षित है?",
+        "a": "हाँ — ZoomIt Microsoft द्वारा Sysinternals सूट के हिस्से के रूप में प्रकाशित है और सीधे Microsoft की साइट से वितरित होता है। इसे एंटरप्राइज़ परिवेशों में व्यापक रूप से उपयोग किया जाता है।"
+      },
+      {
+        "q": "क्या Epic Pen Mac पर काम करता है?",
+        "a": "नहीं। Epic Pen केवल Windows‑समर्थित है और इसका कोई नेटिव Mac बिल्ड नहीं है। अगर आप macOS पर हैं, तो Scribbble (Mac‑पहले), ZoomIt (मुफ्त Microsoft पोर्ट) या Presentify देखें।"
+      }
+    ]
+  },
+  "bestPage": {
+    "breadcrumbGuides": "गाइड",
+    "badge": "ईमानदार, हैंड‑ऑन राउंडअप",
+    "howWePicked": "हमने कैसे चुना",
+    "ourPick": "हमारी पसंद",
+    "bestFor": "किसके लिए सबसे अच्छा",
+    "pros": "फायदे",
+    "cons": "नुकसान",
+    "pricing": "मूल्य:",
+    "scribbbleVsItem": "Scribbble बनाम {name}",
+    "bottomLine": "निचोड़",
+    "ctaTitle": "हमारी टॉप पसंद आज़माएँ: <gradient>Scribbble</gradient>",
+    "ctaSubtitle": "मुफ्त डाउनलोड। एक‑बार लाइसेंस। नेटिव macOS।",
+    "otherGuides": "अन्य मार्गदर्शिकाएँ",
+    "compareTitle": "Scribbble की तुलना करें",
+    "scribbbleVs": "Scribbble बनाम {competitor}",
+    "forYourRole": "आपके भूमिका के लिए Scribbble",
+    "scribbbleFor": "Scribbble for {audience}"
+  },
+  "vsPage": {
+    "breadcrumbVs": "बनाम",
+    "badge": "ईमानदार तुलना",
+    "tryFree": "Scribbble Free आज़माएँ",
+    "whatIs": "{competitor} क्या है?",
+    "tableTitle": "साइड‑बाय‑साइड तुलना",
+    "feature": "फ़ीचर",
+    "pricing": "मूल्य",
+    "whereScribbbleWins": "जहाँ Scribbble बेहतर है",
+    "whereCompetitorWins": "जहाँ {competitor} बेहतर है",
+    "chooseScribbble": "Scribbble चुनें अगर…",
+    "chooseCompetitor": "{competitor} चुनें अगर…",
+    "ctaTitle": "मुफ्त आज़माएँ <gradient>Scribbble</gradient>",
+    "ctaSubtitle": "नेटिव macOS। एक‑बार लाइसेंस। कोई सब्सक्रिप्शन नहीं।",
+    "otherComparisons": "अन्य तुलना",
+    "scribbbleVs": "Scribbble बनाम {competitor}",
+    "zoomitVsEpicPen": "ZoomIt बनाम Epic Pen",
+    "forYourRole": "आपके भूमिका के लिए Scribbble",
+    "scribbbleFor": "Scribbble for {audience}",
+    "guides": "गाइड"
+  },
+  "personaPage": {
+    "breadcrumbFor": "के लिए",
+    "badge": "Scribbble for {audience}",
+    "whyTitle": "क्यों {audience} <gradient>Scribbble</gradient> का उपयोग करें",
+    "howTitle": "{audience} इसे कैसे उपयोग करते हैं",
+    "toolsTitle": "सबसे ज़रूरी टूल",
+    "ctaTitle": "Scribbble <gradient>free</gradient> आज़माएँ",
+    "ctaSubtitle": "{audience} के लिए बना। macOS 11+ पर काम करता है।",
+    "otherRolesTitle": "अन्य भूमिकाओं के लिए Scribbble",
+    "scribbbleFor": "Scribbble for {audience}",
+    "compareTitle": "Scribbble की तुलना",
+    "scribbbleVs": "Scribbble बनाम {competitor}",
+    "guidesTitle": "मार्गदर्शिकाएँ"
+  }
+}

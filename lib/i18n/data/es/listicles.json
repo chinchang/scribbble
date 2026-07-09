@@ -1,1 +1,512 @@
-{}
+{
+  "best-screen-annotation-apps-mac": {
+    "title": "Las mejores apps de anotación de pantalla para Mac en 2026 (Gratis + de pago)",
+    "description": "Probamos 5 apps de anotación de pantalla para Mac — Scribbble, Presentify, ZoomIt, CleanShot X y Annotate. Pros, contras, precios honestos y nuestra elección principal para 2026.",
+    "h1": "Las mejores apps de anotación de pantalla para Mac",
+    "intro": "Las apps de anotación de pantalla te permiten dibujar, resaltar y marcar directamente sobre tu pantalla Mac — sobre diapositivas, navegadores, Figma, compartidos de Zoom, cualquier cosa. Son indispensables para profes, presentadores, quienes hacen demostraciones de software, streamers y diseñadores en críticas en vivo. A continuación tienes un análisis práctico y honesto de las apps que merecen la pena en macOS en 2026.",
+    "criteria": [
+      "Compatibilidad nativa con macOS (Apple Silicon es un plus)",
+      "Dibujo real en pantalla — no solo anotación de capturas",
+      "Desarrollo activo y soporte",
+      "Modelo de precios razonable",
+      "Variedad de herramientas más allá del bolígrafo"
+    ],
+    "items": [
+      {
+        "tagline": "La app moderna de anotación en pantalla, pensada para Mac",
+        "summary": "Scribbble está diseñada primero para Mac y cuenta con una barra de herramientas moderna que puedes acoplar al borde izquierdo o derecho. Además del bolígrafo, la flecha, el rectángulo, la elipse y las herramientas de texto habituales, incluye Spotlight (énfasis de foco), Subrayador, Medidor y una herramienta Snapshot integrada para capturar toda la pantalla o una región —una combinación que la mayoría de competidores no iguala. Se puede descargar y probar gratis, y hay una licencia de pago único para desbloquear todo.",
+        "bestFor": "Profesores, diseñadores y creadores que quieren una herramienta de anotación moderna y nativa para Mac sin suscripción",
+        "pros": [
+          "Diseño pensado para Mac con una barra de herramientas moderna que puedes acoplar a la izquierda o derecha",
+          "Incluye Spotlight, Subrayador y Medidor desde el primer momento",
+          "Herramienta Snapshot integrada — captura la pantalla completa o una región sin salir de la app",
+          "Formas que incluyen flecha, rectángulo y elipse",
+          "Nativa en Apple Silicon",
+          "Descarga gratuita para probar",
+          "Licencia de pago único, sin suscripción",
+          "Herramienta complementaria gratuita Screenshot Annotate en la web"
+        ],
+        "cons": [
+          "No incluye grabación de pantalla",
+          "Sin zoom de pantalla integrado (usa el zoom de accesibilidad de macOS)"
+        ],
+        "pricing": "Gratis + licencia de pago único"
+      },
+      {
+        "tagline": "Clásico del Mac App Store con resaltado del cursor",
+        "summary": "Presentify es una app de anotación para macOS con larga trayectoria disponible en el Mac App Store. Su característica diferenciadora es el resaltado del cursor, que hace imposible perder de vista el puntero del ratón durante las presentaciones. Funciona con un modelo de compra única.",
+        "bestFor": "Presentadores que necesitan un resaltado de cursor prominente además de dibujo",
+        "pros": [
+          "Presencia consolidada en el Mac App Store",
+          "Función de resaltado del cursor",
+          "Compra única"
+        ],
+        "cons": [
+          "No tiene Spotlight, Medidor ni herramienta integrada de captura de pantalla complementaria",
+          "Prueba gratuita limitada"
+        ],
+        "pricing": "Compra única (Mac App Store)"
+      },
+      {
+        "tagline": "Potencia de capturas con anotación incorporada",
+        "summary": "CleanShot X es una suite completa de capturas de pantalla y grabación para Mac. Sus herramientas de anotación son excelentes, pero funcionan principalmente después de la captura, no sobre la pantalla en vivo. Si tu flujo es capturar → anotar → compartir, es magnífica. Para dibujar en vivo durante una llamada de Zoom, querrás una herramienta dedicada.",
+        "bestFor": "Usuarios avanzados cuyo flujo principal es capturar → anotar → compartir",
+        "pros": [
+          "Captura de pantalla de primera categoría",
+          "Subida a la nube y enlaces compartibles",
+          "Captura con desplazamiento y grabación de pantalla",
+          "Fuertes herramientas de anotación para capturas"
+        ],
+        "cons": [
+          "La anotación en pantalla en vivo es limitada",
+          "Más caro — hace mucho más que solo anotación"
+        ],
+        "pricing": "Pago único o vía suscripción de Setapp"
+      },
+      {
+        "tagline": "El clásico de Microsoft Sysinternals, ahora en Mac",
+        "summary": "ZoomIt es la legendaria utilidad de zoom y anotación en pantalla de Microsoft Sysinternals. Originalmente solo para Windows, Microsoft ha publicado desde entonces una versión para macOS. Es gratuita e incluye un zoom de pantalla y un temporizador de descanso integrados que ninguna otra herramienta iguala —pero la interfaz es, sin duda, la de una utilidad de administración de sistemas.",
+        "bestFor": "Usuarios tipo Sysadmin que necesitan específicamente el zoom de pantalla y el temporizador de descansos de ZoomIt",
+        "pros": [
+          "Gratis de Microsoft",
+          "Zoom integrado y temporizador de descansos",
+          "Ahora disponible en macOS"
+        ],
+        "cons": [
+          "La interfaz es un puerto de utilidad de Windows, no es estilo Mac",
+          "No tiene Spotlight, Measure ni una barra de herramientas moderna"
+        ],
+        "pricing": "Gratis"
+      },
+      {
+        "tagline": "App de marcado para Mac orientada a equipos",
+        "summary": "Annotate es una app para Mac centrada en capturar pantallas y marcarlas para compartir con el equipo. Es más fuerte en flujos de trabajo asíncronos y de colaboración en equipo que en dibujo en pantalla en vivo durante una presentación o llamada.",
+        "bestFor": "Equipos que necesitan espacios de trabajo compartidos y marcado colaborativo",
+        "pros": [
+          "Flujo de trabajo pulido para marcado de capturas",
+          "Funciones de compartición y para equipos"
+        ],
+        "cons": [
+          "No está diseñado para anotación en vivo en pantalla",
+          "El precio depende del plan"
+        ],
+        "pricing": "Varía — consulta al proveedor"
+      }
+    ],
+    "conclusion": "Si buscas una app de anotación de pantalla moderna y nativa de Mac con un conjunto de herramientas completo (Spotlight, Highlighter, Measure) y pago único, Scribbble es la recomendación más sencilla. Presentify es la alternativa si el resaltado del cursor es crítico. CleanShot X es la opción adecuada si tu flujo de trabajo se centra en capturas de pantalla en lugar de dibujo en vivo. ZoomIt es la opción gratuita de Microsoft si necesitas su característica de zoom distintiva.",
+    "faq": [
+      {
+        "q": "¿Cuál es la mejor app de anotación de pantalla gratuita para Mac?",
+        "a": "ZoomIt es totalmente gratuita y ahora funciona en macOS. Scribbble también se puede descargar y probar gratis, con una licencia de pago único opcional para desbloquear todo."
+      },
+      {
+        "q": "¿Puedo dibujar en mi pantalla durante una llamada de Zoom?",
+        "a": "Sí: cualquiera de las apps de esta lista, excepto CleanShot X, está diseñada para anotación en vivo en pantalla que aparece al compartir en Zoom. Scribbble y Presentify son las opciones más pulidas."
+      },
+      {
+        "q": "¿Necesito comprar una licencia para probar estas apps?",
+        "a": "Scribbble y ZoomIt te permiten usar la app sin comprarla. Presentify ofrece una prueba limitada. CleanShot X también tiene prueba."
+      }
+    ]
+  },
+  "best-zoomit-alternatives-mac": {
+    "title": "5 mejores alternativas a ZoomIt para Mac (Gratis + De pago, 2026)",
+    "description": "El puerto de ZoomIt para Mac todavía se siente como una utilidad de Windows. Estas 5 alternativas nativas para Mac tienen interfaces modernas, conjuntos de herramientas más amplios y una sensación realmente Mac.",
+    "h1": "Las mejores alternativas a ZoomIt para Mac",
+    "intro": "Microsoft's ZoomIt es una clásica utilidad de anotación de pantalla del paquete Sysinternals. Ahora está disponible en macOS, pero la interfaz es un puerto fiel de Windows y le faltan comodidades modernas como una barra de herramientas arrastrable, modo de enfoque Spotlight o herramientas de medida. Si estás en Mac y quieres una alternativa más nativa y moderna, aquí están las mejores opciones.",
+    "criteria": [
+      "Experiencia nativa de Mac (no un puerto de utilidad de Windows)",
+      "Desarrollo activo",
+      "Variedad de herramientas más allá del bolígrafo y el zoom",
+      "Precios razonables"
+    ],
+    "items": [
+      {
+        "tagline": "La alternativa a ZoomIt pensada para Mac",
+        "summary": "Scribbble está construida pensando primero en Mac, con una barra de herramientas moderna que puedes anclar al borde izquierdo o derecho, y un conjunto de herramientas más amplio que ZoomIt —incluyendo Spotlight (oscurecimiento con foco), Highlighter, Measure, formas completas (flecha, rectángulo, elipse) y una herramienta Snapshot integrada que captura toda la pantalla o una región. Se puede descargar gratis y viene con una herramienta web gratuita complementaria Screenshot Annotate. La contrapartida: no tiene la función de zoom de pantalla (usa el zoom de accesibilidad integrado de macOS para eso).",
+        "bestFor": "Cualquiera que deje ZoomIt y quiera una experiencia moderna y nativa de Mac",
+        "pros": [
+          "Interfaz Mac-first con una barra de herramientas que se ancla a la izquierda o derecha",
+          "Herramientas Spotlight, Highlighter y Measure",
+          "Captura Snapshot integrada — pantalla completa o región seleccionada",
+          "Formas incluyen flecha, rectángulo y elipse",
+          "Descarga gratuita, licencia de pago único",
+          "Nativo para Apple Silicon"
+        ],
+        "cons": [
+          "No tiene la función de zoom de pantalla"
+        ],
+        "pricing": "Gratis + licencia de pago único"
+      },
+      {
+        "tagline": "Clásico de anotación en la Mac App Store",
+        "summary": "Presentify cubre lo básico que extrañan los usuarios de ZoomIt: lápiz, formas, texto y una potente función de resaltado del cursor. Es una compra única a través de la Mac App Store.",
+        "bestFor": "Presentadores que priorizan la visibilidad del cursor en pantallas compartidas",
+        "pros": [
+          "Resaltado del cursor",
+          "Compra única",
+          "Distribución vía Mac App Store"
+        ],
+        "cons": [
+          "Sin herramienta de medición, sin modo de foco tipo spotlight"
+        ],
+        "pricing": "Pago único (Mac App Store)"
+      },
+      {
+        "tagline": "Si lo que realmente necesitas son capturas + anotación",
+        "summary": "Mucha gente que busca ZoomIt en realidad quiere capturar y compartir capturas de pantalla anotadas, no dibujar sobre la pantalla en vivo. CleanShot X es la mejor app de Mac para ese flujo de trabajo.",
+        "bestFor": "Flujos de trabajo orientados a capturar primero, en lugar de presentaciones en vivo",
+        "pros": [
+          "Captura de pantalla excelente",
+          "Compartir en la nube integrado",
+          "Grabación con anotaciones"
+        ],
+        "cons": [
+          "Dibujo en pantalla en vivo limitado"
+        ],
+        "pricing": "Pago único o vía Setapp"
+      },
+      {
+        "tagline": "Marcado colaborativo para equipos",
+        "summary": "Si necesitas espacios de trabajo compartidos y marcado en equipo, Annotate está pensado para ese flujo en lugar del dibujo en vivo.",
+        "bestFor": "Equipos que comparten capturas de pantalla entre sí",
+        "pros": [
+          "Funciones de equipo y compartición"
+        ],
+        "cons": [
+          "No está diseñado para dibujo en pantalla en vivo"
+        ],
+        "pricing": "Varía"
+      },
+      {
+        "tagline": "Gratis y ya instalado",
+        "summary": "Si tus necesidades son mínimas, macOS incluye Zoom de accesibilidad (Cmd+Option+8) y marcado de capturas vía Preview. No son una app de anotación completa, pero son gratis y no requieren instalación.",
+        "bestFor": "Necesidades ultra‑ligeras cuando prefieres no instalar nada",
+        "pros": [
+          "Ya instalado",
+          "Gratis"
+        ],
+        "cons": [
+          "Sin dibujo en pantalla en vivo",
+          "Sin un conjunto de herramientas adecuado"
+        ],
+        "pricing": "Gratis"
+      }
+    ],
+    "conclusion": "Scribbble es el sucesor espiritual más cercano a ZoomIt para usuarios de Mac: una herramienta de anotación ligera y enfocada con una interfaz moderna nativa de Mac, además de un conjunto de herramientas más completo (Spotlight, Marcador, Medición). Si la característica de zoom distintiva de ZoomIt es lo que vas a echar de menos, combina Scribbble con el zoom de accesibilidad integrado de macOS y tendrás todo cubierto.",
+    "faq": [
+      {
+        "q": "¿Existe un verdadero ZoomIt para Mac?",
+        "a": "Sí: Microsoft ha publicado una versión de ZoomIt para macOS. Funciona, pero la interfaz es un puerto de la utilidad de Windows. Para una experiencia más nativa en Mac, Scribbble es la alternativa moderna más cercana."
+      },
+      {
+        "q": "¿Cómo consigo la función de zoom de ZoomIt en Mac?",
+        "a": "macOS tiene zoom de pantalla integrado en System Settings → Accessibility → Zoom. Activa Cmd+Option+8 para alternar, o usa Ctrl+scroll para zoom con desplazamiento. Combínalo con Scribbble para anotación y tendrás un reemplazo completo de ZoomIt."
+      }
+    ]
+  },
+  "best-epic-pen-alternatives-mac": {
+    "title": "5 mejores alternativas a Epic Pen para Mac (Gratis + de pago, 2026)",
+    "description": "Epic Pen está pensado primero para Windows. Estas 5 alternativas nativas para Mac te dan la misma experiencia de dibujo en pantalla: Scribbble, Presentify, ZoomIt, CleanShot X y más.",
+    "h1": "Las mejores alternativas a Epic Pen para Mac",
+    "intro": "Epic Pen es una popular herramienta de anotación de pantalla para Windows, pero los usuarios de Mac se han quedado fuera. Seas profesor, streamer, diseñador o representante de ventas en macOS, no tienes por qué conformarte con una app exclusiva de Windows. Aquí están las mejores alternativas a Epic Pen que funcionan de forma nativa en Mac en 2026.",
+    "criteria": [
+      "Compatibilidad nativa con macOS (Apple Silicon es una ventaja)",
+      "Mismo flujo de trabajo central que Epic Pen: bolígrafo, resaltador, formas",
+      "Precio razonable o una opción gratuita",
+      "Desarrollo activo",
+      "Herramientas adicionales más allá de lo que ofrece Epic Pen"
+    ],
+    "items": [
+      {
+        "tagline": "La experiencia más similar a Epic Pen en macOS",
+        "summary": "Scribbble es el reemplazo más directo de Epic Pen para usuarios de Mac. Dibuja sobre cualquier aplicación — diapositivas, navegadores, pantallas compartidas de Zoom — con un bolígrafo, resaltador y un kit completo de formas (flecha, rectángulo, elipse) además de una herramienta de texto. Además de lo que ofrece Epic Pen, Scribbble añade Spotlight (modo foco), Measure y una herramienta integrada de Snapshot que captura toda la pantalla o una región, además de una barra de herramientas nativa y moderna para Mac que se ancla a la izquierda o a la derecha.",
+        "bestFor": "Cualquiera que deje Epic Pen en busca de un flujo de trabajo familiar con algunas herramientas extra",
+        "pros": [
+          "Enfocado en Mac, nativo en Apple Silicon",
+          "Bolígrafo, resaltador, formas (flecha, rectángulo, elipse) y texto — cubre el conjunto principal de herramientas de Epic Pen",
+          "Añade Spotlight y Measure, herramientas que Epic Pen no tiene",
+          "Captura Snapshot integrada (pantalla completa o región) — no hace falta una segunda app",
+          "Descarga gratuita, licencia de pago único",
+          "Barra de herramientas moderna que se ancla al borde izquierdo o derecho"
+        ],
+        "cons": [
+          "No incluye grabación de pantalla"
+        ],
+        "pricing": "Gratis + licencia de pago único"
+      },
+      {
+        "tagline": "Clásico de la App Store con resaltado del cursor",
+        "summary": "Presentify cubre lo básico de Epic Pen — bolígrafo, formas, texto — con la adición de una potente función de resaltado del cursor. Es una app veterana de la Mac App Store con compra de pago único.",
+        "bestFor": "Presentadores cuyo mayor problema es que la gente pierde de vista el cursor en una pantalla compartida",
+        "pros": [
+          "Resaltado del cursor",
+          "Distribución vía Mac App Store",
+          "Compra de pago único"
+        ],
+        "cons": [
+          "No tiene modo foco Spotlight ni herramienta Measure"
+        ],
+        "pricing": "Pago único (Mac App Store)"
+      },
+      {
+        "tagline": "La utilidad de anotación gratuita de Microsoft, ahora en Mac",
+        "summary": "ZoomIt de Sysinternals de Microsoft ya está disponible en macOS. Es gratuito, incluye una función de zoom integrada que Epic Pen no tiene, y cuenta con sólidas herramientas de bolígrafo y formas. La pega: la interfaz es un puerto fiel de Windows y no se parece en nada a una app de Mac.",
+        "bestFor": "Usuarios de Mac que dejan Epic Pen y no les importa una interfaz estilo Windows a cambio de ser gratis y tener zoom de pantalla",
+        "pros": [
+          "Gratis, de Microsoft",
+          "Zoom de pantalla integrado",
+          "Temporizador de descanso"
+        ],
+        "cons": [
+          "La interfaz es el puerto de una utilidad de Windows",
+          "No tiene modo Spotlight ni herramienta Measure"
+        ],
+        "pricing": "Gratis"
+      },
+      {
+        "tagline": "Mejor si lo que necesitas son capturas + anotación",
+        "summary": "Mucha gente que recurre a Epic Pen en realidad quiere capturar y compartir capturas de pantalla anotadas, no dibujar sobre una pantalla en vivo. Si ese es tu caso en Mac, CleanShot X es lo mejor en la categoría: captura, anota, graba y comparte con enlaces en la nube.",
+        "bestFor": "Usuarios de Mac cuyo flujo es capturar → anotar → compartir",
+        "pros": [
+          "Captura de pantalla de primera categoría",
+          "Subida y compartición en la nube",
+          "Grabación de pantalla con anotaciones",
+          "Fuertes herramientas de anotación para capturas de pantalla"
+        ],
+        "cons": [
+          "Dibujo en pantalla en vivo limitado",
+          "Más caro — hace mucho más que solo anotaciones"
+        ],
+        "pricing": "Pago único o vía Setapp"
+      },
+      {
+        "tagline": "Gratis, ya instalado",
+        "summary": "Si tus necesidades son mínimas, macOS incluye la herramienta Marcado en Vista previa y un zoom de pantalla en Ajustes del Sistema → Accesibilidad. No son un reemplazo real de Epic Pen, pero son gratuitos y no requieren instalación.",
+        "bestFor": "Necesidades ultra ligeras cuando prefieres no instalar nada",
+        "pros": [
+          "Ya instalado",
+          "Gratis"
+        ],
+        "cons": [
+          "Sin dibujo en pantalla en vivo",
+          "No tiene un conjunto de herramientas completo"
+        ],
+        "pricing": "Gratis"
+      }
+    ],
+    "conclusion": "Si vienes de Epic Pen a Mac, Scribbble es la recomendación más sencilla: cubre el mismo flujo básico (pluma, resaltador, formas, texto) con una interfaz nativa de Mac y algunas herramientas extra (Spotlight, Measure) que Epic Pen no tiene. ZoomIt es la alternativa gratuita de Microsoft si puedes convivir con una interfaz al estilo Windows. CleanShot X es la opción adecuada si prefieres flujos de trabajo centrados en capturas de pantalla en lugar de dibujo en vivo.",
+    "faq": [
+      {
+        "q": "¿Existe Epic Pen para Mac?",
+        "a": "No: Epic Pen solo funciona en Windows. Scribbble es el equivalente nativo para Mac más cercano: pluma, resaltador, flecha, rectángulo y texto sobre cualquier app, además de herramientas Spotlight y Measure que Epic Pen no incluye."
+      },
+      {
+        "q": "¿Cuáles son las mejores alternativas a Epic Pen en Mac?",
+        "a": "Las opciones más sólidas en macOS son Scribbble (diseñado para Mac, incluye Spotlight y Measure), Presentify (resalta el cursor), ZoomIt (gratis de Microsoft, incluye zoom) y CleanShot X (si quieres flujos centrados en capturas). Para la mayoría de usuarios de Epic Pen que pasan a Mac, Scribbble ofrece la experiencia más cercana."
+      },
+      {
+        "q": "¿Por qué la gente elige alternativas en lugar de Epic Pen?",
+        "a": "Las razones más comunes que escuchamos: (1) Epic Pen solo funciona en Windows, así que los usuarios de Mac no pueden usarlo, (2) la versión gratuita tiene muchas limitaciones, (3) carece de comodidades modernas como una herramienta de foco/spotlight o una herramienta de medida, y (4) la interfaz se siente anticuada comparada con apps nativas más nuevas para Mac."
+      },
+      {
+        "q": "¿Qué funciones ofrecen las alternativas a Epic Pen que Epic Pen no tiene?",
+        "a": "La mayoría de las alternativas modernas añaden al menos una de estas: una herramienta Spotlight/foco que atenúa todo excepto el área que quieres destacar, una herramienta Measure para comprobar distancias en pantalla, una función de zoom de pantalla (ZoomIt), o un grabador de pantalla integrado (CleanShot X). Scribbble añade específicamente Spotlight, Measure y una herramienta web complementaria gratuita para anotar capturas de pantalla."
+      },
+      {
+        "q": "¿Hay una alternativa gratuita a Epic Pen para Mac?",
+        "a": "Sí: ZoomIt de Microsoft es completamente gratis en Mac. Scribbble también se puede descargar y probar gratis, con una licencia de pago único opcional para desbloquear todo."
+      }
+    ]
+  },
+  "best-presentify-alternatives-mac": {
+    "items": [
+      {
+        "pricing": "Gratis + licencia de pago única",
+        "tagline": "Gratis para probar, con una herramienta Measure que Presentify no tiene",
+        "summary": "Scribbble coincide con el conjunto básico de Presentify: pluma, resaltador, spotlight, formas (flecha, rectángulo, elipse) y añade una herramienta Measure y una herramienta Snapshot integrada que captura la pantalla completa o una región. A diferencia de Presentify, la app completa se puede descargar y probar gratis; solo pagas una licencia de pago único cuando estés listo. También incluye una herramienta web complementaria gratuita para anotar capturas, y la barra de herramientas se acopla al borde izquierdo o derecho.",
+        "bestFor": "Usuarios de Presentify que quieren una prueba gratuita, una herramienta Measure o un anotador de capturas complementario",
+        "pros": [
+          "Descarga gratuita — prueba la app completa antes de comprar",
+          "Incluye una herramienta Measure que Presentify no tiene",
+          "Captura Snapshot integrada (pantalla completa o región)",
+          "Herramienta web complementaria gratuita para anotar capturas",
+          "Barra de herramientas moderna que se acopla a la izquierda o derecha (no solo flotante)",
+          "Pulido de diseño activo"
+        ],
+        "cons": [
+          "Sin función de resaltado de cursor"
+        ]
+      },
+      {
+        "tagline": "Gratis, con zoom de pantalla integrado",
+        "summary": "ZoomIt de Microsoft es totalmente gratuito en Mac e incluye una función de zoom en pantalla que a Presentify le falta. La contraparte es que la interfaz es un puerto fiel de una utilidad de Windows: funcional, pero sin la sensación nativa de Mac.",
+        "bestFor": "Usuarios de Presentify que quieren gratis + zoom de pantalla",
+        "pros": [
+          "Gratis por parte de Microsoft",
+          "Zoom de pantalla integrado",
+          "Temporizador de descanso"
+        ],
+        "cons": [
+          "La interfaz es un puerto de utilidad de Windows"
+        ],
+        "pricing": "Gratis"
+      },
+      {
+        "tagline": "Si también necesitas capturas y grabación",
+        "summary": "CleanShot X es una suite completa de captura de pantalla y grabación. Su fortaleza es el flujo capturar-anotar-compartir, no el dibujo en pantalla en vivo — pero si necesitas ambas cosas, cubre más funciones que Presentify.",
+        "bestFor": "Usuarios de Presentify que también quieren flujos serios de captura y grabación",
+        "pros": [
+          "Captura de pantalla de primera clase",
+          "Subida a la nube y compartición",
+          "Grabación de pantalla con anotaciones"
+        ],
+        "cons": [
+          "El dibujo en pantalla en vivo es limitado"
+        ],
+        "pricing": "Pago único o vía Setapp"
+      },
+      {
+        "tagline": "Marcado colaborativo para equipos",
+        "summary": "Si tú y tu equipo suelen marcar capturas de pantalla juntos, Annotate está pensado para ese flujo de trabajo colaborativo.",
+        "bestFor": "Equipos que necesitan espacios compartidos de marcado",
+        "pros": [
+          "Funciones de compartición y equipo"
+        ],
+        "cons": [
+          "No está diseñado para dibujo en pantalla en vivo"
+        ],
+        "pricing": "Varía"
+      },
+      {
+        "tagline": "Gratis, ya instalado",
+        "summary": "macOS incluye la función básica Marcado en Vista Previa y un zoom de pantalla en Accesibilidad. No es un reemplazo real de Presentify para presentaciones en vivo, pero es gratis y no requiere instalación.",
+        "bestFor": "Necesidades ligeras y ocasionales",
+        "pros": [
+          "Ya viene instalado",
+          "Gratis"
+        ],
+        "cons": [
+          "No permite dibujo en vivo",
+          "No tiene un conjunto de herramientas completo"
+        ],
+        "pricing": "Gratis"
+      }
+    ],
+    "conclusion": "Si buscas alternativas a Presentify porque quieres una prueba gratuita, una herramienta Measure, o un anotador de capturas complementario gratuito, Scribbble es la opción más parecida. ZoomIt es la elección adecuada si buscas específicamente una opción gratuita con zoom de pantalla. CleanShot X cubre más aspectos si necesitas capturas y grabación además de la anotación en vivo.",
+    "faq": [
+      {
+        "q": "¿Cuál es la mejor alternativa a Presentify en Mac?",
+        "a": "Scribbble es la alternativa más parecida y nativa de Mac: mismo conjunto principal de herramientas (lápiz, resaltador, spotlight, formas) más una herramienta Measure, con descarga gratuita y licencia de pago única. ZoomIt es la mejor opción gratuita si puedes convivir con una interfaz al estilo Windows."
+      },
+      {
+        "q": "¿Hay una alternativa gratuita a Presentify?",
+        "a": "Sí. ZoomIt de Microsoft es totalmente gratuito en Mac. Scribbble se puede descargar y probar gratis, con una licencia opcional de pago único para desbloquear todo — así que puedes usar la app completa sin coste mientras decides."
+      },
+      {
+        "q": "¿Presentify tiene una herramienta de medida?",
+        "a": "No: el conjunto de Presentify se centra en lápiz, resaltador, formas, spotlight y resaltado del cursor. Si necesitas medir distancias en pantalla, Scribbble incluye una herramienta Measure integrada."
+      },
+      {
+        "q": "¿Por qué buscar más allá de Presentify?",
+        "a": "Motivos comunes: querer probar la app completa gratis antes de comprar, necesitar una herramienta Measure, querer un anotador de capturas complementario, o simplemente preferir otra interfaz. Presentify es una app sólida — estas alternativas se ajustan a necesidades distintas."
+      }
+    ],
+    "title": "5 mejores alternativas a Presentify para Mac (2026)",
+    "description": "¿Buscas una alternativa a Presentify en Mac? Estas 5 apps de anotación de pantalla ofrecen pruebas gratuitas, más herramientas o distintos precios. Comparativa honesta.",
+    "h1": "Las mejores alternativas a Presentify para Mac",
+    "intro": "Presentify es una app de anotación de pantalla para Mac con historial y compra de pago único. Pero no es la única opción; dependiendo de lo que necesites (prueba gratuita, herramienta Measure, un anotador de capturas complementario o un punto de precio distinto), alguna de estas alternativas puede encajarte mejor.",
+    "criteria": [
+      "Compatibilidad nativa con macOS",
+      "Dibujo en pantalla en vivo — no solo marcado de capturas",
+      "Al menos el conjunto básico de Presentify (pluma, resaltador, spotlight)",
+      "Desarrollo activo"
+    ]
+  },
+  "best-screen-annotation-tools-for-teachers": {
+    "items": [
+      {
+        "tagline": "Aplicación moderna de anotación para Mac, pensada para clases en vivo",
+        "summary": "Scribbble dibuja sobre cualquier app de Mac — diapositivas, PDFs, navegadores y comparticiones de Zoom. El Highlighter es ideal para marcar lecturas; Spotlight atenúa todo excepto lo que estás explicando; las herramientas de pluma, flecha, rectángulo, elipse y texto cubren el dibujo en vivo. La herramienta integrada Snapshot captura toda la pantalla o una región — útil para guardar el trabajo de un alumno o una imagen de la clase. Licencia de pago único, descarga gratuita para probar.",
+        "bestFor": "Docentes que quieren una herramienta nativa moderna para Mac con Highlighter y Spotlight integrados",
+        "pros": [
+          "Highlighter y Spotlight (enfoque por atenuación) integrados",
+          "Captura Snapshot (pantalla o región) para guardar imágenes de la lección y trabajos de estudiantes",
+          "Formas que incluyen flecha, rectángulo y elipse",
+          "Funciona en Zoom, Google Meet y en grabaciones",
+          "Descarga gratuita para probar",
+          "Licencia de pago único"
+        ],
+        "cons": [
+          "Sin modo de pizarra colaborativa"
+        ],
+        "pricing": "Gratis + licencia de pago único"
+      },
+      {
+        "tagline": "Fuerte resaltado del cursor para clases online",
+        "summary": "Si tus estudiantes pierden con frecuencia la pista del cursor en una pantalla compartida, la función de resaltado del cursor de Presentify es la más potente de la categoría. Herramientas estándar de pluma y formas junto a ella.",
+        "bestFor": "Docentes cuyo mayor problema es que los estudiantes pierden de vista el puntero del ratón",
+        "pros": [
+          "Resaltado de cursor de primera clase",
+          "Mac App Store"
+        ],
+        "cons": [
+          "Sin modo Spotlight ni herramienta de medida"
+        ],
+        "pricing": "Pago único"
+      },
+      {
+        "tagline": "Gratis, con zoom de pantalla incorporado",
+        "summary": "ZoomIt's de Microsoft ya está disponible en macOS. Su zoom de pantalla incorporado es realmente útil para mostrar detalles finos en diapositivas o código a una clase remota numerosa — y es gratis.",
+        "bestFor": "Docentes que buscan específicamente zoom de pantalla para mostrar detalles",
+        "pros": [
+          "Gratis",
+          "Zoom integrado y temporizador de descansos"
+        ],
+        "cons": [
+          "La interfaz es un puerto de utilidad de Windows",
+          "Sin Spotlight ni herramienta de medida"
+        ],
+        "pricing": "Gratis"
+      },
+      {
+        "pricing": "Pago único o Setapp",
+        "tagline": "Para docentes centrados en grabar lecciones",
+        "summary": "Si pasas más tiempo grabando lecciones que presentándolas en vivo, CleanShot X es excelente: captura, anota y graba todo en una sola app.",
+        "bestFor": "Docentes que crean bibliotecas de lecciones grabadas",
+        "pros": [
+          "Grabación de pantalla con anotaciones",
+          "Compartición en la nube"
+        ],
+        "cons": [
+          "Dibujo en pantalla en vivo limitado"
+        ]
+      }
+    ],
+    "conclusion": "Para la mayoría de docentes que imparten lecciones en vivo o grabadas desde Mac, Scribbble ofrece el mejor equilibrio entre precio, funciones y facilidad de uso: las herramientas de Resaltador y Spotlight son especialmente útiles para mantener la atención del alumnado. Si tu problema concreto es la visibilidad del cursor, vale la pena probar Presentify. Si grabas lecciones con más frecuencia que las presentas en vivo, CleanShot X podría ajustarse mejor a tus necesidades.",
+    "faq": [
+      {
+        "q": "¿Se verán mis anotaciones cuando grabe con QuickTime o Loom?",
+        "a": "Sí. Todas las apps de esta lista (con la excepción del modo de capturas de CleanShot X) dibujan a nivel del sistema operativo, por lo que cualquier grabador de pantalla captura las anotaciones como parte de la imagen."
+      },
+      {
+        "q": "¿Puedo usar estas apps en clases por Zoom y Google Meet?",
+        "a": "Sí. Dado que las anotaciones se dibujan sobre la pantalla real, todo lo que compartas a través de Zoom, Google Meet, Webex o Teams las incluirá."
+      },
+      {
+        "q": "¿Hay descuentos para docentes?",
+        "a": "Contacta directamente con cada desarrollador: muchos creadores independientes de apps para Mac, incluyendo Scribbble, están dispuestos a ayudar a profesores y centros con licencias por volumen."
+      }
+    ],
+    "title": "Las mejores herramientas de anotación de pantalla para docentes en Mac (2026)",
+    "description": "Seleccionamos las 4 mejores herramientas de anotación de pantalla para docentes en Mac — para clases en vivo por Zoom, grabaciones con Loom y tutorías uno a uno. Opciones gratuitas y de pago comparadas.",
+    "h1": "Las mejores herramientas de anotación de pantalla para docentes en Mac",
+    "intro": "Los docentes que usan Mac para clases en línea, conferencias grabadas o tutorías necesitan una forma de marcar la pantalla en tiempo real: rodear vocabulario, dibujar esquemas, resaltar pasajes de lectura. Una verdadera herramienta de anotación mantiene a lxs estudiantes concentradxs sin salir de tus diapositivas o del navegador. Aquí tienes las mejores opciones en macOS.",
+    "criteria": [
+      "Funciona durante comparticiones de pantalla en Zoom, Google Meet y otras",
+      "Las anotaciones aparecen en grabaciones de pantalla (QuickTime, Loom)",
+      "Fácil de usar durante la lección sin perder el ritmo",
+      "Asequible para el profesorado"
+    ]
+  }
+}

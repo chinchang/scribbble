@@ -78,4 +78,4 @@ P4 — Internal linking + structured data
 - [x] SEO: self-referencing canonicals, hreflang alternates (7 locales + x-default) on every marketing page, per-locale sitemap entries with alternates, `inLanguage` in JSON-LD, no Accept-Language redirects
 - [x] `scripts/translate.ts` (`pnpm translate`) — GPT-powered, lockfile-diffed (only new/changed strings hit the API), validates placeholders/tags, writes checked-in `messages/{locale}.json` + `lib/i18n/data/{locale}/*.json` overlays
 - [x] Footer language switcher on localized pages
-- [ ] Run `OPENAI_API_KEY=... pnpm translate` to generate the actual translations and commit the output (script is tested end-to-end against a stub; real run needs the API key)
+- [x] Run `pnpm translate` to generate the actual translations and commit the output (all 7 locales, 808 strings each, gpt-5-mini)

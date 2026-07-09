@@ -1,0 +1,312 @@
+{
+  "meta": {
+    "titleDefault": "Scribbble — Mac 屏幕标注应用 · 在屏幕上绘制",
+    "titleTemplate": "%s | Scribbble",
+    "description": "Scribbble 是一款出色的 Mac 应用，允许你在屏幕上直接涂写、绘画、突出标记和添加注释。非常适合教师、主播、YouTuber、设计师和销售演示。免费下载，一次性授权。",
+    "ogTitle": "Scribbble — Mac 屏幕标注应用",
+    "ogImageAlt": "Scribbble — Mac 屏幕标注应用"
+  },
+  "header": {
+    "cta": "获取 Scribbble",
+    "buyLicense": "购买授权"
+  },
+  "footer": {
+    "tools": "工具",
+    "screenshotAnnotate": "截图标注",
+    "learn": "了解",
+    "blog": "博客",
+    "screenAnnotationGuide": "屏幕标注指南",
+    "for": "适用人群",
+    "guides": "指南",
+    "compare": "比较",
+    "scribbbleVs": "Scribbble 与 {competitor}",
+    "company": "公司",
+    "buyLicense": "购买授权",
+    "support": "支持",
+    "language": "语言",
+    "copyright": "© 2025 Kushagra Gour。自 2025 年起为全球用户提供 Scribbble 服务。"
+  },
+  "home": {
+    "badge": "为 Mac 打造 · 一次性付费",
+    "heroTitle": "<gradient>在</gradient> Mac 屏幕上对<underline>任何内容</underline>进行绘制",
+    "heroSubtitle": "按下热键，即可在任意应用上绘画；再按一次即可清除。就是这么简单。<strong>无窗口</strong>、无需设置、无月费。",
+    "tryFree": "免费试用 Scribbble",
+    "buyLicense": "购买授权",
+    "chipZeroSetup": "零设置",
+    "chipPayOnce": "一次购买，永久拥有",
+    "chipAnyApp": "适用于任意应用",
+    "demoTitle": "观看一个 <gradient>60 秒</gradient> 速览",
+    "demoSubtitle": "所有工具、所有快捷键，一分钟速览。",
+    "seoTitle": "用于现场演示的 Mac <gradient>屏幕标注</gradient> 应用",
+    "seoSubtitle": "Scribbble 是一款 Mac 屏幕标注工具，可在任何应用上绘制——幻灯片、浏览器、Figma、Zoom 共享、代码编辑器等。它以专注的热键驱动工作流为设计理念，专为 macOS 打造。",
+    "cards": [
+      {
+        "title": "真正为 Mac 打造的屏幕标注工具",
+        "body": "大多数标注应用是从 Windows 移植过来的。Scribbble 从 Mac 出发进行设计：原生 Apple Silicon 性能、可浮动或停靠在左右侧的现代工具栏，以及符合 macOS 风格的键盘快捷键。它之所以有 Mac 应用的感觉，是因为它本来就是为 Mac 打造的。"
+      },
+      {
+        "title": "可在你已使用的任何应用中工作",
+        "body": "由于 Scribbble 在操作系统层绘制，任何 Zoom、Google Meet、OBS、Loom 或 QuickTime 捕获的内容都会包含你的标注。无需插件、无需浏览器源、无需额外场景设置。"
+      },
+      {
+        "title": "不仅仅是画笔",
+        "body": "提供画笔、高亮、箭头、矩形、椭圆和文本，以及 Spotlight（聚焦遮罩）、测量工具和内置快照工具，可在不离开应用的情况下捕获全屏或区域。"
+      },
+      {
+        "title": "免费试用，一次性授权",
+        "body": "下载并免费使用 Scribbble。准备好后，一次性授权即可解锁全部功能——无订阅、无需登录、无促销弹窗。"
+      }
+    ],
+    "linksWorkflowsTitle": "为各种 Mac 工作流打造",
+    "linkPersona": "面向 {audience} 的 Mac 屏幕标注应用",
+    "linksCompareTitle": "将 Scribbble 与其它 Mac 标注工具比较",
+    "linkVs": "Scribbble vs {competitor}",
+    "linkZoomitVsEpicPen": "ZoomIt vs Epic Pen",
+    "linksGuidesTitle": "Mac 屏幕标注指南",
+    "linkGuide": "屏幕标注完整指南",
+    "downloadTitle": "准备好<gradient>scribble</gradient>了吗？",
+    "downloadSubtitle": "一次性付费。适用于所有运行 macOS 11 或更高版本的 Mac。终身免费更新。",
+    "chipMacos": "macOS 11.0+ (Intel/Silicon)",
+    "chipNoSignup": "无需注册",
+    "chipRefund": "14 天退款保证",
+    "jsonLd": {
+      "description": "Scribbble 是一款 Mac 应用，能让你直接在屏幕上绘制、突出显示和做标注——适合教师、主播、YouTuber、设计师和销售演示使用。",
+      "featureList": [
+        "自由手绘笔工具",
+        "荧光笔",
+        "箭头工具",
+        "矩形形状",
+        "椭圆形状",
+        "文字标注",
+        "聚光灯（焦点暗化）",
+        "测量工具",
+        "快照捕获 — 全屏或选定区域",
+        "工具栏可停靠于左侧或右侧边缘",
+        "原生支持 Apple Silicon",
+        "配套免费 Screenshot Annotate 网页工具"
+      ],
+      "offerDescription": "免费下载。一次性授权解锁全部功能。"
+    }
+  },
+  "common": {
+    "home": "首页",
+    "faq": "常见问题",
+    "downloadFree": "免费下载",
+    "buyLicense": "购买授权",
+    "downloadScribbble": "下载 Scribbble"
+  },
+  "zoomitVsEpicPen": {
+    "title": "ZoomIt vs Epic Pen — 2026 年哪款更好？",
+    "description": "ZoomIt 和 Epic Pen 是两款最受欢迎的屏幕标注工具。诚实的逐项对比：功能、价格、平台——以及在 Mac 上的最佳替代方案。",
+    "badge": "诚实的实测对比",
+    "h1": "ZoomIt vs Epic Pen",
+    "subtitle": "两款最受欢迎的屏幕标注工具并排对比。功能、价格、平台——以及如果你使用 Mac 应该如何选择。",
+    "tldrTitle": "简短结论",
+    "tldr": [
+      {
+        "lead": "选择 ZoomIt",
+        "body": "如果你想要一款免费的、以快捷键为主的工具，带内置屏幕缩放和计时器——并且如果你使用的是 Mac（Epic Pen 无法在 Mac 上运行）。"
+      },
+      {
+        "lead": "选择 Epic Pen",
+        "body": "如果你在 Windows 上，偏好更适合演示的友好界面，并且不介意为 Pro 套餐（形状、文字）付费。"
+      },
+      {
+        "lead": "选择 Scribbble",
+        "body": "如果你在 Mac 上，想要一款现代、原生 macOS 应用，具备 Epic Pen 的精致感并比两者提供更丰富的工具集（Spotlight、Measure）。"
+      }
+    ],
+    "whatIsZoomitTitle": "什么是 ZoomIt？",
+    "whatIsZoomitBody": "ZoomIt 是来自 Microsoft Sysinternals 的免费屏幕标注、缩放和休息计时工具。它起源于 Windows，之后微软发布了 macOS 版本。其优势在于零摩擦的快捷键和集成的缩放功能——深受系统管理员、演示者和培训师欢迎，用于展示屏幕上的细节。",
+    "whatIsEpicPenTitle": "什么是 Epic Pen？",
+    "whatIsEpicPenBody": "Epic Pen 是一款面向演示和教学的 Windows 屏幕标注工具。它允许你在任意应用上绘制、突出显示，并且（在 Pro 套餐）添加形状和文本。相较于 ZoomIt 它有更友好的界面，但仅限 Windows —— 没有原生 Mac 版本。",
+    "tableTitle": "并列对比",
+    "feature": "功能",
+    "table": [
+      {
+        "feature": "价格",
+        "zoomit": "免费",
+        "epicPen": "免费 + Pro 套餐"
+      },
+      {
+        "feature": "开发者",
+        "zoomit": "Microsoft Sysinternals",
+        "epicPen": "Epic Pen"
+      },
+      {
+        "feature": "Windows",
+        "zoomit": "是（原生）",
+        "epicPen": "是（原生）"
+      },
+      {
+        "feature": "macOS",
+        "zoomit": "是（近期移植）",
+        "epicPen": "No"
+      },
+      {
+        "feature": "Linux",
+        "zoomit": "No",
+        "epicPen": "No"
+      },
+      {
+        "feature": "画笔工具",
+        "zoomit": "Yes",
+        "epicPen": "Yes"
+      },
+      {
+        "feature": "荧光笔",
+        "zoomit": "有限支持",
+        "epicPen": "Yes"
+      },
+      {
+        "feature": "形状（箭头 / 矩形）",
+        "zoomit": "Yes",
+        "epicPen": "是（Pro）"
+      },
+      {
+        "feature": "文本工具",
+        "zoomit": "是（输入模式）",
+        "epicPen": "是（Pro）"
+      },
+      {
+        "feature": "屏幕缩放",
+        "zoomit": "Yes",
+        "epicPen": "No"
+      },
+      {
+        "feature": "休息计时器",
+        "zoomit": "Yes",
+        "epicPen": "No"
+      },
+      {
+        "feature": "白板模式",
+        "zoomit": "Yes",
+        "epicPen": "No"
+      },
+      {
+        "feature": "现代原生 Mac UI",
+        "zoomit": "否（Windows 移植）",
+        "epicPen": "—"
+      }
+    ],
+    "chooseZoomitTitle": "如果符合以下情况，选择 ZoomIt…",
+    "chooseZoomit": [
+      "你想要一款完全免费的工具，没有 Pro 套餐",
+      "你需要内置的屏幕缩放来展示细节",
+      "你在 macOS 上 — Epic Pen 无法在其上运行",
+      "你喜欢以快捷键为主、界面极简的工具",
+      "你还想要一个用于培训环节的休息计时器"
+    ],
+    "chooseEpicPenTitle": "如果…请选择 Epic Pen",
+    "chooseEpicPen": [
+      "你使用的是 Windows",
+      "你更喜欢面向演示的、更友好的界面，而不是一个系统管理员工具",
+      "你愿意为解锁形状和文本功能支付 Pro 版费用",
+      "你不需要屏幕缩放或休息计时器功能"
+    ],
+    "macTitle": "在 Mac 上？这个选项更合适。",
+    "macBody": "Epic Pen 完全无法在 macOS 上运行，而 ZoomIt's Mac 移植版仍然有明显的 Windows 工具风格。如果你在 Mac 上并且想要真正像 Mac 应用的体验，Scribbble 是专门为 macOS 打造的——配有现代可拖动工具栏、Apple Silicon 原生性能，以及比 ZoomIt 或 Epic Pen 更丰富的工具集（Spotlight、Measure）。",
+    "scribbbleFitsTitle": "Scribbble 的定位",
+    "scribbbleFits": [
+      "具备与 Epic Pen 相同的核心工具——画笔、高亮、箭头、矩形、文本——且没有 Pro 付费门槛",
+      "增加了 Spotlight（聚焦暗化）和 Measure 工具，这是 ZoomIt 与 Epic Pen 都没有的功能",
+      "原生 Mac 界面并支持 Apple Silicon",
+      "免费下载试用，一次性授权解锁全部功能"
+    ],
+    "tryFree": "免费试用 Scribbble",
+    "seeAlternatives": "查看所有适用于 Mac 的 Epic Pen 替代品",
+    "relatedComparisons": "相关对比",
+    "guides": "指南",
+    "forYourRole": "为你的角色推荐 Scribbble",
+    "scribbbleVs": "Scribbble vs {competitor}",
+    "scribbbleFor": "Scribbble 面向 {audience}",
+    "faq": [
+      {
+        "q": "哪个更好，ZoomIt 还是 Epic Pen？",
+        "a": "这取决于你的平台和需求。ZoomIt 免费，可在 Windows 和 macOS 上运行，并且包含 Epic Pen 所没有的屏幕缩放和休息计时器。Epic Pen 拥有更精致的注释界面，并通过 Pro 版添加形状和文本，但它仅限 Windows。如果你使用的是 Mac，Epic Pen 根本无法运行，ZoomIt 在两者中是唯一可运行的（注：有 macOS 移植版）。"
+      },
+      {
+        "q": "为什么有人会选择 ZoomIt 而不是 Epic Pen？",
+        "a": "主要有三点原因： (1) ZoomIt 完全免费且没有 Pro 分级，而 Epic Pen 把形状和文本锁在付费升级后面。 (2) ZoomIt 提供真正的屏幕缩放功能，适合展示细节，而 Epic Pen 没有。 (3) ZoomIt 现在可以在 macOS 上运行——而 Epic Pen 不能。评测者也指出，ZoomIt 的零摩擦热键体验比 Epic Pen 的工具栏感觉更快捷。"
+      },
+      {
+        "q": "Epic Pen 与 ZoomIt 相比如何？",
+        "a": "Epic Pen 更注重演示用途，拥有更友好、现代的注释界面。ZoomIt 则是一个 Sysinternals 实用工具——界面极简、以热键为主，并在此基础上加入了额外功能（缩放、休息计时器、白板模式）。Epic Pen 的免费版仅限画笔和高亮；而 ZoomIt 的完整功能集是免费的。"
+      },
+      {
+        "q": "有没有适用于 Mac 的替代方案，既不是 ZoomIt 也不是 Epic Pen？",
+        "a": "有。Scribbble 是一款以 Mac 为先的屏幕注释应用，结合了两者的优点——拥有类似 Epic Pen 的现代精致界面，也具备像 ZoomIt 那样以热键为核心的高效工作流。它包含画笔、高亮、箭头、矩形、文本、Spotlight（聚焦暗化）和 Measure 工具，可免费下载试用，且通过一次性许可解锁全部功能。"
+      },
+      {
+        "q": "替代品提供了 Epic Pen 所没有的哪些功能？",
+        "a": "大多数现代替代品至少添加了以下某项功能：Spotlight / 聚焦暗化工具、用于屏幕距离测量的 Measure 工具、屏幕缩放（ZoomIt）或内置屏幕录制（CleanShot X）。Scribbble 特别增加了 Spotlight、Measure 以及一个配套的免费 Screenshot Annotate 网页工具。ZoomIt 则增加了缩放、休息计时器和白板模式。"
+      },
+      {
+        "q": "评测者推荐用哪些屏幕注释工具来替代 Epic Pen？",
+        "a": "在 Windows 上，ZoomIt 是最被推荐的免费替代品。在 Mac 上（Epic Pen 无法运行），最受推荐的替代品包括 Scribbble（现代 Mac 优先）、Presentify（鼠标光标高亮）、ZoomIt（免费、Windows 风格界面）和 CleanShot X（截屏 + 注释）。"
+      },
+      {
+        "q": "ZoomIt 使用安全吗？",
+        "a": "安全的——ZoomIt 由 Microsoft 作为 Sysinternals 套件的一部分发布，从 Microsoft 的网站直接分发，在企业环境中被广泛使用。"
+      },
+      {
+        "q": "Epic Pen 能在 Mac 上运行吗？",
+        "a": "不能。Epic Pen 仅支持 Windows，没有原生 Mac 构建。如果你使用 macOS，可以考虑 Scribbble（以 Mac 为先）、ZoomIt（免费的 Microsoft 移植版）或 Presentify。"
+      }
+    ]
+  },
+  "bestPage": {
+    "breadcrumbGuides": "指南",
+    "badge": "诚实、实操的汇总",
+    "howWePicked": "我们的筛选方式",
+    "ourPick": "我们的首选",
+    "bestFor": "最佳适用人群",
+    "pros": "优点",
+    "cons": "缺点",
+    "pricing": "价格：",
+    "scribbbleVsItem": "Scribbble 与 {name} 对比",
+    "bottomLine": "结论",
+    "ctaTitle": "试试我们的首选：<gradient>Scribbble</gradient>",
+    "ctaSubtitle": "免费下载。一次性授权。本地 macOS 应用。",
+    "otherGuides": "其他指南",
+    "compareTitle": "比较 Scribbble",
+    "scribbbleVs": "Scribbble vs {competitor}",
+    "forYourRole": "为你的角色推荐的 Scribbble",
+    "scribbbleFor": "面向 {audience} 的 Scribbble"
+  },
+  "vsPage": {
+    "breadcrumbVs": "对比",
+    "badge": "公正比较",
+    "tryFree": "试用 Scribbble 免费版",
+    "whatIs": "什么是 {competitor}？",
+    "tableTitle": "并排对比",
+    "feature": "功能",
+    "pricing": "定价",
+    "whereScribbbleWins": "Scribbble 的优势",
+    "whereCompetitorWins": "{competitor} 的优势",
+    "chooseScribbble": "如果……请选择 Scribbble",
+    "chooseCompetitor": "如果……请选择 {competitor}",
+    "ctaTitle": "免费试用 <gradient>Scribbble</gradient>",
+    "ctaSubtitle": "原生 macOS。一次性授权。无订阅。",
+    "otherComparisons": "其他对比",
+    "scribbbleVs": "Scribbble vs {competitor}",
+    "zoomitVsEpicPen": "ZoomIt vs Epic Pen",
+    "forYourRole": "为你的角色推荐的 Scribbble",
+    "scribbbleFor": "面向 {audience} 的 Scribbble",
+    "guides": "指南"
+  },
+  "personaPage": {
+    "breadcrumbFor": "面向",
+    "badge": "面向 {audience} 的 Scribbble",
+    "whyTitle": "为什么 {audience} 选择 <gradient>Scribbble</gradient>",
+    "howTitle": "{audience} 如何使用",
+    "toolsTitle": "最重要的工具",
+    "ctaTitle": "试用 Scribbble <gradient>免费</gradient>",
+    "ctaSubtitle": "为 {audience} 打造。适用于 macOS 11+。",
+    "otherRolesTitle": "适用于其他角色的 Scribbble",
+    "scribbbleFor": "面向 {audience} 的 Scribbble",
+    "compareTitle": "比较 Scribbble",
+    "scribbbleVs": "Scribbble vs {competitor}",
+    "guidesTitle": "指南"
+  }
+}
