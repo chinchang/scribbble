@@ -46,7 +46,7 @@ const LANGUAGE_NAMES: Record<string, string> = {
   fr: "French",
 };
 
-const MODEL = process.env.OPENAI_MODEL ?? "gpt-4o-mini";
+const MODEL = process.env.OPENAI_MODEL ?? "gpt-5-mini";
 const API_URL =
   process.env.OPENAI_BASE_URL ?? "https://api.openai.com/v1/chat/completions";
 const CHUNK_MAX_ITEMS = 40;
@@ -233,6 +233,9 @@ Input is a JSON object mapping ids to English strings. Reply with a JSON object:
     },
     body: JSON.stringify({
       model: MODEL,
+      // Reasoning models bill thinking tokens as output; translation needs
+      // none. Non-reasoning models (gpt-4*) reject this param.
+      ...(/^(gpt-5|o\d)/.test(MODEL) ? { reasoning_effort: "minimal" } : {}),
       response_format: { type: "json_object" },
       messages: [
         { role: "system", content: system },
