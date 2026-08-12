@@ -12,7 +12,7 @@
   },
   "footer": {
     "tools": "Tools",
-    "screenshotAnnotate": "Screenshot Annotate",
+    "screenshotAnnotate": "Mac Screenshot Annotation Tool",
     "learn": "Learn",
     "blog": "Blog",
     "screenAnnotationGuide": "Screen annotation guide",
@@ -214,6 +214,9 @@
     "pricing": "Pricing:",
     "scribbbleVsItem": "Scribbble vs {name}",
     "bottomLine": "Bottom line",
+    "stillImagesTitle": "Annotating screenshots instead of your live screen?",
+    "stillImagesBody": "Every app on this list draws on your live Mac screen. If what you actually need is to mark up a screenshot you've already taken, that's a different job — use our free Mac screenshot annotation tool. Paste an image, add arrows, text, numbered steps or a blur to redact sensitive details, then copy the result straight back to your clipboard. It runs in the browser, so there's nothing to install and your image never leaves your device.",
+    "stillImagesCta": "Open the free Mac screenshot annotation tool",
     "ctaTitle": "Try our top pick: <gradient>Scribbble</gradient>",
     "ctaSubtitle": "Free download. One-time license. Native macOS.",
     "otherGuides": "Other guides",

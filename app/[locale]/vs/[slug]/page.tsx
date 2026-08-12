@@ -189,6 +189,31 @@ export default async function ComparisonPage({
         </div>
       </section>
 
+      {/* Direct answers to what people actually searched for */}
+      {c.answerSections && c.answerSections.length > 0 && (
+        <section className="px-4 pb-4">
+          <div className="container mx-auto max-w-3xl space-y-12">
+            {c.answerSections.map((s) => (
+              <div key={s.heading}>
+                <h2 className="text-3xl md:text-4xl font-black mb-5">
+                  {s.heading}
+                </h2>
+                <div className="space-y-4">
+                  {s.body.map((p) => (
+                    <p
+                      key={p}
+                      className="text-lg text-muted-foreground leading-relaxed"
+                    >
+                      {p}
+                    </p>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
       {/* About competitor */}
       <section className="py-16 px-4 bg-gradient-to-br from-card to-background">
         <div className="container mx-auto max-w-4xl">

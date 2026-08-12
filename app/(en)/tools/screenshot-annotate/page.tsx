@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import ScreenshotAnnotateEditor from "./editor";
 
 const TITLE =
-  "Free Screenshot Annotator for Mac — 3D Tilt, Depth of Field, Blur";
+  "Free Mac Screenshot Annotation Tool — Annotate Images Online";
 const DESCRIPTION =
-  "Free Mac screenshot annotation tool with 3D tilt and depth-of-field effects you won't find anywhere else. Add arrows, text, numbered steps, blur sensitive info, then copy to clipboard. No signup, no upload, runs in your browser.";
+  "Paste a screenshot, mark it up, copy it back — free in your browser. Arrows, text, numbered steps, blur to redact, plus 3D tilt and depth of field. No signup, no upload, nothing to install.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -126,12 +126,22 @@ export default function Page() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
-      {/* SEO content — visually hidden but server-rendered for crawlers */}
-      <section className="sr-only">
-        <h1>
-          Free Online Screenshot Annotator for Mac — with 3D Tilt and Depth of
-          Field
-        </h1>
+      <ScreenshotAnnotateEditor />
+
+      {/* Visible, crawlable content below the editor */}
+      <section
+        className="bg-[#f8f8f8] text-[#1a1a1f] px-5 py-20 border-t border-black/10
+          [&_h2]:text-2xl [&_h2]:md:text-3xl [&_h2]:font-bold [&_h2]:mt-14 [&_h2]:mb-4
+          [&_h3]:text-lg [&_h3]:font-bold [&_h3]:mt-8 [&_h3]:mb-2
+          [&_p]:text-[#3a3a44] [&_p]:leading-relaxed [&_p]:mb-4
+          [&_li]:text-[#3a3a44] [&_li]:leading-relaxed [&_li]:mb-2
+          [&_ul]:list-disc [&_ul]:pl-6 [&_ul]:mb-4
+          [&_ol]:list-decimal [&_ol]:pl-6 [&_ol]:mb-4
+          [&_a]:text-[#5b4bff] [&_a]:underline [&_a]:underline-offset-2
+          [&_strong]:text-[#1a1a1f]"
+      >
+        <div className="mx-auto max-w-3xl">
+        <h2 className="!mt-0">What this Mac screenshot annotation tool does</h2>
         <p>
           Scribbble&apos;s free Mac screenshot annotation tool lets you mark
           up images directly in your browser — no install, no signup, no
@@ -141,6 +151,39 @@ export default function Page() {
           screenshot in 3D space with arrow keys, perfect for hero images and
           social posts) and depth of field (a cinematic focus-blur effect that
           highlights one part of the image while softly blurring the rest).
+        </p>
+
+        <h2>How to annotate a screenshot on Mac</h2>
+        <p>
+          You don&apos;t need to install anything. Take your screenshot the
+          usual way — <strong>Cmd+Shift+4</strong> for a region,{" "}
+          <strong>Cmd+Shift+3</strong> for the full screen, or{" "}
+          <strong>Cmd+Ctrl+Shift+4</strong> to send it straight to the
+          clipboard. Then paste it into the editor above with{" "}
+          <strong>Cmd+V</strong>, mark it up, and press <strong>Cmd+C</strong>{" "}
+          to copy the annotated version back out. The whole loop takes a few
+          seconds and never leaves your browser.
+        </p>
+        <p>
+          macOS does include Markup inside Preview and Quick Look, and for
+          drawing a quick circle it&apos;s fine. It runs out of road as soon as
+          you need numbered steps for a walkthrough, a real blur for redacting
+          credentials, or a background to make the shot presentable — which is
+          where a dedicated Mac screenshot annotation tool earns its place.
+        </p>
+
+        <h2>Using it as a Mac image annotation tool</h2>
+        <p>
+          Nothing here is specific to screenshots. Any image works — a photo, a
+          design export, a scanned page, a diagram, a chart from a dashboard.
+          Drag a file in or paste from the clipboard and every tool behaves the
+          same way, which makes it a general-purpose image annotation tool for
+          Mac rather than a screenshot-only utility.
+        </p>
+        <p>
+          Because it runs entirely in the browser, it also works on any
+          machine — macOS, Windows, Linux, ChromeOS, iPad. It&apos;s built and
+          tested Mac-first, but nothing stops it working elsewhere.
         </p>
 
         <h2>What makes this Mac screenshot annotator different</h2>
@@ -168,7 +211,7 @@ export default function Page() {
           </li>
         </ul>
 
-        <h2>How to annotate a Mac screenshot online</h2>
+        <h2>Step by step: marking up a Mac screenshot online</h2>
         <ol>
           <li>
             Take a screenshot on your Mac (Cmd+Shift+4 for a region or
@@ -312,9 +355,8 @@ export default function Page() {
             </a>
           </li>
         </ul>
+        </div>
       </section>
-
-      <ScreenshotAnnotateEditor />
     </>
   );
 }

@@ -12,7 +12,7 @@
   },
   "footer": {
     "tools": "工具",
-    "screenshotAnnotate": "截图标注",
+    "screenshotAnnotate": "Mac 截图标注工具",
     "learn": "了解",
     "blog": "博客",
     "screenAnnotationGuide": "屏幕标注指南",
@@ -272,7 +272,10 @@
     "compareTitle": "比较 Scribbble",
     "scribbbleVs": "Scribbble vs {competitor}",
     "forYourRole": "为你的角色推荐的 Scribbble",
-    "scribbbleFor": "面向 {audience} 的 Scribbble"
+    "scribbbleFor": "面向 {audience} 的 Scribbble",
+    "stillImagesTitle": "要标注截图而不是实时屏幕吗？",
+    "stillImagesBody": "列表中的每款应用都会在你的实时 Mac 屏幕上绘制。如果你真正需要的是对已经截好的图片进行标注，那是另一类任务——请使用我们的免费 Mac 截图标注工具。粘贴图片，添加箭头、文字、编号步骤或模糊来遮盖敏感细节，然后把处理好的结果直接复制回剪贴板。它在浏览器中运行，无需安装，且你的图片始终保存在设备上。",
+    "stillImagesCta": "打开免费 Mac 截图标注工具"
   },
   "vsPage": {
     "breadcrumbVs": "对比",

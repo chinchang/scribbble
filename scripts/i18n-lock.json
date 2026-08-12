@@ -84,13 +84,13 @@
     ]
   },
   "messages.footer.screenshotAnnotate": {
-    "hash": "8f85573c1f76565a29a2d780bebe12c7dc75c53649d1bddb2f3b9e929b55bcfa",
+    "hash": "4c81778fc109f134aaba6fe6b935237560740810426dd06369d018afad63f74a",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
@@ -5484,61 +5484,61 @@
     ]
   },
   "data.comparisons.epic-pen.title": {
-    "hash": "0d52e6f0171aece4a1c233e357472b2d3df86e83d6d465ef55025b8bc7905a59",
+    "hash": "215803819a6a68415f75f316000bc13a58e4e8a4439e63119acf3c4ff915d171",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
   },
   "data.comparisons.epic-pen.description": {
-    "hash": "1af912bd4b40a77917f7ab5cc300bd1391b74b65a94b04b9955a4735498f86a2",
+    "hash": "d34f04339f26dc726fb0454e9dd81563e4f1237a462a3c9388e8b8f478a827ba",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
   },
   "data.comparisons.epic-pen.h1": {
-    "hash": "033788ca35d77f31f1dc53b53b5251b37bb228039c61816565df01b98fa09acb",
+    "hash": "169e8608b1df83a36bcde2ac6f993dec2ae36a9cd438f722d23b7f8b94f5a8e5",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
   },
   "data.comparisons.epic-pen.subheadline": {
-    "hash": "4d0600c7bd627d336b103b61d8b1ffbe43695a1a653dbee7a833335ce9622b76",
+    "hash": "bfb8f76fbf1dcd6ade8c06d5dc737fce876d20aac9495cddd0b3e1b4aa47e63b",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
   },
   "data.comparisons.epic-pen.competitorSummary": {
-    "hash": "1956b99c9ecac709d69c91b58e5aa84d3e9f19c48d594c2f67eb393e3f85a6cc",
+    "hash": "8d776009c4b10af0424e8a4ae3e6ceac5949e71d1e9e91b3595753ca201389b1",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
@@ -5820,13 +5820,13 @@
     ]
   },
   "data.comparisons.epic-pen.faq.0.a": {
-    "hash": "9b7c8fcd00be723314d69b3dba476872c9b9d48cf2d4df2334b950a0c45a3531",
+    "hash": "13ff27268e588f284307ab53d59754868e31ad14d9a097336d3a8f08983ed3b6",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
@@ -10285,6 +10285,450 @@
   },
   "data.comparisons.ink2go.faq.3.a": {
     "hash": "519000752ee1df136ecae313d75aec682e3d0c3c1244d9cadb4c365ead4a6b9c",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.bestPage.stillImagesTitle": {
+    "hash": "d7b7834b4dce0d7ee786e06e9523e4b76cc7858c661cc5729076b6fd22ec5c43",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.bestPage.stillImagesBody": {
+    "hash": "b515d46bd6ab3d353b96a753b243af98682fe7faf885b9c19a685a25c6405546",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.bestPage.stillImagesCta": {
+    "hash": "e28292959fedc8f384c82de1820baf84c2b43e3468a23bbefe38101914f34aef",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.presentify.answerSections.0.heading": {
+    "hash": "420632014160b837c45d99784a05df88872ddd8ff33ce7e7085389a10b804d4d",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.presentify.answerSections.0.body.0": {
+    "hash": "11848fc30981e5f3764aa1b12f7245944b4a7cdaaecb49c9b3d0b093ef2c11af",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.presentify.answerSections.0.body.1": {
+    "hash": "494411173fd2e159f5e34ea02156510adea68ca88f617960805668355f3c2043",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.presentify.answerSections.0.body.2": {
+    "hash": "74da755e1a44af51234bda2b3b1115178eeae782b8e1a5f76bfffb6c32d7c215",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.presentify.answerSections.1.heading": {
+    "hash": "6408f2fa23a1ad8ca1cf0b17dc02d73c16d2b8a9f4733221941726a1f443bd80",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.presentify.answerSections.1.body.0": {
+    "hash": "063175bdade4f9c7cbb58453c5959092d49f6fd002d0433ac2887cba42b5f534",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.presentify.answerSections.1.body.1": {
+    "hash": "9a70eb606b4e089eac5277a40de33aaf4b14ca9e010a3b765f1d3ed35bdb76df",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.presentify.answerSections.2.heading": {
+    "hash": "c3aff41794e456b17b56c50fc26d798b9053f077b427ef3202191f2d23c2a642",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.presentify.answerSections.2.body.0": {
+    "hash": "c9f60f937584dc9636b95c884ff85e97c88548df1b603d32a987ea8cdc61e03b",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.epic-pen.answerSections.0.heading": {
+    "hash": "24e2876e57239f80f2bc89d96fd89ebdf2e65eca874a400a9cc2b62ba7385a9b",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.epic-pen.answerSections.0.body.0": {
+    "hash": "993f997b89b9b3dd217641b877e06307a377cd010723d1daea73a8568075223f",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.epic-pen.answerSections.0.body.1": {
+    "hash": "9796e4ae6268f8c2966c7bbd60e95186e80443ca01594ecb2772c26da7e3510e",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.epic-pen.answerSections.0.body.2": {
+    "hash": "ddfdd149f5edda76772eb9530a40f11a1ac42ee53b42bfa290c6e243d7fc4b68",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.epic-pen.answerSections.1.heading": {
+    "hash": "34ce0817729fab90aa0af025ec4c1c98cf79fc3f32233d89d7f12baee48e1504",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.epic-pen.answerSections.1.body.0": {
+    "hash": "70832f965c7845dc757d5c86e62cd60a7a12ea59be08cefea13267d5d0832f38",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.epic-pen.answerSections.1.body.1": {
+    "hash": "5e70b7d117226ed5c232740699cfdb15dd432f08af116d1e403534f9b4af4588",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.epic-pen.answerSections.1.body.2": {
+    "hash": "10fa02b0d2daeca45ccf2937020f574654c402c82d21fe3c8e7411c48f51188d",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.epic-pen.answerSections.2.heading": {
+    "hash": "173ef505c83c0dd6a0cd1a454789f0f731981abdf402cda9a1cae31fde8e4298",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.epic-pen.answerSections.2.body.0": {
+    "hash": "629158f7a80bcdbe0e0e845380e1db27d10659cd1884963683ee9e05700a34c3",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.epic-pen.answerSections.2.body.1": {
+    "hash": "59199c1c1a02775b2738010f2edf9aced1b9b152ff39abd9e152abe65d3cbcc4",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.epic-pen.answerSections.2.body.2": {
+    "hash": "41835b0986ea395519498801bf6f8d0e2a32d816e40e83bfebf365f64dbdbc32",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.epic-pen.answerSections.3.heading": {
+    "hash": "a9b8c36e085f07e57a8062c1a1736f85c7ce14f021d7d0fc86f528db438ebd66",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.epic-pen.answerSections.3.body.0": {
+    "hash": "2069327881923397c4e9c2a33182e8becf79acef377e8795bbee6f11ffaa3506",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.epic-pen.answerSections.3.body.1": {
+    "hash": "3552e95b2f7b8cb790b068ba91232dddc97684a7dc8b297eae4414a81b79e145",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.epic-pen.faq.1.q": {
+    "hash": "a1997aa36796080dd411bb0ab96ab14840c1ac427709bed667aff6ddaa1482b4",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.epic-pen.faq.1.a": {
+    "hash": "44bebf73721357952a502a3b705adf6fac3b3ade6f774ae1df4c1d26e549eb00",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.epic-pen.faq.2.q": {
+    "hash": "27aa51e10bf58304023303b48f31e44d1e2856da5fcd12006fbe69432a394c90",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.epic-pen.faq.2.a": {
+    "hash": "1e8fd8664ec4bf13ff1d25b8a178dcb986d38c952ff3184cd07040cb05f67aac",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.epic-pen.faq.3.q": {
+    "hash": "a9b8c36e085f07e57a8062c1a1736f85c7ce14f021d7d0fc86f528db438ebd66",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.epic-pen.faq.3.a": {
+    "hash": "0fb38c55eaa29360cfee00c06867e341b4fffbdd787d091522b0bc2b4a04d2a2",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.epic-pen.faq.4.q": {
+    "hash": "68f2b7db162236c029193958056a7dfe72c84aa8767c51bc7b82fa06ce97bf78",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.epic-pen.faq.4.a": {
+    "hash": "f7f5e07c86a4f37172e321bd8f9637dd1d45d5eda7937e93909a9ab3f3b38688",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.epic-pen.faq.5.q": {
+    "hash": "07f632fd7258f047759eeeb573693342d99e43b079239098d013061850d0fe02",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.epic-pen.faq.5.a": {
+    "hash": "b1f991ad15973ebd0c756896cd300ec67e2ae1a4841ee0b7a2726e0f16e54d15",
     "done": [
       "es",
       "zh",

@@ -12,7 +12,7 @@
   },
   "footer": {
     "tools": "Tools",
-    "screenshotAnnotate": "Screenshot Annotate",
+    "screenshotAnnotate": "Mac-schermafbeelding annotatie-tool",
     "learn": "Leer",
     "blog": "Blog",
     "screenAnnotationGuide": "Gids voor schermannotatie",
@@ -272,7 +272,10 @@
     "compareTitle": "Vergelijk Scribbble",
     "scribbbleVs": "Scribbble vs {competitor}",
     "forYourRole": "Scribbble voor jouw rol",
-    "scribbbleFor": "Scribbble voor {audience}"
+    "scribbbleFor": "Scribbble voor {audience}",
+    "stillImagesTitle": "Annoteren van schermafbeeldingen in plaats van je live scherm?",
+    "stillImagesBody": "Elke app op deze lijst tekent op je live Mac-scherm. Als je eigenlijk een schermafbeelding wilt markeren die je al hebt gemaakt, is dat een andere klus — gebruik onze gratis Mac-schermafbeelding annotatie-tool. Plak een afbeelding, voeg pijlen, tekst, genummerde stappen of een blur toe om gevoelige details te anonimiseren, en kopieer het resultaat direct terug naar je klembord. Het draait in de browser, dus je hoeft niets te installeren en je afbeelding verlaat je apparaat nooit.",
+    "stillImagesCta": "Open de gratis Mac-schermafbeelding annotatie-tool"
   },
   "vsPage": {
     "breadcrumbVs": "vs",

@@ -163,6 +163,29 @@
         "q": "Presentifyには蛍光ペンとスポットライトがありますか？",
         "a": "はい。Presentifyは蛍光ペン（カーソルハイライトとは別機能）とスポットライトツール、そしてフローティング／移動可能なツールバーを備えています。Scribbbleも同様の機能に加え、計測ツールを提供します。"
       }
+    ],
+    "answerSections": [
+      {
+        "heading": "Presentify for Mac：概要と比較すべき点",
+        "body": [
+          "PresentifyはmacOS専用の画面注釈アプリです — 画面上に直接描けて、カーソルを強調表示し、注目している領域以外を暗くできます。Mac App Storeや開発元サイトでの買い切り販売で、本当に良くできたアプリです。",
+          "Scribbbleは同じ目的をmacOS上でカバーしており、選ぶ前に知っておきたい違いが3点あります：ダウンロードしてすぐ無料で使えるので支払い前に実際のマシンで全機能を試せること、画面上のピクセル距離を測るMeasureツールを搭載していること、そしてSnapshotツールと静止画像を注釈するための無料のウェブアノテータが付属していることです。",
+          "両者を比較すると、正直に言ってPresentifyのカーソル強調の実装が優れており、Scribbbleはより多くのツールと無料で試せる導線を提供する――という違いになります。下の表で機能ごとの差を示しています。"
+        ]
+      },
+      {
+        "heading": "Presentifyは無料ですか？",
+        "body": [
+          "いいえ。Presentifyは買い切りの有料アプリで、限定的な無料トライアルがあります。恒久的に無料のプランは存在しません。",
+          "Scribbbleは描画、ハイライト、図形、テキスト、Spotlight、Measureを無料でダウンロード・利用でき、任意の買い切りライセンスがあるだけでサブスクリプションはありません — したがって無料のPresentify代替を求めているなら、ここが実務上の違いです。"
+        ]
+      },
+      {
+        "heading": "PresentifyはWindowsで使えますか？",
+        "body": [
+          "いいえ。PresentifyはmacOS専用でWindows版はありません。ScribbbleもMac専用です。もしWindowsで画面注釈が必要なら、ZoomIt（無料、MicrosoftのSysinternals提供）やEpic Penが定番の選択肢です。"
+        ]
+      }
     ]
   },
   "cleanshot-x": {
@@ -240,11 +263,11 @@
     ]
   },
   "epic-pen": {
-    "title": "Epic Pen for Mac? Scribbble Is the Best Mac Alternative (2026)",
-    "description": "Epic PenはWindows専用です。Scribbbleは最も近いMacネイティブの代替で、ペン・蛍光ペン・スポットライト・計測ツールを備えています。無料ダウンロード。比較表あり。",
-    "h1": "Scribbble vs Epic Pen：Macネイティブの選択肢",
-    "subheadline": "Epic Penはよく知られた画面マーキングツールですが、Windows優先の設計です。ScribbbleはmacOS向けに特化して作られています。",
-    "competitorSummary": "Epic Penは主にWindowsユーザー向けに設計された画面注釈ツールです。プレゼンや授業中にどんなアプリ上でも描画やハイライトができます。",
+    "title": "Epic Pen for Mac：存在しません — 代わりに使うもの（2026）",
+    "description": "Epic PenはWindows専用のためMac版はありません。ScribbbleはMacネイティブの同等ツールです — macOS上で任意のアプリに描画、ハイライト、スポットライトを行えます。無料で試せます。",
+    "h1": "Epic Pen for Mac",
+    "subheadline": "Epic PenにMac版はありません — Windows専用アプリで、これまで一度もMac向けには配布されていません。ScribbbleはMacネイティブの同等品で、同じく画面上に直接描くワークフローをmacOS向けに作り直したものです。",
+    "competitorSummary": "Epic PenはTools In MotionのWindows向け画面注釈ツールで、プレゼンや授業中に任意のアプリ上で描画・ハイライトができます。無料プランに加えて有料のProプランがあり、Windowsプレゼンターや教師の間で広く使われていますが、これまで一度もWindows以外には配布されていません。",
     "competitorStrengths": [
       "確立されたWindowsのユーザーベース",
       "無料プランあり",
@@ -298,7 +321,60 @@
     "faq": [
       {
         "q": "Epic PenのMac版はありますか？",
-        "a": "Epic PenはWindows向けに作られています。同じ画面上で描くワークフローで真にMacネイティブな代替をお探しなら、Scribbbleが最も近い選択肢です。"
+        "a": "いいえ。Epic Penはこれまで一度もWindows以外でリリースされたことがなく、macOS版や公式のMac向けダウンロードは存在しません。Scribbbleが最も近いMacネイティブの代替で、同じく任意のアプリ上に描くワークフローを実現します。"
+      },
+      {
+        "q": "どこでEpic Pen for Macをダウンロードできますか？",
+        "a": "公式にはどこにもありません — 開発者はMac向けビルドを公開していないので、“Epic Pen for Mac”を提供するサイトは正規のEpic Penインストーラを配布しているわけではなく、避けるのが賢明です。Macをお使いなら代わりにScribbbleをダウンロードしてください。無料で同じ仕事をネイティブに行えます。"
+      },
+      {
+        "q": "ParallelsやWineを使ってMacでEpic Penを動かせますか？",
+        "a": "実用的ではありません。Epic PenはWindowsデスクトップ全体に透明なオーバーレイを描画する仕組みで、そのオーバーレイは仮想マシンや互換レイヤーのウィンドウ内に閉じ込められてしまいます。つまりMacの画面上で描くのではなく、仮想のWindows画面に描くことになり、本来の目的を果たせません。ネイティブのMacアプリならこの問題はそもそも起きません。"
+      },
+      {
+        "q": "Mac向けの無料のEpic Pen代替はありますか？",
+        "a": "はい。Scribbbleはダウンロードも描画などの基本機能も無料で使えます。描画、ハイライト、図形、テキスト、Spotlight、Measureは無料で利用可能です。任意の一回きりのライセンス購入もあり、サブスクリプションはありません。"
+      },
+      {
+        "q": "Epic PenはMacBookで動作しますか？",
+        "a": "いいえ。MacBook AirかMacBook Pro、Intel搭載かApple Silicon搭載かに関わらず、Epic PenはWindows用アプリなのでmacOS上では動作しません。ScribbbleはmacOS向けに設計されており、Apple Siliconでもネイティブに動作します。"
+      },
+      {
+        "q": "Epic Penのツールバーに相当するMac版は何ですか？",
+        "a": "Scribbbleのツールバーです。画面の左端か右端にドッキングし、フローティングせず、描画中は折りたたまれてコンテンツを塞ぎません。各ツールにはワンキーショートカットが割り当てられています。またSpotlight、Measure、Snapshotといった、Epic Penにないツールも備えています。"
+      }
+    ],
+    "answerSections": [
+      {
+        "heading": "Epic PenはMacで使えますか？",
+        "body": [
+          "いいえ。Epic PenはWindowsでしか動作しません。macOS向けのビルドも、Mac App Storeの掲載も、公式のMac向けダウンロードも存在しません — 開発者がMac用を出したことは一度もありません。もし「Epic Pen for Mac」インストーラを提供するページに行き当たった場合、それは公式の配布ではありません。",
+          "また一般的な回避策でも現実的には動きません。Epic PenはWindowsデスクトップ全体に透明なオーバーレイを描く仕組みで、そうしたウィンドウの重ね合わせの挙動はWine、CrossOver、Parallelsでは壊れてしまいます — アプリが起動してもオーバーレイは仮想マシンのウィンドウ内に表示され、Mac画面の上に重なることがないため、本来の用途を果たせません。",
+          "現実的な解決策は、同じ仕事をするように作られたMacアプリを使うことです。Scribbbleがまさにその役割を果たします。"
+        ]
+      },
+      {
+        "heading": "macOSでEpic Pen風の注釈を得る方法",
+        "body": [
+          "Scribbbleをダウンロードして起動してください。メニューバーに常駐し、ショートカットで呼び出すと画面がキャンバスになり、KeynoteでもブラウザでもXcodeでも、どんなアプリの上でも描画できます。",
+          "操作感はほぼ同じです。ペンやハイライターを選び、色と太さを決めて画面上に描き、終わったら消す。図形やテキストも同様です。WindowsでEpic Penのショートカットに慣れていたなら、Scribbbleも数分で使いこなせるようになります。",
+          "Scribbbleはライブ画面上に描画するため、画面をキャプチャしているアプリは追加設定なしに注釈をそのまま取り込みます — Zoom、Google Meet、Teams、OBS、QuickTime、Loomはいずれも記録可能です。"
+        ]
+      },
+      {
+        "heading": "MacでのEpic Penツールバー相当はどこにある？",
+        "body": [
+          "ScribbbleのツールバーはEpic Penのフローティングツールバーに相当しますが一つ違いがあります：固定のパレットをドラッグする代わりに画面の左または右端にドックし、描画中は自動で収縮して邪魔にならないようにするため、指し示したい対象を隠しません。",
+          "各ツールには単一キーのショートカットが割り当てられているので、ツールバーを狙わなくてもペン→ハイライト→矢印へ切り替えられます。ライブプレゼン中の会話の途中でも便利です。",
+          "さらにEpic Penにない3つのツールを備えています：Spotlight（注目領域以外を暗くする）、Measure（画面上のピクセル距離を読み取る）、Snapshot（別アプリを使わずに画面全体や領域をキャプチャする）です。"
+        ]
+      },
+      {
+        "heading": "Mac向けの無料Epic Pen代替はありますか？",
+        "body": [
+          "Scribbbleはダウンロードも利用も無料です — 描画、ハイライト、図形、テキスト、Spotlight、Measureを料金なしで使えます。開発支援や残りの機能解放のための任意の買い切りライセンスがあり、サブスクリプションや継続的な課金はありません。",
+          "これは、無料プラン＋有料ProプランというEpic PenのWindowsでのモデルと比較して有利な点です。"
+        ]
       }
     ]
   },

@@ -12,7 +12,7 @@
   },
   "footer": {
     "tools": "Outils",
-    "screenshotAnnotate": "Annotation de captures d'écran",
+    "screenshotAnnotate": "Outil d'annotation de captures d'écran pour Mac",
     "learn": "Apprendre",
     "blog": "Blog",
     "screenAnnotationGuide": "Guide d'annotation d'écran",
@@ -272,7 +272,10 @@
     "compareTitle": "Comparez Scribbble",
     "scribbbleVs": "Scribbble vs {competitor}",
     "forYourRole": "Scribbble selon votre rôle",
-    "scribbbleFor": "Scribbble pour {audience}"
+    "scribbbleFor": "Scribbble pour {audience}",
+    "stillImagesTitle": "Vous annotez une capture d'écran plutôt que votre écran en direct ?",
+    "stillImagesBody": "Toutes les applications de cette liste dessinent sur votre écran Mac en direct. Si ce dont vous avez réellement besoin, c'est de marquer une capture d'écran que vous avez déjà prise, c'est un autre usage — utilisez notre outil gratuit d'annotation de captures d'écran pour Mac. Collez une image, ajoutez des flèches, du texte, des étapes numérotées ou un flou pour rediger des informations sensibles, puis copiez le résultat directement dans votre presse-papiers. Il fonctionne dans le navigateur, il n'y a donc rien à installer et votre image ne quitte jamais votre appareil.",
+    "stillImagesCta": "Ouvrir l'outil gratuit d'annotation de captures d'écran pour Mac"
   },
   "vsPage": {
     "breadcrumbVs": "vs",

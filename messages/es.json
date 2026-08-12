@@ -12,7 +12,7 @@
   },
   "footer": {
     "tools": "Herramientas",
-    "screenshotAnnotate": "Anotar capturas",
+    "screenshotAnnotate": "Herramienta de anotación de capturas de pantalla para Mac",
     "learn": "Aprender",
     "blog": "Blog",
     "screenAnnotationGuide": "Guía de anotación de pantalla",
@@ -272,7 +272,10 @@
     "compareTitle": "Compara Scribbble",
     "scribbbleVs": "Scribbble vs {competitor}",
     "forYourRole": "Scribbble para tu rol",
-    "scribbbleFor": "Scribbble para {audience}"
+    "scribbbleFor": "Scribbble para {audience}",
+    "stillImagesTitle": "¿Anotar capturas de pantalla en vez de tu pantalla en vivo?",
+    "stillImagesBody": "Todas las apps de esta lista dibujan sobre la pantalla en vivo de tu Mac. Si lo que necesitas es marcar una captura de pantalla que ya hayas tomado, eso es otra tarea: usa nuestra herramienta gratuita de anotación de capturas para Mac. Pega una imagen, añade flechas, texto, pasos numerados o un desenfoque para ocultar detalles sensibles, y luego copia el resultado de vuelta al portapapeles. Funciona en el navegador, así que no hay nada que instalar y tu imagen nunca abandona tu dispositivo.",
+    "stillImagesCta": "Abrir la herramienta gratuita de anotación de capturas para Mac"
   },
   "vsPage": {
     "breadcrumbVs": "vs",

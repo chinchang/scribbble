@@ -163,6 +163,29 @@
         "q": "Presentify 有荧光笔和聚光功能吗？",
         "a": "有。Presentify 包含荧光笔（与其鼠标高亮功能分开）和聚光工具，以及一个可移动/悬浮的工具栏。Scribbble 提供相同的功能集，外加测量工具。"
       }
+    ],
+    "answerSections": [
+      {
+        "heading": "Presentify for Mac：它是什么，以及还应考虑什么",
+        "body": [
+          "Presentify 是一款仅适用于 macOS 的屏幕标注应用——你可以在屏幕上任意绘制，突出鼠标光标，并将焦点以外的区域变暗。它以一次性购买的方式在 Mac App Store 和官网出售，是一款确实不错的应用。",
+          "Scribbble 在 macOS 上覆盖了相同的功能，但有三点不同值得在选择前了解：你可以免费下载并在本机完整试用无需先付款，它包含一个用于读取屏幕像素距离的测量工具（Measure），并且自带 Snapshot 快照工具以及一个用于静态图片标注的免费网页配套工具。",
+          "如果把两者对比，坦率地说 Presentify 的光标高亮实现更好，而 Scribbble 提供更多工具并有免费试用途径。下面的表格按功能逐项列出了差异。"
+        ]
+      },
+      {
+        "heading": "Presentify 是免费的吗？",
+        "body": [
+          "不是。Presentify 需要一次性付费购买，提供有限的免费试用。没有永久免费的层级。",
+          "Scribbble 可免费下载并可免费使用绘图、高亮、形状、文字、Spotlight 和 Measure，提供可选的一次性授权且无订阅——所以如果你在寻找一个免费的 Presentify 替代品，这就是实际区别所在。"
+        ]
+      },
+      {
+        "heading": "Presentify 有 Windows 版本吗？",
+        "body": [
+          "没有。Presentify 仅支持 macOS，没有 Windows 版本。Scribbble 也同样只支持 Mac。如果你需要在 Windows 上做屏幕标注，ZoomIt（免费的，来自 Microsoft's Sysinternals）和 Epic Pen 是两个已确立的选项。"
+        ]
+      }
     ]
   },
   "cleanshot-x": {
@@ -240,11 +263,11 @@
     ]
   },
   "epic-pen": {
-    "title": "Epic Pen 有 macOS 版吗？Scribbble 是最佳 Mac 替代（2026）",
-    "description": "Epic Pen 仅支持 Windows。Scribbble 是最接近的 Mac 原生替代——包含画笔、荧光笔、聚焦和测量工具。免费下载。并列对比。",
-    "h1": "Scribbble vs Epic Pen：Mac 原生选择",
-    "subheadline": "Epic Pen 是知名的屏幕标注工具，但以 Windows 为主。Scribbble 专为 macOS 打造。",
-    "competitorSummary": "Epic Pen 是一款主要面向 Windows 用户的屏幕标注工具，允许你在演示和教学时在任意应用上绘制和高亮。",
+    "title": "Epic Pen for Mac：没有原生版本 — 该怎么做（2026）",
+    "description": "Epic Pen 仅支持 Windows，因此没有 Mac 可下载版本。Scribbble 是 Mac 原生的等价工具——在 macOS 上绘制、高亮并聚焦显示任意应用。可免费试用。",
+    "h1": "Epic Pen for Mac",
+    "subheadline": "Epic Pen 没有 Mac 版本——它只是 Windows 应用且一直如此。Scribbble 是 Mac 原生的等价品：相同的在屏幕上绘制的工作流，为 macOS 打造。",
+    "competitorSummary": "Epic Pen 是 Tools In Motion 出品的 Windows 屏幕标注工具。它允许你在演示和教学时在任意应用上绘制与高亮，采用免费层加付费 Pro 层的模式。在 Windows 演示者和教师中广为使用——但它从未推出过 Mac 版本。",
     "competitorStrengths": [
       "在 Windows 用户中有成熟的用户基础",
       "提供免费层",
@@ -298,7 +321,60 @@
     "faq": [
       {
         "q": "有适用于 Mac 的 Epic Pen 吗？",
-        "a": "Epic Pen 以 Windows 为主。若要在 macOS 上获得相同屏幕绘制体验的原生替代，Scribbble 是最接近的选择。"
+        "a": "不。Epic Pen 仅有 Windows 版本——没有 macOS 版本，也没有官方的 Mac 下载。Scribbble 是最接近的 Mac 原生等价物，提供相同的在任意应用上绘制的工作流。"
+      },
+      {
+        "q": "我可以从哪儿下载 Epic Pen for Mac？",
+        "a": "官方渠道没有——开发者不发布 Mac 构建，所以任何提供“Epic Pen for Mac”下载的网站都不是分发正版 Epic Pen 安装包，建议避免。如果你在 Mac 上，请改为下载 Scribbble；它是免费的并能本地完成相同工作。"
+      },
+      {
+        "q": "我能在安装了 Parallels 或 Wine 的 Mac 上运行 Epic Pen 吗？",
+        "a": "没有什么用。Epic Pen 的工作原理是在整个 Windows 桌面上绘制一个透明覆盖层，而这个覆盖层会被限制在虚拟机或兼容层自身的窗口内。你绘制的是模拟的 Windows 屏幕，而不是 Mac 屏幕，这就本末倒置了。原生的 Mac 应用则完全避免了这个问题。"
+      },
+      {
+        "q": "有没有可在 Mac 上使用的免费 Epic Pen 替代品？",
+        "a": "有。Scribbble 可免费下载并且绘图、突出标记、形状、文本、Spotlight 和 Measure 功能均可免费使用。也提供一次性可选授权——没有订阅。"
+      },
+      {
+        "q": "Epic Pen 能在 MacBook 上使用吗？",
+        "a": "不能。无论是 MacBook Air、MacBook Pro、Intel 还是 Apple Silicon，都无济于事——Epic Pen 是 Windows 应用，无法在 macOS 上运行。Scribbble 为 macOS 构建，并在 Apple Silicon 上原生运行。"
+      },
+      {
+        "q": "Epic Pen 工具栏在 Mac 上的等价物是什么？",
+        "a": "是 Scribbble 的工具栏。它会停靠在屏幕左侧或右侧边缘，而不是悬浮，绘制时会自动收起以免遮挡内容，并为每个工具提供单键快捷键。它还包含 Epic Pen 没有的 Spotlight、Measure 和 Snapshot 工具。"
+      }
+    ],
+    "answerSections": [
+      {
+        "heading": "Epic Pen 有 Mac 版吗？",
+        "body": [
+          "没有。Epic Pen 只在 Windows 上运行。没有 macOS 构建、没有 Mac App Store 列表，也没有官方的 Mac 下载——开发者从未发布过。若你看到提供“Epic Pen for Mac”安装包的页面，那不是来自 Epic Pen 的官方渠道。",
+          "通常的变通方法在实际使用中也行不通。Epic Pen 在整个 Windows 桌面上绘制一个透明叠加层，而这类窗口层叠行为在 Wine、CrossOver 或 Parallels 下通常会出问题——即便应用能启动，叠加层也会落在虚拟机窗口内部而不是覆盖在 Mac 屏幕上方，这就完全违背了其用途。",
+          "因此现实的答案是使用为该工作专门构建的 Mac 应用。这正是 Scribbble 的定位。"
+        ]
+      },
+      {
+        "heading": "如何在 macOS 上获得类似 Epic Pen 的标注体验",
+        "body": [
+          "下载并启动 Scribbble。它常驻在菜单栏，保持不打扰，按下快捷键即可唤出，此时屏幕会变成可在其上绘图的画布——无论是 Keynote、浏览器、Xcode 还是其它任意应用。",
+          "操作习惯几乎完全相同。选择画笔或荧光笔、挑选颜色和粗细，在屏幕上绘制，完成后清除即可。形状和文字的使用方式也相同。如果你在 Windows 上用 Epic Pen 的快捷键已有肌肉记忆，那么在 Scribbble 中几分钟就能上手。",
+          "因为 Scribbble 在实时屏幕上绘制而不是在文档中，所以任何正在捕获你显示内容的工具都会自动记录这些标注——Zoom、Google Meet、Teams、OBS、QuickTime 和 Loom 都无需额外设置就能录到它们。"
+        ]
+      },
+      {
+        "heading": "在 Mac 上哪儿找 Epic Pen 那样的工具栏？",
+        "body": [
+          "Scribbble 的工具栏是 Epic Pen 悬浮工具栏的直接对应物，但有一点不同：它不是一个可随意拖动的固定调色板，而是停靠在屏幕左侧或右侧的，绘制时会折叠隐藏，这样就不会遮挡你要指示的内容。",
+          "每个工具都有单键快捷键，所以你可以在不去点工具栏的情况下在画笔、荧光笔和箭头间切换——在实时演示中尤其有用。",
+          "它还包含 Epic Pen 没有的三个工具：Spotlight（将焦点区域以外的部分变暗）、Measure（读取屏幕像素距离）和 Snapshot（在不依赖其他应用的情况下捕捉整个屏幕或某个区域）。"
+        ]
+      },
+      {
+        "heading": "有没有免费的 Epic Pen 替代品可在 Mac 上使用？",
+        "body": [
+          "Scribbble 可免费下载并可免费使用——你可以绘图、高亮、添加形状与文字，并使用 Spotlight 和 Measure 无需付费。若你愿意支持开发并解锁应用的其余功能，可以选择一次性付费授权；没有订阅也没有经常性费用。",
+          "这与 Epic Pen 在 Windows 上的模式比较有优势，后者是提供免费层并有收费的 Pro 版，形状和文字等功能属于 Pro 版。"
+        ]
       }
     ]
   },

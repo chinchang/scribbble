@@ -67,6 +67,39 @@ P4 — Internal linking + structured data
 - [x] Add a "Related pages" footer block cross-linking `/for/*`, `/vs/*`, and `/best/*` pages (site footer + per-page cross-link sections; verified live 2026-08-05)
 - [x] Add breadcrumbs with `BreadcrumbList` JSON-LD on `/for/*`, `/vs/*`, `/best/*` (verified live 2026-08-05 on all marketing templates)
 
+### SEO improvements (position 4–20 pass, GSC 2026-08-13)
+
+Method: GSC → filter position 4–20, sort by impressions, match each query cluster to the page
+already ranking, then answer the exact query on that page. Baseline for the 4–20 band:
+564 queries / 20,125 impressions / 415 clicks (2.1% CTR).
+
+- [x] Rebuild `/vs/epic-pen` around search intent — it had 13,654 impr at 1.5% CTR / pos 6.7, and its
+      queries are availability + download intent (`epic pen for mac` 1,806 impr, `epic pen mac` 602,
+      `epic pen download for mac` 145, `epic pen toolbar` 101), not comparison intent. Added an
+      `answerSections` block rendered above the comparison with H2s matching the literal queries
+      ("Is Epic Pen available for Mac?", "How to get Epic Pen-style annotation on macOS", "Where's the
+      Epic Pen toolbar equivalent on a Mac?", "Is there a free Epic Pen alternative for Mac?"), new
+      title/H1/subheadline leading with the answer, and 6 FAQ entries (from 1) feeding `FAQPage` JSON-LD
+- [x] Add `answerSections` to `/vs/presentify` for the modifier tail (`presentify mac` 563 impr,
+      `presentify for mac` 121, `presentify app` 87, `presentify free` 32) — the page's other 3,206
+      impressions are the bare navigational query, where CTR upside is capped
+- [x] Fix screenshot-annotation cannibalization: `/tools/screenshot-annotate`'s entire SEO body was
+      `sr-only`, so `/best/best-screen-annotation-apps-mac` was ranking for `image annotation tool mac`
+      (88 impr, pos 15.2), `annotate screenshot mac` (56, 9.4), `screenshot annotation tool mac` (48, 8.6)
+      and friends. Made the content visible below the editor, added "How to annotate a screenshot on Mac"
+      and "Using it as a Mac image annotation tool" sections, retitled to lead with the target keyword,
+      single keyword-bearing H1
+- [x] Point internal links at the tool with keyword anchors — new cross-link block on all `/best/*` pages
+      ("Open the free Mac screenshot annotation tool") and footer anchor changed from "Screenshot Annotate"
+      to "Mac Screenshot Annotation Tool"
+- [ ] Re-submit `/vs/epic-pen`, `/vs/presentify`, `/tools/screenshot-annotate` and
+      `/best/best-screen-annotation-apps-mac` in GSC after deploy, then re-check the 4–20 band in ~4 weeks
+- [ ] Investigate `/for/*` brand-query noise — 2,780 of `/for/teachers`' 4,204 impressions are the query
+      "scribbble" at pos 6.2 / 0.2% CTR, and real persona intent is only ~40 impressions. The P1 title
+      rewrites could not have moved anything. Consider consolidating or deindexing thin `/for/*` pages
+- [ ] Pre-existing: one `INVALID_MESSAGE` next-intl error during static generation (present on a clean
+      tree too, before this pass) — unrelated to these changes but worth tracking down
+
 ### Long-form content / blog
 
 - [x] Set up MDX blog at `/blog` and `/blog/[slug]` (file-based posts in `content/blog/*.mdx`, frontmatter, JSON-LD, sitemap, footer link)

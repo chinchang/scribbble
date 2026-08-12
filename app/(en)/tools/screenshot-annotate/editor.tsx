@@ -2048,7 +2048,7 @@ export default function ScreenshotAnnotateEditor() {
         /* ── Upload Screen ── */
         <div className="flex flex-col items-center justify-center min-h-screen px-4">
           <h1 className="text-2xl font-semibold tracking-tight text-neutral-800 mb-1">
-            Screenshot Annotator
+            Free Mac Screenshot Annotation Tool
           </h1>
           <p className="text-sm text-neutral-400 mb-10">
             by <a href="/" className="gradient-text hover:underline">Scribbble</a>

@@ -163,6 +163,29 @@
         "q": "¿Presentify tiene marcador y spotlight?",
         "a": "Sí. Presentify incluye un marcador (independiente de su función de realce de cursor) y una herramienta spotlight, además de una barra de herramientas flotante/móvil. Scribbble ofrece el mismo conjunto, más la herramienta de Medida."
       }
+    ],
+    "answerSections": [
+      {
+        "heading": "Presentify para Mac: qué es y qué más considerar",
+        "body": [
+          "Presentify es una app de anotación de pantalla exclusiva para macOS: dibujas encima de lo que haya en pantalla, resalta el cursor y atenúa todo excepto el área en la que te concentras. Se vende como compra única a través del Mac App Store y desde su propio sitio, y es una app realmente buena.",
+          "Scribbble cubre el mismo terreno en macOS y difiere en tres puntos que conviene conocer antes de decidir: se puede descargar y usar gratis para que pruebes la app completa en tu equipo antes de pagar, incluye una herramienta Medir para leer distancias en píxeles en pantalla, y trae una herramienta Instantánea además de un anotador web gratuito y complementario para marcar imágenes estáticas.",
+          "Si comparas ambas, el resumen honesto es que el resaltado de cursor de Presentify está mejor implementado y Scribbble te ofrece más herramientas y una vía de prueba gratuita. La tabla abajo muestra las diferencias por función."
+        ]
+      },
+      {
+        "heading": "¿Presentify es gratis?",
+        "body": [
+          "No. Presentify es de pago mediante compra única, con una prueba gratuita limitada. No hay una opción permanentemente gratuita.",
+          "Scribbble se descarga y usa gratis para dibujar, resaltar, añadir formas, texto, Spotlight y Medir, con una licencia opcional de pago único y sin suscripciones — así que si buscas una alternativa gratuita a Presentify, esa es la diferencia práctica."
+        ]
+      },
+      {
+        "heading": "¿Presentify está disponible para Windows?",
+        "body": [
+          "No. Presentify es exclusivo de macOS y no tiene versión para Windows. Scribbble también es solo para Mac. Si necesitas anotación de pantalla en Windows, ZoomIt (gratis, de Sysinternals de Microsoft) y Epic Pen son las dos opciones consolidadas."
+        ]
+      }
     ]
   },
   "cleanshot-x": {
@@ -240,11 +263,11 @@
     ]
   },
   "epic-pen": {
-    "title": "¿Epic Pen para Mac? Scribbble es la mejor alternativa nativa para Mac (2026)",
-    "description": "Epic Pen solo está disponible en Windows. Scribbble es la alternativa nativa más cercana para Mac — bolígrafo, resaltador, spotlight y herramientas de medición. Descarga gratuita. Comparación lado a lado.",
-    "h1": "Scribbble vs Epic Pen: una opción nativa para Mac",
-    "subheadline": "Epic Pen es un marcador de pantalla conocido, pero está centrado en Windows. Scribbble está diseñado específicamente para macOS.",
-    "competitorSummary": "Epic Pen es una herramienta de anotación de pantalla pensada principalmente para usuarios de Windows. Te permite dibujar y resaltar sobre cualquier aplicación durante presentaciones y clases.",
+    "title": "Epic Pen para Mac: No existe — Esto es lo que usar (2026)",
+    "description": "Epic Pen solo funciona en Windows, así que no hay descarga para Mac. Scribbble es el equivalente nativo para Mac: dibuja, resalta y usa spotlight sobre cualquier app en macOS. Prueba gratis.",
+    "h1": "Epic Pen para Mac",
+    "subheadline": "No existe una versión de Epic Pen para Mac: es una app exclusiva de Windows, y siempre lo ha sido. Scribbble es el equivalente nativo para Mac: el mismo flujo de trabajo de dibujar sobre la pantalla, diseñado para macOS.",
+    "competitorSummary": "Epic Pen es una herramienta de anotación de pantalla para Windows creada por Tools In Motion. Permite dibujar y resaltar sobre cualquier aplicación durante presentaciones y clases, con un nivel gratuito y una versión Pro de pago. Está bien establecida entre presentadores y profesores de Windows, pero solo se ha distribuido para Windows.",
     "competitorStrengths": [
       "Base de usuarios consolidada en Windows",
       "Disponible una versión gratuita",
@@ -298,7 +321,60 @@
     "faq": [
       {
         "q": "¿Existe Epic Pen para Mac?",
-        "a": "Epic Pen está enfocado en Windows. Para una alternativa verdaderamente nativa de Mac con el mismo flujo de trabajo de dibujo en pantalla, Scribbble es la opción más parecida."
+        "a": "No. Epic Pen solo se ha publicado para Windows — no existe versión para macOS ni descarga oficial para Mac. Scribbble es el equivalente nativo más cercano, con el mismo flujo de trabajo de dibujar sobre cualquier app."
+      },
+      {
+        "q": "¿Dónde puedo descargar Epic Pen para Mac?",
+        "a": "En ningún sitio oficial — el desarrollador no publica una versión para Mac, así que cualquier web que ofrezca una descarga de \"Epic Pen para Mac\" no está distribuyendo un instalador genuino y es mejor evitarla. Si estás en un Mac, descarga Scribbble en su lugar; es gratis y hace lo mismo de forma nativa."
+      },
+      {
+        "q": "¿Puedo ejecutar Epic Pen en un Mac con Parallels o Wine?",
+        "a": "No de forma útil. Epic Pen funciona dibujando una superposición transparente sobre todo el escritorio de Windows, y esa superposición queda atrapada dentro de la ventana de la máquina virtual o de la capa de compatibilidad. Estarías dibujando en una pantalla de Windows simulada en lugar de en la pantalla de tu Mac, lo que anula el propósito. Una app nativa para Mac evita el problema por completo."
+      },
+      {
+        "q": "¿Existe una alternativa gratuita a Epic Pen para Mac?",
+        "a": "Sí. Scribbble es gratuito para descargar y usar en funciones de dibujo, resaltado, formas, texto, Spotlight y Measure. Hay una licencia opcional de pago único disponible: no hay suscripción."
+      },
+      {
+        "q": "¿Funciona Epic Pen en un MacBook?",
+        "a": "No. No importa si es un MacBook Air, MacBook Pro, Intel o Apple Silicon: Epic Pen es una aplicación de Windows y no funcionará en macOS. Scribbble está diseñado para macOS y es nativo en Apple Silicon."
+      },
+      {
+        "q": "¿Cuál es el equivalente en Mac de la barra de herramientas de Epic Pen?",
+        "a": "La barra de herramientas de Scribbble. Se acopla al borde izquierdo o derecho de la pantalla en lugar de flotar, se colapsa mientras dibujas para no bloquear nunca tu contenido y asigna a cada herramienta un atajo de tecla de una sola pulsación. Además aporta las herramientas Spotlight, Measure y Snapshot que Epic Pen no incluye."
+      }
+    ],
+    "answerSections": [
+      {
+        "heading": "¿Epic Pen está disponible para Mac?",
+        "body": [
+          "No. Epic Pen funciona solo en Windows. No hay compilación para macOS, ni listado en el Mac App Store, ni descarga oficial para Mac: el desarrollador nunca ha publicado una.",
+          "Tampoco se soluciona con los habituales atajos como Wine, CrossOver o Parallels. Epic Pen dibuja una superposición transparente sobre todo el escritorio de Windows, y ese tipo de comportamiento de capas de ventana suele fallar bajo esas soluciones: aunque la app se ejecute, la superposición queda dentro de la ventana de la máquina virtual en lugar de sobre la pantalla del Mac, lo que anula completamente su finalidad.",
+          "Así que la respuesta realista es usar una app para Mac diseñada para el mismo propósito. Eso es Scribbble."
+        ]
+      },
+      {
+        "heading": "Cómo tener anotación al estilo Epic Pen en macOS",
+        "body": [
+          "Descarga Scribbble y ejecútala. Se instala en la barra de menús y no molesta hasta que la invocas con un atajo de teclado; entonces tu pantalla se convierte en un lienzo sobre el que dibujar — encima de Keynote, del navegador, de Xcode, de cualquier cosa.",
+          "La memoria muscular se traslada casi exactamente. Elige un bolígrafo o resaltador, selecciona color y grosor, dibuja sobre lo que haya en pantalla y bórralo cuando termines. Las formas y el texto funcionan igual. Si usabas Epic Pen con sus atajos en Windows, serás productivo en Scribbble en un par de minutos.",
+          "Porque Scribbble dibuja sobre la pantalla en vivo en lugar de en un documento, cualquier software que capture tu pantalla recoge las anotaciones automáticamente — Zoom, Google Meet, Teams, OBS, QuickTime y Loom las graban sin configuración adicional."
+        ]
+      },
+      {
+        "heading": "¿Dónde está el equivalente de la barra de herramientas de Epic Pen en un Mac?",
+        "body": [
+          "La barra de herramientas de Scribbble es el contrapunto directo a la barra flotante de Epic Pen, con una diferencia: en lugar de una paleta fija que arrastras, se acopla al borde izquierdo o derecho de la pantalla y se pliega para no estorbar mientras dibujas, de modo que nunca tapa lo que quieres señalar.",
+          "Cada herramienta tiene un atajo de tecla única, así que puedes cambiar de bolígrafo a resaltador o flecha sin apuntar a la barra — útil cuando estás a mitad de una presentación en vivo.",
+          "Además incluye tres herramientas que Epic Pen no tiene: Spotlight, que atenúa todo excepto la región en la que te concentras; Medir, para leer distancias en píxeles en pantalla; y Instantánea, que captura toda la pantalla o una región sin usar otra app."
+        ]
+      },
+      {
+        "heading": "¿Hay una alternativa gratuita a Epic Pen para Mac?",
+        "body": [
+          "Scribbble se descarga y usa gratis: puedes dibujar, resaltar, añadir formas y texto, y usar Spotlight y Medir sin pagar. Hay una licencia opcional de pago único si quieres apoyar el desarrollo y desbloquear el resto de la app; no hay suscripción ni cargos recurrentes.",
+          "Eso compara de forma favorable con el modelo de Epic Pen en Windows, que ofrece una capa gratuita y una versión Pro de pago donde están las formas y el texto."
+        ]
       }
     ]
   },

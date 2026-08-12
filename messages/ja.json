@@ -12,7 +12,7 @@
   },
   "footer": {
     "tools": "ツール",
-    "screenshotAnnotate": "スクリーンショット注釈",
+    "screenshotAnnotate": "Mac用スクリーンショット注釈ツール",
     "learn": "学ぶ",
     "blog": "ブログ",
     "screenAnnotationGuide": "スクリーン注釈ガイド",
@@ -272,7 +272,10 @@
     "compareTitle": "Scribbble を比較する",
     "scribbbleVs": "Scribbble vs {competitor}",
     "forYourRole": "役割別の Scribbble",
-    "scribbbleFor": "{audience}向け Scribbble"
+    "scribbbleFor": "{audience}向け Scribbble",
+    "stillImagesTitle": "ライブ画面ではなくスクリーンショットを注釈したい？",
+    "stillImagesBody": "この一覧のアプリはすべて、Macのライブ画面上に直接描画します。すでに撮ったスクリーンショットをマークアップしたい場合は別の作業なので、当社の無料のMacスクリーンショット注釈ツールを使ってください。画像を貼り付けて矢印やテキスト、番号付き手順、機密情報を伏せるぼかしを追加し、そのまま結果をクリップボードにコピーできます。ブラウザ上で動くので何もインストールする必要はなく、画像がデバイスを離れることもありません。",
+    "stillImagesCta": "無料のMacスクリーンショット注釈ツールを開く"
   },
   "vsPage": {
     "breadcrumbVs": "対",

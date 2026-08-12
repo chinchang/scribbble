@@ -12,7 +12,7 @@
   },
   "footer": {
     "tools": "Werkzeuge",
-    "screenshotAnnotate": "Screenshot-Annotieren",
+    "screenshotAnnotate": "Mac-Screenshot-Annotator",
     "learn": "Mehr erfahren",
     "blog": "Blog",
     "screenAnnotationGuide": "Leitfaden Bildschirm-Annotation",
@@ -272,7 +272,10 @@
     "compareTitle": "Scribbble vergleichen",
     "scribbbleVs": "Scribbble vs {competitor}",
     "forYourRole": "Scribbble für Ihre Rolle",
-    "scribbbleFor": "Scribbble für {audience}"
+    "scribbbleFor": "Scribbble für {audience}",
+    "stillImagesTitle": "Annotierst du lieber Screenshots statt deines Live-Bildschirms?",
+    "stillImagesBody": "Alle Apps in dieser Liste zeichnen direkt auf deinem Live-Mac-Bildschirm. Wenn du stattdessen einen bereits aufgenommenen Screenshot markieren möchtest, ist das eine andere Aufgabe — nutze unser kostenloses Mac-Screenshot-Annotator-Tool. Füge ein Bild ein, füge Pfeile, Text, nummerierte Schritte oder eine Unschärfe zum Schwärzen sensibler Details hinzu und kopiere das Ergebnis direkt zurück in deine Zwischenablage. Es läuft im Browser, es muss nichts installiert werden und dein Bild verlässt niemals dein Gerät.",
+    "stillImagesCta": "Kostenlosen Mac-Screenshot-Annotator öffnen"
   },
   "vsPage": {
     "breadcrumbVs": "vs",
