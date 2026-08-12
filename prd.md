@@ -43,8 +43,8 @@ This is the website for an app called Scribbble - a mac app to annotate/draw any
 ### SEO improvements (from GSC analysis 2026-05-04)
 
 P0 — Canonical/duplicate fix
-- [ ] Add 301 redirect from `scribbble.app` → `www.scribbble.app` at host/Vercel level (canonical tags alone aren't consolidating both versions in Google's index)
-- [ ] In Search Console, verify both hosts, set preferred property, and request reindex on `/`, `/best/best-screen-annotation-apps-mac`, `/for/*`, `/vs/*`
+- [x] Add 301 redirect from `scribbble.app` → `www.scribbble.app` at host/Vercel level (verified live 2026-08-05: non-www 301s to www)
+- [x] In Search Console, verify both hosts, set preferred property, and request reindex on `/`, `/best/best-screen-annotation-apps-mac`, `/for/*`, `/vs/*` (domain property covers both hosts; reindex requested 2026-08-05 for `/`, `/best/best-screen-annotation-apps-mac`, `/vs/zoomit`, `/vs/epic-pen`)
 
 P1 — CTR fixes on pages already getting impressions
 - [x] Rewrite title + meta description for `/best/best-screen-annotation-apps-mac` (5K imp, only 2.1% CTR — biggest single lever)
@@ -55,6 +55,7 @@ P1 — CTR fixes on pages already getting impressions
 P2 — New content for proven-demand gaps
 - [x] Add `/best/best-epic-pen-alternatives-mac` listicle (5+ on-theme queries, multiple at page-1 positions)
 - [x] Add `/best/best-presentify-alternatives-mac` listicle (3 on-theme queries)
+- [x] Add `/vs/ink2go` comparison page (Ink2Go's Mac build is stale since 2020 — angle is "actively maintained Mac-native alternative"; translated into all 7 locales)
 - [x] Add `/vs/zoomit-vs-epic-pen` third-party comparison page (50+ impressions across "zoomit vs epic pen" variants — no page owns this)
 - [x] Add a FAQ section (or `/faq` page) with conversational Q&A targeting AI-Overview-style queries: "Why do people choose Zoomit over Epic Pen?", "What are the best alternatives to Epic Pen?", "What features do Epic Pen alternatives offer?" — wrap in `FAQPage` JSON-LD
 
@@ -63,8 +64,8 @@ P3 — Lift the core "screen annotation" cluster (currently pos 5–9)
 - [x] Improve `/tools/screenshot-annotate` for `mac image annotation tool` / `mac screenshot annotation tool` (currently pos 34 — needs stronger H1, FAQ, and feature list)
 
 P4 — Internal linking + structured data
-- [ ] Add a "Related pages" footer block cross-linking `/for/*`, `/vs/*`, and `/best/*` pages
-- [ ] Add breadcrumbs with `BreadcrumbList` JSON-LD on `/for/*`, `/vs/*`, `/best/*`
+- [x] Add a "Related pages" footer block cross-linking `/for/*`, `/vs/*`, and `/best/*` pages (site footer + per-page cross-link sections; verified live 2026-08-05)
+- [x] Add breadcrumbs with `BreadcrumbList` JSON-LD on `/for/*`, `/vs/*`, `/best/*` (verified live 2026-08-05 on all marketing templates)
 
 ### Long-form content / blog
 

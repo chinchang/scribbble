@@ -365,5 +365,109 @@
         "a": "Scribbble. Het tekent bovenop het daadwerkelijke scherm in realtime, dus alles wat Zoom, OBS of QuickTime vastlegt bevat jouw annotaties."
       }
     ]
+  },
+  "ink2go": {
+    "table": [
+      {
+        "feature": "macOS-ondersteuning",
+        "scribbble": "Ja (Mac-first)"
+      },
+      {
+        "feature": "Apple Silicon-native"
+      },
+      {
+        "feature": "Actief bijgewerkt"
+      },
+      {
+        "feature": "Pen / Highlighter"
+      },
+      {
+        "feature": "Vormen (pijl, rechthoek, ellips) + Tekst"
+      },
+      {
+        "feature": "Spotlight (focus dim)"
+      },
+      {
+        "feature": "Meet-tool"
+      },
+      {
+        "feature": "Snapshot-opname (scherm of regio)"
+      },
+      {
+        "feature": "Whiteboard-modus"
+      },
+      {
+        "feature": "Schermopname naar video"
+      },
+      {
+        "feature": "Webcam-overlay"
+      },
+      {
+        "feature": "Werkbalk klikt vast links of rechts"
+      },
+      {
+        "feature": "Gratis download om te proberen"
+      },
+      {
+        "feature": "Windows-versie"
+      },
+      {
+        "scribbble": "Ja (gratis webtool)",
+        "feature": "Companion screenshot-annotator"
+      }
+    ],
+    "pricing": {
+      "scribbble": "Gratis download. Optionele eenmalige licentie."
+    },
+    "faq": [
+      {
+        "q": "Is Ink2Go nog beschikbaar voor Mac?",
+        "a": "Ja — het staat nog steeds in de Mac App Store voor $19.99. De Mac-versie heeft echter sinds 2020 geen update meer gekregen en de minimale vereiste staat als macOS 10.7, dus als je een recente macOS-versie of een Apple Silicon Mac gebruikt is het verstandig eerst te testen of het nog naar verwachting werkt voordat je erop vertrouwt voor een les of een klantgesprek."
+      },
+      {
+        "q": "Wat is het beste Ink2Go-alternatief voor Mac?",
+        "a": "Voor live tekenen op het scherm is Scribbble de meest vergelijkbare native Mac-optie: pen, markeerder, vormen, tekst, Spotlight en Measure, plus ingebouwde Snapshot-captures. Het neemt geen video op, dus combineer het met QuickTime, OBS of Loom als je ook een opname nodig hebt."
+      },
+      {
+        "q": "Neemt Scribbble video op zoals Ink2Go?",
+        "a": "Nee. Scribbble tekent op het live scherm, wat betekent dat alles wat je scherm al opneemt — QuickTime, OBS, Zoom, Loom — je aantekeningen automatisch vastlegt. Daardoor blijft Scribbble klein en snel en kun je de recorder blijven gebruiken die je al gewend bent."
+      },
+      {
+        "q": "Is Ink2Go gratis?",
+        "a": "Nee. Ink2Go is een betaalde app — $19.99 eenmalig in de Mac App Store — met een proefversie. Scribbble is gratis te downloaden en te gebruiken, met een optionele eenmalige licentie."
+      }
+    ],
+    "title": "Scribbble vs Ink2Go — Moderne Mac-schermannotatie (2026)",
+    "description": "Ink2Go combineert annotatie met schermopname, maar de Mac-versie is sinds 2020 niet meer bijgewerkt. Scribbble is een actief ontwikkeld, Apple Silicon-native alternatief.",
+    "h1": "Scribbble vs Ink2Go",
+    "subheadline": "Ink2Go bundelt schermannotatie met video-opname en een whiteboard. Scribbble doet één ding — tekenen op je live Mac-scherm — en blijft up-to-date met macOS.",
+    "competitorSummary": "Ink2Go is een schermannotatie- en opname-app voor macOS en Windows, verkrijgbaar als een eenmalige aankoop van $19.99 in de Mac App Store. Je kunt over elk actief venster schrijven, overschakelen naar een zwart of wit whiteboard, de sessie opnemen naar video met microfoongeluid en een webcam-overlay, en annotaties opslaan als afbeeldingen. Het is een capabel alleskunner — maar de Mac-versie heeft sinds 2020 geen update meer gehad en vermeldt nog macOS 10.7 als minimum, dus het dateert van vóór Apple Silicon en meerdere macOS-releases.",
+    "competitorStrengths": [
+      "Ingebouwde schermopname met microfoongeluid",
+      "Webcam-overlay voor picture-in-picture-opnames",
+      "Whiteboard-modus met zwart of wit achtergrond",
+      "Eenmalige aankoop van $19.99 in de Mac App Store",
+      "Ook beschikbaar voor Windows"
+    ],
+    "scribbbleStrengths": [
+      "Actief ontwikkeld en gebouwd voor moderne macOS-versies",
+      "Apple Silicon-native",
+      "Bevat Spotlight (focus dim), Highlighter en Meet-tool",
+      "Ingebouwde Snapshot-tool om het hele scherm of een regio vast te leggen",
+      "Werkbalk kan vastklikken aan linker- of rechterrand, of vrij zweven waar je hem sleept",
+      "Gratis te downloaden en uit te proberen vóór aanschaf van een licentie",
+      "Companion gratis Screenshot Annotate webtool voor statische markering"
+    ],
+    "whenToChooseScribbble": [
+      "Je gebruikt een Apple Silicon Mac en wil een app die nog steeds updates krijgt",
+      "Tekenen op het live scherm is de kernklus — je neemt al op met QuickTime, OBS, Zoom of Loom",
+      "Je wilt Spotlight, Highlighter en Meet naast pen, vormen en tekst",
+      "Je probeert liever de volledige app gratis uit voordat je betaalt"
+    ],
+    "whenToChooseCompetitor": [
+      "Je wilt annotatie en video-opname gecombineerd in één goedkope app",
+      "Whiteboard-modus met webcam-overlay is centraal in hoe je lesgeeft",
+      "Je hebt hetzelfde gereedschap nodig op zowel Windows als Mac"
+    ]
   }
 }

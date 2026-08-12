@@ -9694,5 +9694,605 @@
       "nl",
       "fr"
     ]
+  },
+  "data.comparisons.ink2go.title": {
+    "hash": "7c5ce7072e6b8adbbaf8259c4e644945a8f4134b592b96d3d2bc3f364958d393",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.ink2go.description": {
+    "hash": "54710ecd211d957ca434ef486bd039e8172108449696f4ee4d3630f20ab8c2b3",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.ink2go.h1": {
+    "hash": "a63cbe57c34136ac38c2fc2bee182c47b7cf0eeb7fe37230ba96a14d1f447a20",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.ink2go.subheadline": {
+    "hash": "00c0ae65cbbbb00b21b9fc585b1b0de55133f13b6670e3b34277fe1b8eeb713a",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.ink2go.competitorSummary": {
+    "hash": "564cf8de7d8bd83d903ee335b7f56ed16ce96c7edbff6dd79238c20f63c47981",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.ink2go.competitorStrengths.0": {
+    "hash": "a4b6249e7b320bc78aa642ecec2a323fbe2e0907c3b01232a221b6cbb974c5db",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.ink2go.competitorStrengths.1": {
+    "hash": "4ed9103265fff5d02e05bf01a5930e5ddfd83a8d6edfb593f1b1d04f53907f8f",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.ink2go.competitorStrengths.2": {
+    "hash": "f8db61c1f2bf65ddcff0897c420dcaaa1efe0010efd2e96f52454299a25a795b",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.ink2go.competitorStrengths.3": {
+    "hash": "2da7b5738fbc89324a152786ddbcc611accba8cb43232c8c624e4fbbd82d14cf",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.ink2go.competitorStrengths.4": {
+    "hash": "aa16271dc19621d7917bfa5437bb6a6af60f562cdee737b1f9c74d9a75623a06",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.ink2go.scribbbleStrengths.0": {
+    "hash": "b264b8a8802945fdc7cc6567297e9f47aba565e704126d0c96ccde1435db6d7b",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.ink2go.scribbbleStrengths.1": {
+    "hash": "7859d192ce3d115134716434c2ccd6bc6b3278348a823a93f23d18d95e3a5fe1",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.ink2go.scribbbleStrengths.2": {
+    "hash": "54030c9be0e985acd7328608a8024b90c50f9b778f125495570ee0cba809628b",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.ink2go.scribbbleStrengths.3": {
+    "hash": "d8547c4d3209a58d627deb87f2f43d51ddaea2530a43ad5f54d44752cf355b79",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.ink2go.scribbbleStrengths.4": {
+    "hash": "bd7b2c2af3adbd634168592b15d1b8f32731e9446be10245337557c066c95e67",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.ink2go.scribbbleStrengths.5": {
+    "hash": "b247d1d57452d2f60e1be28ebae83ea35a6fae42fb0a384d91cce6225fb02ffd",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.ink2go.scribbbleStrengths.6": {
+    "hash": "b59492c8100696e5be2bbfcf90eef99cc0e93c82070083772bf4f28f603bd375",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.ink2go.whenToChooseScribbble.0": {
+    "hash": "1c1aad977cf5389a8c90711f5ee3b3c4f2215563af569277f0822c66be7e1d18",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.ink2go.whenToChooseScribbble.1": {
+    "hash": "d4a430a98baaf5970ef8239661d2c3f8b5239bb977e6d216f25cd5fdb48d9ca4",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.ink2go.whenToChooseScribbble.2": {
+    "hash": "90a7099bb6b9b57a98beacfbeb7fd47643640df012c63f80d87b064349a7d658",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.ink2go.whenToChooseScribbble.3": {
+    "hash": "a49919007f22997ff425924983f807bdc4bd71d7450b1e7323c0082ce5daa64d",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.ink2go.whenToChooseCompetitor.0": {
+    "hash": "6e68c917eb40e21e2f3b26c1ee19086c36d0130c9865b87a7059bb66d3e6b1a4",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.ink2go.whenToChooseCompetitor.1": {
+    "hash": "fe7ad86f202e0282a44ac4c25f3aa463e45dfea60c170fbab65460eed8a92a83",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.ink2go.whenToChooseCompetitor.2": {
+    "hash": "30d3313fb3dbec7bd639fedc4b95602feddb218141b4fa3cf0119d79e73154c0",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.ink2go.table.0.feature": {
+    "hash": "110081849d9fc61d76c937988e575a812520de4aded8e165915223872e0199a9",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.ink2go.table.0.scribbble": {
+    "hash": "d70d3191b51633214f44fa8166da33b9259dc04b22e401240f08a41c34770616",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.ink2go.table.1.feature": {
+    "hash": "7859d192ce3d115134716434c2ccd6bc6b3278348a823a93f23d18d95e3a5fe1",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.ink2go.table.2.feature": {
+    "hash": "ef84eb86e12e0addcf4356fa8b637db461137e824aed435d2a7db5d9cdd44a94",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.ink2go.table.3.feature": {
+    "hash": "159c884ce625f20baaf8d861ce559484453d83e38fb26e17b733ab6f528bfc47",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.ink2go.table.4.feature": {
+    "hash": "235f51f66f92a941b673973784674219e3e1aac650ef1293d556a4ae1a0c20f1",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.ink2go.table.5.feature": {
+    "hash": "0686e6c81b25e2a9de357d899f85759cec87e16dd42848b3a245eed7110490c6",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.ink2go.table.6.feature": {
+    "hash": "97345fcc4269001b633136f396b464ff286bbb3b39de5c5d6c912e0b1bd8e8b1",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.ink2go.table.7.feature": {
+    "hash": "b7c997383778fc0f2467a6639322253a11090647fa318640aeedd0663e1f53c5",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.ink2go.table.8.feature": {
+    "hash": "e3d290866b9a1cc8f95c6c8c4c128fde95168112a5bf6a2e9fbb2cc089894be1",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.ink2go.table.9.feature": {
+    "hash": "610e8e2ead6ae64cf0e802de7b476f4013c6448f56380f2d814cf9c2f9961377",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.ink2go.table.10.feature": {
+    "hash": "3572836d2612451119d406fb31d10abdc197abb7dcb27278745418ce416da89f",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.ink2go.table.11.feature": {
+    "hash": "530820160bc78078ac36e43d7d96b051a2274e7c42a98a8e134cf0d18aca14eb",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.ink2go.table.12.feature": {
+    "hash": "e8852ddb833f2d473c1dd6ecf86e3a217319b2eb46171c72909d081280add084",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.ink2go.table.13.feature": {
+    "hash": "5d521f286ea644057e4bb688b7c998a93472dd17fc80c7cbbe15456d6b51ec13",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.ink2go.table.14.feature": {
+    "hash": "e139856754f14eefe65949259ff45c1ebce221e3e9247cacceaf671dcc605285",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.ink2go.table.14.scribbble": {
+    "hash": "bd95ca5c1a0b6b3156579764f84c10d8326f57ef20c2cfa1dc9f622f12c7ccaa",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.ink2go.pricing.scribbble": {
+    "hash": "52c38001bc5249a57e3c5892b6298f09dcebfdbe9ddb690a936eccca7ae6706b",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.ink2go.faq.0.q": {
+    "hash": "33d66aae4d05a0140287bd706115aa710a5c960a9de2de8f676b4a33d05254ab",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.ink2go.faq.0.a": {
+    "hash": "55a5b9c0b2870184a249c2af3795d1a25ef773846a9161ad7c1d327c49457a1c",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.ink2go.faq.1.q": {
+    "hash": "907c14f6e8ecd37a282cc425526aeb576dd55436e5445fc993c4ddcc4664ea20",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.ink2go.faq.1.a": {
+    "hash": "0d92790973703b80e148469d79857dacce133511c97e67f7e7bb060261f9f96b",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.ink2go.faq.2.q": {
+    "hash": "b321d2d464006d99e976b40689f94f53df34b2bfc966bb38b461dda5f5e5cba1",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.ink2go.faq.2.a": {
+    "hash": "9f3b04261d7e0b35324acf85877ccf57f8332e0a727f0b917e5d798ec0356640",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.ink2go.faq.3.q": {
+    "hash": "f8393f6095f42b7fb5869cd4514e5692088c9022c7810d0b501820c419437d32",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.ink2go.faq.3.a": {
+    "hash": "519000752ee1df136ecae313d75aec682e3d0c3c1244d9cadb4c365ead4a6b9c",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
   }
 }

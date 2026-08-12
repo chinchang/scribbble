@@ -365,5 +365,109 @@
         "a": "Scribbble. Dibuja encima de la pantalla real en tiempo real, por lo que todo lo que capturen Zoom, OBS o QuickTime incluirá tus anotaciones."
       }
     ]
+  },
+  "ink2go": {
+    "table": [
+      {
+        "feature": "Compatibilidad con macOS",
+        "scribbble": "Sí (orientado a Mac)"
+      },
+      {
+        "feature": "Nativo para Apple Silicon"
+      },
+      {
+        "feature": "Actualizaciones activas"
+      },
+      {
+        "feature": "Bolígrafo / Resaltador"
+      },
+      {
+        "feature": "Formas (flecha, rectángulo, elipse) + Texto"
+      },
+      {
+        "feature": "Spotlight (enfoque atenuado)"
+      },
+      {
+        "feature": "Herramienta Medida"
+      },
+      {
+        "feature": "Captura Snapshot (pantalla o región)"
+      },
+      {
+        "feature": "Modo pizarra"
+      },
+      {
+        "feature": "Grabación de pantalla a vídeo"
+      },
+      {
+        "feature": "Superposición de webcam"
+      },
+      {
+        "feature": "La barra de herramientas se acopla a la izquierda o derecha"
+      },
+      {
+        "feature": "Descarga gratuita para probar"
+      },
+      {
+        "feature": "Versión para Windows"
+      },
+      {
+        "scribbble": "Sí (herramienta web gratuita)",
+        "feature": "Anotador de capturas complementario"
+      }
+    ],
+    "pricing": {
+      "scribbble": "Descarga gratuita. Licencia opcional de pago único."
+    },
+    "faq": [
+      {
+        "q": "¿Sigue estando disponible Ink2Go para Mac?",
+        "a": "Sí: todavía aparece en la Mac App Store por $19.99. Pero la versión para Mac no se ha actualizado desde 2020 y su requisito mínimo muestra macOS 10.7, así que si usas una versión reciente de macOS o un Mac con Apple Silicon merece la pena comprobar que sigue funcionando como esperas antes de confiar en ella para una clase o una reunión con un cliente."
+      },
+      {
+        "q": "¿Cuál es la mejor alternativa a Ink2Go para Mac?",
+        "a": "Para dibujar en pantalla en tiempo real, Scribbble es la alternativa nativa más parecida en Mac: lápiz, resaltador, formas, texto, Spotlight y Measure, además de captura de Snapshot integrada. No graba vídeo, así que combínalo con QuickTime, OBS o Loom si también necesitas grabación."
+      },
+      {
+        "q": "¿Scribbble graba vídeo como Ink2Go?",
+        "a": "No. Scribbble dibuja sobre la pantalla en vivo, lo que significa que cualquier herramienta que ya esté capturando tu pantalla — QuickTime, OBS, Zoom, Loom — grabará automáticamente tus anotaciones. Eso mantiene a Scribbble ligero y rápido y te permite seguir usando el grabador que ya prefieras."
+      },
+      {
+        "q": "¿Ink2Go es gratuito?",
+        "a": "No. Ink2Go es una app de pago — $19.99 en un único pago en la Mac App Store — con versión de prueba disponible. Scribbble se descarga y usa gratis, con una licencia opcional de pago único."
+      }
+    ],
+    "title": "Scribbble vs Ink2Go — Anotación de pantalla moderna para Mac (2026)",
+    "description": "Ink2Go combina anotación con grabación de pantalla, pero su versión para Mac no se actualiza desde 2020. Scribbble es una alternativa en desarrollo activo y nativa para Apple Silicon.",
+    "h1": "Scribbble vs Ink2Go",
+    "subheadline": "Ink2Go agrupa la anotación de pantalla con grabación de vídeo y una pizarra. Scribbble hace una sola cosa — dibujar sobre la pantalla activa de tu Mac — y se mantiene actualizado con macOS.",
+    "competitorSummary": "Ink2Go es una app de anotación y grabación de pantalla para macOS y Windows, vendida como compra única de $19.99 en la Mac App Store. Puedes escribir sobre cualquier app en ejecución, cambiar a una pizarra negra o blanca, grabar la sesión en vídeo con audio del micrófono y una superposición de webcam, y guardar las anotaciones como imágenes. Es una herramienta versátil — pero la versión para Mac no ha recibido actualizaciones desde 2020 y aún lista macOS 10.7 como requisito mínimo, por lo que es anterior a Apple Silicon y a varias versiones de macOS.",
+    "competitorStrengths": [
+      "Grabación de pantalla integrada con audio del micrófono",
+      "Superposición de webcam para grabación picture-in-picture",
+      "Modo pizarra con fondo negro o blanco",
+      "Compra única de $19.99 en la Mac App Store",
+      "También disponible en Windows"
+    ],
+    "scribbbleStrengths": [
+      "Desarrollo activo y diseñado para macOS actual",
+      "Nativo para Apple Silicon",
+      "Incluye herramientas Spotlight (enfoque atenuado), Resaltador y Medida",
+      "Herramienta Snapshot integrada para capturar toda la pantalla o una región",
+      "La barra de herramientas se acopla al borde izquierdo o derecho, o flota donde la arrastres",
+      "Descarga gratis y prueba antes de comprar la licencia",
+      "Herramienta web complementaria gratuita Screenshot Annotate para marcado estático"
+    ],
+    "whenToChooseScribbble": [
+      "Tienes un Mac con Apple Silicon y quieres una app que aún reciba actualizaciones",
+      "Dibujar sobre la pantalla en vivo es lo principal — ya grabas con QuickTime, OBS, Zoom o Loom",
+      "Deseas Spotlight, Resaltador y Medida junto con bolígrafo, formas y texto",
+      "Prefieres probar la app completa gratis antes de pagar"
+    ],
+    "whenToChooseCompetitor": [
+      "Quieres anotación y grabación de vídeo agrupadas en una app económica",
+      "El modo pizarra con superposición de webcam es fundamental para cómo enseñas",
+      "Necesitas la misma herramienta tanto en Windows como en Mac"
+    ]
   }
 }

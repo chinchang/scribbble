@@ -307,6 +307,84 @@ export const comparisons: Comparison[] = [
       },
     ],
   },
+  {
+    slug: "ink2go",
+    competitor: "Ink2Go",
+    title: "Scribbble vs Ink2Go — Modern Mac Screen Annotation (2026)",
+    description:
+      "Ink2Go pairs annotation with screen recording, but its Mac build hasn't been updated since 2020. Scribbble is an actively developed, Apple Silicon-native alternative.",
+    h1: "Scribbble vs Ink2Go",
+    subheadline:
+      "Ink2Go bundles screen annotation with video recording and a whiteboard. Scribbble does one thing — drawing on your live Mac screen — and keeps it current with macOS.",
+    competitorSummary:
+      "Ink2Go is a screen annotation and recording app for macOS and Windows, sold as a one-time $19.99 purchase on the Mac App Store. You can write over any running app, flip to a black or white whiteboard, record the session to video with microphone audio and a webcam overlay, and save annotations as images. It's a capable all-rounder — but the Mac version hasn't shipped an update since 2020 and still lists macOS 10.7 as its minimum, so it predates Apple Silicon and several macOS releases.",
+    competitorStrengths: [
+      "Built-in screen recording with microphone audio",
+      "Webcam overlay for picture-in-picture recording",
+      "Whiteboard mode with a black or white background",
+      "One-time $19.99 purchase on the Mac App Store",
+      "Also available on Windows",
+    ],
+    scribbbleStrengths: [
+      "Actively developed and built for current macOS",
+      "Apple Silicon native",
+      "Includes Spotlight (focus dim), Highlighter and Measure tools",
+      "Built-in Snapshot tool to capture the whole screen or a region",
+      "Toolbar docks to the left or right edge, or floats anywhere you drag it",
+      "Free to download and try before buying a license",
+      "Companion free Screenshot Annotate web tool for static markup",
+    ],
+    whenToChooseScribbble: [
+      "You're on an Apple Silicon Mac and want an app that's still being updated",
+      "Drawing on the live screen is the job — you already record with QuickTime, OBS, Zoom or Loom",
+      "You want Spotlight, Highlighter and Measure alongside pen, shapes and text",
+      "You'd rather try the full app for free before paying",
+    ],
+    whenToChooseCompetitor: [
+      "You want annotation and video recording bundled into one cheap app",
+      "Whiteboard mode with a webcam overlay is central to how you teach",
+      "You need the same tool on both Windows and Mac",
+    ],
+    table: [
+      { feature: "macOS support", scribbble: "Yes (Mac-first)", competitor: "Yes" },
+      { feature: "Apple Silicon native", scribbble: "Yes", competitor: "Not stated" },
+      { feature: "Actively updated", scribbble: "Yes", competitor: "Last Mac update 2020" },
+      { feature: "Pen / Highlighter", scribbble: "Yes", competitor: "Yes" },
+      { feature: "Shapes (arrow, rectangle, ellipse) + Text", scribbble: "Yes", competitor: "Yes" },
+      { feature: "Spotlight (focus dim)", scribbble: "Yes", competitor: "No" },
+      { feature: "Measure tool", scribbble: "Yes", competitor: "No" },
+      { feature: "Snapshot capture (screen or region)", scribbble: "Yes", competitor: "Yes" },
+      { feature: "Whiteboard mode", scribbble: "No", competitor: "Yes" },
+      { feature: "Screen recording to video", scribbble: "No", competitor: "Yes" },
+      { feature: "Webcam overlay", scribbble: "No", competitor: "Yes" },
+      { feature: "Toolbar docks left or right", scribbble: "Yes", competitor: "Sliding side toolbar" },
+      { feature: "Free download to try", scribbble: "Yes", competitor: "Trial version" },
+      { feature: "Windows version", scribbble: "No", competitor: "Yes" },
+      { feature: "Companion screenshot annotator", scribbble: "Yes (free web tool)", competitor: "No" },
+    ],
+    pricing: {
+      scribbble: "Free download. Optional one-time license.",
+      competitor: "$19.99 one-time (Mac App Store).",
+    },
+    faq: [
+      {
+        q: "Is Ink2Go still available for Mac?",
+        a: "Yes — it's still listed on the Mac App Store at $19.99. But the Mac version hasn't received an update since 2020 and its listed minimum is macOS 10.7, so if you're on a recent macOS or an Apple Silicon Mac it's worth testing that it still behaves the way you expect before you rely on it for a class or a client call.",
+      },
+      {
+        q: "What's the best Ink2Go alternative for Mac?",
+        a: "For live on-screen drawing, Scribbble is the closest Mac-native match: pen, highlighter, shapes, text, Spotlight and Measure, plus built-in Snapshot capture. It doesn't record video, so pair it with QuickTime, OBS or Loom if you need a recording as well.",
+      },
+      {
+        q: "Does Scribbble record video like Ink2Go?",
+        a: "No. Scribbble draws on the live screen, which means anything already capturing your display — QuickTime, OBS, Zoom, Loom — records your annotations automatically. That keeps Scribbble small and fast and lets you keep whichever recorder you already use.",
+      },
+      {
+        q: "Is Ink2Go free?",
+        a: "No. Ink2Go is a paid app — $19.99 one-time on the Mac App Store — with a trial version available. Scribbble is free to download and use, with an optional one-time license.",
+      },
+    ],
+  },
 ];
 
 export const comparisonSlugs = comparisons.map((c) => c.slug);

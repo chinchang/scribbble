@@ -365,5 +365,109 @@
         "a": "Scribbble。它直接在实际屏幕上绘制，Zoom、OBS 或 QuickTime 捕获到的内容都会包含你的标注。"
       }
     ]
+  },
+  "ink2go": {
+    "table": [
+      {
+        "feature": "macOS 支持",
+        "scribbble": "是（以 Mac 为先）"
+      },
+      {
+        "feature": "原生支持 Apple Silicon"
+      },
+      {
+        "feature": "持续更新"
+      },
+      {
+        "feature": "画笔 / 荧光笔"
+      },
+      {
+        "feature": "形状（箭头、矩形、椭圆） + 文本"
+      },
+      {
+        "feature": "Spotlight（聚焦变暗）"
+      },
+      {
+        "feature": "测量工具"
+      },
+      {
+        "feature": "快照捕获（整屏或区域）"
+      },
+      {
+        "feature": "白板模式"
+      },
+      {
+        "feature": "录屏到视频"
+      },
+      {
+        "feature": "网络摄像头覆盖"
+      },
+      {
+        "feature": "工具栏可停靠左侧或右侧"
+      },
+      {
+        "feature": "免费下载试用"
+      },
+      {
+        "feature": "Windows 版本"
+      },
+      {
+        "scribbble": "是（免费网页版工具）",
+        "feature": "配套截图标注工具"
+      }
+    ],
+    "pricing": {
+      "scribbble": "免费下载。可选一次性授权。"
+    },
+    "faq": [
+      {
+        "q": "Ink2Go 还在 Mac 上可用吗？",
+        "a": "可以——它仍在 Mac App Store 上架，标价 $19.99。但 Mac 版本自 2020 年起就没有更新，其标注的最低系统为 macOS 10.7，所以如果你使用的是较新的 macOS 或 Apple Silicon 设备，建议在课堂或客户会议前先测试一下它是否按预期工作。"
+      },
+      {
+        "q": "在 Mac 上，Ink2Go 最佳替代品是什么？",
+        "a": "用于实时屏幕绘图时，Scribbble 是最接近的 Mac 原生替代：支持画笔、高亮、形状、文字、Spotlight 和测量功能，并内建快照截取。它不录制视频，所以如果需要录制，请配合 QuickTime、OBS 或 Loom 使用。"
+      },
+      {
+        "q": "Scribbble 会像 Ink2Go 一样录制视频吗？",
+        "a": "不会。Scribbble 在实时屏幕上绘制，这意味着任何已经在捕捉你显示内容的录制工具——如 QuickTime、OBS、Zoom、Loom——都会自动录下你的标注。这样让 Scribbble 更轻巧、更快速，同时你也可以继续使用习惯的录制工具。"
+      },
+      {
+        "q": "Ink2Go 是免费的吗？",
+        "a": "不是。Ink2Go 是付费应用——在 Mac App Store 上一次性售价 $19.99，并提供试用版。Scribbble 可免费下载使用，并提供可选的一次性授权。"
+      }
+    ],
+    "title": "Scribbble 与 Ink2Go — 现代 mac 屏幕标注（2026）",
+    "description": "Ink2Go 将标注与屏幕录制结合，但其 Mac 版本自 2020 年起未再更新。Scribbble 是正在积极开发、原生支持 Apple Silicon 的替代方案。",
+    "h1": "Scribbble 与 Ink2Go",
+    "subheadline": "Ink2Go 把屏幕标注与视频录制和白板功能捆绑在一起。Scribbble 专注一件事——在实时 Mac 屏幕上绘图——并保持与 macOS 的持续兼容与更新。",
+    "competitorSummary": "Ink2Go 是一款面向 macOS 和 Windows 的屏幕标注与录制应用，Mac 版在 Mac App Store 上以一次性 $19.99 售卖。你可以在任意运行的应用上书写，切换到黑白两色的白板，录制带麦克风音频和网络摄像头画中画的会话，并将标注保存为图片。它是一个功能齐全的全能选手——但 Mac 版本自 2020 年起就没有发布更新，且仍将 macOS 10.7 作为最低要求，因此它出现在 Apple Silicon 和若干 macOS 版本之前。",
+    "competitorStrengths": [
+      "内置带麦克风音频的屏幕录制",
+      "用于画中画录制的网络摄像头覆盖",
+      "带黑底或白底的白板模式",
+      "在 Mac App Store 上一次性 $19.99 购买",
+      "也有 Windows 版本"
+    ],
+    "scribbbleStrengths": [
+      "持续开发，并为当前 macOS 打造",
+      "原生支持 Apple Silicon",
+      "内置 Spotlight（聚焦变暗）、荧光笔和测量工具",
+      "内置快照工具，可捕获整屏或区域",
+      "工具栏可停靠在左侧或右侧边缘，也可拖动到任意位置悬浮",
+      "免费下载试用，购买前可先体验全部功能",
+      "配套免费的 Screenshot Annotate 网页工具，用于静态标注"
+    ],
+    "whenToChooseScribbble": [
+      "你使用 Apple Silicon Mac，并希望应用仍在持续更新",
+      "你的主要工作是对实时屏幕进行绘图——录制你可用 QuickTime、OBS、Zoom 或 Loom 完成",
+      "你希望在画笔、形状和文字之外还有 Spotlight、荧光笔和测量工具",
+      "你想在付费前先完整试用应用"
+    ],
+    "whenToChooseCompetitor": [
+      "你想要将标注和视频录制捆绑在一个便宜的应用里",
+      "白板模式配合网络摄像头覆盖是你教学的核心方式",
+      "你需要在 Windows 和 Mac 上使用相同的工具"
+    ]
   }
 }
