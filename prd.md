@@ -113,3 +113,21 @@ already ranking, then answer the exact query on that page. Baseline for the 4–
 - [x] `scripts/translate.ts` (`pnpm translate`) — GPT-powered, lockfile-diffed (only new/changed strings hit the API), validates placeholders/tags, writes checked-in `messages/{locale}.json` + `lib/i18n/data/{locale}/*.json` overlays
 - [x] Footer language switcher on localized pages
 - [x] Run `pnpm translate` to generate the actual translations and commit the output (all 7 locales, 808 strings each, gpt-5-mini)
+
+### App changes reflected on the site (2026-08-19)
+
+- [x] Bump the stated minimum system requirement from macOS 11 to macOS 14 (`messages/en.json`
+      `downloadSubtitle` / `chipMacos` / `personaPage.ctaSubtitle`, homepage JSON-LD
+      `operatingSystem`, and the example in `scripts/translate.ts`'s prompt)
+- [x] Add the newly shipped Magnify (screen zoom) tool everywhere the toolset is described —
+      homepage cards + JSON-LD `featureList`, all 5 `/for/*` `featuredTools` lists, every `/vs/*`
+      comparison table (new "Magnify (screen zoom)" row) and strengths list, all 5 `/best/*`
+      listicles, `/vs/zoomit-vs-epic-pen`, the blog toolkit section and the `/tools/*` CTA
+- [x] Reverse the "Scribbble has no screen zoom" positioning it invalidated: `/vs/zoomit` now
+      answers "Does Scribbble include a zoom feature like ZoomIt?" with yes (ZoomIt keeps the break
+      timer / whiteboard as its remaining edge), and the "No screen zoom" cons on
+      `/best/best-screen-annotation-apps-mac` and `/best/best-zoomit-alternatives-mac` are gone
+- [x] Re-ran `pnpm translate` (126 changed strings × 7 locales); hand-fixed one Hindi string that
+      came back in English (`personaPage.ctaSubtitle`)
+- [ ] Re-submit `/vs/zoomit` and `/best/best-zoomit-alternatives-mac` in GSC after deploy — the
+      zoom-related copy on both reversed, and they target zoom-intent queries

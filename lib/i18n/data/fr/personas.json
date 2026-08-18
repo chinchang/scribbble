@@ -37,11 +37,12 @@
       "Stylet libre pour schémas et soulignements",
       "Surligneur pour marquer les passages importants d'une lecture ou d'une diapositive",
       "Projecteur (Spotlight) pour assombrir tout sauf la partie que vous expliquez",
-      "Outil flèche pour diriger l'attention",
-      "Formes rectangle et ellipse pour encadrer ou encercler des concepts clés",
-      "Outil texte pour les appels de vocabulaire",
-      "Capture de l'écran entier ou d'une région pour sauvegarder des travaux d'élèves ou des images de cours",
-      "Effaceur rapide pour garder les diapositives propres"
+      "Magnify (zoom d’écran) pour agrandir texte, code ou diagrammes trop petits pour le fond de la salle",
+      "Outil flèche pour diriger l’attention",
+      "Formes rectangle et ellipse pour encadrer ou entourer les concepts clés",
+      "Outil texte pour les repères de vocabulaire",
+      "Capture d’écran complète ou régionale pour sauvegarder le travail des élèves ou des extraits de leçon",
+      "Effacement rapide pour garder les diapositives propres"
     ],
     "faq": [
       {
@@ -92,9 +93,10 @@
       "Outil stylo avec des couleurs vives adaptées au streaming",
       "Surligneur pour mettre en évidence du texte à l’écran",
       "Spotlight pour concentrer le chat sur une zone précise du jeu",
-      "Outil flèche pour des callouts rapides",
-      "Outils rectangle, ellipse et texte pour les overlays",
-      "Capture d’écran ou d’une région pour vignettes et temps forts post-stream",
+      "Magnify (zoom d’écran) pour rendre lisibles les petites interfaces, statistiques d’objet ou la mini-carte",
+      "Outil flèche pour des annotations rapides",
+      "Rectangle, ellipse et outils texte pour les superpositions",
+      "Capture d’écran ou région pour vignettes de clips et moments forts après le stream",
       "Raccourci d’effacement rapide pour nettoyer l’écran entre les séquences"
     ],
     "faq": [
@@ -142,11 +144,12 @@
       "Outil stylo pour l’emphase au trait libre",
       "Surligneur pour annoter du code ou du texte à l’écran",
       "Spotlight pour assombrir tout sauf la zone que vous montrez",
-      "Outil flèche pour des visites guidées",
-      "Rectangle, ellipse et texte pour appeler des fonctionnalités",
-      "Capturer l’écran ou une région pour les vignettes et les plans fixes du montage",
-      "Plusieurs couleurs pour différencier les notions",
-      "Annuler / rétablir pour continuer l’enregistrement malgré de petits ratés"
+      "Magnify (zoom d’écran) pour rendre lisibles les petites interfaces et le code sur les écrans de téléphone",
+      "Outil flèche pour des guidages",
+      "Rectangle, ellipse et texte pour signaler des fonctionnalités",
+      "Capture d’écran ou région pour miniatures vidéo et images B-roll",
+      "Plusieurs couleurs pour différencier les concepts",
+      "Annuler / rétablir pour continuer l’enregistrement malgré les petites erreurs"
     ],
     "faq": [
       {
@@ -199,10 +202,11 @@
       "Formes rectangle et ellipse pour pointer espacements et composants",
       "Surligneur pour marquer le texte et les blocs de contenu",
       "Spotlight pour focaliser une critique sur une frame à la fois",
-      "Outil Flèche pour la critique de flux",
-      "Outil Texte pour notes en ligne",
-      "Capturer une frame ou une région pour la déposer directement dans un ticket Linear ou un document de design",
-      "Ancrer la barre d’outils à gauche ou à droite pour garder la zone de travail dégagée"
+      "Magnify (zoom d’écran) pour inspecter la typographie et les pixels sans quitter la zone de travail",
+      "Outil flèche pour critiquer les flux",
+      "Outil texte pour les notes inline",
+      "Capture d’un cadre ou d’une région à déposer directement dans un ticket Linear ou un document de design",
+      "Fixer la barre d’outils à gauche ou à droite pour garder la zone de travail dégagée"
     ],
     "faq": [
       {
@@ -248,11 +252,12 @@
     "featuredTools": [
       "Surligneur pour les chiffres ROI et les lignes de tarif",
       "Spotlight pour assombrir tout sauf le widget du dashboard que vous montrez",
-      "Outil flèche pour les visites guidées",
-      "Formes rectangle et ellipse pour mettre en avant tarifs et fonctionnalités",
-      "Outil texte pour étiquettes en ligne",
-      "Capture d'écran du plein écran ou d'une zone pour les e‑mails de suivi et les slides récapitulatives",
-      "Effacement d'une touche entre les sections de la démo"
+      "Magnify (zoom d’écran) pour agrandir la métrique ou l’article dont vous parlez",
+      "Outil flèche pour des présentations guidées",
+      "Formes rectangle et ellipse pour mettre en avant prix et fonctionnalités",
+      "Outil Texte pour étiquettes en ligne",
+      "Capture d’écran totale ou régionale pour relances par e‑mail et récapitulatifs",
+      "Nettoyage en une touche entre les sections de la démo"
     ],
     "faq": [
       {

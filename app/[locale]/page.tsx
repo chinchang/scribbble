@@ -36,7 +36,7 @@ export default async function Home({
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     name: "Scribbble",
-    operatingSystem: "macOS 11.0+",
+    operatingSystem: "macOS 14.0+",
     applicationCategory: "DesignApplication",
     description: t("jsonLd.description"),
     inLanguage: locale,

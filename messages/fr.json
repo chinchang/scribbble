@@ -50,7 +50,7 @@
       },
       {
         "title": "Plus qu'un simple stylet",
-        "body": "Stylo, surligneur, flèche, rectangle, ellipse et texte — plus Spotlight (mise au point par atténuation), un outil Mesure, et un outil Capture intégré qui saisit l'écran entier ou une région sans quitter l'app."
+        "body": "Stylet, surligneur, flèche, rectangle, ellipse et texte — plus Spotlight (mise en avant par assombrissement), Magnify pour zoomer sur les détails fins de l’écran en direct, un outil Mesure, et un outil Capture intégré qui saisit l’écran entier ou une région sans quitter l’application."
       },
       {
         "title": "Essai gratuit, licence unique",
@@ -65,8 +65,8 @@
     "linksGuidesTitle": "Guides d'annotation d'écran pour Mac",
     "linkGuide": "Le guide complet de l'annotation d'écran",
     "downloadTitle": "Prêt à <gradient>scribble</gradient> ?",
-    "downloadSubtitle": "Paiement unique. Fonctionne sur tous les Mac exécutant macOS 11 ou ultérieur. Mises à jour gratuites à vie.",
-    "chipMacos": "macOS 11.0+ (Intel/Silicon)",
+    "downloadSubtitle": "Paiement unique. Fonctionne sur tous les Mac exécutant macOS 14 ou ultérieur. Mises à jour gratuites à vie.",
+    "chipMacos": "macOS 14.0+ (Intel/Silicon)",
     "chipNoSignup": "Inscription non requise",
     "chipRefund": "Remboursement sous 14 jours",
     "jsonLd": {
@@ -79,10 +79,11 @@
         "Forme ellipse",
         "Annotations texte",
         "Spotlight (mise au point avec assombrissement)",
-        "Outil de mesure",
-        "Capture instantanée — écran entier ou zone sélectionnée",
-        "La barre d'outils se fixe sur le bord gauche ou droit",
-        "Natif Apple Silicon",
+        "Magnify — zoom d’écran pour montrer les détails fins",
+        "Outil Mesure",
+        "Capture instantanée — écran entier ou région sélectionnée",
+        "La barre d’outils se fixe au bord gauche ou droit",
+        "Native Apple Silicon",
         "Outil compagnon gratuit Screenshot Annotate (web)"
       ],
       "offerDescription": "Téléchargement gratuit. Licence unique pour toutes les fonctionnalités."
@@ -113,7 +114,7 @@
       },
       {
         "lead": "Choisissez Scribbble",
-        "body": "si vous êtes sur Mac et voulez une application moderne et native macOS avec le raffinement d'Epic Pen et un jeu d'outils plus riche (Spotlight, Measure) que les deux autres."
+        "body": "si vous êtes sur Mac et voulez une app moderne, native macOS, avec la finition d’Epic Pen, le zoom à la ZoomIt et un jeu d’outils plus complet (Spotlight, Magnify, Mesure) que les deux."
       }
     ],
     "whatIsZoomitTitle": "Qu'est‑ce que ZoomIt ?",
@@ -205,11 +206,11 @@
       "Vous n'avez pas besoin de zoom d'écran ni de minuterie de pause"
     ],
     "macTitle": "Sur Mac ? Voici l'option la mieux adaptée.",
-    "macBody": "Epic Pen ne fonctionne pas du tout sur macOS, et le port Mac de ZoomIt ressemble encore à un utilitaire Windows. Si vous êtes sur Mac et voulez quelque chose qui ait vraiment l'air d'une app Mac, Scribbble est conçu spécifiquement pour macOS — avec une barre d'outils moderne et déplaçable, des performances natives Apple Silicon, et un jeu d'outils plus riche (Spotlight, Measure) que ZoomIt ou Epic Pen.",
+    "macBody": "Epic Pen ne fonctionne pas du tout sur macOS, et le port Mac de ZoomIt ressemble encore à un utilitaire Windows. Si vous êtes sur Mac et voulez quelque chose qui ressemble vraiment à une app Mac, Scribbble est conçu spécifiquement pour macOS — avec une barre d’outils moderne et déplaçable, des performances natives Apple Silicon, et un jeu d’outils plus complet (Spotlight, Magnify, Mesure) que ZoomIt ou Epic Pen.",
     "scribbbleFitsTitle": "Où se situe Scribbble",
     "scribbbleFits": [
       "Les mêmes outils de base qu'Epic Pen — stylo, surligneur, flèche, rectangle, texte — sans paywall Pro",
-      "Ajoute Spotlight (mise en valeur par atténuation) et Measure, outils absent chez ZoomIt et Epic Pen",
+      "Ajoute Spotlight (mise en avant par assombrissement), Magnify (zoom d’écran) et l’outil Mesure — Epic Pen n’en propose aucun, et ZoomIt n’offre que le zoom",
       "Interface native Mac avec prise en charge Apple Silicon",
       "Téléchargement et essai gratuits, licence unique"
     ],
@@ -235,11 +236,11 @@
       },
       {
         "q": "Existe-t-il une alternative Mac à la fois à ZoomIt et à Epic Pen ?",
-        "a": "Oui. Scribbble est une application d'annotation d'écran conçue en priorité pour Mac qui combine le meilleur des deux — une interface moderne et soignée comme Epic Pen, et un flux de travail axé sur les raccourcis comme ZoomIt. Elle inclut stylo, surligneur, flèche, rectangle, texte, Spotlight (mise en valeur) et Measure, téléchargeable gratuitement et déverrouillable par une licence unique."
+        "a": "Oui. Scribbble est une application d’annotation d’écran conçue d’abord pour Mac qui combine le meilleur des deux : une interface moderne et soignée à la manière d’Epic Pen, avec le flux de travail ciblé et piloté par raccourcis de ZoomIt. Elle inclut stylet, surligneur, flèche, rectangle, texte, Spotlight (mise en avant par assombrissement), Magnify (zoom d’écran) et Mesure — téléchargeable et essayable gratuitement, avec une licence unique pour tout débloquer."
       },
       {
         "q": "Quelles fonctionnalités les alternatives offrent-elles qu'Epic Pen n'a pas ?",
-        "a": "La plupart des alternatives modernes ajoutent au moins une des fonctionnalités suivantes : un outil Spotlight / mise en valeur, un outil Measure pour les distances à l'écran, un zoom d'écran (ZoomIt), ou un enregistreur d'écran intégré (CleanShot X). Scribbble ajoute spécifiquement Spotlight, Measure et un outil compagnon gratuit de capture Annotate. ZoomIt ajoute zoom, minuterie de pause et mode tableau blanc."
+        "a": "La plupart des alternatives modernes ajoutent au moins un des éléments suivants : un outil Spotlight / mise en avant par assombrissement, un zoom d’écran pour montrer des détails fins, un outil Mesure pour les distances à l’écran, ou un enregistreur d’écran intégré (CleanShot X). Scribbble ajoute spécifiquement Spotlight, Magnify (zoom d’écran), Mesure et un outil compagnon gratuit Screenshot Annotate (web). ZoomIt ajoute le zoom, un minuteur de pause et un mode tableau blanc."
       },
       {
         "q": "Quels outils d'annotation d'écran les évaluateurs recommandent-ils plutôt qu'Epic Pen ?",
@@ -266,16 +267,16 @@
     "pricing": "Tarifs :",
     "scribbbleVsItem": "Scribbble vs {name}",
     "bottomLine": "En bref",
+    "stillImagesTitle": "Vous annotez une capture d'écran plutôt que votre écran en direct ?",
+    "stillImagesBody": "Toutes les applications de cette liste dessinent sur votre écran Mac en direct. Si ce dont vous avez réellement besoin, c'est de marquer une capture d'écran que vous avez déjà prise, c'est un autre usage — utilisez notre outil gratuit d'annotation de captures d'écran pour Mac. Collez une image, ajoutez des flèches, du texte, des étapes numérotées ou un flou pour rediger des informations sensibles, puis copiez le résultat directement dans votre presse-papiers. Il fonctionne dans le navigateur, il n'y a donc rien à installer et votre image ne quitte jamais votre appareil.",
+    "stillImagesCta": "Ouvrir l'outil gratuit d'annotation de captures d'écran pour Mac",
     "ctaTitle": "Essayez notre choix numéro un : <gradient>Scribbble</gradient>",
     "ctaSubtitle": "Téléchargement gratuit. Licence unique. Natif macOS.",
     "otherGuides": "Autres guides",
     "compareTitle": "Comparez Scribbble",
     "scribbbleVs": "Scribbble vs {competitor}",
     "forYourRole": "Scribbble selon votre rôle",
-    "scribbbleFor": "Scribbble pour {audience}",
-    "stillImagesTitle": "Vous annotez une capture d'écran plutôt que votre écran en direct ?",
-    "stillImagesBody": "Toutes les applications de cette liste dessinent sur votre écran Mac en direct. Si ce dont vous avez réellement besoin, c'est de marquer une capture d'écran que vous avez déjà prise, c'est un autre usage — utilisez notre outil gratuit d'annotation de captures d'écran pour Mac. Collez une image, ajoutez des flèches, du texte, des étapes numérotées ou un flou pour rediger des informations sensibles, puis copiez le résultat directement dans votre presse-papiers. Il fonctionne dans le navigateur, il n'y a donc rien à installer et votre image ne quitte jamais votre appareil.",
-    "stillImagesCta": "Ouvrir l'outil gratuit d'annotation de captures d'écran pour Mac"
+    "scribbbleFor": "Scribbble pour {audience}"
   },
   "vsPage": {
     "breadcrumbVs": "vs",
@@ -305,7 +306,7 @@
     "howTitle": "Comment {audience} l'utilisent",
     "toolsTitle": "Les outils qui comptent vraiment",
     "ctaTitle": "Essayez Scribbble <gradient>gratuitement</gradient>",
-    "ctaSubtitle": "Conçu pour {audience}. Fonctionne sur macOS 11+.",
+    "ctaSubtitle": "Conçu pour {audience}. Fonctionne sur macOS 14+.",
     "otherRolesTitle": "Scribbble pour d'autres rôles",
     "scribbbleFor": "Scribbble pour {audience}",
     "compareTitle": "Comparer Scribbble",

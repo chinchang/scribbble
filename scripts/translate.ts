@@ -220,7 +220,7 @@ Rules:
 - NEVER translate these product/brand names: ${BRAND_NAMES.join(", ")}.
 - Preserve ICU placeholders like {audience} or {competitor} EXACTLY as-is.
 - Preserve XML-like tags such as <gradient>...</gradient> or <strong>...</strong> as-is, translating only the text inside them.
-- Keep prices, version numbers, keyboard shortcut names and "macOS 11+" style requirements unchanged.
+- Keep prices, version numbers, keyboard shortcut names and "macOS 14+" style requirements unchanged.
 - Keep the meaning faithful; do not add or drop information.
 
 Input is a JSON object mapping ids to English strings. Reply with a JSON object: {"translations": {"<id>": "<translated string>", ...}} covering EVERY input id.`;

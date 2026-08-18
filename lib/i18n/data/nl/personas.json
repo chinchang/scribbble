@@ -28,10 +28,11 @@
       "Penseelgereedschap met felle, streamvriendelijke kleuren",
       "Markeerstift om tekst op het scherm te benadrukken",
       "Spotlight om de aandacht van de chat op één deel van de gameplay te richten",
-      "Pijl-gereedschap voor snelle callouts",
-      "Rechthoek-, ellips- en tekstgereedschappen voor overlays",
-      "Maak een snapshot van het scherm of een regio voor clip-thumbnails en post-stream hoogtepunten",
-      "Snelle-clear hotkey om het scherm tussen segments schoon te vegen"
+      "Magnify (schermzoom) om kleine UI-elementen, itemstats of de minimap in leesbaar detail te trekken",
+      "Pijltool voor snelle aanduidingen",
+      "Rechthoek-, ellips- en teksttools voor overlays",
+      "Snapshot van het scherm of een regio voor clip-thumbnails en hoogtepunten na de stream",
+      "Snel-wis sneltoets om het scherm tussen segments te wissen"
     ],
     "faq": [
       {
@@ -83,11 +84,12 @@
       "Penseelgereedschap voor vrijhandsbenadrukking",
       "Markeerstift om code of tekst op het scherm te markeren",
       "Spotlight om alles te dimmen behalve het deel dat je demonstreert",
-      "Pijl-gereedschap voor begeleide rondleidingen",
-      "Rechthoek, ellips en tekst voor feature-callouts",
-      "Maak een snapshot van het scherm of een regio voor videotumbnails en B-roll-stills",
-      "Meerdere kleuren om concepten van elkaar te onderscheiden",
-      "Ongedaan maken / opnieuw doen zodat je kunt blijven opnemen bij kleine fouten"
+      "Magnify (schermzoom) om kleine UI en code leesbaar te maken op telefoonschermen",
+      "Pijltool voor guided tours",
+      "Rechthoek, ellips en tekst voor feature-aanduidingen",
+      "Snapshot van het scherm of een regio voor videotumbnails en B-roll-stills",
+      "Meerdere kleuren om concepten te differentiëren",
+      "Ongedaan maken / opnieuw doen zodat je kunt blijven opnemen ondanks kleine fouten"
     ],
     "faq": [
       {
@@ -138,11 +140,12 @@
       "Vrije-pen voor diagrammen en onderstrepingen",
       "Marker om belangrijke passages in een tekst of dia aan te geven",
       "Spotlight om alles te dimmen behalve het deel dat je uitlegt",
-      "Pijltool om de aandacht te richten",
-      "Rechthoek- en ellipsvormen om kernconcepten te omkaderen of te cirkelen",
-      "Teksttool voor woordenschat-aanduidingen",
-      "Maak een snapshot van het hele scherm of een gebied om studentwerk of lesmomenten op te slaan",
-      "Snelgummen om dia's netjes te houden"
+      "Magnify (schermzoom) om kleine tekst, code of diagramdetails voor achterin de klas uit te vergroten",
+      "Pijltje om aandacht te richten",
+      "Rechthoek- en ellipsvormen om kernconcepten te omlijnen of cirkelen",
+      "Teksttool voor vocabulaire-aanduidingen",
+      "Snapshot van het hele scherm of een regio om leerlingenwerk of lesstills op te slaan",
+      "Snel wissen om dia's netjes te houden"
     ],
     "faq": [
       {
@@ -199,10 +202,11 @@
       "Rechthoek- en ellipsvormen voor spacing- en componentaanduidingen",
       "Marker om copy en contentblokken te markeren",
       "Spotlight om de crit op één frame tegelijk te focussen",
-      "Pijl-tool voor flow-critique",
-      "Teksttool voor inline notities",
-      "Maak een snapshot van een frame of regio om direct in een Linear-ticket of ontwerpdocument te plakken",
-      "Dock de werkbalk links of rechts om het canvas vrij te houden"
+      "Magnify (schermzoom) om typografie en pixeldetail te controleren zonder het canvas te verlaten",
+      "Pijltool voor flow-critique",
+      "Teksttool voor inline opmerkingen",
+      "Snapshot van een frame of regio om direct in een Linear-ticket of ontwerpdocument te plakken",
+      "Werkbalk vastzetten aan linker- of rechterrand om het canvas vrij te houden"
     ],
     "faq": [
       {
@@ -248,11 +252,12 @@
     "featuredTools": [
       "Highlighter voor ROI-cijfers en prijzengroepen",
       "Spotlight om alles te dimmen behalve de dashboard-widget die je wilt tonen",
-      "Pijltool voor begeleide rondleidingen",
-      "Rechthoek- en ellipsvormen voor prijsaanduidingen en feature call-outs",
+      "Magnify (schermzoom) om de metriek of regel waarover je praat uit te vergroten",
+      "Pijltool voor guided tours",
+      "Rechthoek- en ellipsvormen voor prijs- en feature-aanduidingen",
       "Teksttool voor inline labels",
-      "Maak een snapshot van het volledige scherm of een regio voor follow-up e-mails en recap-decks",
-      "Wissen met één toets tussen secties van de demo"
+      "Leg een momentopname van het scherm of een regio vast voor opvolgmailtjes en samenvattende decks",
+      "Wis met één toets tussen secties van de demo"
     ],
     "faq": [
       {

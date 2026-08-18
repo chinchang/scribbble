@@ -14,11 +14,11 @@
     "items": [
       {
         "tagline": "以现代 Mac 为先的屏幕标注应用",
-        "summary": "Scribbble 以 Mac 为先设计，配有可停靠在左侧或右侧边缘的现代工具栏。除了常见的画笔、箭头、矩形、椭圆和文本工具外，还内置 Spotlight（聚焦暗化）、荧光笔、测量工具和用于捕捉全屏或区域的 Snapshot 截图工具——这是多数竞争对手所不具备的组合。可免费下载试用，购买一次性授权即可解锁全部功能。",
+        "summary": "Scribbble 以 Mac 为先设计，拥有可停靠在左侧或右侧的现代工具栏。除常见的笔、箭头、矩形、椭圆和文字工具外，还内置 Spotlight（聚焦变暗）、荧光笔、量尺、放大（屏幕缩放）以及可捕获整屏或区域的快照工具——这是大多数竞争对手无法同时提供的组合。可免费下载试用，解锁全部功能仅需一次性授权。",
         "bestFor": "适合想要现代、原生 Mac 标注工具且不想订阅的教师、设计师与创作者",
         "pros": [
           "以 Mac 为先的设计，配有可停靠左右的现代工具栏",
-          "开箱即用的 Spotlight、荧光笔和测量工具",
+          "开箱即用的 Spotlight、荧光笔、量尺和放大（屏幕缩放）工具",
           "内置 Snapshot 截图工具——无需离开应用即可捕捉全屏或区域",
           "形状工具包含箭头、矩形与椭圆",
           "原生 Apple Silicon 支持",
@@ -28,7 +28,7 @@
         ],
         "cons": [
           "没有内置屏幕录制",
-          "没有内置屏幕缩放（可使用 macOS 辅助功能的缩放）"
+          "没有休息计时器或白板模式"
         ],
         "pricing": "免费 + 一次性授权"
       },
@@ -93,7 +93,7 @@
         "pricing": "因方案而异 — 请向厂商查询"
       }
     ],
-    "conclusion": "如果你想要一款现代、原生 Mac 的屏幕标注应用，具备丰富工具（Spotlight、高亮、测量）且采用一次性付费，Scribbble 是最容易推荐的选择。如果光标高亮是关键，Presentify 是替代方案。如果你的工作流程以截屏为中心，则 CleanShot X 更合适。若你需要其标志性的放大功能，ZoomIt 是免费的 Microsoft 选项。",
+    "conclusion": "如果你想要一款现代、原生 Mac 的屏幕标注应用，工具齐全（Spotlight、荧光笔、量尺、放大）且价格为一次性付费，Scribbble 是最容易推荐的选择。若你需要鼠标光标高亮，可考虑 Presentify。若你的工作流以截图为中心，则 CleanShot X 更合适。想要附带休息计时器的免费选择，可用 Microsoft 的 ZoomIt。",
     "faq": [
       {
         "q": "Mac 上最佳的免费屏幕标注应用是什么？",
@@ -123,18 +123,18 @@
     "items": [
       {
         "tagline": "以 Mac 为先的 ZoomIt 替代品",
-        "summary": "Scribbble 以 Mac 为先设计，带有可停靠在左侧或右侧的现代工具栏，且工具比 ZoomIt 更丰富——包括 Spotlight（聚焦变暗）、高亮、测量、完整的形状（箭头、矩形、椭圆）以及内置的快照工具，可截取全屏或区域。可免费下载，并附带一款免费的截图标注网页工具。折衷之处是：没有屏幕放大功能（可使用 macOS 自带的无障碍缩放）。",
+        "summary": "Scribbble 以 Mac 为先设计，具备可停靠在左侧或右侧的现代工具栏，并且工具集比 ZoomIt 更丰富——包括 Spotlight（聚焦变暗）、荧光笔、量尺、放大（屏幕缩放）、完整形状（箭头、矩形、椭圆）以及可捕获整屏或区域的内置快照工具。它现在也支持 ZoomIt 标志性的屏幕缩放，因此切换不再会失去任何功能。可免费下载试用，并提供配套的免费截图注释网页版工具。",
         "bestFor": "想摆脱 ZoomIt、希望获得现代原生 Mac 体验的任何人",
         "pros": [
           "以 Mac 为先的界面，工具栏可停靠左右",
-          "Spotlight、高亮和测量工具",
+          "Spotlight、荧光笔、量尺和放大（屏幕缩放）工具",
           "内置快照捕获——全屏或选定区域",
           "形状包括箭头、矩形和椭圆",
           "免费下载，一次性授权",
           "原生 Apple Silicon 支持"
         ],
         "cons": [
-          "没有屏幕放大功能"
+          "没有休息计时器或白板模式"
         ],
         "pricing": "免费 + 一次性授权"
       },
@@ -201,7 +201,7 @@
       },
       {
         "q": "如何在 Mac 上获得 ZoomIt 的放大功能？",
-        "a": "macOS 在“系统设置 → 辅助功能 → 缩放”中提供了内置的屏幕缩放。启用后可用 Cmd+Option+8 切换，或用 Ctrl+滚动 进行缩放。将其与 Scribbble 搭配用于标注，就能完全替代 ZoomIt。"
+        "a": "Scribbble 的放大工具能实现同样的效果：按下快捷键，放大你要讲解的屏幕区域，在上面标注，然后退出。如果你不想安装任何软件，macOS 也内置了屏幕缩放：前往 System Settings → Accessibility → Zoom（Cmd+Option+8 可切换，或使用 Ctrl+滚动）。"
       }
     ]
   },
@@ -220,12 +220,12 @@
     "items": [
       {
         "tagline": "在 macOS 上最接近 Epic Pen 的体验",
-        "summary": "Scribbble 是 Mac 用户替代 Epic Pen 的最直接选择。它可在任意应用上方绘制——幻灯片、浏览器、Zoom 屏幕共享——提供画笔、高亮和完整的图形工具包（箭头、矩形、椭圆）以及文本工具。除了 Epic Pen 的功能外，Scribbble 还新增了 Spotlight（聚焦变暗）、测量工具和内置截图（可捕获全屏或区域），并配备现代化的 Mac 原生工具栏，可停靠在左侧或右侧。",
+        "summary": "Scribbble 是 Mac 用户最直接的 Epic Pen 替代品。它可以在任何应用之上绘制——包括幻灯片、浏览器、Zoom 共享——提供笔、荧光笔和完整的形状工具包（箭头、矩形、椭圆）以及文字工具。除了 Epic Pen 的功能外，Scribbble 还增加了 Spotlight（聚焦变暗）、放大（屏幕缩放）、量尺和可捕获整屏或区域的内置快照工具，并拥有可停靠左侧或右侧的现代 Mac 原生工具栏。",
         "bestFor": "想从 Epic Pen 转到 Mac、又希望保留熟悉工作流并获得额外工具的任何人",
         "pros": [
           "以 Mac 为先，原生支持 Apple Silicon",
           "画笔、高亮、图形（箭头、矩形、椭圆）和文本——涵盖 Epic Pen 的核心工具集",
-          "新增 Spotlight 和测量工具，是 Epic Pen 所没有的",
+          "新增了 Epic Pen 没有的 Spotlight、放大（屏幕缩放）和量尺工具",
           "内置截图功能（全屏或选区）——无需另装截图应用",
           "免费下载，可一次性授权购买",
           "现代工具栏，可停靠在屏幕左侧或右侧边缘"
@@ -252,7 +252,7 @@
       {
         "tagline": "微软的免费注释工具，现在也有 Mac 版",
         "summary": "微软的 Sysinternals ZoomIt 现已推出 macOS 版本。它免费、内置屏幕放大功能（Epic Pen 没有），并具备可靠的画笔和图形工具。缺点是界面是对 Windows 工具的忠实移植，完全不像 Mac 应用。",
-        "bestFor": "不介意用 Windows 风格界面，以换取免费 + 屏幕缩放功能的 Mac 用户",
+        "bestFor": "适合不介意使用类 Windows 风格界面以换取免费价格的 Mac 用户，作为离开 Epic Pen 的选择",
         "pros": [
           "微软提供，免费",
           "内置屏幕放大",
@@ -295,7 +295,7 @@
         "pricing": "免费"
       }
     ],
-    "conclusion": "如果你正从 Epic Pen 转到 Mac，Scribbble 是最容易推荐的选择——它覆盖了相同的核心工作流（画笔、高亮、形状、文本），同时提供 Mac 原生界面和 Epic Pen 没有的一些附加工具（Spotlight、Measure）。如果你需要免费替代并能接受 Windows 风格界面，ZoomIt 是微软的免费选项。如果你更偏向以截图为主而不是实时绘制，CleanShot X 更合适。",
+    "conclusion": "如果你从 Epic Pen 转到 Mac，Scribbble 是最容易推荐的选项——它覆盖相同的核心工作流（笔、荧光笔、形状、文字），提供原生 Mac 界面和 Epic Pen 没有的一些附加工具（Spotlight、放大、量尺）。如果你能接受 Windows 风格的界面并想要免费选择，ZoomIt 是微软的替代品。若你更偏向以截图为主的工作流，则应选择 CleanShot X。",
     "faq": [
       {
         "q": "有 Epic Pen 的 Mac 版本吗？",
@@ -303,7 +303,7 @@
       },
       {
         "q": "在 Mac 上有哪些最佳的 Epic Pen 替代品？",
-        "a": "在 macOS 上最强的选项包括 Scribbble（以 Mac 为先，包含 Spotlight + Measure）、Presentify（光标高亮）、ZoomIt（微软免费，包含缩放）和 CleanShot X（如果你需要以截图为中心的工作流）。对于大多数从 Epic Pen 迁移到 Mac 的用户，Scribbble 的体验最为接近。"
+        "a": "macOS 上最强的选择包括 Scribbble（以 Mac 为先，包含 Spotlight、放大和量尺）、Presentify（光标高亮）、ZoomIt（微软免费，包含休息计时器）以及 CleanShot X（适合以截图为主的工作流）。对大多数从 Epic Pen 转到 Mac 的用户来说，Scribbble 是最接近的体验。"
       },
       {
         "q": "人们为什么会选择替代品而不是 Epic Pen？",
@@ -311,7 +311,7 @@
       },
       {
         "q": "Epic Pen 的替代品提供了哪些 Epic Pen 所没有的功能？",
-        "a": "大多数现代替代品至少新增了一项功能：聚焦/Spotlight 工具（将解释区域以外的内容变暗）、Measure 测量工具、屏幕缩放功能（ZoomIt），或内建屏幕录制/截图工具（CleanShot X）。Scribbble 专门增加了 Spotlight、Measure 以及一个配套的免费 Screenshot Annotate 网页工具。"
+        "a": "大多数现代 Epic Pen 替代品至少会增加以下一项：Spotlight/聚焦变暗工具（将除讲解区域外的内容变暗）、屏幕放大以展示细节、用于测量屏幕距离的量尺工具，或内置的屏幕录制功能（例如 CleanShot X）。Scribbble 特别提供了 Spotlight、放大（屏幕缩放）、量尺以及配套的免费截图注释网页版工具。"
       },
       {
         "q": "有没有免费的 Epic Pen 替代品适用于 Mac？",
@@ -323,12 +323,12 @@
     "items": [
       {
         "pricing": "免费 + 一次性授权",
-        "tagline": "可免费试用，并包含 Presentify 所没有的 Measure 工具",
-        "summary": "Scribbble 覆盖了 Presentify 的核心工具集——画笔、高亮、Spotlight、形状（箭头、矩形、椭圆）——并额外提供 Measure 工具和内建的 Snapshot 截图功能（全屏或区域）。与 Presentify 不同，完整应用可免费下载试用；只有在准备好时才会支付一次性许可。它还附带免费的配套 Screenshot Annotate 网页工具，工具栏可以停靠在左侧或右侧边缘。",
-        "bestFor": "想要免费试用、需要 Measure 工具或配套截图标注器的 Presentify 用户",
+        "tagline": "可免费试用，并包含 Presentify 没有的放大和量尺工具",
+        "summary": "Scribbble 在核心工具集上与 Presentify 相当——笔、荧光笔、Spotlight、形状（箭头、矩形、椭圆）——并额外提供放大（屏幕缩放）、量尺工具以及可捕获整屏或区域的内置快照工具。与 Presentify 不同，完整应用可免费下载试用；只有在准备好时才需要一次性授权。它还附带免费的配套 Screenshot Annotate 网页工具，且工具栏可停靠在左侧或右侧。",
+        "bestFor": "适合想要免费试用、需要屏幕放大、量尺工具或配套截图注释工具的 Presentify 用户",
         "pros": [
           "免费下载——在购买前可完整试用",
-          "包含 Presentify 所没有的 Measure 工具",
+          "包含 Presentify 没有的放大（屏幕缩放）和量尺工具",
           "内建 Snapshot 截图（全屏或区域）",
           "免费的配套 Screenshot Annotate 网页工具",
           "现代化工具栏，可停靠左右侧（而非仅浮动）",
@@ -340,8 +340,8 @@
       },
       {
         "tagline": "免费，内置屏幕缩放",
-        "summary": "Microsoft 的 ZoomIt 在 Mac 上完全免费，并且包含 Presentify 所没有的屏幕缩放功能。代价是界面是 Windows 实用工具的移植——功能齐全但缺乏原生 Mac 的感觉。",
-        "bestFor": "想要免费且带屏幕缩放的 Presentify 用户",
+        "summary": "微软的 ZoomIt 在 Mac 上完全免费，并包含 Presentify 所缺乏的屏幕放大和休息计时器。权衡是其界面忠实移植自 Windows 实用程序——功能齐全但不具 Mac 原生的使用感觉。",
+        "bestFor": "想要完全免费的 Presentify 用户",
         "pros": [
           "来自 Microsoft，免费",
           "内置屏幕缩放",
@@ -393,11 +393,11 @@
         "pricing": "免费"
       }
     ],
-    "conclusion": "如果你想在 Presentify 之外寻找替代品以获得免费试用、测量工具或免费的截图标注伴侣，Scribbble 是最接近的匹配。若你明确需要带屏幕缩放的免费选项，ZoomIt 是正确选择。如果你同时需要截图和录屏功能，CleanShot X 能覆盖更多场景。",
+    "conclusion": "如果你想替代 Presentify 是因为想要免费试用、屏幕放大、测量工具或免费的截图标注配套工具，Scribbble 是最接近的选择。若你能接受 Windows 风格的界面并且真想要完全免费的工具，ZoomIt 是合适的选择。如果你需要在实时标注之外同时具备截图和录屏功能，CleanShot X 覆盖的功能更多。",
     "faq": [
       {
         "q": "在 Mac 上哪个是最好的 Presentify 替代品？",
-        "a": "Scribbble 是最接近的 Mac 原生替代品：核心工具集相同（画笔、高亮、聚光、形状）并且额外提供测距工具，可免费下载并一次性授权解锁全部功能。如果你能接受 Windows 风格的界面，ZoomIt 是最佳免费选择。"
+        "a": "Scribbble 是最接近的 Mac 原生替代方案：核心工具相同（钢笔、高亮、聚焦（spotlight）、形状），并额外提供 Magnify（屏幕放大）和 Measure 测量工具，可免费下载并购买一次性许可。如果你能接受 Windows 风格的界面，ZoomIt 是最好的免费选项。"
       },
       {
         "q": "有没有免费的替代品？",
@@ -437,10 +437,10 @@
     "items": [
       {
         "tagline": "为直播课堂打造的现代 Mac 标注应用",
-        "summary": "Scribbble 可在任何 Mac 应用之上绘制——幻灯片、PDF、浏览器、Zoom 共享。内置的 Highlighter 非常适合标注阅读材料；Spotlight 会将焦点以外的区域变暗；画笔、箭头、矩形、椭圆和文本工具可满足实时绘图需求。内置 Snapshot 截图工具可捕捉全屏或区域——便于保存学生作业或课堂截图。一次性授权，免费试用。",
+        "summary": "Scribbble 可在任何 Mac 应用之上进行绘制——幻灯片、PDF、浏览器、Zoom 共享等。高亮工具非常适合批注阅读材料；Spotlight 会将除讲解区域以外的内容变暗以突出重点；Magnify 可放大小字体或代码，让后排也能看清；画笔、箭头、矩形、椭圆和文本工具可满足现场画图需求。内置的 Snapshot 工具可截取全屏或区域——便于保存学生作品或课堂截屏。一次性授权，免费下载试用。",
         "bestFor": "希望使用现代、原生 Mac 工具并内置 Highlighter 与 Spotlight 的教师",
         "pros": [
-          "内置 Highlighter 与 Spotlight（聚焦变暗）",
+          "内置高亮、Spotlight（聚焦变暗）和 Magnify（屏幕放大）",
           "Snapshot 截图（全屏或区域），便于保存课堂截图和学生作业",
           "形状工具包括箭头、矩形和椭圆",
           "在 Zoom、Google Meet 及录制中可用",
@@ -468,7 +468,7 @@
       {
         "tagline": "免费，内置屏幕缩放功能",
         "summary": "Microsoft 的 ZoomIt 现已登陆 macOS。其内置的屏幕缩放对向远程大班展示幻灯片或代码细节非常有用——而且是免费的。",
-        "bestFor": "希望通过屏幕缩放展示细节的教师",
+        "bestFor": "想要带休息计时器的完全免费工具的老师",
         "pros": [
           "免费",
           "内置缩放和休息计时器"

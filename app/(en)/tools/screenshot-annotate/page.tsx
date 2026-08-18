@@ -323,7 +323,8 @@ export default function Page() {
         <p>
           Try the <a href="/">Scribbble Mac app</a> — a Mac-native screen
           annotation app that draws on top of any application on your screen
-          in real time. Perfect for live Zoom presentations, OBS streams and
+          in real time, with pen, highlighter, shapes, Spotlight and Magnify
+          (screen zoom). Perfect for live Zoom presentations, OBS streams and
           recorded tutorials.
         </p>
 

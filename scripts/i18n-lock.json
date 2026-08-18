@@ -444,13 +444,13 @@
     ]
   },
   "messages.home.cards.2.body": {
-    "hash": "0ea27cab1ff49241dfc08325ce915d3beb58ce6384af1c702be55370a268b1e8",
+    "hash": "73a8925137ddee38b6fee3812b82eb68452ceae6dc5b0b1ab1133c8890af4a92",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
@@ -576,25 +576,25 @@
     ]
   },
   "messages.home.downloadSubtitle": {
-    "hash": "fb90d56c3b838ba319bf5f7017304a9a07a3c155d7e0a197ca1147a1662c671c",
+    "hash": "944aea92991e9c185592a18531179e260265cf962c8b7335349788267e5632be",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
   },
   "messages.home.chipMacos": {
-    "hash": "0d97bd001489349811dfb1a5fbed436a45a9797428e99b354f466042b0557e4f",
+    "hash": "2e4a8b526b5418faff78427f3c344f2e3e574372bfb2be29ad982491a42cdd62",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
@@ -720,61 +720,61 @@
     ]
   },
   "messages.home.jsonLd.featureList.7": {
-    "hash": "97345fcc4269001b633136f396b464ff286bbb3b39de5c5d6c912e0b1bd8e8b1",
+    "hash": "2e10ffe62992722a9c792b2249e83fe8dc3c69b034dcc2ca5bb48ebc91eee026",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
   },
   "messages.home.jsonLd.featureList.8": {
-    "hash": "b47afe8661b0551fd5d96fdec69f815723c0f9087e5ded2a388342fac21ce4c9",
+    "hash": "97345fcc4269001b633136f396b464ff286bbb3b39de5c5d6c912e0b1bd8e8b1",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
   },
   "messages.home.jsonLd.featureList.9": {
-    "hash": "99e70a9d696f7dc8eb3c1531012a2bdfa2ff8b06e48e96d164f32a2eef201bf5",
+    "hash": "b47afe8661b0551fd5d96fdec69f815723c0f9087e5ded2a388342fac21ce4c9",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
   },
   "messages.home.jsonLd.featureList.10": {
-    "hash": "7859d192ce3d115134716434c2ccd6bc6b3278348a823a93f23d18d95e3a5fe1",
+    "hash": "99e70a9d696f7dc8eb3c1531012a2bdfa2ff8b06e48e96d164f32a2eef201bf5",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
   },
   "messages.home.jsonLd.featureList.11": {
-    "hash": "228aff38dc84a9076c20a55d1c0d89365d2328bae2c89e1bf2bdcd02b72f7ed6",
+    "hash": "7859d192ce3d115134716434c2ccd6bc6b3278348a823a93f23d18d95e3a5fe1",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
@@ -984,13 +984,13 @@
     ]
   },
   "messages.zoomitVsEpicPen.tldr.2.body": {
-    "hash": "abd7ee46664fac105466ce06f476f5e4bce26d33021904b2984577e44c04d6b8",
+    "hash": "524eaad4391cce0190807c5f620df24b8f55038c64be5863901b5b1081ef6b75",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
@@ -1512,13 +1512,13 @@
     ]
   },
   "messages.zoomitVsEpicPen.macBody": {
-    "hash": "74e3828a910123db12fefc4ebf1bd19fc11cfa8f811d25cbdfbc7d3f5992e345",
+    "hash": "1058aa0f36bd29dad3f6f79e8588067dc614488fcc75ad7c96245af29ffc3066",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
@@ -1548,13 +1548,13 @@
     ]
   },
   "messages.zoomitVsEpicPen.scribbbleFits.1": {
-    "hash": "6cbb40477fef533f8a338ee43c66915f2021b6676c455bc293685a420f88e6ad",
+    "hash": "064c14660028c3653bb8a29495a0c71d197b1f2246a005744494ff467450d7b4",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
@@ -1752,13 +1752,13 @@
     ]
   },
   "messages.zoomitVsEpicPen.faq.3.a": {
-    "hash": "0f5a991b71c50eef137932f91e15884d498fb60d5e203a9d015e2f8044cf39c7",
+    "hash": "bf67cd3d4f0c605e2a63d44791b58715c52ec3de7d4c31943389aca12e3c3876",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
@@ -1776,13 +1776,13 @@
     ]
   },
   "messages.zoomitVsEpicPen.faq.4.a": {
-    "hash": "a12c1afb120d0c15afbbd9a1eafe35f05325b8b3c7e807df7f491621eec2d95c",
+    "hash": "2f1971f8668740d172ee650472efea534469e9c8a5fcadbc4f9c230c5e089174",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
@@ -2364,13 +2364,13 @@
     ]
   },
   "messages.personaPage.ctaSubtitle": {
-    "hash": "78c853ce8ab8a079403fb2d745b76642f118576bba545a6dbfbaa8a7665a5580",
+    "hash": "277441772bd94623ca4e7e02069cdfab28fd9cf572935e15f70b8e9d9a3b3f45",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
@@ -2676,61 +2676,61 @@
     ]
   },
   "data.personas.teachers.featuredTools.3": {
-    "hash": "d43a28231ac595cdcb443a7a36b7ed9b9260775a4db172700dceb5477d07c169",
+    "hash": "e61036c0621309dc1ee32c47fa2530155be8329377123182e74ea8edb0592cca",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
   },
   "data.personas.teachers.featuredTools.4": {
-    "hash": "d6ccfd6da292d5fe2cce35fcfadcee220e72854a2c16c0d32b3da5d7eadbbea2",
+    "hash": "d43a28231ac595cdcb443a7a36b7ed9b9260775a4db172700dceb5477d07c169",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
   },
   "data.personas.teachers.featuredTools.5": {
-    "hash": "0c9bad4a517fea06b57c0fe1d461d6dda8b15d6a42dba3f11524dfdac488ece6",
+    "hash": "d6ccfd6da292d5fe2cce35fcfadcee220e72854a2c16c0d32b3da5d7eadbbea2",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
   },
   "data.personas.teachers.featuredTools.6": {
-    "hash": "14b3efd1bb48fe24e32f5f46f319f905392bc8a1bb711325e33139996eb0217a",
+    "hash": "0c9bad4a517fea06b57c0fe1d461d6dda8b15d6a42dba3f11524dfdac488ece6",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
   },
   "data.personas.teachers.featuredTools.7": {
-    "hash": "73e6ddd88700bb586ee90e347b868422921e9803faaa084c614354e4008f0242",
+    "hash": "14b3efd1bb48fe24e32f5f46f319f905392bc8a1bb711325e33139996eb0217a",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
@@ -3024,49 +3024,49 @@
     ]
   },
   "data.personas.streamers.featuredTools.3": {
-    "hash": "6608df43285542785cdcc924f2ac90a04e570dc758d1b1c6a0d4828e7d8bc213",
+    "hash": "e8ec5872c6b3d1b8f7018c08f26c0e131f32e0eb0b3c8192f69142b324673bd7",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
   },
   "data.personas.streamers.featuredTools.4": {
-    "hash": "3df47cbcfca2f2200c08da2891cf229aad07bd7381c3b4be7a20b7b019de8caa",
+    "hash": "6608df43285542785cdcc924f2ac90a04e570dc758d1b1c6a0d4828e7d8bc213",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
   },
   "data.personas.streamers.featuredTools.5": {
-    "hash": "085004b616c908588084e2d359602abd798a17a3080bcfe7ee23a1b6debd1716",
+    "hash": "3df47cbcfca2f2200c08da2891cf229aad07bd7381c3b4be7a20b7b019de8caa",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
   },
   "data.personas.streamers.featuredTools.6": {
-    "hash": "0897b3263860561bd068ae1060dfbf74d684614d95625bc82546810e0cb6ec5d",
+    "hash": "085004b616c908588084e2d359602abd798a17a3080bcfe7ee23a1b6debd1716",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
@@ -3336,61 +3336,61 @@
     ]
   },
   "data.personas.youtubers.featuredTools.3": {
-    "hash": "27912e94ace7761e2cb99fccfbc1d2d9ca922c5e620b013d10f172d48a26b453",
+    "hash": "7e1f5f6a2b0b3d37c5659e6c97aa9d22b01e7fdba8c5a9848afa05ca3ffc7e32",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
   },
   "data.personas.youtubers.featuredTools.4": {
-    "hash": "723b2eb8847fff4994ce442ffe2e894156bbcff2cd1788cedac8b4998743b187",
+    "hash": "27912e94ace7761e2cb99fccfbc1d2d9ca922c5e620b013d10f172d48a26b453",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
   },
   "data.personas.youtubers.featuredTools.5": {
-    "hash": "ec999dd665825522aec87b8e79ff84a8d028cd070bf08736f685b06ffc7148ae",
+    "hash": "723b2eb8847fff4994ce442ffe2e894156bbcff2cd1788cedac8b4998743b187",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
   },
   "data.personas.youtubers.featuredTools.6": {
-    "hash": "7244617433ca0ed314aa22ddecedb49293e635cca4b6cd3e6aa249167b8d91d3",
+    "hash": "ec999dd665825522aec87b8e79ff84a8d028cd070bf08736f685b06ffc7148ae",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
   },
   "data.personas.youtubers.featuredTools.7": {
-    "hash": "db391c65a6280e6067a86dc9d02b03ea347ccf88ad1c38686e5283e439de5225",
+    "hash": "7244617433ca0ed314aa22ddecedb49293e635cca4b6cd3e6aa249167b8d91d3",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
@@ -3708,49 +3708,49 @@
     ]
   },
   "data.personas.designers.featuredTools.5": {
-    "hash": "1843c81963f0429da30facbb69794836df2e295ecd4e1111fbd71125fa254ad9",
+    "hash": "7a4a4ae58ead3452cdd1fbebcbc5127f8e19a6b06cb1ec7a941cfaa8a07a5914",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
   },
   "data.personas.designers.featuredTools.6": {
-    "hash": "75cbfb6831e3e98952ee32d2a201e29fbf6f56f5288981d7b1715ecc785e3362",
+    "hash": "1843c81963f0429da30facbb69794836df2e295ecd4e1111fbd71125fa254ad9",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
   },
   "data.personas.designers.featuredTools.7": {
-    "hash": "1dde2e352f7a51ecc81098906e1bbc0ae2d2ac20973be0b9ae0dbcb25c48260e",
+    "hash": "75cbfb6831e3e98952ee32d2a201e29fbf6f56f5288981d7b1715ecc785e3362",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
   },
   "data.personas.designers.featuredTools.8": {
-    "hash": "d23c48222c852331050ca6402e9d6ea4445537c3e39cb1ead28609c4eee95d40",
+    "hash": "1dde2e352f7a51ecc81098906e1bbc0ae2d2ac20973be0b9ae0dbcb25c48260e",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
@@ -4008,61 +4008,61 @@
     ]
   },
   "data.personas.sales-teams.featuredTools.2": {
-    "hash": "27912e94ace7761e2cb99fccfbc1d2d9ca922c5e620b013d10f172d48a26b453",
+    "hash": "858dfbac7ca3a3414f3c8f8e9728d64c70c169c1d994444470fdcc6ffe0c7076",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
   },
   "data.personas.sales-teams.featuredTools.3": {
-    "hash": "82d1d35468d200d30dfd3097f5d8abf08f2e95804a09f822b2d76f20b915029b",
+    "hash": "27912e94ace7761e2cb99fccfbc1d2d9ca922c5e620b013d10f172d48a26b453",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
   },
   "data.personas.sales-teams.featuredTools.4": {
-    "hash": "e843a441c305f1de2b4e5dd0bf3bb2dbdc7080e1ebb72014b8ba74039d2e63e6",
+    "hash": "82d1d35468d200d30dfd3097f5d8abf08f2e95804a09f822b2d76f20b915029b",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
   },
   "data.personas.sales-teams.featuredTools.5": {
-    "hash": "e42e1e9c6dff28aec3f2cf60c9a52ece9403414b83312b51986cecf21b442940",
+    "hash": "e843a441c305f1de2b4e5dd0bf3bb2dbdc7080e1ebb72014b8ba74039d2e63e6",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
   },
   "data.personas.sales-teams.featuredTools.6": {
-    "hash": "ab4ac929b93bbededb012f883c4e39e56be3faefe057ddb1cb6fa7d4f60c7ccb",
+    "hash": "e42e1e9c6dff28aec3f2cf60c9a52ece9403414b83312b51986cecf21b442940",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
@@ -4152,13 +4152,13 @@
     ]
   },
   "data.comparisons.zoomit.subheadline": {
-    "hash": "f46ee7e3612bcfe052a97a66cf39bbf7843e60dbae4c768d2a2e0944900dee76",
+    "hash": "9bec6c2cefc05e007706f6e7f65c6c0ed1ba1dbeac35c746942a97630c5334b3",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
@@ -4200,13 +4200,13 @@
     ]
   },
   "data.comparisons.zoomit.competitorStrengths.2": {
-    "hash": "a195fb175b2d3248e8a0e56eafcae2aaa95328fbec11801839bccf1c35e62b75",
+    "hash": "7f9ece6fb9814ae0f5d97e03a2e9b26f8c717b125af60fefbe534fc6b665465a",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
@@ -4236,13 +4236,13 @@
     ]
   },
   "data.comparisons.zoomit.scribbbleStrengths.2": {
-    "hash": "40ace103148015447b88384bfa91a8a89984cf4d5a8d2f4878d066f44a6bb2d8",
+    "hash": "530534a33a73abe829b45a741c6c1d85275712d607e729da3ca056becda798fd",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
@@ -4296,13 +4296,13 @@
     ]
   },
   "data.comparisons.zoomit.whenToChooseScribbble.1": {
-    "hash": "3df0b0bfc9d26e880bd95e8f6d13c9c85d6d0fa542e4e43c5dd6a3511f8bf4b4",
+    "hash": "99b1954166c49204f29f1462e09fb049714f4a01aecb22377cd6240efbf2a1a4",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
@@ -4320,13 +4320,13 @@
     ]
   },
   "data.comparisons.zoomit.whenToChooseCompetitor.0": {
-    "hash": "b64f0db5165ccad5c9f56b687f323f69764c92fe6400879ff27c37de702350b7",
+    "hash": "c5e927c0d731c75c05bac2dd2fe9eec62340940045e4beea3012b8773abb35e5",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
@@ -4440,37 +4440,37 @@
     ]
   },
   "data.comparisons.zoomit.table.7.feature": {
-    "hash": "b7c997383778fc0f2467a6639322253a11090647fa318640aeedd0663e1f53c5",
+    "hash": "cdc8912273e124780d6119d96336f3d8d6867baa9ff0ef78ea39d983480375a4",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
   },
   "data.comparisons.zoomit.table.8.feature": {
-    "hash": "d984d36c4f95dd9892b3df96b7bb34246c6f0e9384715e7445540477e9d8c957",
+    "hash": "b7c997383778fc0f2467a6639322253a11090647fa318640aeedd0663e1f53c5",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
   },
   "data.comparisons.zoomit.table.9.feature": {
-    "hash": "fcb4d3fe6814ed04a1a5cca84b87caed7c41495806f4aa5f15082c93c3a65fd6",
+    "hash": "d984d36c4f95dd9892b3df96b7bb34246c6f0e9384715e7445540477e9d8c957",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
@@ -4548,13 +4548,13 @@
     ]
   },
   "data.comparisons.zoomit.faq.1.a": {
-    "hash": "2c734fd00a1ec96db2158f1911b9fdde0928451f1272965089d842e64e7a8011",
+    "hash": "fbbb823559bacab19c34470a3c5f6b85555f4981da8571e5840224d259e9e2a5",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
@@ -4668,13 +4668,13 @@
     ]
   },
   "data.comparisons.presentify.scribbbleStrengths.1": {
-    "hash": "95bf18a0425c252634e1a093751aafb21fda0243a40c829a3a5b91de12f68eca",
+    "hash": "5ed1cf4548929f2266254de758a521744aa4e9aced8d2bc5aa3ea7d399eca23b",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
@@ -4884,85 +4884,73 @@
     ]
   },
   "data.comparisons.presentify.table.6.feature": {
-    "hash": "b7c997383778fc0f2467a6639322253a11090647fa318640aeedd0663e1f53c5",
+    "hash": "cdc8912273e124780d6119d96336f3d8d6867baa9ff0ef78ea39d983480375a4",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
   },
   "data.comparisons.presentify.table.7.feature": {
-    "hash": "02325f6f5289bc6a63339f7844ebce3296d12ab85192c28a21b296a7b34e27c4",
+    "hash": "b7c997383778fc0f2467a6639322253a11090647fa318640aeedd0663e1f53c5",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
   },
   "data.comparisons.presentify.table.8.feature": {
-    "hash": "e8852ddb833f2d473c1dd6ecf86e3a217319b2eb46171c72909d081280add084",
+    "hash": "02325f6f5289bc6a63339f7844ebce3296d12ab85192c28a21b296a7b34e27c4",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
   },
   "data.comparisons.presentify.table.9.feature": {
-    "hash": "72a23e549d099bbd49b9266bb96afba35da89e5a93a91b056a61c9326c16266f",
+    "hash": "e8852ddb833f2d473c1dd6ecf86e3a217319b2eb46171c72909d081280add084",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
-      "nl",
-      "fr"
-    ]
-  },
-  "data.comparisons.presentify.table.9.scribbble": {
-    "hash": "9ad506a18c65251405a8af329c9308d5c66155f5e3eb6138ad4abc437c4247e0",
-    "done": [
       "hi",
-      "es",
-      "zh",
-      "ja",
-      "de",
       "nl",
       "fr"
     ]
   },
   "data.comparisons.presentify.table.10.feature": {
-    "hash": "e139856754f14eefe65949259ff45c1ebce221e3e9247cacceaf671dcc605285",
+    "hash": "72a23e549d099bbd49b9266bb96afba35da89e5a93a91b056a61c9326c16266f",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
   },
   "data.comparisons.presentify.table.10.scribbble": {
-    "hash": "bd95ca5c1a0b6b3156579764f84c10d8326f57ef20c2cfa1dc9f622f12c7ccaa",
+    "hash": "9ad506a18c65251405a8af329c9308d5c66155f5e3eb6138ad4abc437c4247e0",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
@@ -5184,13 +5172,13 @@
     ]
   },
   "data.comparisons.cleanshot-x.scribbbleStrengths.2": {
-    "hash": "6edfa04df8574a103d763aa41bc636d7c847d5b22ba5b0467c20665815cb89ba",
+    "hash": "bda0049fdc24b33cad66975d2c10273fe57612b4c38c8c914186a83dfce66ad9",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
@@ -5340,109 +5328,85 @@
     ]
   },
   "data.comparisons.cleanshot-x.table.3.feature": {
-    "hash": "314410c8b86ee48e8d85c67fce6b034318d5aaa8786bbd27c4b22a2631afa1c0",
+    "hash": "cdc8912273e124780d6119d96336f3d8d6867baa9ff0ef78ea39d983480375a4",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
   },
   "data.comparisons.cleanshot-x.table.4.feature": {
-    "hash": "b7c997383778fc0f2467a6639322253a11090647fa318640aeedd0663e1f53c5",
+    "hash": "314410c8b86ee48e8d85c67fce6b034318d5aaa8786bbd27c4b22a2631afa1c0",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
   },
   "data.comparisons.cleanshot-x.table.5.feature": {
-    "hash": "34b357edbd3c0e1267795f5782e9f1779978b8b89f0ae4df10765bf415c8f9bc",
+    "hash": "b7c997383778fc0f2467a6639322253a11090647fa318640aeedd0663e1f53c5",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
-      "nl",
-      "fr"
-    ]
-  },
-  "data.comparisons.cleanshot-x.table.5.scribbble": {
-    "hash": "525706907d6efde58e2a0c0e862c499e0b3187842d5f7b8c8ee78872e732f143",
-    "done": [
       "hi",
-      "es",
-      "zh",
-      "ja",
-      "de",
       "nl",
       "fr"
     ]
   },
   "data.comparisons.cleanshot-x.table.6.feature": {
-    "hash": "9a7086639561d00fa2f6d2e5f0f49308fb61d6a6ea0c8d8bb375b25ea58a7447",
+    "hash": "34b357edbd3c0e1267795f5782e9f1779978b8b89f0ae4df10765bf415c8f9bc",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
   },
   "data.comparisons.cleanshot-x.table.7.feature": {
-    "hash": "b2a5183e9957cc96690c605ae072b983b3d4b952eef9dcf7c0742602345345c3",
+    "hash": "9a7086639561d00fa2f6d2e5f0f49308fb61d6a6ea0c8d8bb375b25ea58a7447",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
   },
   "data.comparisons.cleanshot-x.table.8.feature": {
-    "hash": "89d64bdbc8eb8be951272ce777ed6445ff4ef1f8fee0b8962d7305cb4fff2ee6",
+    "hash": "b2a5183e9957cc96690c605ae072b983b3d4b952eef9dcf7c0742602345345c3",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
   },
   "data.comparisons.cleanshot-x.table.9.feature": {
-    "hash": "dfe95783edfef7918760312f94edd764f4ce3ffd38b90c2c955a0cc3b250f040",
+    "hash": "89d64bdbc8eb8be951272ce777ed6445ff4ef1f8fee0b8962d7305cb4fff2ee6",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
-      "nl",
-      "fr"
-    ]
-  },
-  "data.comparisons.cleanshot-x.table.9.scribbble": {
-    "hash": "ddd7eb99b3575ba4b318573e20e49ffbc4b6ef65fdc70521a0e8f9cb2233c383",
-    "done": [
       "hi",
-      "es",
-      "zh",
-      "ja",
-      "de",
       "nl",
       "fr"
     ]
@@ -5604,13 +5568,13 @@
     ]
   },
   "data.comparisons.epic-pen.scribbbleStrengths.2": {
-    "hash": "f7ca46ad479b31a99428a71f42c906a0d76dd798b239071df99b7fe679fb076c",
+    "hash": "63b72fa92d21d38edaa45a62a484e6a771852f1f2051570f10c19f98e06f1030",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
@@ -5760,37 +5724,37 @@
     ]
   },
   "data.comparisons.epic-pen.table.5.feature": {
-    "hash": "b7c997383778fc0f2467a6639322253a11090647fa318640aeedd0663e1f53c5",
+    "hash": "cdc8912273e124780d6119d96336f3d8d6867baa9ff0ef78ea39d983480375a4",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
   },
   "data.comparisons.epic-pen.table.6.feature": {
-    "hash": "6ad30660ad546afa36a33bec62ae86fa4478e352200d25b7f138bf831b54953e",
+    "hash": "b7c997383778fc0f2467a6639322253a11090647fa318640aeedd0663e1f53c5",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
   },
   "data.comparisons.epic-pen.table.7.feature": {
-    "hash": "24c3dc0df62ba346ae83f062201b2f07f26bf842c107bd166e503d0191014728",
+    "hash": "6ad30660ad546afa36a33bec62ae86fa4478e352200d25b7f138bf831b54953e",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
@@ -5940,13 +5904,13 @@
     ]
   },
   "data.comparisons.annotate.scribbbleStrengths.1": {
-    "hash": "f7ca46ad479b31a99428a71f42c906a0d76dd798b239071df99b7fe679fb076c",
+    "hash": "63b72fa92d21d38edaa45a62a484e6a771852f1f2051570f10c19f98e06f1030",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
@@ -6096,61 +6060,49 @@
     ]
   },
   "data.comparisons.annotate.table.4.feature": {
-    "hash": "b7c997383778fc0f2467a6639322253a11090647fa318640aeedd0663e1f53c5",
+    "hash": "cdc8912273e124780d6119d96336f3d8d6867baa9ff0ef78ea39d983480375a4",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
   },
   "data.comparisons.annotate.table.5.feature": {
-    "hash": "34b357edbd3c0e1267795f5782e9f1779978b8b89f0ae4df10765bf415c8f9bc",
+    "hash": "b7c997383778fc0f2467a6639322253a11090647fa318640aeedd0663e1f53c5",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
-      "nl",
-      "fr"
-    ]
-  },
-  "data.comparisons.annotate.table.5.scribbble": {
-    "hash": "bd95ca5c1a0b6b3156579764f84c10d8326f57ef20c2cfa1dc9f622f12c7ccaa",
-    "done": [
       "hi",
-      "es",
-      "zh",
-      "ja",
-      "de",
       "nl",
       "fr"
     ]
   },
   "data.comparisons.annotate.table.6.feature": {
-    "hash": "28b4d621fd9b5875996908013fd320fa128d9781ae913eeb453af1fea20ab8ee",
+    "hash": "34b357edbd3c0e1267795f5782e9f1779978b8b89f0ae4df10765bf415c8f9bc",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
   },
   "data.comparisons.annotate.table.7.feature": {
-    "hash": "1d54d9264a581592429111303e63f4db559d1d477d51b91eae95753188658771",
+    "hash": "28b4d621fd9b5875996908013fd320fa128d9781ae913eeb453af1fea20ab8ee",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
@@ -6312,13 +6264,13 @@
     ]
   },
   "data.listicles.best-screen-annotation-apps-mac.items.0.summary": {
-    "hash": "680ceed6e3937817854adf420fde0a1dc70146e0a8f93be497fde66631b72d9e",
+    "hash": "10e00882a2378043a4de203eb0dac652ec2070c62f161c1aac0f22c53c7bb8d4",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
@@ -6348,13 +6300,13 @@
     ]
   },
   "data.listicles.best-screen-annotation-apps-mac.items.0.pros.1": {
-    "hash": "41f7600ef141e44f451edbab9940f605ca68dc9e4da6b0e9c56dd33820d9e4da",
+    "hash": "8e44674f6f63d6e9a2b5d787d32bcab2a4b31cd0929d2fc05e6316e342f832b4",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
@@ -6444,13 +6396,13 @@
     ]
   },
   "data.listicles.best-screen-annotation-apps-mac.items.0.cons.1": {
-    "hash": "afcce7dbbe66a9fc4fd4c54861dd969ae90843a0034edecfe6140cac76451b7e",
+    "hash": "8df98780665c63ab7242f90219b62b120ebd078b3598ab683de0293c9096c6aa",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
@@ -6900,13 +6852,13 @@
     ]
   },
   "data.listicles.best-screen-annotation-apps-mac.conclusion": {
-    "hash": "952a3723d12bd29321721d042b9ac4a6c1283f2a0453e99e822c5de9b4cea5cb",
+    "hash": "daf15f493a9c95cf06e8097be3c401c0e03caf3ff07ee0110372bce5ffe87481",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
@@ -7092,13 +7044,13 @@
     ]
   },
   "data.listicles.best-zoomit-alternatives-mac.items.0.summary": {
-    "hash": "48e0d8dcb0ef05e28e2de6601190e9d76eb9aa63b956ca3b64bb946fdfb0a503",
+    "hash": "66192d40d968462cd4c3ffb79bb330faf1cb2bc152e9c7624c470f054d72c6b1",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
@@ -7128,13 +7080,13 @@
     ]
   },
   "data.listicles.best-zoomit-alternatives-mac.items.0.pros.1": {
-    "hash": "ec73e26bd77dbbcbfb2109071418f0f28bf93e36287e4f91188bffb25e70d8f9",
+    "hash": "22aab7aa7bc1a62af472dc0172b1998278e4c3d38ba97b3e415a3010f8d8f117",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
@@ -7188,13 +7140,13 @@
     ]
   },
   "data.listicles.best-zoomit-alternatives-mac.items.0.cons.0": {
-    "hash": "10180fa2808be44d705a6028ee6016da08e9a33cd9a42ddfa87173aec0627708",
+    "hash": "8df98780665c63ab7242f90219b62b120ebd078b3598ab683de0293c9096c6aa",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
@@ -7620,13 +7572,13 @@
     ]
   },
   "data.listicles.best-zoomit-alternatives-mac.faq.1.a": {
-    "hash": "217c580764a23761eb02fd0ac92542c52cc6dc0c64fa473529ba5feed99348da",
+    "hash": "c0f5e3f1fd65b85531944fc8cdd19ecd2ead05f179c47357e9c3c3e7ff2b121e",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
@@ -7752,13 +7704,13 @@
     ]
   },
   "data.listicles.best-epic-pen-alternatives-mac.items.0.summary": {
-    "hash": "c040bc589818419af870feb800fc991d0ed8815a8850afc32e0c89d783190ec7",
+    "hash": "53ab9182a426802886838c2e064ccf97770ee4eda875978a60f798f95b0bafd8",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
@@ -7800,13 +7752,13 @@
     ]
   },
   "data.listicles.best-epic-pen-alternatives-mac.items.0.pros.2": {
-    "hash": "d9d1c886d08a6ab87820aea8178d0bf83d5d99b38e9b55179b9b930e686e2a9e",
+    "hash": "f3662c3668dbeb561e83bd6876e09cfff2dbab25af59364b5c6ee6722c9eb9a0",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
@@ -7992,13 +7944,13 @@
     ]
   },
   "data.listicles.best-epic-pen-alternatives-mac.items.2.bestFor": {
-    "hash": "470a6f580f192fde2cfea569d0bb889fc4981477026424fafbfac66a34abb7e9",
+    "hash": "fdfb57f76c3ad6290a1054fe401a7c27f76b6ce1e3a708d7797ccbc975d8287d",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
@@ -8292,13 +8244,13 @@
     ]
   },
   "data.listicles.best-epic-pen-alternatives-mac.conclusion": {
-    "hash": "4825e75c926db8ef71397f7649b82656a347f2da4b24b05952759040a753a5d9",
+    "hash": "eeca12866e4504f3962978f3642932a376fb4402ac2eb76533d6efab9f094112",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
@@ -8340,13 +8292,13 @@
     ]
   },
   "data.listicles.best-epic-pen-alternatives-mac.faq.1.a": {
-    "hash": "8fc444866a56ee70b4ae6095c3b9270dc811ddb98529a655eea1398b46e42cbe",
+    "hash": "26581dd47b50710c81b6948598a93572c4a62c93dedd1578f151ce059cd0a712",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
@@ -8388,13 +8340,13 @@
     ]
   },
   "data.listicles.best-epic-pen-alternatives-mac.faq.3.a": {
-    "hash": "7a0ba4e59b0b229654fc39cee42a71cd5bd0e73c05a89dea9f69fc612e1313b0",
+    "hash": "73a1569df98a20a4bbf0db8896d94303cdd4771b4a388573b4530956cfe9cc60",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
@@ -8520,37 +8472,37 @@
     ]
   },
   "data.listicles.best-presentify-alternatives-mac.items.0.tagline": {
-    "hash": "13d509722c1c3d3783de2b9901702a7840ed67ed7d8fc0fe7d8e913f61c9e738",
+    "hash": "ff246f823643acce58a92acf9c46cec4cddfe557b662c3c3ddbb67c8207cb299",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
   },
   "data.listicles.best-presentify-alternatives-mac.items.0.summary": {
-    "hash": "851cfe7a155c4ad9f85d0f37eb58b9c95a6accfc472febb1757f40d2ad08fbcf",
+    "hash": "d0dca5ac8f56a05c2f6088942b5cd93f091b315d6ad5e42b937177bd5f3caa1a",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
   },
   "data.listicles.best-presentify-alternatives-mac.items.0.bestFor": {
-    "hash": "dddb7faf4b56ecec428166e1976622d6ab0369a8663bd72ec7345f3d3367d36b",
+    "hash": "e223fd158a082c0f2fe4bccba64e81c78e88105deb40773fc08cf35d23a32fb4",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
@@ -8568,13 +8520,13 @@
     ]
   },
   "data.listicles.best-presentify-alternatives-mac.items.0.pros.1": {
-    "hash": "519cbf94f1ca7b0c0ff718e9e0210064b31c0dfa347d420d93504cde215c3e42",
+    "hash": "dc794dfd711fed1ee81620ac8f0b01a01b7a9c62bcf9d96188870ef6238340ec",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
@@ -8664,25 +8616,25 @@
     ]
   },
   "data.listicles.best-presentify-alternatives-mac.items.1.summary": {
-    "hash": "82e9e458560ce7fbebb389a51fecf821b01f4037c7a4b338e0dbd99925914719",
+    "hash": "e08c93455bf0478fadc7fe019e24a5182894d116d7d6805af06274122afa0bc9",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
   },
   "data.listicles.best-presentify-alternatives-mac.items.1.bestFor": {
-    "hash": "3efd2ba3d69d3fe736b11d6b992560e28b0f89d14dd4606bec0c50f962368a66",
+    "hash": "e957ef733d174fd8c771e0523e91cd457a484ea1945bbc011282499b1f69ad11",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
@@ -9012,13 +8964,13 @@
     ]
   },
   "data.listicles.best-presentify-alternatives-mac.conclusion": {
-    "hash": "12817123fa312a8b42932960221deea79d6fc95696aa2fca78f88ba8972a270d",
+    "hash": "127e2d531ed595938295a2311277b6f8bf1b3858ad2dae8755736c04c29b0f4f",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
@@ -9036,13 +8988,13 @@
     ]
   },
   "data.listicles.best-presentify-alternatives-mac.faq.0.a": {
-    "hash": "d387cdf879940a65a06236bba26ab0575bf4df0cec277e6de150d88770123e14",
+    "hash": "fe3ceed93cc3cccf355c92d7c546f61d120873fbb546c8daef81f672039526dd",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
@@ -9228,13 +9180,13 @@
     ]
   },
   "data.listicles.best-screen-annotation-tools-for-teachers.items.0.summary": {
-    "hash": "6f7e2eb33bd9bf6b4c5676942f87b6cbd279b38659d2b2d55ad8b177f414b792",
+    "hash": "e8272945419ed4d977ebd0bafab74cbafd2f36c680fb122fbb0f6d432dde262d",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
@@ -9252,13 +9204,13 @@
     ]
   },
   "data.listicles.best-screen-annotation-tools-for-teachers.items.0.pros.0": {
-    "hash": "ad4de1ad0905b503676f8285b074252b54d101678b35d0740ade7c09133800fc",
+    "hash": "120c03d2580eb8f7430272477458539d0a116bb1c9c364d627674c4d87ed1914",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
@@ -9456,13 +9408,13 @@
     ]
   },
   "data.listicles.best-screen-annotation-tools-for-teachers.items.2.bestFor": {
-    "hash": "51d7d6dda247a3588e155775d06321a5cba88c70a63b0298e97823e9be5834de",
+    "hash": "2c675c58d882a0d85748ac7b537f6e12833192514bc897385ed0f291bbd3127a",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
@@ -9840,7 +9792,7 @@
     ]
   },
   "data.comparisons.ink2go.scribbbleStrengths.2": {
-    "hash": "54030c9be0e985acd7328608a8024b90c50f9b778f125495570ee0cba809628b",
+    "hash": "23879aa38a0295212fe98638362beed0a34d3851b9c9faf4bfb4ff599a001784",
     "done": [
       "es",
       "zh",
@@ -10080,7 +10032,7 @@
     ]
   },
   "data.comparisons.ink2go.table.7.feature": {
-    "hash": "b7c997383778fc0f2467a6639322253a11090647fa318640aeedd0663e1f53c5",
+    "hash": "cdc8912273e124780d6119d96336f3d8d6867baa9ff0ef78ea39d983480375a4",
     "done": [
       "es",
       "zh",
@@ -10092,7 +10044,7 @@
     ]
   },
   "data.comparisons.ink2go.table.8.feature": {
-    "hash": "e3d290866b9a1cc8f95c6c8c4c128fde95168112a5bf6a2e9fbb2cc089894be1",
+    "hash": "b7c997383778fc0f2467a6639322253a11090647fa318640aeedd0663e1f53c5",
     "done": [
       "es",
       "zh",
@@ -10104,7 +10056,7 @@
     ]
   },
   "data.comparisons.ink2go.table.9.feature": {
-    "hash": "610e8e2ead6ae64cf0e802de7b476f4013c6448f56380f2d814cf9c2f9961377",
+    "hash": "e3d290866b9a1cc8f95c6c8c4c128fde95168112a5bf6a2e9fbb2cc089894be1",
     "done": [
       "es",
       "zh",
@@ -10116,7 +10068,7 @@
     ]
   },
   "data.comparisons.ink2go.table.10.feature": {
-    "hash": "3572836d2612451119d406fb31d10abdc197abb7dcb27278745418ce416da89f",
+    "hash": "610e8e2ead6ae64cf0e802de7b476f4013c6448f56380f2d814cf9c2f9961377",
     "done": [
       "es",
       "zh",
@@ -10128,7 +10080,7 @@
     ]
   },
   "data.comparisons.ink2go.table.11.feature": {
-    "hash": "530820160bc78078ac36e43d7d96b051a2274e7c42a98a8e134cf0d18aca14eb",
+    "hash": "3572836d2612451119d406fb31d10abdc197abb7dcb27278745418ce416da89f",
     "done": [
       "es",
       "zh",
@@ -10140,7 +10092,7 @@
     ]
   },
   "data.comparisons.ink2go.table.12.feature": {
-    "hash": "e8852ddb833f2d473c1dd6ecf86e3a217319b2eb46171c72909d081280add084",
+    "hash": "530820160bc78078ac36e43d7d96b051a2274e7c42a98a8e134cf0d18aca14eb",
     "done": [
       "es",
       "zh",
@@ -10152,7 +10104,7 @@
     ]
   },
   "data.comparisons.ink2go.table.13.feature": {
-    "hash": "5d521f286ea644057e4bb688b7c998a93472dd17fc80c7cbbe15456d6b51ec13",
+    "hash": "e8852ddb833f2d473c1dd6ecf86e3a217319b2eb46171c72909d081280add084",
     "done": [
       "es",
       "zh",
@@ -10164,19 +10116,7 @@
     ]
   },
   "data.comparisons.ink2go.table.14.feature": {
-    "hash": "e139856754f14eefe65949259ff45c1ebce221e3e9247cacceaf671dcc605285",
-    "done": [
-      "es",
-      "zh",
-      "ja",
-      "de",
-      "hi",
-      "nl",
-      "fr"
-    ]
-  },
-  "data.comparisons.ink2go.table.14.scribbble": {
-    "hash": "bd95ca5c1a0b6b3156579764f84c10d8326f57ef20c2cfa1dc9f622f12c7ccaa",
+    "hash": "5d521f286ea644057e4bb688b7c998a93472dd17fc80c7cbbe15456d6b51ec13",
     "done": [
       "es",
       "zh",
@@ -10236,7 +10176,7 @@
     ]
   },
   "data.comparisons.ink2go.faq.1.a": {
-    "hash": "0d92790973703b80e148469d79857dacce133511c97e67f7e7bb060261f9f96b",
+    "hash": "0e9b27ca49d145a6527c801e79c838e6069991420dee8614f7b75bd19425e2ba",
     "done": [
       "es",
       "zh",
@@ -10356,7 +10296,7 @@
     ]
   },
   "data.comparisons.presentify.answerSections.0.body.1": {
-    "hash": "494411173fd2e159f5e34ea02156510adea68ca88f617960805668355f3c2043",
+    "hash": "bda3785c394e971a5e6d51a837dc382711824864b578c7f5c2bf6feac2d69584",
     "done": [
       "es",
       "zh",
@@ -10404,7 +10344,7 @@
     ]
   },
   "data.comparisons.presentify.answerSections.1.body.1": {
-    "hash": "9a70eb606b4e089eac5277a40de33aaf4b14ca9e010a3b765f1d3ed35bdb76df",
+    "hash": "d5f1491bec1c38b6e7452835daa46c48d760e8f5d3b17c3dba304a14d8d6763e",
     "done": [
       "es",
       "zh",
@@ -10572,7 +10512,7 @@
     ]
   },
   "data.comparisons.epic-pen.answerSections.2.body.2": {
-    "hash": "41835b0986ea395519498801bf6f8d0e2a32d816e40e83bfebf365f64dbdbc32",
+    "hash": "1f0dcab92f5826893b8b9c56a9e4a5fc3e829dc5bf90f4a19e954a682fcf16ca",
     "done": [
       "es",
       "zh",
@@ -10596,7 +10536,7 @@
     ]
   },
   "data.comparisons.epic-pen.answerSections.3.body.0": {
-    "hash": "2069327881923397c4e9c2a33182e8becf79acef377e8795bbee6f11ffaa3506",
+    "hash": "cbbabaf8e6825c9ea822e2b850b2162b5f846d72f106ba6282f6e79baa84ccba",
     "done": [
       "es",
       "zh",
@@ -10729,6 +10669,210 @@
   },
   "data.comparisons.epic-pen.faq.5.a": {
     "hash": "b1f991ad15973ebd0c756896cd300ec67e2ae1a4841ee0b7a2726e0f16e54d15",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.home.jsonLd.featureList.12": {
+    "hash": "228aff38dc84a9076c20a55d1c0d89365d2328bae2c89e1bf2bdcd02b72f7ed6",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.personas.teachers.featuredTools.8": {
+    "hash": "73e6ddd88700bb586ee90e347b868422921e9803faaa084c614354e4008f0242",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.personas.streamers.featuredTools.7": {
+    "hash": "0897b3263860561bd068ae1060dfbf74d684614d95625bc82546810e0cb6ec5d",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.personas.youtubers.featuredTools.8": {
+    "hash": "db391c65a6280e6067a86dc9d02b03ea347ccf88ad1c38686e5283e439de5225",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.personas.designers.featuredTools.9": {
+    "hash": "d23c48222c852331050ca6402e9d6ea4445537c3e39cb1ead28609c4eee95d40",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.personas.sales-teams.featuredTools.7": {
+    "hash": "ab4ac929b93bbededb012f883c4e39e56be3faefe057ddb1cb6fa7d4f60c7ccb",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.zoomit.competitorStrengths.3": {
+    "hash": "a195fb175b2d3248e8a0e56eafcae2aaa95328fbec11801839bccf1c35e62b75",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.presentify.table.11.feature": {
+    "hash": "e139856754f14eefe65949259ff45c1ebce221e3e9247cacceaf671dcc605285",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.presentify.table.11.scribbble": {
+    "hash": "bd95ca5c1a0b6b3156579764f84c10d8326f57ef20c2cfa1dc9f622f12c7ccaa",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.cleanshot-x.table.6.scribbble": {
+    "hash": "525706907d6efde58e2a0c0e862c499e0b3187842d5f7b8c8ee78872e732f143",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.cleanshot-x.table.10.feature": {
+    "hash": "dfe95783edfef7918760312f94edd764f4ce3ffd38b90c2c955a0cc3b250f040",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.cleanshot-x.table.10.scribbble": {
+    "hash": "ddd7eb99b3575ba4b318573e20e49ffbc4b6ef65fdc70521a0e8f9cb2233c383",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.epic-pen.table.8.feature": {
+    "hash": "24c3dc0df62ba346ae83f062201b2f07f26bf842c107bd166e503d0191014728",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.annotate.table.6.scribbble": {
+    "hash": "bd95ca5c1a0b6b3156579764f84c10d8326f57ef20c2cfa1dc9f622f12c7ccaa",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.annotate.table.8.feature": {
+    "hash": "1d54d9264a581592429111303e63f4db559d1d477d51b91eae95753188658771",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.ink2go.table.15.feature": {
+    "hash": "e139856754f14eefe65949259ff45c1ebce221e3e9247cacceaf671dcc605285",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "data.comparisons.ink2go.table.15.scribbble": {
+    "hash": "bd95ca5c1a0b6b3156579764f84c10d8326f57ef20c2cfa1dc9f622f12c7ccaa",
     "done": [
       "es",
       "zh",

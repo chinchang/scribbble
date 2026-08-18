@@ -50,7 +50,7 @@
       },
       {
         "title": "ペンだけじゃない",
-        "body": "ペン、ハイライター、矢印、矩形、楕円、テキストに加え、Spotlight（フォーカスディム）、測定ツール、アプリを離れずに画面全体や領域を撮れるスナップショット機能を備えています。"
+        "body": "ペン、蛍光ペン、矢印、矩形、楕円、テキストに加え、Spotlight（フォーカスディム）、ライブ画面の細部を拡大するMagnify、測定ツール、アプリを離れずに全画面や選択領域をキャプチャできる内蔵のSnapshotツールを搭載。"
       },
       {
         "title": "無料で試せる、買い切りライセンス",
@@ -65,8 +65,8 @@
     "linksGuidesTitle": "Mac 画面注釈ガイド",
     "linkGuide": "画面注釈の完全ガイド",
     "downloadTitle": "準備はいいですか？ <gradient>scribble</gradient> を始めましょう",
-    "downloadSubtitle": "買い切り価格。macOS 11 以降を搭載したすべての Mac で動作。生涯無料アップデート付き。",
-    "chipMacos": "macOS 11.0+ (Intel/Silicon)",
+    "downloadSubtitle": "買い切り価格。macOS 14以降を搭載したすべてのMacで動作します。生涯無料アップデート付き。",
+    "chipMacos": "macOS 14.0+ (Intel/Silicon)",
     "chipNoSignup": "サインアップ不要",
     "chipRefund": "14日間返金保証",
     "jsonLd": {
@@ -79,11 +79,12 @@
         "楕円シェイプ",
         "テキスト注釈",
         "スポットライト（フォーカスディム）",
+        "Magnify — 細部を見せるための画面拡大機能",
         "測定ツール",
-        "スナップショット撮影 — 画面全体または選択領域",
-        "ツールバーは左右どちらの端にもドッキング可能",
-        "Apple Silicon ネイティブ",
-        "無料の補助ツール Screenshot Annotate（Web）"
+        "Snapshotキャプチャ — 全画面または選択領域",
+        "ツールバーを左右どちらの端にもドッキング可能",
+        "Apple Siliconネイティブ",
+        "無償のコンパニオン Screenshot Annotate ウェブツール"
       ],
       "offerDescription": "ダウンロードは無料。全機能は買い切りライセンスで利用可能。"
     }
@@ -113,7 +114,7 @@
       },
       {
         "lead": "Scribbbleを選ぶ理由",
-        "body": "Macを使っていて、Epic Penのような磨きのかかった、ネイティブなMacアプリを求め、さらにSpotlightやMeasureのような充実したツール群が欲しいなら。"
+        "body": "Macで、Epic Penの洗練さとZoomIt風の画面拡大を併せ持ち、Spotlight、Magnify、Measureなど両者より豊富なツールセットを求めるなら。"
       }
     ],
     "whatIsZoomitTitle": "ZoomItとは？",
@@ -205,11 +206,11 @@
       "画面ズームや休憩タイマー機能が不要な場合"
     ],
     "macTitle": "Mac を使ってますか？こちらの方がおすすめです。",
-    "macBody": "Epic Pen は macOS ではまったく動作せず、ZoomIt の Mac ポートは依然として Windows のユーティリティ感があります。Mac で本当にネイティブな体験を求めるなら、Scribbble は macOS 向けに設計されており、モダンでドラッグ可能なツールバー、Apple Silicon ネイティブの高速動作、そして ZoomIt や Epic Pen より豊富なツールセット（Spotlight、Measure）を備えています。",
+    "macBody": "Epic PenはそもそもmacOSで動作せず、ZoomItのMac移植版はまだWindowsユーティリティの雰囲気が残っています。Macで本当にネイティブな感覚のアプリを求めるなら、ScribbbleはmacOS専用に設計されており、モダンなドラッグ可能ツールバー、Apple Siliconネイティブの高速性、そしてZoomItやEpic Penより豊富なツール群（Spotlight、Magnify、Measure）を備えています。",
     "scribbbleFitsTitle": "Scribbble の位置づけ",
     "scribbbleFits": [
       "Epic Pen と同等の基本ツール（ペン、蛍光ペン、矢印、四角形、テキスト）を有料の Pro 階層なしで提供",
-      "ZoomIt や Epic Pen にはない Spotlight（フォーカスディム）と Measure ツールを追加",
+      "Spotlight（フォーカスディム）、Magnify（画面拡大）、Measure（測定）を追加 — Epic Penにはこれらがなく、ZoomItは拡大のみを提供します。",
       "Mac ネイティブの UI と Apple Silicon 対応",
       "無料でダウンロードして試せる、買い切りライセンス"
     ],
@@ -235,11 +236,11 @@
       },
       {
         "q": "ZoomIt と Epic Pen の両方の Mac 向け代替はありますか？",
-        "a": "はい。Scribbble は Mac を第一に考えた画面注釈アプリで、両者の良い点を組み合わせています — Epic Pen のようなモダンで洗練された UI と、ZoomIt のようなホットキー主導の集中ワークフローの両方を持ちます。ペン、蛍光ペン、矢印、四角形、テキスト、Spotlight（フォーカスディム）、Measure ツールを含み、無料でダウンロードして試せ、全機能を解除する買い切りライセンスです。"
+        "a": "はい。ScribbbleはMacを第一に考えた画面注釈アプリで、Epic Penのようなモダンで洗練されたUIと、ZoomItのようなホットキー中心のワークフローの良い点を組み合わせています。ペン、蛍光ペン、矢印、矩形、テキスト、Spotlight（フォーカスディム）、Magnify（画面拡大）、Measureを含み、無料でダウンロードして試せ、ワンタイムライセンスで全機能をアンロックできます。"
       },
       {
         "q": "代替ツールは Epic Pen にないどんな機能を提供していますか？",
-        "a": "最新の代替ツールは通常、少なくとも次のいずれかを追加します：Spotlight／フォーカスディムツール、画面上の距離を測る Measure ツール、画面ズーム（ZoomIt）、または内蔵の画面録画機能（CleanShot X）。Scribbble は特に Spotlight、Measure、そして無料の Screenshot Annotate（ウェブツール）を追加しています。ZoomIt はズーム、休憩タイマー、ホワイトボードモードを提供します。"
+        "a": "多くの現代的な代替ツールは少なくとも以下のいずれかを追加しています：Spotlight／フォーカスディム、細部表示のための画面拡大、画面上の距離を測る測定ツール、または内蔵の画面録画機能（CleanShot X）。Scribbbleは特にSpotlight、Magnify（画面拡大）、Measure、そして無償のコンパニオン Screenshot Annotate ウェブツールを追加しています。ZoomItは拡大、休憩タイマー、ホワイトボードモードを追加します。"
       },
       {
         "q": "レビュー担当者は Epic Pen の代わりにどの注釈ツールを推奨していますか？",
@@ -266,16 +267,16 @@
     "pricing": "価格：",
     "scribbbleVsItem": "Scribbble vs {name}",
     "bottomLine": "結論",
+    "stillImagesTitle": "ライブ画面ではなくスクリーンショットを注釈したい？",
+    "stillImagesBody": "この一覧のアプリはすべて、Macのライブ画面上に直接描画します。すでに撮ったスクリーンショットをマークアップしたい場合は別の作業なので、当社の無料のMacスクリーンショット注釈ツールを使ってください。画像を貼り付けて矢印やテキスト、番号付き手順、機密情報を伏せるぼかしを追加し、そのまま結果をクリップボードにコピーできます。ブラウザ上で動くので何もインストールする必要はなく、画像がデバイスを離れることもありません。",
+    "stillImagesCta": "無料のMacスクリーンショット注釈ツールを開く",
     "ctaTitle": "お試しはこちら：<gradient>Scribbble</gradient>",
     "ctaSubtitle": "無料ダウンロード。買い切りライセンス。ネイティブmacOS。",
     "otherGuides": "その他のガイド",
     "compareTitle": "Scribbble を比較する",
     "scribbbleVs": "Scribbble vs {competitor}",
     "forYourRole": "役割別の Scribbble",
-    "scribbbleFor": "{audience}向け Scribbble",
-    "stillImagesTitle": "ライブ画面ではなくスクリーンショットを注釈したい？",
-    "stillImagesBody": "この一覧のアプリはすべて、Macのライブ画面上に直接描画します。すでに撮ったスクリーンショットをマークアップしたい場合は別の作業なので、当社の無料のMacスクリーンショット注釈ツールを使ってください。画像を貼り付けて矢印やテキスト、番号付き手順、機密情報を伏せるぼかしを追加し、そのまま結果をクリップボードにコピーできます。ブラウザ上で動くので何もインストールする必要はなく、画像がデバイスを離れることもありません。",
-    "stillImagesCta": "無料のMacスクリーンショット注釈ツールを開く"
+    "scribbbleFor": "{audience}向け Scribbble"
   },
   "vsPage": {
     "breadcrumbVs": "対",
@@ -305,7 +306,7 @@
     "howTitle": "{audience} が使う方法",
     "toolsTitle": "重要なツール",
     "ctaTitle": "Scribbble を<gradient>無料</gradient>で試す",
-    "ctaSubtitle": "{audience} のために設計。macOS 11+ に対応。",
+    "ctaSubtitle": "{audience} 向けに作られています。macOS 14+で動作します。",
     "otherRolesTitle": "他の役割向け Scribbble",
     "scribbbleFor": "{audience}向け Scribbble",
     "compareTitle": "Scribbble と比較",

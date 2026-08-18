@@ -50,7 +50,7 @@
       },
       {
         "title": "More than just a pen",
-        "body": "Pen, highlighter, arrow, rectangle, ellipse and text — plus Spotlight (focus dim), a Measure tool, and a built-in Snapshot tool that captures the whole screen or a region without leaving the app."
+        "body": "Pen, highlighter, arrow, rectangle, ellipse and text — plus Spotlight (focus dim), Magnify to zoom into fine detail on the live screen, a Measure tool, and a built-in Snapshot tool that captures the whole screen or a region without leaving the app."
       },
       {
         "title": "Free to try, one-time license",
@@ -65,8 +65,8 @@
     "linksGuidesTitle": "Mac screen annotation guides",
     "linkGuide": "The complete guide to screen annotation",
     "downloadTitle": "Ready to <gradient>scribble</gradient>?",
-    "downloadSubtitle": "One-time price. Works on every Mac running macOS 11 or later. Free updates for life.",
-    "chipMacos": "macOS 11.0+ (Intel/Silicon)",
+    "downloadSubtitle": "One-time price. Works on every Mac running macOS 14 or later. Free updates for life.",
+    "chipMacos": "macOS 14.0+ (Intel/Silicon)",
     "chipNoSignup": "No Signup Required",
     "chipRefund": "14-day refund",
     "jsonLd": {
@@ -79,6 +79,7 @@
         "Ellipse shape",
         "Text annotations",
         "Spotlight (focus dim)",
+        "Magnify — screen zoom for showing fine detail",
         "Measure tool",
         "Snapshot capture — whole screen or selected region",
         "Toolbar docks to the left or right edge",
@@ -113,7 +114,7 @@
       },
       {
         "lead": "Pick Scribbble",
-        "body": "if you're on Mac and want a modern, Mac-native app with the polish of Epic Pen and a richer toolset (Spotlight, Measure) than either."
+        "body": "if you're on Mac and want a modern, Mac-native app with the polish of Epic Pen, ZoomIt-style screen zoom, and a richer toolset (Spotlight, Magnify, Measure) than either."
       }
     ],
     "whatIsZoomitTitle": "What is ZoomIt?",
@@ -153,11 +154,11 @@
       "You don't need screen zoom or break timer features"
     ],
     "macTitle": "On a Mac? Here's the better option.",
-    "macBody": "Epic Pen doesn't run on macOS at all, and ZoomIt's Mac port still feels like a Windows utility. If you're on a Mac and want something that actually feels like a Mac app, Scribbble is built specifically for macOS — with a modern draggable toolbar, Apple Silicon native performance, and a richer toolset (Spotlight, Measure) than either ZoomIt or Epic Pen.",
+    "macBody": "Epic Pen doesn't run on macOS at all, and ZoomIt's Mac port still feels like a Windows utility. If you're on a Mac and want something that actually feels like a Mac app, Scribbble is built specifically for macOS — with a modern draggable toolbar, Apple Silicon native performance, and a richer toolset (Spotlight, Magnify, Measure) than either ZoomIt or Epic Pen.",
     "scribbbleFitsTitle": "Where Scribbble fits in",
     "scribbbleFits": [
       "Same core tools as Epic Pen — pen, highlighter, arrow, rectangle, text — without a Pro paywall",
-      "Adds Spotlight (focus dim) and Measure tools that neither ZoomIt nor Epic Pen include",
+      "Adds Spotlight (focus dim), Magnify (screen zoom) and Measure tools — Epic Pen has none of them, and ZoomIt only has the zoom",
       "Mac-native UI with Apple Silicon support",
       "Free to download and try, one-time license"
     ],
@@ -183,11 +184,11 @@
       },
       {
         "q": "Is there a Mac alternative to both ZoomIt and Epic Pen?",
-        "a": "Yes. Scribbble is a Mac-first screen annotation app that combines what's good about both — a modern, polished UI like Epic Pen, with the focused, hotkey-driven workflow of ZoomIt. It includes pen, highlighter, arrow, rectangle, text, Spotlight (focus dim) and Measure tools, free to download and try with a one-time license to unlock everything."
+        "a": "Yes. Scribbble is a Mac-first screen annotation app that combines what's good about both — a modern, polished UI like Epic Pen, with the focused, hotkey-driven workflow of ZoomIt. It includes pen, highlighter, arrow, rectangle, text, Spotlight (focus dim), Magnify (screen zoom) and Measure tools, free to download and try with a one-time license to unlock everything."
       },
       {
         "q": "What features do alternatives offer that Epic Pen doesn't?",
-        "a": "Most modern alternatives add at least one of: a Spotlight / focus-dim tool, a Measure tool for on-screen distances, a screen zoom (ZoomIt), or a built-in screen recorder (CleanShot X). Scribbble specifically adds Spotlight, Measure and a companion free Screenshot Annotate web tool. ZoomIt adds zoom, break timer and whiteboard mode."
+        "a": "Most modern alternatives add at least one of: a Spotlight / focus-dim tool, a screen zoom for showing fine detail, a Measure tool for on-screen distances, or a built-in screen recorder (CleanShot X). Scribbble specifically adds Spotlight, Magnify (screen zoom), Measure and a companion free Screenshot Annotate web tool. ZoomIt adds zoom, break timer and whiteboard mode."
       },
       {
         "q": "Which screen annotation tools do reviewers recommend instead of Epic Pen?",
@@ -253,7 +254,7 @@
     "howTitle": "How {audience} use it",
     "toolsTitle": "The tools that matter most",
     "ctaTitle": "Try Scribbble <gradient>free</gradient>",
-    "ctaSubtitle": "Built for {audience}. Works on macOS 11+.",
+    "ctaSubtitle": "Built for {audience}. Works on macOS 14+.",
     "otherRolesTitle": "Scribbble for other roles",
     "scribbbleFor": "Scribbble for {audience}",
     "compareTitle": "Compare Scribbble",

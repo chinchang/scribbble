@@ -28,10 +28,11 @@
       "Stiftwerkzeug mit leuchtenden, stream-freundlichen Farben",
       "Textmarker zum Hervorheben von Text auf dem Bildschirm",
       "Spotlight, um den Blick des Chats auf einen Bereich des Gameplays zu lenken",
+      "Magnify (Bildschirmvergrößerung), um kleine UI‑Elemente, Item‑Stats oder die Minikarte lesbar zu machen",
       "Pfeilwerkzeug für schnelle Callouts",
-      "Rechteck-, Ellipse- und Textwerkzeuge für Overlays",
-      "Screenshot des Bildschirms oder eines Bereichs für Clip-Thumbnails und Highlights nach dem Stream",
-      "Schnell-löschen-Hotkey, um den Bildschirm zwischen Segmenten zu leeren"
+      "Rechteck-, Ellipsen‑ und Textwerkzeuge für Overlays",
+      "Screenshot des Bildschirms oder eines Bereichs für Clip‑Thumbnails und Highlights nach dem Stream",
+      "Quick‑clear‑Hotkey, um den Bildschirm zwischen Segmenten zu löschen"
     ],
     "faq": [
       {
@@ -83,10 +84,11 @@
       "Stiftwerkzeug für freihändige Hervorhebungen",
       "Textmarker zum Markieren von Code oder Text auf dem Bildschirm",
       "Spotlight, um alles außer dem gezeigten Teil abzudunkeln",
+      "Magnify (Bildschirmvergrößerung), damit kleine UI und Code auf handygroßen Bildschirmen lesbar werden",
       "Pfeilwerkzeug für geführte Touren",
-      "Rechteck, Ellipse und Text für Feature-Callouts",
-      "Einen Screenshot des Bildschirms oder eines Bereichs für Videothumbnails und B‑Roll‑Stills erstellen",
-      "Mehrere Farben, um Konzepte zu unterscheiden",
+      "Rechteck, Ellipse und Text für Feature‑Hinweise",
+      "Screenshot des Bildschirms oder eines Bereichs für Videothumbnails und B‑Roll‑Stills",
+      "Mehrere Farben zur Unterscheidung von Konzepten",
       "Rückgängig / Wiederholen, damit du bei kleinen Fehlern weiter aufnehmen kannst"
     ],
     "faq": [
@@ -138,11 +140,12 @@
       "Freihand‑Stift für Diagramme und Unterstreichungen",
       "Textmarker, um wichtige Passagen in einem Text oder auf einer Folie hervorzuheben",
       "Spotlight, das alles abdunkelt außer dem Bereich, den du erklärst",
+      "Magnify (Bildschirmvergrößerung), um kleinen Text, Code oder Diagramm‑Details für die hinteren Reihen zu vergrößern",
       "Pfeilwerkzeug, um Aufmerksamkeit zu lenken",
-      "Rechteck‑ und Ellipsenformen, um Konzepte einzurahmen oder zu umkreisen",
-      "Textwerkzeug für Vokabelhinweise",
-      "Schnappschuss des ganzen Bildschirms oder eines Bereichs, um Schülerarbeiten oder Unterrichts‑Stills zu speichern",
-      "Schnellradierer, um Folien sauber zu halten"
+      "Rechteck‑ und Ellipsenformen, um Schlüsselkonzepte einzurahmen oder zu kreisen",
+      "Textwerkzeug für Vokabel‑Hinweise",
+      "Screenshot des gesamten Bildschirms oder eines Bereichs, um Schülerarbeiten oder Unterrichtsstandbilder zu speichern",
+      "Schnell‑Löschen, um Folien sauber zu halten"
     ],
     "faq": [
       {
@@ -199,10 +202,11 @@
       "Rechteck‑ und Ellipsen‑Formen für Abstands‑ und Komponentenhervorhebungen",
       "Highlighter zum Markieren von Text und Inhaltsblöcken",
       "Spotlight, um einen Crit auf einen Frame zu fokussieren",
-      "Pfeil‑Tool für Flow‑Kritik",
-      "Text‑Tool für Inline‑Notizen",
-      "Einen Frame oder Bereich snapshotten und direkt in ein Linear‑Ticket oder Design‑Dokument einfügen",
-      "Die Werkzeugleiste links oder rechts andocken, um die Arbeitsfläche frei zu halten"
+      "Magnify (Bildschirmvergrößerung), um Typo‑ und Pixel‑Details zu prüfen, ohne die Arbeitsfläche zu verlassen",
+      "Pfeilwerkzeug für Flow‑Kritik",
+      "Textwerkzeug für Inline‑Notizen",
+      "Screenshot eines Frames oder Bereichs, um ihn direkt in ein Linear‑Ticket oder ein Designdokument zu ziehen",
+      "Werkzeugleiste an linkem oder rechtem Rand andocken, um die Arbeitsfläche frei zu halten"
     ],
     "faq": [
       {
@@ -248,11 +252,12 @@
     "featuredTools": [
       "Textmarker für ROI-Zahlen und Preiszeilen",
       "Spotlight, das alles abdunkelt außer dem Dashboard-Widget, das du zeigst",
+      "Magnify (Bildschirmvergrößerung), um die Kennzahl oder Position, über die du sprichst, zu vergrößern",
       "Pfeilwerkzeug für geführte Touren",
-      "Rechteck- und Ellipsenformen für Preis- und Feature-Hinweise",
+      "Rechteck‑ und Ellipsenformen für Preis‑ und Feature‑Hinweise",
       "Textwerkzeug für Inline-Beschriftungen",
-      "Screenshot des gesamten Bildschirms oder eines Bereichs für Follow-up-Mails und Recap-Decks",
-      "Ein Tastendruck, um zwischen Demo-Abschnitten alles zu löschen"
+      "Screenshot des Bildschirms oder eines Bereichs für Follow-up-E-Mails und Zusammenfassungs-Decks",
+      "Mit einer Taste zwischen Abschnitten der Demo alles löschen"
     ],
     "faq": [
       {

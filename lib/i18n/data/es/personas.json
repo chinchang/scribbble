@@ -28,10 +28,11 @@
       "Herramienta Pluma con colores brillantes pensados para streaming",
       "Resaltador para enfatizar texto en pantalla",
       "Spotlight para centrar la atención del chat en una parte del gameplay",
-      "Herramienta Flecha para llamados rápidos",
-      "Herramientas Rectángulo, elipse y texto para superposiciones",
-      "Captura la pantalla o una región para miniaturas de clips y destacados post-stream",
-      "Tecla rápida para limpiar y borrar la pantalla entre segmentos"
+      "Magnify (zoom de pantalla) para llevar UI pequeñas, estadístivas de objetos o el minimapa a un detalle legible",
+      "Herramienta de flecha para llamadas rápidas",
+      "Rectángulo, elipse y herramientas de texto para superposiciones",
+      "Captura instantánea de la pantalla o una región para miniaturas de clips y destacados post-transmisión",
+      "Tecla rápida de borrado para limpiar la pantalla entre secciones"
     ],
     "faq": [
       {
@@ -83,11 +84,12 @@
       "Herramienta Pluma para énfasis a mano alzada",
       "Resaltador para marcar código o texto en pantalla",
       "Spotlight para atenuar todo excepto la parte que estás demostrando",
-      "Herramienta Flecha para tours guiados",
-      "Rectángulo, elipse y texto para llamados de funciones",
-      "Captura la pantalla o una región para miniaturas de vídeo y fotogramas B-roll",
-      "Varios colores para diferenciar conceptos",
-      "Deshacer / rehacer para que puedas seguir grabando pese a pequeños errores"
+      "Magnify (zoom de pantalla) para hacer legible UI y código pequeños en pantallas de teléfono",
+      "Herramienta de flecha para recorridos guiados",
+      "Rectángulo, elipse y texto para llamadas de funciones",
+      "Captura instantánea de la pantalla o una región para miniaturas de vídeo y fotogramas B-roll",
+      "Múltiples colores para diferenciar conceptos",
+      "Deshacer / rehacer para seguir grabando pese a pequeños errores"
     ],
     "faq": [
       {
@@ -138,10 +140,11 @@
       "Pluma libre para diagramas y subrayados",
       "Marcador para señalar pasajes clave en una lectura o diapositiva",
       "Spotlight para atenuar todo excepto la parte que estás explicando",
+      "Magnify (zoom de pantalla) para ampliar texto pequeño, código o detalles de diagramas para la última fila",
       "Herramienta de flecha para dirigir la atención",
-      "Formas rectángulo y elipse para encuadrar o rodear conceptos clave",
-      "Herramienta de texto para llamados de vocabulario",
-      "Captura la pantalla completa o una región para guardar trabajos del alumnado o imágenes de la lección",
+      "Formas de rectángulo y elipse para encuadrar o rodear conceptos clave",
+      "Herramienta de texto para llamadas de vocabulario",
+      "Captura instantánea de toda la pantalla o una región para guardar trabajos de alumnos o fotogramas de la lección",
       "Borrado rápido para mantener las diapositivas limpias"
     ],
     "faq": [
@@ -189,11 +192,12 @@
     "featuredTools": [
       "Marcador para números de ROI y filas de precios",
       "Spotlight para atenuar todo salvo el widget del panel que muestras",
+      "Magnify (zoom de pantalla) para ampliar la métrica o partida de la que estás hablando",
       "Herramienta de flecha para recorridos guiados",
-      "Formas rectángulo y elipse para señalar precios y funcionalidades",
-      "Herramienta de texto para etiquetas inline",
-      "Captura la pantalla o una región para emails de seguimiento y resúmenes de la demo",
-      "Borra con una sola tecla entre secciones de la demo"
+      "Formas de rectángulo y elipse para llamadas sobre precios y funciones",
+      "Herramienta de texto para etiquetas en línea",
+      "Captura la pantalla o una región para correos de seguimiento y resúmenes",
+      "Borrar con una tecla entre secciones de la demo"
     ],
     "faq": [
       {
@@ -249,10 +253,11 @@
       "Formas rectángulo y elipse para señalar espaciados y componentes",
       "Resaltador para marcar textos y bloques de contenido",
       "Spotlight para centrar una crítica en un fotograma a la vez",
-      "Herramienta flecha para críticas de flujo",
+      "Magnify (zoom de pantalla) para inspeccionar tipografía y píxeles sin salir del lienzo",
+      "Herramienta de flecha para crítica de flujos",
       "Herramienta de texto para notas inline",
-      "Captura un fotograma o región para pegar directamente en un ticket de Linear o documento de diseño",
-      "Fija la barra de herramientas al borde izquierdo o derecho para mantener el lienzo despejado"
+      "Captura una pantalla o región para pegar directamente en un ticket de Linear o un documento de diseño",
+      "Ancla la barra de herramientas al borde izquierdo o derecho para mantener el lienzo despejado"
     ],
     "faq": [
       {

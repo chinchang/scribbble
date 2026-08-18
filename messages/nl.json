@@ -50,7 +50,7 @@
       },
       {
         "title": "Meer dan alleen een pen",
-        "body": "Pen, marker, pijl, rechthoek, ellips en tekst — plus Spotlight (focus dim), een Meet-tool en een ingebouwde Snapshot-tool die het hele scherm of een regio vastlegt zonder de app te verlaten."
+        "body": "Pen, markeerstift, pijl, rechthoek, ellips en tekst — plus Spotlight (focusdimming), Magnify om details live op het scherm in te zoomen, een Meetlint-tool en een ingebouwde Snapshot-tool die het hele scherm of een geselecteerd gebied vastlegt zonder de app te verlaten."
       },
       {
         "title": "Gratis te proberen, eenmalige licentie",
@@ -65,8 +65,8 @@
     "linksGuidesTitle": "Gidsen voor schermannotatie op Mac",
     "linkGuide": "De complete gids voor schermannotatie",
     "downloadTitle": "Klaar om te <gradient>scribble</gradient>?",
-    "downloadSubtitle": "Eenmalige prijs. Werkt op elke Mac met macOS 11 of later. Gratis updates voor het leven.",
-    "chipMacos": "macOS 11.0+ (Intel/Silicon)",
+    "downloadSubtitle": "Eenmalige prijs. Werkt op elke Mac met macOS 14 of hoger. Gratis updates voor het leven.",
+    "chipMacos": "macOS 14.0+ (Intel/Silicon)",
     "chipNoSignup": "Geen aanmelding nodig",
     "chipRefund": "14 dagen terugbetaling",
     "jsonLd": {
@@ -79,10 +79,11 @@
         "Ellipsvorm",
         "Tekstannotaties",
         "Spotlight (focus dim)",
-        "Meettool",
-        "Snapshot vastleggen — volledig scherm of geselecteerd gebied",
-        "Werkbalk klikt vast aan linker- of rechterzijde",
-        "Native voor Apple Silicon",
+        "Magnify — schermzoom om fijne details te tonen",
+        "Meetlint-tool",
+        "Snapshot — hele scherm of geselecteerd gebied vastleggen",
+        "Werkbalk kan vastgezet worden aan linker- of rechterrand",
+        "Apple Silicon native",
         "Gratis begeleidend Screenshot Annotate webtool"
       ],
       "offerDescription": "Gratis te downloaden. Eenmalige licentie voor volledige functionaliteit."
@@ -113,7 +114,7 @@
       },
       {
         "lead": "Kies Scribbble",
-        "body": "als je op Mac zit en een moderne, native Mac-app wilt met de polish van Epic Pen en een rijkere set tools (Spotlight, Measure) dan beide."
+        "body": "als je op een Mac werkt en een moderne, Mac-native app wilt met de afwerking van Epic Pen, het ZoomIt-achtige schermzoom en een rijkere set tools (Spotlight, Magnify, Meetlint) dan beide bieden."
       }
     ],
     "whatIsZoomitTitle": "Wat is ZoomIt?",
@@ -205,11 +206,11 @@
       "Je geen behoefte hebt aan scherm‑zoom of pauze‑timer functies"
     ],
     "macTitle": "Op een Mac? Dit is de betere keuze.",
-    "macBody": "Epic Pen draait helemaal niet op macOS, en ZoomIt's Mac‑port voelt nog steeds als een Windows‑hulpmiddel. Als je op een Mac zit en iets wilt dat echt als een Mac‑app aanvoelt, is Scribbble speciaal voor macOS gebouwd — met een moderne sleepbare werkbalk, native prestaties op Apple Silicon en een rijker arsenaal aan tools (Spotlight, Measure) dan zowel ZoomIt als Epic Pen.",
+    "macBody": "Epic Pen draait helemaal niet op macOS, en de Mac-port van ZoomIt voelt nog steeds als een Windows-hulpprogramma. Als je op een Mac werkt en iets wilt dat écht als een Mac-app aanvoelt, is Scribbble specifiek gebouwd voor macOS — met een moderne sleepbare werkbalk, native Apple Silicon-prestaties en een rijkere set tools (Spotlight, Magnify, Meetlint) dan zowel ZoomIt als Epic Pen.",
     "scribbbleFitsTitle": "Waar Scribbble in past",
     "scribbbleFits": [
       "Zelfde kerntools als Epic Pen — pen, marker, pijl, rechthoek, tekst — zonder Pro‑betaalmuur",
-      "Voegt Spotlight (focus dim) en Measure‑tools toe die noch ZoomIt noch Epic Pen hebben",
+      "Voegt Spotlight (focusdimming), Magnify (schermzoom) en Meetlint-tools toe — Epic Pen heeft geen van deze, en ZoomIt heeft alleen de zoom",
       "Mac‑native interface met ondersteuning voor Apple Silicon",
       "Gratis te downloaden en uit te proberen, eenmalige licentie"
     ],
@@ -235,11 +236,11 @@
       },
       {
         "q": "Is er een Mac‑alternatief voor zowel ZoomIt als Epic Pen?",
-        "a": "Ja. Scribbble is een Mac‑first schermannotatie‑app die het goede van beide combineert — een moderne, gepolijste UI zoals Epic Pen, met de gefocuste, sneltoetsgestuurde workflow van ZoomIt. Het bevat pen, marker, pijl, rechthoek, tekst, Spotlight (focus dim) en Measure‑tools, gratis te downloaden en uit te proberen met een eenmalige licentie om alles vrij te spelen."
+        "a": "Ja. Scribbble is een Mac-first annotatie-app die het beste van beide combineert — een moderne, gepolijste UI zoals Epic Pen, met de gefocuste, sneltoetsgestuurde workflow van ZoomIt. Het bevat pen, markeerstift, pijl, rechthoek, tekst, Spotlight (focusdimming), Magnify (schermzoom) en Meetlint, gratis te downloaden en uit te proberen, met een eenmalige licentie om alles vrij te schakelen."
       },
       {
         "q": "Welke functies bieden alternatieven die Epic Pen niet heeft?",
-        "a": "De meeste moderne alternatieven voegen minstens één van de volgende toe: een Spotlight / focus‑dim tool, een Measure‑tool voor afstanden op het scherm, een schermzoom (ZoomIt) of een ingebouwde schermrecorder (CleanShot X). Scribbble voegt specifiek Spotlight, Measure en een losse gratis Screenshot Annotate webtool toe. ZoomIt voegt zoom, pauze‑timer en whiteboard‑modus toe."
+        "a": "De meeste moderne alternatieven voegen minstens één van de volgende dingen toe: een Spotlight / focus-dim tool, schermzoom om fijne details te tonen, een Meetlint voor afstanden op het scherm, of een ingebouwde schermrecorder (CleanShot X). Scribbble voegt specifiek Spotlight, Magnify (schermzoom), Meetlint en een gratis begeleidend Screenshot Annotate webtool toe. ZoomIt biedt zoom, een pauzetimer en whiteboard-modus."
       },
       {
         "q": "Welke schermannotatie‑tools raden reviewers aan in plaats van Epic Pen?",
@@ -266,16 +267,16 @@
     "pricing": "Prijs:",
     "scribbbleVsItem": "Scribbble vs {name}",
     "bottomLine": "Conclusie",
+    "stillImagesTitle": "Annoteren van schermafbeeldingen in plaats van je live scherm?",
+    "stillImagesBody": "Elke app op deze lijst tekent op je live Mac-scherm. Als je eigenlijk een schermafbeelding wilt markeren die je al hebt gemaakt, is dat een andere klus — gebruik onze gratis Mac-schermafbeelding annotatie-tool. Plak een afbeelding, voeg pijlen, tekst, genummerde stappen of een blur toe om gevoelige details te anonimiseren, en kopieer het resultaat direct terug naar je klembord. Het draait in de browser, dus je hoeft niets te installeren en je afbeelding verlaat je apparaat nooit.",
+    "stillImagesCta": "Open de gratis Mac-schermafbeelding annotatie-tool",
     "ctaTitle": "Probeer onze topkeuze: <gradient>Scribbble</gradient>",
     "ctaSubtitle": "Gratis downloaden. Eenmalige licentie. Native macOS.",
     "otherGuides": "Andere gidsen",
     "compareTitle": "Vergelijk Scribbble",
     "scribbbleVs": "Scribbble vs {competitor}",
     "forYourRole": "Scribbble voor jouw rol",
-    "scribbbleFor": "Scribbble voor {audience}",
-    "stillImagesTitle": "Annoteren van schermafbeeldingen in plaats van je live scherm?",
-    "stillImagesBody": "Elke app op deze lijst tekent op je live Mac-scherm. Als je eigenlijk een schermafbeelding wilt markeren die je al hebt gemaakt, is dat een andere klus — gebruik onze gratis Mac-schermafbeelding annotatie-tool. Plak een afbeelding, voeg pijlen, tekst, genummerde stappen of een blur toe om gevoelige details te anonimiseren, en kopieer het resultaat direct terug naar je klembord. Het draait in de browser, dus je hoeft niets te installeren en je afbeelding verlaat je apparaat nooit.",
-    "stillImagesCta": "Open de gratis Mac-schermafbeelding annotatie-tool"
+    "scribbbleFor": "Scribbble voor {audience}"
   },
   "vsPage": {
     "breadcrumbVs": "vs",
@@ -305,7 +306,7 @@
     "howTitle": "Hoe {audience} het gebruiken",
     "toolsTitle": "De belangrijkst(e) tools",
     "ctaTitle": "Probeer Scribbble <gradient>gratis</gradient>",
-    "ctaSubtitle": "Gemaakt voor {audience}. Werkt op macOS 11+.",
+    "ctaSubtitle": "Gebouwd voor {audience}. Werkt op macOS 14+.",
     "otherRolesTitle": "Scribbble voor andere rollen",
     "scribbbleFor": "Scribbble voor {audience}",
     "compareTitle": "Vergelijk Scribbble",

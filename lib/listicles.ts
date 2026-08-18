@@ -46,12 +46,12 @@ export const listicles: Listicle[] = [
         name: "Scribbble",
         tagline: "The modern Mac-first screen annotation app",
         summary:
-          "Scribbble is built Mac-first with a modern toolbar you can dock to the left or right edge. Beyond the standard pen, arrow, rectangle, ellipse and text tools, it ships with Spotlight (focus dim), Highlighter, Measure and a built-in Snapshot tool to capture the whole screen or a region — a combination most competitors don't match. It's free to download and try, with a one-time license to unlock everything.",
+          "Scribbble is built Mac-first with a modern toolbar you can dock to the left or right edge. Beyond the standard pen, arrow, rectangle, ellipse and text tools, it ships with Spotlight (focus dim), Highlighter, Measure, Magnify (screen zoom) and a built-in Snapshot tool to capture the whole screen or a region — a combination most competitors don't match. It's free to download and try, with a one-time license to unlock everything.",
         bestFor:
           "Teachers, designers and creators who want a modern, Mac-native annotation tool without a subscription",
         pros: [
           "Mac-first design with a modern toolbar you can dock left or right",
-          "Includes Spotlight, Highlighter and Measure out of the box",
+          "Includes Spotlight, Highlighter, Measure and Magnify (screen zoom) out of the box",
           "Built-in Snapshot tool — capture the whole screen or a region without leaving the app",
           "Shapes include arrow, rectangle and ellipse",
           "Apple Silicon native",
@@ -61,7 +61,7 @@ export const listicles: Listicle[] = [
         ],
         cons: [
           "No built-in screen recording",
-          "No screen zoom (use macOS accessibility zoom)",
+          "No break timer or whiteboard mode",
         ],
         pricing: "Free + one-time license",
         isScribbble: true,
@@ -148,7 +148,7 @@ export const listicles: Listicle[] = [
       },
     ],
     conclusion:
-      "If you want a modern, Mac-native screen annotation app with a rich toolset (Spotlight, Highlighter, Measure) and one-time pricing, Scribbble is the easiest recommendation. Presentify is the alternative if cursor highlighting is critical. CleanShot X is the right choice if your workflow centers on screenshots rather than live drawing. ZoomIt is the free Microsoft option if you need its signature zoom feature.",
+      "If you want a modern, Mac-native screen annotation app with a rich toolset (Spotlight, Highlighter, Measure, Magnify) and one-time pricing, Scribbble is the easiest recommendation. Presentify is the alternative if cursor highlighting is critical. CleanShot X is the right choice if your workflow centers on screenshots rather than live drawing. ZoomIt is the free Microsoft option if you want its break timer alongside a zoom.",
     faq: [
       {
         q: "What's the best free screen annotation app for Mac?",
@@ -185,18 +185,18 @@ export const listicles: Listicle[] = [
         name: "Scribbble",
         tagline: "The Mac-first ZoomIt alternative",
         summary:
-          "Scribbble is built Mac-first with a modern toolbar you can dock to the left or right edge, and a richer toolset than ZoomIt — including Spotlight (focus dim), Highlighter, Measure, full shapes (arrow, rectangle, ellipse) and a built-in Snapshot tool that captures the whole screen or a region. It's free to download and ships with a companion free Screenshot Annotate web tool. The trade-off: no screen zoom feature (use macOS's built-in accessibility zoom for that).",
+          "Scribbble is built Mac-first with a modern toolbar you can dock to the left or right edge, and a richer toolset than ZoomIt — including Spotlight (focus dim), Highlighter, Measure, Magnify (screen zoom), full shapes (arrow, rectangle, ellipse) and a built-in Snapshot tool that captures the whole screen or a region. It now covers ZoomIt's signature screen zoom too, so the switch no longer costs you anything. It's free to download and ships with a companion free Screenshot Annotate web tool.",
         bestFor:
           "Anyone leaving ZoomIt who wants a modern Mac-native experience",
         pros: [
           "Mac-first UI with a toolbar that docks left or right",
-          "Spotlight, Highlighter and Measure tools",
+          "Spotlight, Highlighter, Measure and Magnify (screen zoom) tools",
           "Built-in Snapshot capture — whole screen or selected region",
           "Shapes include arrow, rectangle and ellipse",
           "Free download, one-time license",
           "Apple Silicon native",
         ],
-        cons: ["No screen zoom feature"],
+        cons: ["No break timer or whiteboard mode"],
         pricing: "Free + one-time license",
         isScribbble: true,
       },
@@ -272,7 +272,7 @@ export const listicles: Listicle[] = [
       },
       {
         q: "How do I get ZoomIt's zoom feature on Mac?",
-        a: "macOS has built-in screen zoom in System Settings → Accessibility → Zoom. Enable Cmd+Option+8 to toggle, or scroll-zoom with Ctrl+scroll. Pair this with Scribbble for annotation and you have a full ZoomIt replacement.",
+        a: "Scribbble's Magnify tool does the same job: hit the shortcut, zoom into the part of the screen you're talking about, annotate on top of it, then drop back out. If you'd rather not install anything, macOS also has a built-in screen zoom in System Settings → Accessibility → Zoom (Cmd+Option+8 to toggle, or Ctrl+scroll).",
       },
     ],
   },
@@ -298,13 +298,13 @@ export const listicles: Listicle[] = [
         name: "Scribbble",
         tagline: "The closest Epic Pen experience on macOS",
         summary:
-          "Scribbble is the most direct Epic Pen replacement for Mac users. It draws on top of any app — slides, browsers, Zoom shares — with a pen, highlighter and full shape kit (arrow, rectangle, ellipse) plus a text tool. Beyond what Epic Pen offers, Scribbble adds Spotlight (focus dim), Measure and a built-in Snapshot tool that captures the whole screen or a region, plus a modern Mac-native toolbar that docks left or right.",
+          "Scribbble is the most direct Epic Pen replacement for Mac users. It draws on top of any app — slides, browsers, Zoom shares — with a pen, highlighter and full shape kit (arrow, rectangle, ellipse) plus a text tool. Beyond what Epic Pen offers, Scribbble adds Spotlight (focus dim), Magnify (screen zoom), Measure and a built-in Snapshot tool that captures the whole screen or a region, plus a modern Mac-native toolbar that docks left or right.",
         bestFor:
           "Anyone leaving Epic Pen for Mac who wants a familiar workflow with a few bonus tools",
         pros: [
           "Mac-first, Apple Silicon native",
           "Pen, highlighter, shapes (arrow, rectangle, ellipse) and text — covers Epic Pen's core toolset",
-          "Adds Spotlight and Measure tools Epic Pen doesn't have",
+          "Adds Spotlight, Magnify (screen zoom) and Measure tools Epic Pen doesn't have",
           "Built-in Snapshot capture (whole screen or region) — no second app needed",
           "Free download, one-time license",
           "Modern toolbar that docks to the left or right edge",
@@ -337,7 +337,7 @@ export const listicles: Listicle[] = [
         summary:
           "Microsoft's Sysinternals ZoomIt is now available on macOS. It's free, includes a built-in zoom feature Epic Pen lacks, and has solid pen and shape tools. The catch: the UI is a faithful Windows port and feels nothing like a Mac app.",
         bestFor:
-          "Mac users leaving Epic Pen who don't mind a Windows-style UI in exchange for free + screen zoom",
+          "Mac users leaving Epic Pen who don't mind a Windows-style UI in exchange for a free price tag",
         pros: [
           "Free from Microsoft",
           "Screen zoom built in",
@@ -387,7 +387,7 @@ export const listicles: Listicle[] = [
       },
     ],
     conclusion:
-      "If you're moving from Epic Pen to Mac, Scribbble is the easiest recommendation — it covers the same core workflow (pen, highlighter, shapes, text) with a Mac-native UI and a few bonus tools (Spotlight, Measure) Epic Pen doesn't have. ZoomIt is the free Microsoft alternative if you can live with the Windows-style UI. CleanShot X is the right pick if you actually want screenshot-first workflows rather than live drawing.",
+      "If you're moving from Epic Pen to Mac, Scribbble is the easiest recommendation — it covers the same core workflow (pen, highlighter, shapes, text) with a Mac-native UI and a few bonus tools (Spotlight, Magnify, Measure) Epic Pen doesn't have. ZoomIt is the free Microsoft alternative if you can live with the Windows-style UI. CleanShot X is the right pick if you actually want screenshot-first workflows rather than live drawing.",
     faq: [
       {
         q: "Is there an Epic Pen for Mac?",
@@ -395,7 +395,7 @@ export const listicles: Listicle[] = [
       },
       {
         q: "What are the best alternatives to Epic Pen on Mac?",
-        a: "The strongest options on macOS are Scribbble (Mac-first, includes Spotlight + Measure), Presentify (cursor highlighting), ZoomIt (free from Microsoft, includes zoom), and CleanShot X (if you want screenshot-first workflows). For most Epic Pen users moving to Mac, Scribbble is the closest experience.",
+        a: "The strongest options on macOS are Scribbble (Mac-first, includes Spotlight, Magnify and Measure), Presentify (cursor highlighting), ZoomIt (free from Microsoft, includes a break timer), and CleanShot X (if you want screenshot-first workflows). For most Epic Pen users moving to Mac, Scribbble is the closest experience.",
       },
       {
         q: "Why do people choose alternatives over Epic Pen?",
@@ -403,7 +403,7 @@ export const listicles: Listicle[] = [
       },
       {
         q: "What features do Epic Pen alternatives offer that Epic Pen does not?",
-        a: "Most modern Epic Pen alternatives add at least one of: a Spotlight / focus-dim tool to dim everything except the area you're explaining, a Measure tool for checking on-screen distances, a screen zoom feature (ZoomIt), or a built-in screen recorder (CleanShot X). Scribbble specifically adds Spotlight, Measure and a companion free Screenshot Annotate web tool.",
+        a: "Most modern Epic Pen alternatives add at least one of: a Spotlight / focus-dim tool to dim everything except the area you're explaining, a screen zoom for showing fine detail, a Measure tool for checking on-screen distances, or a built-in screen recorder (CleanShot X). Scribbble specifically adds Spotlight, Magnify (screen zoom), Measure and a companion free Screenshot Annotate web tool.",
       },
       {
         q: "Is there a free alternative to Epic Pen for Mac?",
@@ -430,14 +430,14 @@ export const listicles: Listicle[] = [
       {
         rank: 1,
         name: "Scribbble",
-        tagline: "Free to try, with a Measure tool Presentify doesn't have",
+        tagline: "Free to try, with Magnify and Measure tools Presentify doesn't have",
         summary:
-          "Scribbble matches Presentify's core toolset — pen, highlighter, spotlight, shapes (arrow, rectangle, ellipse) — and adds a Measure tool and a built-in Snapshot tool that captures the whole screen or a region. Unlike Presentify, the full app is free to download and try; you only pay for a one-time license when you're ready. It also ships with a free companion Screenshot Annotate web tool, and the toolbar docks to the left or right edge.",
+          "Scribbble matches Presentify's core toolset — pen, highlighter, spotlight, shapes (arrow, rectangle, ellipse) — and adds Magnify (screen zoom), a Measure tool and a built-in Snapshot tool that captures the whole screen or a region. Unlike Presentify, the full app is free to download and try; you only pay for a one-time license when you're ready. It also ships with a free companion Screenshot Annotate web tool, and the toolbar docks to the left or right edge.",
         bestFor:
-          "Presentify users who want a free trial, a Measure tool, or a companion screenshot annotator",
+          "Presentify users who want a free trial, screen zoom, a Measure tool, or a companion screenshot annotator",
         pros: [
           "Free download — try the full app before buying",
-          "Includes a Measure tool Presentify doesn't have",
+          "Includes Magnify (screen zoom) and Measure tools Presentify doesn't have",
           "Built-in Snapshot capture (whole screen or region)",
           "Free companion Screenshot Annotate web tool",
           "Modern toolbar that docks left or right (not just floating)",
@@ -452,8 +452,8 @@ export const listicles: Listicle[] = [
         name: "ZoomIt for Mac",
         tagline: "Free, with built-in screen zoom",
         summary:
-          "Microsoft's ZoomIt is fully free on Mac and includes a screen zoom feature Presentify lacks. The trade-off is the UI is a faithful Windows utility port — functional but not Mac-native feeling.",
-        bestFor: "Presentify users who want free + screen zoom",
+          "Microsoft's ZoomIt is fully free on Mac and includes a screen zoom and break timer Presentify lacks. The trade-off is the UI is a faithful Windows utility port — functional but not Mac-native feeling.",
+        bestFor: "Presentify users who want a fully free option",
         pros: [
           "Free from Microsoft",
           "Screen zoom built in",
@@ -505,11 +505,11 @@ export const listicles: Listicle[] = [
       },
     ],
     conclusion:
-      "If your reason for looking past Presentify is wanting a free trial, a Measure tool, or a free companion screenshot annotator, Scribbble is the closest match. ZoomIt is the right pick if you specifically want a free option with screen zoom. CleanShot X covers more ground if you need screenshots and recording alongside live annotation.",
+      "If your reason for looking past Presentify is wanting a free trial, screen zoom, a Measure tool, or a free companion screenshot annotator, Scribbble is the closest match. ZoomIt is the right pick if you want a fully free option and can live with a Windows-style UI. CleanShot X covers more ground if you need screenshots and recording alongside live annotation.",
     faq: [
       {
         q: "What's the best Presentify alternative on Mac?",
-        a: "Scribbble is the closest Mac-native alternative: same core toolset (pen, highlighter, spotlight, shapes) plus a Measure tool, with a free download and one-time license. ZoomIt is the best free option if you can live with a Windows-style UI.",
+        a: "Scribbble is the closest Mac-native alternative: same core toolset (pen, highlighter, spotlight, shapes) plus Magnify (screen zoom) and Measure tools, with a free download and one-time license. ZoomIt is the best free option if you can live with a Windows-style UI.",
       },
       {
         q: "Is there a free alternative to Presentify?",
@@ -546,11 +546,11 @@ export const listicles: Listicle[] = [
         name: "Scribbble",
         tagline: "Modern Mac annotation app, made for live lessons",
         summary:
-          "Scribbble draws on top of any Mac app — slides, PDFs, browsers, Zoom shares. The Highlighter is great for marking up readings; Spotlight dims everything except what you're explaining; the pen, arrow, rectangle, ellipse and text tools cover live diagramming. A built-in Snapshot tool captures the whole screen or a region — handy for saving a student's work or a lesson still. One-time license, free to try.",
+          "Scribbble draws on top of any Mac app — slides, PDFs, browsers, Zoom shares. The Highlighter is great for marking up readings; Spotlight dims everything except what you're explaining; Magnify zooms into small text or code so the back row can read it; the pen, arrow, rectangle, ellipse and text tools cover live diagramming. A built-in Snapshot tool captures the whole screen or a region — handy for saving a student's work or a lesson still. One-time license, free to try.",
         bestFor:
           "Teachers who want a modern, Mac-native tool with Highlighter and Spotlight built in",
         pros: [
-          "Highlighter and Spotlight (focus dim) built in",
+          "Highlighter, Spotlight (focus dim) and Magnify (screen zoom) built in",
           "Snapshot capture (screen or region) for saving lesson stills and student work",
           "Shapes include arrow, rectangle and ellipse",
           "Works in Zoom, Google Meet, recordings",
@@ -580,7 +580,7 @@ export const listicles: Listicle[] = [
         tagline: "Free, with built-in screen zoom",
         summary:
           "Microsoft's ZoomIt is now available on macOS. Its built-in screen zoom is genuinely useful for showing fine detail in slides or code to a large remote class — and it's free.",
-        bestFor: "Teachers who specifically want screen zoom for showing detail",
+        bestFor: "Teachers who want a fully free tool with a break timer",
         pros: ["Free", "Built-in zoom and break timer"],
         cons: [
           "UI is a Windows utility port",

@@ -14,11 +14,11 @@
     "items": [
       {
         "tagline": "モダンで Mac を第一に考えた画面注釈アプリ",
-        "summary": "Scribbble は Mac を第一に設計され、左右どちらの端にもドックできるモダンなツールバーを備えています。標準のペン、矢印、四角形、楕円、テキストに加え、Spotlight（フォーカス暗転）、ハイライター、計測ツール、画面全体または領域をキャプチャできる内蔵の Snapshot ツールを搭載しており、多くの競合が持たない組み合わせです。ダウンロードして試すことができ、すべてをアンロックするには買い切りライセンスがあります。",
+        "summary": "ScribbbleはMacを第一に設計したアプリで、左または右端にドックできるモダンなツールバーを備えています。標準的なペン、矢印、長方形、楕円、テキストに加えて、Spotlight（フォーカスディム）、ハイライター、Measure、Magnify（画面ズーム）、そして画面全体や任意領域をキャプチャできる組み込みのSnapshotツールを搭載しており、多くの競合が持たない組み合わせです。無料でダウンロードして試せ、すべてをアンロックするにはワンタイムライセンスが必要です。",
         "bestFor": "サブスクリプションなしでモダンかつ Mac ネイティブな注釈ツールを求める先生、デザイナー、クリエイター向け",
         "pros": [
           "Mac を第一に考えたデザインで、ツールバーを左右どちらにもドック可能",
-          "Spotlight、ハイライター、計測ツールを標準搭載",
+          "Spotlight、ハイライター、Measure、Magnify（画面ズーム）を標準で搭載",
           "内蔵の Snapshot ツール — アプリを離れずに画面全体や領域をキャプチャ可能",
           "矢印、四角形、楕円などの図形をサポート",
           "Apple Silicon ネイティブ",
@@ -28,7 +28,7 @@
         ],
         "cons": [
           "内蔵の画面録画機能はなし",
-          "画面ズーム機能はなし（macOS のアクセシビリティズームを使用）"
+          "休憩タイマーやホワイトボードモードはなし"
         ],
         "pricing": "無料 + 買い切りライセンス"
       },
@@ -93,7 +93,7 @@
         "pricing": "要確認 — ベンダーの案内に従ってください"
       }
     ],
-    "conclusion": "Spotlight、Highlighter、Measure など豊富なツールと買い切り価格を備えた、モダンで Mac ネイティブな画面注釈アプリを求めるなら、Scribbble がもっとも簡単なおすすめです。カーソルハイライトが重要なら Presentify が代替になります。スクリーンショット中心のワークフローなら CleanShot X が適切です。ZoomIt は、特徴的なズーム機能が必要な場合の無料 Microsoft オプションです。",
+    "conclusion": "モダンでMacネイティブな画面注釈アプリを、豊富なツールセット（Spotlight、ハイライター、Measure、Magnify）とワンタイム課金で求めるなら、Scribbbleを素直に推せます。カーソルのハイライトが重要ならPresentifyが代替です。スクリーンショット中心のワークフローならCleanShot Xが適切です。休憩タイマーも欲しいなら、無料のMicrosoft製オプションであるZoomItを検討してください。",
     "faq": [
       {
         "q": "Mac で使える最良の無料画面注釈アプリは？",
@@ -123,18 +123,18 @@
     "items": [
       {
         "tagline": "Mac を第一に考えた ZoomIt の代替",
-        "summary": "Scribbble は Mac を第一に設計されており、左端・右端にドッキングできるモダンなツールバーと、ZoomIt より豊富なツール群を備えています — Spotlight（フォーカスの暗転）、Highlighter、Measure、矢印・長方形・楕円などの図形、そして全画面または選択領域をキャプチャする内蔵の Snapshot ツールなどです。ダウンロードは無料で、無料の補助的な Screenshot Annotate ウェブツールも提供しています。トレードオフとして、画面ズーム機能はありません（その場合は macOS のアクセシビリティズームを利用してください）。",
+        "summary": "ScribbbleはMacを第一に設計され、左または右にドックできるモダンなツールバーと、ZoomItより豊富なツール群（Spotlight（フォーカスディム）、ハイライター、Measure、Magnify（画面ズーム）、矢印・長方形・楕円などの完全な図形セット）を備え、画面全体や領域をキャプチャする組み込みのSnapshotツールもあります。現在ではZoomItの代名詞でもある画面ズームもカバーしているため、乗り換えても損はありません。無料でダウンロードでき、コンパニオンとして無料のScreenshot Annotateウェブツールが付属します。",
         "bestFor": "ZoomIt をやめて、モダンで Mac ネイティブな体験を求める人向け",
         "pros": [
           "左または右にドックできる Mac ファーストの UI",
-          "Spotlight、Highlighter、Measure ツール",
+          "Spotlight、ハイライター、Measure、Magnify（画面ズーム）ツール",
           "全画面または選択領域をキャプチャする内蔵 Snapshot",
           "矢印・長方形・楕円などの図形が利用可能",
           "ダウンロードは無料、買い切りライセンスあり",
           "Apple Silicon ネイティブ"
         ],
         "cons": [
-          "画面ズーム機能はなし"
+          "休憩タイマーやホワイトボードモードはなし"
         ],
         "pricing": "無料 + 一度きりのライセンス"
       },
@@ -201,7 +201,7 @@
       },
       {
         "q": "Mac で ZoomIt のズーム機能はどうやって使えますか？",
-        "a": "macOS にはシステム設定 → アクセシビリティ → Zoom に組み込みの画面ズームがあります。Cmd+Option+8 でトグルを有効化したり、Ctrl+スクロールでズームできます。これを Scribbble の注釈機能と組み合わせれば、ZoomIt の代替として十分に機能します。"
+        "a": "ScribbbleのMagnifyツールは同じ役割を果たします：ショートカットでズームし、注釈を重ねてから元に戻せます。何もインストールしたくないなら、macOSの組み込みズームも使えます（システム設定 → アクセシビリティ → Zoom、切り替えはCmd+Option+8、またはCtrl+スクロール）。"
       }
     ]
   },
@@ -220,12 +220,12 @@
     "items": [
       {
         "tagline": "macOS で最も近い Epic Pen 体験",
-        "summary": "Scribbble は Mac ユーザーにとって最も直接的な Epic Pen の代替です。スライドやブラウザ、Zoom の共有画面など、どんなアプリの上にもペンやハイライター、矢印・四角・楕円の図形やテキストツールで描けます。Epic Pen にない機能として Spotlight（フォーカス暗転）や Measure、画面全体または領域を撮れる内蔵の Snapshot ツールを備え、左寄せ／右寄せで使えるモダンな Mac ネイティブのツールバーもあります。",
+        "summary": "ScribbbleはMacユーザーにとって最も直接的なEpic Penの代替です。スライド、ブラウザ、Zoomの画面共有など、どのアプリの上にも描画でき、ペン、ハイライター、完全な図形セット（矢印、長方形、楕円）とテキストツールを備えています。Epic Penにない機能として、Spotlight（フォーカスディム）、Magnify（画面ズーム）、Measure、画面全体や領域をキャプチャする組み込みのSnapshotツール、そして左または右にドックできるモダンなMacネイティブのツールバーを追加しています。",
         "bestFor": "Epic Pen を離れるが、馴染みのワークフローといくつかの追加機能を求める人向け",
         "pros": [
           "Mac ファースト、Apple Silicon ネイティブ",
           "ペン、ハイライター、図形（矢印、四角、楕円）とテキスト — Epic Pen のコアツールをカバー",
-          "Epic Pen にない Spotlight と Measure ツールを追加",
+          "Epic PenにないSpotlight、Magnify（画面ズーム）、Measureツールを追加",
           "内蔵の Snapshot キャプチャ（全画面または領域）— 別アプリ不要",
           "無料ダウンロード、買い切りライセンスあり",
           "左端・右端にドックできるモダンなツールバー"
@@ -252,7 +252,7 @@
       {
         "tagline": "Microsoft の無料注釈ユーティリティ、ついに Mac に登場",
         "summary": "Microsoft の Sysinternals ZoomIt が macOS にも登場しました。無料で、Epic Pen にない画面ズーム機能を内蔵し、堅実なペンと図形ツールを備えます。欠点は UI が Windows 版を忠実に移植したもので、Mac アプリらしさがない点です。",
-        "bestFor": "無料＋画面ズームを重視するが、Windows スタイルの UI を気にしない Mac ユーザー向け",
+        "bestFor": "Windows風のUIを受け入れられる代わりに無料を重視するMacユーザー向け",
         "pros": [
           "Microsoft 製で無料",
           "画面ズーム内蔵",
@@ -295,7 +295,7 @@
         "pricing": "無料"
       }
     ],
-    "conclusion": "Epic PenからMacに移るなら、Scribbbleが最も簡単なおすすめです — ペン、蛍光ペン、図形、テキストといった基本的なワークフローをMacネイティブのUIでカバーし、Epic PenにないSpotlightやMeasureといったボーナス機能も備えています。Windows風UIでも構わないなら無料の代替はZoomItです。スクリーンショット中心のワークフローを重視するならCleanShot Xが適切です。",
+    "conclusion": "Epic PenからMacへ移るなら、Scribbbleが最も無難な推奨です—同じコアワークフロー（ペン、ハイライター、図形、テキスト）をMacネイティブなUIで提供し、Epic Penにないいくつかのボーナス（Spotlight、Magnify、Measure）も備えています。休憩タイマーが必要でWindows風UIを許容できるならZoomItが無料の代替、スクリーンショット中心のワークフローならCleanShot Xが適切です。",
     "faq": [
       {
         "q": "Epic PenのMac版はありますか？",
@@ -303,7 +303,7 @@
       },
       {
         "q": "MacでのEpic Penの代替としておすすめは？",
-        "a": "macOSで強力な選択肢はScribbble（Mac向け、SpotlightとMeasureあり）、Presentify（カーソル強調）、ZoomIt（Microsoftの無料ツール、ズーム機能あり）、そしてCleanShot X（スクリーンショット重視のワークフロー向け）です。多くのEpic PenユーザーがMacに移る場合、Scribbbleが最も近い体験になります。"
+        "a": "macOSで強力な選択肢はScribbble（Mac優先、Spotlight、Magnify、Measureを含む）、Presentify（カーソルハイライト）、ZoomIt（Microsoftの無料ツールで休憩タイマー付き）、そしてスクリーンショット中心ならCleanShot Xです。多くのEpic PenユーザーがMacに移る場合、Scribbbleが最も近い体験を提供します。"
       },
       {
         "q": "なぜ人々はEpic Penの代替を選ぶのですか？",
@@ -311,7 +311,7 @@
       },
       {
         "q": "Epic Penにない代替アプリの機能には何がありますか？",
-        "a": "多くの現代的な代替は少なくとも次のいずれかを備えています：説明部分以外を暗くするSpotlight/フォーカスツール、画面上の距離を測るMeasureツール、画面ズーム機能（ZoomIt）、または内蔵の画面録画機能（CleanShot X）。Scribbbleは特にSpotlight、Measure、そして無料のScreenshot Annotateウェブツールを追加しています。"
+        "a": "最近のEpic Pen代替は少なくとも次のいずれかを追加しています：説明箇所以外を暗くするSpotlight／フォーカスディム、細部を見せる画面ズーム、画面上の距離を測るMeasureツール、あるいは組み込みの画面録画機能（CleanShot X）。Scribbbleは特にSpotlight、Magnify（画面ズーム）、Measureと、コンパニオンの無料Screenshot Annotateウェブツールを提供します。"
       },
       {
         "q": "Mac向けのEpic Penの無料代替はありますか？",
@@ -323,10 +323,10 @@
     "items": [
       {
         "tagline": "ライブ授業のために作られた現代的なMac注釈アプリ",
-        "summary": "Scribbbleはスライド、PDF、ブラウザ、Zoomの共有など、あらゆるMacアプリの上に描画します。Highlighterは本文のマーキングに最適で、Spotlightは説明部分だけを際立たせて周囲を暗くします。ペン、矢印、四角、楕円、テキストツールでライブの図解もこなせます。組み込みのSnapshotツールは画面全体や範囲をキャプチャでき、生徒の作業や授業のワンシーンを保存するのに便利です。体験版ありの買い切りライセンス。",
+        "summary": "Scribbbleはスライド、PDF、ブラウザ、Zoomでの画面共有など、あらゆるMacアプリの上に描画できます。蛍光ペンは資料のマーキングに便利で、スポットライトは説明したい部分だけを残して他を暗くします。Magnifyは小さな文字やコードを拡大して後ろの席まで見えるようにし、ペン、矢印、四角、楕円、テキストツールはライブでの図示に対応します。内蔵のSnapshotツールは画面全体や領域をキャプチャでき、学生の作品や授業の静止画を保存するのに便利です。ワンタイムライセンス、無料で試用可能。",
         "bestFor": "HighlighterやSpotlightを内蔵した、モダンでMacネイティブなツールを求める教師向け",
         "pros": [
-          "HighlighterとSpotlight（フォーカスディム）を内蔵",
+          "蛍光ペン、スポットライト（フォーカス暗転）、Magnify（画面ズーム）を標準搭載",
           "授業の静止画や生徒の作業を保存できるSnapshotキャプチャ（画面全体／範囲）",
           "矢印、四角、楕円などの図形を搭載",
           "Zoom、Google Meet、録画で動作",
@@ -354,7 +354,7 @@
       {
         "tagline": "画面ズーム内蔵の無料ツール",
         "summary": "MicrosoftのZoomItがmacOSに登場しました。スライドやコードの細かい部分を大勢の遠隔クラスに見せるためのズーム機能は実用的で、しかも無料です。",
-        "bestFor": "細部を見せるための画面ズームが欲しい教師向け",
+        "bestFor": "休憩タイマー付きの完全無料ツールを求める教師向け",
         "pros": [
           "無料",
           "ズームと休憩タイマー内蔵"
@@ -418,12 +418,12 @@
     ],
     "items": [
       {
-        "tagline": "試用は無料、PresentifyにないMeasureツールあり",
-        "summary": "ScribbbleはPresentifyの基本ツールセット—ペン、蛍光ペン、Spotlight、図形（矢印、矩形、楕円）—を満たし、さらにMeasureツールと画面全体または領域をキャプチャする内蔵のSnapshot機能を追加しています。Presentifyと違い、フルアプリを無料でダウンロードして試せ、準備ができたら買い切りライセンスを購入する形です。また無料の補助ツールとしてScreenshot Annotateウェブツールを同梱し、ツールバーは浮動だけでなく左右の端にドッキングできます。",
-        "bestFor": "無料トライアルやMeasureツール、スクリーンショット注釈の連携を求めるPresentifyユーザー",
+        "tagline": "お試しは無料、PresentifyにないMagnifyとMeasureを搭載",
+        "summary": "ScribbbleはPresentifyのコアツールセット（ペン、ハイライター、Spotlight、図形（矢印、長方形、楕円））に匹敵し、さらにMagnify（画面ズーム）、Measureツール、画面全体や領域をキャプチャする組み込みのSnapshotツールを追加しています。Presentifyと違い、フルアプリは無料でダウンロードして試せ、準備ができたらワンタイムライセンスを購入します。無料のコンパニオンScreenshot Annotateウェブツールも付属し、ツールバーは左または右端にドックします。",
+        "bestFor": "無料トライアル、画面ズーム、Measureツール、またはコンパニオンのスクリーンショット注釈が欲しいPresentifyユーザー向け",
         "pros": [
           "無料でダウンロード — 購入前にフルアプリを試せる",
-          "PresentifyにないMeasureツールを含む",
+          "PresentifyにないMagnify（画面ズーム）とMeasureツールを搭載",
           "内蔵のSnapshotキャプチャ（全画面または領域）",
           "無料の補助 Screenshot Annotate ウェブツール",
           "左端または右端にドッキングするモダンなツールバー（単なる浮動ではない）",
@@ -436,8 +436,8 @@
       },
       {
         "tagline": "無料、画面ズーム内蔵",
-        "summary": "Microsoft の ZoomIt は Mac で完全に無料で、Presentify にない画面ズーム機能を備えています。代償として、UI は Windows ユーティリティを忠実に移植したもので、機能的ではあるもののネイティブな Mac 感は控えめです。",
-        "bestFor": "無料＋画面ズームを求める Presentify ユーザー向け",
+        "summary": "MicrosoftのZoomItはMacでも完全に無料で、Presentifyにない画面ズームと休憩タイマーを備えます。トレードオフはUIがWindowsユーティリティの忠実な移植であり、機能的だがMacネイティブらしさには欠ける点です。",
+        "bestFor": "完全に無料のオプションを求めるPresentifyユーザー向け",
         "pros": [
           "Microsoft 製で無料",
           "画面ズームが内蔵",
@@ -489,11 +489,11 @@
         "pricing": "無料"
       }
     ],
-    "conclusion": "Presentify を乗り換える理由が、無料トライアル、計測ツール、あるいは無料のスクリーンショット注釈ツールを求めることなら、Scribbble が最も近いマッチです。画面ズーム付きの無料オプションを特に求めるなら ZoomIt が適切な選択です。スクリーンショットや録画も一緒に必要なら、CleanShot X のほうが対応範囲は広くなります。",
+    "conclusion": "無料トライアル、画面ズーム、Measureツール、あるいは無料の補助的なスクリーンショット注釈ツールを求めてPresentify以外を検討しているなら、Scribbbleが最も近い選択です。Windows風のUIでも構わないなら、完全無料の選択肢としてはZoomItが適しています。スクリーンショットや録画とライブ注釈の両方が必要なら、CleanShot Xの方が幅広く対応します。",
     "faq": [
       {
         "q": "Mac での Presentify のベストな代替は何ですか？",
-        "a": "Scribbble が最も近い Mac ネイティブの代替です：ペン、ハイライター、スポットライト、図形といったコアツールに加え、Measure ツールを備え、無料でダウンロードして試せる一度きりのライセンスがあります。UI の違いを受け入れられるなら、ZoomIt は無料で使える選択肢として最適です。"
+        "a": "Scribbbleが最も近いMacネイティブの代替です：同じ基本ツールセット（ペン、蛍光ペン、スポットライト、図形）に加え、Magnify（画面ズーム）とMeasureツールがあり、無料ダウンロードと一度きりのライセンスで使えます。Windows風のUIでも問題なければ、完全無料の選択肢としてはZoomItが最良です。"
       },
       {
         "q": "Presentify の無料代替はありますか？",

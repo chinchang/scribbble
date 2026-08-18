@@ -3,28 +3,29 @@
     "title": "ZoomIt for Mac vs Scribbble — Welke kies je in 2026?",
     "description": "Microsoft ZoomIt draait nu op macOS, maar de UI is nog steeds een Windows-port. Hier een eerlijke vergelijking tussen Scribbble en ZoomIt — features, prijzen en wanneer je welke kiest.",
     "h1": "Scribbble vs ZoomIt",
-    "subheadline": "ZoomIt is een geliefde Sysinternals-utility uit de Windows-wereld (met een recente macOS-release). Scribbble is een Mac-first app die zich volledig richt op tekenen op het scherm, met een moderne UI.",
+    "subheadline": "ZoomIt is een geliefde Sysinternals-hulpprogramma uit de Windows-wereld (met een recente macOS-release). Scribbble is een Mac-first app gebouwd rond tekenen op het scherm — en met Magnify dekt het nu ook ZoomIt's kenmerkende schermzoom.",
     "competitorSummary": "ZoomIt is een gratis annotatie-, zoom- en break-timer-tool van Microsoft Sysinternals. Het is ontstaan op Windows en Microsoft heeft sindsdien een macOS-build uitgebracht. De kracht ligt in de frictionless hotkeys en de geïntegreerde zoomfunctie.",
     "competitorStrengths": [
       "Gratis van Microsoft",
       "Ingebouwde schermzoom en break-timer",
-      "Bekend bij langjarige Sysinternals-gebruikers"
+      "Whiteboard-modus en typmodus",
+      "Bekend voor lange tijd Sysinternals-gebruikers"
     ],
     "scribbbleStrengths": [
       "Vanuit Mac gebouwd met een moderne toolbar die je links of rechts kunt docken",
       "Apple Silicon-native",
-      "Inclusief Spotlight (focus dim), Highlighter en Meet-tools direct uit de doos",
+      "Bevat Spotlight (focus dim), Highlighter, Measure en Magnify (schermzoom) uit de doos",
       "Ingebouwde Snapshot-tool om het hele scherm of een regio vast te leggen zonder de app te verlaten",
       "Ontworpen rond screen-share-, streaming- en opnameworkflows",
       "Lichtgewicht, gefocust op tekenen — geen extra utilities om te leren"
     ],
     "whenToChooseScribbble": [
       "Je wilt een moderne, Mac-native UI in plaats van een gepord utility voor sysadmins",
-      "Tekenfunctionaliteit op het scherm is je primaire behoefte — niet zoom of timers",
+      "Je wilt schermzoom en annotatie in één Mac-native app, geen sysadmin-hulpprogramma",
       "Je geeft de voorkeur aan een eenmalige licentie met actieve designpolish"
     ],
     "whenToChooseCompetitor": [
-      "Je wilt specifiek ZoomIt's zoom- en pauzetimerfuncties",
+      "Je wilt specifiek ZoomIt's pauzetimer of whiteboard-modus",
       "Je gebruikt al standaard Sysinternals-tools"
     ],
     "table": [
@@ -51,13 +52,13 @@
         "feature": "Meettool"
       },
       {
-        "feature": "Snapshot-opname (scherm of regio)"
+        "feature": "Magnify (schermzoom)"
       },
       {
-        "feature": "Werkbalk docken links of rechts"
+        "feature": "Snapshot vastleggen (scherm of regio)"
       },
       {
-        "feature": "Ingebouwde schermzoom"
+        "feature": "Dockwerkbalk links of rechts"
       },
       {
         "feature": "Pauzetimer"
@@ -76,7 +77,7 @@
       },
       {
         "q": "Bevat Scribbble een zoomfunctie zoals ZoomIt?",
-        "a": "Nee. Scribbble richt zich uitsluitend op annotatie. Als schermzoom cruciaal is voor je workflow, zijn ZoomIt of de ingebouwde Zoom-toegankelijkheidsfunctie van macOS waarschijnlijk beter geschikt."
+        "a": "Ja. Scribbble's Magnify-tool zoomt in op het live scherm zodat je kleine tekst, code of UI-detail tijdens een presentatie kunt vergroten en daarna met een sneltoets weer terug kunt — dezelfde functionaliteit als ZoomIt's zoom, maar dan in een Mac-native app die ook Spotlight, Measure en Snapshot biedt. ZoomIt heeft nog steeds de pauzetimer als je die nodig hebt."
       }
     ]
   },
@@ -93,7 +94,7 @@
     ],
     "scribbbleStrengths": [
       "Gratis te downloaden en uitproberen vóór aankoop",
-      "Heeft standaard een Meettool",
+      "Bevat Measure en Magnify (schermzoom) uit de doos",
       "Ingebouwde Snapshot-tool — maak een foto van het hele scherm of een regio zonder aparte app",
       "Werkbalk dockt aan de linker- of rechterrand van het scherm, niet alleen zwevend",
       "Begeleidende gratis Screenshot Annotate webtool voor statische markering",
@@ -130,20 +131,24 @@
         "feature": "Meetgereedschap"
       },
       {
+        "feature": "Magnify (schermzoom)"
+      },
+      {
         "feature": "Snapshot vastleggen (scherm of regio)"
       },
       {
         "feature": "Cursor-highlighting"
       },
       {
-        "feature": "Gratis download om te proberen"
+        "feature": "Gratis download om te proberen",
+        "scribbble": "Directe download"
       },
       {
         "feature": "Distributie",
         "scribbble": "Directe download"
       },
       {
-        "feature": "Companion screenshot-annotator",
+        "feature": "Begeleidende screenshot-annotator",
         "scribbble": "Ja (gratis webtool)"
       }
     ],
@@ -169,7 +174,7 @@
         "heading": "Presentify voor Mac: wat het is en wat je verder moet overwegen",
         "body": [
           "Presentify is een uitsluitend macOS-app voor schermannotatie — je tekent bovenop wat er op je scherm staat, markeert je cursor en dimt alles behalve het gebied waarop je je wilt concentreren. Het wordt verkocht als een eenmalige aankoop via de Mac App Store en direct via de eigen site, en het is een oprecht goede app.",
-          "Scribbble dekt hetzelfde terrein op macOS en verschilt op drie punten die handig zijn om te weten voordat je kiest: je kunt het gratis downloaden en gebruiken zodat je de hele app op je eigen machine kunt testen voordat je iets betaalt, het bevat een Meet-tool om pixelafstanden op het scherm te meten, en het bevat een Snapshot-tool plus een gratis begeleidende webannotator om statische afbeeldingen te markeren.",
+          "Scribbble dekt hetzelfde terrein op macOS en verschilt op een paar punten die handig zijn om te weten voordat je kiest: het is gratis te downloaden en te gebruiken zodat je de hele app op je eigen machine kunt uitproberen voordat je iets betaalt, het bevat een Measure-tool voor het aflezen van pixelafstanden op het scherm en een Magnify-tool die inzoomt op het live scherm, en het wordt geleverd met een Snapshot-tool plus een gratis begeleidend webannotatiehulpmiddel voor het markeren van statische afbeeldingen.",
           "Als je de twee vergelijkt: eerlijk gezegd heeft Presentify de betere cursor-highlight en geeft Scribbble je meer tools en een gratis proefmogelijkheid. De onderstaande tabel zet de verschillen per feature op een rij."
         ]
       },
@@ -177,7 +182,7 @@
         "heading": "Is Presentify gratis?",
         "body": [
           "Nee. Presentify is een betaalde eenmalige aankoop, met een beperkte gratis proefperiode. Er is geen permanent gratis niveau.",
-          "Scribbble is gratis te downloaden en gratis te gebruiken voor tekenen, markeren, vormen, tekst, Spotlight en Meet, met een optionele eenmalige licentie en geen abonnement — dus als je een gratis Presentify-alternatief zoekt, is dat het praktische verschil."
+          "Scribbble is gratis te downloaden en gratis te gebruiken voor tekenen, markeren, vormen, tekst, Spotlight, Magnify en Measure, met een optionele eenmalige licentie en geen abonnement — dus als je een gratis Presentify-alternatief zoekt, is dat het praktische verschil."
         ]
       },
       {
@@ -203,7 +208,7 @@
     "scribbbleStrengths": [
       "Annotaties op het LIVE‑scherm — niet alleen op vastgelegde afbeeldingen",
       "Werkt tijdens Zoom‑gesprekken, OBS‑streams en schermopnames",
-      "Bevat Spotlight, Marker en Meetgereedschap voor live presentaties",
+      "Bevat Spotlight, Highlighter, Measure en Magnify (schermzoom) voor live presentaties",
       "Heeft nu ingebouwde Snapshot‑capture (heel scherm of regio) — overbrugt de kloof tussen capture en live",
       "Lichter, single‑purpose tool",
       "Betaalbaarder voor gebruikers die alleen live annotatie nodig hebben",
@@ -229,14 +234,18 @@
         "feature": "Meettool"
       },
       {
-        "feature": "Marker (highlighter)"
+        "feature": "Magnify (schermzoom)"
       },
       {
-        "feature": "Snapshot vastleggen (scherm of regio)"
+        "feature": "Highlighter"
       },
       {
-        "feature": "Screenshot annotatie",
+        "feature": "Snapshot vastleggen (scherm of regio)",
         "scribbble": "Ja (gratis aanvullende webtool)"
+      },
+      {
+        "feature": "Screenshot-annotatie",
+        "scribbble": "Ja (gratis begeleidende webtool)"
       },
       {
         "feature": "Schermopname"
@@ -245,11 +254,12 @@
         "feature": "Cloud-upload & deelbare links"
       },
       {
-        "feature": "Scroll-capture"
+        "feature": "Scrollende vastlegging",
+        "scribbble": "Eenmalige aankoop"
       },
       {
         "feature": "Prijsstelling",
-        "scribbble": "Eenmalige aankoop"
+        "scribbble": "Eenmalig"
       }
     ],
     "pricing": {
@@ -280,13 +290,16 @@
         "feature": "Meettool"
       },
       {
-        "feature": "Schermafdruk maken (volledig scherm of regio)"
+        "feature": "Magnify (schermzoom)"
+      },
+      {
+        "feature": "Snapshot vastleggen (scherm of regio)"
       },
       {
         "feature": "Apple Silicon"
       },
       {
-        "feature": "Werkbalk die links of rechts vastklikt"
+        "feature": "Werkbalk die links of rechts vastgezet kan worden"
       }
     ],
     "pricing": {
@@ -331,7 +344,7 @@
     "scribbbleStrengths": [
       "Native macOS — geoptimaliseerd voor Apple Silicon",
       "Ontworpen rond moderne Mac-sneltoetsen, met een werkbalk die links of rechts kan docken",
-      "Bevat Spotlight-, Marker- en Meettools",
+      "Bevat Spotlight-, Highlighter-, Measure- en Magnify (schermzoom)-tools",
       "Ingebouwde Snapshot-tool — leg het hele scherm of een regio vast zonder aparte app",
       "Lichtgewicht en snel",
       "Gratis begeleidende Screenshot Annotate webtool voor statische markup"
@@ -366,13 +379,13 @@
         "body": [
           "Scribbble's toolbar is het directe tegenhanger van Epic Pen's zwevende toolbar, met één verschil: in plaats van een vast kleurenpalet dat je sleept, hecht het zich aan de linker- of rechterkant van het scherm en klapt het weg terwijl je tekent, zodat het nooit het ding dat je wilt aanwijzen bedekt.",
           "Elke tool heeft een sneltoets met één toets, zodat je kunt schakelen van pen naar markeerstift naar pijl zonder ooit op de toolbar te mikken — handig als je midden in een presentatie zit.",
-          "Het bevat ook drie tools die Epic Pen niet heeft: Spotlight, dat alles dimt behalve het gebied waarop je je richt; Meet, om pixelafstanden op het scherm te lezen; en Snapshot, waarmee je het hele scherm of een selectie vastlegt zonder aparte app."
+          "Het bevat ook vier tools die Epic Pen niet heeft: Spotlight, dat alles dimt behalve het gebied waarop je je concentreert; Magnify, dat inzoomt op het live scherm zodat kleine tekst en UI-detail leesbaar zijn vanaf de achterste rij of op een telefoonformaat terugspelen; Measure, voor het aflezen van pixelafstanden op het scherm; en Snapshot, dat het hele scherm of een regio vastlegt zonder een aparte app."
         ]
       },
       {
         "heading": "Is er een gratis Epic Pen-alternatief voor Mac?",
         "body": [
-          "Scribbble is gratis te downloaden en gratis te gebruiken — je kunt tekenen, markeren, vormen en tekst toevoegen, en Spotlight en Meet gebruiken zonder iets te betalen. Er is een optionele eenmalige licentie als je de ontwikkeling wilt steunen en de rest van de app wilt ontgrendelen; er is geen abonnement en geen terugkerende kosten.",
+          "Scribbble is gratis te downloaden en gratis te gebruiken — je kunt tekenen, markeren, vormen en tekst toevoegen, en Spotlight, Magnify en Measure gebruiken zonder iets te betalen. Er is een optionele eenmalige licentie als je de ontwikkeling wilt steunen en de rest van de app wilt vrijschakelen; er is geen abonnement en geen terugkerende kosten.",
           "Dat staat gunstig tegenover Epic Pen's model op Windows, dat een gratis niveau plus een betaalde Pro-versie heeft waar vormen en tekst zich bevinden."
         ]
       }
@@ -391,7 +404,7 @@
     ],
     "scribbbleStrengths": [
       "Teken op het live scherm tijdens gesprekken en presentaties",
-      "Bevat Spotlight-, highlighter- en meettools",
+      "Bevat Spotlight, Markeerpen, Meet- en Vergrootgereedschap (schermzoom)",
       "Ingebouwde Snapshot-functie (heel scherm of regio) — dekt ook Annotate’s terrein",
       "Companion gratis Screenshot Annotate webtool (geen account vereist)",
       "Eenmalige licentie",
@@ -419,17 +432,21 @@
         "feature": "Meettool"
       },
       {
-        "feature": "Schermafdruk maken (volledig scherm of regio)"
+        "feature": "Vergroot (schermzoom)"
       },
       {
-        "feature": "Screenshot-annotatie",
+        "feature": "Snapshot-opname (volledig scherm of gebied)",
         "scribbble": "Ja (gratis webtool)"
       },
       {
-        "feature": "Teamcollaboratie"
+        "feature": "Schermafbeelding annotatie",
+        "scribbble": "Ja (gratis webtool)"
       },
       {
-        "feature": "Gratis screenshottool online"
+        "feature": "Team-samenwerking"
+      },
+      {
+        "feature": "Gratis schermafbeeldingstool online"
       }
     ],
     "pricing": {
@@ -467,7 +484,10 @@
         "feature": "Meet-tool"
       },
       {
-        "feature": "Snapshot-opname (scherm of regio)"
+        "feature": "Vergroot (schermzoom)"
+      },
+      {
+        "feature": "Snapshot-opname (volledig scherm of gebied)"
       },
       {
         "feature": "Whiteboard-modus"
@@ -479,17 +499,18 @@
         "feature": "Webcam-overlay"
       },
       {
-        "feature": "Werkbalk klikt vast links of rechts"
+        "feature": "Werkbalk vastzetbaar links of rechts"
       },
       {
-        "feature": "Gratis download om te proberen"
-      },
-      {
-        "feature": "Windows-versie"
+        "feature": "Gratis te downloaden om te proberen"
       },
       {
         "scribbble": "Ja (gratis webtool)",
-        "feature": "Companion screenshot-annotator"
+        "feature": "Windows-versie"
+      },
+      {
+        "feature": "Companion screenshot-annotator",
+        "scribbble": "Ja (gratis webtool)"
       }
     ],
     "pricing": {
@@ -502,7 +523,7 @@
       },
       {
         "q": "Wat is het beste Ink2Go-alternatief voor Mac?",
-        "a": "Voor live tekenen op het scherm is Scribbble de meest vergelijkbare native Mac-optie: pen, markeerder, vormen, tekst, Spotlight en Measure, plus ingebouwde Snapshot-captures. Het neemt geen video op, dus combineer het met QuickTime, OBS of Loom als je ook een opname nodig hebt."
+        "a": "Voor live tekenen op het scherm is Scribbble de meest vergelijkbare native Mac-optie: pen, markeerpen, vormen, tekst, Spotlight, Meet- en Vergrootgereedschap, plus ingebouwde Snapshot-capture. Het neemt geen video op, dus combineer het met QuickTime, OBS of Loom als je ook een opname nodig hebt."
       },
       {
         "q": "Neemt Scribbble video op zoals Ink2Go?",
@@ -528,7 +549,7 @@
     "scribbbleStrengths": [
       "Actief ontwikkeld en gebouwd voor moderne macOS-versies",
       "Apple Silicon-native",
-      "Bevat Spotlight (focus dim), Highlighter en Meet-tool",
+      "Bevat Spotlight (focus dim), Markeerpen, Meet- en Vergrootgereedschap (schermzoom)",
       "Ingebouwde Snapshot-tool om het hele scherm of een regio vast te leggen",
       "Werkbalk kan vastklikken aan linker- of rechterrand, of vrij zweven waar je hem sleept",
       "Gratis te downloaden en uit te proberen vóór aanschaf van een licentie",

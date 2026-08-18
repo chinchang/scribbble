@@ -3,28 +3,29 @@
     "title": "ZoomIt für Mac vs Scribbble — Welche Wahl 2026?",
     "description": "Microsoft ZoomIt läuft jetzt auf macOS, aber die Oberfläche ist noch ein Windows-Port. Hier ein ehrlicher Vergleich mit Scribbble — Funktionen, Preise und wann man welches wählt.",
     "h1": "Scribbble vs ZoomIt",
-    "subheadline": "ZoomIt ist ein beliebtes Sysinternals-Tool aus der Windows-Welt (mit kürzlicher macOS-Version). Scribbble ist eine Mac-first App, die sich rein aufs Zeichnen auf dem Bildschirm konzentriert und eine moderne UI bietet.",
+    "subheadline": "ZoomIt ist ein beliebtes Sysinternals-Tool aus der Windows-Welt (mit einer kürzlichen macOS-Veröffentlichung). Scribbble ist eine Mac-first App, die um das Zeichnen auf dem Bildschirm herum aufgebaut ist — und mit Magnify deckt sie jetzt auch ZoomIts charakteristischen Bildschirmlupe ab.",
     "competitorSummary": "ZoomIt ist ein kostenloses Annotation-, Zoom- und Pausen-Timer-Tool von Microsoft Sysinternals. Es stammt von Windows und Microsoft hat inzwischen eine macOS-Build veröffentlicht. Seine Stärke sind die reibungslosen Hotkeys und die integrierte Zoom-Funktion.",
     "competitorStrengths": [
       "Kostenlos von Microsoft",
       "Integrierte Bildschirmvergrößerung und Pausen-Timer",
+      "Whiteboard-Modus und Schreibmodus",
       "Vertraut für langjährige Sysinternals-Nutzer"
     ],
     "scribbbleStrengths": [
       "Mac-first entwickelt mit moderner Symbolleiste, die du links oder rechts andocken kannst",
       "Apple Silicon native",
-      "Enthält Spotlight (Fokus-Abdunkelung), Highlighter und Messwerkzeuge out of the box",
+      "Beinhaltet Spotlight (Fokus-Dimmung), Highlighter, Measure und Magnify (Bildschirmlupe) direkt out of the box",
       "Eingebautes Snapshot-Tool zum Erfassen des gesamten Bildschirms oder eines Bereichs, ohne die App zu verlassen",
       "Entwickelt für Bildschirmfreigabe-, Streaming- und Aufnahme-Workflows",
       "Leichtgewichtig und fokussiert aufs Zeichnen, keine zusätzlichen Utilities zum Lernen"
     ],
     "whenToChooseScribbble": [
       "Du willst eine moderne, Mac-native UI statt eines portierten Sysadmin-Tools",
-      "Das Zeichnen auf dem Bildschirm ist dein Hauptbedarf — nicht Zoom oder Timer",
+      "Sie wollen Bildschirmzoom und Annotation in einer Mac‑nativen App, nicht in einem Sysadmin‑Tool",
       "Du bevorzugst eine Einmalkauf-App mit kontinuierlicher Designpflege"
     ],
     "whenToChooseCompetitor": [
-      "Du brauchst ausdrücklich ZoomIt's Zoom- und Pausentimer-Funktionen",
+      "Sie möchten speziell ZoomIts Pausentimer oder den Whiteboard‑Modus",
       "Euer Team nutzt bereits standardmäßig Sysinternals-Tools"
     ],
     "table": [
@@ -51,13 +52,13 @@
         "feature": "Messwerkzeug"
       },
       {
-        "feature": "Snapshot-Aufnahme (ganzer Bildschirm oder Bereich)"
+        "feature": "Magnify (Bildschirmlupe)"
       },
       {
-        "feature": "Dock-Toolbar links oder rechts"
+        "feature": "Snapshot-Aufnahme (Bildschirm oder Bereich)"
       },
       {
-        "feature": "Integrierte Bildschirmvergrößerung"
+        "feature": "Dock‑Werkzeugleiste links oder rechts"
       },
       {
         "feature": "Pausentimer"
@@ -76,7 +77,7 @@
       },
       {
         "q": "Enthält Scribbble eine Zoom-Funktion wie ZoomIt?",
-        "a": "Nein. Scribbble konzentriert sich ausschließlich auf Annotationen. Wenn Bildschirm‑Zoom für deinen Workflow kritisch ist, sind ZoomIt oder die integrierte Zoom‑Bedienungshilfe von macOS wahrscheinlich besser geeignet."
+        "a": "Ja. Scribbbles Magnify‑Werkzeug vergrößert den Live‑Bildschirm, so dass Sie kleinen Text, Code oder UI‑Details mitten in einer Präsentation vergrößern und dann per Hotkey wieder zurückkehren können — dieselbe Aufgabe wie ZoomIts Zoom, in einer Mac‑nativen App, die zusätzlich Spotlight, Measure und Snapshot bietet. ZoomIt hat nach wie vor den Pausentimer, falls Sie den brauchen."
       }
     ]
   },
@@ -93,7 +94,7 @@
     ],
     "scribbbleStrengths": [
       "Kostenloser Download und Ausprobieren vor dem Kauf",
-      "Enthält ein Messwerkzeug direkt out of the box",
+      "Beinhaltet Measure und Magnify (Bildschirmlupe) direkt out of the box",
       "Eingebautes Snapshot‑Tool — ganzen Bildschirm oder Bereich aufnehmen, ohne separate App",
       "Toolbar dockt an linken oder rechten Bildschirmrand, nicht nur schwebend",
       "Begleitendes, kostenloses Screenshot‑Annotate‑Webtool für statische Markups",
@@ -130,21 +131,25 @@
         "feature": "Messwerkzeug"
       },
       {
-        "feature": "Screenshot-Erfassung (Bildschirm oder Bereich)"
+        "feature": "Magnify (Bildschirmlupe)"
       },
       {
-        "feature": "Cursor-Hervorhebung"
+        "feature": "Snapshot-Aufnahme (Bildschirm oder Bereich)"
       },
       {
-        "feature": "Kostenloser Download zum Ausprobieren"
+        "feature": "Cursor‑Hervorhebung"
+      },
+      {
+        "feature": "Kostenloser Download zum Testen",
+        "scribbble": "Direkter Download"
       },
       {
         "feature": "Vertrieb",
         "scribbble": "Direkter Download"
       },
       {
-        "feature": "Begleitendes Screenshot-Annotierungstool",
-        "scribbble": "Ja (kostenloses Web-Tool)"
+        "feature": "Begleitender Screenshot‑Annotator",
+        "scribbble": "Ja (kostenloses Web‑Tool)"
       }
     ],
     "pricing": {
@@ -169,7 +174,7 @@
         "heading": "Presentify für Mac: Was es ist und was du sonst noch bedenken solltest",
         "body": [
           "Presentify ist eine nur für macOS verfügbare Screen-Annotation-App — du zeichnest über alles, was auf deinem Bildschirm ist, hebst den Cursor hervor und blendest alles aus, außer dem Bereich, auf den du dich konzentrierst. Sie wird als Einmalkauf über den Mac App Store und direkt über die eigene Website verkauft und ist eine durchweg gute App.",
-          "Scribbble deckt denselben Anwendungsfall auf macOS ab und unterscheidet sich in drei Punkten, die vor der Entscheidung wichtig sind: Es ist kostenlos zum Download und Gebrauch, sodass du die gesamte App auf deinem Rechner testen kannst, bevor du etwas bezahlst; es enthält ein Measure-Tool zum Ablesen von Pixelabständen auf dem Bildschirm; und es liefert ein Snapshot-Tool plus einen kostenlosen Begleiter im Web zum Markieren statischer Bilder.",
+          "Scribbble deckt auf macOS dieselben Bereiche ab und unterscheidet sich in ein paar Punkten, die vor der Wahl wichtig sind: Die App ist kostenlos zum Herunterladen und Ausprobieren auf Ihrem eigenen Rechner, sie enthält ein Measure‑Werkzeug zum Messen von Pixelabständen auf dem Bildschirm und ein Magnify‑Werkzeug, das in den Live‑Bildschirm hineinzoomt, und sie bringt ein Snapshot‑Werkzeug sowie einen kostenlosen Begleiter als Web‑Annotator zum Markieren statischer Bilder mit.",
           "Kurz gesagt: Presentifys Cursor-Highlight ist besser umgesetzt, Scribbble bietet mehr Werkzeuge und einen kostenlosen Testweg. Die folgende Tabelle zeigt die Unterschiede Feature für Feature."
         ]
       },
@@ -177,7 +182,7 @@
         "heading": "Ist Presentify kostenlos?",
         "body": [
           "Nein. Presentify ist ein kostenpflichtiger Einmalkauf mit einer eingeschränkten Testversion. Es gibt keine dauerhaft kostenlose Stufe.",
-          "Scribbble lässt sich kostenlos herunterladen und für Zeichnen, Hervorheben, Formen, Text, Spotlight und Measure kostenlos nutzen; zusätzlich gibt es eine optionale Einmal-Lizenz — kein Abo. Wenn du also eine kostenlose Presentify-Alternative suchst, ist das der praktische Unterschied."
+          "Scribbble ist kostenlos zum Herunterladen und kostenlos nutzbar für Zeichnen, Hervorheben, Formen, Text, Spotlight, Magnify und Measure, mit einer optionalen Einmal‑Lizenz und ohne Abo — wenn Sie also eine kostenlose Presentify‑Alternative suchen, ist das der praktische Unterschied."
         ]
       },
       {
@@ -204,26 +209,31 @@
         "feature": "Messwerkzeug"
       },
       {
-        "feature": "Textmarker"
+        "feature": "Magnify (Bildschirmlupe)"
       },
       {
-        "feature": "Schnappschussaufnahme (ganzer Bildschirm oder Bereich)"
+        "feature": "Highlighter"
       },
       {
-        "feature": "Screenshot-Anmerkung",
+        "feature": "Snapshot-Aufnahme (Bildschirm oder Bereich)",
         "scribbble": "Ja (kostenloses begleitendes Webtool)"
       },
       {
-        "feature": "Bildschirmaufzeichnung"
+        "feature": "Screenshot‑Annotation",
+        "scribbble": "Ja (kostenloses Begleit‑Webtool)"
       },
       {
-        "feature": "Cloud-Upload & teilbare Links"
+        "feature": "Bildschirmaufnahme"
       },
       {
-        "feature": "Scroll-Aufnahme"
+        "feature": "Cloud‑Upload & teilbare Links"
       },
       {
-        "feature": "Preisgestaltung",
+        "feature": "Scroll‑Aufnahme",
+        "scribbble": "Einmalzahlung"
+      },
+      {
+        "feature": "Preismodell",
         "scribbble": "Einmalzahlung"
       }
     ],
@@ -250,7 +260,7 @@
     "scribbbleStrengths": [
       "Annotiert den LIVE-Bildschirm — nicht nur gespeicherte Bilder",
       "Funktioniert während Zoom-Anrufen, OBS-Streams und Bildschirmaufnahmen",
-      "Beinhaltet Spotlight-, Textmarker- und Messwerkzeuge für Live-Präsentationen",
+      "Beinhaltet Spotlight, Highlighter, Measure und Magnify (Bildschirmlupe) für Live‑Präsentationen",
       "Enthält jetzt integrierte Snapshot-Erfassung (ganzer Bildschirm oder Bereich) — schließt die Lücke zwischen Erfassen und Live",
       "Leichter, auf einen Zweck fokussiertes Tool",
       "Preiswerter für Nutzer, die nur Live-Annotierung benötigen",
@@ -276,7 +286,7 @@
     "scribbbleStrengths": [
       "Native macOS‑App — für Apple Silicon optimiert",
       "Entwickelt für moderne Mac-Shortcuts, mit einer Werkzeugleiste, die links oder rechts angedockt werden kann",
-      "Beinhaltet Spotlight-, Textmarker- und Messwerkzeuge",
+      "Beinhaltet Spotlight-, Highlighter-, Measure- und Magnify‑Werkzeuge (Bildschirmlupe)",
       "Eingebautes Snapshot-Tool — ganzer Bildschirm oder Bereich erfassen, ohne eine separate App",
       "Leichtgewichtig und schnell",
       "Kostenloses Begleit‑Webtool Screenshot Annotate für statische Markups"
@@ -306,13 +316,16 @@
         "feature": "Messwerkzeug"
       },
       {
-        "feature": "Snapshot-Erfassung (ganzer Bildschirm oder Bereich)"
+        "feature": "Magnify (Bildschirmlupe)"
+      },
+      {
+        "feature": "Snapshot-Aufnahme (Bildschirm oder Bereich)"
       },
       {
         "feature": "Apple Silicon"
       },
       {
-        "feature": "Symbolleiste, die links oder rechts andockt"
+        "feature": "Werkzeugleiste, die links oder rechts andockt"
       }
     ],
     "pricing": {
@@ -366,13 +379,13 @@
         "body": [
           "Scribbbles Toolbar ist das direkte Gegenstück zur schwebenden Epic Pen-Leiste, mit einem Unterschied: statt einer festen Palette, die du herumziehst, dockt sie an der linken oder rechten Bildschirmkante und klappt beim Zeichnen aus dem Weg, sodass sie nie das verdeckt, worauf du zeigen willst.",
           "Jedes Werkzeug hat ein Einzeltasten-Shortcut, so kannst du vom Stift zum Highlighter zum Pfeil wechseln, ohne je auf die Leiste zielen zu müssen — praktisch, wenn du mitten in einer Live-Präsentation sprichst.",
-          "Außerdem bringt es drei Werkzeuge mit, die Epic Pen nicht hat: Spotlight, das alles außer dem Bereich, auf den du dich konzentrierst, abdunkelt; Measure, um Pixelabstände auf dem Bildschirm abzulesen; und Snapshot, das den ganzen Bildschirm oder einen Bereich ohne extra App erfasst."
+          "Es bringt außerdem vier Werkzeuge mit, die Epic Pen nicht hat: Spotlight, das alles außer dem fokussierten Bereich abdunkelt; Magnify, das in den Live‑Bildschirm hineinzoomt, sodass kleiner Text und UI‑Details von der letzten Reihe oder auf einem handygroßen Wiedergabebildschirm lesbar werden; Measure, zum Ablesen von Pixelabständen auf dem Bildschirm; und Snapshot, das den ganzen Bildschirm oder einen Bereich ohne separate App aufnimmt."
         ]
       },
       {
         "heading": "Gibt es eine kostenlose Epic Pen-Alternative für Mac?",
         "body": [
-          "Scribbble ist kostenlos herunterladbar und nutzbar — du kannst zeichnen, hervorheben, Formen und Text hinzufügen sowie Spotlight und Measure ohne Bezahlung verwenden. Es gibt eine optionale Einmal-Lizenz, wenn du die Entwicklung unterstützen und den Rest der App freischalten möchtest; es gibt kein Abo und keine wiederkehrenden Kosten.",
+          "Scribbble ist kostenlos zum Herunterladen und frei nutzbar — Sie können zeichnen, hervorheben, Formen und Text hinzufügen sowie Spotlight, Magnify und Measure ohne Bezahlung verwenden. Es gibt eine optionale Einmal‑Lizenz, wenn Sie die Entwicklung unterstützen und den Rest der App freischalten möchten; es gibt kein Abo und keine wiederkehrenden Kosten.",
           "Das steht im Vergleich zu Epic Pen auf Windows gut da: Dort gibt es eine kostenlose Stufe plus ein kostenpflichtiges Pro, in dem Formen und Text enthalten sind."
         ]
       }
@@ -391,7 +404,7 @@
     ],
     "scribbbleStrengths": [
       "Annotiert den Live‑Bildschirm während Anrufen und Präsentationen",
-      "Enthält Spotlight-, Textmarker‑ und Messwerkzeuge",
+      "Enthält Spotlight, Textmarker, Maßband und Vergrößerung (Bildschirmzoom)",
       "Eingebaute Snapshot‑Erfassung (ganzer Bildschirm oder Bereich) — deckt auch Annotates Gebiet ab",
       "Begleitendes, kostenloses Screenshot‑Annotate‑Webtool (ohne Anmeldung)",
       "Einmallizenz",
@@ -419,14 +432,18 @@
         "feature": "Messwerkzeug"
       },
       {
-        "feature": "Snapshot‑Erfassung (ganzer Bildschirm oder Bereich)"
+        "feature": "Vergrößerung (Bildschirmzoom)"
       },
       {
-        "feature": "Screenshot‑Annotierung",
+        "feature": "Snapshot-Aufnahme (ganzer Bildschirm oder Bereich)",
         "scribbble": "Ja (kostenloses Webtool)"
       },
       {
-        "feature": "Team‑Kollaboration"
+        "feature": "Screenshot-Anmerkung",
+        "scribbble": "Ja (kostenloses Web‑Tool)"
+      },
+      {
+        "feature": "Team‑Zusammenarbeit"
       },
       {
         "feature": "Kostenloses Screenshot‑Tool online"
@@ -467,7 +484,10 @@
         "feature": "Messwerkzeug"
       },
       {
-        "feature": "Snapshot‑Aufnahme (Bildschirm oder Bereich)"
+        "feature": "Vergrößerung (Bildschirmzoom)"
+      },
+      {
+        "feature": "Snapshot-Aufnahme (ganzer Bildschirm oder Bereich)"
       },
       {
         "feature": "Whiteboard‑Modus"
@@ -476,20 +496,21 @@
         "feature": "Bildschirmaufnahme als Video"
       },
       {
-        "feature": "Webcam‑Overlay"
+        "feature": "Webcam‑Überlagerung"
       },
       {
-        "feature": "Toolbar dockt links oder rechts"
+        "feature": "Werkzeugleiste dockt links oder rechts"
       },
       {
         "feature": "Kostenloser Download zum Ausprobieren"
       },
       {
+        "scribbble": "Ja (kostenloses Web-Tool)",
         "feature": "Windows‑Version"
       },
       {
-        "scribbble": "Ja (kostenloses Web-Tool)",
-        "feature": "Begleitender Screenshot‑Annotator"
+        "feature": "Begleitendes Screenshot‑Annotator‑Tool",
+        "scribbble": "Ja (kostenloses Web‑Tool)"
       }
     ],
     "pricing": {
@@ -502,7 +523,7 @@
       },
       {
         "q": "Was ist die beste Ink2Go‑Alternative für Mac?",
-        "a": "Für Live‑Zeichnen auf dem Bildschirm ist Scribbble die ähnlichste Mac‑native Lösung: Stift, Textmarker, Formen, Text, Spotlight und Measure sowie integrierte Snapshot‑Erfassung. Es zeichnet kein Video auf, kombiniere es also mit QuickTime, OBS oder Loom, wenn du auch eine Aufnahme benötigst."
+        "a": "Für Live‑Zeichnungen auf dem Bildschirm ist Scribbble die mac‑native Lösung, die am nächsten kommt: Stift, Textmarker, Formen, Text, Spotlight, Maßband und Vergrößerung (Bildschirmzoom) sowie ein eingebautes Snapshot‑Tool. Es nimmt keine Videos auf — kombiniere es bei Bedarf mit QuickTime, OBS oder Loom, wenn du auch aufnehmen willst."
       },
       {
         "q": "Nimmt Scribbble wie Ink2Go Video auf?",
@@ -528,7 +549,7 @@
     "scribbbleStrengths": [
       "Aktiv entwickelt und für aktuelles macOS gebaut",
       "Apple Silicon‑native",
-      "Enthält Spotlight (Fokus‑Abdunkelung), Textmarker und Messwerkzeug",
+      "Enthält Spotlight (Fokusabdunklung), Textmarker, Maßband und Vergrößerung (Bildschirmzoom)",
       "Integriertes Snapshot‑Tool zum Erfassen des gesamten Bildschirms oder eines Bereichs",
       "Toolbar dockt links oder rechts oder schwebt an beliebiger Stelle",
       "Kostenlos herunterladen und vor dem Kauf ausprobieren",
