@@ -8,7 +8,7 @@
     "painPoints": [
       {
         "title": "Passer à un tableau blanc casse le fil du cours",
-        "body": "Ouvrir Jamboard ou Miro en plein cours fait perdre l'attention des élèves. Scribbble dessine par-dessus ce que vous avez déjà ouvert — diapositives, navigateurs, PDF, éditeurs de code."
+        "body": "Ouvrir Jamboard ou Miro en plein cours fait perdre l’attention des élèves. Scribbble dessine par-dessus ce que vous avez déjà ouvert — slides, navigateurs, PDFs, éditeurs de code — et quand vous avez besoin d’une toile vierge, son mode Whiteboard est accessible d’un seul raccourci plutôt que d’un onglet supplémentaire."
       },
       {
         "title": "Les élèves ne voient pas toujours où vous pointez",
@@ -38,11 +38,13 @@
       "Surligneur pour marquer les passages importants d'une lecture ou d'une diapositive",
       "Projecteur (Spotlight) pour assombrir tout sauf la partie que vous expliquez",
       "Magnify (zoom d’écran) pour agrandir texte, code ou diagrammes trop petits pour le fond de la salle",
+      "Mode Whiteboard pour résoudre un exercice sur une toile vierge sans quitter la leçon",
       "Outil flèche pour diriger l’attention",
       "Formes rectangle et ellipse pour encadrer ou entourer les concepts clés",
-      "Outil texte pour les repères de vocabulaire",
-      "Capture d’écran complète ou régionale pour sauvegarder le travail des élèves ou des extraits de leçon",
-      "Effacement rapide pour garder les diapositives propres"
+      "Outil texte pour les mots de vocabulaire",
+      "Capture Snapshot de l’écran entier ou d’une région pour sauvegarder les travaux des élèves ou des captures de cours",
+      "Effacement rapide pour garder les slides propres",
+      "Prise en charge multi-écrans — annotez l’affichage que vous partagez, pas seulement l’écran principal"
     ],
     "faq": [
       {
@@ -54,8 +56,12 @@
         "a": "Oui. Parce que Scribbble dessine au niveau du système, chaque enregistreur d'écran capture les annotations comme faisant partie de l'écran."
       },
       {
-        "q": "Y a-t-il une réduction pour les enseignants ?",
-        "a": "Contactez-nous via le lien de support ci-dessous — nous sommes heureux d'aider les enseignants et les établissements pour les licences en volume."
+        "q": "Scribbble fonctionne-t-il avec plusieurs écrans ?",
+        "a": "Oui. Si vous enseignez avec des slides sur un projecteur ou un écran externe et vos notes sur l’écran du portable, vous pouvez annoter l’affichage que vous partagez — Scribbble prend en charge les configurations multi-écrans plutôt que de vous cantonner à l’écran principal."
+      },
+      {
+        "q": "Y a-t-il une réduction pour les enseignants ?",
+        "a": "Contactez-nous via le lien de support ci‑dessous — nous sommes heureux d’aider les enseignants et les établissements pour les licences en volume."
       }
     ]
   },
@@ -94,10 +100,12 @@
       "Surligneur pour mettre en évidence du texte à l’écran",
       "Spotlight pour concentrer le chat sur une zone précise du jeu",
       "Magnify (zoom d’écran) pour rendre lisibles les petites interfaces, statistiques d’objet ou la mini-carte",
-      "Outil flèche pour des annotations rapides",
-      "Rectangle, ellipse et outils texte pour les superpositions",
-      "Capture d’écran ou région pour vignettes de clips et moments forts après le stream",
-      "Raccourci d’effacement rapide pour nettoyer l’écran entre les séquences"
+      "Mode Whiteboard pour esquisser une stratégie ou un bracket entre les manches",
+      "Outil flèche pour des callouts rapides",
+      "Outils rectangle, ellipse et texte pour des calques",
+      "Capture Snapshot de l’écran ou d’une région pour vignettes de clips et moments post‑stream",
+      "Raccourci d’effacement rapide pour nettoyer l’écran entre les séquences",
+      "Prise en charge multi-écrans — dessinez sur l’écran du gameplay pendant que le chat reste sur l’autre"
     ],
     "faq": [
       {
@@ -105,8 +113,12 @@
         "a": "Oui. Scribbble dessine au niveau du système, donc toute source de capture d’écran — OBS, Streamlabs, Restream — récupère automatiquement vos annotations."
       },
       {
-        "q": "Cela va-t-il ralentir mon jeu ?",
-        "a": "Scribbble est une application Mac native légère et utilise l’accélération GPU pour le dessin. L’impact sur les performances est négligeable."
+        "q": "Est-ce que ça marche si je streame depuis une configuration à deux écrans ?",
+        "a": "Oui. Scribbble prend en charge plusieurs écrans, vous pouvez donc dessiner sur l’affichage que vous capturez dans OBS tandis que le chat, vos slides et les alertes restent intacts sur l’autre."
+      },
+      {
+        "q": "Est-ce que ça ralentira mon jeu ?",
+        "a": "Scribbble est une application native Mac légère et utilise l’accélération GPU pour le dessin. L’impact sur les performances est négligeable."
       }
     ]
   },
@@ -145,11 +157,13 @@
       "Surligneur pour annoter du code ou du texte à l’écran",
       "Spotlight pour assombrir tout sauf la zone que vous montrez",
       "Magnify (zoom d’écran) pour rendre lisibles les petites interfaces et le code sur les écrans de téléphone",
-      "Outil flèche pour des guidages",
-      "Rectangle, ellipse et texte pour signaler des fonctionnalités",
-      "Capture d’écran ou région pour miniatures vidéo et images B-roll",
+      "Mode Whiteboard pour des schémas explicatifs sans passer à une autre app",
+      "Outil flèche pour les visites guidées",
+      "Rectangle, ellipse et texte pour mettre en avant des éléments",
+      "Capturer l’écran ou une région pour vignettes vidéo et images B-roll",
       "Plusieurs couleurs pour différencier les concepts",
-      "Annuler / rétablir pour continuer l’enregistrement malgré les petites erreurs"
+      "Annuler / rétablir pour continuer l’enregistrement malgré de petites erreurs",
+      "Prise en charge multi-écrans — annotez l’écran que vous enregistrez, les notes restent sur l’autre"
     ],
     "faq": [
       {
@@ -203,10 +217,12 @@
       "Surligneur pour marquer le texte et les blocs de contenu",
       "Spotlight pour focaliser une critique sur une frame à la fois",
       "Magnify (zoom d’écran) pour inspecter la typographie et les pixels sans quitter la zone de travail",
-      "Outil flèche pour critiquer les flux",
-      "Outil texte pour les notes inline",
-      "Capture d’un cadre ou d’une région à déposer directement dans un ticket Linear ou un document de design",
-      "Fixer la barre d’outils à gauche ou à droite pour garder la zone de travail dégagée"
+      "Mode tableau blanc pour esquisser un parcours ou une mise en page pendant une critique",
+      "Outil flèche pour la critique des flux",
+      "Outil texte pour des notes en ligne",
+      "Capturez une image ou une région pour l’insérer directement dans un ticket Linear ou un document de design",
+      "Ancrez la barre d’outils à gauche ou à droite pour garder la zone de travail dégagée",
+      "Prise en charge multi-écrans — annotez Figma sur l’écran principal avec les références sur le portable"
     ],
     "faq": [
       {
@@ -214,8 +230,12 @@
         "a": "Scribbble dessine par-dessus Figma (ou tout autre élément) au niveau du système — pas besoin de plugin. Les annotations vivent à l’écran, pas dans le fichier Figma."
       },
       {
-        "q": "Puis-je enregistrer la frame annotée en image ?",
-        "a": "L’app Mac Scribbble dessine sur l’écran en direct — pour sauvegarder un fixe annoté, utilisez l’outil gratuit Screenshot Annotate à /tools/screenshot-annotate qui vous permet d’uploader ou coller une image, l’annoter et copier dans le presse-papiers."
+        "q": "Fonctionne-t-il sur deux écrans ?",
+        "a": "Oui. Scribbble prend en charge les configurations multi-écrans : vous pouvez annoter un cadre Figma sur votre écran principal pendant que les références ou la spécification restent sur le deuxième écran."
+      },
+      {
+        "q": "Puis-je sauvegarder le cadre annoté en image ?",
+        "a": "L’app Mac Scribbble dessine sur l’écran en direct — pour sauvegarder une image annotée, utilisez l’outil gratuit Screenshot Annotate à /tools/screenshot-annotate qui permet d’importer ou coller une image, la marquer et copier dans le presse-papiers."
       }
     ]
   },
@@ -253,11 +273,13 @@
       "Surligneur pour les chiffres ROI et les lignes de tarif",
       "Spotlight pour assombrir tout sauf le widget du dashboard que vous montrez",
       "Magnify (zoom d’écran) pour agrandir la métrique ou l’article dont vous parlez",
-      "Outil flèche pour des présentations guidées",
-      "Formes rectangle et ellipse pour mettre en avant prix et fonctionnalités",
-      "Outil Texte pour étiquettes en ligne",
-      "Capture d’écran totale ou régionale pour relances par e‑mail et récapitulatifs",
-      "Nettoyage en une touche entre les sections de la démo"
+      "Mode tableau blanc pour dessiner le workflow ou l’organigramme que la présentation n’aborde pas",
+      "Outil flèche pour les visites guidées",
+      "Formes rectangle et ellipse pour signaler prix et fonctionnalités",
+      "Outil texte pour les étiquettes en ligne",
+      "Capturer l’écran ou une région pour les e‑mails de suivi et les slides récapitulatives",
+      "Effacement d’un seul raccourci entre les sections de la démo",
+      "Prise en charge multi-écrans — annotez l’écran partagé pendant que vos notes restent sur l’autre"
     ],
     "faq": [
       {
@@ -265,8 +287,12 @@
         "a": "Oui. Scribbble dessine au niveau du système d'exploitation, donc toute capture ou partage d'écran — Zoom, Gong, Chorus, Loom, Vidyard — enregistre les annotations."
       },
       {
-        "q": "Existe-t-il une licence équipe ?",
-        "a": "Contactez-nous via le lien de support ci‑dessous pour les licences équipe et volume."
+        "q": "Est-ce que ça marche quand je présente depuis un second écran ?",
+        "a": "Oui. Scribbble prend en charge plusieurs moniteurs : vous pouvez annoter l’écran que vous partagez avec le prospect pendant que vos notes et votre CRM restent privés sur l’autre."
+      },
+      {
+        "q": "Y a‑t‑il une licence pour les équipes ?",
+        "a": "Contactez-nous via le lien de support ci‑dessous pour les licences d’équipe et les achats en volume."
       }
     ]
   }

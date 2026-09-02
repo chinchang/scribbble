@@ -24,7 +24,7 @@ export const personas: Persona[] = [
     painPoints: [
       {
         title: "Switching to a whiteboard breaks the lesson flow",
-        body: "Opening Jamboard or Miro mid-class loses student attention. Scribbble draws on top of whatever you already have open — slides, browsers, PDFs, code editors.",
+        body: "Opening Jamboard or Miro mid-class loses student attention. Scribbble draws on top of whatever you already have open — slides, browsers, PDFs, code editors — and when you do need a blank canvas, its Whiteboard mode is one hotkey away instead of another tab.",
       },
       {
         title: "Students can't tell what you're pointing at",
@@ -54,11 +54,13 @@ export const personas: Persona[] = [
       "Highlighter to mark key passages in a reading or slide",
       "Spotlight to dim everything except the part you're explaining",
       "Magnify (screen zoom) to blow up small text, code or diagram detail for the back row",
+      "Whiteboard mode for working a problem on a blank canvas without leaving the lesson",
       "Arrow tool to direct attention",
       "Rectangle and ellipse shapes to box or circle key concepts",
       "Text tool for vocabulary call-outs",
       "Snapshot the whole screen or a region to save student work or lesson stills",
       "Quick-erase to keep slides clean",
+      "Multi-monitor support — annotate the display you're sharing, not just the main one",
     ],
     faq: [
       {
@@ -68,6 +70,10 @@ export const personas: Persona[] = [
       {
         q: "Will my annotations show up in QuickTime or Loom recordings?",
         a: "Yes. Because Scribbble draws at the OS level, every screen recorder captures the annotations as part of the screen.",
+      },
+      {
+        q: "Does Scribbble work with multiple monitors?",
+        a: "Yes. If you teach with slides on a projector or external display and your notes on the laptop screen, you can annotate whichever display you're sharing — Scribbble supports multi-monitor setups rather than locking you to the main screen.",
       },
       {
         q: "Is there a discount for educators?",
@@ -113,15 +119,21 @@ export const personas: Persona[] = [
       "Highlighter for emphasizing text on screen",
       "Spotlight to focus chat's eyes on one part of the gameplay",
       "Magnify (screen zoom) to pull small UI, item stats or the minimap into readable detail",
+      "Whiteboard mode for sketching a strat or a bracket between rounds",
       "Arrow tool for quick callouts",
       "Rectangle, ellipse and text tools for overlays",
       "Snapshot the screen or a region for clip thumbnails and post-stream highlights",
       "Quick-clear hotkey to wipe the screen between bits",
+      "Multi-monitor support — draw on the gameplay display while chat stays on the other",
     ],
     faq: [
       {
         q: "Does Scribbble work with OBS and Streamlabs?",
         a: "Yes. Scribbble draws at the OS level so any screen-capture source — OBS, Streamlabs, Restream — picks up your annotations automatically.",
+      },
+      {
+        q: "Does it work if I stream from a two-monitor setup?",
+        a: "Yes. Scribbble supports multiple monitors, so you can draw on the display you're capturing in OBS while chat, your deck and alerts stay untouched on the other one.",
       },
       {
         q: "Will it slow down my game?",
@@ -167,11 +179,13 @@ export const personas: Persona[] = [
       "Highlighter for marking up code or text on screen",
       "Spotlight to dim everything except the part you're demonstrating",
       "Magnify (screen zoom) to make small UI and code readable on phone-sized screens",
+      "Whiteboard mode for explainer sketches without cutting to a second app",
       "Arrow tool for guided tours",
       "Rectangle, ellipse and text for feature callouts",
       "Snapshot the screen or a region for video thumbnails and B-roll stills",
       "Multiple colors to differentiate concepts",
       "Undo / redo so you can keep recording through small mistakes",
+      "Multi-monitor support — annotate the display you're recording, notes stay on the other",
     ],
     faq: [
       {
@@ -228,15 +242,21 @@ export const personas: Persona[] = [
       "Highlighter for marking copy and content blocks",
       "Spotlight to focus a crit on one frame at a time",
       "Magnify (screen zoom) to inspect type and pixel detail without leaving the canvas",
+      "Whiteboard mode for sketching a flow or layout idea mid-crit",
       "Arrow tool for flow critique",
       "Text tool for inline notes",
       "Snapshot a frame or region to drop straight into a Linear ticket or design doc",
       "Dock the toolbar to the left or right edge to keep the canvas clear",
+      "Multi-monitor support — annotate Figma on the big display with references on the laptop",
     ],
     faq: [
       {
         q: "Does Scribbble integrate with Figma?",
         a: "Scribbble draws on top of Figma (or anything else) at the OS level — no plugin required. Annotations live on the screen, not inside the Figma file.",
+      },
+      {
+        q: "Does it work across two displays?",
+        a: "Yes. Scribbble supports multi-monitor setups, so you can annotate a Figma frame on your main display while references or the spec stay on the second screen.",
       },
       {
         q: "Can I save the annotated frame as an image?",
@@ -281,16 +301,22 @@ export const personas: Persona[] = [
       "Highlighter for ROI numbers and pricing rows",
       "Spotlight to dim everything except the dashboard widget you're showing",
       "Magnify (screen zoom) to blow up the metric or line item you're talking about",
+      "Whiteboard mode for drawing the workflow or org chart the deck doesn't cover",
       "Arrow tool for guided tours",
       "Rectangle and ellipse shapes for pricing and feature call-outs",
       "Text tool for inline labels",
       "Snapshot the screen or a region for follow-up emails and recap decks",
       "One-key clear between sections of the demo",
+      "Multi-monitor support — annotate the shared display while your notes stay on the other",
     ],
     faq: [
       {
         q: "Does this work with Zoom, Gong, Chorus and Loom?",
         a: "Yes. Scribbble draws at the OS level so any screen capture or share — Zoom, Gong, Chorus, Loom, Vidyard — captures the annotations.",
+      },
+      {
+        q: "Does it work when I present from a second display?",
+        a: "Yes. Scribbble supports multiple monitors, so you can annotate the display you're sharing with the prospect while your notes and CRM stay private on the other one.",
       },
       {
         q: "Is there a team license?",

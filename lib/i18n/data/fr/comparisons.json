@@ -8,16 +8,17 @@
     "competitorStrengths": [
       "Gratuit, par Microsoft",
       "Zoom écran intégré et minuterie de pause",
-      "Mode tableau blanc et mode saisie",
+      "Familier des utilisateurs de longue date de Sysinternals",
       "Familier aux utilisateurs historiques de Sysinternals"
     ],
     "scribbbleStrengths": [
       "Conçu d'abord pour Mac avec une barre d'outils moderne que vous pouvez ancrer à gauche ou à droite",
       "Natif Apple Silicon",
-      "Inclut Spotlight (mise en valeur), Surligneur, Mesure et Magnify (zoom d’écran) dès l’installation",
+      "Inclut Spotlight (mise en avant), Surligneur, Mesure, Loupe (zoom écran) et un mode Tableau blanc dès l’installation",
       "Outil Snapshot intégré pour capturer l'écran entier ou une région sans quitter l'app",
       "Conçu pour les workflows de partage d'écran, streaming et enregistrement",
-      "Axé et léger sur le dessin, sans utilitaires supplémentaires à maîtriser"
+      "Axé et léger sur le dessin, sans utilitaires supplémentaires à maîtriser",
+      "Fonctionne sur plusieurs écrans — dessinez sur n’importe quel écran, ou sur tous"
     ],
     "whenToChooseScribbble": [
       "Vous voulez une interface moderne et native Mac plutôt qu'un utilitaire d'administration porté",
@@ -25,7 +26,7 @@
       "Vous préférez une application sous licence permanente avec un soin du design actif"
     ],
     "whenToChooseCompetitor": [
-      "Vous recherchez spécifiquement le minuteur de pause ou le mode tableau blanc de ZoomIt",
+      "Vous voulez spécifiquement le minuteur de pause de ZoomIt",
       "Vous utilisez déjà les outils Sysinternals de façon standardisée"
     ],
     "table": [
@@ -58,10 +59,13 @@
         "feature": "Capture instantanée (écran ou région)"
       },
       {
-        "feature": "Barre d’outils ancrable à gauche ou à droite"
+        "feature": "Mode tableau blanc"
       },
       {
-        "feature": "Minuterie de pause"
+        "feature": "Ancrer la barre d’outils à gauche ou à droite"
+      },
+      {
+        "feature": "Minuteur de pause"
       },
       {
         "feature": "Interface moderne de style Mac"
@@ -78,6 +82,14 @@
       {
         "q": "Scribbble inclut-il une fonction de zoom comme ZoomIt ?",
         "a": "Oui. L’outil Magnify de Scribbble effectue un zoom sur l’écran en direct pour agrandir du texte, du code ou des éléments d’interface pendant une présentation, puis revenir en arrière avec un raccourci — le même usage que le zoom de ZoomIt, dans une app native Mac qui propose en plus Spotlight, Mesure et Snapshot. ZoomIt conserve toutefois son minuteur de pause si vous en avez besoin."
+      },
+      {
+        "q": "Scribbble a‑t‑il un mode tableau blanc comme l’écran vide de ZoomIt ?",
+        "a": "Oui. Le mode Tableau blanc de Scribbble affiche une toile vierge sur votre écran via un raccourci, pour esquisser un schéma ou résoudre un problème lorsqu’il n’y a rien à annoter — puis la fermer et revenir à l’annotation de vos apps."
+      },
+      {
+        "q": "Scribbble fonctionne‑t‑il avec plusieurs écrans ?",
+        "a": "Oui. Scribbble prend en charge les configurations multi‑écrans : vous pouvez annoter l’écran depuis lequel vous présentez, ou dessiner sur tous à la fois, ce qui est utile si vous affichez des slides sur un écran externe et vos notes sur le portable."
       }
     ]
   },
@@ -94,11 +106,12 @@
     ],
     "scribbbleStrengths": [
       "Téléchargement gratuit pour essayer avant d'acheter",
-      "Inclut Mesure et Magnify (zoom d’écran) dès l’installation",
+      "Comprend la mesure, la loupe (zoom d’écran) et un mode tableau blanc dès l’installation",
       "Outil Snapshot intégré — capture l'écran entier ou une zone sans application séparée",
       "La barre d'outils s'ancre sur le bord gauche ou droit de l'écran, pas seulement flottante",
       "Outil compagnon gratuit Screenshot Annotate pour le marquage statique",
-      "Polissage design actif et mises à jour fréquentes"
+      "Polissage design actif et mises à jour fréquentes",
+      "Fonctionne sur plusieurs écrans — dessinez sur n’importe quel écran, ou sur tous en même temps"
     ],
     "whenToChooseScribbble": [
       "Vous voulez essayer l'application complète gratuitement avant d'acheter une licence",
@@ -137,7 +150,11 @@
         "feature": "Capture instantanée (écran ou région)"
       },
       {
-        "feature": "Mise en valeur du curseur"
+        "feature": "Mode tableau blanc"
+      },
+      {
+        "feature": "Mise en évidence du curseur",
+        "scribbble": "Téléchargement direct"
       },
       {
         "feature": "Téléchargement gratuit pour essayer",
@@ -174,7 +191,7 @@
         "heading": "Presentify pour Mac : ce que c'est et ce qu'il faut savoir",
         "body": [
           "Presentify est une application d'annotation d'écran uniquement pour macOS — vous dessinez par-dessus ce qui s'affiche à l'écran, mettez en valeur votre curseur et assombrissez tout sauf la zone sur laquelle vous vous concentrez. Elle est vendue comme achat unique via le Mac App Store et directement depuis son site, et c'est une bonne application.",
-          "Scribbble couvre les mêmes usages sur macOS et diffère sur quelques points à connaître avant de choisir : il est téléchargeable et utilisable gratuitement pour tester l’application entièrement sur votre propre machine avant de payer, il inclut un outil Mesure pour lire les distances en pixels à l’écran et un outil Magnify qui zoome l’écran en direct, et il fournit un outil Snapshot ainsi qu’un annotateur web compagnon gratuit pour marquer des images statiques.",
+          "Scribbble couvre les mêmes usages sur macOS et diffère sur quelques points à connaître avant de choisir : il est téléchargeable et utilisable gratuitement, vous pouvez ainsi tester l’app complète sur votre machine avant de payer, il inclut un outil Mesure pour lire les distances en pixels à l’écran, un outil Loupe qui zoome l’écran en direct et un mode Tableau blanc pour quand il n’y a rien à annoter, et il propose un outil Snapshot ainsi qu’un annotateur web compagnon gratuit pour marquer des images statiques.",
           "Si vous comparez les deux, le résumé honnête est que la mise en évidence du curseur de Presentify est mieux réalisée et que Scribbble vous offre plus d'outils et une voie d'essai gratuite. Le tableau ci‑dessous présente les différences fonctionnalité par fonctionnalité."
         ]
       },
@@ -182,7 +199,7 @@
         "heading": "Presentify est-il gratuit ?",
         "body": [
           "Non. Presentify est payant en achat unique, avec un essai gratuit limité. Il n'existe pas de niveau gratuit permanent.",
-          "Scribbble se télécharge et s’utilise gratuitement pour dessiner, surligner, formes, texte, Spotlight, Magnify et Mesure, avec une licence optionnelle unique et sans abonnement — donc si vous cherchez une alternative gratuite à Presentify, c’est la différence pratique."
+          "Scribbble est gratuit à télécharger et gratuit à utiliser pour le dessin, le surlignage, les formes, le texte, Spotlight, la loupe, la mesure et le tableau blanc, avec une licence optionnelle en paiement unique et sans abonnement — donc si vous cherchez une alternative gratuite à Presentify, c'est la différence pratique."
         ]
       },
       {
@@ -219,18 +236,23 @@
         "scribbble": "Oui (outil web compagnon gratuit)"
       },
       {
-        "feature": "Annotation de capture d’écran",
+        "feature": "Mode tableau blanc",
+        "scribbble": "Oui (outil web compagnon gratuit)"
+      },
+      {
+        "feature": "Annotation des captures d’écran",
         "scribbble": "Oui (outil web compagnon gratuit)"
       },
       {
         "feature": "Enregistrement d’écran"
       },
       {
-        "feature": "Téléversement cloud & liens partageables"
+        "feature": "Téléversement cloud et liens partageables",
+        "scribbble": "Licence unique"
       },
       {
         "feature": "Capture défilante",
-        "scribbble": "Licence unique"
+        "scribbble": "Paiement unique"
       },
       {
         "feature": "Tarification",
@@ -260,11 +282,12 @@
     "scribbbleStrengths": [
       "Annoter l'écran EN DIRECT — pas seulement des images capturées",
       "Fonctionne pendant les appels Zoom, les streams OBS et les enregistrements d'écran",
-      "Inclut Spotlight, Surligneur, Mesure et Magnify (zoom d’écran) pour les présentations en direct",
+      "Comprend Spotlight, le surligneur, la mesure, la loupe (zoom d’écran) et un mode tableau blanc pour les présentations en direct",
       "Inclut désormais une capture instantanée intégrée (écran complet ou région) — réduit l'écart entre capture et mode live",
       "Outil plus léger et mono-usage",
       "Plus abordable pour les utilisateurs qui ont seulement besoin d'annotations en direct",
-      "Comprend un outil web gratuit Screenshot Annotate pour le marquage statique avec flou, profondeur de champ et repères numérotés"
+      "Comprend un outil web gratuit Screenshot Annotate pour le marquage statique avec flou, profondeur de champ et repères numérotés",
+      "Fonctionne sur plusieurs écrans — dessinez sur n’importe quel écran, ou sur tous en même temps"
     ],
     "whenToChooseScribbble": [
       "Vous annotez pendant des présentations, appels ou diffusions en direct",
@@ -286,10 +309,11 @@
     "scribbbleStrengths": [
       "Native macOS — optimisée Apple Silicon",
       "Conçue autour des raccourcis Mac modernes, avec une barre d'outils qui se fixe à gauche ou à droite",
-      "Comprend les outils Spotlight, Surligneur, Mesure et Magnify (zoom d’écran)",
+      "Comprend Spotlight, le surligneur, la mesure, la loupe (zoom d’écran) et un mode tableau blanc",
       "Outil Snapshot intégré — capture l'écran entier ou une région sans application séparée",
       "Légère et rapide",
-      "Outil web compagnon gratuit Screenshot Annotate pour le balisage statique"
+      "Outil web compagnon gratuit Screenshot Annotate pour le balisage statique",
+      "Fonctionne sur plusieurs écrans — dessinez sur n’importe quel écran, ou sur tous en même temps"
     ],
     "whenToChooseScribbble": [
       "Vous êtes sur macOS",
@@ -320,6 +344,9 @@
       },
       {
         "feature": "Capture instantanée (écran ou région)"
+      },
+      {
+        "feature": "Mode tableau blanc"
       },
       {
         "feature": "Apple Silicon"
@@ -379,13 +406,14 @@
         "body": [
           "La barre d'outils de Scribbble est l'équivalent direct de la barre d'outils flottante d'Epic Pen, avec une différence : au lieu d'une palette fixe que vous déplacez, elle s'amarre sur le bord gauche ou droit de l'écran et se replie pendant que vous dessinez, de sorte qu'elle ne cache jamais ce que vous essayez de montrer.",
           "Chaque outil possède un raccourci à touche unique, vous pouvez donc passer du stylet au surligneur à la flèche sans jamais viser la barre d'outils — pratique quand vous êtes en plein milieu d'une présentation en direct.",
-          "Il offre aussi quatre outils qu’Epic Pen n’a pas : Spotlight, qui tamise tout sauf la zone ciblée ; Magnify, qui zoome l’écran en direct pour rendre lisibles depuis le fond de la salle du texte minuscule ou des détails d’interface et sur des relectures sur téléphone ; Mesure, pour lire des distances en pixels à l’écran ; et Snapshot, qui capture l’écran entier ou une région sans application séparée."
+          "Il offre aussi cinq outils qu’Epic Pen n’a pas : Spotlight, qui assombrit tout sauf la zone sur laquelle vous êtes concentré ; la loupe, qui agrandit l’écran en direct pour rendre le petit texte et les éléments d’interface lisibles depuis le fond de la salle ou sur une lecture de la taille d’un téléphone ; la mesure, pour lire les distances en pixels à l’écran ; le tableau blanc, une toile vierge accessible par raccourci quand vous devez esquisser quelque chose qui n’est pas encore à l’écran ; et Snapshot, qui capture l’écran entier ou une région sans application séparée.",
+          "Et si vous présentez sur plusieurs écrans, Scribbble vous suit — vous pouvez dessiner sur l’écran sur lequel vous travaillez ou sur tous en même temps."
         ]
       },
       {
         "heading": "Existe‑t‑il une alternative gratuite à Epic Pen pour Mac ?",
         "body": [
-          "Scribbble se télécharge et s’utilise gratuitement — vous pouvez dessiner, surligner, ajouter formes et texte, et utiliser Spotlight, Magnify et Mesure sans rien payer. Il existe une licence optionnelle unique si vous souhaitez soutenir le développement et débloquer le reste de l’application ; il n’y a pas d’abonnement ni de charge récurrente.",
+          "Scribbble est gratuit à télécharger et gratuit à utiliser — vous pouvez dessiner, surligner, ajouter des formes et du texte, et utiliser Spotlight, la loupe, la mesure et le tableau blanc sans rien payer. Il existe une licence optionnelle en paiement unique si vous voulez soutenir le développement et débloquer le reste de l’application ; il n’y a pas d’abonnement ni de frais récurrents.",
           "Ceci se compare favorablement au modèle d'Epic Pen sur Windows, qui propose un niveau gratuit plus une version Pro payante où se trouvent les formes et le texte."
         ]
       }
@@ -404,11 +432,12 @@
     ],
     "scribbbleStrengths": [
       "Annotation de l'écran en direct pendant les appels et présentations",
-      "Comprend Spotlight, Surligneur, Mesure et Loupe (zoom d’écran)",
+      "Comprend Spotlight, le surligneur, la mesure, la loupe (zoom d’écran) et un mode tableau blanc",
       "Capture instantanée intégrée (écran complet ou zone) — couvre aussi le terrain d'Annotate",
       "Outil compagnon gratuit Screenshot Annotate en ligne (sans inscription)",
       "Licence en achat unique",
-      "Construction moderne native Apple Silicon"
+      "Construction moderne native Apple Silicon",
+      "Fonctionne sur plusieurs écrans — dessinez sur n’importe quel écran, ou sur tous en même temps"
     ],
     "whenToChooseScribbble": [
       "Vous annotez pendant des partages d'écran en direct (Zoom, Meet, OBS)",
@@ -439,7 +468,11 @@
         "scribbble": "Oui (outil web gratuit)"
       },
       {
-        "feature": "Annotation de captures d’écran",
+        "feature": "Mode tableau blanc",
+        "scribbble": "Oui (outil web gratuit)"
+      },
+      {
+        "feature": "Annotation des captures d’écran",
         "scribbble": "Oui (outil web gratuit)"
       },
       {
@@ -523,7 +556,7 @@
       },
       {
         "q": "Quelle est la meilleure alternative à Ink2Go sur Mac ?",
-        "a": "Pour le dessin en direct à l’écran, Scribbble est l’équivalent natif Mac le plus proche : stylet, surligneur, formes, texte, Spotlight, Mesure et Loupe (zoom d’écran), plus une fonction Capture instantanée intégrée. Il n’enregistre pas la vidéo, donc associez-le à QuickTime, OBS ou Loom si vous avez aussi besoin d’un enregistrement."
+        "a": "Pour le dessin en direct à l’écran, Scribbble est le équivalent Mac natif le plus proche : stylet, surligneur, formes, texte, Spotlight, mesure, loupe (zoom d’écran) et un mode tableau blanc similaire à celui d’Ink2Go, plus la capture Snapshot intégrée et la prise en charge de plusieurs moniteurs. Il n’enregistre pas la vidéo, donc associez-le à QuickTime, OBS ou Loom si vous avez aussi besoin d’un enregistrement."
       },
       {
         "q": "Scribbble enregistre-t-il la vidéo comme Ink2Go ?",
@@ -537,7 +570,7 @@
     "title": "Scribbble vs Ink2Go — Annotation d’écran moderne pour Mac (2026)",
     "description": "Ink2Go associe annotation et enregistrement d’écran, mais sa version Mac n’a pas été mise à jour depuis 2020. Scribbble est une alternative activement développée, native Apple Silicon.",
     "h1": "Scribbble vs Ink2Go",
-    "subheadline": "Ink2Go regroupe annotation d’écran, enregistrement vidéo et un tableau blanc. Scribbble fait une chose — dessiner sur votre écran Mac en direct — et reste à jour avec macOS.",
+    "subheadline": "Ink2Go regroupe l’annotation d’écran, l’enregistrement vidéo et un tableau blanc. Scribbble couvre l’aspect annotation et tableau blanc sur votre écran Mac en direct — et se maintient à jour avec macOS.",
     "competitorSummary": "Ink2Go est une application d’annotation et d’enregistrement d’écran pour macOS et Windows, vendue en achat unique à 19,99 $ sur le Mac App Store. Vous pouvez écrire par-dessus n’importe quelle application en cours d’exécution, basculer sur un tableau blanc noir ou blanc, enregistrer la session en vidéo avec l’audio du microphone et une incrustation webcam, et sauvegarder les annotations en images. C’est un outil polyvalent — mais la version Mac n’a plus reçu de mise à jour depuis 2020 et indique toujours macOS 10.7 comme version minimale, elle précède donc Apple Silicon et plusieurs versions de macOS.",
     "competitorStrengths": [
       "Enregistrement d’écran intégré avec audio micro",
@@ -549,11 +582,12 @@
     "scribbbleStrengths": [
       "Activement développé et conçu pour macOS actuel",
       "Natif Apple Silicon",
-      "Comprend Spotlight (mise au point/assombrissement), Surligneur, Mesure et Loupe (zoom d’écran)",
+      "Comprend Spotlight (assombrissement focal), le surligneur, la mesure, la loupe (zoom d’écran) et un mode tableau blanc",
       "Outil Instantané intégré pour capturer l’écran entier ou une région",
       "La barre d’outils se fixe à gauche ou à droite, ou flotte où vous la déplacez",
       "Téléchargement gratuit pour essayer avant d’acheter une licence",
-      "Outil web gratuit compagnon Screenshot Annotate pour le balisage statique"
+      "Outil web gratuit compagnon Screenshot Annotate pour le balisage statique",
+      "Fonctionne sur plusieurs écrans — dessinez sur n’importe quel écran, ou sur tous en même temps"
     ],
     "whenToChooseScribbble": [
       "Vous êtes sur un Mac Apple Silicon et voulez une app qui est encore mise à jour",
@@ -563,7 +597,7 @@
     ],
     "whenToChooseCompetitor": [
       "Vous voulez annotation et enregistrement vidéo réunis dans une seule app bon marché",
-      "Le mode tableau blanc avec incrustation webcam est au cœur de votre façon d’enseigner",
+      "L’enregistrement vidéo avec une incrustation webcam est central à votre manière d’enseigner",
       "Vous avez besoin du même outil sur Windows et Mac"
     ]
   }

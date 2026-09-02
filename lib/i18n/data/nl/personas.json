@@ -29,10 +29,12 @@
       "Markeerstift om tekst op het scherm te benadrukken",
       "Spotlight om de aandacht van de chat op één deel van de gameplay te richten",
       "Magnify (schermzoom) om kleine UI-elementen, itemstats of de minimap in leesbaar detail te trekken",
-      "Pijltool voor snelle aanduidingen",
+      "Whiteboard-modus om een strategie of bracket tussen rondes te schetsen",
+      "Pijltool voor snelle callouts",
       "Rechthoek-, ellips- en teksttools voor overlays",
-      "Snapshot van het scherm of een regio voor clip-thumbnails en hoogtepunten na de stream",
-      "Snel-wis sneltoets om het scherm tussen segments te wissen"
+      "Snapshot van het scherm of een regio voor clip-thumbnails en post-stream hoogtepunten",
+      "Snel-wis sneltoets om het scherm tussen segmenten schoon te vegen",
+      "Ondersteuning voor meerdere beeldschermen — teken op het gameplay-scherm terwijl chat op het andere blijft"
     ],
     "faq": [
       {
@@ -40,8 +42,12 @@
         "a": "Ja. Scribbble tekent op OS-niveau, dus elke screen-capture source — OBS, Streamlabs, Restream — pakt je annotaties automatisch op."
       },
       {
+        "q": "Werkt het als ik stream vanaf een setup met twee beeldschermen?",
+        "a": "Ja. Scribbble ondersteunt meerdere beeldschermen, dus je kunt tekenen op het display dat je in OBS vastlegt terwijl chat, je deck en alerts onaangeroerd blijven op het andere."
+      },
+      {
         "q": "Zal het mijn game vertragen?",
-        "a": "Scribbble is een lichtgewicht native Mac-app en gebruikt GPU-versnelling voor tekenen. De impact op de prestaties is verwaarloosbaar."
+        "a": "Scribbble is een lichtgewicht native Mac-app en gebruikt GPU-versnelling voor tekenen. De prestatie-impact is verwaarloosbaar."
       }
     ],
     "audience": "Streamers",
@@ -85,11 +91,13 @@
       "Markeerstift om code of tekst op het scherm te markeren",
       "Spotlight om alles te dimmen behalve het deel dat je demonstreert",
       "Magnify (schermzoom) om kleine UI en code leesbaar te maken op telefoonschermen",
-      "Pijltool voor guided tours",
-      "Rechthoek, ellips en tekst voor feature-aanduidingen",
-      "Snapshot van het scherm of een regio voor videotumbnails en B-roll-stills",
-      "Meerdere kleuren om concepten te differentiëren",
-      "Ongedaan maken / opnieuw doen zodat je kunt blijven opnemen ondanks kleine fouten"
+      "Whiteboard-modus voor explainerschetsen zonder naar een tweede app te hoeven schakelen",
+      "Pijltool voor begeleide rondleidingen",
+      "Rechthoek, ovaal en tekst voor feature-aanwijzingen",
+      "Maak een snapshot van het scherm of een regio voor videotumbnails en B-roll-stills",
+      "Meerdere kleuren om concepten te onderscheiden",
+      "Ongedaan maken / opnieuw doen zodat je kunt blijven opnemen bij kleine foutjes",
+      "Ondersteuning voor meerdere beeldschermen — annoteer het scherm dat je opneemt, aantekeningen blijven op het andere staan"
     ],
     "faq": [
       {
@@ -111,7 +119,7 @@
     "painPoints": [
       {
         "title": "Overschakelen naar een whiteboard onderbreekt de les",
-        "body": "Jamboard of Miro openen middenin de les verliest de aandacht van studenten. Scribbble tekent bovenop wat je al open hebt — dia's, browsers, PDF's, code-editors."
+        "body": "Het openen van Jamboard of Miro halverwege de les kost de aandacht van studenten. Scribbble tekent bovenop wat je al open hebt — slides, browsers, PDF's, code-editors — en als je wel een blanco canvas nodig hebt, is de Whiteboard-modus één sneltoets verwijderd in plaats van een nieuw tabblad."
       },
       {
         "title": "Studenten zien niet altijd waar je naar wijst",
@@ -141,11 +149,13 @@
       "Marker om belangrijke passages in een tekst of dia aan te geven",
       "Spotlight om alles te dimmen behalve het deel dat je uitlegt",
       "Magnify (schermzoom) om kleine tekst, code of diagramdetails voor achterin de klas uit te vergroten",
-      "Pijltje om aandacht te richten",
-      "Rechthoek- en ellipsvormen om kernconcepten te omlijnen of cirkelen",
+      "Whiteboard-modus om een opgave op een blanco canvas uit te werken zonder de les te verlaten",
+      "Pijltool om de aandacht te richten",
+      "Rechthoek- en ellipsvormen om kernconcepten te omlijnen of te cirkelen",
       "Teksttool voor vocabulaire-aanduidingen",
-      "Snapshot van het hele scherm of een regio om leerlingenwerk of lesstills op te slaan",
-      "Snel wissen om dia's netjes te houden"
+      "Snapshot van het hele scherm of een regio om leerlingwerk of lesstills op te slaan",
+      "Snel wissen om slides schoon te houden",
+      "Ondersteuning voor meerdere beeldschermen — annoteer het scherm dat je deelt, niet alleen het hoofdscherm"
     ],
     "faq": [
       {
@@ -157,8 +167,12 @@
         "a": "Ja. Omdat Scribbble op OS-niveau tekent, legt elke schermrecorder de annotaties vast als onderdeel van het scherm."
       },
       {
-        "q": "Is er een korting voor onderwijsinstellingen?",
-        "a": "Neem contact op via de supportlink hieronder — we helpen docenten en scholen graag met volumelicenties."
+        "q": "Werkt Scribbble met meerdere beeldschermen?",
+        "a": "Ja. Als je lesgeeft met slides op een projector of extern display en je aantekeningen op het laptopscherm, kun je annoteer welk display je ook deelt — Scribbble ondersteunt multi-monitor opstellingen in plaats van je aan het hoofdscherm te binden."
+      },
+      {
+        "q": "Is er korting voor docenten?",
+        "a": "Neem contact op via de supportlink hieronder — we helpen leraren en scholen graag met volumelicenties."
       }
     ]
   },
@@ -203,10 +217,12 @@
       "Marker om copy en contentblokken te markeren",
       "Spotlight om de crit op één frame tegelijk te focussen",
       "Magnify (schermzoom) om typografie en pixeldetail te controleren zonder het canvas te verlaten",
-      "Pijltool voor flow-critique",
+      "Whiteboard-modus om tijdens een kritieksessie een flow of layout-idee te schetsen",
+      "Pijltool voor flowkritiek",
       "Teksttool voor inline opmerkingen",
-      "Snapshot van een frame of regio om direct in een Linear-ticket of ontwerpdocument te plakken",
-      "Werkbalk vastzetten aan linker- of rechterrand om het canvas vrij te houden"
+      "Maak een snapshot van een frame of regio om direct in een Linear-ticket of designdocument te plakken",
+      "Bevestig de werkbalk links of rechts om het canvas vrij te houden",
+      "Ondersteuning voor meerdere beeldschermen — annoteer Figma op het grote scherm en houd referenties op de laptop"
     ],
     "faq": [
       {
@@ -214,8 +230,12 @@
         "a": "Scribbble tekent bovenop Figma (of iets anders) op het OS-niveau — geen plugin nodig. Annotaties leven op het scherm, niet in het Figma-bestand."
       },
       {
-        "q": "Kan ik het geannoteerde frame opslaan als afbeelding?",
-        "a": "De Scribbble Mac-app tekent op het live scherm — om een geannoteerde still op te slaan, gebruik de gratis Screenshot Annotate-tool op /tools/screenshot-annotate waarmee je een afbeelding kunt uploaden of plakken, markeren en naar het klembord kopiëren."
+        "q": "Werkt het op twee schermen?",
+        "a": "Ja. Scribbble ondersteunt multi-monitor setups, dus je kunt een Figma-frame annoteren op je hoofdscherm terwijl referenties of de specificatie op het tweede scherm blijven staan."
+      },
+      {
+        "q": "Kan ik het geannoteerde frame als afbeelding opslaan?",
+        "a": "De Scribbble Mac-app tekent op het live scherm — om een geannoteerde still op te slaan, gebruik je de gratis Screenshot Annotate-tool op /tools/screenshot-annotate waarmee je een afbeelding kunt uploaden of plakken, markeren en naar het klembord kopiëren."
       }
     ]
   },
@@ -253,16 +273,22 @@
       "Highlighter voor ROI-cijfers en prijzengroepen",
       "Spotlight om alles te dimmen behalve de dashboard-widget die je wilt tonen",
       "Magnify (schermzoom) om de metriek of regel waarover je praat uit te vergroten",
-      "Pijltool voor guided tours",
-      "Rechthoek- en ellipsvormen voor prijs- en feature-aanduidingen",
+      "Whiteboard-modus om de workflow of organigram te tekenen die de deck niet behandelt",
+      "Pijltool voor begeleide rondleidingen",
+      "Rechthoek- en ovaalvormen voor prijs- en feature-uitlighters",
       "Teksttool voor inline labels",
-      "Leg een momentopname van het scherm of een regio vast voor opvolgmailtjes en samenvattende decks",
-      "Wis met één toets tussen secties van de demo"
+      "Maak een snapshot van het scherm of een regio voor follow-up e-mails en recap-decks",
+      "Wissen met één toets tussen secties van de demo",
+      "Ondersteuning voor meerdere beeldschermen — annoteer het gedeelde scherm terwijl je notities op het andere blijven"
     ],
     "faq": [
       {
         "q": "Werkt dit met Zoom, Gong, Chorus en Loom?",
         "a": "Ja. Scribbble tekent op OS-niveau, dus elke schermopname of share — Zoom, Gong, Chorus, Loom, Vidyard — legt de annotaties vast."
+      },
+      {
+        "q": "Werkt het als ik presenteer vanaf een tweede scherm?",
+        "a": "Ja. Scribbble ondersteunt meerdere monitoren, zodat je het scherm dat je deelt met de prospect kunt annoteren terwijl je notities en CRM privé blijven op het andere scherm."
       },
       {
         "q": "Is er een teamlicentie?",

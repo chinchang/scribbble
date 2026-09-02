@@ -14,11 +14,11 @@
     "items": [
       {
         "tagline": "La app moderna de anotación en pantalla, pensada para Mac",
-        "summary": "Scribbble está diseñado primero para Mac y cuenta con una barra de herramientas moderna que puedes acoplar al borde izquierdo o derecho. Más allá de las herramientas estándar (lápiz, flecha, rectángulo, elipse y texto), incluye Spotlight (enfoque con atenuación), Resaltador, Medidor, Magnify (zoom de pantalla) y una herramienta integrada de Captura instantánea para capturar la pantalla completa o una región —una combinación que la mayoría de competidores no ofrece. Es gratuito para descargar y probar, y una licencia de pago única desbloquea todo.",
+        "summary": "Scribbble está diseñado primero para Mac y cuenta con una barra de herramientas moderna que puedes acoplar al borde izquierdo o derecho. Además de las herramientas estándar de lápiz, flecha, rectángulo, elipse y texto, incluye Spotlight (enfoque con atenuación), Subrayador, Medición, Magnify (zoom de pantalla), un modo Pizarra y una herramienta integrada de Instantánea para capturar la pantalla completa o una región, y funciona en múltiples monitores — una combinación que la mayoría de competidores no iguala. Es gratis para descargar y probar, con una licencia de pago único para desbloquear todo.",
         "bestFor": "Profesores, diseñadores y creadores que quieren una herramienta de anotación moderna y nativa para Mac sin suscripción",
         "pros": [
           "Diseño pensado para Mac con una barra de herramientas moderna que puedes acoplar a la izquierda o derecha",
-          "Incluye Spotlight, Resaltador, Medidor y Magnify (zoom de pantalla) desde el primer momento",
+          "Incluye Spotlight, Subrayador, Medición, Magnify (zoom de pantalla) y modo Pizarra de serie",
           "Herramienta Snapshot integrada — captura la pantalla completa o una región sin salir de la app",
           "Formas que incluyen flecha, rectángulo y elipse",
           "Nativa en Apple Silicon",
@@ -28,7 +28,7 @@
         ],
         "cons": [
           "No incluye grabación de pantalla",
-          "Sin temporizador de pausas ni modo pizarra"
+          "No tiene resaltado del cursor"
         ],
         "pricing": "Gratis + licencia de pago único"
       },
@@ -93,7 +93,7 @@
         "pricing": "Varía — consulta al proveedor"
       }
     ],
-    "conclusion": "Si quieres una aplicación de anotación de pantalla moderna y nativa para Mac con un conjunto de herramientas completo (Spotlight, Resaltador, Medidor, Magnify) y un precio de pago único, Scribbble es la recomendación más sencilla. Presentify es la alternativa si el resaltado del cursor es crítico. CleanShot X es la elección adecuada si tu flujo de trabajo se centra en capturas de pantalla en lugar de dibujo en vivo. ZoomIt es la opción gratuita de Microsoft si además quieres su temporizador de pausas junto con un zoom.",
+    "conclusion": "Si buscas una app de anotación de pantalla moderna y nativa para Mac con un conjunto de herramientas completo (Spotlight, Subrayador, Medición, Magnify, Pizarra) y precio de pago único, Scribbble es la recomendación más sencilla. Presentify es la alternativa si el resaltado del cursor es crucial. CleanShot X es la opción adecuada si tu flujo de trabajo se centra en capturas de pantalla en lugar de dibujo en directo. ZoomIt es la opción gratuita de Microsoft si quieres su temporizador de descansos además del zoom.",
     "faq": [
       {
         "q": "¿Cuál es la mejor app de anotación de pantalla gratuita para Mac?",
@@ -123,18 +123,18 @@
     "items": [
       {
         "tagline": "La alternativa a ZoomIt pensada para Mac",
-        "summary": "Scribbble está diseñado primero para Mac con una barra de herramientas moderna que puedes acoplar a la izquierda o a la derecha, y ofrece un conjunto de herramientas más completo que ZoomIt —incluyendo Spotlight (enfoque con atenuación), Resaltador, Medidor, Magnify (zoom de pantalla), formas completas (flecha, rectángulo, elipse) y una herramienta integrada de Captura instantánea que captura la pantalla completa o una región. Ahora cubre también el característico zoom de pantalla de ZoomIt, así que el cambio ya no te cuesta nada. Es gratuito para descargar y viene con una herramienta complementaria gratuita de anotación de capturas en la web.",
+        "summary": "Scribbble está diseñado primero para Mac y cuenta con una barra de herramientas moderna que puedes acoplar al borde izquierdo o derecho, y ofrece un conjunto de herramientas más completo que ZoomIt — incluyendo Spotlight (enfoque con atenuación), Subrayador, Medición, Magnify (zoom de pantalla), un modo Pizarra, formas completas (flecha, rectángulo, elipse) y una herramienta integrada de Instantánea que captura la pantalla completa o una región, todo funcionando en múltiples monitores. Ahora cubre el característico zoom de pantalla y la pizarra en blanco de ZoomIt, así que el cambio ya no te cuesta nada. Es gratis para descargar y viene con una herramienta web complementaria gratuita llamada Screenshot Annotate.",
         "bestFor": "Cualquiera que deje ZoomIt y quiera una experiencia moderna y nativa de Mac",
         "pros": [
           "Interfaz Mac-first con una barra de herramientas que se ancla a la izquierda o derecha",
-          "Herramientas Spotlight, Resaltador, Medidor y Magnify (zoom de pantalla)",
+          "Spotlight, Subrayador, Medición, Magnify (zoom de pantalla) y modo Pizarra",
           "Captura Snapshot integrada — pantalla completa o región seleccionada",
           "Formas incluyen flecha, rectángulo y elipse",
           "Descarga gratuita, licencia de pago único",
           "Nativo para Apple Silicon"
         ],
         "cons": [
-          "Sin temporizador de pausas ni modo pizarra"
+          "No tiene temporizador de descansos"
         ],
         "pricing": "Gratis + licencia de pago único"
       },
@@ -220,15 +220,16 @@
     "items": [
       {
         "tagline": "La experiencia más similar a Epic Pen en macOS",
-        "summary": "Scribbble es el reemplazo más directo de Epic Pen para usuarios de Mac. Dibuja sobre cualquier app —presentaciones, navegadores, comparticiones en Zoom— con bolígrafo, resaltador y un kit completo de formas (flecha, rectángulo, elipse) además de una herramienta de texto. Más allá de lo que ofrece Epic Pen, Scribbble añade Spotlight (enfoque con atenuación), Magnify (zoom de pantalla), Medidor y una herramienta integrada de Captura instantánea que captura la pantalla completa o una región, además de una barra de herramientas moderna y nativa para Mac que se acopla a la izquierda o a la derecha.",
+        "summary": "Scribbble es la sustitución más directa de Epic Pen para usuarios de Mac. Dibuja sobre cualquier app — presentaciones, navegadores, comparticiones en Zoom — con lápiz, subrayador y un kit completo de formas (flecha, rectángulo, elipse) además de una herramienta de texto. Más allá de lo que ofrece Epic Pen, Scribbble añade Spotlight (enfoque con atenuación), Magnify (zoom de pantalla), Medición, un modo Pizarra y una herramienta integrada de Instantánea que captura la pantalla completa o una región, además de soporte multi-monitor y una barra de herramientas nativa para Mac que se acopla a la izquierda o a la derecha.",
         "bestFor": "Cualquiera que deje Epic Pen en busca de un flujo de trabajo familiar con algunas herramientas extra",
         "pros": [
           "Enfocado en Mac, nativo en Apple Silicon",
           "Bolígrafo, resaltador, formas (flecha, rectángulo, elipse) y texto — cubre el conjunto principal de herramientas de Epic Pen",
-          "Añade herramientas Spotlight, Magnify (zoom de pantalla) y Medidor que Epic Pen no tiene",
-          "Captura Snapshot integrada (pantalla completa o región) — no hace falta una segunda app",
+          "Añade Spotlight, Magnify (zoom de pantalla), Medición y modo Pizarra que Epic Pen no tiene",
+          "Soporte multi-monitor — anota en la pantalla desde la que presentas",
+          "Captura Instantánea integrada (pantalla completa o región) — no hace falta una segunda app",
           "Descarga gratuita, licencia de pago único",
-          "Barra de herramientas moderna que se ancla al borde izquierdo o derecho"
+          "Barra de herramientas moderna que se acopla al borde izquierdo o derecho"
         ],
         "cons": [
           "No incluye grabación de pantalla"
@@ -295,7 +296,7 @@
         "pricing": "Gratis"
       }
     ],
-    "conclusion": "Si te mudas de Epic Pen a Mac, Scribbble es la recomendación más sencilla: cubre el mismo flujo de trabajo principal (bolígrafo, resaltador, formas, texto) con una interfaz nativa para Mac y algunas herramientas extra (Spotlight, Magnify, Medidor) que Epic Pen no ofrece. ZoomIt es la alternativa gratuita de Microsoft si puedes vivir con una interfaz estilo Windows. CleanShot X es la mejor opción si prefieres flujos de trabajo centrados en capturas de pantalla en vez de dibujo en vivo.",
+    "conclusion": "Si te mudas desde Epic Pen a Mac, Scribbble es la recomendación más sencilla — cubre el mismo flujo de trabajo principal (lápiz, subrayador, formas, texto) con una interfaz nativa para Mac, soporte multi-monitor y algunas herramientas adicionales (Spotlight, Magnify, Medición, Pizarra) que Epic Pen no incluye. ZoomIt es la alternativa gratuita de Microsoft si puedes vivir con una interfaz al estilo Windows. CleanShot X es la opción adecuada si prefieres flujos centrados en capturas de pantalla en lugar de dibujo en vivo.",
     "faq": [
       {
         "q": "¿Existe Epic Pen para Mac?",
@@ -303,7 +304,7 @@
       },
       {
         "q": "¿Cuáles son las mejores alternativas a Epic Pen en Mac?",
-        "a": "Las opciones más sólidas en macOS son Scribbble (diseñado para Mac, incluye Spotlight, Magnify y Medidor), Presentify (resaltado del cursor), ZoomIt (gratis de Microsoft, incluye temporizador de pausas) y CleanShot X (si quieres flujos centrados en capturas de pantalla). Para la mayoría de usuarios de Epic Pen que pasan a Mac, Scribbble es la experiencia más cercana."
+        "a": "Las opciones más sólidas en macOS son Scribbble (diseñado para Mac, incluye Spotlight, Magnify, Medición y un modo Pizarra), Presentify (resaltado del cursor), ZoomIt (gratuito de Microsoft, incluye temporizador de descansos) y CleanShot X (si quieres flujos centrados en capturas). Para la mayoría de usuarios de Epic Pen que pasan a Mac, Scribbble ofrece la experiencia más similar."
       },
       {
         "q": "¿Por qué la gente elige alternativas en lugar de Epic Pen?",
@@ -311,7 +312,7 @@
       },
       {
         "q": "¿Qué funciones ofrecen las alternativas a Epic Pen que Epic Pen no tiene?",
-        "a": "La mayoría de alternativas modernas a Epic Pen añaden al menos una de estas funciones: una herramienta Spotlight / enfoque con atenuación para atenuar todo excepto el área que explicas, un zoom de pantalla para mostrar detalles finos, una herramienta Medidor para comprobar distancias en pantalla, o un grabador de pantalla integrado (CleanShot X). Scribbble en particular añade Spotlight, Magnify (zoom de pantalla), Medidor y una herramienta complementaria gratuita de anotación de capturas en la web."
+        "a": "La mayoría de las alternativas modernas a Epic Pen añaden al menos una de estas funciones: una herramienta Spotlight / enfoque para atenuar todo excepto el área que estás explicando, un zoom de pantalla para mostrar detalles finos, una herramienta de Medición para comprobar distancias en pantalla, o un grabador de pantalla integrado (CleanShot X). Scribbble en particular añade Spotlight, Magnify (zoom de pantalla), Medición, un modo Pizarra, soporte multi-monitor y una herramienta web gratuita complementaria llamada Screenshot Annotate."
       },
       {
         "q": "¿Hay una alternativa gratuita a Epic Pen para Mac?",
@@ -324,13 +325,14 @@
       {
         "pricing": "Gratis + licencia de pago única",
         "tagline": "Gratis para probar, con Magnify y Medidor que Presentify no tiene",
-        "summary": "Scribbble iguala el conjunto de herramientas principal de Presentify —bolígrafo, resaltador, spotlight, formas (flecha, rectángulo, elipse)— y añade Magnify (zoom de pantalla), una herramienta Medidor y una Captura instantánea integrada que captura la pantalla completa o una región. A diferencia de Presentify, la app completa es gratuita para descargar y probar; solo pagas una licencia de pago único cuando estés listo. También incluye una herramienta complementaria gratuita de anotación de capturas en la web, y la barra de herramientas se acopla al borde izquierdo o derecho.",
+        "summary": "Scribbble iguala el conjunto de herramientas principal de Presentify — lápiz, subrayador, spotlight, formas (flecha, rectángulo, elipse) — y añade Magnify (zoom de pantalla), una herramienta de Medición, un modo Pizarra, soporte multi-monitor y una herramienta integrada de Instantánea que captura la pantalla completa o una región. A diferencia de Presentify, la app completa es gratis para descargar y probar; solo pagas una licencia de pago único cuando estés listo. También incluye una herramienta web complementaria gratuita llamada Screenshot Annotate, y la barra de herramientas se acopla a la izquierda o a la derecha.",
         "bestFor": "Usuarios de Presentify que quieren una prueba gratuita, zoom de pantalla, una herramienta Medidor o un anotador de capturas complementario",
         "pros": [
           "Descarga gratuita — prueba la app completa antes de comprar",
-          "Incluye Magnify (zoom de pantalla) y Medidor que Presentify no tiene",
-          "Captura Snapshot integrada (pantalla completa o región)",
-          "Herramienta web complementaria gratuita para anotar capturas",
+          "Incluye Magnify (zoom de pantalla), Medición y modo Pizarra que Presentify no tiene",
+          "Funciona en múltiples monitores",
+          "Captura Instantánea integrada (pantalla completa o región)",
+          "Herramienta web complementaria gratuita Screenshot Annotate",
           "Barra de herramientas moderna que se acopla a la izquierda o derecha (no solo flotante)",
           "Pulido de diseño activo"
         ],
@@ -397,7 +399,7 @@
     "faq": [
       {
         "q": "¿Cuál es la mejor alternativa a Presentify en Mac?",
-        "a": "Scribbble es la alternativa nativa de Mac que más se acerca: mismo conjunto básico de herramientas (lápiz, subrayador, Spotlight, formas) además de Magnify (zoom de pantalla) y herramientas Medir, con descarga gratuita y licencia de pago única. ZoomIt es la mejor opción gratuita si te conformas con una interfaz al estilo Windows."
+        "a": "Scribbble es la alternativa nativa para Mac más cercana: mismo conjunto de herramientas principal (lápiz, subrayador, spotlight, formas) más Magnify (zoom de pantalla), Medición y modo Pizarra, con descarga gratuita y licencia de pago único. ZoomIt es la mejor opción gratuita si puedes vivir con una interfaz al estilo Windows."
       },
       {
         "q": "¿Hay una alternativa gratuita a Presentify?",
@@ -427,18 +429,19 @@
     "items": [
       {
         "tagline": "Aplicación moderna de anotación para Mac, pensada para clases en vivo",
-        "summary": "Scribbble dibuja sobre cualquier app de Mac: presentaciones, PDFs, navegadores, pantallas compartidas en Zoom. El Subrayador es perfecto para marcar lecturas; Spotlight atenúa todo excepto lo que estás explicando; Magnify acerca texto o código pequeño para que la última fila pueda leerlo; las herramientas de lápiz, flecha, rectángulo, elipse y texto cubren el diagramado en directo. Una herramienta integrada de Instantánea captura toda la pantalla o una región —ideal para guardar el trabajo de un alumno o una imagen de la clase. Licencia de pago único, prueba gratuita.",
+        "summary": "Scribbble dibuja sobre cualquier app de Mac — presentaciones, PDFs, navegadores, comparticiones en Zoom. El Subrayador es ideal para marcar lecturas; Spotlight atenúa todo excepto lo que estás explicando; Magnify amplía texto o código pequeño para que la última fila pueda leerlo; el modo Pizarra te da un lienzo en blanco en medio de la lección sin abrir otra pestaña; las herramientas de lápiz, flecha, rectángulo, elipse y texto cubren el diagramado en directo. Una herramienta integrada de Instantánea captura la pantalla completa o una región — útil para guardar el trabajo de un estudiante o una captura de la lección. Licencia de pago único, gratis para probar.",
         "bestFor": "Docentes que quieren una herramienta nativa moderna para Mac con Highlighter y Spotlight integrados",
         "pros": [
-          "Subrayador, Spotlight (enfoque con atenuación) y Magnify (zoom de pantalla) integrados",
-          "Captura Snapshot (pantalla o región) para guardar imágenes de la lección y trabajos de estudiantes",
-          "Formas que incluyen flecha, rectángulo y elipse",
-          "Funciona en Zoom, Google Meet y en grabaciones",
-          "Descarga gratuita para probar",
+          "Subrayador, Spotlight (enfoque con atenuación), Magnify (zoom de pantalla) y modo Pizarra integrados",
+          "Soporte multi-monitor — anota en la pantalla que proyectas o compartes",
+          "Captura Instantánea (pantalla o región) para guardar fotogramas de la lección y trabajos de alumnos",
+          "Las formas incluyen flecha, rectángulo y elipse",
+          "Funciona en Zoom, Google Meet, grabaciones",
+          "Gratis para descargar y probar",
           "Licencia de pago único"
         ],
         "cons": [
-          "Sin modo de pizarra colaborativa"
+          "El modo Pizarra es de un solo usuario — no hay colaboración con múltiples cursores"
         ],
         "pricing": "Gratis + licencia de pago único"
       },

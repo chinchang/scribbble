@@ -36,16 +36,16 @@ export const comparisons: Comparison[] = [
     competitorStrengths: [
       "Free from Microsoft",
       "Built-in screen zoom and break timer",
-      "Whiteboard mode and typing mode",
       "Familiar to long-time Sysinternals users",
     ],
     scribbbleStrengths: [
       "Built Mac-first with a modern toolbar you can dock to the left or right edge",
       "Apple Silicon native",
-      "Includes Spotlight (focus dim), Highlighter, Measure and Magnify (screen zoom) out of the box",
+      "Includes Spotlight (focus dim), Highlighter, Measure, Magnify (screen zoom) and a Whiteboard mode out of the box",
       "Built-in Snapshot tool to capture the whole screen or a region without leaving the app",
       "Designed around screen-share, streaming and recording workflows",
       "Lightweight focus on drawing, no extra utilities to learn",
+      "Works across multiple monitors — draw on any display, or all of them",
     ],
     whenToChooseScribbble: [
       "You want a modern, Mac-native UI rather than a ported sysadmin utility",
@@ -53,7 +53,7 @@ export const comparisons: Comparison[] = [
       "You prefer a one-time licensed app with active design polish",
     ],
     whenToChooseCompetitor: [
-      "You specifically want ZoomIt's break timer or whiteboard mode",
+      "You specifically want ZoomIt's break timer",
       "You're already standardized on Sysinternals tools",
     ],
     table: [
@@ -66,6 +66,7 @@ export const comparisons: Comparison[] = [
       { feature: "Measure tool", scribbble: "Yes", competitor: "No" },
       { feature: "Magnify (screen zoom)", scribbble: "Yes", competitor: "Yes" },
       { feature: "Snapshot capture (screen or region)", scribbble: "Yes", competitor: "No" },
+      { feature: "Whiteboard mode", scribbble: "Yes", competitor: "Yes" },
       { feature: "Dock toolbar left or right", scribbble: "Yes", competitor: "No" },
       { feature: "Break timer", scribbble: "No", competitor: "Yes" },
       { feature: "Modern Mac-style UI", scribbble: "Yes", competitor: "Sysinternals utility style" },
@@ -82,6 +83,14 @@ export const comparisons: Comparison[] = [
       {
         q: "Does Scribbble include a zoom feature like ZoomIt?",
         a: "Yes. Scribbble's Magnify tool zooms into the live screen so you can blow up small text, code or UI detail mid-presentation, then drop back out with a hotkey — the same job ZoomIt's zoom does, in a Mac-native app that also gives you Spotlight, Measure and Snapshot. ZoomIt still has the break timer if you need one.",
+      },
+      {
+        q: "Does Scribbble have a whiteboard mode like ZoomIt's blank screen?",
+        a: "Yes. Scribbble's Whiteboard mode drops a blank canvas over your screen with a hotkey, so you can sketch a diagram or work through a problem when there's nothing on screen worth annotating yet — then dismiss it and go back to drawing on your apps.",
+      },
+      {
+        q: "Does Scribbble work with multiple monitors?",
+        a: "Yes. Scribbble supports multi-monitor setups: you can annotate on whichever display you're presenting from, or draw across all of them, which matters if you run slides on an external display and notes on your laptop screen.",
       },
     ],
   },
@@ -101,7 +110,7 @@ export const comparisons: Comparison[] = [
         heading: "Presentify for Mac: what it is and what else to consider",
         body: [
           "Presentify is a macOS-only screen annotation app — you draw on top of whatever is on your screen, highlight your cursor, and dim everything except the area you're focused on. It's sold as a one-time purchase through the Mac App Store and directly from its own site, and it's a genuinely good app.",
-          "Scribbble covers the same ground on macOS and differs in a few ways worth knowing before you pick: it's free to download and use so you can test the whole app on your own machine before paying anything, it includes a Measure tool for reading pixel distances on screen and a Magnify tool that zooms into the live screen, and it ships a Snapshot tool plus a free companion web annotator for marking up static images.",
+          "Scribbble covers the same ground on macOS and differs in a few ways worth knowing before you pick: it's free to download and use so you can test the whole app on your own machine before paying anything, it includes a Measure tool for reading pixel distances on screen, a Magnify tool that zooms into the live screen and a Whiteboard mode for when there's nothing on screen worth annotating yet, and it ships a Snapshot tool plus a free companion web annotator for marking up static images.",
           "If you're comparing the two, the honest summary is that Presentify's cursor highlight is the better implementation and Scribbble gives you more tools and a free trial path. The table below lays out the differences feature by feature.",
         ],
       },
@@ -109,7 +118,7 @@ export const comparisons: Comparison[] = [
         heading: "Is Presentify free?",
         body: [
           "No. Presentify is a paid one-time purchase, with a limited free trial. There is no permanently free tier.",
-          "Scribbble is free to download and free to use for drawing, highlighting, shapes, text, Spotlight, Magnify and Measure, with an optional one-time license and no subscription — so if a free Presentify alternative is what you're after, that's the practical difference.",
+          "Scribbble is free to download and free to use for drawing, highlighting, shapes, text, Spotlight, Magnify, Measure and the Whiteboard, with an optional one-time license and no subscription — so if a free Presentify alternative is what you're after, that's the practical difference.",
         ],
       },
       {
@@ -126,11 +135,12 @@ export const comparisons: Comparison[] = [
     ],
     scribbbleStrengths: [
       "Free to download and try before buying",
-      "Includes Measure and Magnify (screen zoom) out of the box",
+      "Includes Measure, Magnify (screen zoom) and a Whiteboard mode out of the box",
       "Built-in Snapshot tool — capture the whole screen or a region without a separate app",
       "Toolbar docks to the left or right edge of the screen, not just floating",
       "Companion free Screenshot Annotate web tool for static markup",
       "Active design polish and frequent updates",
+      "Works across multiple monitors — draw on any display, or all of them",
     ],
     whenToChooseScribbble: [
       "You want to try the full app for free before buying a license",
@@ -150,6 +160,7 @@ export const comparisons: Comparison[] = [
       { feature: "Measure tool", scribbble: "Yes", competitor: "No" },
       { feature: "Magnify (screen zoom)", scribbble: "Yes", competitor: "No" },
       { feature: "Snapshot capture (screen or region)", scribbble: "Yes", competitor: "No" },
+      { feature: "Whiteboard mode", scribbble: "Yes", competitor: "No" },
       { feature: "Cursor highlight", scribbble: "No", competitor: "Yes" },
       { feature: "Free download to try", scribbble: "Yes", competitor: "Limited trial" },
       { feature: "Distribution", scribbble: "Direct download", competitor: "Mac App Store & direct" },
@@ -194,11 +205,12 @@ export const comparisons: Comparison[] = [
     scribbbleStrengths: [
       "Annotates the LIVE screen — not just captured images",
       "Works during Zoom calls, OBS streams and screen recordings",
-      "Includes Spotlight, Highlighter, Measure and Magnify (screen zoom) for live presentations",
+      "Includes Spotlight, Highlighter, Measure, Magnify (screen zoom) and a Whiteboard mode for live presentations",
       "Now includes built-in Snapshot capture (whole screen or region) — closes the capture-vs-live gap",
       "Lighter weight, single-purpose tool",
       "More affordable for users who only need live annotation",
       "Includes a free Screenshot Annotate web tool for static markup with blur, depth-of-field and numbered markers",
+      "Works across multiple monitors — draw on any display, or all of them",
     ],
     whenToChooseScribbble: [
       "You annotate during live presentations, calls or streams",
@@ -216,6 +228,7 @@ export const comparisons: Comparison[] = [
       { feature: "Magnify (screen zoom)", scribbble: "Yes", competitor: "No" },
       { feature: "Highlighter", scribbble: "Yes", competitor: "Yes" },
       { feature: "Snapshot capture (screen or region)", scribbble: "Yes", competitor: "Yes" },
+      { feature: "Whiteboard mode", scribbble: "Yes", competitor: "No" },
       { feature: "Screenshot annotation", scribbble: "Yes (free companion web tool)", competitor: "Yes" },
       { feature: "Screen recording", scribbble: "No", competitor: "Yes" },
       { feature: "Cloud upload & shareable links", scribbble: "No", competitor: "Yes" },
@@ -264,13 +277,14 @@ export const comparisons: Comparison[] = [
         body: [
           "Scribbble's toolbar is the direct counterpart to Epic Pen's floating toolbar, with one difference: instead of a fixed palette you drag around, it docks to the left or right edge of the screen and collapses out of the way while you draw, so it never covers the thing you're trying to point at.",
           "Every tool has a single-key shortcut, so you can switch from pen to highlighter to arrow without ever aiming at the toolbar — useful when you're mid-sentence in a live presentation.",
-          "It also carries four tools Epic Pen doesn't have: Spotlight, which dims everything except the region you're focused on; Magnify, which zooms into the live screen so small text and UI detail are readable from the back row or on a phone-sized playback; Measure, for reading pixel distances on screen; and Snapshot, which captures the whole screen or a region without a separate app.",
+          "It also carries five tools Epic Pen doesn't have: Spotlight, which dims everything except the region you're focused on; Magnify, which zooms into the live screen so small text and UI detail are readable from the back row or on a phone-sized playback; Measure, for reading pixel distances on screen; Whiteboard, a blank canvas a hotkey away for when you need to sketch something that isn't on screen yet; and Snapshot, which captures the whole screen or a region without a separate app.",
+          "And if you present on more than one display, Scribbble follows you across them — you can draw on whichever monitor you're working on, or on all of them at once.",
         ],
       },
       {
         heading: "Is there a free Epic Pen alternative for Mac?",
         body: [
-          "Scribbble is free to download and free to use — you can draw, highlight, add shapes and text, and use Spotlight, Magnify and Measure without paying anything. There's an optional one-time license if you want to support development and unlock the rest of the app; there's no subscription and no recurring charge.",
+          "Scribbble is free to download and free to use — you can draw, highlight, add shapes and text, and use Spotlight, Magnify, Measure and the Whiteboard without paying anything. There's an optional one-time license if you want to support development and unlock the rest of the app; there's no subscription and no recurring charge.",
           "That compares favourably with Epic Pen's own model on Windows, which is a free tier plus a paid Pro tier where shapes and text live.",
         ],
       },
@@ -285,10 +299,11 @@ export const comparisons: Comparison[] = [
     scribbbleStrengths: [
       "Native macOS — Apple Silicon optimized",
       "Designed around modern Mac shortcuts, with a toolbar that docks left or right",
-      "Includes Spotlight, Highlighter, Measure and Magnify (screen zoom) tools",
+      "Includes Spotlight, Highlighter, Measure, Magnify (screen zoom) and a Whiteboard mode",
       "Built-in Snapshot tool — capture the whole screen or a region without a separate app",
       "Lightweight and fast",
       "Companion free Screenshot Annotate web tool for static markup",
+      "Works across multiple monitors — draw on any display, or all of them",
     ],
     whenToChooseScribbble: [
       "You're on macOS",
@@ -306,6 +321,7 @@ export const comparisons: Comparison[] = [
       { feature: "Measure tool", scribbble: "Yes", competitor: "No" },
       { feature: "Magnify (screen zoom)", scribbble: "Yes", competitor: "No" },
       { feature: "Snapshot capture (screen or region)", scribbble: "Yes", competitor: "No" },
+      { feature: "Whiteboard mode", scribbble: "Yes", competitor: "No" },
       { feature: "Apple Silicon", scribbble: "Yes", competitor: "—" },
       { feature: "Toolbar that docks left or right", scribbble: "Yes", competitor: "Classic UI" },
     ],
@@ -358,11 +374,12 @@ export const comparisons: Comparison[] = [
     ],
     scribbbleStrengths: [
       "Annotates the live screen during calls and presentations",
-      "Includes Spotlight, Highlighter, Measure and Magnify (screen zoom) tools",
+      "Includes Spotlight, Highlighter, Measure, Magnify (screen zoom) and a Whiteboard mode",
       "Built-in Snapshot capture (whole screen or region) — covers Annotate's territory too",
       "Companion free Screenshot Annotate web tool (no signup)",
       "One-time license",
       "Modern Apple Silicon-native build",
+      "Works across multiple monitors — draw on any display, or all of them",
     ],
     whenToChooseScribbble: [
       "You annotate during live screen shares (Zoom, Meet, OBS)",
@@ -379,6 +396,7 @@ export const comparisons: Comparison[] = [
       { feature: "Measure tool", scribbble: "Yes", competitor: "No" },
       { feature: "Magnify (screen zoom)", scribbble: "Yes", competitor: "No" },
       { feature: "Snapshot capture (screen or region)", scribbble: "Yes", competitor: "Yes" },
+      { feature: "Whiteboard mode", scribbble: "Yes", competitor: "No" },
       { feature: "Screenshot annotation", scribbble: "Yes (free web tool)", competitor: "Yes" },
       { feature: "Team collaboration", scribbble: "No", competitor: "Yes" },
       { feature: "Free screenshot tool online", scribbble: "Yes", competitor: "No" },
@@ -402,7 +420,7 @@ export const comparisons: Comparison[] = [
       "Ink2Go pairs annotation with screen recording, but its Mac build hasn't been updated since 2020. Scribbble is an actively developed, Apple Silicon-native alternative.",
     h1: "Scribbble vs Ink2Go",
     subheadline:
-      "Ink2Go bundles screen annotation with video recording and a whiteboard. Scribbble does one thing — drawing on your live Mac screen — and keeps it current with macOS.",
+      "Ink2Go bundles screen annotation with video recording and a whiteboard. Scribbble covers the annotation and whiteboard side on your live Mac screen — and keeps it current with macOS.",
     competitorSummary:
       "Ink2Go is a screen annotation and recording app for macOS and Windows, sold as a one-time $19.99 purchase on the Mac App Store. You can write over any running app, flip to a black or white whiteboard, record the session to video with microphone audio and a webcam overlay, and save annotations as images. It's a capable all-rounder — but the Mac version hasn't shipped an update since 2020 and still lists macOS 10.7 as its minimum, so it predates Apple Silicon and several macOS releases.",
     competitorStrengths: [
@@ -415,11 +433,12 @@ export const comparisons: Comparison[] = [
     scribbbleStrengths: [
       "Actively developed and built for current macOS",
       "Apple Silicon native",
-      "Includes Spotlight (focus dim), Highlighter, Measure and Magnify (screen zoom) tools",
+      "Includes Spotlight (focus dim), Highlighter, Measure, Magnify (screen zoom) and a Whiteboard mode",
       "Built-in Snapshot tool to capture the whole screen or a region",
       "Toolbar docks to the left or right edge, or floats anywhere you drag it",
       "Free to download and try before buying a license",
       "Companion free Screenshot Annotate web tool for static markup",
+      "Works across multiple monitors — draw on any display, or all of them",
     ],
     whenToChooseScribbble: [
       "You're on an Apple Silicon Mac and want an app that's still being updated",
@@ -429,7 +448,7 @@ export const comparisons: Comparison[] = [
     ],
     whenToChooseCompetitor: [
       "You want annotation and video recording bundled into one cheap app",
-      "Whiteboard mode with a webcam overlay is central to how you teach",
+      "Recording to video with a webcam overlay is central to how you teach",
       "You need the same tool on both Windows and Mac",
     ],
     table: [
@@ -442,7 +461,7 @@ export const comparisons: Comparison[] = [
       { feature: "Measure tool", scribbble: "Yes", competitor: "No" },
       { feature: "Magnify (screen zoom)", scribbble: "Yes", competitor: "No" },
       { feature: "Snapshot capture (screen or region)", scribbble: "Yes", competitor: "Yes" },
-      { feature: "Whiteboard mode", scribbble: "No", competitor: "Yes" },
+      { feature: "Whiteboard mode", scribbble: "Yes", competitor: "Yes" },
       { feature: "Screen recording to video", scribbble: "No", competitor: "Yes" },
       { feature: "Webcam overlay", scribbble: "No", competitor: "Yes" },
       { feature: "Toolbar docks left or right", scribbble: "Yes", competitor: "Sliding side toolbar" },
@@ -461,7 +480,7 @@ export const comparisons: Comparison[] = [
       },
       {
         q: "What's the best Ink2Go alternative for Mac?",
-        a: "For live on-screen drawing, Scribbble is the closest Mac-native match: pen, highlighter, shapes, text, Spotlight, Measure and Magnify (screen zoom), plus built-in Snapshot capture. It doesn't record video, so pair it with QuickTime, OBS or Loom if you need a recording as well.",
+        a: "For live on-screen drawing, Scribbble is the closest Mac-native match: pen, highlighter, shapes, text, Spotlight, Measure, Magnify (screen zoom) and a Whiteboard mode like Ink2Go's, plus built-in Snapshot capture and support for multiple monitors. It doesn't record video, so pair it with QuickTime, OBS or Loom if you need a recording as well.",
       },
       {
         q: "Does Scribbble record video like Ink2Go?",

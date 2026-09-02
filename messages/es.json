@@ -46,11 +46,11 @@
       },
       {
         "title": "Funciona en cualquier app que ya uses",
-        "body": "Como Scribbble dibuja a nivel del sistema operativo, todo lo que capture Zoom, Google Meet, OBS, Loom o QuickTime incluirá tus anotaciones. Sin complementos, sin fuente de navegador, sin escenas extra que configurar."
+        "body": "Como Scribbble dibuja a nivel del sistema operativo, todo lo que capturen Zoom, Google Meet, OBS, Loom o QuickTime incluirá tus anotaciones. Funciona también en configuraciones de varias pantallas, así que puedes anotar la pantalla que estés compartiendo mientras tus notas permanecen en la otra. Sin plugins, sin fuente de navegador, sin escenas extra que configurar."
       },
       {
         "title": "Más que solo un bolígrafo",
-        "body": "Pluma, resaltador, flecha, rectángulo, elipse y texto — además de Spotlight (enfoque con oscurecimiento), Magnify para ampliar detalles finos en la pantalla en vivo, una herramienta Medir y una herramienta instantánea integrada que captura toda la pantalla o una región sin salir de la app."
+        "body": "Pluma, subrayador, flecha, rectángulo, elipse y texto — además de Spotlight (enfoque con atenuado), Magnify para ampliar detalles finos en la pantalla en vivo, una herramienta Medir, un modo Pizarra para cuando necesites un lienzo en blanco, y una herramienta integrada de Instantánea que captura toda la pantalla o una región sin salir de la app."
       },
       {
         "title": "Prueba gratis, licencia de pago único",
@@ -80,11 +80,13 @@
         "Anotaciones de texto",
         "Spotlight (enfoque con atenuación)",
         "Magnify — zoom de pantalla para mostrar detalles finos",
+        "Modo Pizarra — lienzo en blanco sobre cualquier pantalla",
+        "Compatibilidad con múltiples monitores",
         "Herramienta Medir",
-        "Captura instantánea — pantalla completa o región seleccionada",
-        "La barra de herramientas se ancla en el borde izquierdo o derecho",
-        "Nativo en Apple Silicon",
-        "Herramienta web gratuita complementaria Screenshot Annotate"
+        "Captura Instantánea — pantalla completa o región seleccionada",
+        "La barra de herramientas se acopla al borde izquierdo o derecho",
+        "Nativo para Apple Silicon",
+        "Herramienta web complementaria gratuita Screenshot Annotate"
       ],
       "offerDescription": "Descarga gratuita. Licencia de pago único para todas las funciones."
     }
@@ -114,7 +116,7 @@
       },
       {
         "lead": "Elige Scribbble",
-        "body": "si usas Mac y quieres una app moderna y nativa de Mac con el pulido de Epic Pen, el zoom al estilo ZoomIt y un conjunto de herramientas más completo (Spotlight, Magnify, Medir) que cualquiera de los dos."
+        "body": "si usas Mac y quieres una app moderna y nativa de Mac con el pulido de Epic Pen, el zoom de pantalla y la pizarra al estilo ZoomIt, soporte multi-monitor y un conjunto de herramientas más completo (Spotlight, Magnify, Medir) que cualquiera de los dos."
       }
     ],
     "whatIsZoomitTitle": "¿Qué es ZoomIt?",
@@ -206,13 +208,14 @@
       "No necesitas funciones de zoom de pantalla ni temporizador de descansos"
     ],
     "macTitle": "¿En Mac? Esta es la mejor opción.",
-    "macBody": "Epic Pen no funciona en macOS en absoluto, y el puerto de ZoomIt para Mac sigue sintiéndose como una utilidad de Windows. Si usas Mac y quieres algo que realmente se sienta como una app de Mac, Scribbble está diseñada específicamente para macOS — con una barra de herramientas moderna y arrastrable, rendimiento nativo en Apple Silicon y un conjunto de herramientas más completo (Spotlight, Magnify, Medir) que ZoomIt o Epic Pen.",
+    "macBody": "Epic Pen no funciona en macOS en absoluto, y el puerto de ZoomIt para Mac sigue pareciendo una utilidad de Windows. Si estás en Mac y quieres algo que realmente se sienta como una app de Mac, Scribbble está construido específicamente para macOS — con una barra de herramientas moderna y arrastrable, rendimiento nativo en Apple Silicon, soporte para múltiples monitores y un conjunto de herramientas más amplio (Spotlight, Magnify, Medir, Pizarra) que ZoomIt o Epic Pen.",
     "scribbbleFitsTitle": "Dónde encaja Scribbble",
     "scribbbleFits": [
       "Mismas herramientas básicas que Epic Pen — bolígrafo, marcador, flecha, rectángulo, texto — sin muro de pago Pro",
-      "Añade Spotlight (enfoque con oscurecimiento), Magnify (zoom de pantalla) y herramientas Medir — Epic Pen no tiene ninguna de ellas, y ZoomIt solo tiene el zoom",
+      "Añade Spotlight (enfoque con atenuado), Magnify (zoom de pantalla), Medir y modo Pizarra — Epic Pen no tiene ninguno de ellos, y ZoomIt solo tiene el zoom y una pantalla en blanco",
+      "Soporte multi-monitor — anota la pantalla que estés presentando",
       "Interfaz nativa para Mac con soporte Apple Silicon",
-      "Descarga y prueba gratis, licencia de pago única"
+      "Descarga gratuita para probar, licencia de pago único"
     ],
     "tryFree": "Prueba Scribbble gratis",
     "seeAlternatives": "Ver todas las alternativas a Epic Pen para Mac",
@@ -236,11 +239,11 @@
       },
       {
         "q": "¿Hay una alternativa para Mac a ZoomIt y Epic Pen?",
-        "a": "Sí. Scribbble es una app de anotación de pantalla pensada principalmente para Mac que combina lo mejor de ambas: una interfaz moderna y pulida como la de Epic Pen, con el flujo de trabajo centrado en atajos y teclas rápidas de ZoomIt. Incluye pluma, resaltador, flecha, rectángulo, texto, Spotlight (enfoque con oscurecimiento), Magnify (zoom de pantalla) y herramientas Medir; es gratis para descargar y probar y se desbloquea todo con una licencia de pago único."
+        "a": "Sí. Scribbble es una app de anotación de pantalla pensada primero para Mac que combina lo bueno de ambos — una interfaz moderna y pulida como Epic Pen, con el flujo de trabajo enfocado en atajos de ZoomIt. Incluye pluma, subrayador, flecha, rectángulo, texto, Spotlight (enfoque con atenuado), Magnify (zoom de pantalla), Medir y modo Pizarra, además de soporte para múltiples monitores — descarga gratuita y prueba, con una licencia de pago único para desbloquear todo."
       },
       {
         "q": "¿Qué funciones ofrecen las alternativas que Epic Pen no tiene?",
-        "a": "La mayoría de las alternativas modernas añaden al menos una de estas cosas: una herramienta Spotlight / de enfoque, un zoom de pantalla para mostrar detalles finos, una herramienta Medir para distancias en pantalla, o un grabador integrado (CleanShot X). Scribbble incorpora específicamente Spotlight, Magnify (zoom de pantalla), Medir y una herramienta web complementaria gratuita Screenshot Annotate. ZoomIt añade zoom, temporizador de descansos y modo pizarra."
+        "a": "La mayoría de las alternativas modernas añaden al menos una de estas funciones: una herramienta Spotlight / enfoque atenuado, un zoom de pantalla para mostrar detalles finos, una herramienta Medir para distancias en pantalla o un grabador de pantalla integrado (CleanShot X). Scribbble añade específicamente Spotlight, Magnify (zoom de pantalla), Medir, modo Pizarra, soporte multi-monitor y una herramienta web complementaria gratuita Screenshot Annotate. ZoomIt añade zoom, temporizador de descanso y modo pizarra."
       },
       {
         "q": "¿Qué herramientas de anotación de pantalla recomiendan los revisores en lugar de Epic Pen?",

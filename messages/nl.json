@@ -46,11 +46,11 @@
       },
       {
         "title": "Werkt in elke app die je al gebruikt",
-        "body": "Omdat Scribbble op OS-niveau tekent, zullen alles wat Zoom, Google Meet, OBS, Loom of QuickTime vastlegt je annotaties bevatten. Geen plugin, geen browser source, geen extra scene om in te stellen."
+        "body": "Omdat Scribbble op OS-niveau tekent, worden je aantekeningen meegenomen in alles wat Zoom, Google Meet, OBS, Loom of QuickTime vastlegt. Het werkt ook over meerdere beeldschermen, zodat je kunt annoteren op het scherm dat je deelt terwijl je aantekeningen op het andere blijven staan. Geen plug-in, geen browserbron, geen extra scène om in te stellen."
       },
       {
         "title": "Meer dan alleen een pen",
-        "body": "Pen, markeerstift, pijl, rechthoek, ellips en tekst — plus Spotlight (focusdimming), Magnify om details live op het scherm in te zoomen, een Meetlint-tool en een ingebouwde Snapshot-tool die het hele scherm of een geselecteerd gebied vastlegt zonder de app te verlaten."
+        "body": "Pen, markeerder, pijl, rechthoek, ellips en tekst — plus Spotlight (focus dim), Magnify om in te zoomen op fijne details op het live-scherm, een Meet-tool, een Whiteboard-modus voor wanneer je een blanco canvas nodig hebt, en een ingebouwde Snapshot-tool die het hele scherm of een regio vastlegt zonder de app te verlaten."
       },
       {
         "title": "Gratis te proberen, eenmalige licentie",
@@ -80,11 +80,13 @@
         "Tekstannotaties",
         "Spotlight (focus dim)",
         "Magnify — schermzoom om fijne details te tonen",
-        "Meetlint-tool",
-        "Snapshot — hele scherm of geselecteerd gebied vastleggen",
-        "Werkbalk kan vastgezet worden aan linker- of rechterrand",
+        "Whiteboard-modus — blanco canvas over elk scherm",
+        "Ondersteuning voor meerdere beeldschermen",
+        "Meet-tool",
+        "Snapshot-opname — heel scherm of geselecteerd gebied",
+        "Werkbalk klikt vast aan linker- of rechterrand",
         "Apple Silicon native",
-        "Gratis begeleidend Screenshot Annotate webtool"
+        "Compagnon gratis Screenshot Annotate webtool"
       ],
       "offerDescription": "Gratis te downloaden. Eenmalige licentie voor volledige functionaliteit."
     }
@@ -114,7 +116,7 @@
       },
       {
         "lead": "Kies Scribbble",
-        "body": "als je op een Mac werkt en een moderne, Mac-native app wilt met de afwerking van Epic Pen, het ZoomIt-achtige schermzoom en een rijkere set tools (Spotlight, Magnify, Meetlint) dan beide bieden."
+        "body": "als je op een Mac werkt en een moderne, Mac-native app wil met de afwerking van Epic Pen, ZoomIt-stijl schermzoom en whiteboard, multi-monitor support en een uitgebreider gereedschapsaanbod (Spotlight, Magnify, Meet) dan beide."
       }
     ],
     "whatIsZoomitTitle": "Wat is ZoomIt?",
@@ -206,13 +208,14 @@
       "Je geen behoefte hebt aan scherm‑zoom of pauze‑timer functies"
     ],
     "macTitle": "Op een Mac? Dit is de betere keuze.",
-    "macBody": "Epic Pen draait helemaal niet op macOS, en de Mac-port van ZoomIt voelt nog steeds als een Windows-hulpprogramma. Als je op een Mac werkt en iets wilt dat écht als een Mac-app aanvoelt, is Scribbble specifiek gebouwd voor macOS — met een moderne sleepbare werkbalk, native Apple Silicon-prestaties en een rijkere set tools (Spotlight, Magnify, Meetlint) dan zowel ZoomIt als Epic Pen.",
+    "macBody": "Epic Pen draait helemaal niet op macOS, en ZoomIt's Mac-port voelt nog steeds aan als een Windows-hulpmiddel. Als je op een Mac werkt en iets wilt dat echt als een Mac-app aanvoelt, is Scribbble specifiek voor macOS gebouwd — met een moderne versleepbare werkbalk, Apple Silicon native prestaties, ondersteuning voor meerdere beeldschermen en een uitgebreider gereedschapsaanbod (Spotlight, Magnify, Meet, Whiteboard) dan zowel ZoomIt als Epic Pen.",
     "scribbbleFitsTitle": "Waar Scribbble in past",
     "scribbbleFits": [
       "Zelfde kerntools als Epic Pen — pen, marker, pijl, rechthoek, tekst — zonder Pro‑betaalmuur",
-      "Voegt Spotlight (focusdimming), Magnify (schermzoom) en Meetlint-tools toe — Epic Pen heeft geen van deze, en ZoomIt heeft alleen de zoom",
-      "Mac‑native interface met ondersteuning voor Apple Silicon",
-      "Gratis te downloaden en uit te proberen, eenmalige licentie"
+      "Voegt Spotlight (focus dim), Magnify (schermzoom), Meet en Whiteboard-modus toe — Epic Pen heeft geen van deze, en ZoomIt heeft alleen de zoom en een blanco scherm",
+      "Ondersteuning voor meerdere beeldschermen — annoteer het scherm dat je presenteert",
+      "Mac-native UI met Apple Silicon-ondersteuning",
+      "Gratis te downloaden en proberen, eenmalige licentie"
     ],
     "tryFree": "Probeer Scribbble gratis",
     "seeAlternatives": "Bekijk alle Epic Pen‑alternatieven voor Mac",
@@ -236,11 +239,11 @@
       },
       {
         "q": "Is er een Mac‑alternatief voor zowel ZoomIt als Epic Pen?",
-        "a": "Ja. Scribbble is een Mac-first annotatie-app die het beste van beide combineert — een moderne, gepolijste UI zoals Epic Pen, met de gefocuste, sneltoetsgestuurde workflow van ZoomIt. Het bevat pen, markeerstift, pijl, rechthoek, tekst, Spotlight (focusdimming), Magnify (schermzoom) en Meetlint, gratis te downloaden en uit te proberen, met een eenmalige licentie om alles vrij te schakelen."
+        "a": "Ja. Scribbble is een Mac-first schermannotatie-app die het goede van beide combineert — een moderne, gepolijste UI zoals Epic Pen, met de gefocuste, sneltoetsgestuurde workflow van ZoomIt. Het bevat pen, markeerder, pijl, rechthoek, tekst, Spotlight (focus dim), Magnify (schermzoom), Meet en Whiteboard-modus, plus ondersteuning voor meerdere beeldschermen — gratis te downloaden en te proberen met een eenmalige licentie om alles vrij te schakelen."
       },
       {
         "q": "Welke functies bieden alternatieven die Epic Pen niet heeft?",
-        "a": "De meeste moderne alternatieven voegen minstens één van de volgende dingen toe: een Spotlight / focus-dim tool, schermzoom om fijne details te tonen, een Meetlint voor afstanden op het scherm, of een ingebouwde schermrecorder (CleanShot X). Scribbble voegt specifiek Spotlight, Magnify (schermzoom), Meetlint en een gratis begeleidend Screenshot Annotate webtool toe. ZoomIt biedt zoom, een pauzetimer en whiteboard-modus."
+        "a": "De meeste moderne alternatieven voegen minstens één van de volgende toe: een Spotlight / focus-dim tool, schermzoom om fijne details te laten zien, een Meet-tool voor afstanden op het scherm, of een ingebouwde schermrecorder (CleanShot X). Scribbble voegt specifiek Spotlight, Magnify (schermzoom), Meet, een Whiteboard-modus, ondersteuning voor meerdere beeldschermen en een compagnon gratis Screenshot Annotate webtool toe. ZoomIt voegt zoom, een pauzetimer en whiteboard-modus toe."
       },
       {
         "q": "Welke schermannotatie‑tools raden reviewers aan in plaats van Epic Pen?",

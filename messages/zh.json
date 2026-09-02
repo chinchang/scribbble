@@ -46,11 +46,11 @@
       },
       {
         "title": "可在你已使用的任何应用中工作",
-        "body": "由于 Scribbble 在操作系统层绘制，任何 Zoom、Google Meet、OBS、Loom 或 QuickTime 捕获的内容都会包含你的标注。无需插件、无需浏览器源、无需额外场景设置。"
+        "body": "因为 Scribbble 在操作系统层面绘制，任何被 Zoom、Google Meet、OBS、Loom 或 QuickTime 捕捉到的画面都会包含你的标注。它也支持多显示器，所以你可以在共享的屏幕上做标注，同时笔记留在另一个屏幕上。无需插件、无需浏览器源、无需额外场景设置。"
       },
       {
         "title": "不仅仅是画笔",
-        "body": "画笔、高亮、箭头、矩形、椭圆和文字——外加 Spotlight（聚焦暗化）、Magnify 用于在实时屏幕上放大细节、测量工具，以及内置的快照工具，可在不离开应用的情况下捕捉全屏或选定区域。"
+        "body": "画笔、高亮、箭头、矩形、椭圆和文本——另外还有 Spotlight（聚焦暗化）、Magnify 用于放大实时屏幕细节、测量工具、需要空白画布时的 Whiteboard 模式，以及内置的 Snapshot 快照工具，可在不离开应用的情况下捕捉整个屏幕或选定区域。"
       },
       {
         "title": "免费试用，一次性授权",
@@ -80,11 +80,13 @@
         "文字标注",
         "聚光灯（焦点暗化）",
         "Magnify — 用于展示细微细节的屏幕放大",
+        "Whiteboard 模式 —— 在任意屏幕上提供空白画布",
+        "多显示器支持",
         "测量工具",
-        "快照捕捉 — 全屏或选定区域",
+        "快照捕捉 —— 整个屏幕或选定区域",
         "工具栏可停靠在左侧或右侧边缘",
         "Apple Silicon 原生",
-        "配套免费 Screenshot Annotate 网页工具"
+        "配套的免费 Screenshot Annotate 网页工具"
       ],
       "offerDescription": "免费下载。一次性授权解锁全部功能。"
     }
@@ -114,7 +116,7 @@
       },
       {
         "lead": "选择 Scribbble",
-        "body": "如果你在 Mac 上，想要一款现代、原生的 Mac 应用，兼具 Epic Pen 的精致感、ZoomIt 式的屏幕放大功能，并且工具集比两者都更丰富（包含 Spotlight、Magnify、Measure）。"
+        "body": "如果你在 Mac 上并想要一款现代、原生 Mac 的应用，兼具 Epic Pen 的精致体验、ZoomIt 风格的屏幕缩放与白板、多显示器支持，以及比两者更丰富的工具集（Spotlight、Magnify、Measure），Scribbble 非常适合你。"
       }
     ],
     "whatIsZoomitTitle": "什么是 ZoomIt？",
@@ -206,13 +208,14 @@
       "你不需要屏幕缩放或休息计时器功能"
     ],
     "macTitle": "在 Mac 上？这个选项更合适。",
-    "macBody": "Epic Pen 根本不支持 macOS，而 ZoomIt 的 Mac 移植版仍然感觉像个 Windows 工具。如果你在 Mac 上想要真正像 Mac 的应用，Scribbble 专为 macOS 打造——拥有现代可拖拽的工具栏、Apple Silicon 原生性能，以及比 ZoomIt 或 Epic Pen 更丰富的工具集（Spotlight、Magnify、Measure）。",
+    "macBody": "Epic Pen 根本不在 macOS 上运行，而 ZoomIt 的 Mac 移植版仍带有 Windows 工具的感觉。如果你在 Mac 上想要一款真正像 Mac 的应用，Scribbble 是专为 macOS 打造的——拥有现代可拖拽的工具栏、Apple Silicon 原生性能、多显示器支持，以及比 ZoomIt 或 Epic Pen 更丰富的工具（Spotlight、Magnify、Measure、Whiteboard）。",
     "scribbbleFitsTitle": "Scribbble 的定位",
     "scribbbleFits": [
       "具备与 Epic Pen 相同的核心工具——画笔、高亮、箭头、矩形、文本——且没有 Pro 付费门槛",
-      "新增 Spotlight（聚焦暗化）、Magnify（屏幕放大）和测量工具——Epic Pen 没有这些，而 ZoomIt 只有放大功能。",
-      "原生 Mac 界面并支持 Apple Silicon",
-      "免费下载试用，一次性授权解锁全部功能"
+      "增加了 Spotlight（聚焦暗化）、Magnify（屏幕放大）、Measure 和 Whiteboard 模式——Epic Pen 都没有这些，ZoomIt 只有放大和空白屏幕",
+      "多显示器支持 —— 在你正在演示的显示器上进行标注",
+      "原生 Mac 用户界面，支持 Apple Silicon",
+      "免费下载试用，一次性授权"
     ],
     "tryFree": "免费试用 Scribbble",
     "seeAlternatives": "查看所有适用于 Mac 的 Epic Pen 替代品",
@@ -236,11 +239,11 @@
       },
       {
         "q": "有没有适用于 Mac 的替代方案，既不是 ZoomIt 也不是 Epic Pen？",
-        "a": "是的。Scribbble 是一款以 Mac 为主的屏幕标注应用，融合了两者的优点——像 Epic Pen 那样现代、精致的界面，以及像 ZoomIt 那样以快捷键为中心的工作流程。它包含画笔、高亮、箭头、矩形、文字、Spotlight（聚焦暗化）、Magnify（屏幕放大）和测量工具，可免费下载试用，通过一次性授权解锁全部功能。"
+        "a": "是的。Scribbble 是一款以 Mac 优先的屏幕标注应用，结合了两者的优点——像 Epic Pen 那样的现代精致界面，同时具备 ZoomIt 那样以快捷键为中心的工作流程。它包含画笔、高亮、箭头、矩形、文本、Spotlight（聚焦暗化）、Magnify（屏幕放大）、Measure 和 Whiteboard 模式，并支持多显示器——可免费下载试用，通过一次性授权解锁全部功能。"
       },
       {
         "q": "替代品提供了 Epic Pen 所没有的哪些功能？",
-        "a": "大多数现代替代品至少会新增以下一种功能：Spotlight / 聚焦暗化工具、用于展示细节的屏幕放大、用于屏上距离的测量工具，或内置屏幕录制（如 CleanShot X）。Scribbble 专门新增了 Spotlight、Magnify（屏幕放大）、Measure 以及配套的免费 Screenshot Annotate 网页工具。ZoomIt 提供放大、计时器和白板模式。"
+        "a": "大多数现代替代品至少增加了以下一项：Spotlight / 聚焦暗化工具、用于展示细节的屏幕放大、用于屏幕距离测量的 Measure 工具，或内置屏幕录制（CleanShot X）。Scribbble 专门提供 Spotlight、Magnify（屏幕放大）、Measure、Whiteboard 模式、多显示器支持以及配套的免费 Screenshot Annotate 网页工具。ZoomIt 则提供放大、计时器和白板模式。"
       },
       {
         "q": "评测者推荐用哪些屏幕注释工具来替代 Epic Pen？",

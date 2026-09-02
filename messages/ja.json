@@ -46,11 +46,11 @@
       },
       {
         "title": "普段使っているアプリでそのまま使える",
-        "body": "ScribbbleはOSレベルで描画するため、Zoom、Google Meet、OBS、Loom、QuickTimeがキャプチャする映像には注釈がそのまま含まれます。プラグイン不要、ブラウザソース不要、シーンの追加設定も不要。"
+        "body": "Scribbble は OS レベルで描画するため、Zoom、Google Meet、OBS、Loom、QuickTime でキャプチャした映像には常に注釈が含まれます。複数モニタにも対応しているので、共有しているディスプレイにだけ注釈を入れつつ、自分のメモは別の画面に残すことも可能です。プラグイン不要、ブラウザソース不要、追加のシーン設定も不要です。"
       },
       {
         "title": "ペンだけじゃない",
-        "body": "ペン、蛍光ペン、矢印、矩形、楕円、テキストに加え、Spotlight（フォーカスディム）、ライブ画面の細部を拡大するMagnify、測定ツール、アプリを離れずに全画面や選択領域をキャプチャできる内蔵のSnapshotツールを搭載。"
+        "body": "ペン、蛍光ペン、矢印、四角、楕円、テキスト — さらに Spotlight（フォーカスディム）、画面上の細部を拡大する Magnify、画面上の距離を測る Measure、白紙キャンバスが使える Whiteboard モード、アプリを離れずに全画面や選択領域をキャプチャできる組み込みの Snapshot ツールを搭載しています。"
       },
       {
         "title": "無料で試せる、買い切りライセンス",
@@ -80,11 +80,13 @@
         "テキスト注釈",
         "スポットライト（フォーカスディム）",
         "Magnify — 細部を見せるための画面拡大機能",
-        "測定ツール",
-        "Snapshotキャプチャ — 全画面または選択領域",
-        "ツールバーを左右どちらの端にもドッキング可能",
-        "Apple Siliconネイティブ",
-        "無償のコンパニオン Screenshot Annotate ウェブツール"
+        "Whiteboard モード — どの画面上にもできる白紙キャンバス",
+        "マルチモニタ対応",
+        "Measure ツール",
+        "Snapshot キャプチャ — 全画面または選択領域",
+        "ツールバーは左右どちらの端にもドック可能",
+        "Apple Silicon ネイティブ",
+        "無料の補助的 Screenshot Annotate ウェブツール"
       ],
       "offerDescription": "ダウンロードは無料。全機能は買い切りライセンスで利用可能。"
     }
@@ -114,7 +116,7 @@
       },
       {
         "lead": "Scribbbleを選ぶ理由",
-        "body": "Macで、Epic Penの洗練さとZoomIt風の画面拡大を併せ持ち、Spotlight、Magnify、Measureなど両者より豊富なツールセットを求めるなら。"
+        "body": "Mac を使っていて、Epic Pen の洗練さを感じさせるモダンでネイティブな Mac アプリ、ZoomIt 的な画面ズームとホワイトボード、マルチモニタ対応、そして Spotlight や Magnify、Measure のようなより充実したツールセットを求めるなら。"
       }
     ],
     "whatIsZoomitTitle": "ZoomItとは？",
@@ -206,13 +208,14 @@
       "画面ズームや休憩タイマー機能が不要な場合"
     ],
     "macTitle": "Mac を使ってますか？こちらの方がおすすめです。",
-    "macBody": "Epic PenはそもそもmacOSで動作せず、ZoomItのMac移植版はまだWindowsユーティリティの雰囲気が残っています。Macで本当にネイティブな感覚のアプリを求めるなら、ScribbbleはmacOS専用に設計されており、モダンなドラッグ可能ツールバー、Apple Siliconネイティブの高速性、そしてZoomItやEpic Penより豊富なツール群（Spotlight、Magnify、Measure）を備えています。",
+    "macBody": "Epic Pen はそもそも macOS で動作しませんし、ZoomIt の Mac ポートはまだ Windows ユーティリティの感覚が残っています。Mac をお使いで実際に“Macらしい”アプリが欲しいなら、Scribbble は macOS 向けに作られており、モダンなドラッグ可能ツールバー、Apple Silicon ネイティブのパフォーマンス、マルチモニタ対応、そして ZoomIt や Epic Pen よりも豊富なツール（Spotlight、Magnify、Measure、Whiteboard）を備えています。",
     "scribbbleFitsTitle": "Scribbble の位置づけ",
     "scribbbleFits": [
       "Epic Pen と同等の基本ツール（ペン、蛍光ペン、矢印、四角形、テキスト）を有料の Pro 階層なしで提供",
-      "Spotlight（フォーカスディム）、Magnify（画面拡大）、Measure（測定）を追加 — Epic Penにはこれらがなく、ZoomItは拡大のみを提供します。",
-      "Mac ネイティブの UI と Apple Silicon 対応",
-      "無料でダウンロードして試せる、買い切りライセンス"
+      "Spotlight（フォーカスディム）、Magnify（画面ズーム）、Measure、Whiteboard モードを追加 — Epic Pen にはどれもなく、ZoomIt にはズームと空白画面しかありません。",
+      "マルチモニタ対応 — 発表中のどのディスプレイにも注釈可能",
+      "Mac ネイティブ UI と Apple Silicon サポート",
+      "ダウンロードして試せる無料版、購入は一度きりのライセンス"
     ],
     "tryFree": "Scribbble を無料で試す",
     "seeAlternatives": "Mac 向け Epic Pen の代替案をすべて見る",
@@ -236,11 +239,11 @@
       },
       {
         "q": "ZoomIt と Epic Pen の両方の Mac 向け代替はありますか？",
-        "a": "はい。ScribbbleはMacを第一に考えた画面注釈アプリで、Epic Penのようなモダンで洗練されたUIと、ZoomItのようなホットキー中心のワークフローの良い点を組み合わせています。ペン、蛍光ペン、矢印、矩形、テキスト、Spotlight（フォーカスディム）、Magnify（画面拡大）、Measureを含み、無料でダウンロードして試せ、ワンタイムライセンスで全機能をアンロックできます。"
+        "a": "はい。Scribbble は Mac を第一に考えた画面注釈アプリで、Epic Pen のようなモダンで洗練された UI と、ZoomIt のようなホットキー中心のワークフローの良いところを組み合わせています。ペン、蛍光ペン、矢印、四角、テキスト、Spotlight（フォーカスディム）、Magnify（画面ズーム）、Measure、Whiteboard モードに加え、マルチモニタ対応を備え、ダウンロードは無料で試用可能、すべてをアンロックするには一度きりのライセンス購入となります。"
       },
       {
         "q": "代替ツールは Epic Pen にないどんな機能を提供していますか？",
-        "a": "多くの現代的な代替ツールは少なくとも以下のいずれかを追加しています：Spotlight／フォーカスディム、細部表示のための画面拡大、画面上の距離を測る測定ツール、または内蔵の画面録画機能（CleanShot X）。Scribbbleは特にSpotlight、Magnify（画面拡大）、Measure、そして無償のコンパニオン Screenshot Annotate ウェブツールを追加しています。ZoomItは拡大、休憩タイマー、ホワイトボードモードを追加します。"
+        "a": "多くの現代的な代替ツールは少なくとも次のいずれかを追加しています：Spotlight / フォーカスディム、微細部分を見せるための画面ズーム、画面上の距離を測る Measure、または組み込みの画面録画（CleanShot X）。Scribbble は特に Spotlight、Magnify（画面ズーム）、Measure、Whiteboard モード、マルチモニタ対応、そして補助的な無料の Screenshot Annotate ウェブツールを提供します。ZoomIt はズーム、休憩タイマー、Whiteboard モードを追加します。"
       },
       {
         "q": "レビュー担当者は Epic Pen の代わりにどの注釈ツールを推奨していますか？",

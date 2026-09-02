@@ -131,3 +131,25 @@ already ranking, then answer the exact query on that page. Baseline for the 4–
       came back in English (`personaPage.ctaSubtitle`)
 - [ ] Re-submit `/vs/zoomit` and `/best/best-zoomit-alternatives-mac` in GSC after deploy — the
       zoom-related copy on both reversed, and they target zoom-intent queries
+
+### Whiteboard tool + multi-monitor support (2026-09-02)
+
+- [x] Add the Whiteboard tool across the site — homepage card + JSON-LD `featureList`, every
+      `/for/*` `featuredTools` list, a "Whiteboard mode" row and a strengths entry on all 6 `/vs/*`
+      tables, all 5 `/best/*` listicles, `/vs/zoomit-vs-epic-pen`, the blog's virtual-whiteboard
+      section and the `/tools/*` CTA
+- [x] Add multi-monitor support — homepage "works in any app" card + JSON-LD, a strengths bullet on
+      every `/vs/*` page, a `featuredTools` bullet per persona, and 4 new persona FAQs
+      ("Does Scribbble work with multiple monitors?" and per-audience variants). Deliberately not a
+      comparison-table row: competitors' multi-monitor behaviour isn't verified, so the copy only
+      claims it for Scribbble
+- [x] Reverse the now-false "no whiteboard" positioning: `/vs/ink2go`'s "Whiteboard mode → No" row
+      and its "whiteboard is central to how you teach" reason to pick Ink2Go, ZoomIt's whiteboard as
+      a reason to choose it on `/vs/zoomit`, and the "No break timer or whiteboard mode" /
+      "No collaborative whiteboard mode" cons on three `/best/*` listicles (the teachers listicle now
+      says the whiteboard is single-user, which is still true)
+- [x] New `/vs/zoomit` FAQs for "Does Scribbble have a whiteboard mode like ZoomIt's blank screen?"
+      and "Does Scribbble work with multiple monitors?"
+- [x] Re-ran `pnpm translate` (~150 changed strings × 7 locales)
+- [ ] Re-submit `/vs/zoomit`, `/vs/ink2go` and `/best/best-screen-annotation-tools-for-teachers` in
+      GSC after deploy — whiteboard positioning reversed on all three
