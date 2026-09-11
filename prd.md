@@ -106,8 +106,11 @@ already ranking, then answer the exact query on that page. Baseline for the 4–
 - [ ] Investigate `/for/*` brand-query noise — 2,780 of `/for/teachers`' 4,204 impressions are the query
       "scribbble" at pos 6.2 / 0.2% CTR, and real persona intent is only ~40 impressions. The P1 title
       rewrites could not have moved anything. Consider consolidating or deindexing thin `/for/*` pages
-- [ ] Pre-existing: one `INVALID_MESSAGE` next-intl error during static generation (present on a clean
-      tree too, before this pass) — unrelated to these changes but worth tracking down
+- [x] Pre-existing: one `INVALID_MESSAGE` next-intl error during static generation. Root cause
+      (found 2026-09-12): French `home.seoTitle` had an ASCII apostrophe right before a rich-text tag
+      (`d'<gradient>`), which ICU MessageFormat reads as the start of a quoted literal, so `/fr`
+      rendered the raw key "home.seoTitle" as its H2. Fixed with a typographic apostrophe;
+      `scripts/translate.ts` now rewrites `'` before `<`/`{` to `’` in every translation
 
 ### Long-form content / blog
 

@@ -278,6 +278,13 @@ Input is a JSON object mapping ids to English strings. Reply with a JSON object:
     const got = extractTokens(translated).join("|");
     if (want !== got) bad.push(`${id}: tokens "${want}" vs "${got}"`);
     if (translated.includes("\u2014")) dashed.push(id);
+    // In ICU MessageFormat an ASCII apostrophe right before "<" or "{" opens
+    // a quoted literal and swallows the tag (French "d'<gradient>" rendered
+    // the raw key on the live site). Use the typographic apostrophe instead.
+    if (/'[<{]/.test(translated)) {
+      translations[id] = translated.replace(/'(?=[<{])/g, "\u2019");
+      console.warn(`  ${locale}: replaced apostrophe before tag in ${id}`);
+    }
   }
   if (bad.length) {
     if (attempt < 2) return translateChunk(locale, chunk, attempt + 1);
