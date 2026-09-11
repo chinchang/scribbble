@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import DownloadLink from "@/components/download-link";
 import { notFound } from "next/navigation";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
@@ -10,7 +11,12 @@ import SiteFooter from "@/components/site-footer";
 import SiteHeader from "@/components/site-header";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
-import { getPersona, getPersonas, getComparisons, getListicles } from "@/lib/i18n/data";
+import {
+  getPersona,
+  getPersonas,
+  getComparisons,
+  getListicles,
+} from "@/lib/i18n/data";
 import { localeUrl, languageAlternates } from "@/lib/i18n/seo";
 import { SITE_URL, DOWNLOAD_URL, BUY_URL } from "@/lib/site-config";
 
@@ -154,10 +160,15 @@ export default async function PersonaPage({
               asChild
               className="bg-gradient-to-r from-primary to-accent text-white px-10 py-6 text-lg font-bold"
             >
-              <a href={DOWNLOAD_URL} target="_blank" rel="noopener noreferrer">
+              <DownloadLink
+                href={DOWNLOAD_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                location="for_hero"
+              >
                 <Download className="w-5 h-5 mr-2" />
                 {tc("downloadFree")}
-              </a>
+              </DownloadLink>
             </Button>
             <Button
               variant="outline"
@@ -291,10 +302,15 @@ export default async function PersonaPage({
             asChild
             className="bg-gradient-to-r from-primary to-accent text-white px-12 py-7 text-xl font-bold"
           >
-            <a href={DOWNLOAD_URL} target="_blank" rel="noopener noreferrer">
+            <DownloadLink
+              href={DOWNLOAD_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              location="for_bottom_cta"
+            >
               <Download className="w-6 h-6 mr-3" />
               {tc("downloadScribbble")}
-            </a>
+            </DownloadLink>
           </Button>
         </div>
       </section>

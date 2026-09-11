@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import DownloadLink from "@/components/download-link";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -190,7 +191,9 @@ export default async function Page({
       <section className="py-16 px-4 bg-gradient-to-br from-card to-background">
         <div className="container mx-auto max-w-5xl grid md:grid-cols-2 gap-8">
           <div className="rounded-2xl border-2 border-accent/30 bg-card/60 p-8">
-            <h2 className="text-2xl font-bold mb-4">{t("whatIsZoomitTitle")}</h2>
+            <h2 className="text-2xl font-bold mb-4">
+              {t("whatIsZoomitTitle")}
+            </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
               {t("whatIsZoomitBody")}
             </p>
@@ -242,7 +245,9 @@ export default async function Page({
       <section className="py-20 px-4 bg-gradient-to-br from-primary/5 to-accent/5">
         <div className="container mx-auto max-w-5xl grid md:grid-cols-2 gap-8">
           <div>
-            <h3 className="text-2xl font-bold mb-4">{t("chooseZoomitTitle")}</h3>
+            <h3 className="text-2xl font-bold mb-4">
+              {t("chooseZoomitTitle")}
+            </h3>
             <ul className="space-y-3">
               {chooseZoomit.map((s) => (
                 <li key={s} className="flex gap-3">
@@ -294,14 +299,15 @@ export default async function Page({
                 asChild
                 className="bg-gradient-to-r from-primary to-accent text-white"
               >
-                <a
+                <DownloadLink
                   href={DOWNLOAD_URL}
                   target="_blank"
                   rel="noopener noreferrer"
+                  location="vs_third_party_verdict"
                 >
                   <Download className="w-4 h-4 mr-2" />
                   {t("tryFree")}
-                </a>
+                </DownloadLink>
               </Button>
               <Button asChild variant="outline">
                 <Link href="/best/best-epic-pen-alternatives-mac">

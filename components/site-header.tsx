@@ -1,4 +1,5 @@
 import Link from "next/link";
+import DownloadLink from "@/components/download-link";
 import Img from "next/image";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
@@ -32,10 +33,15 @@ export default async function SiteHeader({
             asChild
             className="bg-gradient-to-r from-primary to-accent text-white"
           >
-            <a href={DOWNLOAD_URL} target="_blank" rel="noopener noreferrer">
+            <DownloadLink
+              href={DOWNLOAD_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              location="header"
+            >
               <Download className="w-4 h-4 mr-2" />
               {t("cta")}
-            </a>
+            </DownloadLink>
           </Button>
         </div>
       </div>

@@ -162,3 +162,11 @@ already ranking, then answer the exact query on that page. Baseline for the 4–
 - [x] Re-ran `pnpm translate` (~150 changed strings × 7 locales)
 - [ ] Re-submit `/vs/zoomit`, `/vs/ink2go` and `/best/best-screen-annotation-tools-for-teachers` in
       GSC after deploy — whiteboard positioning reversed on all three
+
+### Analytics (2026-09-11)
+
+- [x] Track clicks on every "Download" CTA as a GA4 `download_click` event (param `location`)
+      via `components/download-link.tsx`; `BuyLink` and `DownloadLink` now share
+      `components/tracked-link.tsx`. Locations: `header`, `home_nav`, `home_hero`,
+      `home_bottom_cta`, `for_hero`, `for_bottom_cta`, `vs_hero`, `vs_bottom_cta`,
+      `vs_third_party_verdict`, `best_list_item`, `best_bottom_cta`, `blog_post_cta`

@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import DownloadLink from "@/components/download-link";
 import { Badge } from "@/components/ui/badge";
 import {
   Star,
@@ -118,10 +119,15 @@ export default async function Home({
               asChild
               className="bg-gradient-to-r from-primary to-accent hover:from-accent hover:to-primary text-white shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
             >
-              <a href={DOWNLOAD_URL} target="_blank" rel="noopener noreferrer">
+              <DownloadLink
+                href={DOWNLOAD_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                location="home_nav"
+              >
                 <Download className="w-4 h-4 mr-2" />
                 {tHeader("cta")}
-              </a>
+              </DownloadLink>
             </Button>
           </div>
         </div>
@@ -184,10 +190,15 @@ export default async function Home({
               asChild
               className="bg-gradient-to-r from-primary to-accent hover:from-accent hover:to-primary text-white px-12 py-6 text-xl font-bold shadow-2xl hover:shadow-3xl transform hover:scale-110 transition-all duration-300"
             >
-              <a href={DOWNLOAD_URL} target="_blank" rel="noopener noreferrer">
+              <DownloadLink
+                href={DOWNLOAD_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                location="home_hero"
+              >
                 <Download className="w-6 h-6 mr-3" />
                 {t("tryFree")}
-              </a>
+              </DownloadLink>
             </Button>
             <Button
               variant="outline"
@@ -211,7 +222,9 @@ export default async function Home({
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="flex items-center justify-center space-x-3 bg-card/50 backdrop-blur rounded-2xl p-6 border border-primary/20">
               <Zap className="w-8 h-8 text-accent" />
-              <span className="text-lg font-semibold">{t("chipZeroSetup")}</span>
+              <span className="text-lg font-semibold">
+                {t("chipZeroSetup")}
+              </span>
             </div>
             <div className="flex items-center justify-center space-x-3 bg-card/50 backdrop-blur rounded-2xl p-6 border border-primary/20">
               <DollarSign className="w-8 h-8 text-primary" />
@@ -446,10 +459,15 @@ export default async function Home({
             asChild
             className="bg-gradient-to-r from-primary to-accent hover:from-accent hover:to-primary text-white px-16 py-8 text-2xl font-bold shadow-2xl hover:shadow-3xl transform hover:scale-110 transition-all duration-300 mb-8"
           >
-            <a href={DOWNLOAD_URL} target="_blank" rel="noopener noreferrer">
+            <DownloadLink
+              href={DOWNLOAD_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              location="home_bottom_cta"
+            >
               <Download className="w-8 h-8 mr-4" />
               {t("tryFree")}
-            </a>
+            </DownloadLink>
           </Button>
           <div className="flex items-center justify-center space-x-8 text-muted-foreground">
             <div className="flex items-center space-x-2">
