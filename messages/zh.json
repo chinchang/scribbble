@@ -1,10 +1,10 @@
 {
   "meta": {
-    "titleDefault": "Scribbble — Mac 屏幕标注应用 · 在屏幕上绘制",
+    "titleDefault": "Scribbble：适用于 Mac 的屏幕标注应用 · 在屏幕上绘图",
     "titleTemplate": "%s | Scribbble",
     "description": "Scribbble 是一款出色的 Mac 应用，允许你在屏幕上直接涂写、绘画、突出标记和添加注释。非常适合教师、主播、YouTuber、设计师和销售演示。免费下载，一次性授权。",
-    "ogTitle": "Scribbble — Mac 屏幕标注应用",
-    "ogImageAlt": "Scribbble — Mac 屏幕标注应用"
+    "ogTitle": "Scribbble：适用于 Mac 的屏幕标注应用",
+    "ogImageAlt": "Scribbble：适用于 Mac 的屏幕标注应用"
   },
   "header": {
     "cta": "获取 Scribbble",
@@ -42,7 +42,7 @@
     "features": {
       "pen": {
         "title": "自由绘画",
-        "body": "速写、圈注、下划线——在任意应用上绘画，流畅的画笔紧跟你的手势。"
+        "body": "即刻速写、圈点、下划。用流畅的画笔在任意应用上绘制，跟得上你的手速。"
       },
       "shapes": {
         "title": "箭头、矩形与椭圆",
@@ -66,7 +66,7 @@
       },
       "snapshot": {
         "title": "截屏并保存标注",
-        "body": "捕捉整个屏幕或选定区域——包含标注——无需离开应用。"
+        "body": "截取整个屏幕或选定区域，标注也会被包含，无需离开当前应用。"
       },
       "magnify": {
         "title": "放大与缩放",
@@ -80,7 +80,7 @@
     "demoTitle": "观看一个 <gradient>60 秒</gradient> 速览",
     "demoSubtitle": "所有工具、所有快捷键，一分钟速览。",
     "seoTitle": "用于现场演示的 Mac <gradient>屏幕标注</gradient> 应用",
-    "seoSubtitle": "Scribbble 是一款 Mac 屏幕标注工具，可在任何应用上绘制——幻灯片、浏览器、Figma、Zoom 共享、代码编辑器等。它以专注的热键驱动工作流为设计理念，专为 macOS 打造。",
+    "seoSubtitle": "Scribbble 是一款 Mac 屏幕标注工具，可在任意应用（幻灯片、浏览器、Figma、Zoom 分享、代码编辑器）之上绘制，采用聚焦且由热键驱动的工作流，为 macOS 打造。",
     "cards": [
       {
         "title": "真正为 Mac 打造的屏幕标注工具",
@@ -92,11 +92,11 @@
       },
       {
         "title": "不仅仅是画笔",
-        "body": "画笔、高亮、箭头、矩形、椭圆和文本——另外还有 Spotlight（聚焦暗化）、Magnify 用于放大实时屏幕细节、测量工具、需要空白画布时的 Whiteboard 模式，以及内置的 Snapshot 快照工具，可在不离开应用的情况下捕捉整个屏幕或选定区域。"
+        "body": "画笔、高亮、箭头、矩形、椭圆和文本，外加 Spotlight（聚焦暗化）、Magnify 实时放大细节、测量工具、需要空白画布时的白板模式，以及内置的 Snapshot 截图工具，可在不离开应用的情况下截取整个屏幕或选定区域。"
       },
       {
         "title": "免费试用，一次性授权",
-        "body": "下载并免费使用 Scribbble。准备好后，一次性授权即可解锁全部功能——无订阅、无需登录、无促销弹窗。"
+        "body": "下载并免费试用 Scribbble。准备好后，一次性许可即可解锁全部功能。无订阅，无登录，无弹出式追加销售。"
       }
     ],
     "linksWorkflowsTitle": "为各种 Mac 工作流打造",
@@ -112,21 +112,21 @@
     "chipNoSignup": "无需注册",
     "chipRefund": "14 天退款保证",
     "jsonLd": {
-      "description": "Scribbble 是一款 Mac 应用，能让你直接在屏幕上绘制、突出显示和做标注——适合教师、主播、YouTuber、设计师和销售演示使用。",
+      "description": "Scribbble 是一款 Mac 应用，允许你直接在屏幕上绘制、高亮和标注，适用于教师、主播、YouTuber、设计师和演示销售场景。",
       "featureList": [
         "自由手绘笔工具",
         "荧光笔",
-        "自动消退模式 — 笔迹在几秒后自动清除",
+        "自动消退模式：笔迹在几秒后自动清除",
         "箭头工具",
         "矩形形状",
         "椭圆形状",
         "文字标注",
         "聚焦光点（暗化背景）",
-        "放大 — 用于展示细节的屏幕缩放",
-        "白板模式 — 在任意屏幕上获得空白画布",
+        "Magnify：用于展示细节的屏幕放大",
+        "白板模式：任意屏幕上的空白画布",
         "多显示器支持",
         "测量工具",
-        "截屏捕捉 — 整屏或选定区域",
+        "Snapshot 截图：整个屏幕或选定区域",
         "工具栏可停靠在左侧或右侧边缘",
         "原生支持 Apple Silicon",
         "配套免费 Screenshot Annotate 网络工具"
@@ -142,16 +142,16 @@
     "downloadScribbble": "下载 Scribbble"
   },
   "zoomitVsEpicPen": {
-    "title": "ZoomIt vs Epic Pen — 2026 年哪款更好？",
-    "description": "ZoomIt 和 Epic Pen 是两款最受欢迎的屏幕标注工具。诚实的逐项对比：功能、价格、平台——以及在 Mac 上的最佳替代方案。",
+    "title": "ZoomIt vs Epic Pen：2026 年谁更好？",
+    "description": "ZoomIt 和 Epic Pen 是最受欢迎的两款屏幕标注工具。诚实的并列对比：功能、价格、平台，以及在 Mac 上的最佳替代方案。",
     "badge": "诚实的实测对比",
     "h1": "ZoomIt vs Epic Pen",
-    "subtitle": "两款最受欢迎的屏幕标注工具并排对比。功能、价格、平台——以及如果你使用 Mac 应该如何选择。",
+    "subtitle": "两款流行的屏幕标注工具并列对比。功能、价格、平台，以及如果你在 Mac 上应该如何选择。",
     "tldrTitle": "简短结论",
     "tldr": [
       {
         "lead": "选择 ZoomIt",
-        "body": "如果你想要一款免费的、以快捷键为主的工具，带内置屏幕缩放和计时器——并且如果你使用的是 Mac（Epic Pen 无法在 Mac 上运行）。"
+        "body": "如果你想要一款免费的、由热键驱动且内置屏幕放大的实用工具，而且你使用 Mac，那么选择 ZoomIt，因为 Epic Pen 无法在 Mac 上运行。"
       },
       {
         "lead": "选择 Epic Pen",
@@ -163,9 +163,9 @@
       }
     ],
     "whatIsZoomitTitle": "什么是 ZoomIt？",
-    "whatIsZoomitBody": "ZoomIt 是来自 Microsoft Sysinternals 的免费屏幕标注、缩放和休息计时工具。它起源于 Windows，之后微软发布了 macOS 版本。其优势在于零摩擦的快捷键和集成的缩放功能——深受系统管理员、演示者和培训师欢迎，用于展示屏幕上的细节。",
+    "whatIsZoomitBody": "ZoomIt 是一款来自 Microsoft Sysinternals 的免费屏幕标注、放大和休息计时实用工具。它起源于 Windows，后来微软发布了 macOS 版本。它的优势是无摩擦的热键和集成放大功能，深受系统管理员、演示者和培训师欢迎，帮他们展示屏幕上的细节。",
     "whatIsEpicPenTitle": "什么是 Epic Pen？",
-    "whatIsEpicPenBody": "Epic Pen 是一款面向演示和教学的 Windows 屏幕标注工具。它允许你在任意应用上绘制、突出显示，并且（在 Pro 套餐）添加形状和文本。相较于 ZoomIt 它有更友好的界面，但仅限 Windows —— 没有原生 Mac 版本。",
+    "whatIsEpicPenBody": "Epic Pen 是一款围绕演示和教学设计的 Windows 屏幕标注工具。它允许你在任意应用上绘制、高亮，并且（在 Pro 版本）添加形状和文本。它的 UI 比 ZoomIt 更友好，但仅限 Windows。没有原生 Mac 版本。",
     "tableTitle": "并列对比",
     "feature": "功能",
     "table": [
@@ -232,14 +232,14 @@
       {
         "feature": "现代原生 Mac UI",
         "zoomit": "否（Windows 移植）",
-        "epicPen": "—"
+        "epicPen": "Not on Mac"
       }
     ],
     "chooseZoomitTitle": "如果符合以下情况，选择 ZoomIt…",
     "chooseZoomit": [
       "你想要一款完全免费的工具，没有 Pro 套餐",
       "你需要内置的屏幕缩放来展示细节",
-      "你在 macOS 上 — Epic Pen 无法在其上运行",
+      "你使用的是 macOS，Epic Pen 无法运行",
       "你喜欢以快捷键为主、界面极简的工具",
       "你还想要一个用于培训环节的休息计时器"
     ],
@@ -251,12 +251,12 @@
       "你不需要屏幕缩放或休息计时器功能"
     ],
     "macTitle": "在 Mac 上？这个选项更合适。",
-    "macBody": "Epic Pen 根本不在 macOS 上运行，而 ZoomIt 的 Mac 移植版仍带有 Windows 工具的感觉。如果你在 Mac 上想要一款真正像 Mac 的应用，Scribbble 是专为 macOS 打造的——拥有现代可拖拽的工具栏、Apple Silicon 原生性能、多显示器支持，以及比 ZoomIt 或 Epic Pen 更丰富的工具（Spotlight、Magnify、Measure、Whiteboard）。",
+    "macBody": "Epic Pen 完全无法在 macOS 上运行，ZoomIt 的 Mac 移植版仍然像个 Windows 实用工具。如果你使用 Mac 并希望体验真正像 Mac 的应用，Scribbble 是为 macOS 专门打造的，具有现代可拖拽工具栏、Apple Silicon 原生性能、多显示器支持，以及比 ZoomIt 或 Epic Pen 更丰富的工具集（Spotlight、Magnify、Measure、Whiteboard）。",
     "scribbbleFitsTitle": "Scribbble 的定位",
     "scribbbleFits": [
-      "具备与 Epic Pen 相同的核心工具——画笔、高亮、箭头、矩形、文本——且没有 Pro 付费门槛",
-      "增加了 Spotlight（聚焦暗化）、Magnify（屏幕放大）、Measure 和 Whiteboard 模式——Epic Pen 都没有这些，ZoomIt 只有放大和空白屏幕",
-      "多显示器支持 —— 在你正在演示的显示器上进行标注",
+      "与 Epic Pen 相同的核心工具（画笔、高亮、箭头、矩形、文本），无需 Pro 付费墙",
+      "新增 Spotlight（聚焦暗化）、Magnify（屏幕放大）、测量和白板模式。Epic Pen 全无这些功能，而 ZoomIt 只有放大和空白屏幕。",
+      "多显示器支持：在你正在演示的显示屏上进行标注",
       "原生 Mac 用户界面，支持 Apple Silicon",
       "免费下载试用，一次性授权"
     ],
@@ -274,15 +274,15 @@
       },
       {
         "q": "为什么有人会选择 ZoomIt 而不是 Epic Pen？",
-        "a": "主要有三点原因： (1) ZoomIt 完全免费且没有 Pro 分级，而 Epic Pen 把形状和文本锁在付费升级后面。 (2) ZoomIt 提供真正的屏幕缩放功能，适合展示细节，而 Epic Pen 没有。 (3) ZoomIt 现在可以在 macOS 上运行——而 Epic Pen 不能。评测者也指出，ZoomIt 的零摩擦热键体验比 Epic Pen 的工具栏感觉更快捷。"
+        "a": "三个主要原因：（1）ZoomIt 完全免费且没有 Pro 分层，而 Epic Pen 将形状和文本功能锁在付费升级后。（2）ZoomIt 包含真正的屏幕放大功能用于展示细节，Epic Pen 没有。（3）ZoomIt 现在可以在 macOS 上运行，而 Epic Pen 不能。评测者还指出，ZoomIt 的无摩擦热键比 Epic Pen 的工具栏感觉更快速。"
       },
       {
         "q": "Epic Pen 与 ZoomIt 相比如何？",
-        "a": "Epic Pen 更注重演示用途，拥有更友好、现代的注释界面。ZoomIt 则是一个 Sysinternals 实用工具——界面极简、以热键为主，并在此基础上加入了额外功能（缩放、休息计时器、白板模式）。Epic Pen 的免费版仅限画笔和高亮；而 ZoomIt 的完整功能集是免费的。"
+        "a": "Epic Pen 拥有更友好、更现代的标注界面，专为演示使用设计。ZoomIt 是 Sysinternals 的实用工具：界面极简、以热键为驱动，并在其上叠加了额外功能（放大、休息计时、白板模式）。Epic Pen 的免费版本仅限画笔和高亮；ZoomIt 的全部功能则是免费的。"
       },
       {
         "q": "有没有适用于 Mac 的替代方案，既不是 ZoomIt 也不是 Epic Pen？",
-        "a": "是的。Scribbble 是一款以 Mac 优先的屏幕标注应用，结合了两者的优点——像 Epic Pen 那样的现代精致界面，同时具备 ZoomIt 那样以快捷键为中心的工作流程。它包含画笔、高亮、箭头、矩形、文本、Spotlight（聚焦暗化）、Magnify（屏幕放大）、Measure 和 Whiteboard 模式，并支持多显示器——可免费下载试用，通过一次性授权解锁全部功能。"
+        "a": "是的。Scribbble 是一款以 Mac 为先的屏幕标注应用，结合了两者的优点：像 Epic Pen 那样现代且打磨良好的 UI，同时拥有 ZoomIt 那样专注的热键驱动工作流。它包含画笔、高亮、箭头、矩形、文本、Spotlight（聚焦暗化）、Magnify（屏幕放大）、测量和白板模式，并支持多显示器。可免费下载试用，购买一次性许可即可解锁全部功能。"
       },
       {
         "q": "替代品提供了 Epic Pen 所没有的哪些功能？",
@@ -294,7 +294,7 @@
       },
       {
         "q": "ZoomIt 使用安全吗？",
-        "a": "安全的——ZoomIt 由 Microsoft 作为 Sysinternals 套件的一部分发布，从 Microsoft 的网站直接分发，在企业环境中被广泛使用。"
+        "a": "是的。ZoomIt 由 Microsoft 作为 Sysinternals 套件的一部分发布，从微软网站直接分发，在企业环境中被广泛使用。"
       },
       {
         "q": "Epic Pen 能在 Mac 上运行吗？",
@@ -314,7 +314,7 @@
     "scribbbleVsItem": "Scribbble 与 {name} 对比",
     "bottomLine": "结论",
     "stillImagesTitle": "要标注截图而不是实时屏幕吗？",
-    "stillImagesBody": "列表中的每款应用都会在你的实时 Mac 屏幕上绘制。如果你真正需要的是对已经截好的图片进行标注，那是另一类任务——请使用我们的免费 Mac 截图标注工具。粘贴图片，添加箭头、文字、编号步骤或模糊来遮盖敏感细节，然后把处理好的结果直接复制回剪贴板。它在浏览器中运行，无需安装，且你的图片始终保存在设备上。",
+    "stillImagesBody": "本列表中的每款应用都可在你的实时 Mac 屏幕上绘图。如果你真正需要的是对已截取的屏幕截图进行标注，那是另一种需求。使用我们的免费 Mac 截图标注工具。粘贴图片，添加箭头、文本、编号步骤或模糊以隐藏敏感信息，然后将结果直接复制回剪贴板。它在浏览器中运行，无需安装，且你的图片不会离开设备。",
     "stillImagesCta": "打开免费 Mac 截图标注工具",
     "ctaTitle": "试试我们的首选：<gradient>Scribbble</gradient>",
     "ctaSubtitle": "免费下载。一次性授权。本地 macOS 应用。",

@@ -376,7 +376,7 @@ export default async function Home({
             ))}
           </div>
 
-          {/* Internal links — use cluster keywords as anchor text */}
+          {/* Internal links: use cluster keywords as anchor text */}
           <div className="rounded-2xl border-2 border-primary/20 bg-card/40 p-8">
             <h3 className="text-2xl font-bold mb-6">
               {t("linksWorkflowsTitle")}

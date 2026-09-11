@@ -2,7 +2,7 @@
  * GPU-accelerated Gaussian blur using raw WebGL.
  *
  * Uses iterative two-pass (H+V) blur rounds. For large radii, multiple
- * iterations at a capped per-pass radius are used — this produces smooth
+ * iterations at a capped per-pass radius are used, this produces smooth
  * results because stacking Gaussians is equivalent to a single larger
  * Gaussian (variances add).
  */

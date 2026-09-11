@@ -11,8 +11,8 @@ export const BUY_URL =
 export const GA_MEASUREMENT_ID = "G-8D1EQCT847";
 
 export const DEFAULT_TITLE =
-  "Scribbble — Screen Annotation App for Mac · Draw on Screen";
-export const DEFAULT_OG_TITLE = "Scribbble — Screen Annotation App for Mac";
+  "Scribbble: Screen Annotation App for Mac · Draw on Screen";
+export const DEFAULT_OG_TITLE = "Scribbble: Screen Annotation App for Mac";
 export const DEFAULT_DESCRIPTION =
   "Scribbble is a beautiful Mac app to scribble, draw, highlight and annotate directly on your screen. Perfect for teachers, streamers, YouTubers, designers and sales demos. Free download, one-time license.";
 
@@ -22,7 +22,7 @@ export function buildBaseMetadata({
   title = DEFAULT_TITLE,
   ogTitle = DEFAULT_OG_TITLE,
   description = DEFAULT_DESCRIPTION,
-  ogImageAlt = "Scribbble — Screen annotation app for Mac",
+  ogImageAlt = "Scribbble: Screen annotation app for Mac",
   titleTemplate = "%s | Scribbble",
 }: {
   title?: string;

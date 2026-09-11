@@ -38,7 +38,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   );
 
-  // English-only routes (blog, tools) — unchanged, no alternates.
+  // English-only routes (blog, tools), unchanged, no alternates.
   const englishRoutes = ["/tools/screenshot-annotate", "/blog"].map((path) => ({
     url: `${SITE_URL}${path}`,
     lastModified: now,

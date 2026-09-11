@@ -1,12 +1,12 @@
 {
   "best-screen-annotation-apps-mac": {
     "title": "Beste schermannotatie-apps voor Mac in 2026 (Gratis + Betaald)",
-    "description": "We hebben 5 Mac-schermannotatie-apps getest — Scribbble, Presentify, ZoomIt, CleanShot X en Annotate. Eerlijke voor- en nadelen, prijzen en onze topkeuze voor 2026.",
+    "description": "We hebben 5 Mac screen annotation-apps getest: Scribbble, Presentify, ZoomIt, CleanShot X en Annotate. Eerlijke voor- en nadelen, prijzen en onze beste keuze voor 2026.",
     "h1": "De beste schermannotatie-apps voor Mac",
-    "intro": "Schermannotatie-apps laten je tekenen, markeren en aantekeningen maken direct bovenop je Mac-scherm — over slides, browsers, Figma, Zoom-shares, alles. Ze zijn onmisbaar voor docenten, presentatoren, softwaredemo-givers, streamers en ontwerpers die live crits doen. Hieronder een eerlijke, hands-on overzicht van de apps die de moeite waard zijn op macOS in 2026.",
+    "intro": "Screen annotation-apps laten je rechtstreeks op je Mac-scherm tekenen, markeren en annoteren, over slides, browsers, Figma, Zoom-shares, noem maar op. Ze zijn onmisbaar voor docenten, presentatoren, software-demoërs, streamers en ontwerpers die live crits doen. Hieronder vind je een eerlijke, hands-on rondgang door de apps die in 2026 de moeite waard zijn op macOS.",
     "criteria": [
       "Native macOS-ondersteuning (Apple Silicon is een plus)",
-      "Echt op-scherm tekenen — niet alleen annotaties van screenshots",
+      "Echt op het scherm tekenen, niet alleen screenshot-bewerking",
       "Actieve ontwikkeling en ondersteuning",
       "Redelijke prijzen en betaalmodel",
       "Meer gereedschappen dan alleen een pen"
@@ -14,12 +14,12 @@
     "items": [
       {
         "tagline": "De moderne, Mac-first screen annotation-app",
-        "summary": "Scribbble is van meet af aan voor Mac gebouwd, met een moderne werkbalk die je aan de linker- of rechterrand kunt vastzetten. Naast de standaard pen, pijlpunt, rechthoek, ellips en teksttools bevat het Spotlight (focusdemping), Highlighter, Measure, Magnify (schermzoom), een Whiteboard-modus en een ingebouwde Snapshot-tool om het volledige scherm of een geselecteerd gebied vast te leggen, en het werkt op meerdere monitoren — een combinatie die de meeste concurrenten niet bieden. Je kunt het gratis downloaden en uitproberen; een eenmalige licentie ontgrendelt alles.",
+        "summary": "Scribbble is van meet af aan gebouwd voor Mac, met een moderne werkbalk die je aan de linker- of rechterrand kunt vastzetten. Naast de standaard pen, pijl, rechthoek, ellips en teksttools bevat het Spotlight (focus dim), Highlighter, Measure, Magnify (schermzoom), een Whiteboard-modus en een ingebouwde Snapshot-tool om het hele scherm of een regio vast te leggen, en het werkt over meerdere beeldschermen heen, een combinatie die de meeste concurrenten niet bieden. Je kunt het gratis downloaden en proberen, met een eenmalige licentie om alles te ontgrendelen.",
         "bestFor": "Docenten, designers en creators die een modern, Mac-native annotatiegereedschap willen zonder abonnement",
         "pros": [
           "Mac-first design met een moderne werkbalk die je links of rechts kunt docken",
           "Spotlight, Highlighter, Measure, Magnify (schermzoom) en Whiteboard-modus standaard inbegrepen",
-          "Ingebouwde Snapshot-tool — leg het hele scherm of een regio vast zonder de app te verlaten",
+          "Ingebouwde Snapshot-tool: leg het hele scherm of een geselecteerd gebied vast zonder de app te verlaten",
           "Vormen waaronder pijl, rechthoek en ellips",
           "Apple Silicon-native",
           "Gratis te downloaden en te proberen",
@@ -49,7 +49,7 @@
       },
       {
         "tagline": "Screenshot-krachtpatser met ingebouwde annotatie",
-        "summary": "CleanShot X is een complete screenshot- en schermopnamesuite voor de Mac. De annotatietools zijn uitstekend — maar ze werken voornamelijk ná het vastleggen, niet live op het scherm. Als je workflow capture → annotate → share is, is het subliem. Voor live tekenen tijdens een Zoom-gesprek wil je echter een toegewijde tool.",
+        "summary": "CleanShot X is een complete screenshot- en beeldschermopnamensuite voor Mac. De annotatietools zijn uitstekend, maar werken vooral na het maken van een opname, niet op het live scherm. Als jouw workflow is: vastleggen → annoteren → delen, is het fantastisch. Voor live tekenen tijdens een Zoom-gesprek wil je echter een toegewijd hulpmiddel.",
         "bestFor": "Power users wiens hoofdworkflow capture → annotate → share is",
         "pros": [
           "Beste in zijn klasse voor screenshot-captures",
@@ -59,13 +59,13 @@
         ],
         "cons": [
           "Live on-screen annotatie is beperkt",
-          "Duurder — doet veel meer dan alleen annoteren"
+          "Duurder, omdat het veel meer doet dan alleen annotatie"
         ],
         "pricing": "Eenmalig of via Setapp-abonnement"
       },
       {
         "tagline": "Microsoft Sysinternals' klassieker, nu op de Mac",
-        "summary": "ZoomIt is het legendarische schermannotatie- en zoom-hulpmiddel van Microsoft Sysinternals. Oorspronkelijk alleen voor Windows, maar Microsoft heeft sindsdien een macOS-build uitgebracht. Het is gratis en bevat een ingebouwde schermzoom en een pauzetimer die geen andere tool evenaart — maar de interface voelt onmiskenbaar als een sysadmin-utilityport.",
+        "summary": "ZoomIt is de legendarische schermannotatie- en zoomtool van Microsoft Sysinternals. Oorspronkelijk alleen voor Windows, heeft Microsoft inmiddels ook een macOS-build uitgebracht. Het is gratis en bevat een ingebouwde schermzoom en pauzetimer die geen ander hulpmiddel evenaart, maar de gebruikersinterface is onmiskenbaar die van een sysadmin-hulpprogramma-port.",
         "bestFor": "Sysadmin-achtige gebruikers die specifiek ZoomIt's schermzoom en pauzetimer nodig hebben",
         "pros": [
           "Gratis van Microsoft",
@@ -90,7 +90,7 @@
           "Niet ontworpen voor live schermannotatie",
           "Prijsstelling afhankelijk van plan"
         ],
-        "pricing": "Varieert — controleer bij de verkoper"
+        "pricing": "Verschilt (controleer bij de leverancier)"
       }
     ],
     "conclusion": "Als je een moderne, Mac-native screen-annotation-app met een rijk arsenaal aan tools (Spotlight, Highlighter, Measure, Magnify, Whiteboard) en een eenmalige prijs zoekt, is Scribbble de eenvoudigste aanrader. Presentify is het alternatief als cursor-highlighting cruciaal voor je is. CleanShot X is de juiste keuze als je workflow vooral rond screenshots draait. ZoomIt is de gratis Microsoft-optie als je ook de pauzetimer met zoom wilt.",
@@ -101,7 +101,7 @@
       },
       {
         "q": "Kan ik tijdens een Zoom-gesprek op mijn scherm tekenen?",
-        "a": "Ja — alle apps op deze lijst behalve CleanShot X zijn ontworpen voor live annotatie op het scherm die zichtbaar is in een Zoom-share. Scribbble en Presentify zijn de meest verfijnde opties."
+        "a": "Ja. Alle apps op deze lijst behalve CleanShot X zijn ontworpen voor live on-screen annotatie die zichtbaar is in een Zoom-share. Scribbble en Presentify zijn de meest gepolijste opties."
       },
       {
         "q": "Moet ik een licentie kopen om deze apps te proberen?",
@@ -113,7 +113,7 @@
     "title": "5 Beste ZoomIt-alternatieven voor Mac (Gratis + Betaald, 2026)",
     "description": "ZoomIt's Mac-port voelt nog steeds als een Windows-utility. Deze 5 Mac-native ZoomIt-alternatieven hebben modernere UIs, rijkere toolsets en een echte Mac-ervaring.",
     "h1": "De Beste ZoomIt-alternatieven voor Mac",
-    "intro": "Microsofts ZoomIt is een klassieke schermannotatietool uit de Sysinternals-suite. Hij is nu beschikbaar op macOS — maar de UI is een getrouwe Windows-utilitypoort en mist moderne gemakken zoals een sleepbare werkbalk, Spotlight-focusmodus of meettools. Als je op een Mac zit en een meer native, moderne alternatief wilt, zijn dit de beste opties.",
+    "intro": "Microsoft's ZoomIt is een klassiek schermannotatie-hulpmiddel uit de Sysinternals-suite. Het is nu beschikbaar op macOS, maar de interface is een getrouwe Windows-hulpprogramma-port en mist moderne gemakken zoals een sleepbare werkbalk, Spotlight-focusmodus of meettools. Als je op een Mac zit en een meer native, moderne optie wilt, zijn dit de beste alternatieven.",
     "criteria": [
       "Mac-native ervaring (geen Windows-utilitypoort)",
       "Actieve ontwikkeling",
@@ -123,12 +123,12 @@
     "items": [
       {
         "tagline": "Het Mac-first ZoomIt-alternatief",
-        "summary": "Scribbble is van meet af aan voor Mac gebouwd, met een moderne werkbalk die je aan de linker- of rechterrand kunt vastzetten, en biedt een rijker gereedschapsaanbod dan ZoomIt — inclusief Spotlight (focusdemping), Highlighter, Measure, Magnify (schermzoom), een Whiteboard-modus, volledige vormen (pijl, rechthoek, ellips) en een ingebouwde Snapshot-tool die het hele scherm of een regio vastlegt, allemaal werkend op meerdere monitoren. Het dekt nu ook ZoomIt's kenmerkende schermzoom en blanco whiteboard, dus overstappen kost je niets meer. Het is gratis te downloaden en wordt geleverd met een gratis begeleidende Screenshot Annotate webtool.",
+        "summary": "Scribbble is van meet af aan Mac-first gebouwd, met een moderne werkbalk die je aan de linker- of rechterrand kunt vastzetten, en een rijkere set tools dan ZoomIt, inclusief Spotlight (focus dim), Highlighter, Measure, Magnify (schermzoom), een Whiteboard-modus, volledige shapes (pijl, rechthoek, ellips) en een ingebouwde Snapshot-tool die het hele scherm of een regio vastlegt, allemaal werkend over meerdere beeldschermen. Het dekt nu ook ZoomIt's kenmerkende schermzoom en blanco-whiteboard, dus overstappen kost je niets meer. Je kunt het gratis downloaden en het wordt geleverd met een gratis aanvullende Screenshot Annotate webtool.",
         "bestFor": "Wie ZoomIt verlaat en een moderne Mac-native ervaring wil",
         "pros": [
           "Mac-first UI met een werkbalk die links of rechts kan docken",
           "Spotlight, Highlighter, Measure, Magnify (schermzoom) en Whiteboard-modus",
-          "Ingebouwde Snapshot-capturing — volledig scherm of geselecteerd gebied",
+          "Ingebouwde Snapshot-opname: heel scherm of geselecteerde regio",
           "Vormen inclusief pijl, rechthoek en ovaal",
           "Gratis download, eenmalige licentie",
           "Native voor Apple Silicon"
@@ -193,11 +193,11 @@
         "pricing": "Gratis"
       }
     ],
-    "conclusion": "Scribbble is de meest verwante geestelijke opvolger van ZoomIt voor Mac-gebruikers — een gefocuste, lichte annotatietool met een moderne, Mac-native UI en een rijkere set tools (Spotlight, Highlighter, Measure). Als je ZoomIt's kenmerkende zoomfunctie echt mist, combineer Scribbble dan met macOS' ingebouwde toegankelijkheidszoom en je hebt alles gedekt.",
+    "conclusion": "Scribbble is de meest directe spirituele opvolger van ZoomIt voor Mac-gebruikers: een gefocust, lichtgewicht annotatiehulpmiddel met een moderne Mac-native UI en een rijkere set tools (Spotlight, Highlighter, Measure). Als je ZoomIt's kenmerkende zoomfunctie zult missen, combineer Scribbble met macOS' ingebouwde toegankelijkheidszoom en je hebt alles gedekt.",
     "faq": [
       {
         "q": "Bestaat er een echte ZoomIt voor Mac?",
-        "a": "Ja — Microsoft heeft een macOS-build van ZoomIt uitgebracht. Het werkt, maar de UI is een port van een Windows-hulpprogramma. Voor een meer native Mac-ervaring is Scribbble de meest vergelijkbare moderne alternatief."
+        "a": "Ja. Microsoft heeft een macOS-build van ZoomIt uitgebracht. Het werkt, maar de interface is een Windows-hulpprogramma-port. Voor een meer native Mac-ervaring is Scribbble het dichtstbijzijnde moderne alternatief."
       },
       {
         "q": "Hoe krijg ik ZoomIt's zoomfunctie op Mac?",
@@ -208,7 +208,7 @@
   "best-epic-pen-alternatives-mac": {
     "criteria": [
       "Native ondersteuning voor macOS (Apple Silicon is een plus)",
-      "Zelfde kernworkflow als Epic Pen — pen, markeerstift, vormen",
+      "Dezelfde kernworkflow als Epic Pen: pen, highlighter, shapes",
       "Redelijke prijsstelling of een gratis tier",
       "Actieve ontwikkeling",
       "Extra tools bovenop wat Epic Pen biedt"
@@ -216,14 +216,14 @@
     "items": [
       {
         "tagline": "De meest vergelijkbare Epic Pen-ervaring op macOS",
-        "summary": "Scribbble is de meest directe Epic Pen-vervanger voor Mac-gebruikers. Het tekent bovenop elke app — slides, browsers, Zoom-shares — met een pen, highlighter en een volledige vormenkit (pijl, rechthoek, ellips) plus een teksttool. Naast wat Epic Pen biedt, voegt Scribbble Spotlight (focusdemping), Magnify (schermzoom), Measure, een Whiteboard-modus en een ingebouwde Snapshot-tool toe die het volledige scherm of een regio vastlegt, plus multi-monitor-ondersteuning en een moderne Mac-native werkbalk die links of rechts kan worden vastgezet.",
+        "summary": "Scribbble is de meest directe vervanging van Epic Pen voor Mac-gebruikers. Het tekent bovenop elke app (slides, browsers, Zoom-shares) met een pen, highlighter en een volledige shapes-kit (pijl, rechthoek, ellips) plus een teksttool. Buiten wat Epic Pen biedt, voegt Scribbble Spotlight (focus dim), Magnify (schermzoom), Measure, een Whiteboard-modus en een ingebouwde Snapshot-tool toe die het hele scherm of een regio vastlegt, plus multi-monitorondersteuning en een moderne Mac-native werkbalk die links of rechts vastgezet kan worden.",
         "bestFor": "Iedereen die Epic Pen verlaat voor Mac en een vertrouwde workflow met een paar extra tools wil",
         "pros": [
           "Mac-first, Apple Silicon native",
-          "Pen, markeerstift, vormen (pijl, rechthoek, ellips) en tekst — de kernset van Epic Pen gedekt",
+          "Pen, highlighter, shapes (pijl, rechthoek, ellips) en tekst dekken Epic Pen's kerntoolset",
           "Voegt Spotlight, Magnify (schermzoom), Measure en Whiteboard-modus toe die Epic Pen niet heeft",
-          "Multi-monitor-ondersteuning — annoteer het scherm dat je presenteert",
-          "Ingebouwde Snapshot-captures (hele scherm of regio) — geen tweede app nodig",
+          "Ondersteuning voor meerdere beeldschermen: annoteer het display waarvan je presenteert",
+          "Ingebouwde Snapshot-opname (heel scherm of regio), geen tweede app nodig",
           "Gratis download, eenmalige licentie",
           "Moderne werkbalk die links of rechts kan worden vastgezet"
         ],
@@ -234,7 +234,7 @@
       },
       {
         "tagline": "Mac App Store-klassieker met cursorhighlight",
-        "summary": "Presentify dekt de Epic Pen-basics — pen, vormen, tekst — met daarbovenop een sterke cursorhighlight-functie. Het is een al langer bestaande Mac App Store-app met een eenmalige aankoop.",
+        "summary": "Presentify dekt de Epic Pen-basics (pen, shapes, tekst) met de toevoeging van een sterke cursor-highligher-functie. Het is een langlopende Mac App Store-app met een eenmalige aankoop.",
         "bestFor": "Presentatoren voor wie het grootste probleem is dat kijkers de cursor kwijtraken op een gedeeld scherm",
         "pros": [
           "Cursorhighlight",
@@ -263,7 +263,7 @@
       },
       {
         "tagline": "Beste keuze als je eigenlijk screenshots + annotatie nodig hebt",
-        "summary": "Veel mensen die naar Epic Pen grijpen willen in feite vastgelegde en gedeelde geannoteerde screenshots, niet op een live scherm tekenen. Als dat jouw situatie op Mac is, is CleanShot X de beste in z'n categorie — vastleggen, annoteren, opnemen en delen met cloudlinks.",
+        "summary": "Veel mensen die naar Epic Pen grijpen, willen eigenlijk geannoteerde screenshots vastleggen en delen, niet op een live scherm tekenen. Als dat jouw doel is op Mac, is CleanShot X de beste in die categorie: vastleggen, annoteren, opnemen en delen met cloudlinks.",
         "bestFor": "Mac-gebruikers wiens workflow is: vastleggen → annoteren → delen",
         "pros": [
           "Beste screenshot-capturing in z'n soort",
@@ -273,7 +273,7 @@
         ],
         "cons": [
           "Beperkt live tekenen op het scherm",
-          "Duurder — doet veel meer dan alleen annoteren"
+          "Duurder, omdat het veel meer doet dan alleen annotatie"
         ],
         "pricing": "Eenmalig of via Setapp"
       },
@@ -293,14 +293,14 @@
       }
     ],
     "title": "5 Beste Epic Pen-alternatieven voor Mac (Gratis + Betaald, 2026)",
-    "description": "Epic Pen is Windows-first. Deze 5 Mac-native alternatieven geven je dezelfde on-screen tekenervaring — Scribbble, Presentify, ZoomIt, CleanShot X en meer.",
+    "description": "Epic Pen is Windows-first. Deze 5 Mac-native alternatieven geven je dezelfde on-screen tekenervaring: Scribbble, Presentify, ZoomIt, CleanShot X en meer.",
     "h1": "De beste Epic Pen-alternatieven voor Mac",
-    "intro": "Epic Pen is een populaire Windows screen-annotatietool — maar Mac-gebruikers blijven vaak achter. Of je nu leraar, streamer, designer of salesmedewerker op macOS bent, je hoeft je niet neer te leggen bij een Windows-only app. Hier zijn de beste Epic Pen-alternatieven die in 2026 native op Mac draaien.",
-    "conclusion": "Als je van Epic Pen naar Mac overstapt, is Scribbble de eenvoudigste aanbeveling — het dekt dezelfde kernworkflow (pen, highlighter, vormen, tekst) met een Mac-native UI, multi-monitor-ondersteuning en enkele extra tools (Spotlight, Magnify, Measure, Whiteboard) die Epic Pen niet heeft. ZoomIt is de gratis Microsoft-alternatief als je kunt leven met een Windows-stijl UI. CleanShot X is de juiste keuze als je echt screenshot-gedreven workflows wilt in plaats van live tekenen.",
+    "intro": "Epic Pen is een populaire Windows-schermannotatietool, maar Mac-gebruikers blijven vaak buiten beschouwing. Of je nu docent, streamer, ontwerper of salesmedewerker bent op macOS, je hoeft je niet te beperken tot een Windows-only app. Hier zijn de beste Epic Pen-alternatieven die native op Mac draaien in 2026.",
+    "conclusion": "Als je van Epic Pen naar Mac overstapt, is Scribbble de eenvoudigste aanbeveling. Het dekt dezelfde kernworkflow (pen, highlighter, shapes, tekst) met een Mac-native UI, multi-monitorondersteuning en een paar extra tools (Spotlight, Magnify, Measure, Whiteboard) die Epic Pen niet heeft. ZoomIt is het gratis Microsoft-alternatief als je kunt leven met de Windows-stijl UI. CleanShot X is de juiste keuze als je echt screenshot-gedreven workflows wilt in plaats van live tekenen.",
     "faq": [
       {
         "q": "Is er een Epic Pen voor Mac?",
-        "a": "Nee — Epic Pen is alleen voor Windows. Scribbble is het meest vergelijkbare Mac-native alternatief: pen, highlighter, pijl, rechthoek en tekst tekenen bovenop elke app, plus Spotlight- en Measure-gereedschappen die Epic Pen niet bevat."
+        "a": "Nee. Epic Pen is Windows-only. Scribbble is het dichtstbijzijnde Mac-native equivalent: pen, highlighter, pijl, rechthoek en tekst tekenen bovenop elke app, plus Spotlight en Measure-tools die Epic Pen niet heeft."
       },
       {
         "q": "Wat zijn de beste alternatieven voor Epic Pen op Mac?",
@@ -316,7 +316,7 @@
       },
       {
         "q": "Is er een gratis alternatief voor Epic Pen op Mac?",
-        "a": "Ja — Microsoft's ZoomIt is volledig gratis op Mac. Scribbble is ook gratis te downloaden en uit te proberen, met een optionele eenmalige licentie om alles vrij te schakelen."
+        "a": "Ja. Microsoft's ZoomIt is volledig gratis op Mac. Scribbble is ook gratis te downloaden en te proberen, met een optionele eenmalige licentie om alles te ontgrendelen."
       }
     ]
   },
@@ -324,11 +324,11 @@
     "items": [
       {
         "tagline": "Moderne Mac-annotatie-app, gemaakt voor live lessen",
-        "summary": "Scribbble tekent bovenop elke Mac-app — slides, PDF's, browsers, Zoom-shares. De Highlighter is ideaal voor het markeren van teksten; Spotlight dempt alles behalve wat je uitlegt; Magnify zoomt in op kleine tekst of code zodat zelfs de achterste rij het kan lezen; de Whiteboard-modus geeft je een blanco canvas midden in de les zonder een nieuw tabblad te hoeven openen; de pen-, pijl-, rechthoek-, ellips- en teksttools dekken live diagrammen. Een ingebouwde Snapshot-tool legt het hele scherm of een regio vast — handig om het werk van een leerling of een lesmoment te bewaren. Eenmalige licentie, gratis uitproberen.",
+        "summary": "Scribbble tekent bovenop elke Mac-app: slides, PDF's, browsers, Zoom-shares. De Markeerstift is ideaal voor het markeren van teksten; Spotlight dimt alles behalve wat je toelicht; Vergrootfunctie zoomt in op kleine tekst of code zodat ook de achterste rij kan meevolgen; Whiteboard-modus geeft je een leeg canvas midden in de les zonder een nieuw tabblad te openen; de pen-, pijl-, rechthoek-, ellips- en teksttools dekken live diagrammen af. Een ingebouwde Snapshot-tool maakt een hele schermopname of een regio vast, handig om het werk van een leerling of een lesmoment te bewaren. Eenmalige licentie, gratis te proberen.",
         "bestFor": "Docenten die een moderne, Mac-native tool willen met ingebouwde Highlighter en Spotlight",
         "pros": [
           "Highlighter, Spotlight (focusdemping), Magnify (schermzoom) en Whiteboard-modus ingebouwd",
-          "Multi-monitor-ondersteuning — annoteer het beeld dat je projecteert of deelt",
+          "Ondersteuning voor meerdere beeldschermen: annoteer het display dat je projecteert of deelt",
           "Snapshot-capture (scherm of regio) om lesmomenten en leerlingwerk te bewaren",
           "Vormen omvatten pijl, rechthoek en ellips",
           "Werkt in Zoom, Google Meet, opnamen",
@@ -336,7 +336,7 @@
           "Eenmalige licentie"
         ],
         "cons": [
-          "Whiteboard-modus is single-user — geen multi-cursor samenwerking"
+          "Whiteboard-modus is alleen voor één gebruiker, zonder multi-cursor samenwerking"
         ],
         "pricing": "Gratis + eenmalige licentie"
       },
@@ -355,7 +355,7 @@
       },
       {
         "tagline": "Gratis, met ingebouwde schermzoom",
-        "summary": "Microsoft's ZoomIt is nu beschikbaar op macOS. De ingebouwde schermzoom is echt handig om fijne details in slides of code te laten zien aan een grote klas op afstand — en het is gratis.",
+        "summary": "Microsoft's ZoomIt is nu beschikbaar op macOS. De ingebouwde schermzoom is echt nuttig om fijne details in slides of code te laten zien aan een grote afstandsklas, en het is gratis.",
         "bestFor": "Leraren die een volledig gratis tool willen met een pauzetimer",
         "pros": [
           "Gratis",
@@ -370,7 +370,7 @@
       {
         "pricing": "Eenmalig of via Setapp",
         "tagline": "Voor docenten gericht op lesopnames",
-        "summary": "Als je meer tijd besteedt aan het opnemen van lessen dan aan live presenteren, is CleanShot X uitstekend — het legt vast, annoteert en neemt alles op in één app.",
+        "summary": "Als je meer tijd besteedt aan het opnemen van lessen dan aan live presenteren, is CleanShot X uitstekend. Het legt vast, annoteert en neemt alles op in één app.",
         "bestFor": "Docenten die opgenomen lesbibliotheken bouwen",
         "pros": [
           "Schermopname met annotaties",
@@ -381,7 +381,7 @@
         ]
       }
     ],
-    "conclusion": "Voor de meeste docenten die live of opgenomen lessen op de Mac geven, biedt Scribbble de beste balans tussen prijs, functionaliteit en gebruiksgemak — vooral de Highlighter- en Spotlight-tools zijn ideaal om studenten gefocust te houden. Als je probleem vooral de zichtbaarheid van de cursor is, is Presentify het overwegen waard. Als je vooral lessen opneemt in plaats van live presenteert, past CleanShot X mogelijk beter bij je.",
+    "conclusion": "Voor de meeste docenten die live of opgenomen Mac-gebaseerde lessen geven is Scribbble de beste balans tussen prijs, functies en gebruiksgemak. Vooral de Markeerstift- en Spotlight-tools zijn ideaal om leerlingen gefocust te houden. Als jouw specifieke uitdaging de zichtbaarheid van de cursor is, is Presentify het bekijken waard. Als je vooral lessen opneemt in plaats van live presenteert, kan CleanShot X beter bij je passen.",
     "faq": [
       {
         "q": "Zien mijn aantekeningen er ook bij als ik opneem met QuickTime of Loom?",
@@ -393,13 +393,13 @@
       },
       {
         "q": "Zijn er kortingen voor onderwijsinstellingen?",
-        "a": "Neem rechtstreeks contact op met elke ontwikkelaar — veel onafhankelijke Mac-appontwikkelaars, waaronder Scribbble, helpen docenten en scholen graag met volumelicenties."
+        "a": "Neem rechtstreeks contact op met elke ontwikkelaar. Veel onafhankelijke Mac-appontwikkelaars, inclusief Scribbble, helpen docenten en scholen vaak met volumelicenties."
       }
     ],
     "title": "Beste schermannotatietools voor docenten op Mac (2026)",
-    "description": "We selecteerden de 4 beste Mac-schermannotatietools voor docenten — voor live Zoom-lessen, Loom-opnames en één-op-één bijles. Gratis en betaalde opties vergeleken.",
+    "description": "We kozen de 4 beste Mac-schermannotatietools voor docenten, voor live Zoom-lessen, Loom-opnames en 1-op-1 bijles. Gratis en betaalde opties vergeleken.",
     "h1": "De beste schermannotatietools voor docenten op Mac",
-    "intro": "Docenten die een Mac gebruiken voor online lessen, opgenomen colleges of bijles hebben een manier nodig om het scherm in realtime te markeren — woorden cirkelen, diagrammen schetsen, tekstpassages markeren. Een echte annotatietool houdt studenten gefocust zonder je bestaande slides of browser te verlaten. Hier zijn de beste opties op macOS.",
+    "intro": "Docenten die een Mac gebruiken voor online lessen, opgenomen colleges of bijles hebben een manier nodig om het scherm in real time te markeren: woordenschat cirkelen, diagrammen schetsen, passages markeren. Een echte annotatietool houdt leerlingen gefocust zonder uit je bestaande slides of browser te stappen. Hier zijn de beste opties op macOS.",
     "criteria": [
       "Werkt tijdens Zoom, Google Meet en andere schermdelen",
       "Annotaties verschijnen in schermopnames (QuickTime, Loom)",
@@ -412,10 +412,10 @@
       {
         "pricing": "Gratis + eenmalige licentie",
         "tagline": "Gratis te proberen, met Vergroot en Meet-gereedschappen die Presentify niet heeft",
-        "summary": "Scribbble komt overeen met Presentify's kerngereedschap — pen, highlighter, spotlight, vormen (pijl, rechthoek, ellips) — en voegt Magnify (schermzoom), een Measure-tool, een Whiteboard-modus, multi-monitor-ondersteuning en een ingebouwde Snapshot-tool toe die het volledige scherm of een regio vastlegt. In tegenstelling tot Presentify is de volledige app gratis te downloaden en uit te proberen; je betaalt alleen voor een eenmalige licentie wanneer je er klaar voor bent. Het wordt ook geleverd met een gratis begeleidende Screenshot Annotate webtool, en de werkbalk kan links of rechts worden vastgezet.",
+        "summary": "Scribbble komt overeen met Presentify's kernset tools (pen, highlighter, spotlight, shapes: pijl, rechthoek, ellips) en voegt Magnify (schermzoom), een Measure-tool, een Whiteboard-modus, multi-monitorondersteuning en een ingebouwde Snapshot-tool toe die het hele scherm of een regio vastlegt. In tegenstelling tot Presentify kun je de volledige app gratis downloaden en proberen; je betaalt alleen voor een eenmalige licentie wanneer je er klaar voor bent. Het wordt ook geleverd met een gratis aanvullende Screenshot Annotate webtool, en de werkbalk kan links of rechts worden vastgezet.",
         "bestFor": "Presentify-gebruikers die een gratis proef willen, schermzoom, een Meet-gereedschap of een companion screenshot-annotator",
         "pros": [
-          "Gratis download — probeer de volledige app voordat je koopt",
+          "Gratis downloaden: probeer de volledige app voordat je koopt",
           "Bevat Magnify (schermzoom), Measure en Whiteboard-modus die Presentify niet heeft",
           "Werkt op meerdere monitoren",
           "Ingebouwde Snapshot-captures (hele scherm of regio)",
@@ -429,7 +429,7 @@
       },
       {
         "tagline": "Gratis, met ingebouwde schermzoom",
-        "summary": "Microsoft's ZoomIt is volledig gratis op Mac en bevat een schermzoom en pauzetimer die Presentify mist. De afweging is dat de UI een getrouwe Windows-hulpprogramma-poort is — functioneel maar niet Mac-native qua gevoel.",
+        "summary": "Microsoft's ZoomIt is volledig gratis op Mac en bevat een schermzoom en pauzetimer die Presentify mist. Het nadeel is dat de interface een getrouwe poort van de Windows-hulpprogramma is: functioneel, maar niet Mac-native aanvoelend.",
         "bestFor": "Presentify-gebruikers die een volledig gratis optie willen",
         "pros": [
           "Gratis van Microsoft",
@@ -443,7 +443,7 @@
       },
       {
         "tagline": "Als je ook screenshots en opname nodig hebt",
-        "summary": "CleanShot X is een complete screenshot- en schermopnamesuite. De kracht zit in de capture–annotate–share workflow, niet in live tekenen op het scherm — maar als je beide nodig hebt, dekt het meer dan Presentify.",
+        "summary": "CleanShot X is een complete suite voor schermafbeeldingen en schermopnames. De kracht ligt in de vastleggen-annoteren-delen workflow, niet in live tekenen op het scherm, maar als je beide nodig hebt dekt het meer functies dan Presentify.",
         "bestFor": "Presentify-gebruikers die ook serieuze screenshot- en opnameworkflows willen",
         "pros": [
           "Beste screenshot-captures",
@@ -490,24 +490,24 @@
       },
       {
         "q": "Is er een gratis alternatief voor Presentify?",
-        "a": "Ja. Microsoft's ZoomIt is volledig gratis op Mac. Scribbble is gratis te downloaden en uit te proberen, met een optionele eenmalige licentie om alles vrij te schakelen — dus je kunt de volledige app gratis gebruiken terwijl je beslist."
+        "a": "Ja. Microsoft's ZoomIt is volledig gratis op Mac. Scribbble is gratis te downloaden en uit te proberen, met een optionele eenmalige licentie om alles vrij te schakelen, zodat je de volledige app zonder kosten kunt gebruiken terwijl je beslist."
       },
       {
         "q": "Heeft Presentify een Meet-tool?",
-        "a": "Nee — Presentify's tools richten zich op pen, marker, vormen, spotlight en cursorhighlight. Als je afstanden op het scherm moet meten, heeft Scribbble een ingebouwde Meet-tool."
+        "a": "Nee. Presentify's gereedschapsset richt zich op pen, markeerstift, vormen, spotlight en cursoraccentuering. Als je afstanden op het scherm wilt meten, bevat Scribbble een ingebouwd Meet-gereedschap."
       },
       {
         "q": "Waarom verder kijken dan Presentify?",
-        "a": "Veelvoorkomende redenen: de volledige app gratis willen uitproberen vóór aankoop, een Meet-tool nodig hebben, een companion voor screenshot-annotatie willen, of gewoon de voorkeur geven aan een andere interface. Presentify is een degelijke app — deze alternatieven passen gewoon beter bij andere behoeften."
+        "a": "Veelvoorkomende redenen: de volledige app gratis willen uitproberen voordat je koopt, behoefte aan een Meet-gereedschap, willen van een compacte schermafbeelding-annotatietool, of gewoon de voorkeur geven aan een andere interface. Presentify is een degelijke app; deze alternatieven passen gewoon beter bij andere behoeften."
       }
     ],
     "title": "5 Beste Presentify-alternatieven voor Mac (2026)",
     "description": "Op zoek naar een alternatief voor Presentify op Mac? Deze 5 schermannotatie-apps bieden gratis proefversies, méér tools of andere prijsmodellen. Eerlijke vergelijking.",
     "h1": "De Beste Presentify-alternatieven voor Mac",
-    "intro": "Presentify is een langlopende Mac-screen-annotatie-app met cursor-highlighting en een eenmalige aankoopoptie. Maar het is niet de enige keuze — en afhankelijk van wat je nodig hebt (een gratis proef, een Measure-gereedschap, een begeleidende screenshot-annotator of een ander prijsniveau) past één van deze alternatieven mogelijk beter bij je.",
+    "intro": "Presentify is een langlopende Mac-schermannotatie-app met cursor-highlighting en een eenmalig aanschafmodel. Maar het is niet de enige optie, en afhankelijk van wat je nodig hebt (een gratis proef, een Measure-tool, een aanvullende screenshot-annotator of een ander prijsniveau), past een van deze alternatieven misschien beter.",
     "criteria": [
       "Native ondersteuning voor macOS",
-      "Live tekenen op het scherm — niet alleen screenshot-markup",
+      "Live on-screen tekenen, niet alleen screenshot-bewerking",
       "In elk geval de kernset van Presentify (pen, highlighter, spotlight)",
       "Actieve ontwikkeling"
     ]

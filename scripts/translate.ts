@@ -31,7 +31,7 @@ for (const envFile of [".env.local", ".env"]) {
   try {
     process.loadEnvFile(resolve(ROOT, envFile));
   } catch {
-    // file doesn't exist — fine
+    // file doesn't exist, fine
   }
 }
 
@@ -99,7 +99,7 @@ function isTranslatable(value: string, key: string): boolean {
   if (/^(yes|no)$/i.test(value.trim())) return false;
   if (/^https?:\/\//.test(value)) return false;
   if (value.includes("@") && !value.includes(" ")) return false; // emails
-  if (!/\p{L}/u.test(value)) return false; // no letters (e.g. "—", "#3")
+  if (!/\p{L}/u.test(value)) return false; // no letters (e.g. "#3")
   return true;
 }
 
@@ -222,6 +222,7 @@ Rules:
 - Preserve XML-like tags such as <gradient>...</gradient> or <strong>...</strong> as-is, translating only the text inside them.
 - Keep prices, version numbers, keyboard shortcut names and "macOS 14+" style requirements unchanged.
 - Keep the meaning faithful; do not add or drop information.
+- NEVER use an em dash (\u2014, alone or doubled) anywhere in the output, even where the target language commonly does. Use a comma, colon, full stop, parentheses or a language-appropriate equivalent (e.g. "，" / "：" in Chinese, "、" / "。" in Japanese) instead.
 
 Input is a JSON object mapping ids to English strings. Reply with a JSON object: {"translations": {"<id>": "<translated string>", ...}} covering EVERY input id.`;
 
@@ -266,6 +267,7 @@ Input is a JSON object mapping ids to English strings. Reply with a JSON object:
 
   // Validate: every id present, placeholders/tags preserved.
   const bad: string[] = [];
+  const dashed: string[] = [];
   for (const [id, source] of Object.entries(chunk)) {
     const translated = translations[id];
     if (typeof translated !== "string" || !translated.trim()) {
@@ -275,6 +277,7 @@ Input is a JSON object mapping ids to English strings. Reply with a JSON object:
     const want = extractTokens(source).join("|");
     const got = extractTokens(translated).join("|");
     if (want !== got) bad.push(`${id}: tokens "${want}" vs "${got}"`);
+    if (translated.includes("\u2014")) dashed.push(id);
   }
   if (bad.length) {
     if (attempt < 2) return translateChunk(locale, chunk, attempt + 1);
@@ -282,7 +285,24 @@ Input is a JSON object mapping ids to English strings. Reply with a JSON object:
       `Validation failed for ${locale} after retry:\n  ${bad.join("\n  ")}`,
     );
   }
+  // Em dashes are banned site-wide. Ask the model again a couple of times;
+  // if it still insists, substitute a locale-appropriate separator so the
+  // ban holds without aborting the whole run.
+  if (dashed.length) {
+    if (attempt < 3) return translateChunk(locale, chunk, attempt + 1);
+    for (const id of dashed) {
+      translations[id] = stripEmDashes(translations[id], locale);
+      console.warn(`  ${locale}: replaced em dash in ${id}`);
+    }
+  }
   return translations;
+}
+
+function stripEmDashes(s: string, locale: string): string {
+  const sep = locale === "zh" ? "\uff0c" : locale === "ja" ? "\u3001" : ", ";
+  return s
+    .replace(/\s*\u2014+\s*/g, sep)
+    .replace(/,\s*([,.;:!?])/g, "$1");
 }
 
 // ---------------------------------------------------------------------------
@@ -367,7 +387,7 @@ async function main() {
     if (Object.keys(chunk).length) jobs.push({ locale, chunk });
   }
   if (!jobs.length) {
-    console.log("Nothing to translate — all strings up to date.");
+    console.log("Nothing to translate, all strings up to date.");
     return;
   }
   console.log(`\n${jobs.length} API request(s) using model ${MODEL}...`);
@@ -427,7 +447,7 @@ async function main() {
       setAtPath(obj, parts, value);
       if (!lock[id].done.includes(locale)) lock[id].done.push(locale);
     }
-    // Mark ids that were already done (not in this run) — nothing to do.
+    // Ids that were already done (not in this run) need nothing.
 
     for (const [path, obj] of files) {
       writeFileSync(path, JSON.stringify(obj, null, 2) + "\n");

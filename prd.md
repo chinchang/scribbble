@@ -170,3 +170,8 @@ already ranking, then answer the exact query on that page. Baseline for the 4–
       `components/tracked-link.tsx`. Locations: `header`, `home_nav`, `home_hero`,
       `home_bottom_cta`, `for_hero`, `for_bottom_cta`, `vs_hero`, `vs_bottom_cta`,
       `vs_third_party_verdict`, `best_list_item`, `best_bottom_cta`, `blog_post_cta`
+- [x] Remove every em dash from the website copy (2026-09-12): rewrote ~220 English strings across
+      `messages/en.json`, `lib/{personas,comparisons,listicles}.ts`, `lib/site-config.ts`, the
+      screenshot-annotate page, blog pages and the pillar post; `scripts/translate.ts` now bans em
+      dashes in its prompt, validates for them (retry, then locale-aware substitution) and all 969
+      translated strings that contained one were re-translated. Verified 0 em dashes in the built HTML

@@ -12,7 +12,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
   try {
     messages = (await import(`../messages/${locale}.json`)).default;
   } catch {
-    // Locale catalog not generated yet — fall back to English
+    // Locale catalog not generated yet, fall back to English
     messages = (await import(`../messages/en.json`)).default;
   }
 

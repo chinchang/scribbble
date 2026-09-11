@@ -311,7 +311,7 @@ export default async function ListiclePage({
         </div>
       </section>
 
-      {/* Screenshots vs live screen — sends static-image intent to the tool */}
+      {/* Screenshots vs live screen: sends static-image intent to the tool */}
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-3xl rounded-2xl border-2 border-accent/30 bg-card/60 p-8">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">

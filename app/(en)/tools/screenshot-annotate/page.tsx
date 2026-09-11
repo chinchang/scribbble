@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import ScreenshotAnnotateEditor from "./editor";
 
 const TITLE =
-  "Free Mac Screenshot Annotation Tool — Annotate Images Online";
+  "Free Mac Screenshot Annotation Tool: Annotate Images Online";
 const DESCRIPTION =
-  "Paste a screenshot, mark it up, copy it back — free in your browser. Arrows, text, numbered steps, blur to redact, plus 3D tilt and depth of field. No signup, no upload, nothing to install.";
+  "Paste a screenshot, mark it up, copy it back, free in your browser. Arrows, text, numbered steps, blur to redact, plus 3D tilt and depth of field. No signup, no upload, nothing to install.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
         url: "/social-2.png",
         width: 1200,
         height: 630,
-        alt: "Scribbble — Free online screenshot annotator",
+        alt: "Scribbble: Free online screenshot annotator",
       },
     ],
   },
@@ -60,7 +60,7 @@ const faqJsonLd = {
       name: "What's the best Mac image annotation tool?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "For free, in-browser annotation with no install: this Scribbble Screenshot Annotator covers pen, arrow, text, rectangle, blur, numbered markers and backgrounds — plus two effects most other tools don't have: 3D tilt (rotate the screenshot in space with arrow keys) and depth-of-field (cinematic focus blur on part of the image). For drawing on the live Mac screen during presentations or recordings, install the Scribbble Mac app.",
+        text: "For free, in-browser annotation with no install: this Scribbble Screenshot Annotator covers pen, arrow, text, rectangle, blur, numbered markers and backgrounds, plus two effects most other tools don't have: 3D tilt (rotate the screenshot in space with arrow keys) and depth-of-field (cinematic focus blur on part of the image). For drawing on the live Mac screen during presentations or recordings, install the Scribbble Mac app.",
       },
     },
     {
@@ -68,7 +68,7 @@ const faqJsonLd = {
       name: "Can I add 3D tilt or depth of field to a Mac screenshot?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes — both. Switch on the Tilt tool and use the arrow keys to rotate the screenshot in 3D space, perfect for hero images and Twitter / X posts. The Depth of Field tool blurs everything except a focused band of the image with adjustable intensity and focus position — a cinematic effect for highlighting one UI element. Most free screenshot tools don't include either of these.",
+        text: "Yes, both. Switch on the Tilt tool and use the arrow keys to rotate the screenshot in 3D space, perfect for hero images and Twitter / X posts. The Depth of Field tool blurs everything except a focused band of the image with adjustable intensity and focus position, a cinematic effect for highlighting one UI element. Most free screenshot tools don't include either of these.",
       },
     },
     {
@@ -76,7 +76,7 @@ const faqJsonLd = {
       name: "Is there a free Mac screenshot annotation tool?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes — this one. It's a free in-browser image annotation tool that works on any Mac with a modern browser. No signup, no upload to a server, no watermark, no time limit.",
+        text: "Yes, this one. It's a free in-browser image annotation tool that works on any Mac with a modern browser. No signup, no upload to a server, no watermark, no time limit.",
       },
     },
     {
@@ -92,7 +92,7 @@ const faqJsonLd = {
       name: "Can I blur or pixelate sensitive information in a screenshot?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Pick the Blur tool and drag a rectangle over any region you want to redact — useful for hiding emails, tokens, names, or other private data before sharing a Mac screenshot.",
+        text: "Yes. Pick the Blur tool and drag a rectangle over any region you want to redact. It's useful for hiding emails, tokens, names, or other private data before sharing a Mac screenshot.",
       },
     },
     {
@@ -100,7 +100,7 @@ const faqJsonLd = {
       name: "Can I add a background to a Mac screenshot?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. The Background tool lets you place your screenshot on a solid color, gradient or image background — useful for blog headers, social posts and product shots.",
+        text: "Yes. The Background tool lets you place your screenshot on a solid color, gradient or image background, useful for blog headers, social posts and product shots.",
       },
     },
     {
@@ -144,7 +144,7 @@ export default function Page() {
         <h2 className="!mt-0">What this Mac screenshot annotation tool does</h2>
         <p>
           Scribbble&apos;s free Mac screenshot annotation tool lets you mark
-          up images directly in your browser — no install, no signup, no
+          up images directly in your browser: no install, no signup, no
           upload to a server. Beyond the standard pen, arrow, text, rectangle,
           blur and numbered-step tools, it includes two effects almost no
           other free screenshot annotator offers: 3D tilt (rotate the
@@ -156,7 +156,7 @@ export default function Page() {
         <h2>How to annotate a screenshot on Mac</h2>
         <p>
           You don&apos;t need to install anything. Take your screenshot the
-          usual way — <strong>Cmd+Shift+4</strong> for a region,{" "}
+          usual way: <strong>Cmd+Shift+4</strong> for a region,{" "}
           <strong>Cmd+Shift+3</strong> for the full screen, or{" "}
           <strong>Cmd+Ctrl+Shift+4</strong> to send it straight to the
           clipboard. Then paste it into the editor above with{" "}
@@ -168,13 +168,13 @@ export default function Page() {
           macOS does include Markup inside Preview and Quick Look, and for
           drawing a quick circle it&apos;s fine. It runs out of road as soon as
           you need numbered steps for a walkthrough, a real blur for redacting
-          credentials, or a background to make the shot presentable — which is
+          credentials, or a background to make the shot presentable, which is
           where a dedicated Mac screenshot annotation tool earns its place.
         </p>
 
         <h2>Using it as a Mac image annotation tool</h2>
         <p>
-          Nothing here is specific to screenshots. Any image works — a photo, a
+          Nothing here is specific to screenshots. Any image works: a photo, a
           design export, a scanned page, a diagram, a chart from a dashboard.
           Drag a file in or paste from the clipboard and every tool behaves the
           same way, which makes it a general-purpose image annotation tool for
@@ -182,7 +182,7 @@ export default function Page() {
         </p>
         <p>
           Because it runs entirely in the browser, it also works on any
-          machine — macOS, Windows, Linux, ChromeOS, iPad. It&apos;s built and
+          machine: macOS, Windows, Linux, ChromeOS, iPad. It&apos;s built and
           tested Mac-first, but nothing stops it working elsewhere.
         </p>
 
@@ -197,7 +197,7 @@ export default function Page() {
           <li>
             <strong>Depth of field:</strong> apply a cinematic focus-blur with
             adjustable blur intensity and focus position. Draws the eye to one
-            UI element while softening everything around it — like a fast lens
+            UI element while softening everything around it, like a fast lens
             on a real camera.
           </li>
           <li>
@@ -218,7 +218,7 @@ export default function Page() {
             Cmd+Shift+3 for the full screen).
           </li>
           <li>
-            Paste it into this tool with Cmd+V — or click the upload area to
+            Paste it into this tool with Cmd+V, or click the upload area to
             choose an image file.
           </li>
           <li>
@@ -244,13 +244,13 @@ export default function Page() {
             screenshot
           </li>
           <li>Numbered step markers (1, 2, 3…) for tutorials and bug reports</li>
-          <li>Backgrounds — solid colors, gradients and image backgrounds</li>
+          <li>Backgrounds: solid colors, gradients and image backgrounds</li>
           <li>
-            Depth of field — cinematic focus blur with adjustable intensity
+            Depth of field: cinematic focus blur with adjustable intensity
             and focus position
           </li>
           <li>
-            3D tilt — rotate the screenshot in 3D space using arrow keys, for
+            3D tilt: rotate the screenshot in 3D space using arrow keys, for
             hero images and social posts
           </li>
         </ul>
@@ -265,7 +265,7 @@ export default function Page() {
           for redacting credentials, gradient and image backgrounds, depth of
           field for focusing on one UI element, and 3D tilt for hero shots.
           Most free screenshot annotators online don&apos;t have tilt or
-          depth-of-field either — this one does, in your browser, with
+          depth-of-field either. This one does, in your browser, with
           nothing to install.
         </p>
 
@@ -282,7 +282,7 @@ export default function Page() {
         <p>
           For free, in-browser annotation with no install, this Scribbble
           Screenshot Annotator covers pen, arrow, text, rectangle, blur,
-          numbered markers and backgrounds — plus 3D tilt and depth of
+          numbered markers and backgrounds, plus 3D tilt and depth of
           field, two effects most other free screenshot tools don&apos;t
           have. For drawing on the live Mac screen during presentations or
           recordings, install the Scribbble Mac app.
@@ -290,41 +290,41 @@ export default function Page() {
 
         <h3>Can I add 3D tilt or depth of field to a Mac screenshot?</h3>
         <p>
-          Yes — both. Switch on the Tilt tool and use the arrow keys to
+          Yes, both. Switch on the Tilt tool and use the arrow keys to
           rotate the screenshot in 3D space, perfect for hero images and
           social-media posts. The Depth of Field tool blurs everything
           except a focused band of the image with adjustable intensity and
-          focus position — a cinematic effect for highlighting one UI
+          focus position, a cinematic effect for highlighting one UI
           element. Most free screenshot annotators don&apos;t include either
           of these.
         </p>
 
         <h3>Is my screenshot uploaded to a server?</h3>
         <p>
-          No. Everything happens in your browser — your screenshot never
+          No. Everything happens in your browser, and your screenshot never
           leaves your device.
         </p>
 
         <h3>Can I blur or pixelate sensitive information in a screenshot?</h3>
         <p>
           Yes. Pick the Blur tool and drag a rectangle over any region you
-          want to redact — useful for hiding emails, tokens, names, or other
+          want to redact. It's useful for hiding emails, tokens, names, or other
           private data before sharing a Mac screenshot.
         </p>
 
         <h3>Can I add a background to a Mac screenshot?</h3>
         <p>
           Yes. The Background tool lets you place your screenshot on a solid
-          color, gradient or image background — useful for blog headers,
+          color, gradient or image background, useful for blog headers,
           social posts and product shots.
         </p>
 
         <h3>Want to annotate live on your Mac screen instead?</h3>
         <p>
-          Try the <a href="/">Scribbble Mac app</a> — a Mac-native screen
+          Try the <a href="/">Scribbble Mac app</a>, a Mac-native screen
           annotation app that draws on top of any application on your screen
           in real time, with pen, highlighter, shapes, Spotlight, Magnify
-          (screen zoom) and a Whiteboard mode — across every display on a
+          (screen zoom) and a Whiteboard mode, across every display on a
           multi-monitor setup. Perfect for live Zoom presentations, OBS streams
           and recorded tutorials.
         </p>

@@ -29,13 +29,13 @@ export const listicles: Listicle[] = [
     slug: "best-screen-annotation-apps-mac",
     title: "Best Screen Annotation Apps for Mac in 2026 (Free + Paid)",
     description:
-      "We tested 5 Mac screen annotation apps — Scribbble, Presentify, ZoomIt, CleanShot X and Annotate. Honest pros, cons, pricing and our top pick for 2026.",
+      "We tested 5 Mac screen annotation apps: Scribbble, Presentify, ZoomIt, CleanShot X and Annotate. Honest pros, cons, pricing and our top pick for 2026.",
     h1: "The Best Screen Annotation Apps for Mac",
     intro:
-      "Screen annotation apps let you draw, highlight and mark up directly on top of your Mac screen — over slides, browsers, Figma, Zoom shares, anything. They're indispensable for teachers, presenters, software demoers, streamers and designers running live crits. Below is an honest, hands-on roundup of the apps worth considering on macOS in 2026.",
+      "Screen annotation apps let you draw, highlight and mark up directly on top of your Mac screen, over slides, browsers, Figma, Zoom shares, anything. They're indispensable for teachers, presenters, software demoers, streamers and designers running live crits. Below is an honest, hands-on roundup of the apps worth considering on macOS in 2026.",
     criteria: [
       "Native macOS support (Apple Silicon a plus)",
-      "Real on-screen drawing — not just screenshot markup",
+      "Real on-screen drawing, not just screenshot markup",
       "Active development and support",
       "Reasonable pricing model",
       "Tool variety beyond just a pen",
@@ -46,13 +46,13 @@ export const listicles: Listicle[] = [
         name: "Scribbble",
         tagline: "The modern Mac-first screen annotation app",
         summary:
-          "Scribbble is built Mac-first with a modern toolbar you can dock to the left or right edge. Beyond the standard pen, arrow, rectangle, ellipse and text tools, it ships with Spotlight (focus dim), Highlighter, Measure, Magnify (screen zoom), a Whiteboard mode and a built-in Snapshot tool to capture the whole screen or a region, and it works across multiple monitors — a combination most competitors don't match. It's free to download and try, with a one-time license to unlock everything.",
+          "Scribbble is built Mac-first with a modern toolbar you can dock to the left or right edge. Beyond the standard pen, arrow, rectangle, ellipse and text tools, it ships with Spotlight (focus dim), Highlighter, Measure, Magnify (screen zoom), a Whiteboard mode and a built-in Snapshot tool to capture the whole screen or a region, and it works across multiple monitors, a combination most competitors don't match. It's free to download and try, with a one-time license to unlock everything.",
         bestFor:
           "Teachers, designers and creators who want a modern, Mac-native annotation tool without a subscription",
         pros: [
           "Mac-first design with a modern toolbar you can dock left or right",
           "Includes Spotlight, Highlighter, Measure, Magnify (screen zoom) and Whiteboard mode out of the box",
-          "Built-in Snapshot tool — capture the whole screen or a region without leaving the app",
+          "Built-in Snapshot tool: capture the whole screen or a region without leaving the app",
           "Shapes include arrow, rectangle and ellipse",
           "Apple Silicon native",
           "Free to download and try",
@@ -91,7 +91,7 @@ export const listicles: Listicle[] = [
         name: "CleanShot X",
         tagline: "Screenshot powerhouse with annotation built in",
         summary:
-          "CleanShot X is a complete screenshot and screen recording suite for Mac. Its annotation tools are excellent — but they primarily run after capture, not on the live screen. If your workflow is capture → annotate → share, it's superb. For live drawing during a Zoom call, you'll want a dedicated tool.",
+          "CleanShot X is a complete screenshot and screen recording suite for Mac. Its annotation tools are excellent, but they primarily run after capture, not on the live screen. If your workflow is capture → annotate → share, it's superb. For live drawing during a Zoom call, you'll want a dedicated tool.",
         bestFor:
           "Power users whose main workflow is capture → annotate → share",
         pros: [
@@ -102,7 +102,7 @@ export const listicles: Listicle[] = [
         ],
         cons: [
           "Live on-screen annotation is limited",
-          "More expensive — does much more than annotation",
+          "More expensive, since it does much more than annotation",
         ],
         pricing: "One-time or via Setapp subscription",
         vsSlug: "cleanshot-x",
@@ -112,7 +112,7 @@ export const listicles: Listicle[] = [
         name: "ZoomIt",
         tagline: "Microsoft Sysinternals' classic, now on Mac",
         summary:
-          "ZoomIt is the legendary screen annotation and zoom utility from Microsoft Sysinternals. Originally Windows-only, Microsoft has since released a macOS build. It's free and includes a built-in screen zoom and break timer that no other tool matches — but the UI is unmistakably a sysadmin utility port.",
+          "ZoomIt is the legendary screen annotation and zoom utility from Microsoft Sysinternals. Originally Windows-only, Microsoft has since released a macOS build. It's free and includes a built-in screen zoom and break timer that no other tool matches, but the UI is unmistakably a sysadmin utility port.",
         bestFor:
           "Sysadmin-style users who specifically need ZoomIt's screen zoom and break timer",
         pros: [
@@ -143,7 +143,7 @@ export const listicles: Listicle[] = [
           "Not designed for live screen annotation",
           "Pricing depends on plan",
         ],
-        pricing: "Varies — check vendor",
+        pricing: "Varies (check vendor)",
         vsSlug: "annotate",
       },
     ],
@@ -156,7 +156,7 @@ export const listicles: Listicle[] = [
       },
       {
         q: "Can I draw on my screen during a Zoom call?",
-        a: "Yes — any of the apps on this list except CleanShot X is designed for live on-screen annotation that appears in a Zoom share. Scribbble and Presentify are the most polished options.",
+        a: "Yes. Any of the apps on this list except CleanShot X is designed for live on-screen annotation that appears in a Zoom share. Scribbble and Presentify are the most polished options.",
       },
       {
         q: "Do I need to buy a license to try these apps?",
@@ -172,7 +172,7 @@ export const listicles: Listicle[] = [
       "ZoomIt's Mac port still feels like a Windows utility. These 5 Mac-native ZoomIt alternatives have modern UIs, richer toolsets and a real Mac feel.",
     h1: "The Best ZoomIt Alternatives for Mac",
     intro:
-      "Microsoft's ZoomIt is a classic screen annotation utility from the Sysinternals suite. It's now available on macOS — but the UI is a faithful Windows utility port, and it lacks modern conveniences like a draggable toolbar, Spotlight focus mode, or measure tools. If you're on a Mac and want a more native, modern alternative, here are the best options.",
+      "Microsoft's ZoomIt is a classic screen annotation utility from the Sysinternals suite. It's now available on macOS, but the UI is a faithful Windows utility port, and it lacks modern conveniences like a draggable toolbar, Spotlight focus mode, or measure tools. If you're on a Mac and want a more native, modern alternative, here are the best options.",
     criteria: [
       "Mac-native experience (not a Windows utility port)",
       "Active development",
@@ -185,13 +185,13 @@ export const listicles: Listicle[] = [
         name: "Scribbble",
         tagline: "The Mac-first ZoomIt alternative",
         summary:
-          "Scribbble is built Mac-first with a modern toolbar you can dock to the left or right edge, and a richer toolset than ZoomIt — including Spotlight (focus dim), Highlighter, Measure, Magnify (screen zoom), a Whiteboard mode, full shapes (arrow, rectangle, ellipse) and a built-in Snapshot tool that captures the whole screen or a region, all working across multiple monitors. It now covers ZoomIt's signature screen zoom and blank-screen whiteboard too, so the switch no longer costs you anything. It's free to download and ships with a companion free Screenshot Annotate web tool.",
+          "Scribbble is built Mac-first with a modern toolbar you can dock to the left or right edge, and a richer toolset than ZoomIt, including Spotlight (focus dim), Highlighter, Measure, Magnify (screen zoom), a Whiteboard mode, full shapes (arrow, rectangle, ellipse) and a built-in Snapshot tool that captures the whole screen or a region, all working across multiple monitors. It now covers ZoomIt's signature screen zoom and blank-screen whiteboard too, so the switch no longer costs you anything. It's free to download and ships with a companion free Screenshot Annotate web tool.",
         bestFor:
           "Anyone leaving ZoomIt who wants a modern Mac-native experience",
         pros: [
           "Mac-first UI with a toolbar that docks left or right",
           "Spotlight, Highlighter, Measure, Magnify (screen zoom) and Whiteboard mode",
-          "Built-in Snapshot capture — whole screen or selected region",
+          "Built-in Snapshot capture: whole screen or selected region",
           "Shapes include arrow, rectangle and ellipse",
           "Free download, one-time license",
           "Apple Silicon native",
@@ -264,11 +264,11 @@ export const listicles: Listicle[] = [
       },
     ],
     conclusion:
-      "Scribbble is the closest spiritual successor to ZoomIt for Mac users — a focused, lightweight annotation tool with a modern Mac-native UI, plus a richer toolset (Spotlight, Highlighter, Measure). If ZoomIt's signature zoom feature is what you'll miss, pair Scribbble with macOS's built-in accessibility zoom and you'll have everything covered.",
+      "Scribbble is the closest spiritual successor to ZoomIt for Mac users: a focused, lightweight annotation tool with a modern Mac-native UI, plus a richer toolset (Spotlight, Highlighter, Measure). If ZoomIt's signature zoom feature is what you'll miss, pair Scribbble with macOS's built-in accessibility zoom and you'll have everything covered.",
     faq: [
       {
         q: "Is there a true ZoomIt for Mac?",
-        a: "Yes — Microsoft has released a macOS build of ZoomIt. It works, but the UI is a Windows utility port. For a more native Mac experience, Scribbble is the closest modern alternative.",
+        a: "Yes. Microsoft has released a macOS build of ZoomIt. It works, but the UI is a Windows utility port. For a more native Mac experience, Scribbble is the closest modern alternative.",
       },
       {
         q: "How do I get ZoomIt's zoom feature on Mac?",
@@ -281,13 +281,13 @@ export const listicles: Listicle[] = [
     slug: "best-epic-pen-alternatives-mac",
     title: "5 Best Epic Pen Alternatives for Mac (Free + Paid, 2026)",
     description:
-      "Epic Pen is Windows-first. These 5 Mac-native alternatives give you the same on-screen drawing experience — Scribbble, Presentify, ZoomIt, CleanShot X and more.",
+      "Epic Pen is Windows-first. These 5 Mac-native alternatives give you the same on-screen drawing experience: Scribbble, Presentify, ZoomIt, CleanShot X and more.",
     h1: "The Best Epic Pen Alternatives for Mac",
     intro:
-      "Epic Pen is a popular Windows screen annotation tool — but Mac users have been left out. Whether you're a teacher, streamer, designer or sales rep on macOS, you don't have to settle for a Windows-only app. Here are the best Epic Pen alternatives that run natively on Mac in 2026.",
+      "Epic Pen is a popular Windows screen annotation tool, but Mac users have been left out. Whether you're a teacher, streamer, designer or sales rep on macOS, you don't have to settle for a Windows-only app. Here are the best Epic Pen alternatives that run natively on Mac in 2026.",
     criteria: [
       "Native macOS support (Apple Silicon a plus)",
-      "Same core workflow as Epic Pen — pen, highlighter, shapes",
+      "Same core workflow as Epic Pen: pen, highlighter, shapes",
       "Reasonable pricing or a free tier",
       "Active development",
       "Bonus tools beyond what Epic Pen offers",
@@ -298,15 +298,15 @@ export const listicles: Listicle[] = [
         name: "Scribbble",
         tagline: "The closest Epic Pen experience on macOS",
         summary:
-          "Scribbble is the most direct Epic Pen replacement for Mac users. It draws on top of any app — slides, browsers, Zoom shares — with a pen, highlighter and full shape kit (arrow, rectangle, ellipse) plus a text tool. Beyond what Epic Pen offers, Scribbble adds Spotlight (focus dim), Magnify (screen zoom), Measure, a Whiteboard mode and a built-in Snapshot tool that captures the whole screen or a region, plus multi-monitor support and a modern Mac-native toolbar that docks left or right.",
+          "Scribbble is the most direct Epic Pen replacement for Mac users. It draws on top of any app (slides, browsers, Zoom shares) with a pen, highlighter and full shape kit (arrow, rectangle, ellipse) plus a text tool. Beyond what Epic Pen offers, Scribbble adds Spotlight (focus dim), Magnify (screen zoom), Measure, a Whiteboard mode and a built-in Snapshot tool that captures the whole screen or a region, plus multi-monitor support and a modern Mac-native toolbar that docks left or right.",
         bestFor:
           "Anyone leaving Epic Pen for Mac who wants a familiar workflow with a few bonus tools",
         pros: [
           "Mac-first, Apple Silicon native",
-          "Pen, highlighter, shapes (arrow, rectangle, ellipse) and text — covers Epic Pen's core toolset",
+          "Pen, highlighter, shapes (arrow, rectangle, ellipse) and text covers Epic Pen's core toolset",
           "Adds Spotlight, Magnify (screen zoom), Measure and Whiteboard mode Epic Pen doesn't have",
-          "Multi-monitor support — annotate whichever display you're presenting from",
-          "Built-in Snapshot capture (whole screen or region) — no second app needed",
+          "Multi-monitor support: annotate whichever display you're presenting from",
+          "Built-in Snapshot capture (whole screen or region), no second app needed",
           "Free download, one-time license",
           "Modern toolbar that docks to the left or right edge",
         ],
@@ -319,7 +319,7 @@ export const listicles: Listicle[] = [
         name: "Presentify",
         tagline: "Mac App Store classic with cursor highlighting",
         summary:
-          "Presentify covers the Epic Pen basics — pen, shapes, text — with the addition of a strong cursor highlight feature. It's a long-established Mac App Store app with a one-time purchase.",
+          "Presentify covers the Epic Pen basics (pen, shapes, text) with the addition of a strong cursor highlight feature. It's a long-established Mac App Store app with a one-time purchase.",
         bestFor:
           "Presenters whose biggest issue is people losing the cursor on a shared screen",
         pros: [
@@ -356,7 +356,7 @@ export const listicles: Listicle[] = [
         name: "CleanShot X",
         tagline: "Best if your real need is screenshots + annotation",
         summary:
-          "Many people reaching for Epic Pen actually want to capture and share annotated screenshots, not draw on a live screen. If that's you on Mac, CleanShot X is the best in the category — capture, annotate, record and share with cloud links.",
+          "Many people reaching for Epic Pen actually want to capture and share annotated screenshots, not draw on a live screen. If that's you on Mac, CleanShot X is the best in the category: capture, annotate, record and share with cloud links.",
         bestFor:
           "Mac users whose workflow is capture → annotate → share",
         pros: [
@@ -367,7 +367,7 @@ export const listicles: Listicle[] = [
         ],
         cons: [
           "Limited live on-screen drawing",
-          "More expensive — does much more than annotation",
+          "More expensive, since it does much more than annotation",
         ],
         pricing: "One-time or via Setapp",
         vsSlug: "cleanshot-x",
@@ -388,11 +388,11 @@ export const listicles: Listicle[] = [
       },
     ],
     conclusion:
-      "If you're moving from Epic Pen to Mac, Scribbble is the easiest recommendation — it covers the same core workflow (pen, highlighter, shapes, text) with a Mac-native UI, multi-monitor support and a few bonus tools (Spotlight, Magnify, Measure, Whiteboard) Epic Pen doesn't have. ZoomIt is the free Microsoft alternative if you can live with the Windows-style UI. CleanShot X is the right pick if you actually want screenshot-first workflows rather than live drawing.",
+      "If you're moving from Epic Pen to Mac, Scribbble is the easiest recommendation. It covers the same core workflow (pen, highlighter, shapes, text) with a Mac-native UI, multi-monitor support and a few bonus tools (Spotlight, Magnify, Measure, Whiteboard) Epic Pen doesn't have. ZoomIt is the free Microsoft alternative if you can live with the Windows-style UI. CleanShot X is the right pick if you actually want screenshot-first workflows rather than live drawing.",
     faq: [
       {
         q: "Is there an Epic Pen for Mac?",
-        a: "No — Epic Pen is Windows-only. Scribbble is the closest Mac-native equivalent: pen, highlighter, arrow, rectangle and text drawing on top of any app, plus Spotlight and Measure tools that Epic Pen doesn't include.",
+        a: "No. Epic Pen is Windows-only. Scribbble is the closest Mac-native equivalent: pen, highlighter, arrow, rectangle and text drawing on top of any app, plus Spotlight and Measure tools that Epic Pen doesn't include.",
       },
       {
         q: "What are the best alternatives to Epic Pen on Mac?",
@@ -408,7 +408,7 @@ export const listicles: Listicle[] = [
       },
       {
         q: "Is there a free alternative to Epic Pen for Mac?",
-        a: "Yes — Microsoft's ZoomIt is fully free on Mac. Scribbble is also free to download and try, with an optional one-time license to unlock everything.",
+        a: "Yes. Microsoft's ZoomIt is fully free on Mac. Scribbble is also free to download and try, with an optional one-time license to unlock everything.",
       },
     ],
   },
@@ -420,10 +420,10 @@ export const listicles: Listicle[] = [
       "Looking for a Presentify alternative on Mac? These 5 screen annotation apps offer free trials, more tools, or different pricing. Honest comparison.",
     h1: "The Best Presentify Alternatives for Mac",
     intro:
-      "Presentify is a long-running Mac screen annotation app with cursor highlighting and a one-time purchase model. But it's not the only option — and depending on what you need (a free trial, a Measure tool, a companion screenshot annotator, or a different price point), one of these alternatives may suit you better.",
+      "Presentify is a long-running Mac screen annotation app with cursor highlighting and a one-time purchase model. But it's not the only option, and depending on what you need (a free trial, a Measure tool, a companion screenshot annotator, or a different price point), one of these alternatives may suit you better.",
     criteria: [
       "Native macOS support",
-      "Live on-screen drawing — not just screenshot markup",
+      "Live on-screen drawing, not just screenshot markup",
       "At least the core Presentify toolset (pen, highlighter, spotlight)",
       "Active development",
     ],
@@ -433,11 +433,11 @@ export const listicles: Listicle[] = [
         name: "Scribbble",
         tagline: "Free to try, with Magnify and Measure tools Presentify doesn't have",
         summary:
-          "Scribbble matches Presentify's core toolset — pen, highlighter, spotlight, shapes (arrow, rectangle, ellipse) — and adds Magnify (screen zoom), a Measure tool, a Whiteboard mode, multi-monitor support and a built-in Snapshot tool that captures the whole screen or a region. Unlike Presentify, the full app is free to download and try; you only pay for a one-time license when you're ready. It also ships with a free companion Screenshot Annotate web tool, and the toolbar docks to the left or right edge.",
+          "Scribbble matches Presentify's core toolset (pen, highlighter, spotlight, shapes: arrow, rectangle, ellipse) and adds Magnify (screen zoom), a Measure tool, a Whiteboard mode, multi-monitor support and a built-in Snapshot tool that captures the whole screen or a region. Unlike Presentify, the full app is free to download and try; you only pay for a one-time license when you're ready. It also ships with a free companion Screenshot Annotate web tool, and the toolbar docks to the left or right edge.",
         bestFor:
           "Presentify users who want a free trial, screen zoom, a Measure tool, or a companion screenshot annotator",
         pros: [
-          "Free download — try the full app before buying",
+          "Free download: try the full app before buying",
           "Includes Magnify (screen zoom), Measure and Whiteboard mode Presentify doesn't have",
           "Works across multiple monitors",
           "Built-in Snapshot capture (whole screen or region)",
@@ -454,7 +454,7 @@ export const listicles: Listicle[] = [
         name: "ZoomIt for Mac",
         tagline: "Free, with built-in screen zoom",
         summary:
-          "Microsoft's ZoomIt is fully free on Mac and includes a screen zoom and break timer Presentify lacks. The trade-off is the UI is a faithful Windows utility port — functional but not Mac-native feeling.",
+          "Microsoft's ZoomIt is fully free on Mac and includes a screen zoom and break timer Presentify lacks. The trade-off is the UI is a faithful Windows utility port, functional but not Mac-native feeling.",
         bestFor: "Presentify users who want a fully free option",
         pros: [
           "Free from Microsoft",
@@ -470,7 +470,7 @@ export const listicles: Listicle[] = [
         name: "CleanShot X",
         tagline: "If you also need screenshots and recording",
         summary:
-          "CleanShot X is a complete screenshot and screen recording suite. Its strength is the capture-annotate-share workflow, not live on-screen drawing — but if you need both, it covers more ground than Presentify.",
+          "CleanShot X is a complete screenshot and screen recording suite. Its strength is the capture-annotate-share workflow, not live on-screen drawing, but if you need both, it covers more ground than Presentify.",
         bestFor:
           "Presentify users who also want serious screenshot and recording workflows",
         pros: [
@@ -515,15 +515,15 @@ export const listicles: Listicle[] = [
       },
       {
         q: "Is there a free alternative to Presentify?",
-        a: "Yes. Microsoft's ZoomIt is fully free on Mac. Scribbble is free to download and try, with an optional one-time license to unlock everything — so you can use the full app at no cost while deciding.",
+        a: "Yes. Microsoft's ZoomIt is fully free on Mac. Scribbble is free to download and try, with an optional one-time license to unlock everything, so you can use the full app at no cost while deciding.",
       },
       {
         q: "Does Presentify have a measure tool?",
-        a: "No — Presentify's toolset focuses on pen, highlighter, shapes, spotlight and cursor highlight. If you need to measure distances on screen, Scribbble includes a built-in Measure tool.",
+        a: "No. Presentify's toolset focuses on pen, highlighter, shapes, spotlight and cursor highlight. If you need to measure distances on screen, Scribbble includes a built-in Measure tool.",
       },
       {
         q: "Why look beyond Presentify?",
-        a: "Common reasons: wanting to try the full app for free before buying, needing a Measure tool, wanting a companion screenshot annotation tool, or simply preferring a different UI. Presentify is a solid app — these alternatives just fit different needs.",
+        a: "Common reasons: wanting to try the full app for free before buying, needing a Measure tool, wanting a companion screenshot annotation tool, or simply preferring a different UI. Presentify is a solid app; these alternatives just fit different needs.",
       },
     ],
   },
@@ -532,10 +532,10 @@ export const listicles: Listicle[] = [
     slug: "best-screen-annotation-tools-for-teachers",
     title: "Best Screen Annotation Tools for Teachers on Mac (2026)",
     description:
-      "We picked the 4 best Mac screen annotation tools for teachers — for live Zoom lessons, Loom recordings and 1-on-1 tutoring. Free and paid options compared.",
+      "We picked the 4 best Mac screen annotation tools for teachers, for live Zoom lessons, Loom recordings and 1-on-1 tutoring. Free and paid options compared.",
     h1: "The Best Screen Annotation Tools for Teachers on Mac",
     intro:
-      "Teachers using Mac for online lessons, recorded lectures or tutoring need a way to mark up the screen in real time — circling vocabulary, sketching diagrams, highlighting reading passages. A real annotation tool keeps students focused without breaking out of your existing slides or browser. Here are the best options on macOS.",
+      "Teachers using Mac for online lessons, recorded lectures or tutoring need a way to mark up the screen in real time: circling vocabulary, sketching diagrams, highlighting reading passages. A real annotation tool keeps students focused without breaking out of your existing slides or browser. Here are the best options on macOS.",
     criteria: [
       "Works during Zoom, Google Meet and other screen shares",
       "Annotations appear in screen recordings (QuickTime, Loom)",
@@ -548,19 +548,19 @@ export const listicles: Listicle[] = [
         name: "Scribbble",
         tagline: "Modern Mac annotation app, made for live lessons",
         summary:
-          "Scribbble draws on top of any Mac app — slides, PDFs, browsers, Zoom shares. The Highlighter is great for marking up readings; Spotlight dims everything except what you're explaining; Magnify zooms into small text or code so the back row can read it; Whiteboard mode gives you a blank canvas mid-lesson without opening another tab; the pen, arrow, rectangle, ellipse and text tools cover live diagramming. A built-in Snapshot tool captures the whole screen or a region — handy for saving a student's work or a lesson still. One-time license, free to try.",
+          "Scribbble draws on top of any Mac app: slides, PDFs, browsers, Zoom shares. The Highlighter is great for marking up readings; Spotlight dims everything except what you're explaining; Magnify zooms into small text or code so the back row can read it; Whiteboard mode gives you a blank canvas mid-lesson without opening another tab; the pen, arrow, rectangle, ellipse and text tools cover live diagramming. A built-in Snapshot tool captures the whole screen or a region, handy for saving a student's work or a lesson still. One-time license, free to try.",
         bestFor:
           "Teachers who want a modern, Mac-native tool with Highlighter and Spotlight built in",
         pros: [
           "Highlighter, Spotlight (focus dim), Magnify (screen zoom) and Whiteboard mode built in",
-          "Multi-monitor support — annotate the display you're projecting or sharing",
+          "Multi-monitor support: annotate the display you're projecting or sharing",
           "Snapshot capture (screen or region) for saving lesson stills and student work",
           "Shapes include arrow, rectangle and ellipse",
           "Works in Zoom, Google Meet, recordings",
           "Free to download and try",
           "One-time license",
         ],
-        cons: ["Whiteboard mode is single-user — no multi-cursor collaboration"],
+        cons: ["Whiteboard mode is single-user, with no multi-cursor collaboration"],
         pricing: "Free + one-time license",
         isScribbble: true,
       },
@@ -582,7 +582,7 @@ export const listicles: Listicle[] = [
         name: "ZoomIt for Mac",
         tagline: "Free, with built-in screen zoom",
         summary:
-          "Microsoft's ZoomIt is now available on macOS. Its built-in screen zoom is genuinely useful for showing fine detail in slides or code to a large remote class — and it's free.",
+          "Microsoft's ZoomIt is now available on macOS. Its built-in screen zoom is genuinely useful for showing fine detail in slides or code to a large remote class, and it's free.",
         bestFor: "Teachers who want a fully free tool with a break timer",
         pros: ["Free", "Built-in zoom and break timer"],
         cons: [
@@ -597,7 +597,7 @@ export const listicles: Listicle[] = [
         name: "CleanShot X",
         tagline: "For teachers focused on lesson recordings",
         summary:
-          "If you spend more time recording lessons than presenting them live, CleanShot X is excellent — it captures, annotates and records all in one app.",
+          "If you spend more time recording lessons than presenting them live, CleanShot X is excellent. It captures, annotates and records all in one app.",
         bestFor: "Teachers building recorded lesson libraries",
         pros: ["Screen recording with annotations", "Cloud sharing"],
         cons: ["Limited live on-screen drawing"],
@@ -606,7 +606,7 @@ export const listicles: Listicle[] = [
       },
     ],
     conclusion:
-      "For most teachers running live or recorded Mac-based lessons, Scribbble is the best balance of price, features and ease of use — the Highlighter and Spotlight tools in particular are a great fit for keeping students focused. If your specific challenge is cursor visibility, Presentify is worth a look. If you mainly record lessons rather than present live, CleanShot X may suit you better.",
+      "For most teachers running live or recorded Mac-based lessons, Scribbble is the best balance of price, features and ease of use. The Highlighter and Spotlight tools in particular are a great fit for keeping students focused. If your specific challenge is cursor visibility, Presentify is worth a look. If you mainly record lessons rather than present live, CleanShot X may suit you better.",
     faq: [
       {
         q: "Will my annotations show up when I record with QuickTime or Loom?",
@@ -618,7 +618,7 @@ export const listicles: Listicle[] = [
       },
       {
         q: "Are there discounts for educators?",
-        a: "Reach out to each developer directly — many independent Mac app developers, including Scribbble, are willing to help teachers and schools with bulk licensing.",
+        a: "Reach out to each developer directly. Many independent Mac app developers, including Scribbble, are willing to help teachers and schools with bulk licensing.",
       },
     ],
   },

@@ -282,7 +282,7 @@ const sfx = {
   },
 };
 
-// Animated side panel wrapper — handles mount/unmount animation
+// Animated side panel wrapper: handles mount/unmount animation
 interface SidePanelProps {
   isOpen: boolean;
   children: React.ReactNode;
@@ -443,7 +443,7 @@ export default function ScreenshotAnnotateEditor() {
         { x: 8, y: 45, r: 50, color: "#c89aff" },
       ],
     },
-    // 12. Twilight — indigo / violet / rose
+    // 12. Twilight: indigo / violet / rose
     {
       base: "#1b1448",
       blobs: [
@@ -453,7 +453,7 @@ export default function ScreenshotAnnotateEditor() {
         { x: 15, y: 85, r: 55, color: "#3a2a8a" },
       ],
     },
-    // 13. Sunset glow — coral / amber / plum
+    // 13. Sunset glow: coral / amber / plum
     {
       base: "#f4a261",
       blobs: [
@@ -463,7 +463,7 @@ export default function ScreenshotAnnotateEditor() {
         { x: 20, y: 85, r: 55, color: "#9a4e8a" },
       ],
     },
-    // 14. Forest dawn — sage / teal / sand
+    // 14. Forest dawn: sage / teal / sand
     {
       base: "#2a5d6b",
       blobs: [
@@ -657,7 +657,7 @@ export default function ScreenshotAnnotateEditor() {
         return;
       }
 
-      // Delete/Backspace — reset the currently open panel
+      // Delete/Backspace: reset the currently open panel
       if ((e.key === "Delete" || e.key === "Backspace") && !e.ctrlKey && !e.metaKey) {
         if (tiltEnabled && (tiltX !== 0 || tiltY !== 0)) {
           e.preventDefault();
@@ -1829,7 +1829,7 @@ export default function ScreenshotAnnotateEditor() {
       applyDepthOfField(canvas, ctx);
     }
 
-    // Watermarks — always at the bottom corners of the full canvas
+    // Watermarks: always at the bottom corners of the full canvas
     ctx.save();
     ctx.globalAlpha = 0.4;
     ctx.fillStyle = "#ffffff";
@@ -1944,7 +1944,7 @@ export default function ScreenshotAnnotateEditor() {
   const isToolActive = (tool: Tool) =>
     currentTool === tool && !showWatermarkInput && !tiltEnabled;
 
-  // Spatial arrow-key navigation inside a panel — focuses the nearest
+  // Spatial arrow-key navigation inside a panel: focuses the nearest
   // focusable element in the pressed direction.
   const handleSpatialNav = (
     e: React.KeyboardEvent<HTMLDivElement>,
@@ -2303,12 +2303,12 @@ export default function ScreenshotAnnotateEditor() {
 
           {/* Footer */}
           <p className="text-center text-sm text-neutral-400 py-3">
-            Brought to you by <a href="/" className="gradient-text font-semibold hover:underline">Scribbble</a> — the beautiful screen annotator for MacOS
+            Brought to you by <a href="/" className="gradient-text font-semibold hover:underline">Scribbble</a>, the beautiful screen annotator for MacOS
           </p>
         </div>
       )}
 
-      {/* Background Palette — right edge panel */}
+      {/* Background Palette: right edge panel */}
       <SidePanel
         isOpen={showColorPalette && !showWatermarkInput}
         width="w-64"
@@ -2333,7 +2333,7 @@ export default function ScreenshotAnnotateEditor() {
           ))}
         </div>
 
-        {/* Tab content — re-keyed per tab for crossfade on switch */}
+        {/* Tab content: re-keyed per tab for crossfade on switch */}
         <div key={bgTab} className="animate-in fade-in duration-150">
           {bgTab === "solid" && (
             <div className="grid grid-cols-4 gap-1.5">
@@ -2391,7 +2391,7 @@ export default function ScreenshotAnnotateEditor() {
           )}
         </div>
 
-        {/* Effects — blur & noise on the background */}
+        {/* Effects: blur & noise on the background */}
         {backgroundState.type && (
           <div className="mt-4 pt-3 border-t border-white/[0.06]">
             <label className="flex items-center justify-between text-sm text-white/70 mb-1.5">
@@ -2457,7 +2457,7 @@ export default function ScreenshotAnnotateEditor() {
         )}
       </SidePanel>
 
-      {/* Depth of Field Panel — right edge panel */}
+      {/* Depth of Field Panel: right edge panel */}
       <SidePanel
         isOpen={showDofPanel && !showWatermarkInput}
         innerRef={dofPanelRef}
@@ -2524,7 +2524,7 @@ export default function ScreenshotAnnotateEditor() {
           )}
       </SidePanel>
 
-      {/* 3D Tilt Panel — right edge panel */}
+      {/* 3D Tilt Panel: right edge panel */}
       <SidePanel isOpen={tiltEnabled && !showWatermarkInput}>
         <div className="text-sm font-medium text-white/50 uppercase tracking-wider mb-3">3D Tilt</div>
 

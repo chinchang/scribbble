@@ -7,7 +7,7 @@
       },
       {
         "title": "Browser-Source-Overlays erhöhen Latenz und Komplexität",
-        "body": "Scribbble läuft als native Mac-App — keine Browser-Source, keine zusätzliche OBS-Szene, kein seltsames Audio-Routing."
+        "body": "Scribbble läuft als native Mac‑App: kein Browser‑Source, keine zusätzliche OBS‑Szene, kein seltsames Audio‑Routing."
       }
     ],
     "workflows": [
@@ -34,12 +34,12 @@
       "Rechteck-, Ellipsen- und Textwerkzeuge für Overlays",
       "Screenshot des Bildschirms oder eines Bereichs für Clip-Thumbnails und Highlights nach dem Stream",
       "Schnell-Löschen-Hotkey, um den Bildschirm zwischen Szenen zu säubern",
-      "Multi-Monitor-Unterstützung — zeichnen Sie auf dem Gameplay-Bildschirm, während Chat auf dem anderen Bildschirm bleibt"
+      "Multi‑Monitor‑Support: auf dem Gameplay‑Display zeichnen, während der Chat auf dem anderen bleibt"
     ],
     "faq": [
       {
         "q": "Funktioniert Scribbble mit OBS und Streamlabs?",
-        "a": "Ja. Scribbble zeichnet auf Betriebssystem-Ebene, sodass jede Screen-Capture-Quelle — OBS, Streamlabs, Restream — deine Anmerkungen automatisch übernimmt."
+        "a": "Ja. Scribbble zeichnet auf Betriebssystemebene, sodass jede Bildschirmaufnahmequelle (OBS, Streamlabs, Restream) deine Anmerkungen automatisch aufnimmt."
       },
       {
         "q": "Funktioniert es, wenn ich mit zwei Monitoren streame?",
@@ -51,17 +51,17 @@
       }
     ],
     "audience": "Streamer",
-    "title": "Live auf dem Stream zeichnen — Mac‑Annotation für OBS / Streamlabs",
+    "title": "Zeichne live in deinem Stream: Mac-Annotierung für OBS / Streamlabs",
     "description": "Markiere Loot, skizziere die Strategie, hebe Chat‑Beiträge hervor. Scribbble lässt Mac‑Streamer live auf dem Bildschirm zeichnen, in OBS, Streamlabs oder jeder Capture‑App. Kostenlose Testversion.",
     "h1": "Echtzeit‑Zeichnen auf deinem Stream",
     "subheadline": "Markiere Loot, skizziere die Strategie, reagiere auf den Chat mit Pfeilen und Kritzeleien. Scribbble legt sich direkt über deinen Bildschirm, sodass OBS jeden Strich einfängt."
   },
   "youtubers": {
     "audience": "YouTuber",
-    "title": "Screen-Annotation-App für YouTuber (Mac) — Spare dir die Nachbearbeitung",
-    "description": "Hör auf, Kreise in der Postproduktion hinzuzufügen. Zeichne Pfeile, Kästen und Callouts während der Aufnahme auf dem Mac — Scribbble integriert sie direkt in die Bildschirmaufnahme. Kostenlos zum Ausprobieren.",
+    "title": "Screen Annotation App für YouTuber (Mac): Post‑Editing überspringen",
+    "description": "Hör auf, Kreise nachträglich hinzuzufügen. Zeichne Pfeile, Kästen und Callouts während der Aufnahme auf dem Mac. Scribbble bäckt sie direkt in die Bildschirmaufnahme ein. Kostenlos zum Ausprobieren.",
     "h1": "Das Annotations-Tool für YouTube-Creator",
-    "subheadline": "Hör auf, Kreise in der Postproduktion zu zeichnen. Zeichne Pfeile, Kästen und Callouts während der Aufnahme — Scribbble integriert sie direkt in die Bildschirmaufnahme.",
+    "subheadline": "Hör auf, Kreise nachträglich hinzuzufügen. Zeichne Pfeile, Kästen und Callouts während der Aufnahme. Scribbble bäckt sie direkt in die Bildschirmaufnahme ein.",
     "painPoints": [
       {
         "title": "Callouts in Final Cut oder Premiere sind zeitaufwändig",
@@ -75,7 +75,7 @@
     "workflows": [
       {
         "title": "Software-Tutorials",
-        "body": "Führe durch jede Mac-App — Figma, Photoshop, VS Code, Excel — und kreise Buttons ein oder zeichne Pfeile, während du erläuterst. Die Augen der Zuschauer:innen folgen deinen Markierungen."
+        "body": "Führe durch jede Mac‑App (Figma, Photoshop, VS Code, Excel), kreise Buttons ein und zeichne Pfeile, während du erzählst. Der Blick der Zuschauer folgt deinem."
       },
       {
         "title": "Code-Walkthroughs",
@@ -97,7 +97,7 @@
       "Bildschirm oder Bereich als Schnappschuss für Video-Thumbnails und B‑Roll‑Stills",
       "Mehrere Farben zur Unterscheidung von Konzepten",
       "Rückgängig / Wiederherstellen, damit du bei kleinen Fehlern weiter aufnehmen kannst",
-      "Mehrere Monitore — annotiere das Display, das du aufnimmst; Notizen bleiben auf dem anderen"
+      "Multi‑Monitor‑Support: den aufgenommenen Bildschirm annotieren, Notizen bleiben auf dem anderen"
     ],
     "faq": [
       {
@@ -106,7 +106,7 @@
       },
       {
         "q": "Kann ich eine Linie rückgängig machen, ohne die Aufnahme neu zu starten?",
-        "a": "Ja — Scribbble bietet vollständiges Rückgängig / Wiederholen. Lösche einen Fehler mitten in einer Aufnahme und mach weiter."
+        "a": "Ja. Scribbble bietet vollständiges Rückgängig/Wiederherstellen. Lösche einen Fehler mitten in der Aufnahme und zeichne weiter."
       }
     ]
   },
@@ -115,15 +115,15 @@
     "title": "Screen‑Annotation‑App für Lehrkräfte auf dem Mac (kostenlose Testversion)",
     "description": "Markiere Folien, skizziere über PDFs und kommentiere Live‑Bildschirmfreigaben in Zoom. Scribbble ist die Mac‑App zum Annotieren, entwickelt für Lehrkräfte. Kostenloser Download, einmalige Lizenz.",
     "h1": "Die Screen‑Annotation‑App für Lehrkräfte",
-    "subheadline": "Markiere Folien, Websites, PDFs und Zoom‑Freigaben in Echtzeit. Halte Schüler*innen genau bei dem, was zählt — ohne in ein separates Whiteboard wechseln zu müssen.",
+    "subheadline": "Markiere Folien, Websites, PDFs und Zoom-Shares in Echtzeit. Halte Schüler:innen genau auf das fokussiert, was wichtig ist, ohne in ein separates Whiteboard zu wechseln.",
     "painPoints": [
       {
         "title": "Der Wechsel zum Whiteboard reißt den Unterrichtfluss",
-        "body": "Jamboard oder Miro mitten im Unterricht zu öffnen, lenkt die Schüler ab. Scribbble zeichnet über alles, was Sie bereits offen haben — Folien, Browser, PDFs, Code-Editoren — und wenn Sie eine leere Fläche brauchen, ist der Whiteboard-Modus per Hotkey erreichbar statt als neuer Tab."
+        "body": "Jamboard oder Miro während des Unterrichts zu öffnen, lenkt die Schüler:innen ab. Scribbble zeichnet über das, was du bereits offen hast (Folien, Browser, PDFs, Code-Editoren), und wenn du eine leere Fläche brauchst, ist der Whiteboard-Modus mit einer Taste erreichbar statt mit einem weiteren Tab."
       },
       {
         "title": "Schüler*innen sehen nicht, worauf du zeigst",
-        "body": "Bei geteiltem Bildschirm ist der Mauszeiger für viele unsichtbar. Kreis ihn ein, unterstreiche ihn oder zeichne einen Pfeil — deine Hervorhebung ist auch in der Aufnahme eindeutig."
+        "body": "Bei geteiltem Bildschirm ist der Mauszeiger für die Hälfte der Klasse unsichtbar. Kreis ihn ein, unterstreiche ihn oder zeichne einen Pfeil, und deine Betonung ist auch in der Aufnahme unmissverständlich."
       },
       {
         "title": "Aufnahmen von Lektionen bedeuten Diagramme neu zeichnen",
@@ -137,7 +137,7 @@
       },
       {
         "title": "Aufgezeichnete Vorlesungen und Loom‑Videos",
-        "body": "Verwende Stift‑ und Pfeilwerkzeuge während du mit QuickTime, Loom oder ScreenStudio aufnimmst. Anmerkungen sind in der Aufnahme enthalten — keine Nachbearbeitung nötig."
+        "body": "Nutze Stift- und Pfeilwerkzeuge während der Aufnahme mit QuickTime, Loom oder ScreenStudio. Anmerkungen sind in die Aufnahme eingebrannt, sodass keine Nachbearbeitung nötig ist."
       },
       {
         "title": "Einzelunterricht",
@@ -155,7 +155,7 @@
       "Textwerkzeug für Vokabel-Hinweise",
       "Snapshot des ganzen Bildschirms oder eines Bereichs, um Schülerarbeiten oder Unterrichtsstandbilder zu speichern",
       "Schnell-Löschen, um Folien sauber zu halten",
-      "Multi-Monitor-Unterstützung — annotieren Sie den Bildschirm, den Sie teilen, nicht nur den Hauptbildschirm"
+      "Multi-Monitor-Unterstützung: annotiere das Display, das du teilst, nicht nur das Hauptdisplay"
     ],
     "faq": [
       {
@@ -168,20 +168,20 @@
       },
       {
         "q": "Funktioniert Scribbble mit mehreren Monitoren?",
-        "a": "Ja. Wenn Sie mit Folien auf einem Projektor oder externen Bildschirm und Ihren Notizen auf dem Laptop unterrichten, können Sie genau den Bildschirm annotieren, den Sie teilen — Scribbble unterstützt Multi-Monitor-Setups, anstatt Sie auf den Hauptbildschirm zu beschränken."
+        "a": "Ja. Wenn du mit Folien auf einem Projektor oder externen Display unterrichtest und deine Notizen auf dem Laptop-Bildschirm hast, kannst du das Display annotieren, das du teilst. Scribbble unterstützt Multi-Monitor-Setups, statt dich auf den Hauptbildschirm zu beschränken."
       },
       {
         "q": "Gibt es einen Rabatt für Lehrkräfte?",
-        "a": "Kontaktieren Sie uns über den Support-Link unten — wir helfen Lehrern und Schulen gerne bei Mengenlizenzen."
+        "a": "Kontaktiere uns über den Support-Link unten. Wir helfen Lehrkräften und Schulen gerne bei Mengenlizenzen."
       }
     ]
   },
   "designers": {
     "audience": "Designer",
-    "title": "Redline in Figma & Browsern — Mac‑Annotierungs‑App für Designer",
-    "description": "Skizziere und markiere direkt in Figma, Browsern und Prototypen während Live‑Design‑Crits auf dem Mac. Kein Export, kein Plugin — Scribbble zeichnet über alles. Kostenlos.",
+    "title": "Redline in Figma & Browsern: Mac‑Annotierungs‑App für Designer",
+    "description": "Skizziere und redline direkt in Figma, Browsern und Prototypen während Live‑Design‑Crits auf dem Mac. Keine Exporte, keine Plugins. Scribbble zeichnet über alles. Kostenlos.",
     "h1": "Skizziere und markiere direkt auf deinen Designs",
-    "subheadline": "Führe Design‑Crits ohne Screenshot‑Exports durch. Scribbble zeichnet über Figma, den Browser, deinen Prototyp — was auch immer du überprüfst — und erlaubt es dir, den markierten Frame in die Zwischenablage zu speichern.",
+    "subheadline": "Führe Design‑Crits ohne Screenshot‑Exporte durch. Scribbble zeichnet über Figma, den Browser, deinen Prototypen oder was auch immer du prüfst, und lässt dich den markierten Frame in die Zwischenablage speichern.",
     "painPoints": [
       {
         "title": "Export → Markup → Re‑Import ist umständlich",
@@ -193,7 +193,7 @@
       },
       {
         "title": "Pauschales Abschätzen von Pixelmaßen kostet Zeit",
-        "body": "Das Measure‑Tool von Scribbble lässt dich Abstände, Padding und Komponentenmaße direkt auf dem Bildschirm prüfen — ohne in eine separate Lineal‑App zu exportieren."
+        "body": "Scribbbles Measure‑Tool lässt dich Abstände, Padding und Komponentenmaße direkt auf dem Bildschirm prüfen, ohne in eine separate Lineal‑App exportieren zu müssen."
       }
     ],
     "workflows": [
@@ -222,12 +222,12 @@
       "Textwerkzeug für Inline‑Notizen",
       "Schnappschuss eines Frames oder Bereichs, um ihn direkt in ein Linear‑Ticket oder ein Designdokument zu ziehen",
       "Werkzeugleiste am linken oder rechten Rand andocken, damit die Leinwand frei bleibt",
-      "Mehrere Monitore — annotiere Figma auf dem großen Display, Referenzen auf dem Laptop"
+      "Multi‑Monitor‑Support: Figma auf dem großen Display annotieren, Referenzen auf dem Laptop anzeigen"
     ],
     "faq": [
       {
         "q": "Integriert sich Scribbble mit Figma?",
-        "a": "Scribbble zeichnet auf Figma (oder jedem anderen Programm) auf Betriebssystem‑Ebene — kein Plugin nötig. Annotationen liegen auf dem Bildschirm, nicht in der Figma‑Datei."
+        "a": "Scribbble zeichnet über Figma (oder alles andere) auf Betriebssystemebene, daher ist kein Plugin erforderlich. Anmerkungen leben auf dem Bildschirm, nicht in der Figma‑Datei."
       },
       {
         "q": "Funktioniert es über zwei Displays hinweg?",
@@ -235,16 +235,16 @@
       },
       {
         "q": "Kann ich den annotierten Frame als Bild speichern?",
-        "a": "Die Scribbble‑Mac‑App zeichnet auf dem Live‑Bildschirm — um einen annotierten Still zu speichern, benutze das kostenlose Screenshot Annotate Tool unter /tools/screenshot-annotate. Dort kannst du ein Bild hochladen oder einfügen, markieren und in die Zwischenablage kopieren."
+        "a": "Die Scribbble Mac‑App zeichnet auf dem Live‑Bildschirm. Zum Speichern eines annotierten Stills nutze das kostenlose Screenshot Annotate Tool unter /tools/screenshot-annotate, mit dem du ein Bild hochladen oder einfügen, markieren und in die Zwischenablage kopieren kannst."
       }
     ]
   },
   "sales-teams": {
     "audience": "Vertriebsteams",
-    "title": "Bildschirm‑Annotation für Sales‑Demos auf dem Mac — Aufmerksamkeit lenken",
+    "title": "Screen Annotation für Sales‑Demos auf dem Mac: Blickführung",
     "description": "Hebe Preismodelle hervor, kreise die ROI‑Zahl ein, zeichne den Workflow live. Scribbble ist die Mac‑Annotierungs‑App für Vertriebsteams, die Demos in Zoom, Gong und Loom durchführen.",
     "h1": "Das Bildschirm-Annotierungstool für Sales-Demos",
-    "subheadline": "Lenke die Aufmerksamkeit deines Interessenten mit einer einzigen Taste. Hebe Preismodelle hervor, kreise die ROI-Zahl ein, zeichne den Workflow — deine Demo wirkt stärker, wenn du den Blick führst.",
+    "subheadline": "Lenke die Aufmerksamkeit deines Interessenten mit einer einzigen Taste. Hebe Preismodelle hervor, kreise die ROI‑Zahl ein, zeichne den Workflow. Deine Demo landet härter, wenn du den Blick führst.",
     "painPoints": [
       {
         "title": "Interessenten verpassen den entscheidenden Moment in der Demo",
@@ -252,7 +252,7 @@
       },
       {
         "title": "Demos aufnehmen für asynchrone Weitergabe",
-        "body": "Aufgezeichnete Walkthroughs sind mit eingebetteten Annotationen deutlich wirkungsvoller. Kein Editor nötig — Scribbble zeichnet live mit."
+        "body": "Aufgenommene Walkthroughs sind mit eingebrannten Anmerkungen deutlich effektiver. Kein Editor nötig, Scribbble zeichnet live."
       }
     ],
     "workflows": [
@@ -279,12 +279,12 @@
       "Textwerkzeug für Inline‑Beschriftungen",
       "Schnappschuss des Bildschirms oder eines Bereichs für Follow‑up‑E‑Mails und Recap‑Decks",
       "Ein‑Tasten‑Löschen zwischen Demo‑Abschnitten",
-      "Mehrere Monitore — annotiere das geteilte Display, während deine Notizen auf dem anderen bleiben"
+      "Multi‑Monitor‑Support: den geteilten Bildschirm annotieren, während deine Notizen auf dem anderen bleiben"
     ],
     "faq": [
       {
         "q": "Funktioniert das mit Zoom, Gong, Chorus und Loom?",
-        "a": "Ja. Scribbble zeichnet auf Betriebssystem-Ebene, sodass jede Bildschirmaufnahme oder Freigabe — Zoom, Gong, Chorus, Loom, Vidyard — die Annotationen erfasst."
+        "a": "Ja. Scribbble zeichnet auf Betriebssystemebene, sodass jede Bildschirmaufnahme oder -freigabe (Zoom, Gong, Chorus, Loom, Vidyard) die Anmerkungen erfasst."
       },
       {
         "q": "Funktioniert es, wenn ich von einem zweiten Display präsentiere?",

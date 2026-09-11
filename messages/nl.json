@@ -1,10 +1,10 @@
 {
   "meta": {
-    "titleDefault": "Scribbble — Schermannotatie-app voor Mac · Tekenen op je scherm",
+    "titleDefault": "Scribbble: schermaanpassingsapp voor Mac · Teken op je scherm",
     "titleTemplate": "%s | Scribbble",
     "description": "Scribbble is een prachtige Mac-app om direct op je scherm te krabbelen, tekenen, markeren en annoteren. Perfect voor docenten, streamers, YouTubers, ontwerpers en salesdemo's. Gratis download, eenmalige licentie.",
-    "ogTitle": "Scribbble — Schermannotatie-app voor Mac",
-    "ogImageAlt": "Scribbble — Schermannotatie-app voor Mac"
+    "ogTitle": "Scribbble: schermaanpassingsapp voor Mac",
+    "ogImageAlt": "Scribbble: schermaanpassingsapp voor Mac"
   },
   "header": {
     "cta": "Haal Scribbble",
@@ -42,7 +42,7 @@
     "features": {
       "pen": {
         "title": "Vrij tekenen",
-        "body": "Schets, cirkel, onderstreep — teken bovenop elke app met een vloeiende pen die je hand bijhoudt."
+        "body": "Schets, cirkel, onderstreep. Teken bovenop elke app met een vloeiende pen die je hand bijhoudt."
       },
       "shapes": {
         "title": "Pijlen, rechthoeken & ellipsen",
@@ -66,7 +66,7 @@
       },
       "snapshot": {
         "title": "Maak snapshots",
-        "body": "Leg het hele scherm of een geselecteerd gebied vast — inclusief annotaties — zonder de app te verlaten."
+        "body": "Leg het hele scherm vast of slechts een selectie, inclusief aantekeningen, zonder de app te verlaten."
       },
       "magnify": {
         "title": "Vergroot & zoom",
@@ -80,7 +80,7 @@
     "demoTitle": "Bekijk een <gradient>60-seconden</gradient> rondleiding",
     "demoSubtitle": "Elke tool, elke sneltoets, in één minuut.",
     "seoTitle": "De Mac <gradient>schermannotatie</gradient> app voor live presentaties",
-    "seoSubtitle": "Scribbble is een Mac schermannotatie-tool die bovenop elke app tekent — slides, browsers, Figma, Zoom shares, code-editors — met een gefocuste, sneltoetsgestuurde workflow gebouwd voor macOS.",
+    "seoSubtitle": "Scribbble is een Mac-schermaanpassingshulpmiddel dat bovenop elke app tekent (slides, browsers, Figma, Zoom shares, code-editors) met een gefocuste, sneltoetsgestuurde workflow, speciaal voor macOS.",
     "cards": [
       {
         "title": "Een echte Mac schermannotatie-tool",
@@ -92,11 +92,11 @@
       },
       {
         "title": "Meer dan alleen een pen",
-        "body": "Pen, markeerder, pijl, rechthoek, ellips en tekst — plus Spotlight (focus dim), Magnify om in te zoomen op fijne details op het live-scherm, een Meet-tool, een Whiteboard-modus voor wanneer je een blanco canvas nodig hebt, en een ingebouwde Snapshot-tool die het hele scherm of een regio vastlegt zonder de app te verlaten."
+        "body": "Pen, markeerder, pijl, rechthoek, ellips en tekst, plus Spotlight (focus-dimming), Magnify om fijne details op het live-scherm in te zoomen, een Meet-tool, Whiteboard-modus voor wanneer je een blanco canvas nodig hebt, en een ingebouwde Snapshot-functie die het hele scherm of een selectie vastlegt zonder de app te verlaten."
       },
       {
         "title": "Gratis te proberen, eenmalige licentie",
-        "body": "Download en gebruik Scribbble gratis. Wanneer je er klaar voor bent, ontgrendelt een eenmalige licentie alles — geen abonnement, geen login, geen upsell-pop-ups."
+        "body": "Download en gebruik Scribbble gratis. Wanneer je er klaar voor bent ontgrendelt een eenmalige licentie alles. Geen abonnement, geen login, geen opdringerige upsell-pop-ups."
       }
     ],
     "linksWorkflowsTitle": "Gemaakt voor elke Mac-workflow",
@@ -112,21 +112,21 @@
     "chipNoSignup": "Geen aanmelding nodig",
     "chipRefund": "14 dagen terugbetaling",
     "jsonLd": {
-      "description": "Scribbble is een Mac-app waarmee je direct op je scherm kunt tekenen, markeren en annoteren — voor docenten, streamers, YouTubers, ontwerpers en salesdemos.",
+      "description": "Scribbble is een Mac-app waarmee je direct op je scherm kunt tekenen, markeren en annoteren, voor docenten, streamers, YouTubers, ontwerpers en salesdemos.",
       "featureList": [
         "Vrije hand pen-gereedschap",
         "Markeringspen",
-        "Auto-fade modus — lijnen wissen zichzelf na een paar seconden",
+        "Auto-fade-modus: strepen verdwijnen vanzelf na een paar seconden",
         "Pijl-gereedschap",
         "Rechthoekvorm",
         "Ellipsvorm",
         "Tekstannotaties",
         "Spotlight (focus dim)",
-        "Vergroot — schermzoom om fijne details te tonen",
-        "Whiteboard-modus — blanco canvas over elk scherm",
+        "Magnify: schermzoom om fijne details te tonen",
+        "Whiteboard-modus: blanco canvas over elk scherm",
         "Multi-monitor ondersteuning",
         "Meettool",
-        "Snapshot vastleggen — heel scherm of geselecteerd gebied",
+        "Snapshot-opname: heel scherm of geselecteerd gebied",
         "Werkbalk dockt aan linker- of rechterrand",
         "Apple Silicon native",
         "Companion gratis Screenshot Annotate webtool"
@@ -142,16 +142,16 @@
     "downloadScribbble": "Download Scribbble"
   },
   "zoomitVsEpicPen": {
-    "title": "ZoomIt vs Epic Pen — Welke is beter in 2026?",
-    "description": "ZoomIt en Epic Pen zijn twee van de populairste tools voor schermannotatie. Eerlijke vergelijking naast elkaar: functies, prijs, platformen — en het beste alternatief voor Mac.",
+    "title": "ZoomIt vs Epic Pen: welke is beter in 2026?",
+    "description": "ZoomIt en Epic Pen zijn twee van de populairste schermaanpassingshulpmiddelen. Eerlijke vergelijking: functies, prijs, platforms en het beste alternatief voor Mac.",
     "badge": "Eerlijke, hands-on vergelijking",
     "h1": "ZoomIt vs Epic Pen",
-    "subtitle": "Twee van de populairste schermannotatie-tools, naast elkaar. Functies, prijs, platformen — en wat je moet kiezen als je op een Mac werkt.",
+    "subtitle": "Twee van de populairste schermaanpassingshulpmiddelen, naast elkaar. Functies, prijs, platforms en wat te kiezen als je op een Mac zit.",
     "tldrTitle": "Het korte antwoord",
     "tldr": [
       {
         "lead": "Kies ZoomIt",
-        "body": "als je een gratis, hotkey-gestuurde tool wilt met ingebouwde schermvergroting en pauzetimer — en als je op Mac zit, aangezien Epic Pen daar niet op draait."
+        "body": "als je een gratis, sneltoetsgestuurde utility wilt met ingebouwde schermzoom en pauzetimer, en als je op een Mac zit, omdat Epic Pen daar niet op draait."
       },
       {
         "lead": "Kies Epic Pen",
@@ -163,9 +163,9 @@
       }
     ],
     "whatIsZoomitTitle": "Wat is ZoomIt?",
-    "whatIsZoomitBody": "ZoomIt is een gratis schermannotatie-, zoom- en pauzetimer-hulpmiddel van Microsoft Sysinternals. Het is ontstaan op Windows en Microsoft heeft sindsdien een macOS-build uitgebracht. De kracht zit in de frictionless sneltoetsen en de geïntegreerde zoomfunctie — populair bij sysadmins, presentatoren en trainers die fijne details op het scherm willen laten zien.",
+    "whatIsZoomitBody": "ZoomIt is een gratis schermaanpassings-, zoom- en pauzetimer-utility van Microsoft Sysinternals. Het vindt zijn oorsprong op Windows en Microsoft heeft sindsdien ook een macOS-versie uitgebracht. De kracht zit in de frictionloze sneltoetsen en de geïntegreerde zoomfunctie, populair bij sysadmins, presentatoren en trainers die fijne details op het scherm willen laten zien.",
     "whatIsEpicPenTitle": "Wat is Epic Pen?",
-    "whatIsEpicPenBody": "Epic Pen is een Windows-schermannotatietool die is ontworpen voor presentaties en lessen. Je kunt er mee tekenen, markeren en (in de Pro-versie) vormen en tekst bovenop elke applicatie plaatsen. Het heeft een vriendelijkere gebruikersinterface dan ZoomIt maar is Windows-only — er is geen native Mac-build.",
+    "whatIsEpicPenBody": "Epic Pen is een Windows-schermaanpassingshulpmiddel dat is gebouwd rond presentaties en lessen. Het laat je tekenen, markeren en (op het Pro-niveau) vormen en tekst toevoegen bovenop elke applicatie. Het heeft een vriendelijkere UI dan ZoomIt maar is alleen voor Windows. Er bestaat geen native Mac-build.",
     "tableTitle": "Vergelijking naast elkaar",
     "feature": "Kenmerk",
     "table": [
@@ -232,14 +232,14 @@
       {
         "feature": "Moderne, native Mac-UI",
         "zoomit": "Nee (Windows-port)",
-        "epicPen": "—"
+        "epicPen": "Niet op Mac"
       }
     ],
     "chooseZoomitTitle": "Kies ZoomIt als…",
     "chooseZoomit": [
       "Je een volledig gratis tool zonder Pro-versie wilt",
       "Je ingebouwde schermzoom nodig hebt om fijne details te laten zien",
-      "Je op macOS zit — Epic Pen draait daar niet",
+      "Je zit op macOS, waar Epic Pen niet op draait",
       "Je van sneltoetsgestuurde, minimalistische UIs houdt",
       "Je ook een pauzetimer voor trainingssessies wilt"
     ],
@@ -251,12 +251,12 @@
       "Je geen behoefte hebt aan scherm‑zoom of pauze‑timer functies"
     ],
     "macTitle": "Op een Mac? Dit is de betere keuze.",
-    "macBody": "Epic Pen draait helemaal niet op macOS, en ZoomIt's Mac-port voelt nog steeds aan als een Windows-hulpmiddel. Als je op een Mac werkt en iets wilt dat echt als een Mac-app aanvoelt, is Scribbble specifiek voor macOS gebouwd — met een moderne versleepbare werkbalk, Apple Silicon native prestaties, ondersteuning voor meerdere beeldschermen en een uitgebreider gereedschapsaanbod (Spotlight, Magnify, Meet, Whiteboard) dan zowel ZoomIt als Epic Pen.",
+    "macBody": "Epic Pen draait helemaal niet op macOS, en ZoomIt's Mac-port voelt nog steeds aan als een Windows-utility. Als je op een Mac zit en iets wil dat echt als een Mac-app aanvoelt, is Scribbble specifiek gebouwd voor macOS, met een moderne verplaatsbare werkbalk, native Apple Silicon-prestaties, ondersteuning voor meerdere beeldschermen en een uitgebreider gereedschapsset (Spotlight, Magnify, Meet, Whiteboard) dan zowel ZoomIt als Epic Pen.",
     "scribbbleFitsTitle": "Waar Scribbble in past",
     "scribbbleFits": [
-      "Zelfde kerntools als Epic Pen — pen, marker, pijl, rechthoek, tekst — zonder Pro‑betaalmuur",
-      "Voegt Spotlight (focus dim), Magnify (schermzoom), Meet en Whiteboard-modus toe — Epic Pen heeft geen van deze, en ZoomIt heeft alleen de zoom en een blanco scherm",
-      "Ondersteuning voor meerdere beeldschermen — annoteer het scherm dat je presenteert",
+      "Dezelfde kern-tools als Epic Pen (pen, markeerder, pijl, rechthoek, tekst) zonder een Pro-betaalmuur",
+      "Voegt Spotlight (focus-dimming), Magnify (schermzoom), Meet en Whiteboard-modus toe. Epic Pen heeft geen van deze, en ZoomIt heeft alleen de zoom en een leeg scherm",
+      "Ondersteuning voor meerdere beeldschermen: annoteer het scherm dat je presenteert",
       "Mac-native UI met Apple Silicon-ondersteuning",
       "Gratis te downloaden en proberen, eenmalige licentie"
     ],
@@ -274,15 +274,15 @@
       },
       {
         "q": "Waarom kiezen gebruikers ZoomIt boven Epic Pen?",
-        "a": "Drie hoofdredenen: (1) ZoomIt is volledig gratis zonder Pro‑laag, terwijl Epic Pen vormen en tekst achter een betaalde upgrade zet. (2) ZoomIt bevat een echte schermzoom voor het tonen van fijne details, wat Epic Pen mist. (3) ZoomIt draait nu op macOS — Epic Pen niet. Reviewers noemen ook dat ZoomIt's wrijvingsloze sneltoetsen sneller aanvoelen dan Epic Pen's werkbalk."
+        "a": "Drie hoofdredenen: (1) ZoomIt is volledig gratis zonder Pro-niveau, terwijl Epic Pen vormen en tekst achter een betaalde upgrade plaatst. (2) ZoomIt bevat een echte schermzoomfunctie om fijne details te tonen, iets wat Epic Pen mist. (3) ZoomIt draait nu op macOS en Epic Pen niet. Reviewers merken ook op dat ZoomIt's frictionloze sneltoetsen sneller aanvoelen dan Epic Pen's werkbalk."
       },
       {
         "q": "Hoe vergelijkt Epic Pen zich met ZoomIt?",
-        "a": "Epic Pen heeft een vriendelijkere, modernere annotatie‑interface en is ontworpen rond presentatiegebruik. ZoomIt is een Sysinternals‑hulpmiddel — minimale interface, sneltoetsgestuurd, met extra functies (zoom, pauze‑timer, whiteboard‑modus) erbovenop. Epic Pen's gratis laag is beperkt tot pen en marker; ZoomIt's volledige functieset is gratis."
+        "a": "Epic Pen heeft een vriendelijkere, modernere annotatie-UI en is ontworpen voor presentaties. ZoomIt is een Sysinternals-utility: minimale UI, sneltoetsgestuurd, met extra functies (zoom, pauzetimer, whiteboard-modus) erbovenop. Epic Pen's gratis niveau is beperkt tot pen en markeerder; ZoomIt's volledige functieset is gratis."
       },
       {
         "q": "Is er een Mac‑alternatief voor zowel ZoomIt als Epic Pen?",
-        "a": "Ja. Scribbble is een Mac-first schermannotatie-app die het goede van beide combineert — een moderne, gepolijste UI zoals Epic Pen, met de gefocuste, sneltoetsgestuurde workflow van ZoomIt. Het bevat pen, markeerder, pijl, rechthoek, tekst, Spotlight (focus dim), Magnify (schermzoom), Meet en Whiteboard-modus, plus ondersteuning voor meerdere beeldschermen — gratis te downloaden en te proberen met een eenmalige licentie om alles vrij te schakelen."
+        "a": "Ja. Scribbble is een Mac-first schermaanpassingsapp die het beste van beide combineert: een moderne, gepolijste UI zoals Epic Pen, met de gefocuste, sneltoetsgestuurde workflow van ZoomIt. Het bevat pen, markeerder, pijl, rechthoek, tekst, Spotlight (focus-dimming), Magnify (schermzoom), Meet en Whiteboard-modus, plus ondersteuning voor meerdere beeldschermen. Je kunt het gratis downloaden en uitproberen, en met een eenmalige licentie ontgrendel je alles."
       },
       {
         "q": "Welke functies bieden alternatieven die Epic Pen niet heeft?",
@@ -294,7 +294,7 @@
       },
       {
         "q": "Is ZoomIt veilig om te gebruiken?",
-        "a": "Ja — ZoomIt wordt door Microsoft gepubliceerd als onderdeel van de Sysinternals‑suite en rechtstreeks vanaf Microsoft's site verspreid. Het wordt veel gebruikt in enterprise‑omgevingen."
+        "a": "Ja. ZoomIt wordt door Microsoft gepubliceerd als onderdeel van de Sysinternals-suite en direct vanaf Microsoft's site verspreid. Het wordt veel gebruikt in enterprise-omgevingen."
       },
       {
         "q": "Werkt Epic Pen op Mac?",
@@ -314,7 +314,7 @@
     "scribbbleVsItem": "Scribbble vs {name}",
     "bottomLine": "Conclusie",
     "stillImagesTitle": "Annoteren van schermafbeeldingen in plaats van je live scherm?",
-    "stillImagesBody": "Elke app op deze lijst tekent op je live Mac-scherm. Als je eigenlijk een schermafbeelding wilt markeren die je al hebt gemaakt, is dat een andere klus — gebruik onze gratis Mac-schermafbeelding annotatie-tool. Plak een afbeelding, voeg pijlen, tekst, genummerde stappen of een blur toe om gevoelige details te anonimiseren, en kopieer het resultaat direct terug naar je klembord. Het draait in de browser, dus je hoeft niets te installeren en je afbeelding verlaat je apparaat nooit.",
+    "stillImagesBody": "Elke app in deze lijst tekent op je live Mac-scherm. Als wat je eigenlijk nodig hebt is het markeren van een screenshot die je al hebt gemaakt, is dat een andere taak. Gebruik onze gratis Mac-screenshotannotatietool. Plak een afbeelding, voeg pijlen, tekst, genummerde stappen of een blur toe om gevoelige details te anonimiseren, en kopieer het resultaat direct terug naar je klembord. Het draait in de browser, dus niets te installeren en je afbeelding verlaat je apparaat nooit.",
     "stillImagesCta": "Open de gratis Mac-schermafbeelding annotatie-tool",
     "ctaTitle": "Probeer onze topkeuze: <gradient>Scribbble</gradient>",
     "ctaSubtitle": "Gratis downloaden. Eenmalige licentie. Native macOS.",

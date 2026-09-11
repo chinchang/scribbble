@@ -20,15 +20,15 @@ export const personas: Persona[] = [
       "Highlight slides, sketch over PDFs and annotate Zoom shares live. Scribbble is the Mac screen annotation app made for teachers. Free download, one-time license.",
     h1: "The screen annotation app built for teachers",
     subheadline:
-      "Mark up slides, websites, PDFs and Zoom shares in real time. Keep students focused on exactly what matters — without alt-tabbing into a separate whiteboard.",
+      "Mark up slides, websites, PDFs and Zoom shares in real time. Keep students focused on exactly what matters, without alt-tabbing into a separate whiteboard.",
     painPoints: [
       {
         title: "Switching to a whiteboard breaks the lesson flow",
-        body: "Opening Jamboard or Miro mid-class loses student attention. Scribbble draws on top of whatever you already have open — slides, browsers, PDFs, code editors — and when you do need a blank canvas, its Whiteboard mode is one hotkey away instead of another tab.",
+        body: "Opening Jamboard or Miro mid-class loses student attention. Scribbble draws on top of whatever you already have open (slides, browsers, PDFs, code editors), and when you do need a blank canvas, its Whiteboard mode is one hotkey away instead of another tab.",
       },
       {
         title: "Students can't tell what you're pointing at",
-        body: "On a shared screen, a mouse pointer is invisible to half the class. Circle it, underline it, or draw an arrow — your emphasis is unmistakable on the recording too.",
+        body: "On a shared screen, a mouse pointer is invisible to half the class. Circle it, underline it, or draw an arrow, and your emphasis is unmistakable on the recording too.",
       },
       {
         title: "Recording lessons means re-doing diagrams",
@@ -42,7 +42,7 @@ export const personas: Persona[] = [
       },
       {
         title: "Recorded lectures and Loom videos",
-        body: "Use the pen and arrow tools while recording with QuickTime, Loom or ScreenStudio. Annotations are baked into the recording — no post-production needed.",
+        body: "Use the pen and arrow tools while recording with QuickTime, Loom or ScreenStudio. Annotations are baked into the recording, so there's no post-production needed.",
       },
       {
         title: "1-on-1 tutoring",
@@ -60,7 +60,7 @@ export const personas: Persona[] = [
       "Text tool for vocabulary call-outs",
       "Snapshot the whole screen or a region to save student work or lesson stills",
       "Quick-erase to keep slides clean",
-      "Multi-monitor support — annotate the display you're sharing, not just the main one",
+      "Multi-monitor support: annotate the display you're sharing, not just the main one",
     ],
     faq: [
       {
@@ -73,18 +73,18 @@ export const personas: Persona[] = [
       },
       {
         q: "Does Scribbble work with multiple monitors?",
-        a: "Yes. If you teach with slides on a projector or external display and your notes on the laptop screen, you can annotate whichever display you're sharing — Scribbble supports multi-monitor setups rather than locking you to the main screen.",
+        a: "Yes. If you teach with slides on a projector or external display and your notes on the laptop screen, you can annotate whichever display you're sharing. Scribbble supports multi-monitor setups rather than locking you to the main screen.",
       },
       {
         q: "Is there a discount for educators?",
-        a: "Reach out via the support link below — we're happy to help teachers and schools with bulk licensing.",
+        a: "Reach out via the support link below. We're happy to help teachers and schools with bulk licensing.",
       },
     ],
   },
   {
     slug: "streamers",
     audience: "Streamers",
-    title: "Draw on Your Stream Live — Mac Annotation for OBS / Streamlabs",
+    title: "Draw on Your Stream Live: Mac Annotation for OBS / Streamlabs",
     description:
       "Circle the loot, sketch the strat, highlight chat. Scribbble lets Mac streamers draw on screen live in OBS, Streamlabs or any capture. Free to try.",
     h1: "Draw on your stream in real time",
@@ -97,7 +97,7 @@ export const personas: Persona[] = [
       },
       {
         title: "Browser-source overlays add latency and complexity",
-        body: "Scribbble runs as a native Mac app — no browser source, no extra OBS scene, no audio routing weirdness.",
+        body: "Scribbble runs as a native Mac app: no browser source, no extra OBS scene, no audio routing weirdness.",
       },
     ],
     workflows: [
@@ -124,12 +124,12 @@ export const personas: Persona[] = [
       "Rectangle, ellipse and text tools for overlays",
       "Snapshot the screen or a region for clip thumbnails and post-stream highlights",
       "Quick-clear hotkey to wipe the screen between bits",
-      "Multi-monitor support — draw on the gameplay display while chat stays on the other",
+      "Multi-monitor support: draw on the gameplay display while chat stays on the other",
     ],
     faq: [
       {
         q: "Does Scribbble work with OBS and Streamlabs?",
-        a: "Yes. Scribbble draws at the OS level so any screen-capture source — OBS, Streamlabs, Restream — picks up your annotations automatically.",
+        a: "Yes. Scribbble draws at the OS level so any screen-capture source (OBS, Streamlabs, Restream) picks up your annotations automatically.",
       },
       {
         q: "Does it work if I stream from a two-monitor setup?",
@@ -144,12 +144,12 @@ export const personas: Persona[] = [
   {
     slug: "youtubers",
     audience: "YouTubers",
-    title: "Screen Annotation App for YouTubers (Mac) — Skip Post-Editing",
+    title: "Screen Annotation App for YouTubers (Mac): Skip Post-Editing",
     description:
-      "Stop adding circles in post. Draw arrows, boxes and callouts while you record on Mac — Scribbble bakes them right into the screen capture. Free to try.",
+      "Stop adding circles in post. Draw arrows, boxes and callouts while you record on Mac. Scribbble bakes them right into the screen capture. Free to try.",
     h1: "The annotation tool for YouTube creators",
     subheadline:
-      "Stop adding circles in post. Draw arrows, boxes and call-outs while you record — Scribbble bakes them right into the screen capture.",
+      "Stop adding circles in post. Draw arrows, boxes and call-outs while you record. Scribbble bakes them right into the screen capture.",
     painPoints: [
       {
         title: "Adding callouts in Final Cut or Premiere is slow",
@@ -163,7 +163,7 @@ export const personas: Persona[] = [
     workflows: [
       {
         title: "Software tutorials",
-        body: "Walk through any Mac app — Figma, Photoshop, VS Code, Excel — circling buttons and drawing arrows as you narrate. The viewer's eye follows yours.",
+        body: "Walk through any Mac app (Figma, Photoshop, VS Code, Excel) circling buttons and drawing arrows as you narrate. The viewer's eye follows yours.",
       },
       {
         title: "Code walkthroughs",
@@ -185,7 +185,7 @@ export const personas: Persona[] = [
       "Snapshot the screen or a region for video thumbnails and B-roll stills",
       "Multiple colors to differentiate concepts",
       "Undo / redo so you can keep recording through small mistakes",
-      "Multi-monitor support — annotate the display you're recording, notes stay on the other",
+      "Multi-monitor support: annotate the display you're recording, notes stay on the other",
     ],
     faq: [
       {
@@ -194,19 +194,19 @@ export const personas: Persona[] = [
       },
       {
         q: "Can I undo a stroke without restarting the recording?",
-        a: "Yes — Scribbble has full undo / redo. Erase a mistake mid-take and keep rolling.",
+        a: "Yes. Scribbble has full undo / redo. Erase a mistake mid-take and keep rolling.",
       },
     ],
   },
   {
     slug: "designers",
     audience: "Designers",
-    title: "Redline on Figma & Browsers — Mac Annotation App for Designers",
+    title: "Redline on Figma & Browsers: Mac Annotation App for Designers",
     description:
-      "Sketch and redline directly on Figma, browsers and prototypes during live design crits on Mac. No exports, no plugins — Scribbble draws on top of anything. Free.",
+      "Sketch and redline directly on Figma, browsers and prototypes during live design crits on Mac. No exports, no plugins. Scribbble draws on top of anything. Free.",
     h1: "Sketch and redline directly on your designs",
     subheadline:
-      "Run design crits without exporting screenshots. Scribbble draws on top of Figma, the browser, your prototype — whatever you're reviewing — and lets you save the marked-up frame to clipboard.",
+      "Run design crits without exporting screenshots. Scribbble draws on top of Figma, the browser, your prototype, whatever you're reviewing, and lets you save the marked-up frame to clipboard.",
     painPoints: [
       {
         title: "Exporting → marking up → re-importing is friction",
@@ -218,7 +218,7 @@ export const personas: Persona[] = [
       },
       {
         title: "Eyeballing pixel measurements wastes time",
-        body: "Scribbble's Measure tool lets you check spacing, padding and component dimensions directly on screen — no exporting to a separate ruler app.",
+        body: "Scribbble's Measure tool lets you check spacing, padding and component dimensions directly on screen, with no exporting to a separate ruler app.",
       },
     ],
     workflows: [
@@ -247,12 +247,12 @@ export const personas: Persona[] = [
       "Text tool for inline notes",
       "Snapshot a frame or region to drop straight into a Linear ticket or design doc",
       "Dock the toolbar to the left or right edge to keep the canvas clear",
-      "Multi-monitor support — annotate Figma on the big display with references on the laptop",
+      "Multi-monitor support: annotate Figma on the big display with references on the laptop",
     ],
     faq: [
       {
         q: "Does Scribbble integrate with Figma?",
-        a: "Scribbble draws on top of Figma (or anything else) at the OS level — no plugin required. Annotations live on the screen, not inside the Figma file.",
+        a: "Scribbble draws on top of Figma (or anything else) at the OS level, so no plugin is required. Annotations live on the screen, not inside the Figma file.",
       },
       {
         q: "Does it work across two displays?",
@@ -260,19 +260,19 @@ export const personas: Persona[] = [
       },
       {
         q: "Can I save the annotated frame as an image?",
-        a: "The Scribbble Mac app draws on the live screen — for saving an annotated still, use the free Screenshot Annotate tool at /tools/screenshot-annotate which lets you upload or paste an image, mark it up and copy to clipboard.",
+        a: "The Scribbble Mac app draws on the live screen. For saving an annotated still, use the free Screenshot Annotate tool at /tools/screenshot-annotate which lets you upload or paste an image, mark it up and copy to clipboard.",
       },
     ],
   },
   {
     slug: "sales-teams",
     audience: "Sales teams",
-    title: "Screen Annotation for Sales Demos on Mac — Direct the Eye",
+    title: "Screen Annotation for Sales Demos on Mac: Direct the Eye",
     description:
       "Highlight pricing tiers, circle the ROI number, draw the workflow live. Scribbble is the Mac annotation app for sales teams running demos on Zoom, Gong and Loom.",
     h1: "The screen annotation tool for sales demos",
     subheadline:
-      "Direct your prospect's attention with a single keystroke. Highlight pricing tiers, circle the ROI number, draw the workflow — your demo lands harder when you guide the eye.",
+      "Direct your prospect's attention with a single keystroke. Highlight pricing tiers, circle the ROI number, draw the workflow. Your demo lands harder when you guide the eye.",
     painPoints: [
       {
         title: "Prospects miss the key moment in a demo",
@@ -280,7 +280,7 @@ export const personas: Persona[] = [
       },
       {
         title: "Recording demos for async send-throughs",
-        body: "Recorded walkthroughs are dramatically more effective with annotations baked in. No editor required — Scribbble draws live.",
+        body: "Recorded walkthroughs are dramatically more effective with annotations baked in. No editor required, Scribbble draws live.",
       },
     ],
     workflows: [
@@ -307,12 +307,12 @@ export const personas: Persona[] = [
       "Text tool for inline labels",
       "Snapshot the screen or a region for follow-up emails and recap decks",
       "One-key clear between sections of the demo",
-      "Multi-monitor support — annotate the shared display while your notes stay on the other",
+      "Multi-monitor support: annotate the shared display while your notes stay on the other",
     ],
     faq: [
       {
         q: "Does this work with Zoom, Gong, Chorus and Loom?",
-        a: "Yes. Scribbble draws at the OS level so any screen capture or share — Zoom, Gong, Chorus, Loom, Vidyard — captures the annotations.",
+        a: "Yes. Scribbble draws at the OS level so any screen capture or share (Zoom, Gong, Chorus, Loom, Vidyard) captures the annotations.",
       },
       {
         q: "Does it work when I present from a second display?",

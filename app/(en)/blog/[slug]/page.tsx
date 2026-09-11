@@ -236,7 +236,7 @@ export default async function BlogPostPage({
             Try <span className="gradient-text">Scribbble</span> on your Mac
           </h2>
           <p className="text-lg text-muted-foreground mb-10">
-            Free to download. One-time license. Native macOS — no monthly fee.
+            Free to download. One-time license. Native macOS. No monthly fee.
           </p>
           <Button
             size="lg"

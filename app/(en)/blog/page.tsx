@@ -8,7 +8,7 @@ import SiteHeader from "@/components/site-header";
 import PostCard from "@/components/blog/post-card";
 import { getAllPosts } from "@/lib/blog";
 
-const TITLE = "Scribbble Blog — Guides on Screen Annotation";
+const TITLE = "Scribbble Blog: Guides on Screen Annotation";
 const DESCRIPTION =
   "Long-form guides on screen annotation: how to draw on your screen, when to use which tool, and tips for teachers, presenters, designers and creators.";
 
@@ -59,7 +59,7 @@ export default function BlogIndexPage() {
             The Scribbble <span className="gradient-text">Blog</span>
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed">
-            Long-form guides on screen annotation — how to draw, when to draw,
+            Long-form guides on screen annotation: how to draw, when to draw,
             and the tools that make it look intentional rather than messy.
           </p>
         </div>

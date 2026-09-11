@@ -1,10 +1,10 @@
 {
   "meta": {
-    "titleDefault": "Scribbble — Mac用スクリーン注釈アプリ · 画面に直接描く",
+    "titleDefault": "Scribbble: Mac用スクリーン注釈アプリ · 画面に直接描く",
     "titleTemplate": "%s | Scribbble",
     "description": "Scribbbleは、画面上に落書きや強調、注釈を美しく描けるMacアプリです。教師、配信者、YouTuber、デザイナー、営業デモに最適。無料ダウンロード、買い切りライセンス。",
-    "ogTitle": "Scribbble — Mac用スクリーン注釈アプリ",
-    "ogImageAlt": "Scribbble — Mac用スクリーン注釈アプリ"
+    "ogTitle": "Scribbble: Mac用スクリーン注釈アプリ",
+    "ogImageAlt": "Scribbble: Mac用スクリーン注釈アプリ"
   },
   "header": {
     "cta": "Scribbbleを入手",
@@ -42,7 +42,7 @@
     "features": {
       "pen": {
         "title": "自由に描く",
-        "body": "スケッチ、囲み、アンダーライン — なめらかなペンでどんなアプリ上にも手描きで書き込めます。"
+        "body": "スケッチ、丸で囲む、下線を引く。手の動きに追従する滑らかなペンで、どんなアプリの上にも描けます。"
       },
       "shapes": {
         "title": "矢印・四角・楕円",
@@ -66,7 +66,7 @@
       },
       "snapshot": {
         "title": "スナップショットを撮る",
-        "body": "アプリを離れずに画面全体または範囲だけをキャプチャ — 注釈も含めて保存できます。"
+        "body": "アプリを切り替えずに、画面全体または選択領域を注釈つきでキャプチャできます。"
       },
       "magnify": {
         "title": "拡大・ズーム",
@@ -80,7 +80,7 @@
     "demoTitle": "<gradient>60秒</gradient>ツアーを見る",
     "demoSubtitle": "すべてのツールとショートカットを1分で紹介。",
     "seoTitle": "ライブプレゼン向けMacの<gradient>スクリーン注釈</gradient>アプリ",
-    "seoSubtitle": "Scribbbleは、スライド、ブラウザ、Figma、Zoom共有、コードエディタなどあらゆるアプリの上に描画するMac用スクリーン注釈ツールです。macOS向けに最適化されたホットキー中心のワークフローを採用しています。",
+    "seoSubtitle": "Scribbbleは、スライド、ブラウザ、Figma、Zoomの共有、コードエディタなど、あらゆるアプリの上に描けるMac用スクリーン注釈ツールで、macOS向けに設計されたホットキー中心の集中ワークフローを備えています。",
     "cards": [
       {
         "title": "本物のMac向けスクリーン注釈ツール",
@@ -92,15 +92,15 @@
       },
       {
         "title": "ペンだけじゃない",
-        "body": "ペン、蛍光ペン、矢印、四角、楕円、テキスト — さらに Spotlight（フォーカスディム）、画面上の細部を拡大する Magnify、画面上の距離を測る Measure、白紙キャンバスが使える Whiteboard モード、アプリを離れずに全画面や選択領域をキャプチャできる組み込みの Snapshot ツールを搭載しています。"
+        "body": "ペン、蛍光ペン、矢印、矩形、楕円、テキストに加え、Spotlight（フォーカスディム）、表示を拡大するMagnify、長さを測るMeasure、白紙キャンバスとして使えるWhiteboardモード、そしてアプリを切り替えずに画面全体または領域をキャプチャする組み込みのSnapshotツールを搭載しています。"
       },
       {
         "title": "無料で試せる、買い切りライセンス",
-        "body": "Scribbbleはダウンロードして無料で使えます。準備ができたら一度のライセンス購入で全機能がアンロックされます — サブスクなし、ログイン不要、アップセルのポップアップもありません。"
+        "body": "Scribbbleは無料でダウンロードして使えます。準備ができたら、買い切りライセンスで全機能をアンロック。サブスクリプションやログイン、アップセルのポップアップはありません。"
       }
     ],
     "linksWorkflowsTitle": "あらゆる Mac のワークフロー向けに作られています",
-    "linkPersona": "Mac 用注釈アプリ — {audience} 向け",
+    "linkPersona": "{audience}向けMac注釈アプリ",
     "linksCompareTitle": "Scribbble と他の Mac 注釈ツールを比較",
     "linkVs": "Scribbble vs {competitor}",
     "linkZoomitVsEpicPen": "ZoomIt vs Epic Pen",
@@ -112,21 +112,21 @@
     "chipNoSignup": "サインアップ不要",
     "chipRefund": "14日間返金保証",
     "jsonLd": {
-      "description": "Scribbble は、画面上に直接描画、ハイライト、注釈を加えられる Mac アプリです — 教師、配信者、YouTuber、デザイナー、営業デモなど向け。",
+      "description": "Scribbbleは画面上に直接描画、ハイライト、注釈を行えるMacアプリで、教師、配信者、YouTuber、デザイナー、営業デモに適しています。",
       "featureList": [
         "フリーハンドペンツール",
         "ハイライター",
-        "自動フェードモード — 線が数秒で自動的に消える",
+        "自動フェードモード: 数秒後に線が自動で消える",
         "矢印ツール",
         "四角形ツール",
         "楕円ツール",
         "テキスト注釈",
         "スポットライト（フォーカス暗転）",
-        "拡大 — 細部を見せるための画面ズーム",
-        "ホワイトボードモード — どの画面上でも白紙のキャンバスに",
+        "Magnify: 細部を見せるための画面ズーム",
+        "Whiteboardモード: どの画面上にも置ける白紙キャンバス",
         "マルチモニタ対応",
         "計測ツール",
-        "スナップショットキャプチャ — 画面全体または選択範囲",
+        "Snapshotキャプチャ: 画面全体または選択領域を取得",
         "ツールバーは左右いずれかの端にドック可能",
         "Apple Silicon ネイティブ",
         "同梱の無料 Screenshot Annotate ウェブツール"
@@ -142,16 +142,16 @@
     "downloadScribbble": "Scribbble をダウンロード"
   },
   "zoomitVsEpicPen": {
-    "title": "ZoomIt vs Epic Pen — 2026 年時点でどちらが優れている？",
-    "description": "ZoomIt と Epic Pen は人気の高い画面注釈ツールです。機能、価格、対応プラットフォームを正直に比較し、Mac ユーザーに最適な代替を紹介します。",
+    "title": "ZoomIt vs Epic Pen: 2026年、どちらが優れているか？",
+    "description": "ZoomItとEpic Penは人気のスクリーン注釈ツールです。機能、価格、対応プラットフォームを正直に比較し、Macユーザーにとっての最良の代替を提示します。",
     "badge": "実機で検証した正直な比較",
     "h1": "ZoomIt vs Epic Pen",
-    "subtitle": "人気のある画面注釈ツールを並べて比較。機能、価格、対応プラットフォーム — Mac の場合は何を選ぶべきか。",
+    "subtitle": "人気の高いスクリーン注釈ツール二つを並べて比較。機能、価格、対応プラットフォーム、そしてMacで選ぶべきもの。",
     "tldrTitle": "結論（手短に）",
     "tldr": [
       {
         "lead": "ZoomIt を選ぶべき人",
-        "body": "無料でホットキー中心のユーティリティ、画面ズームと休憩タイマー内蔵が欲しいなら ZoomIt を。Epic Pen は Mac 上で動作しないため、Mac ユーザーには不向きです。"
+        "body": "無料でホットキー中心のユーティリティ、画面ズームと休憩タイマーを内蔵したものが欲しく、Macを使っているなら、Epic PenはMacで動かないためおすすめです。"
       },
       {
         "lead": "Epic Pen を選ぶべき人",
@@ -163,9 +163,9 @@
       }
     ],
     "whatIsZoomitTitle": "ZoomItとは？",
-    "whatIsZoomitBody": "ZoomItは、画面注釈・ズーム・休憩タイマー機能を備えた無償ユーティリティで、Microsoft Sysinternalsが提供しています。Windowsで生まれ、その後macOS向けビルドも公開されました。強みは煩わしさのないホットキー操作と統合されたズーム機能で、画面上の細かい部分を見せたいシステム管理者・プレゼンター・トレーナーに人気です。",
+    "whatIsZoomitBody": "ZoomItはMicrosoftのSysinternalsによる無料のスクリーン注釈、ズーム、休憩タイマーのユーティリティです。Windowsで生まれ、その後macOS用ビルドも公開されました。強みは摩擦のないホットキーと統合されたズーム機能で、細部を見せたいシステム管理者、プレゼンター、トレーナーに人気です。",
     "whatIsEpicPenTitle": "Epic Penとは？",
-    "whatIsEpicPenBody": "Epic Penは、プレゼンや授業での利用を想定して設計されたWindows向けの画面注釈ツールです。画面上に手書きで描画したり、ハイライトしたり、（Proでは）図形やテキストを重ねられます。ZoomItよりも親しみやすいUIを備えていますが、Windows専用でネイティブなMac版はありません。",
+    "whatIsEpicPenBody": "Epic Penはプレゼンテーションや授業向けに設計されたWindows用のスクリーン注釈ツールです。どんなアプリの上でも描画やハイライトができ、Proでは図形やテキストも追加できます。ZoomItよりUIは親しみやすいですが、Windows専用で、ネイティブのMac版は存在しません。",
     "tableTitle": "機能比較（横並び）",
     "feature": "機能",
     "table": [
@@ -232,14 +232,14 @@
       {
         "feature": "モダンなMacネイティブUI",
         "zoomit": "いいえ（Windows移植）",
-        "epicPen": "—"
+        "epicPen": "Mac非対応"
       }
     ],
     "chooseZoomitTitle": "こんな場合はZoomItを選んでください…",
     "chooseZoomit": [
       "Pro版がなくても完全に無料のツールが欲しい。",
       "細かい部分を見せるための画面ズーム機能が必須。",
-      "macOSを使っている — Epic Penは動作しない。",
+      "Epic Penが動作しないmacOSを使っている",
       "ホットキー中心で最小限のUIを好む。",
       "トレーニングセッション用の休憩タイマーも欲しい。"
     ],
@@ -251,12 +251,12 @@
       "画面ズームや休憩タイマー機能が不要な場合"
     ],
     "macTitle": "Mac を使ってますか？こちらの方がおすすめです。",
-    "macBody": "Epic Pen はそもそも macOS で動作しませんし、ZoomIt の Mac ポートはまだ Windows ユーティリティの感覚が残っています。Mac をお使いで実際に“Macらしい”アプリが欲しいなら、Scribbble は macOS 向けに作られており、モダンなドラッグ可能ツールバー、Apple Silicon ネイティブのパフォーマンス、マルチモニタ対応、そして ZoomIt や Epic Pen よりも豊富なツール（Spotlight、Magnify、Measure、Whiteboard）を備えています。",
+    "macBody": "Epic PenはmacOS上でまったく動作せず、ZoomItのMac移植版は依然としてWindowsユーティリティ然とした感触があります。もしMacで実際にMacらしい体験を求めるなら、ScribbbleはmacOS専用に作られており、ドラッグ可能なモダンなツールバー、Apple Siliconネイティブのパフォーマンス、マルチモニタ対応、さらにSpotlight、Magnify、Measure、WhiteboardといったZoomItやEpic Penより豊富なツールセットを備えています。",
     "scribbbleFitsTitle": "Scribbble の位置づけ",
     "scribbbleFits": [
-      "Epic Pen と同等の基本ツール（ペン、蛍光ペン、矢印、四角形、テキスト）を有料の Pro 階層なしで提供",
-      "Spotlight（フォーカスディム）、Magnify（画面ズーム）、Measure、Whiteboard モードを追加 — Epic Pen にはどれもなく、ZoomIt にはズームと空白画面しかありません。",
-      "マルチモニタ対応 — 発表中のどのディスプレイにも注釈可能",
+      "Epic Penと同じ基本ツール（ペン、蛍光ペン、矢印、矩形、テキスト）を、Proの支払いの壁なしで提供します。",
+      "Spotlight（フォーカスディム）、Magnify（画面ズーム）、Measure、Whiteboardモードを追加。Epic Penにはこれらがなく、ZoomItはズームと白画面だけです。",
+      "マルチモニタ対応: 実際に共有しているディスプレイ上に注釈できます。",
       "Mac ネイティブ UI と Apple Silicon サポート",
       "ダウンロードして試せる無料版、購入は一度きりのライセンス"
     ],
@@ -274,15 +274,15 @@
       },
       {
         "q": "なぜユーザーは Epic Pen より ZoomIt を選ぶのですか？",
-        "a": "主な理由は三つあります：(1) ZoomIt は完全無料で Pro 階層がなく、Epic Pen は図形やテキストを有料アップグレードで制限している。(2) ZoomIt は細部を見せるための本格的な画面ズーム機能を備えている。(3) ZoomIt は現在 macOS 上でも動作する — Epic Pen は動作しません。レビューでは、ZoomIt の摩擦のないホットキーが Epic Pen のツールバーよりも高速に感じられる、という声もあります。"
+        "a": "主な理由は三つあります: (1) ZoomItはPro層がなく完全無料であること、対してEpic Penは図形やテキストを有料で制限していること、(2) ZoomItは細部を見せるための本格的な画面ズーム機能を備えていること、(3) ZoomItはmacOSでも動作する一方でEpic Penは動作しません。レビューでもZoomItの摩擦のないホットキーはEpic Penのツールバーより速く感じると指摘されています。"
       },
       {
         "q": "Epic Pen は ZoomIt と比べてどう違いますか？",
-        "a": "Epic Pen はより親しみやすくモダンな注釈 UI を持ち、プレゼンテーション用途を念頭に設計されています。ZoomIt は Sysinternals のユーティリティで、最小限の UI とホットキー中心の操作に加え、ズーム、休憩タイマー、ホワイトボードモードといった追加機能があるのが特徴です。Epic Pen の無料版はペンと蛍光ペンに限定されますが、ZoomIt の全機能は無料で利用できます。"
+        "a": "Epic Penはより親しみやすくモダンな注釈UIで、プレゼン用途を念頭に設計されています。ZoomItはSysinternalsのユーティリティで、最小限のUIにホットキー中心の操作、さらにズームや休憩タイマー、ホワイトボードモードといった追加機能が重ねられています。Epic Penの無料版はペンと蛍光ペンに制限されますが、ZoomItはフル機能が無料です。"
       },
       {
         "q": "ZoomIt と Epic Pen の両方の Mac 向け代替はありますか？",
-        "a": "はい。Scribbble は Mac を第一に考えた画面注釈アプリで、Epic Pen のようなモダンで洗練された UI と、ZoomIt のようなホットキー中心のワークフローの良いところを組み合わせています。ペン、蛍光ペン、矢印、四角、テキスト、Spotlight（フォーカスディム）、Magnify（画面ズーム）、Measure、Whiteboard モードに加え、マルチモニタ対応を備え、ダウンロードは無料で試用可能、すべてをアンロックするには一度きりのライセンス購入となります。"
+        "a": "はい。ScribbbleはMacを第一に考えたスクリーン注釈アプリで、両者の良いところを組み合わせています: Epic Penのような磨かれたモダンなUIと、ZoomItのようなホットキー中心の集中ワークフローです。ペン、蛍光ペン、矢印、矩形、テキスト、Spotlight（フォーカスディム）、Magnify（画面ズーム）、Measure、Whiteboardモード、さらにマルチモニタ対応を含みます。無料でダウンロードして試せ、買い切りライセンスで全機能を解除できます。"
       },
       {
         "q": "代替ツールは Epic Pen にないどんな機能を提供していますか？",
@@ -294,7 +294,7 @@
       },
       {
         "q": "ZoomIt は安全に使えますか？",
-        "a": "はい — ZoomIt は Sysinternals スイートの一部として Microsoft が公開しており、Microsoft のサイトから直接配布されています。企業環境でも広く使われています。"
+        "a": "はい。ZoomItはSysinternalsスイートの一部としてMicrosoftから公開され、Microsoftのサイトから配布されています。企業環境でも広く使われています。"
       },
       {
         "q": "Epic Pen は Mac で動作しますか？",
@@ -314,7 +314,7 @@
     "scribbbleVsItem": "Scribbble vs {name}",
     "bottomLine": "結論",
     "stillImagesTitle": "ライブ画面ではなくスクリーンショットを注釈したい？",
-    "stillImagesBody": "この一覧のアプリはすべて、Macのライブ画面上に直接描画します。すでに撮ったスクリーンショットをマークアップしたい場合は別の作業なので、当社の無料のMacスクリーンショット注釈ツールを使ってください。画像を貼り付けて矢印やテキスト、番号付き手順、機密情報を伏せるぼかしを追加し、そのまま結果をクリップボードにコピーできます。ブラウザ上で動くので何もインストールする必要はなく、画像がデバイスを離れることもありません。",
+    "stillImagesBody": "ここに挙げたアプリはすべてライブのMac画面上に描画します。既に撮ったスクリーンショットに注釈を入したいだけなら、それは別の用途です。当社の無料Macスクリーンショット注釈ツールを使ってください。画像を貼り付けて、矢印、テキスト、番号付き手順、あるいは機密情報を隠すぼかしを追加し、結果をそのままクリップボードにコピーできます。ブラウザ上で動作するのでインストール不要ですし、画像は端末から外に出ません。",
     "stillImagesCta": "無料のMacスクリーンショット注釈ツールを開く",
     "ctaTitle": "お試しはこちら：<gradient>Scribbble</gradient>",
     "ctaSubtitle": "無料ダウンロード。買い切りライセンス。ネイティブmacOS。",
