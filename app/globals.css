@@ -119,6 +119,9 @@
   * {
     @apply border-border outline-ring/50;
   }
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     @apply bg-background text-foreground;
   }
@@ -178,4 +181,54 @@
   background: radial-gradient(circle at 20% 80%, rgba(16, 185, 129, 0.1) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(5, 150, 105, 0.1) 0%, transparent 50%),
     radial-gradient(circle at 40% 40%, rgba(16, 185, 129, 0.05) 0%, transparent 50%);
+}
+
+/* Features section: a faint "drawing canvas" dot grid that fades out at the edges */
+.dot-grid {
+  background-image: radial-gradient(
+    circle,
+    rgba(5, 150, 105, 0.22) 1.2px,
+    transparent 1.6px
+  );
+  background-size: 22px 22px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, #000 30%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, #000 30%, transparent 100%);
+}
+
+/* Feature glyphs draw themselves in on card hover. Every shape has
+   pathLength="100", so a 100-unit dash covers the whole outline. */
+@keyframes sketch-in {
+  from {
+    stroke-dashoffset: 100;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.group:hover .feature-glyph > * {
+  stroke-dasharray: 100;
+  animation: sketch-in 0.9s cubic-bezier(0.65, 0, 0.35, 1) both;
+}
+
+.group:hover .feature-glyph > *:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.group:hover .feature-glyph > *:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.group:hover .feature-glyph > *:nth-child(4) {
+  animation-delay: 0.45s;
+}
+
+.group:hover .feature-glyph > *:nth-child(5) {
+  animation-delay: 0.6s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .group:hover .feature-glyph > * {
+    animation: none;
+  }
 }

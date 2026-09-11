@@ -660,67 +660,67 @@
     ]
   },
   "messages.home.jsonLd.featureList.2": {
-    "hash": "21dcc74f95bd2c9fafdd775f8f5e8e5df1890a43bfd0da8bb106e64c0406ee3f",
+    "hash": "da6b70ed01800d1fa3cb1b2f5d6b40a07f58df522d948c3777164e2e10e3a673",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
   },
   "messages.home.jsonLd.featureList.3": {
-    "hash": "590449157603416e509967a404c466c72e380225f0ce485ee0bb739f842ad149",
+    "hash": "21dcc74f95bd2c9fafdd775f8f5e8e5df1890a43bfd0da8bb106e64c0406ee3f",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
   },
   "messages.home.jsonLd.featureList.4": {
-    "hash": "4bd2ea362de6767f9c256d4595d8c1890b918cac0f482c3d038891328082a48d",
+    "hash": "590449157603416e509967a404c466c72e380225f0ce485ee0bb739f842ad149",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
   },
   "messages.home.jsonLd.featureList.5": {
-    "hash": "079df42f7c12ef5a71cabed9b12aef8a37069ee98889a9e099a080a2b79339f5",
+    "hash": "4bd2ea362de6767f9c256d4595d8c1890b918cac0f482c3d038891328082a48d",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
   },
   "messages.home.jsonLd.featureList.6": {
-    "hash": "0686e6c81b25e2a9de357d899f85759cec87e16dd42848b3a245eed7110490c6",
+    "hash": "079df42f7c12ef5a71cabed9b12aef8a37069ee98889a9e099a080a2b79339f5",
     "done": [
-      "hi",
       "es",
       "zh",
       "ja",
       "de",
+      "hi",
       "nl",
       "fr"
     ]
   },
   "messages.home.jsonLd.featureList.7": {
-    "hash": "2e10ffe62992722a9c792b2249e83fe8dc3c69b034dcc2ca5bb48ebc91eee026",
+    "hash": "0686e6c81b25e2a9de357d899f85759cec87e16dd42848b3a245eed7110490c6",
     "done": [
       "es",
       "zh",
@@ -732,7 +732,7 @@
     ]
   },
   "messages.home.jsonLd.featureList.8": {
-    "hash": "bb13d8799b99f0d86cb4bc266afe4426ef81d10d33b3c992520c1d044dd6f85d",
+    "hash": "2e10ffe62992722a9c792b2249e83fe8dc3c69b034dcc2ca5bb48ebc91eee026",
     "done": [
       "es",
       "zh",
@@ -744,7 +744,7 @@
     ]
   },
   "messages.home.jsonLd.featureList.9": {
-    "hash": "028a41bf004b1d09861540a84a9e7f5caba355555d0936f19e12af049b434a19",
+    "hash": "bb13d8799b99f0d86cb4bc266afe4426ef81d10d33b3c992520c1d044dd6f85d",
     "done": [
       "es",
       "zh",
@@ -756,7 +756,7 @@
     ]
   },
   "messages.home.jsonLd.featureList.10": {
-    "hash": "97345fcc4269001b633136f396b464ff286bbb3b39de5c5d6c912e0b1bd8e8b1",
+    "hash": "028a41bf004b1d09861540a84a9e7f5caba355555d0936f19e12af049b434a19",
     "done": [
       "es",
       "zh",
@@ -768,7 +768,7 @@
     ]
   },
   "messages.home.jsonLd.featureList.11": {
-    "hash": "b47afe8661b0551fd5d96fdec69f815723c0f9087e5ded2a388342fac21ce4c9",
+    "hash": "97345fcc4269001b633136f396b464ff286bbb3b39de5c5d6c912e0b1bd8e8b1",
     "done": [
       "es",
       "zh",
@@ -10668,7 +10668,7 @@
     ]
   },
   "messages.home.jsonLd.featureList.12": {
-    "hash": "99e70a9d696f7dc8eb3c1531012a2bdfa2ff8b06e48e96d164f32a2eef201bf5",
+    "hash": "b47afe8661b0551fd5d96fdec69f815723c0f9087e5ded2a388342fac21ce4c9",
     "done": [
       "es",
       "zh",
@@ -10824,7 +10824,7 @@
     ]
   },
   "messages.home.jsonLd.featureList.13": {
-    "hash": "7859d192ce3d115134716434c2ccd6bc6b3278348a823a93f23d18d95e3a5fe1",
+    "hash": "99e70a9d696f7dc8eb3c1531012a2bdfa2ff8b06e48e96d164f32a2eef201bf5",
     "done": [
       "es",
       "zh",
@@ -10836,7 +10836,7 @@
     ]
   },
   "messages.home.jsonLd.featureList.14": {
-    "hash": "228aff38dc84a9076c20a55d1c0d89365d2328bae2c89e1bf2bdcd02b72f7ed6",
+    "hash": "7859d192ce3d115134716434c2ccd6bc6b3278348a823a93f23d18d95e3a5fe1",
     "done": [
       "es",
       "zh",
@@ -11341,6 +11341,282 @@
   },
   "data.listicles.best-screen-annotation-tools-for-teachers.items.0.pros.6": {
     "hash": "6f21d69983e12cd2f04ccafbcc09ff6a7cd9f6416ecb29174b8a60da917f347e",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.home.featuresEyebrow": {
+    "hash": "3d2a143870ed244457799c6adb958647a75762e932b177447eb8b397355427d5",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.home.featuresTitle": {
+    "hash": "21d2010737f187f04cb346e403b25a08adb812cbc8ea4fc8ebd369368f23b04e",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.home.featuresSubtitle": {
+    "hash": "303e444c8d3aa6523166a4932e56c3882877072ef5bef582ebff336d18f6f705",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.home.features.pen.title": {
+    "hash": "23bca34dc39c63525d26e58b9678df5315a7ca5d0e3aae3f042099f636a0ef71",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.home.features.pen.body": {
+    "hash": "5be77d6ea603ffe36877ad60b1b2e5f4be7ec4542b9de35d0ec5b8b1575fb6db",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.home.features.shapes.title": {
+    "hash": "a9014db58bd9d1c078eb7a7e5feaabee0bd66061d31535411a9ddf5a1c735dda",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.home.features.shapes.body": {
+    "hash": "088f0351cd53fdbb24b74bb088f71754a068798097488fdafbd83d93b6d4e1a2",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.home.features.whiteboard.title": {
+    "hash": "40295e7054aafca3b6c4ff5c5235252caac11319a283dc6c730e931831288e68",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.home.features.whiteboard.body": {
+    "hash": "cd0768bb07484ba0d8e5c359921a34f9cfee2dc57237c4324d77e32308a8f760",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.home.features.autofade.title": {
+    "hash": "275f4b97623dbe45e28b90c617ac2404e7971820265fe15689b5311f452e3e9e",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.home.features.autofade.body": {
+    "hash": "71096a573f8c87e1df3aac72e0595d75be5fb7549d1a49444c6043bc3862874e",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.home.features.spotlight.title": {
+    "hash": "fca7aa83d276c8bd69f53641339b55cfd8846130d20011a7eb8ec924cb59e655",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.home.features.spotlight.body": {
+    "hash": "a804b3942734d07646ef3458fa495113fff373f5f2a8ee825ac5bd576e4d24b1",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.home.features.highlighter.title": {
+    "hash": "314410c8b86ee48e8d85c67fce6b034318d5aaa8786bbd27c4b22a2631afa1c0",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.home.features.highlighter.body": {
+    "hash": "4033928b0d52d0336a4c4e3daf2b2aac0e35aac47b7cb316e7b2ffd31278136d",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.home.features.snapshot.title": {
+    "hash": "d8de2ce6db843b7fd72de7b7825d8d17feb808d5869efca83215fbbb8d95f0a5",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.home.features.snapshot.body": {
+    "hash": "3cf3f86e79dca8fa132a4ce1d115a0b2b6590f944d7be225a01cc6a041262d24",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.home.features.magnify.title": {
+    "hash": "03987ad76d19d27cc0feb369e20883258472b225370f9c7ea079cfd8df92f51e",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.home.features.magnify.body": {
+    "hash": "71a0a846206b07b58cb0da959a47a427c19e83cc61050c801ed5888f78f09782",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.home.features.measure.title": {
+    "hash": "97345fcc4269001b633136f396b464ff286bbb3b39de5c5d6c912e0b1bd8e8b1",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.home.features.measure.body": {
+    "hash": "387f5aba04335999becfb8c7e751a31fd0677c1ffb2c91ab11232b283d518b3d",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.home.jsonLd.featureList.15": {
+    "hash": "228aff38dc84a9076c20a55d1c0d89365d2328bae2c89e1bf2bdcd02b72f7ed6",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.header.features": {
+    "hash": "5697d03daef4de9cf8db7cb11755f71358a32b4acca94909a9d449f71040d2dd",
     "done": [
       "es",
       "zh",

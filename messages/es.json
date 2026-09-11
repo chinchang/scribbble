@@ -8,6 +8,7 @@
   },
   "header": {
     "cta": "Consigue Scribbble",
+    "features": "Funciones",
     "buyLicense": "Comprar licencia"
   },
   "footer": {
@@ -35,6 +36,47 @@
     "chipZeroSetup": "Cero configuración",
     "chipPayOnce": "Paga una vez, tuyo para siempre",
     "chipAnyApp": "Funciona en cualquier app",
+    "featuresEyebrow": "El kit de herramientas",
+    "featuresTitle": "Todo lo que necesitas para <gradient>hacerte entender</gradient>",
+    "featuresSubtitle": "Un conjunto pequeño y preciso de herramientas. Cada una está a un solo atajo de teclado, para que no rompas el ritmo en medio de una presentación.",
+    "features": {
+      "pen": {
+        "title": "Dibuja a mano alzada",
+        "body": "Boceta, rodea, subraya: dibuja sobre cualquier app con un lápiz fluido que sigue el ritmo de tu mano."
+      },
+      "shapes": {
+        "title": "Flechas, rectángulos y elipses",
+        "body": "Formas limpias para señalar cosas. Arrastra para dibujar una flecha, un rectángulo o una elipse que siempre luzca intencional."
+      },
+      "whiteboard": {
+        "title": "Pizarra",
+        "body": "Blanquea la pantalla con una tecla y consigue un lienzo limpio para explicar una idea; después vuelve directamente a tu app."
+      },
+      "autofade": {
+        "title": "Modo auto-desvanecimiento",
+        "body": "Los trazos se desvanecen por sí solos unos segundos después de dibujarlos, para que puedas anotar continuamente sin detenerte a borrar."
+      },
+      "spotlight": {
+        "title": "Spotlight",
+        "body": "Oscurece todo menos un círculo alrededor del cursor, para que tu audiencia mire exactamente donde quieres."
+      },
+      "highlighter": {
+        "title": "Rotulador",
+        "body": "Un marcador translúcido que enfatiza texto y la interfaz sin ocultar lo que hay debajo."
+      },
+      "snapshot": {
+        "title": "Tomar instantáneas",
+        "body": "Captura la pantalla completa o solo una región —anotaciones incluidas— sin salir de la app."
+      },
+      "magnify": {
+        "title": "Ampliar y zoom",
+        "body": "Acércate a cualquier parte de la pantalla en vivo para mostrar detalles: texto pequeño, iconos o diseño a nivel de píxel."
+      },
+      "measure": {
+        "title": "Herramienta de medición",
+        "body": "Arrastra para medir distancias en píxeles directamente en pantalla. Útil para revisiones de diseño y comprobaciones de espaciado."
+      }
+    },
     "demoTitle": "Mira un tour de <gradient>60 segundos</gradient>",
     "demoSubtitle": "Cada herramienta, cada atajo, en un minuto.",
     "seoTitle": "La app de <gradient>anotación de pantalla</gradient> para Mac en presentaciones en vivo",
@@ -74,19 +116,20 @@
       "featureList": [
         "Herramienta de lápiz a mano alzada",
         "Marcador (highlighter)",
-        "Herramienta de flecha",
-        "Forma rectángulo",
-        "Forma elipse",
+        "Modo auto-desvanecimiento — los trazos se borran solos tras unos segundos",
+        "Herramienta de flechas",
+        "Forma de rectángulo",
+        "Forma de elipse",
         "Anotaciones de texto",
-        "Spotlight (enfoque con atenuación)",
-        "Magnify — zoom de pantalla para mostrar detalles finos",
-        "Modo Pizarra — lienzo en blanco sobre cualquier pantalla",
-        "Compatibilidad con múltiples monitores",
-        "Herramienta Medir",
-        "Captura Instantánea — pantalla completa o región seleccionada",
-        "La barra de herramientas se acopla al borde izquierdo o derecho",
+        "Spotlight (enfoque con oscurecimiento)",
+        "Ampliación — zoom de pantalla para mostrar detalles",
+        "Modo pizarra — lienzo en blanco sobre cualquier pantalla",
+        "Soporte para múltiples monitores",
+        "Herramienta de medición",
+        "Captura instantánea — pantalla completa o región seleccionada",
+        "La barra de herramientas se ancla al borde izquierdo o derecho",
         "Nativo para Apple Silicon",
-        "Herramienta web complementaria gratuita Screenshot Annotate"
+        "Herramienta complementaria gratuita Screenshot Annotate en la web"
       ],
       "offerDescription": "Descarga gratuita. Licencia de pago único para todas las funciones."
     }

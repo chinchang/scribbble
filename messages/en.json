@@ -8,6 +8,7 @@
   },
   "header": {
     "cta": "Get Scribbble",
+    "features": "Features",
     "buyLicense": "Buy License"
   },
   "footer": {
@@ -35,6 +36,47 @@
     "chipZeroSetup": "Zero setup",
     "chipPayOnce": "Pay once, own forever",
     "chipAnyApp": "Works in any app",
+    "featuresEyebrow": "The toolkit",
+    "featuresTitle": "Everything you need to <gradient>make your point</gradient>",
+    "featuresSubtitle": "A small, sharp set of tools. Each one is a single keystroke away, so you never break your flow mid-presentation.",
+    "features": {
+      "pen": {
+        "title": "Draw freehand",
+        "body": "Sketch, circle, underline — draw on top of any app with a smooth pen that keeps up with your hand."
+      },
+      "shapes": {
+        "title": "Arrows, rectangles & ellipses",
+        "body": "Clean shapes for pointing things out. Drag to draw an arrow, box or ellipse that looks intentional every time."
+      },
+      "whiteboard": {
+        "title": "Whiteboard",
+        "body": "Blank out the screen with one key and get a clean canvas for explaining an idea, then flip straight back to your app."
+      },
+      "autofade": {
+        "title": "Auto-fade mode",
+        "body": "Strokes fade away on their own moments after you draw them, so you can annotate continuously without stopping to clear."
+      },
+      "spotlight": {
+        "title": "Spotlight",
+        "body": "Dim everything except a circle around your cursor, so your audience looks exactly where you want them to."
+      },
+      "highlighter": {
+        "title": "Highlighter",
+        "body": "A translucent marker that emphasises text and UI without hiding what's underneath."
+      },
+      "snapshot": {
+        "title": "Take snapshots",
+        "body": "Capture the whole screen or just a region — annotations included — without leaving the app."
+      },
+      "magnify": {
+        "title": "Magnify & zoom",
+        "body": "Zoom into any part of the live screen to show fine detail: small text, icons, pixel-level design."
+      },
+      "measure": {
+        "title": "Measure tool",
+        "body": "Drag to measure pixel distances right on screen. Handy for design reviews and spacing checks."
+      }
+    },
     "demoTitle": "Watch a <gradient>60-second</gradient> tour",
     "demoSubtitle": "Every tool, every shortcut, in one minute.",
     "seoTitle": "The Mac <gradient>screen annotation</gradient> app for live presentations",
@@ -74,6 +116,7 @@
       "featureList": [
         "Freehand pen tool",
         "Highlighter",
+        "Auto-fade mode — strokes clear themselves after a few seconds",
         "Arrow tool",
         "Rectangle shape",
         "Ellipse shape",

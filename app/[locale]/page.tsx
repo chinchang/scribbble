@@ -16,6 +16,7 @@ import { Link } from "@/i18n/navigation";
 import SiteFooter from "@/components/site-footer";
 import LocaleDropdown from "@/components/locale-dropdown";
 import BuyLink from "@/components/buy-link";
+import FeatureIcon, { type FeatureIconName } from "@/components/feature-icons";
 import { personas } from "@/lib/personas";
 import { listicles } from "@/lib/listicles";
 import { comparisons } from "@/lib/comparisons";
@@ -57,6 +58,21 @@ export default async function Home({
   };
 
   const cards = t.raw("cards") as { title: string; body: string }[];
+  const features = t.raw("features") as Record<
+    FeatureIconName,
+    { title: string; body: string }
+  >;
+  const featureOrder: FeatureIconName[] = [
+    "pen",
+    "shapes",
+    "whiteboard",
+    "autofade",
+    "spotlight",
+    "highlighter",
+    "snapshot",
+    "magnify",
+    "measure",
+  ];
 
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
@@ -80,6 +96,12 @@ export default async function Home({
             <span className="text-2xl font-bold gradient-text">Scribbble</span>
           </div>
           <nav className="hidden md:flex items-center space-x-8">
+            <a
+              href="#features"
+              className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110 font-medium"
+            >
+              {tHeader("features")}
+            </a>
             <BuyLink
               href={BUY_URL}
               target="_blank"
@@ -235,6 +257,77 @@ export default async function Home({
               ></iframe>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section
+        id="features"
+        className="relative py-32 px-4 overflow-hidden scroll-mt-24"
+      >
+        <div className="absolute inset-0 dot-grid pointer-events-none"></div>
+        <div
+          className="absolute -top-24 right-1/4 w-72 h-72 bg-accent/10 rounded-full blur-3xl float-animation pointer-events-none"
+          style={{ animationDelay: "1s" }}
+        ></div>
+
+        <div className="container mx-auto max-w-6xl relative">
+          <div className="text-center mb-20">
+            <span className="inline-block mb-5 px-4 py-1.5 rounded-full border border-primary/30 bg-primary/5 text-primary text-sm font-bold uppercase tracking-[0.2em]">
+              {t("featuresEyebrow")}
+            </span>
+            <h2 className="text-5xl md:text-6xl font-black mb-6 leading-tight">
+              {t.rich("featuresTitle", {
+                gradient: (chunks) => (
+                  <span className="gradient-text">{chunks}</span>
+                ),
+              })}
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              {t("featuresSubtitle")}
+            </p>
+          </div>
+
+          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 list-none p-0 m-0">
+            {featureOrder.map((name, i) => {
+              const feature = features[name];
+              const isAccent = i % 3 === 1;
+              return (
+                <li
+                  key={name}
+                  className={`group relative rounded-3xl border-2 ${
+                    isAccent ? "border-accent/20" : "border-primary/20"
+                  } bg-card/60 backdrop-blur p-8 transition-all duration-300 hover:-translate-y-1.5 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10`}
+                >
+                  <span
+                    className="absolute top-6 right-7 text-xs font-bold tracking-[0.25em] text-primary/40 select-none"
+                    aria-hidden="true"
+                  >
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+
+                  <div
+                    className={`w-16 h-16 mb-6 rounded-2xl flex items-center justify-center text-primary ring-1 ring-primary/20 bg-gradient-to-br ${
+                      isAccent
+                        ? "from-accent/15 to-primary/5"
+                        : "from-primary/15 to-accent/5"
+                    } transition-transform duration-300 group-hover:-rotate-6 group-hover:scale-110`}
+                  >
+                    <FeatureIcon
+                      name={name}
+                      className="feature-glyph w-9 h-9"
+                    />
+                  </div>
+
+                  <h3 className="text-2xl font-bold mb-3 leading-snug">
+                    {feature.title}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {feature.body}
+                  </p>
+                </li>
+              );
+            })}
+          </ul>
         </div>
       </section>
 

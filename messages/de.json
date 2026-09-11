@@ -8,6 +8,7 @@
   },
   "header": {
     "cta": "Scribbble herunterladen",
+    "features": "Funktionen",
     "buyLicense": "Lizenz kaufen"
   },
   "footer": {
@@ -35,6 +36,47 @@
     "chipZeroSetup": "Keine Einrichtung",
     "chipPayOnce": "Einmal zahlen, für immer besitzen",
     "chipAnyApp": "Funktioniert in jeder App",
+    "featuresEyebrow": "Das Toolkit",
+    "featuresTitle": "Alles, was du brauchst, um <gradient>deinen Punkt zu machen</gradient>",
+    "featuresSubtitle": "Ein kleines, präzises Set an Werkzeugen. Jedes ist mit einer einzigen Taste erreichbar, damit du während einer Präsentation nie aus dem Fluss gerätst.",
+    "features": {
+      "pen": {
+        "title": "Freihändig zeichnen",
+        "body": "Skizzieren, einkreisen, unterstreichen — zeichne über jede App hinweg mit einem flüssigen Stift, der mit deiner Hand mithält."
+      },
+      "shapes": {
+        "title": "Pfeile, Rechtecke & Ellipsen",
+        "body": "Saubere Formen zum Hervorheben. Zieh, um einen Pfeil, Rahmen oder eine Ellipse zu zeichnen, die jedes Mal absichtlich aussieht."
+      },
+      "whiteboard": {
+        "title": "Whiteboard",
+        "body": "Blende den Bildschirm mit einer Taste aus und erhalte eine klare Leinwand zur Erklärung einer Idee, dann wechsle sofort zurück zu deiner App."
+      },
+      "autofade": {
+        "title": "Auto-Fade-Modus",
+        "body": "Striche verblassen automatisch kurz nach dem Zeichnen, sodass du kontinuierlich annotieren kannst, ohne stoppen zu müssen, um zu löschen."
+      },
+      "spotlight": {
+        "title": "Spotlight",
+        "body": "Dunkle alles ab außer einem Kreis um deinen Cursor, damit dein Publikum genau dorthin schaut, wo du willst."
+      },
+      "highlighter": {
+        "title": "Textmarker",
+        "body": "Ein transparenter Marker, der Text und UI betont, ohne das Unterliegende zu verdecken."
+      },
+      "snapshot": {
+        "title": "Snapshots erstellen",
+        "body": "Erfasse den gesamten Bildschirm oder nur einen Bereich — inklusive Anmerkungen — ohne die App zu verlassen."
+      },
+      "magnify": {
+        "title": "Vergrößern & Zoomen",
+        "body": "Zoome in jeden Bereich des Live-Bildschirms, um feine Details zu zeigen: kleine Texte, Icons, pixelgenaues Design."
+      },
+      "measure": {
+        "title": "Messwerkzeug",
+        "body": "Zieh, um Pixelabstände direkt auf dem Bildschirm zu messen. Praktisch für Design-Reviews und Abstandsprüfungen."
+      }
+    },
     "demoTitle": "Sieh dir eine <gradient>60‑sekündige</gradient> Tour an",
     "demoSubtitle": "Jedes Werkzeug, jede Taste, in einer Minute.",
     "seoTitle": "Die Mac-<gradient>Bildschirm-Annotation</gradient>-App für Live-Präsentationen",
@@ -74,18 +116,19 @@
       "featureList": [
         "Freihand‑Stift",
         "Textmarker",
-        "Pfeil‑Werkzeug",
-        "Rechteck‑Form",
-        "Ellipse‑Form",
-        "Text‑Annotationen",
-        "Spotlight (Fokus‑Abdunkelung)",
-        "Magnify — Bildschirmlupe zum Zeigen feiner Details",
+        "Auto-Fade-Modus — Striche löschen sich nach ein paar Sekunden von selbst",
+        "Pfeilwerkzeug",
+        "Rechteckform",
+        "Ellipsenform",
+        "Text-Anmerkungen",
+        "Spotlight (Fokus-Dimmung)",
+        "Vergrößern — Bildschirmzoom zum Zeigen feiner Details",
         "Whiteboard-Modus — leere Leinwand über jedem Bildschirm",
-        "Unterstützung für mehrere Monitore",
+        "Multi-Monitor-Unterstützung",
         "Messwerkzeug",
-        "Snapshot-Aufnahme — ganzer Bildschirm oder ausgewählter Bereich",
-        "Werkzeugleiste andockbar an linkem oder rechtem Rand",
-        "Apple Silicon native",
+        "Snapshot-Erfassung — ganzer Bildschirm oder ausgewählter Bereich",
+        "Werkzeugleiste andockbar an linker oder rechter Kante",
+        "Apple Silicon nativ",
         "Begleitendes kostenloses Screenshot Annotate Web-Tool"
       ],
       "offerDescription": "Kostenloser Download. Einmalkauf‑Lizenz für alle Funktionen."

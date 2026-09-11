@@ -30,6 +30,15 @@ This is the website for an app called Scribbble - a mac app to annotate/draw any
 - [x] Don't upscale small pasted images — render at natural size, clamp to viewport
 - [x] Add "Background Blur" and "Background Noise" sliders to the background tool popup
 
+### Homepage features section (2026-09-11)
+
+- [x] Add a "The toolkit" features section to the homepage (between the demo video and the SEO section) with
+      nine cards — Draw freehand, Arrows/rectangles/ellipses, Whiteboard, Auto-fade mode, Spotlight,
+      Highlighter, Take snapshots, Magnify & zoom, Measure tool — each with a custom hand-drawn-style
+      SVG glyph (`components/feature-icons.tsx`) that sketches itself in on hover. Copy lives in
+      `messages/en.json` under `home.features*`; translated into all 7 locales. Also added
+      "Auto-fade mode" to the homepage JSON-LD `featureList`
+
 ### SEO
 
 - [x] Improve homepage SEO metadata (title, description, OpenGraph, JSON-LD SoftwareApplication schema)

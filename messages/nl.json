@@ -8,6 +8,7 @@
   },
   "header": {
     "cta": "Haal Scribbble",
+    "features": "Functies",
     "buyLicense": "Koop licentie"
   },
   "footer": {
@@ -35,6 +36,47 @@
     "chipZeroSetup": "Geen setup",
     "chipPayOnce": "Betaal één keer, bezit voor altijd",
     "chipAnyApp": "Werkt in elke app",
+    "featuresEyebrow": "De toolkit",
+    "featuresTitle": "Alles wat je nodig hebt om <gradient>je punt te maken</gradient>",
+    "featuresSubtitle": "Een klein, scherp setje tools. Elk gereedschap is met één toets beschikbaar, zodat je nooit je flow onderbreekt tijdens een presentatie.",
+    "features": {
+      "pen": {
+        "title": "Vrij tekenen",
+        "body": "Schets, cirkel, onderstreep — teken bovenop elke app met een vloeiende pen die je hand bijhoudt."
+      },
+      "shapes": {
+        "title": "Pijlen, rechthoeken & ellipsen",
+        "body": "Strakke vormen om dingen aan te wijzen. Sleep om een pijl, kader of ellipse te tekenen die er elke keer bewust uitziet."
+      },
+      "whiteboard": {
+        "title": "Whiteboard",
+        "body": "Maak het scherm met één toets blanco en krijg een schoon canvas om een idee uit te leggen, en ga daarna meteen terug naar je app."
+      },
+      "autofade": {
+        "title": "Auto-fade modus",
+        "body": "Lijnen vervagen vanzelf even na het tekenen, zodat je continu kunt annoteren zonder te hoeven wissen."
+      },
+      "spotlight": {
+        "title": "Spotlight",
+        "body": "Dim alles behalve een cirkel rond je cursor, zodat je publiek precies kijkt waar jij wilt."
+      },
+      "highlighter": {
+        "title": "Marker",
+        "body": "Een doorschijnende markeerstift die tekst en UI benadrukt zonder te verbergen wat eronder staat."
+      },
+      "snapshot": {
+        "title": "Maak snapshots",
+        "body": "Leg het hele scherm of een geselecteerd gebied vast — inclusief annotaties — zonder de app te verlaten."
+      },
+      "magnify": {
+        "title": "Vergroot & zoom",
+        "body": "Zoom in op elk deel van het live scherm om fijne details te tonen: kleine tekst, iconen, pixelniveau-ontwerp."
+      },
+      "measure": {
+        "title": "Meettool",
+        "body": "Sleep om pixelafstanden direct op het scherm te meten. Handig voor designreviews en spatiëringschecks."
+      }
+    },
     "demoTitle": "Bekijk een <gradient>60-seconden</gradient> rondleiding",
     "demoSubtitle": "Elke tool, elke sneltoets, in één minuut.",
     "seoTitle": "De Mac <gradient>schermannotatie</gradient> app voor live presentaties",
@@ -74,19 +116,20 @@
       "featureList": [
         "Vrije hand pen-gereedschap",
         "Markeringspen",
+        "Auto-fade modus — lijnen wissen zichzelf na een paar seconden",
         "Pijl-gereedschap",
         "Rechthoekvorm",
         "Ellipsvorm",
         "Tekstannotaties",
         "Spotlight (focus dim)",
-        "Magnify — schermzoom om fijne details te tonen",
+        "Vergroot — schermzoom om fijne details te tonen",
         "Whiteboard-modus — blanco canvas over elk scherm",
-        "Ondersteuning voor meerdere beeldschermen",
-        "Meet-tool",
-        "Snapshot-opname — heel scherm of geselecteerd gebied",
-        "Werkbalk klikt vast aan linker- of rechterrand",
+        "Multi-monitor ondersteuning",
+        "Meettool",
+        "Snapshot vastleggen — heel scherm of geselecteerd gebied",
+        "Werkbalk dockt aan linker- of rechterrand",
         "Apple Silicon native",
-        "Compagnon gratis Screenshot Annotate webtool"
+        "Companion gratis Screenshot Annotate webtool"
       ],
       "offerDescription": "Gratis te downloaden. Eenmalige licentie voor volledige functionaliteit."
     }

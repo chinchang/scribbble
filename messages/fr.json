@@ -8,6 +8,7 @@
   },
   "header": {
     "cta": "Télécharger Scribbble",
+    "features": "Fonctionnalités",
     "buyLicense": "Acheter la licence"
   },
   "footer": {
@@ -35,6 +36,47 @@
     "chipZeroSetup": "Sans configuration",
     "chipPayOnce": "Payez une fois, possédez pour toujours",
     "chipAnyApp": "Fonctionne dans toutes vos apps",
+    "featuresEyebrow": "La boîte à outils",
+    "featuresTitle": "Tout ce qu’il faut pour <gradient>faire passer votre message</gradient>",
+    "featuresSubtitle": "Un ensemble de petits outils précis. Chacun s’active en une seule frappe, pour ne jamais interrompre votre flow en pleine présentation.",
+    "features": {
+      "pen": {
+        "title": "Dessinez à main levée",
+        "body": "Esquissez, entourez, soulignez — dessinez par‑dessus n’importe quelle app avec un stylet fluide qui suit votre main."
+      },
+      "shapes": {
+        "title": "Flèches, rectangles & ellipses",
+        "body": "Des formes nettes pour attirer l’attention. Glissez pour tracer une flèche, un cadre ou une ellipse qui a l’air volontaire à chaque fois."
+      },
+      "whiteboard": {
+        "title": "Tableau blanc",
+        "body": "Masquez l’écran d’un raccourci et obtenez une toile vierge pour expliquer une idée, puis revenez instantanément à votre app."
+      },
+      "autofade": {
+        "title": "Mode disparition automatique",
+        "body": "Les traits s’estompent seuls quelques instants après les avoir dessinés, pour annoter en continu sans devoir effacer."
+      },
+      "spotlight": {
+        "title": "Projecteur",
+        "body": "Assombrit tout sauf un cercle autour du curseur, pour que votre audience regarde exactement où vous le souhaitez."
+      },
+      "highlighter": {
+        "title": "Surligneur",
+        "body": "Un marqueur translucide qui met en valeur le texte et l’interface sans masquer ce qu’il y a en dessous."
+      },
+      "snapshot": {
+        "title": "Prendre des instantanés",
+        "body": "Capturez l’écran entier ou une zone — annotations incluses — sans quitter l’app."
+      },
+      "magnify": {
+        "title": "Agrandir & zoomer",
+        "body": "Zoomez sur n’importe quelle partie de l’écran en direct pour montrer les détails : petit texte, icônes, design au niveau des pixels."
+      },
+      "measure": {
+        "title": "Outil de mesure",
+        "body": "Glissez pour mesurer des distances en pixels directement à l’écran. Pratique pour les revues de design et les contrôles d’espacement."
+      }
+    },
     "demoTitle": "Regardez une visite de <gradient>60 secondes</gradient>",
     "demoSubtitle": "Tous les outils, tous les raccourcis, en une minute.",
     "seoTitle": "L'application Mac d'<gradient>annotation d'écran</gradient> pour présentations en direct",
@@ -74,19 +116,20 @@
       "featureList": [
         "Outil stylo libre",
         "Surligneur",
+        "Mode disparition automatique — les traits s’effacent d’eux‑mêmes après quelques secondes",
         "Outil flèche",
         "Forme rectangle",
         "Forme ellipse",
-        "Annotations texte",
-        "Spotlight (mise au point avec assombrissement)",
-        "Magnify — zoom d’écran pour montrer les détails fins",
-        "Mode Whiteboard — toile vierge au-dessus de n’importe quel écran",
-        "Prise en charge multi-écrans",
-        "Outil Mesure",
-        "Capture Snapshot — écran entier ou région sélectionnée",
-        "La barre d’outils se fixe à gauche ou à droite",
+        "Annotations textuelles",
+        "Spotlight (mise au point par assombrissement)",
+        "Agrandissement — zoom écran pour montrer les détails",
+        "Mode tableau blanc — toile vierge sur n’importe quel écran",
+        "Prise en charge multi‑écrans",
+        "Outil de mesure",
+        "Capture d’instantané — écran entier ou zone sélectionnée",
+        "La barre d’outils s’amarre à gauche ou à droite",
         "Natif Apple Silicon",
-        "Outil web gratuit compagnon Screenshot Annotate"
+        "Outil web compagnon gratuit Screenshot Annotate"
       ],
       "offerDescription": "Téléchargement gratuit. Licence unique pour toutes les fonctionnalités."
     }
