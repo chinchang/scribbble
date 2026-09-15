@@ -370,6 +370,7 @@ export default function DesktopDemo() {
   const [tooltip, setTooltip] = useState<ToolId | null>(null);
   const [color, setColor] = useState(TOOL_COLORS.pen!);
   const [reduced, setReduced] = useState(false);
+  const [focused, setFocused] = useState(false);
 
   const registerTarget = useCallback(
     (name: string, el: HTMLElement | null) => {
@@ -388,11 +389,28 @@ export default function DesktopDemo() {
     onMq();
     mq.addEventListener("change", onMq);
 
+    // Keep the whole desktop visible under the sticky site header.
+    const header = document.querySelector<HTMLElement>("header");
+    const offset = header ? Math.round(header.getBoundingClientRect().height) : 0;
+    section.style.setProperty("--demo-offset", `${offset}px`);
+
+    // One observer, three jobs: 15% runs the demo, 60% snaps the section to
+    // the top of the viewport, 80% lifts the grayscale filter.
+    let prevRatio: number | null = null;
     const io = new IntersectionObserver(
       ([entry]) => {
-        visibleRef.current = entry.isIntersecting;
+        const ratio = entry.isIntersecting ? entry.intersectionRatio : 0;
+        visibleRef.current = ratio >= 0.15;
+        setFocused(ratio >= 0.8);
+        if (prevRatio !== null && prevRatio < 0.6 && ratio >= 0.6) {
+          section.scrollIntoView({
+            block: "start",
+            behavior: mq.matches ? "auto" : "smooth",
+          });
+        }
+        prevRatio = ratio;
       },
-      { threshold: 0.15 },
+      { threshold: [0, 0.15, 0.6, 0.8] },
     );
     io.observe(section);
 
@@ -1024,7 +1042,8 @@ export default function DesktopDemo() {
     <section
       ref={sectionRef}
       aria-label={t("ariaLabel")}
-      className="desktop-demo relative h-[100svh] min-h-[620px] overflow-hidden bg-[#140f2c] text-white select-none"
+      data-focus={focused ? "true" : undefined}
+      className="desktop-demo relative h-[calc(100svh-var(--demo-offset,0px))] min-h-[620px] scroll-mt-[var(--demo-offset,0px)] overflow-hidden bg-[#140f2c] text-white select-none grayscale hover:grayscale-0 data-[focus=true]:grayscale-0 transition-[filter] duration-700 ease-out"
     >
       {/* Desktop */}
       <DesktopScene registerTarget={registerTarget} interactive />
