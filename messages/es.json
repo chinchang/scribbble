@@ -36,6 +36,37 @@
     "chipZeroSetup": "Cero configuración",
     "chipPayOnce": "Paga una vez, tuyo para siempre",
     "chipAnyApp": "Funciona en cualquier app",
+    "desktopDemo": {
+      "ariaLabel": "Demostración automática de las herramientas de Scribbble en un escritorio Mac",
+      "eyebrow": "Demostración automática",
+      "title": "Todas las herramientas, en acción",
+      "subtitle": "Relájate. El cursor selecciona cada herramienta de la barra de Scribbble y la usa directamente en el escritorio, tal como tú lo harías.",
+      "pause": "Pausar demo",
+      "play": "Reproducir demo",
+      "typedText": "¡Listo para enviar!",
+      "menu": {
+        "file": "Archivo",
+        "edit": "Editar",
+        "view": "Visualizar",
+        "window": "Ventana",
+        "help": "Ayuda"
+      },
+      "tools": {
+        "pen": "Lápiz",
+        "rectangle": "Rectángulo",
+        "highlighter": "Rotulador",
+        "measure": "Medir",
+        "spotlight": "Foco",
+        "magnify": "Ampliar",
+        "text": "Texto",
+        "whiteboard": "Pizarra",
+        "autofade": "Desvanecimiento automático",
+        "snapshot": "Instantánea",
+        "clear": "Borrar todo",
+        "hide": "Ocultar dibujos",
+        "close": "Cerrar"
+      }
+    },
     "featuresEyebrow": "El kit de herramientas",
     "featuresTitle": "Todo lo que necesitas para <gradient>hacerte entender</gradient>",
     "featuresSubtitle": "Un conjunto pequeño y preciso de herramientas. Cada una está a un solo atajo de teclado, para que no rompas el ritmo en medio de una presentación.",

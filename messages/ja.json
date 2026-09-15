@@ -36,6 +36,37 @@
     "chipZeroSetup": "セットアップ不要",
     "chipPayOnce": "一度支払えばずっと使える",
     "chipAnyApp": "どんなアプリでも動作",
+    "desktopDemo": {
+      "ariaLabel": "Macデスクトップ上でScribbbleのツールが自動で動作するデモ",
+      "eyebrow": "自動デモ",
+      "title": "すべてのツールを実演",
+      "subtitle": "そのままご覧ください。カーソルがScribbbleのツールバーから各ツールを選び、実際のデスクトップ上であなたの代わりに操作します。",
+      "pause": "デモを一時停止",
+      "play": "デモを再生",
+      "typedText": "Ship it!",
+      "menu": {
+        "file": "ファイル",
+        "edit": "編集",
+        "view": "表示",
+        "window": "ウインドウ",
+        "help": "ヘルプ"
+      },
+      "tools": {
+        "pen": "ペン",
+        "rectangle": "四角形",
+        "highlighter": "蛍光ペン",
+        "measure": "計測",
+        "spotlight": "スポットライト",
+        "magnify": "拡大",
+        "text": "テキスト",
+        "whiteboard": "ホワイトボード",
+        "autofade": "自動フェード",
+        "snapshot": "スナップショット",
+        "clear": "すべて消去",
+        "hide": "描画を非表示",
+        "close": "閉じる"
+      }
+    },
     "featuresEyebrow": "ツールキット",
     "featuresTitle": "必要なものはすべて揃っている。<gradient>要点を伝える</gradient>",
     "featuresSubtitle": "小さく研ぎ澄まされたツール群。どれもワンキーで呼び出せるので、プレゼンの流れを途切れさせません。",

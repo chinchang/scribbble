@@ -232,3 +232,43 @@
     animation: none;
   }
 }
+
+/* Homepage self-playing desktop demo */
+.demo-cursor svg {
+  transform: scale(1);
+}
+.demo-cursor[data-pressed="true"] svg {
+  transform: scale(0.82);
+}
+.demo-toolbar[data-hidden="true"] {
+  transform: translate(160%, -50%);
+}
+.demo-thumb {
+  transform: translateX(150%) rotate(4deg);
+  opacity: 0;
+  transition:
+    transform 500ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    opacity 300ms ease;
+}
+.demo-thumb[data-show="true"] {
+  transform: translateX(0) rotate(0deg);
+  opacity: 1;
+}
+.demo-caret {
+  visibility: hidden;
+}
+[data-typing="true"] .demo-caret {
+  visibility: visible;
+  animation: demo-caret-blink 900ms steps(2, start) infinite;
+}
+@keyframes demo-caret-blink {
+  to {
+    visibility: hidden;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .demo-caret,
+  .desktop-demo .animate-ping {
+    animation: none;
+  }
+}

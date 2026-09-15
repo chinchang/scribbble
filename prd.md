@@ -39,6 +39,19 @@ This is the website for an app called Scribbble - a mac app to annotate/draw any
       `messages/en.json` under `home.features*`; translated into all 7 locales. Also added
       "Auto-fade mode" to the homepage JSON-LD `featureList`
 
+### Self-playing desktop demo on the homepage (2026-09-16)
+
+- [x] Add a viewport-height section between the hero and the video (`components/desktop-demo.tsx`) that
+      mimics a macOS desktop: aurora wallpaper (`public/demo-wallpaper.jpg`), menu bar with system tray,
+      dock, a mock document window, and Scribbble's vertical toolbar on the right (color swatch, stroke
+      dot, pen, rectangle, highlighter, measure, spotlight, magnify, text, whiteboard, auto-fade,
+      snapshot, clear, hide, close). A dummy cursor loops forever: it clicks each tool in toolbar order
+      and demos it on the desktop (hand-drawn pen strokes, rectangle drag, highlighter, pixel measure,
+      spotlight follow, magnifier lens, typed text, whiteboard sketch, auto-fading strokes, snapshot
+      flash + thumbnail, hide/show, clear, close + reopen). rAF-driven, pauses when scrolled out of view
+      or via a keyboard-accessible Pause button, static under `prefers-reduced-motion`. Copy lives in
+      `messages/en.json` under `home.desktopDemo`; translated into all 7 locales
+
 ### SEO
 
 - [x] Improve homepage SEO metadata (title, description, OpenGraph, JSON-LD SoftwareApplication schema)

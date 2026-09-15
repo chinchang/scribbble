@@ -36,6 +36,37 @@
     "chipZeroSetup": "Geen setup",
     "chipPayOnce": "Betaal één keer, bezit voor altijd",
     "chipAnyApp": "Werkt in elke app",
+    "desktopDemo": {
+      "ariaLabel": "Zelf afspelende demo van Scribbble's gereedschappen op een Mac-bureaublad",
+      "eyebrow": "Zelf afspelende demo",
+      "title": "Alle tools, in actie",
+      "subtitle": "Leun achterover. De cursor kiest elk gereedschap uit Scribbble's werkbalk en gebruikt het direct op het bureaublad, precies zoals jij zou doen.",
+      "pause": "Demo pauzeren",
+      "play": "Demo afspelen",
+      "typedText": "Ship it!",
+      "menu": {
+        "file": "Bestand",
+        "edit": "Wijzig",
+        "view": "Beeld",
+        "window": "Venster",
+        "help": "Help"
+      },
+      "tools": {
+        "pen": "Pen",
+        "rectangle": "Rechthoek",
+        "highlighter": "Marker",
+        "measure": "Meetinstrument",
+        "spotlight": "Spotlight",
+        "magnify": "Vergrootglas",
+        "text": "Tekst",
+        "whiteboard": "Whiteboard",
+        "autofade": "Automatisch vervagen",
+        "snapshot": "Momentopname",
+        "clear": "Alles wissen",
+        "hide": "Aantekeningen verbergen",
+        "close": "Sluiten"
+      }
+    },
     "featuresEyebrow": "De toolkit",
     "featuresTitle": "Alles wat je nodig hebt om <gradient>je punt te maken</gradient>",
     "featuresSubtitle": "Een klein, scherp setje tools. Elk gereedschap is met één toets beschikbaar, zodat je nooit je flow onderbreekt tijdens een presentatie.",

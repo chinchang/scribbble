@@ -36,6 +36,37 @@
     "chipZeroSetup": "Keine Einrichtung",
     "chipPayOnce": "Einmal zahlen, für immer besitzen",
     "chipAnyApp": "Funktioniert in jeder App",
+    "desktopDemo": {
+      "ariaLabel": "Selbstlaufende Demo der Werkzeuge von Scribbble auf einem Mac-Desktop",
+      "eyebrow": "Selbstlaufende Demo",
+      "title": "Alle Werkzeuge, in Aktion",
+      "subtitle": "Lehnen Sie sich zurück. Der Cursor wählt jedes Werkzeug aus der Scribbble-Symbolleiste und verwendet es direkt auf dem Desktop, so wie Sie es tun würden.",
+      "pause": "Demo pausieren",
+      "play": "Demo abspielen",
+      "typedText": "Ship it!",
+      "menu": {
+        "file": "Ablage",
+        "edit": "Bearbeiten",
+        "view": "Darstellung",
+        "window": "Fenster",
+        "help": "Hilfe"
+      },
+      "tools": {
+        "pen": "Stift",
+        "rectangle": "Rechteck",
+        "highlighter": "Textmarker",
+        "measure": "Messen",
+        "spotlight": "Spotlight",
+        "magnify": "Vergrößern",
+        "text": "Text",
+        "whiteboard": "Whiteboard",
+        "autofade": "Automatisch verblassen",
+        "snapshot": "Schnappschuss",
+        "clear": "Alles löschen",
+        "hide": "Zeichnungen ausblenden",
+        "close": "Schließen"
+      }
+    },
     "featuresEyebrow": "Das Toolkit",
     "featuresTitle": "Alles, was du brauchst, um <gradient>deinen Punkt zu machen</gradient>",
     "featuresSubtitle": "Ein kleines, präzises Set an Werkzeugen. Jedes ist mit einer einzigen Taste erreichbar, damit du während einer Präsentation nie aus dem Fluss gerätst.",

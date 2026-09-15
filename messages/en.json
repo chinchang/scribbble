@@ -36,6 +36,37 @@
     "chipZeroSetup": "Zero setup",
     "chipPayOnce": "Pay once, own forever",
     "chipAnyApp": "Works in any app",
+    "desktopDemo": {
+      "ariaLabel": "Self-playing demo of Scribbble's tools on a Mac desktop",
+      "eyebrow": "Self-playing demo",
+      "title": "Every tool, in action",
+      "subtitle": "Sit back. The cursor picks each tool from Scribbble's toolbar and uses it right on the desktop, just like you would.",
+      "pause": "Pause demo",
+      "play": "Play demo",
+      "typedText": "Ship it!",
+      "menu": {
+        "file": "File",
+        "edit": "Edit",
+        "view": "View",
+        "window": "Window",
+        "help": "Help"
+      },
+      "tools": {
+        "pen": "Pen",
+        "rectangle": "Rectangle",
+        "highlighter": "Highlighter",
+        "measure": "Measure",
+        "spotlight": "Spotlight",
+        "magnify": "Magnify",
+        "text": "Text",
+        "whiteboard": "Whiteboard",
+        "autofade": "Auto-fade",
+        "snapshot": "Snapshot",
+        "clear": "Clear all",
+        "hide": "Hide drawings",
+        "close": "Close"
+      }
+    },
     "featuresEyebrow": "The toolkit",
     "featuresTitle": "Everything you need to <gradient>make your point</gradient>",
     "featuresSubtitle": "A small, sharp set of tools. Each one is a single keystroke away, so you never break your flow mid-presentation.",

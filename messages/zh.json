@@ -36,6 +36,37 @@
     "chipZeroSetup": "零设置",
     "chipPayOnce": "一次购买，永久拥有",
     "chipAnyApp": "适用于任意应用",
+    "desktopDemo": {
+      "ariaLabel": "Scribbble 在 Mac 桌面上的工具自动演示",
+      "eyebrow": "自动演示",
+      "title": "每个工具，实际演示",
+      "subtitle": "请放松观看。光标会从 Scribbble 的工具栏中依次选择每个工具，并直接在桌面上演示，就像你自己操作一样。",
+      "pause": "暂停演示",
+      "play": "播放演示",
+      "typedText": "发布吧！",
+      "menu": {
+        "file": "文件",
+        "edit": "编辑",
+        "view": "查看",
+        "window": "窗口",
+        "help": "帮助"
+      },
+      "tools": {
+        "pen": "画笔",
+        "rectangle": "矩形",
+        "highlighter": "荧光笔",
+        "measure": "测量工具",
+        "spotlight": "聚光灯",
+        "magnify": "放大镜",
+        "text": "文本",
+        "whiteboard": "白板",
+        "autofade": "自动淡出",
+        "snapshot": "截图",
+        "clear": "清除全部",
+        "hide": "隐藏标注",
+        "close": "关闭"
+      }
+    },
     "featuresEyebrow": "工具箱",
     "featuresTitle": "拥有一切让你<gradient>直观表达观点</gradient>所需的工具",
     "featuresSubtitle": "精简而强大的工具集。每个功能都只需一个快捷键，不会在演示过程中打断你的节奏。",

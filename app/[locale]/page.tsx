@@ -18,6 +18,7 @@ import SiteFooter from "@/components/site-footer";
 import LocaleDropdown from "@/components/locale-dropdown";
 import BuyLink from "@/components/buy-link";
 import FeatureIcon, { type FeatureIconName } from "@/components/feature-icons";
+import DesktopDemo from "@/components/desktop-demo";
 import { personas } from "@/lib/personas";
 import { listicles } from "@/lib/listicles";
 import { comparisons } from "@/lib/comparisons";
@@ -237,6 +238,8 @@ export default async function Home({
           </div>
         </div>
       </section>
+
+      <DesktopDemo />
 
       <section
         id="demo"

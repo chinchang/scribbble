@@ -11638,5 +11638,305 @@
       "nl",
       "fr"
     ]
+  },
+  "messages.home.desktopDemo.ariaLabel": {
+    "hash": "37db95895a9eca4c6a7b74eeae5bd8983ed6af245ba3ed7abef1070d675954bd",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.home.desktopDemo.eyebrow": {
+    "hash": "9816c7ed5e01657399a5a0af4afb5c4084f8c0a4c4dc60d953a5fb68630f6bd7",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.home.desktopDemo.title": {
+    "hash": "b425d75230a035fc10870d6f695817984593cf36abcf022fbd4598a575185f76",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.home.desktopDemo.subtitle": {
+    "hash": "f9754fd5d15f1f40eb45f4545170af981b86e78ef1f9113a60badf71096d2914",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.home.desktopDemo.pause": {
+    "hash": "4114dd7e57d332dff997ea9638f7189eaec0ee676631ac304da8d711e4bc2205",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.home.desktopDemo.play": {
+    "hash": "7d265bb561d1b74a81eecf5d6b76ff34d135c84c10d96dc3979919a0ea1ee20e",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.home.desktopDemo.typedText": {
+    "hash": "92fc0ceea39682285c9222a0fbaac4308e7b3f677dc976e2c290dda30420fbb9",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.home.desktopDemo.menu.file": {
+    "hash": "50009ce1da4d15e1c4a04024df691eed5f0d598e2c4c67092f205366d0adf99e",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.home.desktopDemo.menu.edit": {
+    "hash": "464c4ffd019e1e9691dcf0537c797353ef2b1c1d4833d3d463e5b74ae4547344",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.home.desktopDemo.menu.view": {
+    "hash": "dcc839a4015c4b7dd9db959a8f757833b8adb92462a751b973386e453c6d58a3",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.home.desktopDemo.menu.window": {
+    "hash": "19734a1b58cabc22cae1f88493289ee94f40ff2b350f7f1b9f7011ea84096916",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.home.desktopDemo.menu.help": {
+    "hash": "b79cac926e0b2e347e72cc91d5174037c9e17ae7733fd7bdb570f71b10cd7bfc",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.home.desktopDemo.tools.pen": {
+    "hash": "a04bd35be16789649a70cf2e6712d8e76ffbf2d993ad23db84c6e12539150e8d",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.home.desktopDemo.tools.rectangle": {
+    "hash": "0306996228eb0b748da44b48ce0d392b557fea59fc6eca397caef02aabdbc6ed",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.home.desktopDemo.tools.highlighter": {
+    "hash": "314410c8b86ee48e8d85c67fce6b034318d5aaa8786bbd27c4b22a2631afa1c0",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.home.desktopDemo.tools.measure": {
+    "hash": "ebf940f2b3eaa86c4ca34f4bfe7241f2c2815c1358cbb6b841818ca7a4aaadc7",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.home.desktopDemo.tools.spotlight": {
+    "hash": "fca7aa83d276c8bd69f53641339b55cfd8846130d20011a7eb8ec924cb59e655",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.home.desktopDemo.tools.magnify": {
+    "hash": "048816e3892a7940ab4ea2474418e940643aa247582766fae0b0148c3de2e978",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.home.desktopDemo.tools.text": {
+    "hash": "71988c4d8e0803ba4519f0b2864c1331c14a1890bf8694e251379177bfedb5c3",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.home.desktopDemo.tools.whiteboard": {
+    "hash": "40295e7054aafca3b6c4ff5c5235252caac11319a283dc6c730e931831288e68",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.home.desktopDemo.tools.autofade": {
+    "hash": "595fd79df3df6e475b5216f5e0ebb0039cc22562e3b7b24853600b6a570af790",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.home.desktopDemo.tools.snapshot": {
+    "hash": "6ad27bd4ec33b079208334dfea86ff96900f95ca640dda1d2638d694d077668b",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.home.desktopDemo.tools.clear": {
+    "hash": "29a390f9237e3c84e5641785eca25199620e53f7b6f4b9d843b23dcb5c12904f",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.home.desktopDemo.tools.hide": {
+    "hash": "79554105445c6e144dd0752b58607bc66a85086bf2d440d0c299a577cfa95760",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.home.desktopDemo.tools.close": {
+    "hash": "7d9eb7acb13e24625c404401d8e88b2350e32162455885f18276cf802f7701ed",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
   }
 }

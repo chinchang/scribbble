@@ -36,6 +36,37 @@
     "chipZeroSetup": "कोई सेटअप नहीं",
     "chipPayOnce": "एक बार भुगतान करें, हमेशा के लिए मालिक बनें",
     "chipAnyApp": "पहले से उपयोग किए जाने वाले किसी भी ऐप में काम करता है",
+    "desktopDemo": {
+      "ariaLabel": "Mac डेस्कटॉप पर Scribbble के टूल्स का ऑटो-प्ले डेमो",
+      "eyebrow": "ऑटो-प्ले डेमो",
+      "title": "हर टूल, काम करते हुए",
+      "subtitle": "आराम से बैठें। कर्सर Scribbble की टूलबार से हर टूल चुनता है और ठीक वैसे ही डेस्कटॉप पर इस्तेमाल करता है जैसा आप करते।",
+      "pause": "डेमो रोकें",
+      "play": "डेमो चलाएँ",
+      "typedText": "Ship it!",
+      "menu": {
+        "file": "File",
+        "edit": "Edit",
+        "view": "View",
+        "window": "Window",
+        "help": "Help"
+      },
+      "tools": {
+        "pen": "पेन",
+        "rectangle": "आयत",
+        "highlighter": "हाइलाइटर",
+        "measure": "मापने का टूल",
+        "spotlight": "स्पॉटलाइट",
+        "magnify": "बड़ा करें",
+        "text": "टेक्स्ट",
+        "whiteboard": "व्हाइटबोर्ड",
+        "autofade": "ऑटो-फेड",
+        "snapshot": "स्नैपशॉट",
+        "clear": "सभी मिटाएँ",
+        "hide": "ड्रॉइंग छिपाएँ",
+        "close": "बंद करें"
+      }
+    },
     "featuresEyebrow": "टूलकिट",
     "featuresTitle": "आपकी बात को <gradient>ठीक तरह से पेश करने</gradient> के लिए सबकुछ",
     "featuresSubtitle": "हल्का, तेज़ और सटीक टूल सेट। हर टूल एक ही कीबोर्ड शॉर्टकट से उपलब्ध है, ताकि प्रस्तुति के बीच आपकी बहाव न टूटे।",

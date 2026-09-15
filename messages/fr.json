@@ -36,6 +36,37 @@
     "chipZeroSetup": "Sans configuration",
     "chipPayOnce": "Payez une fois, possédez pour toujours",
     "chipAnyApp": "Fonctionne dans toutes vos apps",
+    "desktopDemo": {
+      "ariaLabel": "Démo autonome des outils de Scribbble sur un bureau Mac",
+      "eyebrow": "Démo autonome",
+      "title": "Tous les outils, en action",
+      "subtitle": "Installez-vous. Le curseur sélectionne chaque outil de la barre d’outils de Scribbble et l’utilise directement sur le bureau, comme vous le feriez.",
+      "pause": "Mettre la démo en pause",
+      "play": "Lancer la démo",
+      "typedText": "Ship it!",
+      "menu": {
+        "file": "Fichier",
+        "edit": "Édition",
+        "view": "Présentation",
+        "window": "Fenêtre",
+        "help": "Aide"
+      },
+      "tools": {
+        "pen": "Stylo",
+        "rectangle": "Rectangle",
+        "highlighter": "Surligneur",
+        "measure": "Mesure",
+        "spotlight": "Projecteur",
+        "magnify": "Loupe",
+        "text": "Texte",
+        "whiteboard": "Tableau blanc",
+        "autofade": "Dissipation automatique",
+        "snapshot": "Capture",
+        "clear": "Tout effacer",
+        "hide": "Masquer les dessins",
+        "close": "Fermer"
+      }
+    },
     "featuresEyebrow": "La boîte à outils",
     "featuresTitle": "Tout ce qu’il faut pour <gradient>faire passer votre message</gradient>",
     "featuresSubtitle": "Un ensemble de petits outils précis. Chacun s’active en une seule frappe, pour ne jamais interrompre votre flow en pleine présentation.",
