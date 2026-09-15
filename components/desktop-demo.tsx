@@ -1179,7 +1179,7 @@ export default function DesktopDemo() {
       >
         <svg
           viewBox="0 0 20 28"
-          className="w-[22px] h-[30px] drop-shadow-[0_2px_3px_rgba(0,0,0,0.5)] transition-transform duration-100 origin-top-left"
+          className="w-[30px] h-[42px] drop-shadow-[0_3px_5px_rgba(0,0,0,0.5)] transition-transform duration-100 origin-top-left"
         >
           <path
             d="M1.5 1.5v19.5l5-4.6 3.4 7.6 3.3-1.5-3.4-7.4h7.2z"
