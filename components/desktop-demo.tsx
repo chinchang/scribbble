@@ -26,8 +26,6 @@ import {
   Wifi,
   BatteryFull,
   Search,
-  Pause,
-  Play,
 } from "lucide-react";
 
 /* ------------------------------------------------------------------ */
@@ -330,13 +328,11 @@ export default function DesktopDemo() {
   const targets = useRef<Record<string, HTMLElement>>({});
 
   const visibleRef = useRef(false);
-  const pausedRef = useRef(false);
 
   const [size, setSize] = useState({ w: 0, h: 0 });
   const [active, setActive] = useState<ToolId | null>("pen");
   const [tooltip, setTooltip] = useState<ToolId | null>(null);
   const [color, setColor] = useState(TOOL_COLORS.pen!);
-  const [paused, setPaused] = useState(false);
   const [reduced, setReduced] = useState(false);
 
   const registerTarget = useCallback(
@@ -396,8 +392,7 @@ export default function DesktopDemo() {
 
     /* ---- primitives ------------------------------------------------ */
 
-    const frozen = () =>
-      !visibleRef.current || pausedRef.current || document.hidden;
+    const frozen = () => !visibleRef.current || document.hidden;
 
     const tween = (ms: number, fn: (t: number) => void) =>
       new Promise<void>((resolve, reject) => {
@@ -984,11 +979,6 @@ export default function DesktopDemo() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [size.w, size.h, reduced]);
 
-  const togglePause = () => {
-    pausedRef.current = !pausedRef.current;
-    setPaused(pausedRef.current);
-  };
-
   const sceneStyle: CSSProperties = { width: size.w, height: size.h };
 
   return (
@@ -1165,37 +1155,6 @@ export default function DesktopDemo() {
         </svg>
       </div>
 
-      {/* Caption */}
-      <div className="absolute z-[60] left-4 sm:left-8 bottom-6 md:bottom-24 max-w-sm rounded-2xl bg-black/45 backdrop-blur-xl ring-1 ring-white/15 p-5 shadow-2xl">
-        <span className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.2em] text-emerald-300">
-          <span className="relative flex w-2 h-2">
-            <span className="absolute inline-flex w-full h-full rounded-full bg-emerald-400 opacity-75 animate-ping" />
-            <span className="relative inline-flex w-2 h-2 rounded-full bg-emerald-400" />
-          </span>
-          {t("eyebrow")}
-        </span>
-        <h2 className="mt-2 text-2xl font-black leading-tight text-white">
-          {t("title")}
-        </h2>
-        <p className="mt-2 text-sm text-white/75 leading-relaxed">
-          {t("subtitle")}
-        </p>
-        {!reduced && (
-          <button
-            type="button"
-            onClick={togglePause}
-            aria-pressed={paused}
-            className="mt-4 inline-flex items-center gap-2 rounded-full bg-white/10 hover:bg-white/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 px-3.5 py-1.5 text-xs font-semibold text-white transition-colors"
-          >
-            {paused ? (
-              <Play className="w-3.5 h-3.5" />
-            ) : (
-              <Pause className="w-3.5 h-3.5" />
-            )}
-            {paused ? t("play") : t("pause")}
-          </button>
-        )}
-      </div>
     </section>
   );
 }

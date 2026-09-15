@@ -38,11 +38,6 @@
     "chipAnyApp": "Works in any app",
     "desktopDemo": {
       "ariaLabel": "Self-playing demo of Scribbble's tools on a Mac desktop",
-      "eyebrow": "Self-playing demo",
-      "title": "Every tool, in action",
-      "subtitle": "Sit back. The cursor picks each tool from Scribbble's toolbar and uses it right on the desktop, just like you would.",
-      "pause": "Pause demo",
-      "play": "Play demo",
       "typedText": "Ship it!",
       "menu": {
         "file": "File",
