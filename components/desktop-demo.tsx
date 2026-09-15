@@ -274,19 +274,19 @@ function AutofadeIcon({ className }: { className?: string }) {
 }
 
 const TOOL_ICONS: Record<ToolId, ReactNode> = {
-  pen: <PenTool className="w-[18px] h-[18px]" />,
-  rectangle: <Square className="w-[18px] h-[18px]" />,
-  highlighter: <Highlighter className="w-[18px] h-[18px]" />,
-  measure: <Ruler className="w-[18px] h-[18px]" />,
-  spotlight: <Flashlight className="w-[18px] h-[18px]" />,
-  magnify: <ZoomIn className="w-[18px] h-[18px]" />,
-  text: <Type className="w-[18px] h-[18px]" />,
-  whiteboard: <Presentation className="w-[18px] h-[18px]" />,
-  autofade: <AutofadeIcon className="w-[18px] h-[18px]" />,
-  snapshot: <Camera className="w-[18px] h-[18px]" />,
-  clear: <Trash2 className="w-[18px] h-[18px]" />,
-  hide: <EyeOff className="w-[18px] h-[18px]" />,
-  close: <X className="w-[18px] h-[18px]" />,
+  pen: <PenTool className="w-[22px] h-[22px]" />,
+  rectangle: <Square className="w-[22px] h-[22px]" />,
+  highlighter: <Highlighter className="w-[22px] h-[22px]" />,
+  measure: <Ruler className="w-[22px] h-[22px]" />,
+  spotlight: <Flashlight className="w-[22px] h-[22px]" />,
+  magnify: <ZoomIn className="w-[22px] h-[22px]" />,
+  text: <Type className="w-[22px] h-[22px]" />,
+  whiteboard: <Presentation className="w-[22px] h-[22px]" />,
+  autofade: <AutofadeIcon className="w-[22px] h-[22px]" />,
+  snapshot: <Camera className="w-[22px] h-[22px]" />,
+  clear: <Trash2 className="w-[22px] h-[22px]" />,
+  hide: <EyeOff className="w-[22px] h-[22px]" />,
+  close: <X className="w-[22px] h-[22px]" />,
 };
 
 const TOOL_ORDER: ToolId[] = [
@@ -365,6 +365,7 @@ export default function DesktopDemo() {
   const visibleRef = useRef(false);
 
   const [size, setSize] = useState({ w: 0, h: 0 });
+  const [toolbarScale, setToolbarScale] = useState(1);
   const [active, setActive] = useState<ToolId | null>("pen");
   const [tooltip, setTooltip] = useState<ToolId | null>(null);
   const [color, setColor] = useState(TOOL_COLORS.pen!);
@@ -400,6 +401,9 @@ export default function DesktopDemo() {
       cancelAnimationFrame(raf);
       raf = requestAnimationFrame(() => {
         const r = section.getBoundingClientRect();
+        // Cap the toolbar at 80% of the section height (offsetHeight ignores the scale).
+        const natural = toolbarRef.current?.offsetHeight ?? 0;
+        setToolbarScale(natural ? Math.min(1, (r.height * 0.8) / natural) : 1);
         setSize((s) =>
           Math.abs(s.w - r.width) < 1 && Math.abs(s.h - r.height) < 1
             ? s
@@ -1130,24 +1134,25 @@ export default function DesktopDemo() {
       <div
         ref={toolbarRef}
         className="demo-toolbar absolute z-[60] right-3 sm:right-5 top-1/2 -translate-y-1/2 transition-transform duration-500 ease-out"
+        style={{ scale: String(toolbarScale), transformOrigin: "right center" }}
         aria-hidden="true"
       >
-        <div className="flex flex-col items-center gap-[3px] px-[7px] py-3 rounded-[18px] bg-[#1c1c20]/95 backdrop-blur-xl ring-1 ring-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.55)]">
+        <div className="flex flex-col items-center gap-1 px-2 py-3.5 rounded-[22px] bg-[#1c1c20]/95 backdrop-blur-xl ring-1 ring-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.55)]">
           <span
-            className="w-[18px] h-[18px] my-1.5 rounded-full ring-2 ring-white/15 transition-colors duration-300"
+            className="w-[22px] h-[22px] my-2 rounded-full ring-2 ring-white/15 transition-colors duration-300"
             style={{ background: color }}
           />
-          <span className="w-[5px] h-[5px] mb-1 rounded-full bg-white/80" />
-          <span className="w-6 h-px bg-white/10 my-1" />
+          <span className="w-1.5 h-1.5 mb-1.5 rounded-full bg-white/80" />
+          <span className="w-7 h-px bg-white/10 my-1.5" />
           {TOOL_ORDER.map((tool) => (
             <span key={tool} className="relative">
               {tool === "close" && (
-                <span className="block w-6 h-px bg-white/10 my-1 mx-auto" />
+                <span className="block w-7 h-px bg-white/10 my-1.5 mx-auto" />
               )}
               <span
                 data-tool={tool}
                 data-active={active === tool ? "true" : undefined}
-                className={`relative flex items-center justify-center w-9 h-9 rounded-[10px] transition-colors duration-200 ${
+                className={`relative flex items-center justify-center w-11 h-11 rounded-xl transition-colors duration-200 ${
                   active === tool
                     ? "bg-[#1f4b8f] text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.15)]"
                     : tool === "close"
@@ -1158,7 +1163,7 @@ export default function DesktopDemo() {
                 {TOOL_ICONS[tool]}
               </span>
               <span
-                className={`absolute right-full top-1/2 -translate-y-1/2 mr-3 px-2.5 py-1 rounded-md bg-[#2b2b30] text-white text-xs font-semibold whitespace-nowrap shadow-lg ring-1 ring-white/10 transition-all duration-200 ${
+                className={`absolute right-full top-1/2 -translate-y-1/2 mr-3 px-3 py-1.5 rounded-md bg-[#2b2b30] text-white text-sm font-semibold whitespace-nowrap shadow-lg ring-1 ring-white/10 transition-all duration-200 ${
                   tooltip === tool
                     ? "opacity-100 translate-x-0"
                     : "opacity-0 translate-x-1"
@@ -1179,7 +1184,7 @@ export default function DesktopDemo() {
       >
         <svg
           viewBox="0 0 20 28"
-          className="w-[30px] h-[42px] drop-shadow-[0_3px_5px_rgba(0,0,0,0.5)] transition-transform duration-100 origin-top-left"
+          className="w-[42px] h-[58px] drop-shadow-[0_4px_7px_rgba(0,0,0,0.5)] transition-transform duration-100 origin-top-left"
         >
           <path
             d="M1.5 1.5v19.5l5-4.6 3.4 7.6 3.3-1.5-3.4-7.4h7.2z"
