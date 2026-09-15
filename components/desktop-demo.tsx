@@ -9,7 +9,7 @@ import {
   type ReactNode,
 } from "react";
 import Img from "next/image";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import {
   PenTool,
   Square,
@@ -306,11 +306,46 @@ const TOOL_ORDER: ToolId[] = [
 ];
 
 /* ------------------------------------------------------------------ */
+/* Menu bar clock: the viewer's own local time, refreshed each minute   */
+/* ------------------------------------------------------------------ */
+
+function useMenuBarClock(locale: string) {
+  // Empty on the server and first paint so the markup matches on hydration.
+  const [clock, setClock] = useState({ date: "", time: "" });
+  useEffect(() => {
+    const dateFmt = new Intl.DateTimeFormat(locale, {
+      weekday: "short",
+      day: "numeric",
+      month: "short",
+    });
+    const timeFmt = new Intl.DateTimeFormat(locale, {
+      hour: "numeric",
+      minute: "2-digit",
+    });
+    let timer = 0;
+    const tick = () => {
+      const now = new Date();
+      setClock({ date: dateFmt.format(now), time: timeFmt.format(now) });
+      // Re-run just after the next minute boundary.
+      timer = window.setTimeout(
+        tick,
+        60_000 - (now.getSeconds() * 1000 + now.getMilliseconds()) + 50,
+      );
+    };
+    tick();
+    return () => clearTimeout(timer);
+  }, [locale]);
+  return clock;
+}
+
+/* ------------------------------------------------------------------ */
 /* Component                                                           */
 /* ------------------------------------------------------------------ */
 
 export default function DesktopDemo() {
   const t = useTranslations("home.desktopDemo");
+  const locale = useLocale();
+  const clock = useMenuBarClock(locale);
 
   const sectionRef = useRef<HTMLElement>(null);
   const cursorRef = useRef<HTMLDivElement>(null);
@@ -1009,7 +1044,8 @@ export default function DesktopDemo() {
           <Search className="w-[14px] h-[14px]" />
           <Wifi className="w-[15px] h-[15px]" />
           <BatteryFull className="w-[18px] h-[18px]" />
-          <span className="tabular-nums">9:41</span>
+          <span className="hidden sm:inline tabular-nums">{clock.date}</span>
+          <span className="tabular-nums">{clock.time}</span>
         </span>
       </div>
 
