@@ -9,6 +9,7 @@
   "header": {
     "cta": "Haal Scribbble",
     "features": "Functies",
+    "pricing": "Prijzen",
     "buyLicense": "Koop licentie"
   },
   "footer": {
@@ -22,6 +23,7 @@
     "compare": "Vergelijk",
     "scribbbleVs": "Scribbble vs {competitor}",
     "company": "Bedrijf",
+    "pricing": "Prijzen",
     "buyLicense": "Koop licentie",
     "support": "Ondersteuning",
     "language": "Taal",
@@ -36,13 +38,9 @@
     "chipZeroSetup": "Geen setup",
     "chipPayOnce": "Betaal één keer, bezit voor altijd",
     "chipAnyApp": "Werkt in elke app",
+    "buyLine": "Al fan? <link>Koop een licentie</link>",
     "desktopDemo": {
       "ariaLabel": "Zelf afspelende demo van Scribbble's gereedschappen op een Mac-bureaublad",
-      "eyebrow": "Zelf afspelende demo",
-      "title": "Alle tools, in actie",
-      "subtitle": "Leun achterover. De cursor kiest elk gereedschap uit Scribbble's werkbalk en gebruikt het direct op het bureaublad, precies zoals jij zou doen.",
-      "pause": "Demo pauzeren",
-      "play": "Demo afspelen",
       "typedText": "Ship it!",
       "menu": {
         "file": "Bestand",
@@ -108,6 +106,22 @@
         "body": "Sleep om pixelafstanden direct op het scherm te meten. Handig voor designreviews en spatiëringschecks."
       }
     },
+    "testimonialsEyebrow": "Van mensen die presenteren",
+    "testimonialsTitle": "Wat <gradient>Scribbble-gebruikers</gradient> zeggen",
+    "testimonials": [
+      {
+        "quote": "I record a daily YouTube video for CSSBattle challenge. The first part involves explaining how I plan to solve the target. Scribbble <hl>makes it super easy to draw on my screen</hl>. This lets my viewers follow my cursor and, more importantly, keep track of my lines. It gives me visual reference points and helps them better understand my approach. Plus, the lifetime license offer was a huge selling point for me!",
+        "name": "Olivier Maghe",
+        "role": "Content creator"
+      }
+    ],
+    "midCtaTitle": "Bekijk het op <gradient>je eigen</gradient> scherm",
+    "midCtaSubtitle": "Download, druk op de sneltoets, teken. Over tien seconden annoteer je al wat er open staat.",
+    "midCtaChips": [
+      "Gratis download",
+      "macOS 14 of later",
+      "Geen aanmelding nodig"
+    ],
     "demoTitle": "Bekijk een <gradient>60-seconden</gradient> rondleiding",
     "demoSubtitle": "Elke tool, elke sneltoets, in één minuut.",
     "seoTitle": "De Mac <gradient>schermannotatie</gradient> app voor live presentaties",
@@ -171,6 +185,59 @@
     "downloadFree": "Gratis downloaden",
     "buyLicense": "Licentie kopen",
     "downloadScribbble": "Download Scribbble"
+  },
+  "pricing": {
+    "title": "Prijs: $12 éénmalig, levenslange updates",
+    "description": "Scribbble kost $12, één keer. Geen abonnement, geen account. Download gratis, probeer elk hulpmiddel en koop daarna één licentie met levenslange updates zodra het een plek op je dock verdient.",
+    "breadcrumb": "Prijzen",
+    "badge": "Eenmalige betaling · Geen abonnement",
+    "heroTitle": "Één prijs. <gradient>Betaal één keer</gradient>, teken voor altijd.",
+    "heroSubtitle": "Probeer eerst alle tools gratis. Als Scribbble een plekje in je dock verdient, koop je één licentie en hoef je er nooit meer over na te denken.",
+    "card": {
+      "ribbon": "Levenslange updates inbegrepen",
+      "name": "Scribbble License",
+      "tagline": "Alles in de app, vandaag en in iedere toekomstige versie.",
+      "priceNote": "éénmalig",
+      "priceSubnote": "Eenmalige afschrijving. Niet per maand, niet per jaar.",
+      "features": [
+        "Ontgrendelt alle tools: pen, vormen, markeerstift, tekst, spotlight, vergrootglas, meten, whiteboard, snapshots",
+        "Levenslange updates, elke nieuwe versie is gratis",
+        "Geen abonnement, geen account, geen login",
+        "Werkt op macOS 14 of nieuwere versies, Apple Silicon en Intel",
+        "14 dagen niet-goed-geld-terug garantie, zonder vragen"
+      ],
+      "cta": "Koop licentie voor {price}",
+      "tryLine": "Weet je het nog niet zeker? <link>Download het gratis</link> en probeer eerst alle tools."
+    },
+    "chips": [
+      "Gratis te proberen",
+      "Veilige kassa",
+      "Directe licentiesleutel per e-mail"
+    ],
+    "jsonLdOffer": "Eénmalige licentie voor Scribbble met levenslange updates.",
+    "faqTitle": "Prijs<gradient>vragen</gradient>",
+    "faq": [
+      {
+        "q": "Is Scribbble een abonnement?",
+        "a": "Nee. Je betaalt $12 één keer en de licentie is van jou. Er is geen maand- of jaarabonnement en niets wordt automatisch verlengd."
+      },
+      {
+        "q": "Krijg ik toekomstige updates?",
+        "a": "Ja. Levenslange updates zijn inbegrepen. Elke nieuwe versie van Scribbble, inclusief nieuwe tools, is een gratis update voor licentiehouders."
+      },
+      {
+        "q": "Moet ik betalen voordat ik het probeer?",
+        "a": "Nee. Download Scribbble gratis en gebruik het eerst op je eigen scherm. De licentie ontgrendelt de volledige app zodra jij er klaar voor bent."
+      },
+      {
+        "q": "Wat als het niks voor mij is?",
+        "a": "Elke aankoop valt onder een 14 dagen niet-goed-geld-terug garantie. Stuur binnen 14 dagen een e-mail naar support en je krijgt een volledige terugbetaling."
+      },
+      {
+        "q": "Is er een team- of volumelicentie?",
+        "a": "Ja, voor klaslokalen, studio’s en verkoopteams. Neem contact op via de supportlink in de footer met het aantal benodigde licenties."
+      }
+    ]
   },
   "zoomitVsEpicPen": {
     "title": "ZoomIt vs Epic Pen: welke is beter in 2026?",

@@ -2,23 +2,22 @@ import { Button } from "@/components/ui/button";
 import DownloadLink from "@/components/download-link";
 import { Badge } from "@/components/ui/badge";
 import {
-  Star,
   DollarSign,
   Download,
-  ArrowRight,
   Sparkles,
   Zap,
   Target,
   Palette,
   Layers,
 } from "lucide-react";
-import Img from "next/image";
 import { Link } from "@/i18n/navigation";
 import SiteFooter from "@/components/site-footer";
-import LocaleDropdown from "@/components/locale-dropdown";
+import SiteHeader from "@/components/site-header";
 import BuyLink from "@/components/buy-link";
 import FeatureIcon, { type FeatureIconName } from "@/components/feature-icons";
 import DesktopDemo from "@/components/desktop-demo";
+import Testimonials, { type Testimonial } from "@/components/testimonials";
+import MidCta from "@/components/mid-cta";
 import { personas } from "@/lib/personas";
 import { listicles } from "@/lib/listicles";
 import { comparisons } from "@/lib/comparisons";
@@ -33,7 +32,6 @@ export default async function Home({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "home" });
-  const tHeader = await getTranslations({ locale, namespace: "header" });
 
   const softwareJsonLd = {
     "@context": "https://schema.org",
@@ -64,6 +62,22 @@ export default async function Home({
     FeatureIconName,
     { title: string; body: string }
   >;
+  const testimonials = t.raw("testimonials") as Testimonial[];
+  const midCtaChips = t.raw("midCtaChips") as string[];
+  const buyLine = (location: string) =>
+    t.rich("buyLine", {
+      link: (chunks) => (
+        <BuyLink
+          href={BUY_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          location={location}
+          className="font-bold text-primary underline decoration-2 decoration-primary/40 underline-offset-4 hover:decoration-primary transition"
+        >
+          {chunks}
+        </BuyLink>
+      ),
+    });
   const featureOrder: FeatureIconName[] = [
     "pen",
     "shapes",
@@ -82,57 +96,7 @@ export default async function Home({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareJsonLd) }}
       />
-      <header className="relative border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
-        <div className="absolute inset-0 blob-bg"></div>
-        <div className="container mx-auto px-4 py-6 flex items-center justify-between relative">
-          <div className="flex items-center space-x-3">
-            <div className=" puls-glow transform rotate-12">
-              <Img
-                src="/icon.png"
-                alt="Scribbble Logo"
-                className=""
-                width={40}
-                height={40}
-              />
-            </div>
-            <span className="text-2xl font-bold gradient-text">Scribbble</span>
-          </div>
-          <nav className="hidden md:flex items-center space-x-8">
-            <a
-              href="#features"
-              className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110 font-medium"
-            >
-              {tHeader("features")}
-            </a>
-            <BuyLink
-              href={BUY_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110 font-medium"
-              location="home_nav"
-            >
-              {tHeader("buyLicense")}
-            </BuyLink>
-          </nav>
-          <div className="flex items-center gap-2">
-            <LocaleDropdown />
-            <Button
-              asChild
-              className="bg-gradient-to-r from-primary to-accent hover:from-accent hover:to-primary text-white shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
-            >
-              <DownloadLink
-                href={DOWNLOAD_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                location="home_nav"
-              >
-                <Download className="w-4 h-4 mr-2" />
-                {tHeader("cta")}
-              </DownloadLink>
-            </Button>
-          </div>
-        </div>
-      </header>
+      <SiteHeader locale={locale} showLocaleSwitcher location="home_nav" />
 
       <section className="relative py-32 px-4 blob-bg">
         <div className="absolute top-20 left-10 w-32 h-32 bg-accent/20 rounded-full blur-3xl float-animation"></div>
@@ -185,7 +149,7 @@ export default async function Home({
             })}
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
+          <div className="flex flex-col gap-5 justify-center items-center mb-16">
             <Button
               size="lg"
               asChild
@@ -201,23 +165,9 @@ export default async function Home({
                 {t("tryFree")}
               </DownloadLink>
             </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              asChild
-              className="px-12 py-6 text-xl font-bold border-2 border-primary text-primary hover:bg-primary hover:text-white transform hover:scale-105 transition-all duration-300 bg-transparent"
-            >
-              <BuyLink
-                href={BUY_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                location="home_hero"
-              >
-                <Star className="w-6 h-6 mr-3" />
-                {t("buyLicense")}
-                <ArrowRight className="w-5 h-5 ml-3" />
-              </BuyLink>
-            </Button>
+            <p className="text-lg text-muted-foreground">
+              {buyLine("home_hero")}
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
@@ -346,6 +296,25 @@ export default async function Home({
           </ul>
         </div>
       </section>
+
+      <Testimonials
+        eyebrow={t("testimonialsEyebrow")}
+        title={t.rich("testimonialsTitle", {
+          gradient: (chunks) => <span className="gradient-text">{chunks}</span>,
+        })}
+        items={testimonials}
+      />
+
+      <MidCta
+        title={t.rich("midCtaTitle", {
+          gradient: (chunks) => <span className="gradient-text">{chunks}</span>,
+        })}
+        subtitle={t("midCtaSubtitle")}
+        cta={t("tryFree")}
+        buyLine={buyLine("home_mid_cta")}
+        chips={midCtaChips}
+        location="home_mid_cta"
+      />
 
       {/* SEO content section: cluster targeting "screen annotation tool mac", "mac screen annotation", "annotation app for mac" */}
       <section className="py-24 px-4">

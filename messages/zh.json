@@ -9,6 +9,7 @@
   "header": {
     "cta": "获取 Scribbble",
     "features": "功能",
+    "pricing": "定价",
     "buyLicense": "购买授权"
   },
   "footer": {
@@ -22,6 +23,7 @@
     "compare": "比较",
     "scribbbleVs": "Scribbble 与 {competitor}",
     "company": "公司",
+    "pricing": "定价",
     "buyLicense": "购买授权",
     "support": "支持",
     "language": "语言",
@@ -36,13 +38,9 @@
     "chipZeroSetup": "零设置",
     "chipPayOnce": "一次购买，永久拥有",
     "chipAnyApp": "适用于任意应用",
+    "buyLine": "已经心动了？<link>购买授权</link>",
     "desktopDemo": {
       "ariaLabel": "Scribbble 在 Mac 桌面上的工具自动演示",
-      "eyebrow": "自动演示",
-      "title": "每个工具，实际演示",
-      "subtitle": "请放松观看。光标会从 Scribbble 的工具栏中依次选择每个工具，并直接在桌面上演示，就像你自己操作一样。",
-      "pause": "暂停演示",
-      "play": "播放演示",
       "typedText": "发布吧！",
       "menu": {
         "file": "文件",
@@ -108,6 +106,22 @@
         "body": "拖动即可在屏幕上测量像素距离。适合设计评审与间距检查。"
       }
     },
+    "testimonialsEyebrow": "来自演示者的声音",
+    "testimonialsTitle": "看看 <gradient>Scribbble 用户</gradient> 的评价",
+    "testimonials": [
+      {
+        "quote": "I record a daily YouTube video for CSSBattle challenge. The first part involves explaining how I plan to solve the target. Scribbble <hl>makes it super easy to draw on my screen</hl>. This lets my viewers follow my cursor and, more importantly, keep track of my lines. It gives me visual reference points and helps them better understand my approach. Plus, the lifetime license offer was a huge selling point for me!",
+        "name": "Olivier Maghe",
+        "role": "Content creator"
+      }
+    ],
+    "midCtaTitle": "在 <gradient>你的屏幕</gradient> 上试试",
+    "midCtaSubtitle": "下载，按热键，开始绘制。十秒后你就能在任何打开的内容上做标注。",
+    "midCtaChips": [
+      "免费下载",
+      "macOS 14 or later",
+      "无需注册"
+    ],
     "demoTitle": "观看一个 <gradient>60 秒</gradient> 速览",
     "demoSubtitle": "所有工具、所有快捷键，一分钟速览。",
     "seoTitle": "用于现场演示的 Mac <gradient>屏幕标注</gradient> 应用",
@@ -171,6 +185,59 @@
     "downloadFree": "免费下载",
     "buyLicense": "购买授权",
     "downloadScribbble": "下载 Scribbble"
+  },
+  "pricing": {
+    "title": "定价：一次付清 $12，终身更新",
+    "description": "Scribbble 只需一次付费 $12，无订阅，无需登录。免费下载，先试用所有工具，当它在你的 Dock 中占到一席之地时，购买单个授权并享受终身更新。",
+    "breadcrumb": "定价",
+    "badge": "一次付清 · 无订阅",
+    "heroTitle": "一个价格，<gradient>一次购买</gradient>，终身绘制。",
+    "heroSubtitle": "先免费试用所有工具。当 Scribbble 值得留在你的 Dock 时，购买一个授权，从此不用再操心。",
+    "card": {
+      "ribbon": "含终身更新",
+      "name": "Scribbble License",
+      "tagline": "应用中的所有功能，今天以及未来的每个版本都包含在内。",
+      "priceNote": "一次性付清",
+      "priceSubnote": "只收取一次。不按月，不按年。",
+      "features": [
+        "解锁所有工具：画笔、图形、荧光笔、文字、聚光、放大、测量、白板、截图",
+        "终身更新，每个新版本免费",
+        "无订阅，无账号，无需登录",
+        "适用于 macOS 14 及以上，支持 Apple Silicon 和 Intel",
+        "14 天无理由退款保证"
+      ],
+      "cta": "购买授权，{price}",
+      "tryLine": "还不确定？<link>免费下载</link>，先试用所有工具。"
+    },
+    "chips": [
+      "免费试用",
+      "安全结账",
+      "通过邮件即时收到授权密钥"
+    ],
+    "jsonLdOffer": "Scribbble 的一次性授权，含终身更新。",
+    "faqTitle": "定价 <gradient>常见问题</gradient>",
+    "faq": [
+      {
+        "q": "Scribbble 是订阅制吗？",
+        "a": "不是。你只需一次性支付 $12，这个授权就是你的。没有月费或年费，也不会自动续费。"
+      },
+      {
+        "q": "我能获得未来的更新吗？",
+        "a": "能。终身更新包含在内。Scribbble 的每个新版本，包括新的工具，授权持有者都可免费升级。"
+      },
+      {
+        "q": "我需要付费才能先试用吗？",
+        "a": "不需要。免费下载 Scribbble，先在自己的屏幕上使用。你准备好时再购买授权以解锁完整应用。"
+      },
+      {
+        "q": "如果我觉得不适合怎么办？",
+        "a": "每笔购买都享有 14 天退款保证。在 14 天内联系支持邮件即可获得全额退款。"
+      },
+      {
+        "q": "有团队或批量授权吗？",
+        "a": "有，适用于课堂、工作室和销售团队。通过页脚的支持链接联系我们，告知所需席位数量。"
+      }
+    ]
   },
   "zoomitVsEpicPen": {
     "title": "ZoomIt vs Epic Pen：2026 年谁更好？",

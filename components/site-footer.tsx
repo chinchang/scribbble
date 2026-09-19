@@ -121,6 +121,14 @@ export default async function SiteFooter({
             <ul className="space-y-3">
               <li>
                 <a
+                  href={localeUrl(locale, "/pricing")}
+                  className="text-muted-foreground hover:text-primary transition font-medium"
+                >
+                  {t("pricing")}
+                </a>
+              </li>
+              <li>
+                <a
                   href={BUY_URL}
                   target="_blank"
                   rel="noopener noreferrer"

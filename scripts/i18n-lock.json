@@ -11651,66 +11651,6 @@
       "fr"
     ]
   },
-  "messages.home.desktopDemo.eyebrow": {
-    "hash": "9816c7ed5e01657399a5a0af4afb5c4084f8c0a4c4dc60d953a5fb68630f6bd7",
-    "done": [
-      "es",
-      "zh",
-      "ja",
-      "de",
-      "hi",
-      "nl",
-      "fr"
-    ]
-  },
-  "messages.home.desktopDemo.title": {
-    "hash": "b425d75230a035fc10870d6f695817984593cf36abcf022fbd4598a575185f76",
-    "done": [
-      "es",
-      "zh",
-      "ja",
-      "de",
-      "hi",
-      "nl",
-      "fr"
-    ]
-  },
-  "messages.home.desktopDemo.subtitle": {
-    "hash": "f9754fd5d15f1f40eb45f4545170af981b86e78ef1f9113a60badf71096d2914",
-    "done": [
-      "es",
-      "zh",
-      "ja",
-      "de",
-      "hi",
-      "nl",
-      "fr"
-    ]
-  },
-  "messages.home.desktopDemo.pause": {
-    "hash": "4114dd7e57d332dff997ea9638f7189eaec0ee676631ac304da8d711e4bc2205",
-    "done": [
-      "es",
-      "zh",
-      "ja",
-      "de",
-      "hi",
-      "nl",
-      "fr"
-    ]
-  },
-  "messages.home.desktopDemo.play": {
-    "hash": "7d265bb561d1b74a81eecf5d6b76ff34d135c84c10d96dc3979919a0ea1ee20e",
-    "done": [
-      "es",
-      "zh",
-      "ja",
-      "de",
-      "hi",
-      "nl",
-      "fr"
-    ]
-  },
   "messages.home.desktopDemo.typedText": {
     "hash": "92fc0ceea39682285c9222a0fbaac4308e7b3f677dc976e2c290dda30420fbb9",
     "done": [
@@ -11929,6 +11869,510 @@
   },
   "messages.home.desktopDemo.tools.close": {
     "hash": "7d9eb7acb13e24625c404401d8e88b2350e32162455885f18276cf802f7701ed",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.home.buyLine": {
+    "hash": "3e7e7d6286f1e42e2f3755ccc914a6c563a44ec726ddff58afc6307332b42ea0",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.home.testimonialsEyebrow": {
+    "hash": "0511864f0655b1dea380147f71f63387e2e8506f83da5fdaf794c66df3221f25",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.home.testimonialsTitle": {
+    "hash": "2863cc2de1577c8fa8a8bec8fde1ee7c783be46e32baba5162c61f02f4e36877",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.home.midCtaTitle": {
+    "hash": "143110ca235fed596d52d899f980a462e529e265192e71cd79b2a609c2f44a4e",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.home.midCtaSubtitle": {
+    "hash": "0796d7149eef6163985b64f9a857c2a70c0fbb8caf11f10c1e33197108c2d175",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.home.midCtaChips.0": {
+    "hash": "fbed4d5c320ed7024f4cccb5fe87da81847c1ba75b2927195b69c2e433d85b85",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.home.midCtaChips.1": {
+    "hash": "3c7757ac2de24b5250b678e38fe21fc47040601ce3dcd7f66b7f6cee7b5192e0",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.home.midCtaChips.2": {
+    "hash": "51824ac2a88c11c214d402ea7baea29c9290be01c3d347a59e0bb1c530f7a745",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.header.pricing": {
+    "hash": "dfe95783edfef7918760312f94edd764f4ce3ffd38b90c2c955a0cc3b250f040",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.footer.pricing": {
+    "hash": "dfe95783edfef7918760312f94edd764f4ce3ffd38b90c2c955a0cc3b250f040",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.pricing.title": {
+    "hash": "208a71944010727b41b6d7501614e6ae47ded2d28c66ec51ca5f3c4c5d30fac2",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.pricing.description": {
+    "hash": "407c374eb982d6ed34c1a255690d382f4ce98db8564a43b292a25d98f7cc34e5",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.pricing.breadcrumb": {
+    "hash": "dfe95783edfef7918760312f94edd764f4ce3ffd38b90c2c955a0cc3b250f040",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.pricing.badge": {
+    "hash": "2a29b248ef3114eb92cd1df0dd8767b487ad3026b73601b1cc1bf0a997f44c52",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.pricing.heroTitle": {
+    "hash": "8d88164b560c440f1414fbe2832aed279e296590d1fcf2bd1826e1d9798d0106",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.pricing.heroSubtitle": {
+    "hash": "151fa2f8fb73847b26d34ee551ec80f65ee033a06d5347c5027baf84eca7dfe3",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.pricing.card.ribbon": {
+    "hash": "28edd6e7dc933a847b8ef2d9e6a74ac72bf187bcef9ce47a7178662772a42e01",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.pricing.card.tagline": {
+    "hash": "dcff14c17ebb5d8d5d42b8462c4ac88bf734ca262587849c0bdf5f1cdd13a5a4",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.pricing.card.priceNote": {
+    "hash": "e7a4eae34c12ab2c05187399d2955aefc791814675e763426370bceb05dbab4f",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.pricing.card.priceSubnote": {
+    "hash": "0b4c8dbd500649545cf88ad8be0adcf4b94c078a73207a65b7d7ae350b2f9e50",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.pricing.card.features.0": {
+    "hash": "a46d989be4022be7ead1714050015fa24a15c5b34d70b1e3eac179be0b965e17",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.pricing.card.features.1": {
+    "hash": "39dc8723a0574c984d1162691dae44097ed68ff7016dc06329bbee14686a960b",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.pricing.card.features.2": {
+    "hash": "806d7e47e9c9daadc570419d2bce13b471c903745e959764402228006018291a",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.pricing.card.features.3": {
+    "hash": "d73fbf1741f2e746b7950c785a67b7d028978e044944e049a1dffe4d37690106",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.pricing.card.features.4": {
+    "hash": "88f3942867de518e2470368afefedcaef860131d3b76f157a91fb397a759e027",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.pricing.card.cta": {
+    "hash": "a202b51c509321c40ac43fb74a93866ea35ac6feb67db916e54273d48bcf308b",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.pricing.card.tryLine": {
+    "hash": "aa73fad82256ffac06dffca08e02934f68dc1972380c6412c2ec22ff5c67c6ea",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.pricing.chips.0": {
+    "hash": "758e78e0e84af1198be5b2ecfd741a0b7b73b6b5e64ecacd2dc99358f21aec4a",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.pricing.chips.1": {
+    "hash": "58f32426c312c93738a53bf79eb8fbc1e6589d011f642c484a53d9f7810a66f9",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.pricing.chips.2": {
+    "hash": "3120ce3f7f5fdebb7555e9f20914f96b0a4ad5b517d45eec7adb3646789da4c6",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.pricing.jsonLdOffer": {
+    "hash": "f74ca6eb947f9c8a797b64dbf332c5608a554eec349c1dcc85d16185653a1bcd",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.pricing.faqTitle": {
+    "hash": "8ef4103cbefd6587008a35f85b4e48a16ed2168b5c2153d5cdf3c9197b365d3d",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.pricing.faq.0.q": {
+    "hash": "5f9b7f1912df6e225a554e23b6c0f568dbd7361ef904afcce1514b92d2a792a0",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.pricing.faq.0.a": {
+    "hash": "e34331aac2ee8d56e487e8d08a010238a884fd769fb108ffde54a0f19ebe16b4",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.pricing.faq.1.q": {
+    "hash": "c078f4d37fff5624a6f73f298a9b1269654caf906b0806131b5a8c593dd90f93",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.pricing.faq.1.a": {
+    "hash": "4af783687dde7d998e11de0252f1b4b701494cca3ab6b3287424b810fcc2d1f6",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.pricing.faq.2.q": {
+    "hash": "7e313891fd7b9089bac3c2f8974f671c249ff05003c629f7d25b314f5afb3182",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.pricing.faq.2.a": {
+    "hash": "b2403857e6980b22158c6cebc687416af6a9146888acd13ee63f798cce28c3c0",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.pricing.faq.3.q": {
+    "hash": "5dd4c1778e738519323dcebdab06d670d119c711a4de96fc3877673f8b3c25b4",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.pricing.faq.3.a": {
+    "hash": "cb223a38138e9c09dd88688984d1b1c5d6f9f539df590c2c93f717e8929b15d3",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.pricing.faq.4.q": {
+    "hash": "4110a692ef31e2da8f5639b951c4c82bf11ec1f73ba7ea9b4b89ca77267cced0",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.pricing.faq.4.a": {
+    "hash": "805d4ca8082cbedd1622c331ac5686f10fe9f21879560457c3a0f452c89bb4e1",
     "done": [
       "es",
       "zh",

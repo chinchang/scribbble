@@ -9,6 +9,7 @@
   "header": {
     "cta": "Consigue Scribbble",
     "features": "Funciones",
+    "pricing": "Precios",
     "buyLicense": "Comprar licencia"
   },
   "footer": {
@@ -22,6 +23,7 @@
     "compare": "Comparar",
     "scribbbleVs": "Scribbble vs {competitor}",
     "company": "Empresa",
+    "pricing": "Precios",
     "buyLicense": "Comprar licencia",
     "support": "Soporte",
     "language": "Idioma",
@@ -36,13 +38,9 @@
     "chipZeroSetup": "Cero configuración",
     "chipPayOnce": "Paga una vez, tuyo para siempre",
     "chipAnyApp": "Funciona en cualquier app",
+    "buyLine": "¿Ya te encanta? <link>Compra una licencia</link>",
     "desktopDemo": {
       "ariaLabel": "Demostración automática de las herramientas de Scribbble en un escritorio Mac",
-      "eyebrow": "Demostración automática",
-      "title": "Todas las herramientas, en acción",
-      "subtitle": "Relájate. El cursor selecciona cada herramienta de la barra de Scribbble y la usa directamente en el escritorio, tal como tú lo harías.",
-      "pause": "Pausar demo",
-      "play": "Reproducir demo",
       "typedText": "¡Listo para enviar!",
       "menu": {
         "file": "Archivo",
@@ -108,6 +106,22 @@
         "body": "Arrastra para medir distancias en píxeles directamente en pantalla. Útil para revisiones de diseño y comprobaciones de espaciado."
       }
     },
+    "testimonialsEyebrow": "De la gente que presenta",
+    "testimonialsTitle": "Lo que dicen los <gradient>Scribbble users</gradient>",
+    "testimonials": [
+      {
+        "quote": "I record a daily YouTube video for CSSBattle challenge. The first part involves explaining how I plan to solve the target. Scribbble <hl>makes it super easy to draw on my screen</hl>. This lets my viewers follow my cursor and, more importantly, keep track of my lines. It gives me visual reference points and helps them better understand my approach. Plus, the lifetime license offer was a huge selling point for me!",
+        "name": "Olivier Maghe",
+        "role": "Content creator"
+      }
+    ],
+    "midCtaTitle": "Míralo en <gradient>tu propia</gradient> pantalla",
+    "midCtaSubtitle": "Descarga, pulsa la tecla de acceso rápido, dibuja. Dentro de diez segundos estarás anotando lo que tengas abierto.",
+    "midCtaChips": [
+      "Descarga gratuita",
+      "macOS 14 or later",
+      "Sin registro"
+    ],
     "demoTitle": "Mira un tour de <gradient>60 segundos</gradient>",
     "demoSubtitle": "Cada herramienta, cada atajo, en un minuto.",
     "seoTitle": "La app de <gradient>anotación de pantalla</gradient> para Mac en presentaciones en vivo",
@@ -171,6 +185,59 @@
     "downloadFree": "Descargar gratis",
     "buyLicense": "Comprar licencia",
     "downloadScribbble": "Descargar Scribbble"
+  },
+  "pricing": {
+    "title": "Precios: $12 pago único, actualizaciones de por vida",
+    "description": "Scribbble cuesta $12, una sola vez. Sin suscripción, sin inicio de sesión. Descárgalo gratis, prueba todas las herramientas y luego compra una sola licencia con actualizaciones de por vida cuando merezca un lugar en tu dock.",
+    "breadcrumb": "Precios",
+    "badge": "Pago único · Sin suscripción",
+    "heroTitle": "Un precio. <gradient>Paga una vez</gradient>, dibuja para siempre.",
+    "heroSubtitle": "Prueba todas las herramientas gratis primero. Cuando Scribbble merezca un lugar en tu dock, compra una licencia y olvídate del resto.",
+    "card": {
+      "ribbon": "Actualizaciones de por vida incluidas",
+      "name": "Scribbble License",
+      "tagline": "Todo en la app, hoy y en todas las versiones futuras.",
+      "priceNote": "pago único",
+      "priceSubnote": "Se factura una vez. No por mes, no por año.",
+      "features": [
+        "Desbloquea todas las herramientas: bolígrafo, formas, resaltador, texto, foco, lupa, regla, pizarra, capturas",
+        "Actualizaciones de por vida, cada nueva versión es gratuita",
+        "Sin suscripción, sin cuenta, sin inicio de sesión",
+        "Funciona en macOS 14 o posterior, Apple Silicon e Intel",
+        "Garantía de devolución de 14 días, sin preguntas"
+      ],
+      "cta": "Comprar licencia por {price}",
+      "tryLine": "¿Aún no estás seguro? <link>Descárgalo gratis</link> y prueba todas las herramientas primero."
+    },
+    "chips": [
+      "Prueba gratis",
+      "Pago seguro",
+      "Clave de licencia instantánea por email"
+    ],
+    "jsonLdOffer": "Licencia de pago único para Scribbble con actualizaciones de por vida.",
+    "faqTitle": "Preguntas sobre <gradient>precios</gradient>",
+    "faq": [
+      {
+        "q": "¿Scribbble es una suscripción?",
+        "a": "No. Pagas $12 una sola vez y la licencia es tuya. No hay plan mensual ni anual, y nada se renueva automáticamente."
+      },
+      {
+        "q": "¿Recibiré actualizaciones futuras?",
+        "a": "Sí. Las actualizaciones de por vida están incluidas. Cada nueva versión de Scribbble, incluidas las nuevas herramientas, es una actualización gratuita para los titulares de licencia."
+      },
+      {
+        "q": "¿Necesito pagar antes de probarlo?",
+        "a": "No. Descarga Scribbble gratis y úsalo en tu propia pantalla primero. La licencia desbloquea la app completa cuando estés listo."
+      },
+      {
+        "q": "¿Y si no es para mí?",
+        "a": "Cada compra está cubierta por una garantía de reembolso de 14 días. Envía un email a soporte dentro de los 14 días y recibirás un reembolso completo."
+      },
+      {
+        "q": "¿Existe una licencia para equipos o por volumen?",
+        "a": "Sí, para aulas, estudios y equipos de ventas. Contacta a través del enlace de soporte en el pie de página con el número de asientos que necesitas."
+      }
+    ]
   },
   "zoomitVsEpicPen": {
     "title": "ZoomIt vs Epic Pen: ¿Cuál es mejor en 2026?",

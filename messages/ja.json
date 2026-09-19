@@ -9,6 +9,7 @@
   "header": {
     "cta": "Scribbbleを入手",
     "features": "機能",
+    "pricing": "料金",
     "buyLicense": "ライセンスを購入"
   },
   "footer": {
@@ -22,6 +23,7 @@
     "compare": "比較",
     "scribbbleVs": "Scribbble vs {competitor}",
     "company": "会社情報",
+    "pricing": "料金",
     "buyLicense": "ライセンスを購入",
     "support": "サポート",
     "language": "言語",
@@ -36,13 +38,9 @@
     "chipZeroSetup": "セットアップ不要",
     "chipPayOnce": "一度支払えばずっと使える",
     "chipAnyApp": "どんなアプリでも動作",
+    "buyLine": "もう気に入りましたか？ <link>ライセンスを購入</link>",
     "desktopDemo": {
       "ariaLabel": "Macデスクトップ上でScribbbleのツールが自動で動作するデモ",
-      "eyebrow": "自動デモ",
-      "title": "すべてのツールを実演",
-      "subtitle": "そのままご覧ください。カーソルがScribbbleのツールバーから各ツールを選び、実際のデスクトップ上であなたの代わりに操作します。",
-      "pause": "デモを一時停止",
-      "play": "デモを再生",
       "typedText": "Ship it!",
       "menu": {
         "file": "ファイル",
@@ -108,6 +106,22 @@
         "body": "画面上でドラッグしてピクセル距離を測れます。デザインレビューや間隔チェックに便利です。"
       }
     },
+    "testimonialsEyebrow": "発表者からの声",
+    "testimonialsTitle": "<gradient>Scribbbleユーザー</gradient>の声",
+    "testimonials": [
+      {
+        "quote": "I record a daily YouTube video for CSSBattle challenge. The first part involves explaining how I plan to solve the target. Scribbble <hl>makes it super easy to draw on my screen</hl>. This lets my viewers follow my cursor and, more importantly, keep track of my lines. It gives me visual reference points and helps them better understand my approach. Plus, the lifetime license offer was a huge selling point for me!",
+        "name": "Olivier Maghe",
+        "role": "Content creator"
+      }
+    ],
+    "midCtaTitle": "あなたの<gradient>画面で</gradient>試してみる",
+    "midCtaSubtitle": "ダウンロードしてホットキーを押し、描くだけ。十秒後には開いている画面に書き込めます。",
+    "midCtaChips": [
+      "無料ダウンロード",
+      "macOS 14 or later",
+      "サインアップ不要"
+    ],
     "demoTitle": "<gradient>60秒</gradient>ツアーを見る",
     "demoSubtitle": "すべてのツールとショートカットを1分で紹介。",
     "seoTitle": "ライブプレゼン向けMacの<gradient>スクリーン注釈</gradient>アプリ",
@@ -171,6 +185,59 @@
     "downloadFree": "無料でダウンロード",
     "buyLicense": "ライセンスを購入",
     "downloadScribbble": "Scribbble をダウンロード"
+  },
+  "pricing": {
+    "title": "価格: $12 一回払い、ライフタイム更新付き",
+    "description": "Scribbbleは一度きり$12です。サブスクリプション不要、ログイン不要。まず無料でダウンロードして全ツールを試し、Dockに置きたいと思ったら単一のライセンスを購入して一生のアップデートを受け取れます。",
+    "breadcrumb": "料金",
+    "badge": "一回払い・サブスクリプション不要",
+    "heroTitle": "一度の支払いで、<gradient>永遠に描ける</gradient>。",
+    "heroSubtitle": "まずは全ツールを無料で試せます。ScribbbleがDockに置く価値があると感じたら、ライセンスを購入してその後は何も考えなくて大丈夫です。",
+    "card": {
+      "ribbon": "ライフタイムアップデート付き",
+      "name": "Scribbble License",
+      "tagline": "今ある全ての機能、そして将来のバージョンでも。",
+      "priceNote": "一回払い",
+      "priceSubnote": "一度だけ請求されます。月額でも年額でもありません。",
+      "features": [
+        "全ツールをアンロック: ペン、図形、蛍光ペン、テキスト、スポットライト、拡大鏡、測定、ホワイトボード、スナップショット",
+        "ライフタイムアップデート、新バージョンはすべて無料",
+        "サブスクリプション不要、アカウント不要、ログイン不要",
+        "macOS 14以降で動作、Apple SiliconとIntel対応",
+        "14日間返金保証、理由は問いません"
+      ],
+      "cta": "{price}でライセンスを購入",
+      "tryLine": "まだ迷っている？ <link>無料でダウンロード</link>してまず全ツールを試してみてください。"
+    },
+    "chips": [
+      "無料で試せます",
+      "安全な決済",
+      "メールで即時にライセンスキーを受け取れます"
+    ],
+    "jsonLdOffer": "ライフタイムアップデート付きのScribbble一回限りのライセンスです。",
+    "faqTitle": "価格に関する<gradient>よくある質問</gradient>",
+    "faq": [
+      {
+        "q": "Scribbbleはサブスクリプションですか？",
+        "a": "いいえ。$12を一度支払えばライセンスはあなたのものです。月額や年額のプランはなく、自動更新もありません。"
+      },
+      {
+        "q": "今後のアップデートはもらえますか？",
+        "a": "はい。ライフタイムアップデートが含まれます。新しいツールを含むScribbbleのすべての新バージョンは、ライセンス所有者に無料で提供されます。"
+      },
+      {
+        "q": "試す前に支払う必要はありますか？",
+        "a": "いいえ。まずScribbbleを無料でダウンロードして、自分の画面で使ってみてください。ライセンスは準備ができたときにアプリのロックを解除します。"
+      },
+      {
+        "q": "もし合わなかったらどうなりますか？",
+        "a": "購入には14日間の返金保証が適用されます。14日以内にサポートへメールを送っていただければ、全額返金します。"
+      },
+      {
+        "q": "チームや一括ライセンスはありますか？",
+        "a": "はい、教室、スタジオ、営業チーム向けに対応しています。必要な席数を明記のうえ、フッターのサポートリンクからお問い合わせください。"
+      }
+    ]
   },
   "zoomitVsEpicPen": {
     "title": "ZoomIt vs Epic Pen: 2026年、どちらが優れているか？",

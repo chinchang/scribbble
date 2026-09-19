@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // the full hreflang alternates map (incl. x-default -> English URL).
   const marketingPaths = [
     "",
+    "/pricing",
     "/vs/zoomit-vs-epic-pen",
     ...personaSlugs.map((slug) => `/for/${slug}`),
     ...comparisonSlugs.map((slug) => `/vs/${slug}`),

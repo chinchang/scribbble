@@ -184,10 +184,33 @@ already ranking, then answer the exact query on that page. Baseline for the 4–
 - [x] Track clicks on every "Download" CTA as a GA4 `download_click` event (param `location`)
       via `components/download-link.tsx`; `BuyLink` and `DownloadLink` now share
       `components/tracked-link.tsx`. Locations: `header`, `home_nav`, `home_hero`,
-      `home_bottom_cta`, `for_hero`, `for_bottom_cta`, `vs_hero`, `vs_bottom_cta`,
+      `home_mid_cta`, `home_bottom_cta`, `pricing_card`, `for_hero`, `for_bottom_cta`, `vs_hero`, `vs_bottom_cta`,
       `vs_third_party_verdict`, `best_list_item`, `best_bottom_cta`, `blog_post_cta`
 - [x] Remove every em dash from the website copy (2026-09-12): rewrote ~220 English strings across
       `messages/en.json`, `lib/{personas,comparisons,listicles}.ts`, `lib/site-config.ts`, the
       screenshot-annotate page, blog pages and the pillar post; `scripts/translate.ts` now bans em
       dashes in its prompt, validates for them (retry, then locale-aware substitution) and all 969
       translated strings that contained one were re-translated. Verified 0 em dashes in the built HTML
+
+### Homepage conversion pass (2026-09-19, after reviewing lookaway.com)
+
+- [x] Add a testimonials section (`components/testimonials.tsx`) between the toolkit and the SEO
+      block, styled like annotations on a screen: numbered step marker per card, highlighter stroke
+      over the `<hl>…</hl>` phrase of each quote, hand-drawn rectangle outline and a pen circle
+      around the author's name that redraw on hover. Data lives in `messages/en.json` under
+      `home.testimonials` (array of `quote`/`name`/`role`; the whole block is never translated,
+      it is kept verbatim in every locale via `SKIP_ID_PREFIXES` in `scripts/translate.ts`) and the
+      layout adapts to 1, 2 or 3+ quotes. First quote: Olivier Maghe, content creator
+- [x] One primary CTA in the hero: the "Buy License" outline button is now a text link
+      ("Love it already? Buy a license") under the download button, still tracked as `home_hero`
+- [x] Repeat the download CTA mid-page (`components/mid-cta.tsx`) right after the testimonials, with
+      the same buy text link and trust chips; tracked as `home_mid_cta`
+- [x] Add a localized `/pricing` page (`app/[locale]/pricing/page.tsx`): one card, $12 one-time with
+      lifetime updates, buy button + "download it free" text link (both tracked as `pricing_card`),
+      the homepage testimonials section reused underneath, a 5-question pricing FAQ, and
+      SoftwareApplication Offer + FAQPage + BreadcrumbList JSON-LD. Linked from the header nav
+      (replaces the homepage nav's direct "Buy License" link), the footer and the sitemap
+- [x] Unify the header: the homepage had its own inline header (with the Features anchor) while every
+      other page used `components/site-header.tsx` (CTA only). All pages now render `SiteHeader`,
+      which carries the homepage styling plus Features and Pricing links; a `location` prop keeps the
+      homepage's download clicks labelled `home_nav`

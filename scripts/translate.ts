@@ -70,6 +70,7 @@ const BRAND_NAMES = [
   "Mac",
   "Apple Silicon",
   "Sysinternals",
+  "CSSBattle",
   "Microsoft",
   "Windows",
   "Linux",
@@ -93,8 +94,14 @@ const SKIP_KEYS = new Set([
 // Explicitly skipped message ids.
 const SKIP_IDS = new Set(["messages.meta.titleTemplate"]);
 
-function isTranslatable(value: string, key: string): boolean {
+// Subtrees that are kept verbatim in every locale. Testimonials are real
+// people's words and stay in the language they were written in.
+const SKIP_ID_PREFIXES = ["messages.home.testimonials"];
+
+function isTranslatable(value: string, key: string, id = ""): boolean {
   if (SKIP_KEYS.has(key)) return false;
+  if (id && (SKIP_IDS.has(id) || SKIP_ID_PREFIXES.some((p) => id === p || id.startsWith(p + "."))))
+    return false;
   // Bare yes/no cells render as icons; translating them breaks renderCell.
   if (/^(yes|no)$/i.test(value.trim())) return false;
   if (/^https?:\/\//.test(value)) return false;
@@ -107,7 +114,7 @@ type FlatMap = Record<string, string>;
 
 function flatten(node: unknown, prefix: string, out: FlatMap, key = ""): void {
   if (typeof node === "string") {
-    if (isTranslatable(node, key) && !SKIP_IDS.has(prefix)) out[prefix] = node;
+    if (isTranslatable(node, key, prefix)) out[prefix] = node;
     return;
   }
   if (Array.isArray(node)) {
@@ -393,11 +400,14 @@ async function main() {
     }
     if (Object.keys(chunk).length) jobs.push({ locale, chunk });
   }
+  // With nothing pending we still fall through to the write step below, so
+  // catalogs pick up edits to never-translated fields (names, slugs) and any
+  // keys added to the English catalog.
   if (!jobs.length) {
-    console.log("Nothing to translate, all strings up to date.");
-    return;
+    console.log("Nothing to translate, syncing catalogs with the English source.");
+  } else {
+    console.log(`\n${jobs.length} API request(s) using model ${MODEL}...`);
   }
-  console.log(`\n${jobs.length} API request(s) using model ${MODEL}...`);
 
   // Run with a small concurrency pool; collect results per locale.
   const results: Record<string, FlatMap> = {};
@@ -467,20 +477,30 @@ async function main() {
 }
 
 // Recursively overlay existing catalog values onto the English base, keeping
-// the base's structure (drops stale keys, keeps prior translations).
-function mergeCatalog(base: any, existing: any): any {
+// the base's structure (drops stale keys, keeps prior translations). Values
+// that are never translated (slugs, brand names, testimonial authors, bare
+// yes/no cells) always mirror the English source so an edit there propagates.
+function mergeCatalog(
+  base: any,
+  existing: any,
+  key = "",
+  id = "messages",
+): any {
   if (typeof base === "string") {
+    if (!isTranslatable(base, key, id)) return base;
     return typeof existing === "string" ? existing : base;
   }
   if (Array.isArray(base)) {
     return base.map((item, i) =>
-      existing && Array.isArray(existing) ? mergeCatalog(item, existing[i]) : item,
+      existing && Array.isArray(existing)
+        ? mergeCatalog(item, existing[i], key, `${id}.${i}`)
+        : item,
     );
   }
   if (typeof base === "object" && base !== null) {
     const out: Record<string, any> = {};
-    for (const key of Object.keys(base)) {
-      out[key] = mergeCatalog(base[key], existing?.[key]);
+    for (const k of Object.keys(base)) {
+      out[k] = mergeCatalog(base[k], existing?.[k], k, `${id}.${k}`);
     }
     return out;
   }
