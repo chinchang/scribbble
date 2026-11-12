@@ -3,7 +3,7 @@ import Img from "next/image";
 import { Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import DownloadLink from "@/components/download-link";
-import { DOWNLOAD_URL } from "@/lib/site-config";
+import { downloadCtaUrl } from "@/lib/i18n/seo";
 
 type Props = {
   title: ReactNode;
@@ -14,6 +14,8 @@ type Props = {
   chips: string[];
   /** GA4 `location` param for the download click. */
   location: string;
+  /** Locale of the page, so the button lands on the matching download page. */
+  locale: string;
 };
 
 /**
@@ -28,6 +30,7 @@ export default function MidCta({
   buyLine,
   chips,
   location,
+  locale,
 }: Props) {
   return (
     <section className="px-4 py-12">
@@ -53,9 +56,7 @@ export default function MidCta({
               className="bg-gradient-to-r from-primary to-accent hover:from-accent hover:to-primary text-white px-12 py-6 text-xl font-bold shadow-2xl hover:shadow-3xl transform hover:scale-110 transition-all duration-300"
             >
               <DownloadLink
-                href={DOWNLOAD_URL}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={downloadCtaUrl(locale)}
                 location={location}
               >
                 <Download className="w-6 h-6 mr-3" />

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import DownloadLink from "@/components/download-link";
+import { downloadCtaUrl } from "@/lib/i18n/seo";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Img from "next/image";
@@ -23,7 +24,6 @@ import {
 import { listicles } from "@/lib/listicles";
 import { personas } from "@/lib/personas";
 import { comparisons } from "@/lib/comparisons";
-import { DOWNLOAD_URL } from "@/lib/site-config";
 
 const SITE_URL = "https://www.scribbble.app";
 
@@ -244,9 +244,7 @@ export default async function BlogPostPage({
             className="bg-gradient-to-r from-primary to-accent text-white px-12 py-7 text-xl font-bold"
           >
             <DownloadLink
-              href={DOWNLOAD_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={downloadCtaUrl()}
               location="blog_post_cta"
             >
               <Download className="w-6 h-6 mr-3" />

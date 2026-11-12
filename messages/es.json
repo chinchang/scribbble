@@ -10,6 +10,8 @@
     "cta": "Consigue Scribbble",
     "features": "Funciones",
     "pricing": "Precios",
+    "changelog": "Registro de cambios",
+    "menu": "Menú",
     "buyLicense": "Comprar licencia"
   },
   "footer": {
@@ -24,6 +26,8 @@
     "scribbbleVs": "Scribbble vs {competitor}",
     "company": "Empresa",
     "pricing": "Precios",
+    "download": "Descargar",
+    "changelog": "Registro de cambios",
     "buyLicense": "Comprar licencia",
     "support": "Soporte",
     "language": "Idioma",
@@ -185,6 +189,39 @@
     "downloadFree": "Descargar gratis",
     "buyLicense": "Comprar licencia",
     "downloadScribbble": "Descargar Scribbble"
+  },
+  "download": {
+    "title": "Descarga Scribbble para Mac: app gratuita de anotación de pantalla",
+    "description": "Descarga Scribbble, la app para Mac que te permite dibujar en la pantalla (a menudo buscada como Scribble). Prueba gratis en macOS 14 o superior, sin registro. Licencia única de $12 con actualizaciones de por vida.",
+    "breadcrumb": "Descargar",
+    "badge": "Prueba gratuita · Sin registro",
+    "heroTitle": "Descarga <gradient>Scribbble</gradient> para Mac",
+    "heroSubtitle": "Prueba gratuita, no hace falta cuenta. Funciona en macOS 14 o posterior, Apple Silicon e Intel.",
+    "cta": "Descargar para Mac",
+    "starting": "Tu descarga está comenzando.",
+    "retryQuestion": "¿No empezó?",
+    "retryLink": "Descargar de nuevo",
+    "notMac": "Scribbble es una app para Mac. Abre esta página en tu Mac para instalarla.",
+    "versionLine": "Versión {version} · macOS 14 o posterior",
+    "whatsNew": "Ver novedades",
+    "stepsTitle": "Dibuja en <gradient>tres pasos</gradient>",
+    "steps": [
+      {
+        "title": "Instalar",
+        "body": "Abre Scribbble.dmg desde la carpeta Descargas y arrastra Scribbble a Aplicaciones."
+      },
+      {
+        "title": "Iniciar",
+        "body": "Abre Scribbble desde la carpeta Aplicaciones."
+      },
+      {
+        "title": "Dibujar",
+        "body": "Pulsa {shortcut} o haz clic en el icono del Dock para mostrar la superposición, luego dibuja sobre lo que haya en pantalla. Vuelve a pulsarlo para ocultarla."
+      }
+    ],
+    "tip": "Consejo: pulsa ? dentro de Scribbble para ver todos los atajos de teclado.",
+    "buyTitle": "¿Te gusta? <gradient>Hazla tuya</gradient> por {price}",
+    "buySubtitle": "Un pago, actualizaciones de por vida, garantía de devolución en 14 días. Sin suscripción."
   },
   "pricing": {
     "title": "Precios: $12 pago único, actualizaciones de por vida",

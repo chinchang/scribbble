@@ -10,6 +10,8 @@
     "cta": "Scribbble herunterladen",
     "features": "Funktionen",
     "pricing": "Preise",
+    "changelog": "Änderungsprotokoll",
+    "menu": "Menü",
     "buyLicense": "Lizenz kaufen"
   },
   "footer": {
@@ -24,6 +26,8 @@
     "scribbbleVs": "Scribbble vs {competitor}",
     "company": "Unternehmen",
     "pricing": "Preise",
+    "download": "Herunterladen",
+    "changelog": "Änderungsprotokoll",
     "buyLicense": "Lizenz kaufen",
     "support": "Support",
     "language": "Sprache",
@@ -185,6 +189,39 @@
     "downloadFree": "Kostenlos herunterladen",
     "buyLicense": "Lizenz kaufen",
     "downloadScribbble": "Scribbble herunterladen"
+  },
+  "download": {
+    "title": "Scribbble für Mac herunterladen: Kostenlose Bildschirmannotationen-App",
+    "description": "Lade Scribbble herunter, die Mac‑App zum Zeichnen auf dem Bildschirm (häufig gesucht als Scribble). Kostenlos testbar auf macOS 14 oder neuer, keine Anmeldung erforderlich. Einmalige Lizenz für $12 mit lebenslangen Updates.",
+    "breadcrumb": "Herunterladen",
+    "badge": "Kostenlos testbar · Keine Anmeldung",
+    "heroTitle": "Lade <gradient>Scribbble</gradient> für Mac herunter",
+    "heroSubtitle": "Kostenlos testbar, kein Konto nötig. Funktioniert auf macOS 14 oder neuer, Apple Silicon und Intel.",
+    "cta": "Für Mac herunterladen",
+    "starting": "Dein Download startet.",
+    "retryQuestion": "Hat es nicht gestartet?",
+    "retryLink": "Erneut herunterladen",
+    "notMac": "Scribbble ist eine Mac‑App. Öffne diese Seite auf deinem Mac, um sie zu installieren.",
+    "versionLine": "Version {version} · macOS 14 oder neuer",
+    "whatsNew": "Neuheiten ansehen",
+    "stepsTitle": "Zeichnen in <gradient>drei Schritten</gradient>",
+    "steps": [
+      {
+        "title": "Installieren",
+        "body": "Öffne Scribbble.dmg aus deinem Downloads‑Ordner und ziehe Scribbble in den Programme‑Ordner."
+      },
+      {
+        "title": "Starten",
+        "body": "Öffne Scribbble aus deinem Programme‑Ordner."
+      },
+      {
+        "title": "Zeichnen",
+        "body": "Drücke {shortcut} oder klicke das Dock‑Symbol, um die Overlay‑Ansicht zu öffnen, und zeichne dann über alles, was auf dem Bildschirm zu sehen ist. Drücke erneut, um sie zu schließen."
+      }
+    ],
+    "tip": "Tipp: Drücke ? innerhalb von Scribbble, um alle Tastenkürzel zu sehen.",
+    "buyTitle": "Gefällt es dir? <gradient>Hol es dir</gradient> für {price}",
+    "buySubtitle": "Eine Zahlung, lebenslange Updates, 14‑tägige Geld‑zurück‑Garantie. Kein Abo."
   },
   "pricing": {
     "title": "Preis: $12 einmalig, lebenslange Updates",

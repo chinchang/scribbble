@@ -16,8 +16,8 @@ import {
   getPersonas,
   getComparisons,
 } from "@/lib/i18n/data";
-import { localeUrl, languageAlternates } from "@/lib/i18n/seo";
-import { SITE_URL, DOWNLOAD_URL } from "@/lib/site-config";
+import { localeUrl, languageAlternates, downloadCtaUrl } from "@/lib/i18n/seo";
+import { SITE_URL } from "@/lib/site-config";
 
 export const dynamicParams = false;
 
@@ -276,9 +276,7 @@ export default async function ListiclePage({
                     className="bg-gradient-to-r from-primary to-accent text-white"
                   >
                     <DownloadLink
-                      href={DOWNLOAD_URL}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      href={downloadCtaUrl(locale)}
                       location="best_list_item"
                     >
                       <Download className="w-4 h-4 mr-2" />
@@ -369,9 +367,7 @@ export default async function ListiclePage({
             className="bg-gradient-to-r from-primary to-accent text-white px-12 py-7 text-xl font-bold"
           >
             <DownloadLink
-              href={DOWNLOAD_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={downloadCtaUrl(locale)}
               location="best_bottom_cta"
             >
               <Download className="w-6 h-6 mr-3" />

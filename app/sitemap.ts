@@ -15,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const marketingPaths = [
     "",
     "/pricing",
+    "/download",
     "/vs/zoomit-vs-epic-pen",
     ...personaSlugs.map((slug) => `/for/${slug}`),
     ...comparisonSlugs.map((slug) => `/vs/${slug}`),
@@ -39,8 +40,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   );
 
-  // English-only routes (blog, tools), unchanged, no alternates.
-  const englishRoutes = ["/tools/screenshot-annotate", "/blog"].map((path) => ({
+  // English-only routes (blog, tools, changelog), unchanged, no alternates.
+  const englishRoutes = [
+    "/tools/screenshot-annotate",
+    "/blog",
+    "/changelog",
+  ].map((path) => ({
     url: `${SITE_URL}${path}`,
     lastModified: now,
     changeFrequency: "monthly" as const,

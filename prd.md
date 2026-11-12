@@ -214,3 +214,76 @@ already ranking, then answer the exact query on that page. Baseline for the 4–
       other page used `components/site-header.tsx` (CTA only). All pages now render `SiteHeader`,
       which carries the homepage styling plus Features and Pricing links; a `location` prop keeps the
       homepage's download clicks labelled `home_nav`
+
+### Demo video (2026-09-26)
+
+- [x] Build a 20-second motion demo of the app in `demo-video/` (Remotion, 1920×1080 @ 30 fps):
+      headline intro, macOS desktop with the real toolbar, cursor clicking through 10 tools with a
+      camera push-in each, Clear wipe, Close-button reveal into a logo/price/URL outro. All tunables
+      in `demo-video/src/config.ts`, all text in `demo-video/src/copy.ts`. Preview with `pnpm studio`
+- [ ] Render the MP4 (`pnpm render` in `demo-video/`) once the web preview is approved
+- [x] Replace it with a 15-second launch showreel (`demo-video/`, Remotion, 1920×1080 @ 60 fps,
+      composition `Launch`): kinetic "Your screen is your canvas." cold open with a hand-drawn circle,
+      orange paint-over wipe, "One hotkey." keycaps that press with a shockwave and zoom through the
+      lens, a tilted 3D Mac screen where the cursor runs pen / arrow / rectangle / highlighter /
+      spotlight / magnifier / text / clear beside a rolling colour-coded word ticker, a whip pan into
+      a 3D wall of app windows getting annotated ("Works over … everything."), and an iris into the
+      logo outro (ray burst, bouncing b's, CTA + URL). All tunables in `src/config.ts`, text in
+      `src/copy.ts`. The hotkey keycaps (⌥ ⇧ D) are a placeholder for the app's real shortcut.
+- [x] Add synchronised background music: `demo-video/scripts/music.ts` (`pnpm music`) synthesises
+      `public/music.wav` from the same `src/config.ts` timeline, so every cue lands on its frame. 160 BPM
+      (tempo derived from the 45-frame tool beat, so each tool click falls on a beat), G–D–A–Bm loop with
+      sidechained pads, bass, arp, drums, plus sound design: comet/paint/whip whooshes, risers into
+      each transition, impacts on the key press, screen arrival, "everything." and the logo drop,
+      keycap thuds, cursor clicks, typing ticks, marker scribble under every stroke, bells on the logo
+      and a pluck per hopping b. `pnpm render` regenerates the music before rendering
+- [x] Instagram Reels version (2026-09-28): composition `LaunchInstagram`, 1080×1920 @ 60 fps, same
+      timeline and `music.wav`, so it stays in sync. Layout-only overrides live in `VERTICAL` in
+      `src/config.ts` (stacked "canvas." line, keycaps and outro recentred, 4×8 app wall, ticker above
+      the screen), applied via `useCfg()` from `src/lib/format.ts`. The vertical tool run adds a
+      follow-cam that zooms 1.45× into the Mac screen and tracks a smoothed cursor, pulling out for
+      "clear". Key content sits between ~220 px and ~1350 px to clear Instagram's UI. `pnpm render`
+      outputs both `out/scribbble-launch.mp4` and `out/scribbble-launch-instagram.mp4`
+
+- [x] 30-second product tour (2026-10-11): composition `Showcase` (1920×1080 @ 60 fps), rendered to
+      `demo-video/out/scribbble-showcase.mp4` via `pnpm render:showcase`. Slower and easier to follow
+      than the launch reel: logo intro → "One hotkey." with the toolbar sliding in → 8 tools, one 2.5 s
+      bar each, named in a left-hand caption ("Tool 03 / 08", the toolbar icon, a one-line description):
+      pen, arrow, highlighter, spotlight, magnify, text, whiteboard, auto-fade → logo/CTA outro
+      ("Pay once, use forever · macOS 14+"). The Clear beat was dropped after review. The toolbar matches the real app (swatch, stroke dot, pen, arrow, highlighter, measure,
+      spotlight, magnify, text | whiteboard, auto-fade, snapshot, clear, hide | close) with blue active
+      state and hover tooltips. 96 BPM soundtrack from `scripts/music-showcase.ts`
+      (`public/music-showcase.wav`); the synth engine now lives in `scripts/synth.ts`, shared with
+      `music.ts` (the launch reel's music is byte-identical after the refactor). Tunables in `SHOWCASE*`
+      in `src/config.ts`, text in `SHOWCASE_COPY` in `src/copy.ts`, scenes in `src/showcase/`
+
+### Product Hunt launch (2026-10-11)
+
+- [x] Prepare and schedule the PH launch for Sun Oct 11, 12:01am PT
+      (https://www.producthunt.com/products/scribbble): tagline, description, Mac / Productivity /
+      Menu Bar Apps tags, icon thumbnail, 7 gallery images (OG image + 6 frames from
+      `demo-video/out/scribbble-launch.mp4`), maker first comment, X @cssMonk, solo maker,
+      "Paid with free trial", promo code `SCRIBBBLEONPH` (20% off, expires Oct 18)
+- [x] Create the `SCRIBBBLEONPH` 20%-off discount in Lemon Squeezy before launch
+- [ ] Add the launch video (YouTube/Loom link) to the PH post
+
+### Download page, changelog, mobile nav, price fix (2026-11-13)
+
+- [x] Add a localized `/download` page (`app/[locale]/download/page.tsx`). Every "Download" CTA on the
+      site now links to it (`downloadCtaUrl(locale)` in `lib/i18n/seo.ts`) instead of opening the DMG
+      in a new tab. Arriving from a CTA (`?start=1`) starts the download automatically
+      (`components/download-starter.tsx`); a direct visit shows a button; non-Mac visitors are told
+      it is a Mac app. Below: three install steps, the default shortcut, and the $12 license offer.
+      New GA4 locations: `download_page`, `download_page_retry`, `mobile_menu`, `changelog_cta`
+      (`buy_click` also fires with `download_page`). Copy in `messages/en.json` under `download`
+- [x] Fix the price contradiction: homepage `SoftwareApplication` JSON-LD said `price: "0"` while the
+      site says $12. Price now comes from `PRICE_USD` in `lib/site-config.ts`, shared by the homepage,
+      `/pricing` and `/download`
+- [x] Mobile nav: the header's Features / Pricing links were hidden below `md` with no menu. Added a
+      menu button (`components/mobile-nav.tsx`) with Features, Pricing, Changelog and the download
+      CTA. On small screens the header CTA button and the language dropdown are hidden (the CTA is in
+      the menu, languages are in the footer) so the header no longer overflows
+- [x] Add an English-only `/changelog` page (`app/(en)/changelog/page.tsx`) built from the app's
+      GitHub releases (`lib/changelog.ts`), refreshed hourly, with a checked-in fallback snapshot in
+      `content/changelog.json` (`pnpm changelog` refreshes it). Linked from the header, the footer,
+      the download page and the sitemap

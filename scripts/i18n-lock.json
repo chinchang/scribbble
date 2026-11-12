@@ -12382,5 +12382,329 @@
       "nl",
       "fr"
     ]
+  },
+  "messages.header.changelog": {
+    "hash": "ead07c84baac57a9542f388a07a2a5209456ce790b04251bc9bd7d179ea85cb1",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.header.menu": {
+    "hash": "99af6606ff9d6cd5154d4d4e9c21e325086d3e904677cdb41d363c8a3480f862",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.footer.download": {
+    "hash": "d6eafe82359100423c93c5ce53c352c1b51ca1e699215fcec3f5c5dd9bf12d24",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.footer.changelog": {
+    "hash": "ead07c84baac57a9542f388a07a2a5209456ce790b04251bc9bd7d179ea85cb1",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.download.title": {
+    "hash": "161dcb7f85be80110673ddf3fdeced833172094410e1027d49c84e991068b422",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.download.description": {
+    "hash": "eb9151a31b9904d8f080c777aadd9ff03019fcdbc284bf568b0f5a0be2c4b83f",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.download.breadcrumb": {
+    "hash": "d6eafe82359100423c93c5ce53c352c1b51ca1e699215fcec3f5c5dd9bf12d24",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.download.badge": {
+    "hash": "1ea9b7ae24591cab40f7010e4d4bf194737d437ceca5e988e46f7edc7f64100b",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.download.heroTitle": {
+    "hash": "14278ff5f4cddd4d53418edadffac9b671847d215fd7c676ea1cad866b32f9d1",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.download.heroSubtitle": {
+    "hash": "b180f3e4892089596cb6b2ea3149d93418af34dc44b12231ded0286e7ec19173",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.download.cta": {
+    "hash": "eb7c9ff37e3641e647d64e649087cfe7ea8ec6db7f0184f45680f5ef9fa2b24f",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.download.starting": {
+    "hash": "1538ce288d9ec456e82e7a3dea91af411f038cb414cf6801343c7b93738bc33c",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.download.retryQuestion": {
+    "hash": "46caf4f7bef5763da3b02cc8ec806a9c190a82a177f0a19d698b4aaabafc4380",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.download.retryLink": {
+    "hash": "54dde5eafd65108dc8316ca734f6dff371a4fa417b5aac4dde9f06565e8aeedc",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.download.notMac": {
+    "hash": "e5c3b05a83027d652fb687a952f7ed13bafe0d9599b55bf41aae78bcd8969725",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.download.versionLine": {
+    "hash": "79a666d28a9b9ad90d36ca6ecdc70496045cc8218a4935e09c6c124c252621b2",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.download.whatsNew": {
+    "hash": "4145a3ef06190f8fd23ac446110bae8668ab5e09ff7d62983c426fee311096cf",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.download.stepsTitle": {
+    "hash": "5166471e4247fceea314c9f83a674a31c8f1f92abf3a799461868c1d6bc8a15b",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.download.steps.0.title": {
+    "hash": "569ca49f4aaf7846e952c1d4aeca72febd0b79fa1c4f9db08fd3127551218572",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.download.steps.0.body": {
+    "hash": "8b6b377d93b449a921876dd2a483be8bccd75be8c9b1cb5a7351bdd56b5c8eb9",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.download.steps.1.title": {
+    "hash": "ccf56ef5db0b82a58fa49a20d4d10c70294b29aab981005fc4e0e49edca9d06f",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.download.steps.1.body": {
+    "hash": "f325c83b7d721e795d7cb0ead5e448ef3b58ac9c4b4fb99c98da7fbf9042c539",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.download.steps.2.title": {
+    "hash": "61517c08b3bf84b42ac5a38367a9ca07dbc54e9c00ee92df09debe4f38df34d4",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.download.steps.2.body": {
+    "hash": "05fc0c60e24d02e1f1bb85b5668d3c53b34bd8ce353b442a052bcbf2d749b2c5",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.download.tip": {
+    "hash": "a35d7eb894dc407020422cd9cbb6fef5a8c9aa5fa201ed518c33db68fe1fb067",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.download.buyTitle": {
+    "hash": "41ee0af552217c257c1687fe02f47beac1a776f13b193f886ed45623f4ebe5fd",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.download.buySubtitle": {
+    "hash": "b6caeb9beea3a013184f5d00b5960cbf81f2e881233b01ed53cf4d7505c6996b",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
   }
 }

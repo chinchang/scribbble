@@ -10,6 +10,8 @@
     "cta": "Télécharger Scribbble",
     "features": "Fonctionnalités",
     "pricing": "Tarifs",
+    "changelog": "Journal des modifications",
+    "menu": "Menu",
     "buyLicense": "Acheter la licence"
   },
   "footer": {
@@ -24,6 +26,8 @@
     "scribbbleVs": "Scribbble vs {competitor}",
     "company": "Entreprise",
     "pricing": "Tarifs",
+    "download": "Télécharger",
+    "changelog": "Journal des modifications",
     "buyLicense": "Acheter la licence",
     "support": "Assistance",
     "language": "Langue",
@@ -185,6 +189,39 @@
     "downloadFree": "Télécharger gratuitement",
     "buyLicense": "Acheter la licence",
     "downloadScribbble": "Télécharger Scribbble"
+  },
+  "download": {
+    "title": "Téléchargez Scribbble pour Mac : application d'annotation d'écran gratuite",
+    "description": "Téléchargez Scribbble, l'application Mac pour dessiner sur votre écran (souvent recherchée sous Scribble). Essai gratuit sur macOS 14 ou ultérieur, sans inscription. Licence unique à 12 $ avec mises à jour à vie.",
+    "breadcrumb": "Télécharger",
+    "badge": "Essai gratuit · Sans inscription",
+    "heroTitle": "Téléchargez <gradient>Scribbble</gradient> pour Mac",
+    "heroSubtitle": "Essai gratuit, aucun compte requis. Fonctionne sur macOS 14 ou ultérieur, Apple Silicon et Intel.",
+    "cta": "Télécharger pour Mac",
+    "starting": "Votre téléchargement va démarrer.",
+    "retryQuestion": "Ça n'a pas démarré ?",
+    "retryLink": "Télécharger à nouveau",
+    "notMac": "Scribbble est une application Mac. Ouvrez cette page sur votre Mac pour l'installer.",
+    "versionLine": "Version {version} · macOS 14 ou ultérieur",
+    "whatsNew": "Voir les nouveautés",
+    "stepsTitle": "Dessiner en <gradient>trois étapes</gradient>",
+    "steps": [
+      {
+        "title": "Installer",
+        "body": "Ouvrez Scribbble.dmg depuis votre dossier Téléchargements et glissez Scribbble dans Applications."
+      },
+      {
+        "title": "Lancer",
+        "body": "Ouvrez Scribbble depuis votre dossier Applications."
+      },
+      {
+        "title": "Dessiner",
+        "body": "Appuyez sur {shortcut} ou cliquez sur l'icône du Dock pour afficher la superposition, puis dessinez par-dessus ce qui est à l'écran. Appuyez de nouveau pour la fermer."
+      }
+    ],
+    "tip": "Astuce : appuyez sur ? dans Scribbble pour voir tous les raccourcis clavier.",
+    "buyTitle": "Ça vous plaît ? <gradient>Adoptez-le</gradient> pour {price}",
+    "buySubtitle": "Paiement unique, mises à jour à vie, garantie satisfait ou remboursé 14 jours. Pas d'abonnement."
   },
   "pricing": {
     "title": "Tarifs : 12 $ une fois, mises à jour à vie",

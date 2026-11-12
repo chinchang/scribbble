@@ -10,6 +10,8 @@
     "cta": "Scribbbleを入手",
     "features": "機能",
     "pricing": "料金",
+    "changelog": "変更履歴",
+    "menu": "メニュー",
     "buyLicense": "ライセンスを購入"
   },
   "footer": {
@@ -24,6 +26,8 @@
     "scribbbleVs": "Scribbble vs {competitor}",
     "company": "会社情報",
     "pricing": "料金",
+    "download": "ダウンロード",
+    "changelog": "変更履歴",
     "buyLicense": "ライセンスを購入",
     "support": "サポート",
     "language": "言語",
@@ -185,6 +189,39 @@
     "downloadFree": "無料でダウンロード",
     "buyLicense": "ライセンスを購入",
     "downloadScribbble": "Scribbble をダウンロード"
+  },
+  "download": {
+    "title": "Mac向けScribbbleをダウンロード：無料で使える画面注釈アプリ",
+    "description": "画面に描画できるMac用アプリ、Scribbbleをダウンロードしてください（よくScribbleと検索されます）。macOS 14以降で無料でお試し可能、サインアップ不要です。買い切りライセンスは一度の支払いで$12、永続的なアップデート付き。",
+    "breadcrumb": "ダウンロード",
+    "badge": "無料でお試し · サインアップ不要",
+    "heroTitle": "Mac向け<gradient>Scribbble</gradient>をダウンロード",
+    "heroSubtitle": "無料でお試し可能、アカウント不要。macOS 14以降、Apple SiliconとIntelに対応。",
+    "cta": "Mac版をダウンロード",
+    "starting": "ダウンロードを開始しています。",
+    "retryQuestion": "開始されませんか？",
+    "retryLink": "もう一度ダウンロード",
+    "notMac": "ScribbbleはMac用アプリです。インストールするにはMacでこのページを開いてください。",
+    "versionLine": "バージョン {version} · macOS 14以降",
+    "whatsNew": "新機能を見る",
+    "stepsTitle": "<gradient>3ステップ</gradient>で描画",
+    "steps": [
+      {
+        "title": "インストール",
+        "body": "DownloadsフォルダからScribbble.dmgを開き、ScribbbleをApplicationsにドラッグしてください。"
+      },
+      {
+        "title": "起動",
+        "body": "ApplicationsフォルダからScribbbleを開いてください。"
+      },
+      {
+        "title": "描く",
+        "body": "オーバーレイを表示するには{shortcut}を押すかDockのアイコンをクリックし、画面上に自由に描いてください。もう一度押すと収納できます。"
+      }
+    ],
+    "tip": "ヒント：Scribbble内で?を押すと全てのキーボードショートカットが表示されます。",
+    "buyTitle": "気に入りましたか？{price}で<gradient>所有</gradient>しましょう",
+    "buySubtitle": "一度の支払いで、永続的なアップデート、14日間返金保証付き。サブスクリプションはありません。"
   },
   "pricing": {
     "title": "価格: $12 一回払い、ライフタイム更新付き",

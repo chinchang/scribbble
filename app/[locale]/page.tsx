@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import DownloadLink from "@/components/download-link";
+import { downloadCtaUrl } from "@/lib/i18n/seo";
 import { Badge } from "@/components/ui/badge";
 import {
   DollarSign,
@@ -22,7 +23,7 @@ import { personas } from "@/lib/personas";
 import { listicles } from "@/lib/listicles";
 import { comparisons } from "@/lib/comparisons";
 import { setRequestLocale, getTranslations } from "next-intl/server";
-import { SITE_URL, DOWNLOAD_URL, BUY_URL } from "@/lib/site-config";
+import { SITE_URL, BUY_URL, PRICE_USD, MIN_MACOS } from "@/lib/site-config";
 
 export default async function Home({
   params,
@@ -37,7 +38,7 @@ export default async function Home({
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     name: "Scribbble",
-    operatingSystem: "macOS 14.0+",
+    operatingSystem: MIN_MACOS,
     applicationCategory: "DesignApplication",
     description: t("jsonLd.description"),
     inLanguage: locale,
@@ -46,8 +47,12 @@ export default async function Home({
     featureList: t.raw("jsonLd.featureList"),
     offers: {
       "@type": "Offer",
-      price: "0",
+      // The license price, same as /pricing. It used to say "0" (the free
+      // download), which contradicted the $12 quoted everywhere else.
+      price: String(PRICE_USD),
       priceCurrency: "USD",
+      availability: "https://schema.org/InStock",
+      url: BUY_URL,
       description: t("jsonLd.offerDescription"),
     },
     author: {
@@ -156,9 +161,7 @@ export default async function Home({
               className="bg-gradient-to-r from-primary to-accent hover:from-accent hover:to-primary text-white px-12 py-6 text-xl font-bold shadow-2xl hover:shadow-3xl transform hover:scale-110 transition-all duration-300"
             >
               <DownloadLink
-                href={DOWNLOAD_URL}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={downloadCtaUrl(locale)}
                 location="home_hero"
               >
                 <Download className="w-6 h-6 mr-3" />
@@ -314,6 +317,7 @@ export default async function Home({
         buyLine={buyLine("home_mid_cta")}
         chips={midCtaChips}
         location="home_mid_cta"
+        locale={locale}
       />
 
       {/* SEO content section: cluster targeting "screen annotation tool mac", "mac screen annotation", "annotation app for mac" */}
@@ -432,9 +436,7 @@ export default async function Home({
             className="bg-gradient-to-r from-primary to-accent hover:from-accent hover:to-primary text-white px-16 py-8 text-2xl font-bold shadow-2xl hover:shadow-3xl transform hover:scale-110 transition-all duration-300 mb-8"
           >
             <DownloadLink
-              href={DOWNLOAD_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={downloadCtaUrl(locale)}
               location="home_bottom_cta"
             >
               <Download className="w-8 h-8 mr-4" />

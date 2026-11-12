@@ -10,6 +10,8 @@
     "cta": "Scribbble पाएं",
     "features": "विशेषताएँ",
     "pricing": "मूल्य निर्धारण",
+    "changelog": "चेंजलॉग",
+    "menu": "मेन्यू",
     "buyLicense": "लाइसेंस खरीदें"
   },
   "footer": {
@@ -24,6 +26,8 @@
     "scribbbleVs": "Scribbble बनाम {competitor}",
     "company": "कंपनी",
     "pricing": "मूल्य निर्धारण",
+    "download": "डाउनलोड",
+    "changelog": "चेंजलॉग",
     "buyLicense": "लाइसेंस खरीदें",
     "support": "सपोर्ट",
     "language": "भाषा",
@@ -185,6 +189,39 @@
     "downloadFree": "मुफ्त डाउनलोड",
     "buyLicense": "लाइसेंस खरीदें",
     "downloadScribbble": "Scribbble डाउनलोड करें"
+  },
+  "download": {
+    "title": "Mac के लिए Scribbble डाउनलोड करें: फ्री स्क्रीन एनोटेशन ऐप",
+    "description": "Scribbble डाउनलोड करें, आपकी स्क्रीन पर ड्राइंग करने के लिए Mac ऐप (अकसर Scribble के रूप में खोजा जाता है). macOS 14 या उससे ऊपर पर मुफ़्त ट्रायल, साइनअप की जरूरत नहीं. एक बार का $12 लाइसेंस, आयु भर के अपडेट्स.",
+    "breadcrumb": "डाउनलोड",
+    "badge": "ट्रायल मुफ़्त · साइनअप नहीं",
+    "heroTitle": "Mac के लिए <gradient>Scribbble</gradient> डाउनलोड करें",
+    "heroSubtitle": "ट्रायल मुफ़्त, खाता चाहिए नहीं. macOS 14 या उससे ऊपर, Apple Silicon और Intel पर चलता है.",
+    "cta": "Mac के लिए डाउनलोड करें",
+    "starting": "आपका डाउनलोड शुरू हो रहा है.",
+    "retryQuestion": "शुरू नहीं हुआ?",
+    "retryLink": "फिर से डाउनलोड करें",
+    "notMac": "Scribbble एक Mac ऐप है. इसे इंस्टॉल करने के लिए यह पेज अपने Mac पर खोलें.",
+    "versionLine": "वर्शन {version} · macOS 14 या उससे ऊपर",
+    "whatsNew": "नया क्या है देखें",
+    "stepsTitle": "<gradient>तीन चरणों</gradient> में ड्राइंग",
+    "steps": [
+      {
+        "title": "इंस्टॉल करें",
+        "body": "Downloads फ़ोल्डर से Scribbble.dmg खोलें और Scribbble को Applications में ड्रैग करें."
+      },
+      {
+        "title": "लॉन्च करें",
+        "body": "Applications फ़ोल्डर से Scribbble खोलें."
+      },
+      {
+        "title": "ड्रॉ करें",
+        "body": "ओवरले लाने के लिए {shortcut} दबाएँ या Dock आइकन पर क्लिक करें, फिर स्क्रीन पर जो कुछ भी है उस पर ड्रॉ करें. वापस छुपाने के लिए फिर से दबाएँ."
+      }
+    ],
+    "tip": "टिप: Scribbble के अंदर ? दबाएँ ताकि सभी कीबोर्ड शॉर्टकट दिख जाएँ.",
+    "buyTitle": "पसंद आया? {price} में <gradient>अपना बनाइए</gradient>",
+    "buySubtitle": "एक बार भुगतान, आयु भर के अपडेट्स, 14 दिन मनी-बैक गारंटी. कोई सब्सक्रिप्शन नहीं."
   },
   "pricing": {
     "title": "मूल्य: $12 एक बार, लाइफटाइम अपडेट्स",

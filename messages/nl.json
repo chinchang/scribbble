@@ -10,6 +10,8 @@
     "cta": "Haal Scribbble",
     "features": "Functies",
     "pricing": "Prijzen",
+    "changelog": "Wijzigingslogboek",
+    "menu": "Menu",
     "buyLicense": "Koop licentie"
   },
   "footer": {
@@ -24,6 +26,8 @@
     "scribbbleVs": "Scribbble vs {competitor}",
     "company": "Bedrijf",
     "pricing": "Prijzen",
+    "download": "Download",
+    "changelog": "Wijzigingslogboek",
     "buyLicense": "Koop licentie",
     "support": "Ondersteuning",
     "language": "Taal",
@@ -185,6 +189,39 @@
     "downloadFree": "Gratis downloaden",
     "buyLicense": "Licentie kopen",
     "downloadScribbble": "Download Scribbble"
+  },
+  "download": {
+    "title": "Download Scribbble voor Mac: gratis schermannotatie-app",
+    "description": "Download Scribbble, de Mac-app om op je scherm te tekenen (vaak gezocht als Scribble). Gratis te proberen op macOS 14 of later, geen registratie. Eenmalige licentie van $12 met levenslange updates.",
+    "breadcrumb": "Download",
+    "badge": "Gratis te proberen · Geen registratie",
+    "heroTitle": "Download <gradient>Scribbble</gradient> voor Mac",
+    "heroSubtitle": "Gratis te proberen, geen account nodig. Werkt op macOS 14 of later, Apple Silicon en Intel.",
+    "cta": "Download voor Mac",
+    "starting": "Je download wordt gestart.",
+    "retryQuestion": "Niet gestart?",
+    "retryLink": "Opnieuw downloaden",
+    "notMac": "Scribbble is een Mac-app. Open deze pagina op je Mac om het te installeren.",
+    "versionLine": "Versie {version} · macOS 14 of later",
+    "whatsNew": "Bekijk wat er nieuw is",
+    "stepsTitle": "Tekenen in <gradient>drie stappen</gradient>",
+    "steps": [
+      {
+        "title": "Installeren",
+        "body": "Open Scribbble.dmg uit je map Downloads en sleep Scribbble naar de map Applications."
+      },
+      {
+        "title": "Starten",
+        "body": "Open Scribbble vanuit je map Applications."
+      },
+      {
+        "title": "Teken",
+        "body": "Druk op {shortcut} of klik op het Dock-icoon om de overlay te openen, en teken vervolgens over wat er op het scherm staat. Druk nogmaals om het weg te halen."
+      }
+    ],
+    "tip": "Tip: druk op ? binnen Scribbble om alle sneltoetsen te zien.",
+    "buyTitle": "Bevalt het? <gradient>Word eigenaar</gradient> voor {price}",
+    "buySubtitle": "Eenmalige betaling, levenslange updates, 14 dagen niet goed geld terug garantie. Geen abonnement."
   },
   "pricing": {
     "title": "Prijs: $12 éénmalig, levenslange updates",

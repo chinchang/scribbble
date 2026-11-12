@@ -8,8 +8,8 @@ import SiteFooter from "@/components/site-footer";
 import SiteHeader from "@/components/site-header";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { getPersonas, getComparisons, getListicles } from "@/lib/i18n/data";
-import { localeUrl, languageAlternates } from "@/lib/i18n/seo";
-import { SITE_URL, DOWNLOAD_URL } from "@/lib/site-config";
+import { localeUrl, languageAlternates, downloadCtaUrl } from "@/lib/i18n/seo";
+import { SITE_URL } from "@/lib/site-config";
 
 const PATH = "/vs/zoomit-vs-epic-pen";
 
@@ -300,9 +300,7 @@ export default async function Page({
                 className="bg-gradient-to-r from-primary to-accent text-white"
               >
                 <DownloadLink
-                  href={DOWNLOAD_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href={downloadCtaUrl(locale)}
                   location="vs_third_party_verdict"
                 >
                   <Download className="w-4 h-4 mr-2" />

@@ -10,6 +10,8 @@
     "cta": "Get Scribbble",
     "features": "Features",
     "pricing": "Pricing",
+    "changelog": "Changelog",
+    "menu": "Menu",
     "buyLicense": "Buy License"
   },
   "footer": {
@@ -24,6 +26,8 @@
     "scribbbleVs": "Scribbble vs {competitor}",
     "company": "Company",
     "pricing": "Pricing",
+    "download": "Download",
+    "changelog": "Changelog",
     "buyLicense": "Buy License",
     "support": "Support",
     "language": "Language",
@@ -181,6 +185,39 @@
     "downloadFree": "Download Free",
     "buyLicense": "Buy License",
     "downloadScribbble": "Download Scribbble"
+  },
+  "download": {
+    "title": "Download Scribbble for Mac: Free Screen Annotation App",
+    "description": "Download Scribbble, the Mac app for drawing on your screen (often searched as Scribble). Free to try on macOS 14 or later, no signup. One-time $12 license with lifetime updates.",
+    "breadcrumb": "Download",
+    "badge": "Free to try · No signup",
+    "heroTitle": "Download <gradient>Scribbble</gradient> for Mac",
+    "heroSubtitle": "Free to try, no account needed. Works on macOS 14 or later, Apple Silicon and Intel.",
+    "cta": "Download for Mac",
+    "starting": "Your download is starting.",
+    "retryQuestion": "Didn't start?",
+    "retryLink": "Download again",
+    "notMac": "Scribbble is a Mac app. Open this page on your Mac to install it.",
+    "versionLine": "Version {version} · macOS 14 or later",
+    "whatsNew": "See what's new",
+    "stepsTitle": "Drawing in <gradient>three steps</gradient>",
+    "steps": [
+      {
+        "title": "Install",
+        "body": "Open Scribbble.dmg from your Downloads folder and drag Scribbble into Applications."
+      },
+      {
+        "title": "Launch",
+        "body": "Open Scribbble from your Applications folder."
+      },
+      {
+        "title": "Draw",
+        "body": "Press {shortcut} or click the Dock icon to bring up the overlay, then draw over whatever is on screen. Press it again to put it away."
+      }
+    ],
+    "tip": "Tip: press ? inside Scribbble to see every keyboard shortcut.",
+    "buyTitle": "Like it? <gradient>Own it</gradient> for {price}",
+    "buySubtitle": "One payment, lifetime updates, 14-day money-back guarantee. No subscription."
   },
   "pricing": {
     "title": "Pricing: $12 One-Time, Lifetime Updates",

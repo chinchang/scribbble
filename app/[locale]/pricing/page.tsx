@@ -9,12 +9,16 @@ import SiteFooter from "@/components/site-footer";
 import SiteHeader from "@/components/site-header";
 import Testimonials, { type Testimonial } from "@/components/testimonials";
 import { setRequestLocale, getTranslations } from "next-intl/server";
-import { localeUrl, languageAlternates } from "@/lib/i18n/seo";
-import { SITE_URL, DOWNLOAD_URL, BUY_URL } from "@/lib/site-config";
+import { localeUrl, languageAlternates, downloadCtaUrl } from "@/lib/i18n/seo";
+import {
+  SITE_URL,
+  BUY_URL,
+  PRICE_USD,
+  PRICE_LABEL as PRICE,
+  MIN_MACOS,
+} from "@/lib/site-config";
 
 const PATH = "/pricing";
-const PRICE_USD = 12;
-const PRICE = `$${PRICE_USD}`;
 
 export async function generateMetadata({
   params,
@@ -65,7 +69,7 @@ export default async function PricingPage({
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     name: "Scribbble",
-    operatingSystem: "macOS 14.0+",
+    operatingSystem: MIN_MACOS,
     applicationCategory: "DesignApplication",
     inLanguage: locale,
     url: `${SITE_URL}${localeUrl(locale, PATH)}`,
@@ -227,9 +231,7 @@ export default async function PricingPage({
                 {t.rich("card.tryLine", {
                   link: (chunks) => (
                     <DownloadLink
-                      href={DOWNLOAD_URL}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      href={downloadCtaUrl(locale)}
                       location="pricing_card"
                       className="font-bold text-primary underline decoration-2 decoration-primary/40 underline-offset-4 hover:decoration-primary transition"
                     >

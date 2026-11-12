@@ -3,7 +3,7 @@ import { getTranslations } from "next-intl/server";
 import { personas } from "@/lib/personas";
 import { comparisons } from "@/lib/comparisons";
 import { listicles } from "@/lib/listicles";
-import { BUY_URL } from "@/lib/site-config";
+import { BUY_URL, DOWNLOAD_PATH, CHANGELOG_PATH } from "@/lib/site-config";
 import { localeUrl } from "@/lib/i18n/seo";
 import LocaleSwitcher from "@/components/locale-switcher";
 
@@ -125,6 +125,22 @@ export default async function SiteFooter({
                   className="text-muted-foreground hover:text-primary transition font-medium"
                 >
                   {t("pricing")}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={localeUrl(locale, DOWNLOAD_PATH)}
+                  className="text-muted-foreground hover:text-primary transition font-medium"
+                >
+                  {t("download")}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={CHANGELOG_PATH}
+                  className="text-muted-foreground hover:text-primary transition font-medium"
+                >
+                  {t("changelog")}
                 </a>
               </li>
               <li>

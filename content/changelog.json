@@ -1,0 +1,107 @@
+[
+  {
+    "tag_name": "v0.13.0",
+    "name": "Scribbble 0.13.0",
+    "published_at": "2026-10-27T20:07:24Z",
+    "html_url": "https://github.com/chinchang/scribbble/releases/tag/v0.13.0",
+    "body": "## Changelog\r\n\r\n### ✨ New\r\n\r\n- 🎨 **A real palette, at your fingertips** — ten well-thought colors that read against anything replace the system color picker. `1`–`9` and `0` switch colors without leaving the canvas; `C` opens the palette. \r\n- 🖱️ **Click the Dock icon to toggle** — tap it to summon the overlay, tap again to send it away. Same as your toggle shortcut (`⌥Space` by default)."
+  },
+  {
+    "tag_name": "v0.12.0",
+    "name": "Scribbble 0.12.0",
+    "published_at": "2026-09-11T11:50:04Z",
+    "html_url": "https://github.com/chinchang/scribbble/releases/tag/v0.12.0",
+    "body": "## Changelog\r\n\r\n### ✨ New\r\n\r\n- 🫧 **Auto-fade** (`F`) — everything you draw quietly dissolves a few seconds after you lift the pen. Hover the button to pick Quick or 1–10s; Hold `⌃` while drawing to fade just one mark — or, with the mode on, to keep one.\r\n- \r\n<img width=\"514\" height=\"915\" alt=\"image\" src=\"https://github.com/user-attachments/assets/2dc3f749-b051-4e6a-8746-f631224fa5d1\" />\r\n"
+  },
+  {
+    "tag_name": "v0.11.0",
+    "name": "Scribbble 0.11.0",
+    "published_at": "2026-09-09T12:46:44Z",
+    "html_url": "https://github.com/chinchang/scribbble/releases/tag/v0.11.0",
+    "body": "## Changelog\r\n\r\n✨ New\r\n\r\n- 🧭 Dock the toolbar anywhere - top and bottom join left and right.\r\n- 🖥️ Multi-monitor support - follows your cursor across displays — the overlay now shows up on whichever screen you're actually looking at, not the one it launched on.\r\n- 🥚 A little secret - ⌘-click anywhere on the toolbar and see what happens.\r\n\r\n💅 Polished\r\n\r\n- 🫧 More polished design for the toolbar and crispier icons!\r\n- ⌨️ The shortcuts overlay got real keycaps and a tidier layout.\r\n\r\n🐛 Fixed\r\n\r\n- 🖥️ Scribbble now works over fullscreen apps. "
+  },
+  {
+    "tag_name": "v0.10.0",
+    "name": "Scribbble 0.10.0",
+    "published_at": "2026-09-02T11:08:37Z",
+    "html_url": "https://github.com/chinchang/scribbble/releases/tag/v0.10.0",
+    "body": "### Changelog\r\n\r\n✨ New\r\n\r\n- 🧑‍🏫 Whiteboard Tool (W) — blank the screen and draw on a proper board. White or chalkboard green, plain / ruled / grid / dotted. Board doodles stay with the board: dismiss it and your desktop scribbles are exactly where you left them. [Pro only]\r\n- 🧹 Clear annotations on app toggle — new toggle under Tools, on by default. Flip it off to keep your drawing across a hide.\r\n\r\n🐛 Fixed\r\n\r\n- 🖍️ Text and measurements no longer come out ghostly after using the highlighter.\r\n- 📏 Measure stopped stamping duplicates every time your cursor wandered onto the toolbar.\r\n- 💥 No more crash on launch on macOS 13 and earlier.\r\n- 🔶 The Shapes button no longer turns up blank without a license."
+  },
+  {
+    "tag_name": "v0.9.2",
+    "name": "Scribbble 0.9.2",
+    "published_at": "2026-08-19T03:04:10Z",
+    "html_url": "https://github.com/chinchang/scribbble/releases/tag/v0.9.2",
+    "body": "## Changelog\r\n\r\n- Shows correct version in About dialog"
+  },
+  {
+    "tag_name": "v0.9.1",
+    "name": "Scribbble 0.9.1",
+    "published_at": "2026-08-18T19:42:26Z",
+    "html_url": "https://github.com/chinchang/scribbble/releases/tag/v0.9.1",
+    "body": "## Changelog\r\n\r\n- Scribbble crashed on launch on macOS 13 Ventura and earlier; it now opens normally there. (macOS 12.3 is the minimum supported version.)\r\n- The Shapes toolbar button appeared blank without a Pro license — its icon now shows for everyone.\r\n"
+  },
+  {
+    "tag_name": "v0.9.0",
+    "name": "Scribbble 0.9.0",
+    "published_at": "2026-08-14T11:37:01Z",
+    "html_url": "https://github.com/chinchang/scribbble/releases/tag/v0.9.0",
+    "body": "## Changelog\r\n\r\n### New\r\n\r\n- **Magnify tool** (`Z`) — a loupe that follows your cursor with live 2x magnified screen content. `+` / `-` resize the lens. Pro feature, requires macOS 15.2+.\r\n- **Localization** — now available in English, French, Spanish, Chinese, Japanese, Dutch, German, and Hindi. Auto-detected from your system locale, changeable in Settings → General.\r\n- **Update dialog** — \"Check for updates…\" now shows what's happening: checking, up to date, the new version and its notes, or the error.\r\n\r\n### Changed\r\n\r\n- Updates no longer install themselves. Previously a check that found a release relaunched the app unannounced, discarding your drawing. You now choose when to install.\r\n- Settings are organized into General and Tools tabs.\r\n\r\n### Fixed\r\n\r\n- Update checks could stall for days on a sleeping laptop. They now track wall-clock time, so sleeping or restarting doesn't reset the schedule."
+  },
+  {
+    "tag_name": "v0.8.0",
+    "name": "Scribbble 0.8.0",
+    "published_at": "2026-07-03T19:47:36Z",
+    "html_url": "https://github.com/chinchang/scribbble/releases/tag/v0.8.0",
+    "body": "## Changelog\r\n\r\n- Setting available to hide Scribbble from dock and app switcher\r\n- Performance improvements - lesser CPU, lesser memory usage"
+  },
+  {
+    "tag_name": "v0.7.0",
+    "name": "Scribbble 0.7.0",
+    "published_at": "2026-06-18T13:19:27Z",
+    "html_url": "https://github.com/chinchang/scribbble/releases/tag/v0.7.0",
+    "body": "## Changelog\r\n\r\n- Minimize just the toolbar with `\\` key\r\n- See all keyboard shortcuts with `?` key"
+  },
+  {
+    "tag_name": "v0.6.0",
+    "name": "Scribbble 0.6.0",
+    "published_at": "2026-06-11T14:28:13Z",
+    "html_url": "https://github.com/chinchang/scribbble/releases/tag/v0.6.0",
+    "body": "## Changelog\r\n\r\n- [New] Shape tool - Draw rectangles (R), ellipsis (E) and arrows (A) to make your scribbbles convey better! You can cycle through the shapes using `]` key too."
+  },
+  {
+    "tag_name": "v0.5.0",
+    "name": "Scribbble 0.5.0",
+    "published_at": "2026-06-08T12:24:00Z",
+    "html_url": "https://github.com/chinchang/scribbble/releases/tag/v0.5.0",
+    "body": "## Changelog\r\n\r\n  - **Snapshot tool** (Pro) — capture the screen plus your annotations to the clipboard or save to disk (`~/Downloads`). Region-capture supported via ⌘⇧C / ⌘⇧S or Shift+click the snapshot button. With configurable shutter sound effect. 📸\r\n  - **Custom cursors** for each drawing tool.\r\n  - **Toolbar position** — choose left or right side of the screen from Settings.\r\n  - **Color and brush size persist** across launches (toggle in Settings)."
+  },
+  {
+    "tag_name": "v0.4.1",
+    "name": "Scribbble 0.4.1",
+    "published_at": "2026-05-06T10:19:01Z",
+    "html_url": "https://github.com/chinchang/scribbble/releases/tag/v0.4.1",
+    "body": "## Changelog\r\n\r\n- Improved Text tool experience\r\n- Auto-updates\r\n- \"Start on login\" support added\r\n- New Feedback forum -> https://scribbble.fider.io/\r\n\r\nEnjoy!"
+  },
+  {
+    "tag_name": "v0.3.0",
+    "name": "v0.3.0 - Crop",
+    "published_at": "2025-11-26T12:33:30Z",
+    "html_url": "https://github.com/chinchang/scribbble/releases/tag/v0.3.0",
+    "body": "- [feature] Add new \"Highlighter\" tool 💄\r\n- Improved tooltips in toolbar\r\n- Improved the system tray icon, as per Apple guidelines\r\n- Minor UX improvements and bug fixes\r\n\r\n## Screenshots\r\n\r\n<img width=\"309\" height=\"114\" alt=\"CleanShot 2025-11-26 at 18 04 40\" src=\"https://github.com/user-attachments/assets/b6ced0e0-641b-4d29-a16f-99261ebfd522\" />\r\n\r\n<img width=\"375\" height=\"564\" alt=\"CleanShot 2025-11-26 at 18 05 37\" src=\"https://github.com/user-attachments/assets/61721c7b-2bfe-4c2b-ba0c-f5c13f338352\" />\r\n\r\n"
+  },
+  {
+    "tag_name": "v0.2.0",
+    "name": "v0.2.0 - Swat",
+    "published_at": "2025-09-08T09:15:46Z",
+    "html_url": "https://github.com/chinchang/scribbble/releases/tag/v0.2.0",
+    "body": "- Fixed the typo in the keyboard shortcut mentioned in menu bar to toggle the app. Correct shortcut is `Option+tab`\r\n- Improved the text tool UI"
+  },
+  {
+    "tag_name": "v0.1.0",
+    "name": "v0.1.0 - Begin!",
+    "published_at": "2025-09-04T12:31:39Z",
+    "html_url": "https://github.com/chinchang/scribbble/releases/tag/v0.1.0",
+    "body": "## v0.1.0\r\n\r\n- I have launched! 🚀 \r\n- Instructions: Install and use `Option + Tab` to toggle the app whenever, wherever."
+  }
+]

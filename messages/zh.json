@@ -10,6 +10,8 @@
     "cta": "获取 Scribbble",
     "features": "功能",
     "pricing": "定价",
+    "changelog": "更新日志",
+    "menu": "菜单",
     "buyLicense": "购买授权"
   },
   "footer": {
@@ -24,6 +26,8 @@
     "scribbbleVs": "Scribbble 与 {competitor}",
     "company": "公司",
     "pricing": "定价",
+    "download": "下载",
+    "changelog": "更新日志",
     "buyLicense": "购买授权",
     "support": "支持",
     "language": "语言",
@@ -185,6 +189,39 @@
     "downloadFree": "免费下载",
     "buyLicense": "购买授权",
     "downloadScribbble": "下载 Scribbble"
+  },
+  "download": {
+    "title": "在 Mac 上下载 Scribbble：免费屏幕标注应用",
+    "description": "下载 Scribbble，这款可在屏幕上绘图的 Mac 应用（常被搜索为 Scribble）。支持 macOS 14 或更高版本，免费试用，无需注册。一次性 $12 许可证，终身更新。",
+    "breadcrumb": "下载",
+    "badge": "免费试用 · 无需注册",
+    "heroTitle": "在 Mac 上下载 <gradient>Scribbble</gradient>",
+    "heroSubtitle": "免费试用，无需账户。兼容 macOS 14 或更高版本，支持 Apple Silicon 和 Intel。",
+    "cta": "下载 Mac 版",
+    "starting": "正在开始下载。",
+    "retryQuestion": "未开始下载？",
+    "retryLink": "重新下载",
+    "notMac": "Scribbble 是 Mac 应用。请在你的 Mac 上打开此页面以安装。",
+    "versionLine": "版本 {version} · macOS 14 或更高版本",
+    "whatsNew": "查看更新内容",
+    "stepsTitle": "用 <gradient>三步</gradient> 开始绘图",
+    "steps": [
+      {
+        "title": "安装",
+        "body": "从“下载”文件夹打开 Scribbble.dmg，然后将 Scribbble 拖入“应用程序”文件夹。"
+      },
+      {
+        "title": "启动",
+        "body": "从“应用程序”文件夹打开 Scribbble。"
+      },
+      {
+        "title": "绘图",
+        "body": "按 {shortcut} 或点击 Dock 图标调出覆盖层，然后在屏幕上进行绘制。再次按下即可收起。"
+      }
+    ],
+    "tip": "提示：在 Scribbble 内按 ? 可查看所有键盘快捷键。",
+    "buyTitle": "喜欢它吗？以 {price} <gradient>拥有它</gradient>",
+    "buySubtitle": "一次付款，终身更新，14 天退款保证。不含订阅。"
   },
   "pricing": {
     "title": "定价：一次付清 $12，终身更新",
