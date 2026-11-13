@@ -17,7 +17,7 @@ export const PRICE_LABEL = `$${PRICE_USD}`;
 export const MIN_MACOS = "macOS 14.0+";
 
 // The app's default toggle shortcut, shown in the download page's steps.
-export const TOGGLE_SHORTCUT = "⌥ Space";
+export const TOGGLE_SHORTCUT = "⌥ Tab";
 
 // Download page. CTAs across the site link to DOWNLOAD_PATH with
 // `?DOWNLOAD_AUTOSTART_PARAM=1`; the page then starts the DMG download by
