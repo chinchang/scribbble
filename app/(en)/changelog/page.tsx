@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import DownloadLink from "@/components/download-link";
+import RelativeTime from "@/components/relative-time";
 import SiteFooter from "@/components/site-footer";
 import SiteHeader from "@/components/site-header";
 import { getReleases } from "@/lib/changelog";
@@ -158,12 +159,22 @@ export default async function ChangelogPage() {
                     Latest
                   </span>
                 )}
-                <time
-                  dateTime={release.date}
-                  className="text-sm text-muted-foreground"
-                >
-                  {dateFormat.format(new Date(release.date))}
-                </time>
+                {i === 0 ? (
+                  // The latest release reads as "4 days ago": how fresh the
+                  // app is matters more here than the calendar date.
+                  <RelativeTime
+                    date={release.date}
+                    title={dateFormat.format(new Date(release.date))}
+                    className="text-sm text-muted-foreground"
+                  />
+                ) : (
+                  <time
+                    dateTime={release.date}
+                    className="text-sm text-muted-foreground"
+                  >
+                    {dateFormat.format(new Date(release.date))}
+                  </time>
+                )}
               </div>
 
               {release.sections.map((section, s) => (
