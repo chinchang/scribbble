@@ -33,6 +33,12 @@ export const CHANGELOG_PATH = "/changelog";
 export const GITHUB_REPO = "chinchang/scribbble";
 export const GITHUB_RELEASES_API = `https://api.github.com/repos/${GITHUB_REPO}/releases?per_page=100`;
 export const CHANGELOG_REVALIDATE_SECONDS = 3600;
+// Wording fixes applied to release notes before they are shown, for mistakes
+// in a published GitHub release. [text as published, text to show].
+export const CHANGELOG_CORRECTIONS: [string, string][] = [
+  // v0.13.0 names the wrong default toggle shortcut.
+  ["⌥Space", "⌥Tab"],
+];
 
 export const GA_MEASUREMENT_ID = "G-8D1EQCT847";
 

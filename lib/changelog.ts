@@ -2,6 +2,7 @@ import snapshot from "../content/changelog.json";
 import {
   GITHUB_RELEASES_API,
   CHANGELOG_REVALIDATE_SECONDS,
+  CHANGELOG_CORRECTIONS,
 } from "./site-config";
 
 /** The subset of a GitHub release that the site keeps. */
@@ -89,7 +90,12 @@ export function parseReleaseBody(body: string | null): ReleaseSection[] {
   let skipping = false; // inside a "Screenshots" block
   let lastWasItem = false;
 
-  for (const rawLine of (body ?? "").split(/\r?\n/)) {
+  const corrected = CHANGELOG_CORRECTIONS.reduce(
+    (text, [published, shown]) => text.replaceAll(published, shown),
+    body ?? "",
+  );
+
+  for (const rawLine of corrected.split(/\r?\n/)) {
     const line = rawLine.trim();
     if (!line) {
       lastWasItem = false;
