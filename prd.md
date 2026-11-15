@@ -257,6 +257,22 @@ already ranking, then answer the exact query on that page. Baseline for the 4–
       `music.ts` (the launch reel's music is byte-identical after the refactor). Tunables in `SHOWCASE*`
       in `src/config.ts`, text in `SHOWCASE_COPY` in `src/copy.ts`, scenes in `src/showcase/`
 
+- [x] Paper pop-up book demo (2026-11-14): composition `PopupBook` (1920×1080 @ 30 fps, ~43 s), rendered
+      to `demo-video/out/scribbble-popup-book.mp4` via `pnpm render:popup`. A real 3D scene (three.js via
+      `@remotion/three`): a cardstock pop-up book on a wooden desk, warm light from the upper left, soft
+      shadows, pre-blurred props at the edges. Intro: closed book with the cover title, camera pushes
+      in, cover opens. Five spreads, one per chapter (Draw on anything / One hotkey away / Point it out /
+      Spotlight & zoom / Whiteboard & snap), each with a V-fold backdrop, a cream title banner with
+      coral rules, a chapter pill, a printed caption and springy pop-ups, plus details (strokes drawing
+      themselves, keys pressing, a photo sliding out of the camera). Page turns curl the leaf over the
+      spine with the flattened pop-ups baked onto it. Outro: book closes, camera pulls back. Every
+      tunable in `src/popup/config.ts`, text in `src/popup/copy.ts`, chapter pieces in
+      `src/popup/chapters.ts`; soundtrack from `scripts/music-popup.ts` (`pnpm music:popup`)
+- [x] Pop-up book polish pass: removed the blurred desk props, tighter framing on the open book (less
+      table), dramatic lighting (warm spotlight pooling on the book, desk falling off into shadow,
+      cool rim light, deeper vignette), visible paper fibres/mottling with bump on every piece and
+      page, linen cloth on the hard covers
+
 ### Product Hunt launch (2026-10-11)
 
 - [x] Prepare and schedule the PH launch for Sun Oct 11, 12:01am PT
