@@ -24,13 +24,13 @@ export const metadata: Metadata = {
     url: CHANGELOG_PATH,
     title: TITLE,
     description: DESCRIPTION,
-    images: ["/social-2.png"],
+    images: ["/og.png"],
   },
   twitter: {
     card: "summary_large_image",
     title: TITLE,
     description: DESCRIPTION,
-    images: ["/social-2.png"],
+    images: ["/og.png"],
   },
 };
 

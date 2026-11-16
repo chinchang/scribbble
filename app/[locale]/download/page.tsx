@@ -40,13 +40,13 @@ export async function generateMetadata({
       locale,
       title: t("title"),
       description: t("description"),
-      images: ["/social-2.png"],
+      images: ["/og.png"],
     },
     twitter: {
       card: "summary_large_image",
       title: t("title"),
       description: t("description"),
-      images: ["/social-2.png"],
+      images: ["/og.png"],
     },
   };
 }

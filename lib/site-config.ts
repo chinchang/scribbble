@@ -80,7 +80,7 @@ export function buildBaseMetadata({
       description,
       images: [
         {
-          url: "/social-2.png",
+          url: "/og.png",
           width: 1200,
           height: 630,
           alt: ogImageAlt,
@@ -91,7 +91,7 @@ export function buildBaseMetadata({
       card: "summary_large_image",
       title: ogTitle,
       description,
-      images: ["/social-2.png"],
+      images: ["/og.png"],
       creator: "@cssMonk",
     },
     robots: {

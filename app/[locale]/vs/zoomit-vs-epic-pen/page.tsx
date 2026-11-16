@@ -31,13 +31,13 @@ export async function generateMetadata({
       locale,
       title: t("title"),
       description: t("description"),
-      images: ["/social-2.png"],
+      images: ["/og.png"],
     },
     twitter: {
       card: "summary_large_image",
       title: t("title"),
       description: t("description"),
-      images: ["/social-2.png"],
+      images: ["/og.png"],
     },
   };
 }
@@ -82,7 +82,7 @@ export default async function Page({
     description: t("description"),
     inLanguage: locale,
     url: `${SITE_URL}${localeUrl(locale, PATH)}`,
-    image: `${SITE_URL}/social-2.png`,
+    image: `${SITE_URL}/og.png`,
     author: {
       "@type": "Person",
       name: "Kushagra Gour",

@@ -1,0 +1,342 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Scribbble OG image</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,800&family=Caveat:wght@700&display=block"
+  rel="stylesheet"
+/>
+<script src="./config.js"></script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: #fff; }
+  #og {
+    position: relative;
+    overflow: hidden;
+    font-family: "Bricolage Grotesque", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .abs { position: absolute; }
+  .layer { position: absolute; inset: 0; pointer-events: none; overflow: visible; }
+
+  /* brand */
+  .brand { display: flex; align-items: center; gap: 14px; }
+  .brand img { width: 58px; height: 58px; filter: drop-shadow(0 6px 10px rgba(80, 50, 20, 0.22)); }
+  .brand b { font-weight: 800; letter-spacing: -0.02em; }
+  .brand .tag {
+    font-size: 15px; font-weight: 600; letter-spacing: 0.02em;
+    padding: 5px 11px; border-radius: 999px; margin-left: 2px;
+  }
+
+  h1 { font-weight: 800; position: relative; z-index: 2; }
+  h1 span.line { display: block; white-space: nowrap; }
+  .sub { font-weight: 500; letter-spacing: -0.01em; position: relative; z-index: 2; }
+
+  .chips { display: flex; gap: 10px; align-items: center; }
+  .chip {
+    display: flex; align-items: center; gap: 8px;
+    font-size: 19px; font-weight: 600; letter-spacing: -0.01em;
+    padding: 9px 16px 9px 12px; border-radius: 999px;
+    background: #fff; box-shadow: 0 1px 0 rgba(0,0,0,0.04), 0 0 0 1.5px rgba(23,21,31,0.08);
+  }
+  .chip svg { flex: none; }
+
+  /* mock window */
+  .win {
+    border-radius: 16px; overflow: hidden;
+    box-shadow: 0 30px 60px -18px rgba(60, 35, 10, 0.35), 0 0 0 1px rgba(0,0,0,0.06);
+  }
+  .win .bar { height: 34px; display: flex; align-items: center; gap: 7px; padding: 0 13px; background: #F3F1EE; border-bottom: 1px solid #E8E4DF; }
+  .win .bar i { width: 12px; height: 12px; border-radius: 50%; display: block; }
+  .win .bar .t { margin-left: 10px; font-size: 13px; font-weight: 600; color: #8A8494; }
+
+  /* toolbar */
+  .tb {
+    display: flex; flex-direction: column; align-items: center;
+    padding: 12px 7px; border-radius: 22px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.35), 0 0 0 1px rgba(255,255,255,0.08) inset;
+  }
+  .tb .btn { display: grid; place-items: center; border-radius: 11px; color: #E9E9EE; }
+  .tb .div { width: 60%; height: 1px; background: rgba(255,255,255,0.14); margin: 5px 0; }
+
+  /* keycaps */
+  .keys { display: flex; align-items: center; gap: 10px; }
+  .key {
+    font-size: 20px; font-weight: 600; color: #2A2733;
+    padding: 9px 16px 11px; border-radius: 10px; background: #fff;
+    box-shadow: 0 0 0 1.5px rgba(23,21,31,0.12), 0 4px 0 rgba(23,21,31,0.14), 0 8px 16px rgba(60,35,10,0.12);
+  }
+  .plus { font-size: 24px; font-weight: 800; color: #fff; }
+
+  .hand { font-family: "Caveat", cursive; font-weight: 700; line-height: 1; white-space: nowrap; }
+
+  .cta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 22px; font-weight: 800; letter-spacing: -0.01em; color: #fff;
+    padding: 13px 22px; border-radius: 14px;
+  }
+</style>
+</head>
+<body>
+<div id="og"></div>
+
+<script>
+const C = window.OG_CONFIG;
+const { colors: K, layout: L, type: T, copy: P, strokes: S } = C;
+const W = C.size.width, H = C.size.height;
+const og = document.getElementById("og");
+const NS = "http://www.w3.org/2000/svg";
+
+/* ---------- small helpers ---------- */
+function el(tag, style = {}, html = "", parent = og) {
+  const n = document.createElement(tag);
+  Object.assign(n.style, style);
+  if (html) n.innerHTML = html;
+  parent.appendChild(n);
+  return n;
+}
+function svgEl(tag, attrs, parent) {
+  const n = document.createElementNS(NS, tag);
+  for (const k in attrs) n.setAttribute(k, attrs[k]);
+  parent && parent.appendChild(n);
+  return n;
+}
+function layer(z) {
+  const s = svgEl("svg", { class: "layer", width: W, height: H, viewBox: `0 0 ${W} ${H}` });
+  s.style.zIndex = z;
+  og.appendChild(s);
+  return s;
+}
+// Seeded PRNG so the "hand" is the same on every render.
+let seed = S.seed;
+function rand() {
+  seed |= 0; seed = (seed + 0x6d2b79f5) | 0;
+  let t = Math.imul(seed ^ (seed >>> 15), 1 | seed);
+  t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+  return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+}
+const jit = (a) => (rand() - 0.5) * 2 * a;
+// Catmull-Rom spline through points -> smooth cubic path.
+function smooth(pts) {
+  let d = `M${pts[0][0].toFixed(1)},${pts[0][1].toFixed(1)}`;
+  for (let i = 0; i < pts.length - 1; i++) {
+    const p0 = pts[i - 1] || pts[i], p1 = pts[i], p2 = pts[i + 1], p3 = pts[i + 2] || p2;
+    const c1 = [p1[0] + (p2[0] - p0[0]) / 6, p1[1] + (p2[1] - p0[1]) / 6];
+    const c2 = [p2[0] - (p3[0] - p1[0]) / 6, p2[1] - (p3[1] - p1[1]) / 6];
+    d += ` C${c1[0].toFixed(1)},${c1[1].toFixed(1)} ${c2[0].toFixed(1)},${c2[1].toFixed(1)} ${p2[0].toFixed(1)},${p2[1].toFixed(1)}`;
+  }
+  return d;
+}
+function stroke(svg, d, color, width, extra = {}) {
+  return svgEl("path", {
+    d, fill: "none", stroke: color, "stroke-width": width,
+    "stroke-linecap": "round", "stroke-linejoin": "round", ...extra,
+  }, svg);
+}
+// A loose, hand-drawn loop around a box that overshoots its start.
+function roughLoop(x, y, w, h, padX, padY) {
+  const cx = x + w / 2, cy = y + h / 2, rx = w / 2 + padX, ry = h / 2 + padY;
+  const start = -2.45, end = start + Math.PI * 2 + S.circleOvershoot;
+  const ph = rand() * 6, pts = [];
+  for (let i = 0; i <= 40; i++) {
+    const t = i / 40, a = start + (end - start) * t;
+    const r = 1 + S.circleWobble * Math.sin(a * 2 + ph) + 0.07 * t; // spirals out a little
+    pts.push([cx + Math.cos(a) * rx * r, cy + Math.sin(a) * ry * r * (1 - 0.04 * t)]);
+  }
+  return smooth(pts);
+}
+function squiggle(x1, x2, y, amp, waves) {
+  const pts = [], n = Math.round(waves * 8);
+  for (let i = 0; i <= n; i++) {
+    const t = i / n;
+    pts.push([x1 + (x2 - x1) * t, y + Math.sin(t * waves * Math.PI * 2) * amp * (0.85 + 0.3 * t) + 4 * t]);
+  }
+  return smooth(pts);
+}
+// Curved arrow from a to b, bowing by `bend`, with a two-stroke head.
+function arrow(svg, a, b, bend, color, width, head = 18) {
+  const mx = (a[0] + b[0]) / 2, my = (a[1] + b[1]) / 2;
+  const dx = b[0] - a[0], dy = b[1] - a[1], len = Math.hypot(dx, dy);
+  const nx = -dy / len, ny = dx / len;
+  const c = [mx + nx * bend, my + ny * bend];
+  stroke(svg, `M${a[0]},${a[1]} Q${c[0]},${c[1]} ${b[0]},${b[1]}`, color, width);
+  const ang = Math.atan2(b[1] - c[1], b[0] - c[0]);
+  for (const s of [-1, 1]) {
+    const aa = ang + Math.PI + s * 0.5;
+    stroke(svg, `M${b[0] + Math.cos(aa) * head},${b[1] + Math.sin(aa) * head} L${b[0]},${b[1]}`, color, width);
+  }
+}
+function rel(node) {
+  const r = node.getBoundingClientRect(), o = og.getBoundingClientRect();
+  return { x: r.left - o.left, y: r.top - o.top, w: r.width, h: r.height };
+}
+
+/* ---------- canvas + background ---------- */
+Object.assign(og.style, {
+  width: W + "px", height: H + "px", color: K.ink,
+  background: [
+    `radial-gradient(520px 380px at 88% 18%, ${K.glowA}, transparent 70%)`,
+    `radial-gradient(560px 420px at 4% 108%, ${K.glowB}, transparent 70%)`,
+    `radial-gradient(circle, ${K.paperDot} ${C.dots.radius}px, transparent ${C.dots.radius + 0.6}px) 0 0 / ${C.dots.gap}px ${C.dots.gap}px`,
+    K.paper,
+  ].join(","),
+});
+
+/* ---------- coloured "screen" panel on the right ---------- */
+const Pn = L.panel;
+el("div", {
+  position: "absolute", left: Pn.x + "px", top: Pn.inset + "px", bottom: Pn.inset + "px", right: -Pn.radius + "px",
+  borderRadius: Pn.radius + "px",
+  background: [
+    `radial-gradient(260px 200px at 30% 92%, ${K.panelGlow}, transparent 70%)`,
+    `radial-gradient(circle, ${K.panelDot} ${C.dots.radius}px, transparent ${C.dots.radius + 0.6}px) 0 0 / ${C.dots.gap}px ${C.dots.gap}px`,
+    `linear-gradient(140deg, ${K.panelFrom} 0%, ${K.panelMid} 48%, ${K.panelTo} 100%)`,
+  ].join(","),
+  boxShadow: "0 30px 70px -30px rgba(10, 80, 70, 0.55), inset 0 1px 0 rgba(255,255,255,0.25)",
+});
+
+/* ---------- brand row ---------- */
+el("div", { position: "absolute", left: L.padX + "px", top: L.brandTop + "px" },
+  `<div class="brand">
+     <img src="../../public/icon.png" alt="" />
+     <b style="font-size:${T.brandSize}px">${P.brand}</b>
+     <span class="tag" style="background:${K.ink};color:#fff">${P.brandTag}</span>
+   </div>`);
+
+/* ---------- headline ---------- */
+const h1 = el("h1", {
+  position: "absolute", left: L.padX + "px", top: L.headlineTop + "px",
+  fontSize: T.headlineSize + "px", lineHeight: T.headlineLeading, letterSpacing: T.headlineTracking + "em",
+});
+h1.innerHTML = P.headline.map((line) =>
+  `<span class="line">${line.replace(/\[(hl|circle|squiggle)\](.*?)\[\/\1\]/g, '<span data-ann="$1">$2</span>')}</span>`
+).join("");
+
+el("p", {
+  position: "absolute", left: L.padX + "px", top: L.subTop + "px",
+  fontSize: T.subSize + "px", color: K.inkSoft,
+}, P.sub, og).className = "sub";
+
+/* ---------- chips ---------- */
+const check = `<svg width="20" height="20" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="${K.brandBright}"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+el("div", { position: "absolute", left: L.padX + "px", top: L.chipsTop + "px" },
+  `<div class="chips">${P.chips.map((c) => `<span class="chip">${check}${c}</span>`).join("")}</div>`);
+
+/* ---------- mock app window with a chart ---------- */
+const Wn = L.window;
+const win = el("div", {
+  position: "absolute", left: Wn.x + "px", top: Wn.y + "px", width: Wn.w + "px", height: Wn.h + "px",
+  transform: `rotate(${Wn.rotate}deg)`, background: K.window, zIndex: 1,
+});
+win.className = "win";
+win.innerHTML = `
+  <div class="bar"><i style="background:#FF5F57"></i><i style="background:#FEBC2E"></i><i style="background:#28C840"></i><span class="t">Dashboard</span></div>
+  <div style="padding:16px 20px 0;position:relative">
+    <svg width="170" height="30" style="position:absolute;left:12px;top:12px"><path d="M8,17 L${P.chartTitle.length * 10.5},14" stroke="${K.yellow}" stroke-width="20" fill="none" opacity="${S.highlightOpacity}"/></svg>
+    <div style="font-size:18px;font-weight:800;letter-spacing:-0.01em;position:relative">${P.chartTitle}</div>
+    <div style="font-size:12px;color:#9A94A4;font-weight:600;margin-top:2px">Last 8 weeks</div>
+  </div>`;
+const chart = svgEl("svg", { width: Wn.w, height: Wn.h - 90, style: "position:absolute;left:0;top:90px;overflow:visible" }, win);
+const bars = [0.34, 0.42, 0.38, 0.5, 0.46, 0.58, 0.55, 0.92];
+const chartH = Wn.h - 90 - 24, bw = 26, gap = (Wn.w - 40 - bars.length * bw) / (bars.length - 1);
+for (let i = 0; i < 4; i++) svgEl("line", { x1: 20, x2: Wn.w - 20, y1: 10 + i * (chartH - 10) / 3, y2: 10 + i * (chartH - 10) / 3, stroke: "#EFECE8", "stroke-width": 1 }, chart);
+let lastBar;
+bars.forEach((v, i) => {
+  const bh = v * (chartH - 10), x = 20 + i * (bw + gap), y = chartH - bh;
+  const last = i === bars.length - 1;
+  svgEl("rect", { x, y, width: bw, height: bh, rx: 6, fill: last ? K.brandBright : "#D9DEEA" }, chart);
+  if (last) lastBar = { x, y, w: bw, h: bh };
+});
+// Annotations drawn "inside" the window, on top of the chart.
+const lb = lastBar;
+stroke(chart, roughLoop(lb.x, lb.y, lb.w, 34, 14, 14), K.coral, 4.5);
+const note = el("div", { position: "absolute", left: "118px", top: "70px", fontSize: "32px", color: K.coral, transform: "rotate(-6deg)" }, P.chartNote, win);
+note.className = "hand";
+arrow(chart, [246, 0], [lb.x - 16, lb.y + 6], -16, K.coral, 4, 12);
+
+/* ---------- Scribbble toolbar ---------- */
+const ic = {
+  pen: '<path d="M15.707 21.293a1 1 0 0 1-1.414 0l-1.586-1.586a1 1 0 0 1 0-1.414l5.586-5.586a1 1 0 0 1 1.414 0l1.586 1.586a1 1 0 0 1 0 1.414z"/><path d="m18 13-1.375-6.874a1 1 0 0 0-.746-.776L3.235 2.028a1 1 0 0 0-1.207 1.207L5.35 15.879a1 1 0 0 0 .776.746L13 18"/><path d="m2.3 2.3 7.286 7.286"/><circle cx="11" cy="11" r="2"/>',
+  arrow: '<path d="M13 5H19V11"/><path d="M19 5L5 19"/>',
+  rect: '<rect width="18" height="18" x="3" y="3" rx="2"/>',
+  hl: '<path d="m9 11-6 6v3h9l3-3"/><path d="m22 12-4.6 4.6a2 2 0 0 1-2.8 0l-5.2-5.2a2 2 0 0 1 0-2.8L14 4"/>',
+  spot: '<path d="M18 6c0 2-2 2-2 4v10a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V10c0-2-2-2-2-4V2h12z"/><line x1="6" x2="18" y1="6" y2="6"/><line x1="12" x2="12" y1="12" y2="12"/>',
+  zoom: '<circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/><line x1="11" x2="11" y1="8" y2="14"/><line x1="8" x2="14" y1="11" y2="11"/>',
+  text: '<polyline points="4 7 4 4 20 4 20 7"/><line x1="9" x2="15" y1="20" y2="20"/><line x1="12" x2="12" y1="4" y2="20"/>',
+  board: '<path d="M2 3h20"/><path d="M21 3v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V3"/><path d="m7 21 5-5 5 5"/>',
+  cam: '<path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/>',
+  x: '<path d="M18 6 6 18"/><path d="m6 6 12 12"/>',
+};
+const Tb = L.toolbar, isz = Tb.iconSize;
+const btn = (inner, active) =>
+  `<div class="btn" style="width:${Tb.button}px;height:${Tb.button}px;margin:${Tb.gap / 2}px 0;${active ? `background:${K.toolbarActive};box-shadow:inset 0 1px 0 rgba(255,255,255,.15)` : ""}">${inner}</div>`;
+const icon = (k) => `<svg width="${isz}" height="${isz}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${ic[k]}</svg>`;
+const tb = el("div", { position: "absolute", right: Tb.right + "px", top: "50%", transform: "translateY(-50%)", background: K.toolbar, zIndex: 3 },
+  [
+    btn(`<span style="width:20px;height:20px;border-radius:50%;background:${K.coral};box-shadow:0 0 0 2.5px #fff"></span>`),
+    btn(`<span style="width:8px;height:8px;border-radius:50%;background:#fff"></span>`),
+    btn(icon("pen"), true), btn(icon("arrow")), btn(icon("rect")), btn(icon("hl")),
+    btn(icon("spot")), btn(icon("zoom")), btn(icon("text")),
+    `<div class="div"></div>`, btn(icon("board")), btn(icon("cam")),
+    `<div class="div"></div>`, btn(icon("x")),
+  ].join(""));
+tb.className = "tb";
+
+/* ---------- hotkey note ---------- */
+const Hk = L.hotkey;
+el("div", { position: "absolute", left: Hk.x + "px", top: Hk.y + "px", zIndex: 2 },
+  `<div class="keys"><span class="key">${P.hotkey[0]}</span><span class="plus">+</span><span class="key">${P.hotkey[1]}</span></div>`);
+const hk = el("div", { position: "absolute", left: Hk.x + 6 + "px", top: Hk.y + 64 + "px", fontSize: T.noteSize + "px", color: K.onPanel, transform: "rotate(-4deg)", zIndex: 2 }, P.note);
+hk.className = "hand";
+
+/* ---------- annotations that need measured text ---------- */
+document.fonts.ready.then(() => {
+  const under = layer(1), over = layer(4);
+  h1.style.zIndex = 2;
+
+  for (const span of h1.querySelectorAll("[data-ann]")) {
+    const r = rel(span), kind = span.dataset.ann, fs = T.headlineSize;
+    if (kind === "hl") {
+      // A chisel-tip marker swipe: slanted ends, slightly ragged edges.
+      const hh = fs * S.highlightHeight, y = r.y + r.h * 0.62;
+      const x0 = r.x - 12, x1 = r.x + r.w + 14, rough = S.highlightRough;
+      const tilt = Math.tan((S.highlightTilt * Math.PI) / 180);
+      const yAt = (x) => y + (x - x0) * tilt;
+      const top = [], bot = [];
+      for (let i = 0; i <= 12; i++) {
+        const x = x0 + ((x1 - x0) * i) / 12;
+        top.push([x, yAt(x) - hh / 2 + jit(rough)]);
+        bot.push([x, yAt(x) + hh / 2 + jit(rough)]);
+      }
+      top[0][0] += 8; bot[bot.length - 1][0] -= 8; // slanted chisel ends
+      const d = smooth(top) + " L" + smooth(bot.reverse()).slice(1) + " Z";
+      svgEl("path", { d, fill: K.yellow, opacity: S.highlightOpacity }, under);
+    } else if (kind === "circle") {
+      // Hug the cap height of the word rather than the whole line box.
+      const top = r.y + r.h * 0.2, h = r.h * 0.62;
+      stroke(over, roughLoop(r.x + 6, top, r.w - 14, h, S.circlePadX, S.circlePadY), K.coral, S.circleWidth);
+      // Three little emphasis strokes bursting off the upper right of the loop.
+      // They fan out from a point just inside the loop's upper-right edge.
+      const bx = r.x + r.w + S.circlePadX - 14, by = top + 4, bl = S.burstLength;
+      for (const a of [-1.45, -0.8, -0.15]) {
+        const sx = bx + Math.cos(a) * 26, sy = by + Math.sin(a) * 26;
+        stroke(over, `M${sx},${sy} L${sx + Math.cos(a) * bl},${sy + Math.sin(a) * bl}`, K.coral, S.burstWidth);
+      }
+    } else if (kind === "squiggle") {
+      const y = r.y + r.h * 0.86;
+      stroke(over, squiggle(r.x + 2, r.x + r.w - 2, y, S.squiggleAmp, S.squiggleWaves), K.brandBright, S.squiggleWidth);
+    }
+  }
+
+  // Arrow from the hotkey note up to the toolbar.
+  const t = rel(tb), n = rel(hk);
+  arrow(over, [n.x + n.w + 12, n.y + n.h * 0.5], [t.x - 14, t.y + t.h * 0.66], 30, K.onPanel, S.arrowWidth, 16);
+
+  document.body.dataset.ready = "1";
+});
+</script>
+</body>
+</html>

@@ -43,7 +43,7 @@ export default async function Home({
     description: t("jsonLd.description"),
     inLanguage: locale,
     url: SITE_URL,
-    image: `${SITE_URL}/social-2.png`,
+    image: `${SITE_URL}/og.png`,
     featureList: t.raw("jsonLd.featureList"),
     offers: {
       "@type": "Offer",

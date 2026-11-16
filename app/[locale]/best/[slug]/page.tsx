@@ -47,13 +47,13 @@ export async function generateMetadata({
       url,
       type: "article",
       locale,
-      images: ["/social-2.png"],
+      images: ["/og.png"],
     },
     twitter: {
       card: "summary_large_image",
       title: l.title,
       description: l.description,
-      images: ["/social-2.png"],
+      images: ["/og.png"],
     },
   };
 }

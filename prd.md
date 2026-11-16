@@ -273,6 +273,17 @@ already ranking, then answer the exact query on that page. Baseline for the 4–
       cool rim light, deeper vignette), visible paper fibres/mottling with bump on every piece and
       page, linen cloth on the hard covers
 
+### New OG image (2026-11-17)
+
+- [x] Replace the dark-green `social-2.png` share image with `public/og.png` (1200×630): cream dot-grid
+      canvas on the left with the headline "Draw over anything on your Mac." annotated by hand (green
+      squiggle, yellow highlighter, coral circle + burst), subline and three trust chips (Free to try /
+      Pay once, use forever / macOS 14+, no price shown); a vivid emerald→blue "screen" panel on the right with an annotated chart
+      window, the real Scribbble toolbar, and ⌥ Option + Tab keycaps with a "press & draw!" arrow.
+      Generated from HTML (`scripts/og-image/og.html`, tunables in `config.js`,
+      `bash scripts/og-image/render.sh` renders it via headless Chrome). All 25 metadata/JSON-LD
+      references now point at `/og.png` (new URL so social caches pick it up)
+
 ### Product Hunt launch (2026-10-11)
 
 - [x] Prepare and schedule the PH launch for Sun Oct 11, 12:01am PT

@@ -53,13 +53,13 @@ export async function generateMetadata({
       url,
       type: "article",
       publishedTime: fm.date,
-      images: [fm.cover ?? "/social-2.png"],
+      images: [fm.cover ?? "/og.png"],
     },
     twitter: {
       card: "summary_large_image",
       title: fm.title,
       description: fm.description,
-      images: [fm.cover ?? "/social-2.png"],
+      images: [fm.cover ?? "/og.png"],
     },
   };
 }
@@ -102,7 +102,7 @@ export default async function BlogPostPage({
     description: fm.description,
     datePublished: fm.date,
     dateModified: fm.date,
-    image: [`${SITE_URL}${fm.cover ?? "/social-2.png"}`],
+    image: [`${SITE_URL}${fm.cover ?? "/og.png"}`],
     mainEntityOfPage: `${SITE_URL}/blog/${fm.slug}`,
     author: {
       "@type": "Person",

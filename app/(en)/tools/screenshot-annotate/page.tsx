@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description: DESCRIPTION,
     images: [
       {
-        url: "/social-2.png",
+        url: "/og.png",
         width: 1200,
         height: 630,
         alt: "Scribbble: Free online screenshot annotator",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: TITLE,
     description: DESCRIPTION,
-    images: ["/social-2.png"],
+    images: ["/og.png"],
   },
 };
 
