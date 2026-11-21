@@ -14,6 +14,15 @@
     "menu": "Menu",
     "buyLicense": "Koop licentie"
   },
+  "sale": {
+    "banner": "<strong>Black Friday-aanbieding:</strong> <tag>{percent}% korting</tag> op Scribbble tot {date}.",
+    "bannerCta": "Nu kopen",
+    "code": "Gebruik code <c>{code}</c> bij het afrekenen.",
+    "tag": "{percent}% korting",
+    "ribbon": "Black Friday: {percent}% korting tot {date}",
+    "buyLine": "<tag>Black Friday</tag> <link>Koop een licentie</link> voor <regular>{price}</regular> {salePrice}, {percent}% korting tot {date}.",
+    "regularPriceLabel": "Reguliere prijs:"
+  },
   "footer": {
     "tools": "Tools",
     "screenshotAnnotate": "Mac-schermafbeelding annotatie-tool",

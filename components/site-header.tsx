@@ -8,6 +8,7 @@ import { CHANGELOG_PATH } from "@/lib/site-config";
 import { localeUrl, downloadCtaUrl } from "@/lib/i18n/seo";
 import LocaleDropdown from "@/components/locale-dropdown";
 import MobileNav from "@/components/mobile-nav";
+import { SaleBanner, SaleSwitch, SaleTag, saleValues } from "@/components/sale";
 
 const navLinkClass =
   "text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110 font-medium";
@@ -28,18 +29,21 @@ export default async function SiteHeader({
   location?: string;
 }) {
   const t = await getTranslations({ locale, namespace: "header" });
+  const tSale = await getTranslations({ locale, namespace: "sale" });
+  const pricingHref = localeUrl(locale, "/pricing");
   const home = localeUrl(locale, "/");
   const downloadHref = downloadCtaUrl(locale);
 
   const links = [
     { label: t("features"), href: `${home}#features` },
-    { label: t("pricing"), href: localeUrl(locale, "/pricing") },
+    { label: t("pricing"), href: pricingHref },
     // English-only page, same URL from every locale.
     { label: t("changelog"), href: CHANGELOG_PATH },
   ];
 
   return (
     <header className="relative border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
+      <SaleBanner locale={locale} />
       <div className="absolute inset-0 blob-bg pointer-events-none"></div>
       <div className="container mx-auto px-4 py-4 md:py-6 flex items-center justify-between relative">
         <Link href={home} className="flex items-center space-x-3">
@@ -53,6 +57,15 @@ export default async function SiteHeader({
           {links.map((link) => (
             <Link key={link.href} href={link.href} className={navLinkClass}>
               {link.label}
+              {link.href === pricingHref && (
+                <SaleSwitch
+                  on={
+                    <SaleTag className="ml-1.5 align-middle">
+                      {tSale("tag", saleValues(locale))}
+                    </SaleTag>
+                  }
+                />
+              )}
             </Link>
           ))}
         </nav>

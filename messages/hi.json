@@ -14,6 +14,15 @@
     "menu": "मेन्यू",
     "buyLicense": "लाइसेंस खरीदें"
   },
+  "sale": {
+    "banner": "<strong>ब्लैक फ्राइडे सेल:</strong> {date} तक Scribbble पर <tag>{percent}% छूट</tag>।",
+    "bannerCta": "अभी खरीदें",
+    "code": "चेकआउट पर कोड <c>{code}</c> का उपयोग करें।",
+    "tag": "{percent}% छूट",
+    "ribbon": "ब्लैक फ्राइडे: {date} तक {percent}% छूट",
+    "buyLine": "<tag>ब्लैक फ्राइडे</tag> <link>लाइसेंस खरीदें</link>, <regular>{price}</regular> की जगह सिर्फ़ {salePrice}, {date} तक {percent}% छूट।",
+    "regularPriceLabel": "नियमित कीमत:"
+  },
   "footer": {
     "tools": "टूल्स",
     "screenshotAnnotate": "Mac स्क्रीनशॉट एनोटेशन टूल",

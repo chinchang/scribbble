@@ -14,6 +14,15 @@
     "menu": "Menu",
     "buyLicense": "Acheter la licence"
   },
+  "sale": {
+    "banner": "<strong>Promotion Black Friday :</strong> <tag>{percent}% de réduction</tag> sur Scribbble jusqu'au {date}.",
+    "bannerCta": "Acheter maintenant",
+    "code": "Utilisez le code <c>{code}</c> lors du paiement.",
+    "tag": "{percent}% de réduction",
+    "ribbon": "Black Friday : {percent}% de réduction jusqu'au {date}",
+    "buyLine": "<tag>Black Friday</tag> <link>Acheter une licence</link> pour <regular>{price}</regular> {salePrice}, {percent}% de réduction jusqu'au {date}.",
+    "regularPriceLabel": "Prix normal :"
+  },
   "footer": {
     "tools": "Outils",
     "screenshotAnnotate": "Outil d'annotation de captures d'écran pour Mac",

@@ -14,6 +14,15 @@
     "menu": "メニュー",
     "buyLicense": "ライセンスを購入"
   },
+  "sale": {
+    "banner": "<strong>ブラックフライデーセール：</strong>Scribbble が {date} まで <tag>{percent}% オフ</tag>。",
+    "bannerCta": "今すぐ購入",
+    "code": "チェックアウト時にコード <c>{code}</c> をご利用ください。",
+    "tag": "{percent}% オフ",
+    "ribbon": "ブラックフライデー：{date} まで {percent}% オフ",
+    "buyLine": "<tag>ブラックフライデー</tag> <link>ライセンスを購入</link>、価格 <regular>{price}</regular>、セール価格 {salePrice}、{date} まで {percent}% オフ。",
+    "regularPriceLabel": "通常価格："
+  },
   "footer": {
     "tools": "ツール",
     "screenshotAnnotate": "Mac用スクリーンショット注釈ツール",

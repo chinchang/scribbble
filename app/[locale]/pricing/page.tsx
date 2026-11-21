@@ -8,6 +8,7 @@ import DownloadLink from "@/components/download-link";
 import SiteFooter from "@/components/site-footer";
 import SiteHeader from "@/components/site-header";
 import Testimonials, { type Testimonial } from "@/components/testimonials";
+import { SaleSwitch, RegularPrice, saleValues } from "@/components/sale";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { localeUrl, languageAlternates, downloadCtaUrl } from "@/lib/i18n/seo";
 import {
@@ -16,6 +17,7 @@ import {
   PRICE_USD,
   PRICE_LABEL as PRICE,
   MIN_MACOS,
+  SALE_PRICE_LABEL,
 } from "@/lib/site-config";
 
 const PATH = "/pricing";
@@ -59,6 +61,8 @@ export default async function PricingPage({
   const t = await getTranslations({ locale, namespace: "pricing" });
   const tc = await getTranslations({ locale, namespace: "common" });
   const tHome = await getTranslations({ locale, namespace: "home" });
+  const tSale = await getTranslations({ locale, namespace: "sale" });
+  const sale = saleValues(locale);
 
   const features = t.raw("card.features") as string[];
   const chips = t.raw("chips") as string[];
@@ -165,8 +169,11 @@ export default async function PricingPage({
 
           <div className="mx-auto max-w-md text-left">
             <div className="relative rounded-3xl border-2 border-primary/30 bg-card/80 backdrop-blur p-8 md:p-10 shadow-2xl shadow-primary/10">
-              <span className="absolute -top-4 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-gradient-to-r from-primary to-accent px-4 py-1.5 text-sm font-bold text-white shadow-lg">
-                {t("card.ribbon")}
+              <span className="absolute -top-4 left-1/2 -translate-x-1/2 w-max max-w-[calc(100%-2rem)] text-center rounded-full bg-gradient-to-r from-primary to-accent px-4 py-1.5 text-sm font-bold text-white shadow-lg">
+                <SaleSwitch
+                  on={tSale("ribbon", sale)}
+                  off={t("card.ribbon")}
+                />
               </span>
 
               <h2 className="text-2xl font-bold mb-1">{t("card.name")}</h2>
@@ -174,9 +181,19 @@ export default async function PricingPage({
                 {t("card.tagline")}
               </p>
 
-              <div className="flex items-end gap-3 mb-2">
+              <div className="flex flex-wrap items-end gap-3 mb-2">
+                <SaleSwitch
+                  on={
+                    <RegularPrice
+                      label={tSale("regularPriceLabel")}
+                      className="pb-1 text-3xl font-black text-muted-foreground"
+                    >
+                      {PRICE}
+                    </RegularPrice>
+                  }
+                />
                 <span className="relative text-7xl font-black leading-none tracking-tight">
-                  {PRICE}
+                  <SaleSwitch on={SALE_PRICE_LABEL} off={PRICE} />
                   <svg
                     aria-hidden="true"
                     className="absolute -bottom-3 left-0 w-full h-5 text-accent draw-animation"
@@ -199,6 +216,22 @@ export default async function PricingPage({
               <p className="text-sm text-muted-foreground mb-8">
                 {t("card.priceSubnote")}
               </p>
+              {sale.code && (
+                <SaleSwitch
+                  on={
+                    <p className="-mt-5 mb-8 text-sm font-semibold">
+                      {tSale.rich("code", {
+                        code: sale.code,
+                        c: (chunks) => (
+                          <code className="rounded bg-yellow-300 px-1.5 py-0.5 font-mono font-bold text-neutral-950">
+                            {chunks}
+                          </code>
+                        ),
+                      })}
+                    </p>
+                  }
+                />
+              )}
 
               <ul className="space-y-3 mb-10">
                 {features.map((f) => (
@@ -223,7 +256,10 @@ export default async function PricingPage({
                   location="pricing_card"
                 >
                   <Star className="w-6 h-6 mr-3" />
-                  {t("card.cta", { price: PRICE })}
+                  <SaleSwitch
+                    on={t("card.cta", { price: SALE_PRICE_LABEL })}
+                    off={t("card.cta", { price: PRICE })}
+                  />
                 </BuyLink>
               </Button>
 

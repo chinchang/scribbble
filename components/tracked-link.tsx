@@ -1,6 +1,13 @@
 "use client";
 
-import { forwardRef, type AnchorHTMLAttributes, type MouseEvent } from "react";
+import {
+  forwardRef,
+  useEffect,
+  useState,
+  type AnchorHTMLAttributes,
+  type MouseEvent,
+} from "react";
+import { isSaleActive, saleBuyUrl } from "@/lib/site-config";
 
 declare global {
   interface Window {
@@ -44,9 +51,18 @@ export default TrackedLink;
 
 type PresetLinkProps = Omit<TrackedLinkProps, "event">;
 
+// During a sale with a discount code (SALE.code), every buy link gets the
+// code pre-filled at checkout. Done after hydration so the static HTML stays
+// the plain checkout URL and the code drops off by itself once the sale ends.
 export const BuyLink = forwardRef<HTMLAnchorElement, PresetLinkProps>(
-  function BuyLink(props, ref) {
-    return <TrackedLink ref={ref} event="buy_click" {...props} />;
+  function BuyLink({ href, ...props }, ref) {
+    const [finalHref, setFinalHref] = useState(href);
+    useEffect(() => {
+      setFinalHref(href && isSaleActive() ? saleBuyUrl(href) : href);
+    }, [href]);
+    return (
+      <TrackedLink ref={ref} event="buy_click" href={finalHref} {...props} />
+    );
   },
 );
 

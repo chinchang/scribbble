@@ -12706,5 +12706,89 @@
       "nl",
       "fr"
     ]
+  },
+  "messages.sale.banner": {
+    "hash": "456c53bd37245b1138063ce9fdfe0d734111ee6c6e6865a39d19b18394842c60",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.sale.bannerCta": {
+    "hash": "9c0e74e6c04b89e878f54ee908a8f8797e3c97219ff1b550b8939585abfd104f",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.sale.code": {
+    "hash": "dde17a7863dcbd3c181b4abf884386d6653c8fd5488c341e2ff286761f0c196c",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.sale.tag": {
+    "hash": "66825993b5d6197d680460b44e5d3357577ab61c2602c2c16f71cbfecbf6d909",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.sale.ribbon": {
+    "hash": "6b2ab16db5faec9c3c07992894340a51a58b49232578ea97a99ef0b1c2671ff2",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.sale.buyLine": {
+    "hash": "8fdada04b4a6894ebc8b4952f51c90723c60e5ad120bc169b7feccd35745adb6",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
+  },
+  "messages.sale.regularPriceLabel": {
+    "hash": "ff671e584348332d8bcfc08611d01f3518d2d88d4aa76804fc4cc29a76f04eda",
+    "done": [
+      "es",
+      "zh",
+      "ja",
+      "de",
+      "hi",
+      "nl",
+      "fr"
+    ]
   }
 }

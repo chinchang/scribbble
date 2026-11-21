@@ -14,6 +14,15 @@
     "menu": "菜单",
     "buyLicense": "购买授权"
   },
+  "sale": {
+    "banner": "<strong>黑色星期五促销：</strong>Scribbble <tag>立减 {percent}%</tag>，截至 {date}。",
+    "bannerCta": "立即购买",
+    "code": "结账时使用代码 <c>{code}</c>。",
+    "tag": "立减 {percent}%",
+    "ribbon": "黑色星期五：立减 {percent}%，截至 {date}",
+    "buyLine": "<tag>黑色星期五</tag> <link>购买许可证</link>，原价 <regular>{price}</regular>，现价 {salePrice}，立减 {percent}%，截至 {date}。",
+    "regularPriceLabel": "原价："
+  },
   "footer": {
     "tools": "工具",
     "screenshotAnnotate": "Mac 截图标注工具",

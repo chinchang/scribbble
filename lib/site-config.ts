@@ -11,7 +11,49 @@ export const BUY_URL =
 // One-time license price. Single source for the pricing page, the download
 // page and every SoftwareApplication JSON-LD offer, so they can't disagree.
 export const PRICE_USD = 12;
-export const PRICE_LABEL = `$${PRICE_USD}`;
+export const PRICE_LABEL = formatUsd(PRICE_USD);
+
+// Limited-time sale (Black Friday / Cyber Monday 2026). While it runs, the
+// site shows a banner at the top of every page with the site header, a "% off" tag next to the
+// Pricing nav link, and the sale price (with the regular price struck
+// through) on the pricing card, the download page and the homepage buy lines.
+// The end check also runs in the browser (components/sale-switch-client.tsx),
+// so the sale UI disappears on its own at SALE.endsAt without a redeploy.
+export const SALE = {
+  // Master switch. false hides every piece of sale UI.
+  enabled: true,
+  // Discount, in percent, off PRICE_USD.
+  percent: 35,
+  // Last moment of the sale: end of Dec 5, 2026, US Pacific time.
+  endsAt: "2026-12-05T23:59:59-08:00",
+  // Time zone used to print the end date ("December 5").
+  endsAtTimeZone: "America/Los_Angeles",
+  // Lemon Squeezy discount code. Leave empty if the discount is applied on
+  // the store side. When set, it is shown in the banner and pre-filled at
+  // checkout on every buy link via `checkout[discount_code]`.
+  code: "BFCMSCRIB",
+};
+export const SALE_PRICE_USD =
+  Math.round(PRICE_USD * (100 - SALE.percent)) / 100;
+export const SALE_PRICE_LABEL = formatUsd(SALE_PRICE_USD);
+
+/** True while the sale is switched on and its end date hasn't passed. */
+export function isSaleActive(now: number = Date.now()): boolean {
+  return SALE.enabled && now <= new Date(SALE.endsAt).getTime();
+}
+
+/** Checkout URL with the sale's discount code pre-filled, if there is one. */
+export function saleBuyUrl(url: string): string {
+  if (!SALE.code) return url;
+  const u = new URL(url);
+  u.searchParams.set("checkout[discount_code]", SALE.code);
+  return u.toString();
+}
+
+/** "$12", "$7.80": whole dollars without decimals, otherwise two decimals. */
+export function formatUsd(amount: number): string {
+  return Number.isInteger(amount) ? `$${amount}` : `$${amount.toFixed(2)}`;
+}
 
 // Minimum supported system, as used in JSON-LD.
 export const MIN_MACOS = "macOS 14.0+";

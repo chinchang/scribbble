@@ -19,6 +19,12 @@ import FeatureIcon, { type FeatureIconName } from "@/components/feature-icons";
 import DesktopDemo from "@/components/desktop-demo";
 import Testimonials, { type Testimonial } from "@/components/testimonials";
 import MidCta from "@/components/mid-cta";
+import {
+  SaleSwitch,
+  SaleTag,
+  RegularPrice,
+  saleValues,
+} from "@/components/sale";
 import { personas } from "@/lib/personas";
 import { listicles } from "@/lib/listicles";
 import { comparisons } from "@/lib/comparisons";
@@ -69,9 +75,10 @@ export default async function Home({
   >;
   const testimonials = t.raw("testimonials") as Testimonial[];
   const midCtaChips = t.raw("midCtaChips") as string[];
-  const buyLine = (location: string) =>
-    t.rich("buyLine", {
-      link: (chunks) => (
+  const tSale = await getTranslations({ locale, namespace: "sale" });
+  const buyLink = (location: string) =>
+    function BuyLineLink(chunks: React.ReactNode) {
+      return (
         <BuyLink
           href={BUY_URL}
           target="_blank"
@@ -81,8 +88,24 @@ export default async function Home({
         >
           {chunks}
         </BuyLink>
-      ),
-    });
+      );
+    };
+  // During the sale the buy line carries the discount and the sale price.
+  const buyLine = (location: string) => (
+    <SaleSwitch
+      on={tSale.rich("buyLine", {
+        ...saleValues(locale),
+        link: buyLink(location),
+        tag: (chunks) => <SaleTag className="mr-1">{chunks}</SaleTag>,
+        regular: (chunks) => (
+          <RegularPrice label={tSale("regularPriceLabel")}>
+            {chunks}
+          </RegularPrice>
+        ),
+      })}
+      off={t.rich("buyLine", { link: buyLink(location) })}
+    />
+  );
   const featureOrder: FeatureIconName[] = [
     "pen",
     "shapes",

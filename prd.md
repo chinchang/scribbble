@@ -284,6 +284,20 @@ already ranking, then answer the exact query on that page. Baseline for the 4–
       `bash scripts/og-image/render.sh` renders it via headless Chrome). All 25 metadata/JSON-LD
       references now point at `/og.png` (new URL so social caches pick it up)
 
+### Black Friday / Cyber Monday sale (2026-11-21)
+
+- [x] 35% off until Dec 5, 2026 (end of day, US Pacific). Config in `SALE` in `lib/site-config.ts`
+      (percent, end date, Lemon Squeezy discount `code` `BFCMSCRIB`, shown in the banner, on the pricing card and on `/download`, and
+      pre-filled on every buy link via `checkout[discount_code]`). While it runs: a black banner
+      above the header on every page that uses `SiteHeader` (all but `/tools/*`) (`components/sale.tsx`, tracked as `sale_banner`), a yellow
+      "35% off" tag on the Pricing nav link, struck-through $12 → $7.80 on the pricing card, sale
+      ribbon + price on `/download`, and a sale buy line in the homepage hero and mid CTA. The end
+      check re-runs in the browser, so the sale UI disappears on its own after Dec 5; set
+      `SALE.enabled = false` and redeploy to remove it from the HTML too. JSON-LD offers and the
+      `$12` SEO titles/FAQ keep the regular price. Copy under `sale` in `messages/en.json`,
+      translated into all 7 locales (hi/ja/zh hand-fixed)
+- [x] `pnpm dev` now binds to `0.0.0.0` so the site can be opened from other devices on the LAN
+
 ### Product Hunt launch (2026-10-11)
 
 - [x] Prepare and schedule the PH launch for Sun Oct 11, 12:01am PT

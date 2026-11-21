@@ -14,6 +14,15 @@
     "menu": "Menu",
     "buyLicense": "Buy License"
   },
+  "sale": {
+    "banner": "<strong>Black Friday sale:</strong> <tag>{percent}% off</tag> Scribbble until {date}.",
+    "bannerCta": "Buy now",
+    "code": "Use code <c>{code}</c> at checkout.",
+    "tag": "{percent}% off",
+    "ribbon": "Black Friday: {percent}% off until {date}",
+    "buyLine": "<tag>Black Friday</tag> <link>Buy a license</link> for <regular>{price}</regular> {salePrice}, {percent}% off until {date}.",
+    "regularPriceLabel": "Regular price:"
+  },
   "footer": {
     "tools": "Tools",
     "screenshotAnnotate": "Mac Screenshot Annotation Tool",

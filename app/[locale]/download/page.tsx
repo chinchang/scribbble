@@ -7,6 +7,7 @@ import BuyLink from "@/components/buy-link";
 import DownloadStarter from "@/components/download-starter";
 import SiteFooter from "@/components/site-footer";
 import SiteHeader from "@/components/site-header";
+import { SaleSwitch, SaleTag, saleValues } from "@/components/sale";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { localeUrl, languageAlternates } from "@/lib/i18n/seo";
 import { getSnapshotLatestVersion } from "@/lib/changelog";
@@ -18,6 +19,7 @@ import {
   CHANGELOG_PATH,
   PRICE_USD,
   PRICE_LABEL,
+  SALE_PRICE_LABEL,
   MIN_MACOS,
   TOGGLE_SHORTCUT,
 } from "@/lib/site-config";
@@ -61,6 +63,8 @@ export default async function DownloadPage({
   const t = await getTranslations({ locale, namespace: "download" });
   const tc = await getTranslations({ locale, namespace: "common" });
   const tHome = await getTranslations({ locale, namespace: "home" });
+  const tSale = await getTranslations({ locale, namespace: "sale" });
+  const sale = saleValues(locale);
   const tPricing = await getTranslations({ locale, namespace: "pricing" });
 
   const version = getSnapshotLatestVersion();
@@ -224,12 +228,38 @@ export default async function DownloadPage({
           <div className="relative overflow-hidden rounded-3xl border-2 border-primary/20 bg-gradient-to-br from-primary/10 via-card to-accent/10 px-8 py-14 md:px-16 text-center">
             <div className="absolute -top-16 -right-16 w-56 h-56 bg-accent/20 rounded-full blur-3xl pointer-events-none"></div>
             <div className="relative">
+              <SaleSwitch
+                on={
+                  <SaleTag className="mb-5 px-3 py-1 text-sm">
+                    {tSale("ribbon", sale)}
+                  </SaleTag>
+                }
+              />
               <h2 className="text-4xl md:text-5xl font-black mb-4 leading-tight">
-                {t.rich("buyTitle", { gradient, price: PRICE_LABEL })}
+                <SaleSwitch
+                  on={t.rich("buyTitle", { gradient, price: SALE_PRICE_LABEL })}
+                  off={t.rich("buyTitle", { gradient, price: PRICE_LABEL })}
+                />
               </h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
                 {t("buySubtitle")}
               </p>
+              {sale.code && (
+                <SaleSwitch
+                  on={
+                    <p className="-mt-6 mb-8 font-semibold">
+                      {tSale.rich("code", {
+                        code: sale.code,
+                        c: (chunks) => (
+                          <code className="rounded bg-yellow-300 px-1.5 py-0.5 font-mono font-bold text-neutral-950">
+                            {chunks}
+                          </code>
+                        ),
+                      })}
+                    </p>
+                  }
+                />
+              )}
               <Button
                 size="lg"
                 variant="outline"
@@ -242,7 +272,10 @@ export default async function DownloadPage({
                   rel="noopener noreferrer"
                   location="download_page"
                 >
-                  {tPricing("card.cta", { price: PRICE_LABEL })}
+                  <SaleSwitch
+                    on={tPricing("card.cta", { price: SALE_PRICE_LABEL })}
+                    off={tPricing("card.cta", { price: PRICE_LABEL })}
+                  />
                 </BuyLink>
               </Button>
             </div>
